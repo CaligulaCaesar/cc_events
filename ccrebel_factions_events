@@ -1,0 +1,1838 @@
+
+#The tricky bit is that you have to turn the faction into planets. But it's doable. And also the lack of commands
+#regarding factions, so I can't directly check faction happiness.
+#Trigger: Faction is large and unhappy. This would be tested via:
+#pop_percentage = { percentage > 0.15 limit = { happiness < 40 member_of_faction = faction_X } }. So it would be 
+#testing the symptom rather than the actual faction, which is not ideal but is the best I can do. Aside from that, 
+#the empire has 5 planets, and at least one planet (not 'recently conquered') has more of their ethic than yours and
+#30% is theirs (will be the first stronghold). There would be a relatively long mtth. 
+
+#First event will be sort of 'warning signs' i.e. rumours of sedition but can't be proven, faction leader denies 
+#anything. But planets with 4+ pops of the ethic get 'seditious talk' modifier, +20% ethics attraction.
+
+#Second will be where planets with 30% or more of that ethic (and less of yours, also no revolt modifiers) become 
+#'[ethic] strongholds'. They then get a whole lot more ethics attraction (+100?) (also possibly income fall as 
+#withholding taxes). Planets fairly nearby will get modifiers attracting them to that ethic, but less. Planets with 
+#3+ pops now get '[ethic] sympathies' and +50% or something attraction.
+
+#This situation carries on for at least two years, and in this period any planet that goes above or below the 
+#previously set-out thresholds gains or loses the modifiers. At this stage, one can avert the crisis by either 
+#making the faction happy in some way (I could test whether the pops are happy as in the condition I said earlier) 
+#or by successfully making them no longer have strongholds.
+
+#After the two years, you will be told that a revolt is imminent if they are still upset and have enough strongholds 
+#(this could be scaled by empire size, though it can only be done up to three planets). You will be given a direct 
+#choice to shift ethics or risk the consequences. After that, at some point in the next year there will be a revolt 
+#in all the 'ethic strongholds'. (Code will be based on the AI revolt, but without the need for a fight to the death).
+
+#An addition would be the 'sympathies' planets: You'd be prompted to decide whether to exterminate, oppress or 
+#tolerate them. Ethics determine whether you can do each of those. The trade-off is that if you tolerate and they 
+#reach 'stronghold' level they can try to defect, whereas if you oppress they will get a modifier cutting attraction 
+#to that ethic, but also lose happiness and have a chance to try and defect before you have managed to fully oppress 
+#them. Exterminate is only possible for purifiers, then you just kill the pops in question. Though actually purifiers 
+#should be allowed to do that way before. There should be some sort of costs to killing a large fragment of your 
+#population, though.
+#(Try purge = yes)
+
+namespace = ccfaction
+
+country_event = {
+	id = ccfaction.1
+	title = ccfaction.1.title
+	
+	desc = ccfaction.1.desc
+	#need to use a triggered description based on the ethic
+	
+	
+	trigger = {			#must disable for own ethic
+		num_owned_planets > 5
+		years_passed > 30
+		
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_country_type = default
+		
+		#maybe I should make only one possible at a time as it might get messy?
+		
+		OR = {
+			AND = {
+				NOT = { has_country_flag = cc_imperialist_revolt_active }
+				has_faction = imperialist
+				NOR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = imperialist
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_isolationist_revolt_active }
+				has_faction = isolationist
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = isolationist
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_progressive_revolt_active }
+				has_faction = progressive
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = progressive
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_prosperity_revolt_active }
+				has_faction = prosperity
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = prosperity
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_supremacist_revolt_active }
+				has_faction = supremacist
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = supremacist
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_technologist_revolt_active }
+				has_faction = technologist
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = technologist
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_totalitarian_revolt_active }
+				has_faction = totalitarian
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = totalitarian
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_traditionalist_revolt_active }
+				has_faction = traditionalist
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = traditionalist
+					}
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = cc_xenoist_revolt_active }
+				has_faction = xenoist
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				
+				pop_percentage = {
+					percentage > 0.15
+					limit = {
+						happiness < 40
+						member_of_faction = xenoist
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = {
+			factor = 2
+			num_owned_planets < 10
+		}
+		
+		modifier = {
+			factor = 0.8
+			num_owned_planets > 25
+		}
+		
+		modifier = {
+			factor = 0.67
+			OR = {
+				AND = {
+					NOT = { has_country_flag = cc_imperialist_revolt_active }
+					has_faction = imperialist
+					NOR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = imperialist
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_isolationist_revolt_active }
+					has_faction = isolationist
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = isolationist
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_progressive_revolt_active }
+					has_faction = progressive
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = progressive
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_prosperity_revolt_active }
+					has_faction = prosperity
+					NOR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = prosperity
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_supremacist_revolt_active }
+					has_faction = supremacist
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = supremacist
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_technologist_revolt_active }
+					has_faction = technologist
+					NOR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = technologist
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_totalitarian_revolt_active }
+					has_faction = totalitarian
+					NOR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = totalitarian
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_traditionalist_revolt_active }
+					has_faction = traditionalist
+					NOR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = traditionalist
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = cc_xenoist_revolt_active }
+					has_faction = xenoist
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				
+					pop_percentage = {
+						percentage > 0.10
+						limit = {
+							happiness < 30
+							member_of_faction = xenoist
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.67
+			any_owned_planet = {
+				OR = {
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_imperialist_revolt_active }
+							has_faction = imperialist
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = imperialist
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_prosperity_revolt_active }
+							has_faction = prosperity
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = prosperity
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_totalitarian_revolt_active }
+							has_faction = totalitarian
+							NOR = {
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = totalitarian
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_progressive_revolt_active }
+							has_faction = progressive
+							NOR = {
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = progressive
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_supremacist_revolt_active }
+							has_faction = supremacist
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = supremacist
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_isolationist_revolt_active }
+							has_faction = isolationist
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = isolationist
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_xenoist_revolt_active }
+							has_faction = xenoist
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = xenoist
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_traditionalist_revolt_active }
+							has_faction = traditionalist
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = traditionalist
+							}
+						}
+					}
+					AND = {
+						root = {
+							NOT = { has_country_flag = cc_technologist_revolt_active }
+							has_faction = technologist
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
+						}
+						pop_percentage = {
+							percentage > 0.30
+							limit = {
+								happiness < 40
+								member_of_faction = technologist
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+
+#First event will be sort of 'warning signs' i.e. rumours of sedition but can't be proven, faction leader denies 
+#anything. But planets with 4+ pops of the ethic get 'seditious talk' modifier, +75% ethics attraction. You also get
+#a country modifier with -20% govt ethics attraction (for the whole event chain)
+
+		random_list = { #so it only does one at a time
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = imperialist }
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_imperialist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = imperialist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_imperialist_revolt_active }
+						has_faction = imperialist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = imperialist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = imperialist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = imperialist }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_militarist
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_imperialist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_imperialist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = imperialist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = imperialist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = isolationist }
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_isolationist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = isolationist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_isolationist_revolt_active }
+						has_faction = isolationist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = isolationist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = isolationist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = isolationist }
+							}
+						}
+						NOR = {
+							has_modifier = cc_seditious_talk_xenophobe
+							has_modifier = cc_sympathies_xenophobe
+							has_modifier = cc_stronghold_xenophobe
+						}							
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_xenophobe
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_isolationist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_isolationist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = isolationist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = progressive }
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_progressive_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = progressive
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_progressive_revolt_active }
+						has_faction = progressive
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = progressive
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = progressive }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = progressive }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_egalitarian
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_progressive_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_progressive_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = progressive }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = progressive }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = prosperity }
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_prosperity_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = prosperity
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_prosperity_revolt_active }
+						has_faction = prosperity
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = prosperity
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = prosperity }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = prosperity }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_pacifist
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_prosperity_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_prosperity_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = prosperity }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = prosperity }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = supremacist }
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_supremacist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = supremacist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_supremacist_revolt_active }
+						has_faction = supremacist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = supremacist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = supremacist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = supremacist }
+							}
+						}
+						NOR = {
+							has_modifier = cc_seditious_talk_xenophobe
+							has_modifier = cc_sympathies_xenophobe
+							has_modifier = cc_stronghold_xenophobe
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_xenophobe
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_supremacist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_supremacist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = supremacist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = technologist }
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_technologist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = technologist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_technologist_revolt_active }
+						has_faction = technologist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = technologist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = technologist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = technologist }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_materialist
+						days = -1		#1800
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_technologist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_technologist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = technologist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = technologist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = totalitarian }
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_totalitarian_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = totalitarian
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_totalitarian_revolt_active }
+						has_faction = totalitarian
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = totalitarian
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = totalitarian }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = totalitarian }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_authoritarian
+						days = -1		#1800
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_totalitarian_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_totalitarian_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = totalitarian }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = totalitarian }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = traditionalist }
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_traditionalist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = traditionalist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_traditionalist_revolt_active }
+						has_faction = traditionalist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = traditionalist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = traditionalist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = traditionalist }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_spiritualist
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_traditionalist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_traditionalist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = traditionalist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = traditionalist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+			
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						NOT = { has_faction = xenoist }
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						
+						NOT = {
+							AND = {
+								NOT = { has_country_flag = cc_xenoist_revolt_active }
+								pop_percentage = {
+									percentage > 0.15
+									limit = {
+										happiness < 40
+										member_of_faction = xenoist
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						NOT = { has_country_flag = cc_xenoist_revolt_active }
+						has_faction = xenoist
+						pop_percentage = {
+							percentage > 0.10
+							limit = {
+								happiness < 30
+								member_of_faction = xenoist
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_modifier = cc_country_factional_unrest } }
+					add_modifier = {
+						modifier = cc_country_factional_unrest
+						days = -1
+					}
+				}
+				
+				country_event = { id = ccfaction.2 days = 1800 }
+				
+				every_owned_planet = {
+					limit = {
+						OR = {
+							count_pops = {
+								limit = { member_of_faction = xenoist }
+								count > 3
+							}
+							pop_percentage = {
+								percentage > 0.24
+								limit = { member_of_faction = xenoist }
+							}
+						}
+					}
+					add_modifier = {
+						modifier = cc_seditious_talk_xenophile
+						days = -1		#1800
+					}
+				}
+				
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = cc_xenoist_revolt_active
+						days = 5400		#15 years
+					}
+					set_timed_country_flag = {
+						flag = cc_xenoist_seditions_active
+						days = 1800		#5 years
+					}
+					
+					#set event targets
+					
+					random_pop_faction = {
+						limit = { is_pop_faction_type = xenoist }
+						save_event_target_as = cc_rebellious_faction
+					}
+					
+					random_owned_leader = {
+						limit = { leader_of_faction = xenoist }
+						save_event_target_as = cc_rebellious_faction_leader
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+##############################################SWITCH FIRST EVENT BACK TO ETHICS-BASED ON THE PLANETS
+#second event
+
+country_event = {
+	id = ccfaction.2
+	title = ccfaction.2.name
+	desc = {
+		trigger = {
+			hidden:event_target:cc_rebellious_faction = {
+				switch = {
+					trigger = is_pop_faction_type
+					xenoist = { text = ccfaction.2.xenoist }
+					supremacist = { text = ccfaction.2.supremacist }
+					isolationist = { text = ccfaction.2.isolationist }
+					progressive = { text = ccfaction.2.progressive }
+					totalitarian = { text = ccfaction.2.totalitarian }
+					imperialist = { text = ccfaction.2.imperialist }
+					prosperity = { text = ccfaction.2.prosperity }
+					traditionalist = { text = ccfaction.2.traditionalist }
+					technologist = { text = ccfaction.2.technologist }
+				}
+			}
+		}
+	is_triggered_only = yes
+	
+	trigger = {
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = xenoist } }
+			
+			has_faction = xenoist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = xenoist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = xenoist }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = supremacist } }
+			
+			has_faction = supremacist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = supremacist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = supremacist }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = isolationist } }
+			
+			has_faction = isolationist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = isolationist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = isolationist }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = totalitarian } }
+			
+			has_faction = totalitarian
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = totalitarian
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = totalitarian }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = progressive } }
+			
+			has_faction = progressive
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = progressive
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = progressive }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = prosperity } }
+			
+			has_faction = prosperity
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = prosperity
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = prosperity }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = imperialist } }
+			
+			has_faction = imperialist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = imperialist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = imperialist }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = traditionalist } }
+			
+			has_faction = traditionalist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = traditionalist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = traditionalist }
+				}
+			}
+		}
+		if = {
+			limit = { event_target:cc_rebellious_faction = { is_pop_faction_type = technologist } }
+			
+			has_faction = technologist
+			pop_percentage = {
+				percentage > 0.15
+				limit = {
+					happiness < 40
+					member_of_faction = technologist
+				}
+			}
+			any_owned_planet = {
+				pop_percentage = {
+					percentage > 0.25
+					limit = { member_of_faction = technologist }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		event_target:cc_rebellious_faction = {
+			switch = {
+				trigger = is_pop_faction_type
+				xenoist = { 
+					owner = {
+						every_owned_planet = {
+							limit = { has_modifier = cc_seditious_talk_xenophile }
+							remove_modifier = cc_seditious_talk_xenophile
+						}
+						every_owned_planet = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.25
+									limit = { member_of_faction = xenoist }
+								}
+							}
+							add_modifier = {
+								modifier = cc_faction_stronghold_xenoist
+								days = -1
+							}
+						}
+						every_owned_planet = {
+							limit = {
+								NOT = {
+									pop_percentage = {
+										percentage > 0.25
+										limit = { member_of_faction = xenoist }
+									}
+								}
+								OR = {
+									count_pops = {
+										limit = { member_of_faction = xenoist }
+										count > 3
+									}
+									pop_percentage = {
+										percentage > 0.2
+										limit = { member_of_faction = xenoist }
+									}
+								}
+							}
+							add_modifier = {
+								modifier = cc_faction_sympathies_xenoist
+								days = -1
+							}
+						}
+						every_owned_planet = {
+							limit = {
+								NOR = {
+									has_modifier = cc_faction_stronghold_xenoist
+									has_modifier = cc_faction_sympathies_xenoist
+								}
+								owner = {
+									any_owned_planet = {
+										has_modifier = cc_faction_stronghold_xenoist
+										distance = {
+											source = prevprev
+											min_distance = 0
+											max_distance = 65
+										}
+									}
+								}
+							}
+							add_modifier = {
+								modifier = cc_faction_sedition
+								days = -1
+							}
+						}
+					}
+				}
+				supremacist = {  }
+				isolationist = {  }
+				progressive = {  }
+				totalitarian = {  }
+				imperialist = {  }
+				prosperity = {  }
+				traditionalist = {  }
+				technologist = {  }
+			}
+		}
+	}
+}
+
+#Second will be where planets with 30% or more of that ethic (and less of yours, also no revolt modifiers) become 
+#'[ethic] strongholds'. They then get a whole lot more ethics attraction (+100?) (also possibly income fall as 
+#withholding taxes). Planets fairly nearby will get modifiers attracting them to that ethic, but less. Planets with 
+#3+ pops now get '[ethic] sympathies' and +50% or something attraction.
+#Remove the cc_seditious_talk_[ethic] modifiers and add cc_stronghold_[ethic] to planets with 30% that faction,
+#cc_sympathies_[ethic] to all the planets with a certain smaller amount of pops (20%?) but not 30%, and
+#cc_incited_[ethic] to planets within 65 units (that are not already strongholds)
+#Will not trigger if there aren't enough upset people on any planet to have at least sympathies.
+							
+							
+#need a cleanup event to remove all the modifiers that shouldn't be there (all if none are active, then with else be
+#more specific for stage 1 and 2. Also promoting planets to seditious talk / sympathies / stronghold (and then
+#consequently incited) if stuff changes.
+
+#monthly, all-purpose event
+event = {
+	id = ccfaction.999
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		#remove the seditious talk if you conquer a planet
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_xenoist_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_xenophile }
+				remove_modifier = cc_seditious_talk_xenophile
+			}
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					has_country_flag = cc_supremacist_seditions_active
+					has_country_flag = cc_isolationist_seditions_active
+				}
+			}
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_xenophobe }
+				remove_modifier = cc_seditious_talk_xenophobe
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_traditionalist_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_spiritualist }
+				remove_modifier = cc_seditious_talk_spiritualist
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_technologist_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_materialist }
+				remove_modifier = cc_seditious_talk_materialist
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_imperialist_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_militarist }
+				remove_modifier = cc_seditious_talk_militarist
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_prosperity_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_pacifist }
+				remove_modifier = cc_seditious_talk_pacifist
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_totalitarian_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_authoritarian }
+				remove_modifier = cc_seditious_talk_authoritarian
+			}
+		}
+		every_country = {
+			limit = { NOT = { has_country_flag = cc_progressive_seditions_active } }
+			every_owned_planet = {
+				limit = { has_modifier = cc_seditious_talk_egalitarian }
+				remove_modifier = cc_seditious_talk_egalitarian
+			}
+		}
+		
+		
+
+		#increase chance of faction re-evaluation
+		every_country = {
+			limit = { has_modifier = cc_country_seditious_talk }
+			every_owned_planet = {
+				limit = { 
+					OR = {
+						has_seditious_talk = yes
+						is_faction_stronghold = yes
+						has_faction_sympathies = yes
+						has_faction_sedition = yes
+					}
+				}
+				
+				every_owned_pop = {
+					pop_event = { id = ccfaction.9991 }
+				}
+			}
+		}
+	}
+}
+
+pop_event = {
+	id = ccfaction.9991
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random = {
+			chance = 5
+			force_faction_evaluation = yes
+		}
+	}
+}
+
+
+
+#Need notifications at every point if the unrest ends (for any reason except that you inherited it from another
+#country)
+
+
+#Third event: After the two years, you will be told that a revolt is imminent if they are still upset and have 
+#enough strongholds (this could be scaled by empire size, though it can only be done up to three planets). You will 
+#be given a direct choice to shift ethics or risk the consequences. After that, at some point in the next year there
+#will be a revolt in all the 'ethic strongholds'. (Code will be based on the AI revolt, but without the need for a 
+#fight to the death).
+#So requires you to have at least one stronghold.
+
+#Increase unrest but set planet_flag = recent_unrest_event
+
+
+#Then I also need something for dealing with 'sympathies' planets
+
+#The other thing I must add is something between events 2 and 3 that allows another faction to ally with them if
+#they are also upset and have 5% of the pop (with a higher chance if they have 10% or 15%)

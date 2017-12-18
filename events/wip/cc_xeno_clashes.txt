@@ -1,0 +1,210 @@
+
+namespace = cc_xeno_clashes
+
+
+
+
+planet_event = {
+	id = cc_xeno_clashes.1
+	title = cc_xeno_clashes.1.name
+	desc = cc_xeno_clashes.1.desc
+	
+	picture = GFX_evt_alien_segregation
+	location = root
+	
+	trigger = {
+		exists = owner
+		has_owner = yes
+		has_planet_flag = cc_eventperf_xeno_clashes_planet
+		NOR = {
+			has_planet_flag = cc_xeno_clashes
+			owner = {
+				OR = {
+					has_country_flag = cc_xeno_empire_clashes
+					has_country_flag = cc_recent_xeno_empire_clashes
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		
+		modifier = {
+			factor = 2
+			unrest < 1
+		}
+		
+	
+	
+	}
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		modifier = {
+			factor = 0.67
+			has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
+		}
+	
+		modifier = {
+			factor = 0.85
+			owner = { has_faction = traditionalist }
+		}
+		
+		modifier = {
+			factor = 2.5
+			owner = { has_country_flag = cc_has_had_luddite_crisis }
+		}
+	}
+
+
+
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			every_owned_planet = {
+				limit = {
+					
+					any_owned_pop = {
+						has_a_happiness_gauge = yes
+						is_enslaved = no
+						is_being_purged = no
+						planet = {
+							count_pops = {
+								limit = { is_same_species = prev }
+								count > 1
+							}
+							any_owned_pop = {
+								NOT = { is_same_species = prevprev }
+								has_a_happiness_gauge = yes
+								is_enslaved = no
+								is_being_purged = no
+								
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_pop = { has_ethic = ethic_xenophobe }
+						
+						any_owned_pop = {
+							has_a_happiness_gauge = yes
+							is_robot_pop = no
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOT = { is_same_species = prevprev }
+									has_a_happiness_gauge = yes
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_xeno_clashes_planet
+						days = 31
+					}
+					if = {
+						limit = {
+							any_owned_pop = {
+								has_a_happiness_gauge = yes
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+									any_owned_pop = {
+										NOT = { is_same_species = prevprev }
+										has_a_happiness_gauge = yes
+										is_robot_pop = no
+										is_same_species = owner_species
+										is_enslaved = no
+										is_being_purged = no
+										
+										planet = {
+											count_pops = {
+												limit = { is_same_species = prev }
+												count > 1
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_xeno_clashes_own_species_planet
+							days = 31
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_policy_flag = ai_full_rights }
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+						
+						any_owned_pop = {
+							has_a_happiness_gauge = yes
+							is_robot_pop = yes
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOT = { is_same_species = prevprev }
+									has_a_happiness_gauge = yes
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_synth_clashes
+						days = 31
+					}
+				}
+			}
+		}

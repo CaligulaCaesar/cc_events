@@ -1,0 +1,103 @@
+#added this as a buff to Authoritarians, as this and PRE make it very difficult for them
+
+namespace = cc_thought_police
+
+
+# Pop is purged or escapes as a political refugee
+pop_event = {
+	id = cc_thought_police.1
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	trigger = {
+		exists = owner
+		owner = {
+			is_country_type = default
+			has_edict = cc_thought_police
+		}
+		happiness < 0.4
+		
+		NOT = { has_ethic = ethic_authoritarian }
+		if = {
+			limit = { owner = { has_ethic = ethic_spiritualist } }
+			NOT = { has_ethic = ethic_spiritualist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_materialist } }
+			NOT = { has_ethic = ethic_materialist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_pacifist } }
+			NOT = { has_ethic = ethic_pacifist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_militarist } }
+			NOT = { has_ethic = ethic_militarist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_xenophile } }
+			NOT = { has_ethic = ethic_xenophile }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_xenophobe } }
+			NOT = { has_ethic = ethic_xenophobe }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 0.67
+			has_ethic = ethic_egalitarian
+		}
+#		modifier = { #left out for performance reasons. Bumped of getting away up a bit and the mtth down.
+#			factor = 0.8
+#			is_valid_TP_refugee_pop = yes
+#		}
+		modifier = {
+			factor = 0.8
+			happiness < 0.3
+		}
+		modifier = {
+			factor = 0.8
+			happiness < 0.2
+		}
+		modifier = {
+			factor = 0.8
+			happiness < 0.1
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_valid_TP_refugee_pop = yes }
+			random_list = {
+				6 = { TP_refugee_pop_effect = yes }
+				4 = { kill_pop = yes }
+			}
+			else = { kill_pop = yes }
+		}
+	}
+}
+
+
+
+
+# Refugees Arrive (new species)
+pop_event = {
+	id = cc_thought_police.2
+	title = cc_thought_police.2.name	
+	picture = GFX_evt_unknown_ships
+	location = root
+	
+	desc = { text = cc_thought_police.2.desc }
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cc_thought_police.2.a
+	}
+}
+

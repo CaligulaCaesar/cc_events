@@ -1,0 +1,1038 @@
+
+namespace = cc_events_performance
+
+#monthly
+event = {
+	id = cc_events_performance.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+					}
+					has_a_happiness_gauge = yes
+					OR = {
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
+					}
+					prev = {
+						OR = {
+							pop_percentage = {
+								percentage > 0.15
+								limit = { is_same_species = prev }
+							}
+							AND = {
+								num_owned_planets > 25
+								pop_percentage = {
+									percentage > 0.05
+									limit = { is_same_species = prev }
+								}
+								pop_percentage = {
+									percentage < 0.4
+									limit = {
+										OR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_minority
+				days = 31
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_subspecies = prev
+							is_same_species = prev
+						}
+						has_a_happiness_gauge = yes
+						OR = {
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
+						}
+						prev = {
+							pop_percentage = {
+								percentage > 0.25
+								limit = { is_same_species = prev }
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_has_large_minority
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+					}
+					has_a_happiness_gauge = yes
+					OR = {
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
+					}
+					owner = {
+						pop_percentage = {
+							percentage > 0.05
+							limit = { is_same_species = prev }
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_a_small_minority
+				days = 31
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_subspecies = prev
+							is_same_species = prev
+						}
+						has_a_happiness_gauge = yes
+						OR = {
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
+						}
+						owner = {
+							pop_percentage = {
+								percentage > 0.2
+								limit = { is_same_species = prev }
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_has_minority
+					days = 31
+				}
+				if = {
+					limit = {
+						pop_percentage = {
+							percentage < 0.4
+							limit = { is_same_species = owner_species }
+						}
+					}
+					set_timed_country_flag = {
+						flag = cc_eventperf_founder_is_minority
+						days = 31
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+					
+				pop_percentage = {
+					percentage > 0.18
+					limit = { has_ethic = ethic_xenophobe }
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_lots_of_xenophobes_min
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				
+				pop_percentage = {
+					percentage > 0.02
+					limit = {
+						OR = {
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
+						}
+						has_pop_flag = cc_literally_xenophile_manifested
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_literally_xenophiles
+				days = 31
+			}
+			if = {
+				limit = {
+					pop_percentage = {
+						percentage > 0.04
+						limit = {
+							OR = {
+								has_citizenship_type = { type = citizenship_full }
+								has_citizenship_type = { type = citizenship_limited }
+								has_citizenship_type = { type = citizenship_caste_system }
+								has_citizenship_type = { type = citizenship_caste_system_limited }
+							}
+							has_pop_flag = cc_literally_xenophile_manifested
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_lots_literally_xenophiles
+					days = 31
+				}
+			}
+		}
+		
+		every_country = {
+			limit = {
+				is_country_type = default
+				is_at_war = yes
+				is_war_leader = yes
+				any_owned_planet = {
+					count_pops = {
+						limit = {
+							has_ethic = ethic_pacifist
+							has_citizenship_rights = yes
+						}
+						count > 2
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_a_pacifist_planet_war
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				allows_slavery = yes
+				has_faction = progressive
+				NOR = {
+					has_country_flag = cc_emancipation_movement
+					has_country_flag = cc_recent_emancipation_movement
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							is_enslaved = no
+							has_ethic = ethic_egalitarian
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_lots_of_egalitarians
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_policy_flag = robots_allowed
+				NOR = {
+					has_country_flag = cc_luddite_movement
+					has_country_flag = cc_recent_luddite_movement
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_spiritualist
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_lots_of_spiritualists
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							NOT = { is_same_species = prev }
+							is_enslaved = no
+							has_citizenship_rights = yes
+							is_robot_pop = no
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_xenos_with_rights
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			every_owned_planet = {
+				limit = {
+					owner = { 
+						any_neighbor_country = {
+							OR = {
+								is_hostile_to = prev
+								is_domineering_to = prev
+								is_rival = prev			
+							}		
+							prevprev = { is_neighbor_of = prev }
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_hostile_border
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				any_owned_planet = { has_modifier = cc_religious_centre }
+			}
+			every_owned_planet = {
+				limit = {
+					owner = {
+						any_owned_planet = {
+							has_modifier = cc_religious_centre
+							distance = {
+								source = prevprev
+								max_distance = 75
+								min_distance = 0
+							}
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_near_religious_centre
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			every_owned_planet = {
+				limit = { has_building = building_capital_3 }
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								has_building = building_physics_lab_3
+								has_building = building_engineering_facility_3
+								has_building = building_biolab_4
+							}
+							AND = {
+								has_building = building_physics_lab_3
+								has_building = building_engineering_facility_4
+								has_building = building_biolab_3
+							}
+							AND = {
+								has_building = building_physics_lab_4
+								has_building = building_engineering_facility_3
+								has_building = building_biolab_3
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_developed_planet
+						days = 31
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									has_building = building_power_plant_4
+									has_building = building_hydroponics_farm_3
+									has_building = building_mining_network_3
+								}
+								AND = {
+									has_building = building_power_plant_3
+									has_building = building_hydroponics_farm_4
+									has_building = building_mining_network_3
+								}
+								AND = {
+									has_building = building_power_plant_3
+									has_building = building_hydroponics_farm_3
+									has_building = building_mining_network_4
+								}
+							}
+							OR = {
+								has_building = building_mineral_processing_plant_2
+								has_building = building_power_hub_2
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_highly_developed_planet
+							days = 31
+						}
+					}
+				}
+			}	
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = traditionalist
+						support > 0.1
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_enough_spiritualists
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = technologist
+						support > 0.33
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_many_materialists
+				days = 31
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {	
+							is_pop_faction_type = technologist
+							support > 0.5
+						}
+						count = 1
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_lots_materialists
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = progressive
+						support > 0.1
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_enough_egalitarians
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = totalitarian
+						support > 0.4
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_many2_authoritarians
+				days = 31
+			}
+		}
+
+
+		every_country = {
+			limit = {
+				is_country_type = default
+				num_owned_planets > 5
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_a_factional_revolt_active = no
+				count_pop_factions = {
+					limit = {
+						is_a_vanilla_faction = yes
+						support > 0.15
+						pop_percentage = {
+							percentage > 0.74
+							limit = { happiness < 0.4 }
+						}
+					}
+					count > 0
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_potential_faction_revolt
+				days = 31
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.15
+							pop_percentage = {
+								percentage > 0.6
+								limit = { happiness < 0.3 }
+							}
+						}
+						count > 0
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_angry_faction_revolt
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.2
+							pop_percentage = {
+								percentage > 0.75
+								limit = { happiness < 0.4 }
+							}
+						}
+						count > 0
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_large_faction_revolt
+					days = 31
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_faction = traditionalist
+			}
+			if = {
+				limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
+				every_owned_planet = {
+					limit = {
+						has_planet_flag = ccrebel_perf_spiritualists_2
+						has_political_colony_modifier = no
+						owner = {
+							any_owned_planet = {
+								NOT = { is_same_value = prevprev }
+								distance = {
+									source = prevprev
+									min_distance = 0
+									max_distance = 75
+								}
+								any_owned_pop = { has_ethic = ethic_spiritualist }
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_pilgrimage_candidate
+						days = 31
+					}
+				}
+				else = {
+					every_owned_planet = {
+						limit = {
+							has_planet_flag = ccrebel_perf_spiritualists_2
+							has_political_colony_modifier = no
+							owner = {
+								any_owned_planet = {
+									NOT = { is_same_value = prevprev }
+									distance = {
+										source = prevprev
+										min_distance = 0
+										max_distance = 75
+									}
+									any_owned_pop = { has_ethic = ethic_spiritualist }
+								}	
+								NOT = {
+									any_owned_planet = {
+										distance = {
+											source = prevprev
+											min_distance = 0
+											max_distance = 150
+										}
+										has_modifier = cc_religious_centre
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_pilgrimage_candidate
+							days = 31
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			every_owned_planet = {
+				limit = {
+					num_pops > 5
+					
+					any_owned_pop = {
+						has_a_happiness_gauge = yes
+						is_enslaved = no
+						is_being_purged = no
+						planet = {
+							count_pops = {
+								limit = { is_same_species = prev }
+								count > 1
+							}
+							any_owned_pop = {
+								NOT = { is_same_species = prevprev }
+								has_a_happiness_gauge = yes
+								is_enslaved = no
+								is_being_purged = no
+								
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_pop = { has_ethic = ethic_xenophobe }
+						
+						any_owned_pop = {
+							has_a_happiness_gauge = yes
+							is_robot_pop = no
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOT = { is_same_species = prevprev }
+									has_a_happiness_gauge = yes
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_xeno_clashes_planet
+						days = 31
+					}
+					if = {
+						limit = {
+							any_owned_pop = {
+								has_a_happiness_gauge = yes
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+									any_owned_pop = {
+										NOT = { is_same_species = prevprev }
+										has_a_happiness_gauge = yes
+										is_robot_pop = no
+										is_same_species = owner_species
+										is_enslaved = no
+										is_being_purged = no
+										
+										planet = {
+											count_pops = {
+												limit = { is_same_species = prev }
+												count > 1
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_xeno_clashes_own_species_planet
+							days = 31
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_policy_flag = ai_full_rights }
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+						
+						any_owned_pop = {
+							has_a_happiness_gauge = yes
+							is_robot_pop = yes
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOT = { is_same_species = prevprev }
+									has_a_happiness_gauge = yes
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_synth_clashes
+						days = 31
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = cc_events_performance.2
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+		has_faction = xenoist
+		
+		has_country_flag = cc_eventperf_has_minority
+		
+		NOR = {
+			has_country_flag = recent_xenophobic_comments
+			has_ethic = ethic_gestalt_consciousness
+			has_ethic = ethic_fanatic_xenophile
+		}
+		
+		
+		exists = ruler
+		NOT = { ruler = { leader_of_faction = xenoist } }
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		
+		modifier = {
+			factor = 0.8
+			has_country_flag = cc_eventperf_has_large_minority
+		}
+		modifier = {
+			factor = 0.5
+			ruler = { leader_of_faction = supremacist }
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_country_flag = cc_eventperf_has_lots_of_xenophobes_min
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+					has_authority = auth_dictatorial
+				}
+			}
+			country_event = { id = cc_events_mod.1 }
+		}
+		if = {
+			limit = { has_authority = auth_imperial }
+			country_event = { id = cc_events_mod.2 }
+		}
+	}
+}
+
+#country_event = { id = cc_events_performance.3 } was no longer necessary, got subsumed into .2
+
+country_event = {
+	id = cc_events_performance.4
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+		
+		has_faction = xenoist
+		
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = cc_has_had_interspecies_marriage }
+		
+		
+		has_country_flag = cc_eventperf_literally_xenophiles
+	}
+	
+	mean_time_to_happen = {
+		years = 30
+		
+		modifier = {
+			factor = 0.5
+			has_country_flag = cc_eventperf_lots_literally_xenophiles
+		}
+	}
+	immediate = { country_event = { id = cc_events_mod.7 } }
+}
+
+
+	
+
+pop_event = {
+	id = cc_events_performance.6
+	hide_window = yes
+	
+	trigger = {
+		has_a_happiness_gauge = yes
+		has_pop_flag = cc_literally_xenophile
+		exists = owner
+		owner = { has_country_flag = cc_eventperf_has_minorities }
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		
+		modifier = {
+			factor = 0.8
+			exists = owner
+			owner = { has_country_flag = cc_has_had_interspecies_marriage }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 0.8
+			
+			exists = owner
+			owner = { has_country_flag = cc_eventperf_founder_is_minority }
+		}
+	}
+	
+	immediate = { pop_event = { id = cc_events_mod.10 } }
+}
+
+
+pop_event = {
+	id = cc_events_performance.7
+	hide_window = yes
+	
+	trigger = {
+		has_a_happiness_gauge = yes
+		has_pop_flag = cc_literally_xenophile_manifested
+		exists = owner
+		owner = { NOT = { has_country_flag = cc_eventperf_has_minorities } }
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { has_policy_flag = allows_im }
+		}
+		modifier = {
+			factor = 0.5
+			exists = owner
+			owner = { NOT = { has_country_flag = cc_eventperf_a_small_minority } }
+		}
+	}
+	
+	immediate = { pop_event = { id = cc_events_mod.11 } }
+}
+	
+	
+	
+	
+country_event = {
+	id = cc_events_performance.8
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_country_flag = cc_recent_pacifist_protests }
+		has_faction = prosperity
+		is_at_war = yes
+		is_war_leader = yes
+		
+		has_country_flag = cc_eventperf_has_a_pacifist_planet_war
+		
+		any_war = {
+			is_war_participant = { who = root side = attackers }
+			attacker_war_score > 60
+
+			NOT = {
+				root = {
+					any_war = {
+						OR = {
+							is_war_participant = { who = root side = attackers }
+							is_war_participant = { who = root side = defenders }
+						}
+						NOT = { is_same_value = prevprev }
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 2
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = { #AI will struggle more to deal with this. Best to make it mainly a player challenge.
+			factor = 2
+			is_ai = yes
+		}
+		modifier = {
+			factor = 2
+			
+			any_war = {
+				is_war_participant = { who = root side = attackers }
+				any_defender = {
+					OR = {
+						has_valid_civic = civic_fanatic_purifiers
+						has_valid_civic = civic_hive_devouring_swarm
+						has_valid_civic = civic_machine_terminator
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_war = {
+				is_war_participant = { who = root side = attackers }
+				attacker_war_score > 80
+			}
+		}
+	}
+	
+	immediate = { country_event = { id = cc_peace.1 } }
+}
+	
+	
+	
+planet_event = {
+	id = cc_events_performance.9
+	hide_window = yes
+
+	trigger = {
+		has_owner = yes
+		exists = root.owner
+		has_planet_flag = cc_eventperf_pilgrimage_candidate
+		
+		exists = controller
+		controller = { is_same_value = root.owner }
+		
+		orbital_bombardment = no
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		
+		modifier = {
+			factor = 0.8
+			has_planet_flag = ccrebel_perf_spiritualists_3
+		}
+	}
+	
+	immediate = { planet_event = { id = cc_colony_events.100 } }
+}

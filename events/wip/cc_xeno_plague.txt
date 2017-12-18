@@ -1,0 +1,1248 @@
+#ideally, I'd do it for all species in the empire, but you can't have species_events or set species relation flags or stuff like that.
+
+namespace = cc_xeno_plague
+
+country_event = {
+	id = cc_xeno_plague.1
+	title = cc_xeno_plague.1.name
+	desc = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = cc_xeno_plague.1.desc
+	}
+	desc = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = cc_xeno_plague.1.desc.phobe
+	}
+	desc = {
+		trigger = { has_ethic = ethic_gestalt_consciousness }
+		text = cc_xeno_plague.1.desc.hive
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+	}
+		
+	immediate = {
+		from = { save_event_target_as = cc_xeno_pop }
+		
+		#deadliness
+		random_list = {
+			50 = { set_country_flag = cc_plague_d_low }
+			25 = { set_country_flag = cc_plague_d_med }
+			15 = { set_country_flag = cc_plague_d_high }
+			10 = {
+				set_country_flag = cc_plague_d_deadly 
+				modifier = {
+					factor = 0
+					num_owned_planets < 10
+				}
+			}
+		}
+		#contagion
+		random_list = {
+			15 = { set_country_flag = cc_plague_c_vslow }
+			20 = { set_country_flag = cc_plague_c_slow }
+			25 = { set_country_flag = cc_plague_c_med }
+			20 = { set_country_flag = cc_plague_c_fast }
+			15 = { set_country_flag = cc_plague_c_vfast }
+			5 = {
+				set_country_flag = cc_plague_c_scary
+				modifier = {
+					factor = 0
+					num_owned_planets < 10
+				}
+			}
+		}
+		#Difficulty to cure
+		random_list = {
+			25 = { set_country_flag = cc_plague_fast_cure }
+			25 = { set_country_flag = cc_plague_med_cure }
+			25 = { set_country_flag = cc_plague_slow_cure }
+			25 = { set_country_flag = cc_plague_incurable }
+		}
+		
+		if = {
+			limit = {
+				any_owned_pop = {
+					is_same_species = root
+					planet = {
+						any_owned_pop = {
+							is_same_species = from
+						}
+					}
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					is_same_species = root
+					planet = {
+						any_owned_pop = {
+							is_same_species = from
+						}
+					}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_fast_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 720
+					}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_med_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 1800
+					}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_slow_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 3600
+					}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_incurable } }
+					add_modifier = {
+						modifier = cc_ill
+						days = -1
+					}
+				}
+			}
+			else = {
+				random_owned_pop = {
+					limit = { is_same_species = root }
+					
+					if = {
+						limit = { root = { has_country_flag = cc_plague_fast_cure } }
+						add_modifier = {
+							modifier = cc_ill
+							days = 720
+						}
+					}
+					if = {
+						limit = { root = { has_country_flag = cc_plague_med_cure } }
+						add_modifier = {
+							modifier = cc_ill
+							days = 1800
+						}
+					}
+					if = {
+						limit = { root = { has_country_flag = cc_plague_slow_cure } }
+						add_modifier = {
+							modifier = cc_ill
+							days = 3600
+						}
+					}
+					if = {
+						limit = { root = { has_country_flag = cc_plague_incurable } }
+						add_modifier = {
+							modifier = cc_ill
+							days = -1
+						}
+					}
+				}
+			}
+		}
+			
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		
+		add_modifier = {
+			modifier = cc_xeno_plague
+			days = -1
+		}
+		
+		if = {
+			limit = { has_country_flag = cc_plague_d_low }
+			custom_tooltip = cc_xeno_plague.1.d_low
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_d_med }
+			custom_tooltip = cc_xeno_plague.1.d_med
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_d_high }
+			custom_tooltip = cc_xeno_plague.1.d_high
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_d_deadly }
+			custom_tooltip = cc_xeno_plague.1.d_deadly
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_vslow }
+			custom_tooltip = cc_xeno_plague.1.c_vslow
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_slow }
+			custom_tooltip = cc_xeno_plague.1.c_slow
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_med }
+			custom_tooltip = cc_xeno_plague.1.c_med
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_fast }
+			custom_tooltip = cc_xeno_plague.1.c_fast
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_vfast }
+			custom_tooltip = cc_xeno_plague.1.c_vfast
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_c_scary }
+			custom_tooltip = cc_xeno_plague.1.c_scary
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_fast_cure }
+			custom_tooltip = cc_xeno_plague.1.fast_cure
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_med_cure }
+			custom_tooltip = cc_xeno_plague.1.med_cure
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_slow_cure }
+			custom_tooltip = cc_xeno_plague.1.slow_cure
+		}
+		if = {
+			limit = { has_country_flag = cc_plague_incurable }
+			custom_tooltip = cc_xeno_plague.1.incurable
+		}
+		
+		hidden_effect = { country_event = { id = cc_xeno_plague.9 days = 10 } }
+	}
+}
+
+cc_xeno_plague.1.d_low:0 "Deadliness: The disease is §Gnot very deadly§!."
+cc_xeno_plague.1.d_med:0 "Deadliness: The disease is §Ymoderately deadly§!."
+cc_xeno_plague.1.d_high:0 "Deadliness: The disease is §Rvery deadly§!."
+cc_xeno_plague.1.d_deadly:0 "Deadliness: The disease is §Rextremely deadly§!."
+cc_xeno_plague.1.c_vslow:0 "Contagion: The disease spreads §Gvery slowly§!."
+cc_xeno_plague.1.c_slow:0 "Contagion: The disease spreads §Gslowly§!."
+cc_xeno_plague.1.c_med:0 "Contagion: The disease spreads §Ymoderately fast§!."
+cc_xeno_plague.1.c_fast:0 "Contagion: The disease spreads §Yquickly§!."
+cc_xeno_plague.1.c_vfast:0 "Contagion: The disease spreads §Rvery quickly§!."
+cc_xeno_plague.1.c_scary:0 "Contagion: The disease spreads §Rextremely fast§!."
+cc_xeno_plague.1.fast_cure:0 "Durability: The disease will run its course §Gquickly§!."
+cc_xeno_plague.1.med_cure:0 "Durability: The disease will run its course at a §Ynormal pace§!."
+cc_xeno_plague.1.slow_cure:0 "Durability: The disease will run its course §Rslowly§!."
+cc_xeno_plague.1.incurable:0 "Durability: The disease §Rcannot be cured naturally§!."
+
+#Need ones of these for spreading the plague too?
+
+# A pop has finished migrating to another planet
+# Root = pop
+# From = Tile on the new planet
+# FromFrom = Tile on the old planet
+on_pop_migration_end = {
+	events = {
+		cc_xeno_plague.2
+	}
+}
+
+pop_event = {
+	id = cc_xeno_plague.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = owner
+		has_pop_flag = cc_xeno_plague_safe
+		owner = {
+			NOT = {
+				any_owned_pop = {
+					is_same_species = root
+					has_pop_flag = cc_xeno_plague_safe
+				}
+			}
+		}
+	}
+	
+	immediate = { remove_pop_flag = cc_xeno_plague_safe }
+}
+			
+
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		cc_xeno_plague.3
+	}
+}
+
+planet_event = {
+	id = cc_xeno_plague.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { any_owned_pop = { has_pop_flag = cc_xeno_plague_safe } }
+	
+	immediate = {
+		every_owned_pop = {
+			limit = { has_pop_flag = cc_xeno_plague_safe }
+			remove_pop_flag = cc_xeno_plague_safe
+		}
+	}
+}
+
+
+
+pop_event = {
+	id = cc_xeno_plague.4
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_pop_flag = cc_xeno_plague_safe }
+		is_robot_pop = no
+		exists = owner
+		owner = {
+			any_owned_pop = {
+				NOT = { is_same_species = root }
+				is_robot_pop = no
+			}
+			num_owned_planets > 5
+			years_passed > 20
+			NOT = {
+				any_owned_pop = {
+					is_same_species = root
+					has_pop_flag = cc_xeno_plague_safe
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 0.5
+			planet = {
+				any_pop = {
+					NOT = { is_same_species = root }
+					is_robot_pop = no
+				}
+			}
+		}
+	}
+	
+	immediate = {
+	
+	#work out a sophisticated way of doing this for all the species in the empire. Or at least a sample.
+	#Maybe the base species and then all that have more than 10%
+	#Random list based on species - then I can make the species on the planet most likely, then the root
+	#species.
+	
+		owner = {
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+					save_event_target_as = cc_pop_1
+				}
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+					save_event_target_as = cc_pop_2
+				}
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+							is_same_species = event_target:cc_pop_2
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+							is_same_species = event_target:cc_pop_2
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+					save_event_target_as = cc_pop_3
+				}
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+							is_same_species = event_target:cc_pop_2
+							is_same_species = event_target:cc_pop_3
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_same_species = root
+							is_same_species = prev
+							is_same_species = event_target:cc_pop_1
+							is_same_species = event_target:cc_pop_2
+							is_same_species = event_target:cc_pop_3
+						}
+						is_robot_pop = no
+						owner = {
+							pop_percentage = {
+								limit = { is_same_species = prev }
+								percentage > 0.1
+							}
+						}
+					}
+					save_event_target_as = cc_pop_4
+				}
+			}
+		}
+	
+	
+	
+		random_list = {
+			1 = {
+				owner = { country_event = { id = cc_xeno_plague.4 } }
+				modifier = {
+					factor = 0
+					owner = { has_modifier = cc_xeno_plague }
+				}
+			}
+			4 = {
+				owner = {
+					every_owned_pop = {
+						limit = { is_same_species = root }
+						set_pop_flag = cc_xeno_plague_safe
+					}
+				}
+			}
+		}
+	}
+}
+
+
+on_monthly_pulse = {
+	events = {
+		cc_xeno_plague.5
+	}
+}
+
+#monthly
+event = {
+	id = cc_xeno_plague.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = { has_modifier = cc_xeno_plague }
+	}
+	
+	immediate = {
+		every_country = {
+			limit = { has_modifier = cc_xeno_plague }
+			
+			if = {
+				limit = {
+					any_owned_planet = {
+						NOT = { any_owned_pop = { has_modifier = cc_ill } }
+					}
+				}
+				random_owned_planet = {
+					limit = { NOT = { any_owned_pop = { has_modifier = cc_ill } } }
+					planet_event = { id = cc_xeno_plague.7 }
+				}
+			}
+			
+			every_owned_pop = {
+				limit = { is_same_species = prev }
+				pop_event = { id = cc_xeno_plague.6
+			}
+		}
+	}
+}
+
+
+pop_event = {
+	id = cc_xeno_plague.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_modifier = cc_ill }
+			
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_d_low } }
+				random = {
+					chance = 1
+					kill_pop = yes
+				}
+				planet = {
+					if = {
+						limit = { NOT = { any_owned_pop = { has_modifier = cc_ill } } }
+						planet_event = { id = cc_xeno_plague.7 }
+					}
+				}
+				modifier = {
+					factor = 0
+					planet = { num_pops = 1 }
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_d_med } }
+				random = {
+					chance = 2
+					kill_pop = yes
+				}
+				planet = {
+					if = {
+						limit = { NOT = { any_owned_pop = { has_modifier = cc_ill } } }
+						planet_event = { id = cc_xeno_plague.7 }
+					}
+				}
+				modifier = {
+					factor = 0
+					planet = { num_pops = 1 }
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_d_high } }
+				random = {
+					chance = 4
+					kill_pop = yes
+				}
+				planet = {
+					if = {
+						limit = { NOT = { any_owned_pop = { has_modifier = cc_ill } } }
+						planet_event = { id = cc_xeno_plague.7 }
+					}
+				}
+				modifier = {
+					factor = 0
+					planet = { num_pops = 1 }
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_d_deadly } }
+				random = {
+					chance = 8
+					kill_pop = yes
+				}
+				planet = {
+					if = {
+						limit = { NOT = { any_owned_pop = { has_modifier = cc_ill } } }
+						planet_event = { id = cc_xeno_plague.7 }
+					}
+				}
+				modifier = {
+					factor = 0
+					planet = { num_pops = 1 }
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = cc_ill } }
+			
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_vslow } }
+				random_list = {
+					95 = { }
+					5 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+						
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_slow } }
+				random_list = {
+					92 = { }
+					8 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+						
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_med } }
+				random_list = {
+					88 = { }
+					12 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+						
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_fast } }
+				random_list = {
+					82 = { }
+					18 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+						
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_vfast } }
+				random_list = {
+					73 = { }
+					27 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+						
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owner = { has_country_flag = cc_plague_c_scary } }
+				random_list = {
+					60 = { }
+					40 = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_planet_flag = cc_planet_plague }
+								}
+								planet_event = { id = cc_xeno_plague.8 }
+							}
+						}
+					
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_fast_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 720
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_med_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 1800
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_slow_cure } }
+							add_modifier = {
+								modifier = cc_ill
+								days = 3600
+							}
+						}
+						if = {
+							limit = { owner = { has_country_flag = cc_plague_incurable } }
+							add_modifier = {
+								modifier = cc_ill
+								days = -1
+							}
+						}
+						modifier = {
+							factor = 0.33
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.33
+							owner = { has_country_flag = cc_plague_quarantine }
+							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 75
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0.5
+							planet = {
+								owner = {
+									NOT = {
+										any_owned_planet = {
+											has_planet_flag = cc_planet_plague
+											distance = {
+												source = prevprev
+												max_distance = 150
+												min_distance = 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#Planet Free of Disease
+planet_event = {
+	id = cc_xeno_plague.7
+	title = cc_xeno_plague.7.name
+	desc = cc_xeno_plague.7.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_planet_flag = cc_planet_plague
+	}
+	
+	option = {
+		name = CCGOOD
+		if = {
+			limit = { has_modifier = cc_plague_quarantine }
+			remove_modifier = cc_plague_quarantine
+		}
+	}
+}
+
+#Planet Gets Disease
+planet_event = {
+	id = cc_xeno_plague.8
+	title = cc_xeno_plague.8.name
+	desc = cc_xeno_plague.8.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_flag = cc_planet_plague
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		if = {
+			limit = { owner = { has_country_flag = cc_plague_quarantine } }
+			add_modifier = {
+				modifier = cc_plague_quarantine
+				days = -1
+			}
+		}
+	}
+}
+
+
+#Quarantine or not
+country_event = {
+	id = cc_xeno_plague.9
+	title = cc_xeno_plague.9.name
+	desc = cc_xeno_plague.9.desc
+	#another for hive?
+	
+	option = {
+		name = YES
+		set_country_flag = cc_plague_quarantine
+		custom_tooltip = cc_xeno_plague.9.YES
+		
+		ai_chance = {
+		}
+	}
+	option = {
+		name = NO
+		
+		ai_chance = {
+		}
+	}
+}
+Make AI chances!
+
+cc_xeno_plague.9.YES:0 "The contagion rate of the disease between planets will be cut by two thirds."
+
+What's missing is the special project to make it go away. I should also consider whether a tech should immunise you from illness.

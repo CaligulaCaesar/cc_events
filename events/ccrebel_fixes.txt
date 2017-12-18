@@ -1,0 +1,3388 @@
+namespace = rebellionscript
+
+
+#Fix to the no ethics problem.
+
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+
+country_event = {
+	id = rebellionscript.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_ethics = 0
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_authoritarian }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_authoritarian
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_egalitarian }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_egalitarian
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_pacifist }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_pacifist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_militarist }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_militarist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_xenophile }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_xenophile
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_xenophobe }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_xenophobe
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_spiritualist }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_spiritualist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.5
+						limit = { has_ethic = ethic_materialist }
+					}
+				}
+			}
+			country_add_ethic = ethic_fanatic_materialist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_authoritarian }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_authoritarian }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_egalitarian
+				}
+			}
+			country_add_ethic = ethic_authoritarian
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_egalitarian }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_egalitarian }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+				}
+			}
+			country_add_ethic = ethic_egalitarian
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_pacifist }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_pacifist }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+				}
+			}
+			country_add_ethic = ethic_pacifist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_militarist }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_militarist }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_pacifist
+				}
+			}
+			country_add_ethic = ethic_militarist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_xenophile }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_xenophile }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
+			}
+			country_add_ethic = ethic_xenophile
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_xenophobe }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_xenophobe }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_xenophile
+				}
+			}
+			country_add_ethic = ethic_xenophobe
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_spiritualist }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_spiritualist }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_materialist
+				}
+			}
+			country_add_ethic = ethic_spiritualist
+		}
+		if = {
+			limit = {
+				from = {
+					pop_percentage = {
+						percentage > 0.25
+						limit = { has_ethic = ethic_materialist }
+					}
+					NOT = {
+						pop_percentage = {
+							percentage > 0.5
+							limit = { has_ethic = ethic_materialist }
+						}
+					}
+				}
+				NOR = { 
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_spiritualist
+				}
+			}
+			country_add_ethic = ethic_materialist
+		}
+		country_event = { id = rebellionscript.36 }
+		country_event = { id = rebellionscript.364 days = 2 }
+	}
+}
+
+
+country_event = {
+	id = rebellionscript.36
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		if = {
+			limit = {
+				num_ethics = 2
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_pacifist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_militarist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_spiritualist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_materialist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_authoritarian }
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_add_ethic = ethic_fanatic_authoritarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_pacifist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_militarist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_spiritualist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_materialist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_egalitarian }
+							}
+						}
+						country_remove_ethic = ethic_egalitarian
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+			
+			
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_spiritualist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_materialist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_pacifist }
+							}
+						}
+						country_remove_ethic = ethic_pacifist
+						country_add_ethic = ethic_fanatic_pacifist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_spiritualist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_materialist
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_militarist }
+							}
+						}
+						country_remove_ethic = ethic_militarist
+						country_add_ethic = ethic_fanatic_militarist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_spiritualist }
+							}
+						}
+						country_remove_ethic = ethic_spiritualist
+						country_add_ethic = ethic_fanatic_spiritualist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		
+			if = {
+				limit = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_xenophobe
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophobe }
+							}
+						}
+						country_remove_ethic = ethic_xenophobe
+						country_add_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_xenophile
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_materialist }
+							}
+						}
+						country_remove_ethic = ethic_materialist
+						country_add_ethic = ethic_fanatic_materialist
+					}
+					50 = {
+						modifier = {
+							factor = 2
+							pop_percentage = {
+								percentage > 0.35
+								limit = { has_ethic = ethic_xenophile }
+							}
+						}
+						country_remove_ethic = ethic_xenophile
+						country_add_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+		
+			
+			
+		if = {
+			limit = {
+				num_ethics = 1
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
+				country_remove_ethic = ethic_authoritarian
+				country_add_ethic = ethic_fanatic_authoritarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+				}
+				country_remove_ethic = ethic_egalitarian
+				country_add_ethic = ethic_fanatic_egalitarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+				}
+				country_remove_ethic = ethic_pacifist
+				country_add_ethic = ethic_fanatic_pacifist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
+				country_remove_ethic = ethic_spiritualist
+				country_add_ethic = ethic_fanatic_spiritualist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
+				country_remove_ethic = ethic_spiritualist
+				country_add_ethic = ethic_fanatic_spiritualist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_materialist
+				}
+				country_remove_ethic = ethic_materialist
+				country_add_ethic = ethic_fanatic_materialist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophile
+				}
+				country_remove_ethic = ethic_xenophile
+				country_add_ethic = ethic_fanatic_xenophile
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
+				country_remove_ethic = ethic_xenophobe
+				country_add_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		
+		
+		
+		if = {
+			limit = {
+				num_ethics = 0
+			}
+		
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_authoritarian }
+						}
+					NOT = { has_ethic = ethic_egalitarian }
+				}
+				country_add_ethic = ethic_authoritarian
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_egalitarian }
+						}
+					NOT = { has_ethic = ethic_authoritarian }
+				}
+				country_add_ethic = ethic_egalitarian
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_pacifist }
+						}
+					NOT = { has_ethic = ethic_militarist }
+				}
+				country_add_ethic = ethic_pacifist
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_militarist }
+						}
+					NOT = { has_ethic = ethic_pacifist }
+				}
+				country_add_ethic = ethic_militarist
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_xenophile }
+						}
+					NOT = { has_ethic = ethic_xenophobe }
+				}
+				country_add_ethic = ethic_xenophile
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_xenophobe }
+						}
+					NOT = { has_ethic = ethic_xenophile }
+				}
+				country_add_ethic = ethic_xenophobe
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_spiritualist }
+						}
+					NOT = { has_ethic = ethic_materialist }
+				}
+				country_add_ethic = ethic_spiritualist
+			}
+			if = {
+				limit = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_materialist }
+						}
+					NOT = { has_ethic = ethic_spiritualist }
+				}
+				country_add_ethic = ethic_materialist
+			}
+		}
+		country_event = { id = rebellionscript.361 }
+		country_event = { id = rebellionscript.363 days = 1 }
+	}
+}
+
+country_event = {
+	id = rebellionscript.361
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+			
+		if = {
+			limit = {
+				num_ethics = 2
+				NOR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_egalitarian }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_authoritarian }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_pacifist }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_xenophile }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_xenophobe }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_militarist }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_materialist }
+						}
+						pop_percentage = {
+							percentage > 0.15
+							limit = { has_ethic = ethic_spiritualist }
+						}
+					}
+				}
+				
+				random_list = {
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_egalitarian }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_egalitarian
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_pacifist }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_pacifist
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_xenophile }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_xenophile
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_authoritarian }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_authoritarian
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_xenophobe }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_xenophobe
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_militarist }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_militarist
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_materialist }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_materialist
+					}
+					12 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOR = {
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+								NOT = {
+										pop_percentage = {
+											percentage > 0.15
+											limit = { has_ethic = ethic_spiritualist }
+										}
+								}
+							}
+						}
+						country_add_ethic = ethic_spiritualist
+					}
+				}
+				else = {
+					random_list = {
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_authoritarian }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_authoritarian
+						}
+			
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_egalitarian }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_egalitarian
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_xenophile }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_xenophile
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_xenophobe }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_xenophobe
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_militarist }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_militarist
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_pacifist }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_pacifist
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_spiritualist }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_spiritualist
+						}
+						
+						12 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+								}
+							}
+							modifier = {
+								factor = 2
+								count_owned_pops = {
+									limit = { has_ethic = ethic_materialist }
+									count > 2
+								}
+							}
+							country_add_ethic = ethic_materialist
+						}
+					}
+				}
+			}
+		}
+	
+		
+		if = {
+			limit = { num_ethics > 3 }
+			
+		
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
+				country_remove_ethic = ethic_authoritarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+				}
+				country_remove_ethic = ethic_egalitarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+				}
+				country_remove_ethic = ethic_pacifist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+				}
+				country_remove_ethic = ethic_militarist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
+				country_remove_ethic = ethic_spiritualist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_materialist
+				}
+				country_remove_ethic = ethic_materialist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophile
+				}
+				country_remove_ethic = ethic_xenophile
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
+				country_remove_ethic = ethic_xenophobe
+			}
+			
+			country_event = { id = rebellionscript.362 }
+		}
+		country_event = { id = rebellionscript.363 days = 1 }
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						num_ethics = 2
+						OR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+						OR = {
+							has_ethic = ethic_authoritarian
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_materialist
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_militarist
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_xenophobe
+						}
+					}
+					AND = {
+						num_ethics = 3
+						NOR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+			country_event = { id = rebellionscript.364 }
+		}
+	}
+}
+
+
+country_event = {
+	id = rebellionscript.362
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_ethics = 0
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_authoritarian }
+					}
+				NOT = { has_ethic = ethic_egalitarian }
+			}
+			country_add_ethic = ethic_authoritarian
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_egalitarian }
+					}
+				NOT = { has_ethic = ethic_authoritarian }
+			}
+			country_add_ethic = ethic_egalitarian
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_pacifist }
+					}
+				NOT = { has_ethic = ethic_militarist }
+			}
+			country_add_ethic = ethic_pacifist
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_militarist }
+					}
+				NOT = { has_ethic = ethic_pacifist }
+			}
+			country_add_ethic = ethic_militarist
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_xenophile }
+					}
+				NOT = { has_ethic = ethic_xenophobe }
+			}
+			country_add_ethic = ethic_xenophile
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_xenophobe }
+					}
+				NOT = { has_ethic = ethic_xenophile }
+			}
+			country_add_ethic = ethic_xenophobe
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_spiritualist }
+					}
+				NOT = { has_ethic = ethic_materialist }
+			}
+			country_add_ethic = ethic_spiritualist
+		}
+		if = {
+			limit = {
+					pop_percentage = {
+						percentage > 0.20
+						limit = { has_ethic = ethic_materialist }
+					}
+				NOT = { has_ethic = ethic_spiritualist }
+			}
+			country_add_ethic = ethic_materialist
+		}
+		country_event = { id = rebellionscript.363 }
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						num_ethics = 2
+						OR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+						OR = {
+							has_ethic = ethic_authoritarian
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_materialist
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_militarist
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_xenophobe
+						}
+					}
+					AND = {
+						num_ethics = 3
+						NOR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+			country_event = { id = rebellionscript.364 }
+		}
+	}
+}
+
+country_event = {
+	id = rebellionscript.363
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		NOR = {
+			AND = {
+				num_ethics = 2
+				OR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_materialist
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_xenophobe
+				}
+			}
+			AND = {
+				num_ethics = 3
+				NOR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		
+		if = {
+			limit = { num_ethics > 3 }
+			if = {
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
+				country_remove_ethic = ethic_authoritarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_egalitarian
+				}
+				country_remove_ethic = ethic_egalitarian
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_pacifist
+				}
+				country_remove_ethic = ethic_pacifist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_militarist
+				}
+				country_remove_ethic = ethic_militarist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
+				country_remove_ethic = ethic_spiritualist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_materialist
+				}
+				country_remove_ethic = ethic_materialist
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophile
+				}
+				country_remove_ethic = ethic_xenophile
+			}
+			if = {
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
+				country_remove_ethic = ethic_xenophobe
+			}
+		}
+		
+		random_list = {
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_authoritarian }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_authoritarian
+			}
+
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_egalitarian }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_egalitarian
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_xenophile }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_xenophile
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_xenophobe }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_xenophobe
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_militarist }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_militarist
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_pacifist }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_pacifist
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_spiritualist }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_spiritualist
+			}
+			
+			12 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+				modifier = {
+					factor = 2
+					count_owned_pops = {
+						limit = { has_ethic = ethic_materialist }
+						count > 2
+					}
+				}
+				country_add_ethic = ethic_materialist
+			}
+		}
+		
+		country_event = { id = rebellionscript.363 }
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						num_ethics = 2
+						OR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+						OR = {
+							has_ethic = ethic_authoritarian
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_materialist
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_militarist
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_xenophobe
+						}
+					}
+					AND = {
+						num_ethics = 3
+						NOR = {
+							has_ethic = ethic_fanatic_authoritarian
+							has_ethic = ethic_fanatic_egalitarian
+							has_ethic = ethic_fanatic_materialist
+							has_ethic = ethic_fanatic_spiritualist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_fanatic_xenophile
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+			country_event = { id = rebellionscript.364 }
+		}
+	}
+}
+
+
+country_event = {
+	id = rebellionscript.364
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { NOT = { has_country_flag = cc_rebel_ethic_sorted } }
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = cc_rebel_ethic_sorted
+			days = 15
+		}
+		change_government = {
+			authority = random
+			civics = random
+		}
+		set_name = random
+	}
+}
+
+
+#rebels keep spaceports
+
+planet_event = {
+	id = rebellionscript.777
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_6_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+			set_spaceport_level = 6
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_5_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+			set_spaceport_level = 5
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_4_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+			set_spaceport_level = 4
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_3_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+			set_spaceport_level = 3
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_2_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+			set_spaceport_level = 2
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_1_k }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "projectile_weapon"
+			}
+		}
+		
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_6_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+			set_spaceport_level = 6
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_5_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+			set_spaceport_level = 5
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_4_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+			set_spaceport_level = 4
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_3_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+			set_spaceport_level = 3
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_2_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+			set_spaceport_level = 2
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_1_l }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "laser_weapon"
+			}
+		}
+		
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_6_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+			set_spaceport_level = 6
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_5_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+			set_spaceport_level = 5
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_4_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+			set_spaceport_level = 4
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_3_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+			set_spaceport_level = 3
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_2_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+			set_spaceport_level = 2
+		}
+		if = {
+			limit = { has_planet_flag = ccrebel_spaceport_1_m }
+			create_spaceport = {
+				owner = root.owner
+				initial_module = "missile_weapon"
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 1
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 1
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 2
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 2
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 3
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 3
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 4
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 4
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 5
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 5
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = ccrebel_sm_solar
+					has_planet_flag = ccrebel_sm_crew
+					has_planet_flag = ccrebel_sm_observatory
+					has_planet_flag = ccrebel_sm_engineering_bay
+					has_planet_flag = ccrebel_sm_hydroponic_farms
+					has_planet_flag = ccrebel_sm_synchronized_defenses
+					has_planet_flag = ccrebel_sm_corvette_assembly_yards
+					has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+					has_planet_flag = ccrebel_sm_fleet_academy
+					has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+					has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+					has_planet_flag = ccrebel_sm_battleship_assembly_yards
+				}
+			}
+			if = {
+				limit = {
+					has_free_spaceport_module_slot = yes
+					is_spaceport_module_slot_free = 6
+				}
+				random_list = {
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = solar_panel_network
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_solar
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_solar
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = crew_quarters
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_crew
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_crew
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = observatory
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_observatory
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_observatory
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = engineering_bay
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_engineering_bay
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_engineering_bay
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = hydroponic_farms
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_hydroponic_farms
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_hydroponic_farms
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = synchronized_defenses
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_synchronized_defenses
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_synchronized_defenses
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = corvette_assembly_yards
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_corvette_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_corvette_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = destroyer_assembly_yards
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_destroyer_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_destroyer_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = fleet_academy
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_fleet_academy
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_fleet_academy
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = orbital_mind_control_laser
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_orbital_mind_control_laser
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_orbital_mind_control_laser
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = cruiser_assembly_yards
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_cruiser_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_cruiser_assembly_yards
+							}
+						}
+					}
+					1 = {
+						SET_SPACEPORT_MODULE = {
+							module = battleship_assembly_yards
+							slot = 6
+						}
+						remove_planet_flag = ccrebel_sm_battleship_assembly_yards
+						modifier = {
+							factor = 0
+							NOT = {
+								has_planet_flag = ccrebel_sm_battleship_assembly_yards
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}

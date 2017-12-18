@@ -1,0 +1,107 @@
+
+	support_effects = {
+		# Rebellion
+		rebellion = {
+			title = "POP_FACTION_NATIONALIST_REBELLION_TITLE"
+			min_support = 0.90
+			max_support = 1.00
+			
+			spawn_chance = { 
+				value = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_LEADER_IS_RULER"
+						owner = {
+							ruler = {
+								is_same_value = root.leader
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_MEMBERS_OCCUPIED"
+						count_pops = {
+							count > 0
+						}
+						count_pops = {
+							count = 0
+							limit = {
+								planet = {
+									is_occupied_flag = no
+								}
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_GROUND_COMBAT"
+						count_pops = {
+							count > 0
+						}
+						count_pops = {
+							count = 0
+							limit = {
+								planet = {
+									has_ground_combat = no								
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_NATIONALIST_REBELLION_DESC"
+				hidden_effect = {
+					every_owned_pop = {
+						limit = {
+							planet = {
+								is_occupied_flag = no
+								has_ground_combat = no
+							}
+						}
+						planet = {
+							if = {
+								limit = {
+									NOT = {
+										exists = event_target:rebel_country
+									}
+								}
+								create_rebels = {
+									name = random
+									government = random
+									species = parameter:country
+									ethos = parameter:country
+									flag = random
+									effect = {
+										save_event_target_as = rebel_country
+										add_war_demand = {
+											type = "independence"
+											parameter:country = owner
+											warscore_cost = 50
+											target = this
+										}
+									}
+								}
+							}
+							create_army = {
+								owner = event_target:rebel_country
+								species = prev
+								type = "defense_army"
+							}
+						}
+					}
+					#kill_pop_faction = yes
+					pop_faction_event = { id = faction.302 }
+				}
+			}
+		}
+	}

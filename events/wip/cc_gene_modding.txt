@@ -1,0 +1,57 @@
+
+namespace = cc_planet_modify
+
+
+tech_gene_tailoring #1
+tech_gene_expressions #1
+tech_glandular_acclimation (habitability)
+
+has_swapped_tradition = tr_adaptability_survival_fittest #1
+
+ap_engineered_evolution #3
+ap_evolutionary_mastery #3
+
+num_trait_points - Checks the country/pop/leader/species' number of traits points spent
+@species_trait_points = 2
+@species_max_traits = 5
+
+every_country = {
+	limit = { has_technology = tech_gene_expressions }
+	
+	every_owned_planet = {
+		limit = {
+			colony_age > 240
+			count_pops = {
+				limit = { has_a_happiness_gauge = yes }
+				count > 10
+			}
+			NOT = {
+				pop_percentage = {
+					limit = { has_ethic = ethic_xenophobe }
+					percentage > 0.4
+				}
+			}
+		}
+			
+
+
+		modifiers based on the number of points givers they have		
+				
+				
+planet_event = {
+	id = cc_planet_modify.1
+	
+	trigger = {
+
+			
+			
+			
+			
+			#Xenophiles want charismatic
+			#Authoritarians want conformist
+			#Materialists want intelligent
+			#Militarists want strong/very strong
+			#Pacifists want communal
+			
+			
+			#Abandoned for now as impossible to know whether a pop is being gene-modded

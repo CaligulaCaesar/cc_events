@@ -1,0 +1,144 @@
+
+#also used in PRE
+has_a_happiness_gauge = {
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_hive_mind
+		has_trait = trait_nerve_stapled
+		is_non_sapient_robot = yes
+		is_sapient = no
+	}
+}
+
+
+is_valid_xenophilia_refugee_pop = {
+	has_pop_flag = cc_literally_xenophile_manifested
+	is_robot_pop = no
+	NOR = { 
+		has_trait = trait_hive_mind 
+		has_trait = trait_nerve_stapled
+	}		
+	owner = {
+		any_relation = {
+			is_country_type = default
+			NOT = { has_policy_flag = refugees_not_allowed } 
+			has_policy_flag = allows_im
+			root = {
+				OR = { 
+					has_citizenship_type = { type = citizenship_full country = prev }
+					has_citizenship_type = { type = citizenship_caste_system country = prev }
+					AND = {
+						OR = {
+							has_citizenship_type = { type = citizenship_limited country = prev }
+							has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
+						}
+						prev = { has_policy_flag = refugees_allowed }
+					}	
+				}
+			}
+			any_owned_planet = {
+				habitability = { who = root value > 0.2 }
+				any_tile = {
+					has_blocker = no
+					has_pop = no
+				}
+			}
+		}		
+	}
+}
+
+
+
+has_political_colony_modifier = {
+	OR = {
+		has_modifier = cc_colony_distrusts
+		has_modifier = cc_planet_oppression
+		any_owned_pop = { has_modifier = cc_lingering_oppression }
+		any_owned_pop = { has_modifier = cc_oppression }
+		has_modifier = cc_breakaway_sympathy
+		has_modifier = cc_faction_acute_unrest
+		
+		has_modifier = cc_founder_spiritualist
+		has_modifier = cc_minor_protests_spiritualist
+		has_modifier = cc_major_protests_spiritualist
+		has_modifier = cc_spiritualist_leader_visit
+		has_modifier = cc_building_mausoleum
+		has_modifier = cc_minor_mausoleum
+		has_modifier = cc_religious_centre
+		has_modifier = cc_founders_memory_disrespected_1_spiritualist
+		has_modifier = cc_founders_memory_disrespected_2_spiritualist
+		has_modifier = cc_underground_spiritualist_movement_1
+		has_modifier = cc_underground_spiritualist_movement_2
+		has_modifier = cc_spiritualist_protectorate
+		has_modifier = cc_spiritualists_offended
+		has_modifier = cc_famous_guru
+
+		has_modifier = cc_colony_direct_democracy
+		has_modifier = cc_colony_democracy_unhappy
+		has_modifier = cc_minor_protests_egalitarian
+		has_modifier = cc_major_protests_egalitarian
+		has_modifier = cc_underground_egalitarian_movement_1
+		has_modifier = cc_underground_egalitarian_movement_2
+		has_modifier = cc_university
+		has_modifier = cc_founder_materialist
+
+		has_modifier = cc_minor_protests_materialist
+		has_modifier = cc_major_protests_materialist
+		has_modifier = cc_underground_materialist_movement_1
+		has_modifier = cc_underground_materialist_movement_2
+		has_modifier = cc_building_university
+		has_modifier = cc_founders_memory_disrespected_1_materialist
+		has_modifier = cc_materialists_offended
+
+		has_modifier = cc_colony_monarchy
+		has_modifier = cc_colony_monarchy_unhappy
+		has_modifier = cc_minor_protests_authoritarian
+		has_modifier = cc_major_protests_authoritarian
+		has_modifier = cc_underground_authoritarian_movement_1
+		has_modifier = cc_underground_authoritarian_movement_2
+		
+		has_modifier = cc_founder_militarist
+		has_modifier = cc_minor_protests_militarist
+		has_modifier = cc_major_protests_militarist
+		has_modifier = cc_underground_militarist_movement_1
+		has_modifier = cc_underground_militarist_movement_2
+		has_modifier = cc_militarists_offended
+		has_modifier = cc_milacademy_built_faction
+		has_modifier = cc_building_milacademy
+		has_modifier = cc_milacademy
+		has_modifier = cc_founders_memory_disrespected_1_militarist
+		has_modifier = cc_militarist_influence
+
+		has_modifier = cc_founder_pacifist
+		has_modifier = cc_minor_protests_pacifist
+		has_modifier = cc_major_protests_pacifist
+		has_modifier = cc_pacifist_leader_visit
+		has_modifier = cc_building_pacmonument
+		has_modifier = cc_minor_pacmonument
+		has_modifier = cc_pacifist_centre
+		has_modifier = cc_founders_memory_disrespected_1_pacifist
+		has_modifier = cc_founders_memory_disrespected_2_pacifist
+		has_modifier = cc_underground_pacifist_movement_1
+		has_modifier = cc_underground_pacifist_movement_2
+		has_modifier = cc_pacifist_protectorate
+		has_modifier = cc_pacifists_offended
+	}
+}
+
+is_evil_empire = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_ethic = ethic_fanatic_authoritarian
+		AND = {
+			has_ethic = ethic_authoritarian
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+				AND = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_militarist
+				}
+			}
+		}
+	}
+}
