@@ -1134,8 +1134,11 @@ country_event = {
 		
 		remove_modifier = cc_country_factional_unrest
 		
-		every_owned_planet = {
-			remove_all_seditious_talk = yes
+		custom_tooltip = cc_faction_revolt_modifiers_removed
+		hidden_effect = {
+			every_owned_planet = {
+				remove_all_seditious_talk = yes
+			}
 		}
 	}
 }
@@ -2237,14 +2240,17 @@ country_event = {
 		
 		remove_modifier = cc_country_factional_unrest
 		
-		every_owned_planet = {
-			remove_all_faction_strongholds = yes
-			remove_all_faction_sympathies = yes
-			remove_all_faction_seditions = yes
-		}
-		every_owned_planet = {
-			limit = { has_modifier = cc_faction_acute_unrest }
-			remove_modifier = cc_faction_acute_unrest
+		custom_tooltip = cc_faction_revolt_modifiers_removed
+		hidden_effect = {
+			every_owned_planet = {
+				remove_all_faction_strongholds = yes
+				remove_all_faction_sympathies = yes
+				remove_all_faction_seditions = yes
+			}
+			every_owned_planet = {
+				limit = { has_modifier = cc_faction_acute_unrest }
+				remove_modifier = cc_faction_acute_unrest
+			}
 		}
 	}
 }
@@ -2311,14 +2317,17 @@ country_event = {
 		
 		remove_modifier = cc_country_factional_unrest
 		
-		every_owned_planet = {
-			remove_all_faction_strongholds = yes
-			remove_all_faction_sympathies = yes
-			remove_all_faction_seditions = yes
-		}
-		every_owned_planet = {
-			limit = { has_modifier = cc_faction_acute_unrest }
-			remove_modifier = cc_faction_acute_unrest
+		custom_tooltip = cc_faction_revolt_modifiers_removed
+		hidden_effect = {
+			every_owned_planet = {
+				remove_all_faction_strongholds = yes
+				remove_all_faction_sympathies = yes
+				remove_all_faction_seditions = yes
+			}
+			every_owned_planet = {
+				limit = { has_modifier = cc_faction_acute_unrest }
+				remove_modifier = cc_faction_acute_unrest
+			}
 		}
 	}
 }
@@ -5435,18 +5444,20 @@ country_event = {
 		
 		remove_modifier = cc_country_factional_unrest
 		
-		every_owned_planet = {
-			limit = { has_modifier = cc_breakaway_sympathy }
-			remove_modifier = cc_breakaway_sympathy
-		}
-		every_owned_planet = {
-			remove_all_faction_strongholds = yes
-			remove_all_faction_sympathies = yes
-			remove_all_faction_seditions = yes
-			
-			if = {
+		custom_tooltip = cc_faction_revolt_modifiers_removed
+		hidden_effect = {
+			every_owned_planet = {
+				remove_all_faction_strongholds = yes
+				remove_all_faction_sympathies = yes
+				remove_all_faction_seditions = yes
+			}
+			every_owned_planet = {
 				limit = { has_modifier = cc_faction_acute_unrest }
 				remove_modifier = cc_faction_acute_unrest
+			}
+			every_owned_planet = {
+				limit = { has_modifier = cc_breakaway_sympathy }
+				remove_modifier = cc_breakaway_sympathy
 			}
 		}
 	}

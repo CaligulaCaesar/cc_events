@@ -12,44 +12,21 @@ pop_event = {
 	hide_window = yes
 	
 	trigger = {
-		exists = owner
-		owner = {
-			is_country_type = default
-			has_edict = cc_thought_police
-		}
+	
+		has_pop_flag = cc_thought_police_target
+	
 		happiness < 0.4
 		
+		#these are safeguards to avoid changes between months
+		exists = owner
+		owner = { has_edict = cc_thought_police }
 		NOT = { has_ethic = ethic_authoritarian }
-		if = {
-			limit = { owner = { has_ethic = ethic_spiritualist } }
-			NOT = { has_ethic = ethic_spiritualist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_materialist } }
-			NOT = { has_ethic = ethic_materialist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_pacifist } }
-			NOT = { has_ethic = ethic_pacifist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_militarist } }
-			NOT = { has_ethic = ethic_militarist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_xenophile } }
-			NOT = { has_ethic = ethic_xenophile }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_xenophobe } }
-			NOT = { has_ethic = ethic_xenophobe }
-		}
 	}
 	
 	mean_time_to_happen = {
 		years = 50
 		modifier = {
-			factor = 0.67
+			factor = 0.8
 			has_ethic = ethic_egalitarian
 		}
 #		modifier = { #left out for performance reasons. Bumped of getting away up a bit and the mtth down.

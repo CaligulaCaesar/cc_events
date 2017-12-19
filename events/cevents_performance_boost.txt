@@ -677,6 +677,42 @@ event = {
 						flag = cc_eventperf_xeno_clashes_planet
 						days = 31
 					}
+					
+					if = {
+						limit = {
+							any_owned_pop = {
+								has_a_happiness_gauge = yes
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 2
+									}
+									any_owned_pop = {
+										NOT = { is_same_species = prevprev }
+										has_a_happiness_gauge = yes
+										is_robot_pop = no
+										is_enslaved = no
+										is_being_purged = no
+										
+										planet = {
+											count_pops = {
+												limit = { is_same_species = prev }
+												count > 2
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_xeno_clashes_planet_likely
+							days = 31
+						}
+					}
+					
 					if = {
 						limit = {
 							any_owned_pop = {
@@ -749,6 +785,44 @@ event = {
 						flag = cc_eventperf_synth_clashes
 						days = 31
 					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_edict = cc_thought_police
+			}
+			every_owned_pop = {
+				limit = {
+					if = {
+						limit = { owner = { has_ethic = ethic_spiritualist } }
+						NOT = { has_ethic = ethic_spiritualist }
+					}
+					if = {
+						limit = { owner = { has_ethic = ethic_materialist } }
+						NOT = { has_ethic = ethic_materialist }
+					}
+					if = {
+						limit = { owner = { has_ethic = ethic_pacifist } }
+						NOT = { has_ethic = ethic_pacifist }
+					}
+					if = {
+						limit = { owner = { has_ethic = ethic_militarist } }
+						NOT = { has_ethic = ethic_militarist }
+					}
+					if = {
+						limit = { owner = { has_ethic = ethic_xenophile } }
+						NOT = { has_ethic = ethic_xenophile }
+					}
+					if = {
+						limit = { owner = { has_ethic = ethic_xenophobe } }
+						NOT = { has_ethic = ethic_xenophobe }
+					}
+				}
+				set_timed_pop_flag = {
+					flag = cc_thought_police_target
+					days = 31
 				}
 			}
 		}
