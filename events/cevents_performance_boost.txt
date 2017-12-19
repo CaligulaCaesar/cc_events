@@ -627,7 +627,10 @@ event = {
 								count > 1
 							}
 							any_owned_pop = {
-								NOT = { is_same_species = prevprev }
+								NOR = {
+									is_same_species = prevprev
+									is_subspecies = prevprev
+								}
 								has_a_happiness_gauge = yes
 								is_enslaved = no
 								is_being_purged = no
@@ -657,7 +660,10 @@ event = {
 									count > 1
 								}
 								any_owned_pop = {
-									NOT = { is_same_species = prevprev }
+									NOR = {
+										is_same_species = prevprev
+										is_subspecies = prevprev
+									}
 									has_a_happiness_gauge = yes
 									is_robot_pop = no
 									is_enslaved = no
@@ -691,7 +697,10 @@ event = {
 										count > 2
 									}
 									any_owned_pop = {
-										NOT = { is_same_species = prevprev }
+										NOR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
 										has_a_happiness_gauge = yes
 										is_robot_pop = no
 										is_enslaved = no
@@ -726,7 +735,10 @@ event = {
 										count > 1
 									}
 									any_owned_pop = {
-										NOT = { is_same_species = prevprev }
+										NOR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
 										has_a_happiness_gauge = yes
 										is_robot_pop = no
 										is_same_species = owner_species
@@ -765,7 +777,10 @@ event = {
 									count > 1
 								}
 								any_owned_pop = {
-									NOT = { is_same_species = prevprev }
+									NOR = {
+										is_same_species = prevprev
+										is_subspecies = prevprev
+									}
 									has_a_happiness_gauge = yes
 									is_robot_pop = no
 									is_enslaved = no
