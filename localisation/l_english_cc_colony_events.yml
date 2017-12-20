@@ -53,7 +53,7 @@ cc_colony_events.234.desc:0 "Attempts to track down and kill [cc_colony_leader.G
 cc_colony_events.235.name:0 "Arrest of [cc_colony_leader.GetName] on [Root.GetName] fails catastrophically"
 cc_colony_events.235.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have failed. [cc_colony_leader.GetSheHeCap] was killed either in the crossfire or by [cc_colony_leader.GetHisHer] own hand. Unfortunately, [cc_colony_leader.GetSheHe] has been elevated to martyrdom through this, and [cc_colony_leader.GetHisHer] popularity has posthumously soared to new heights. [cc_colony_leader.GetHisHerCap] most trusted followers have founded an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
 
-cc_colony_events.25.name:0 "Death of a Great [root.owner.GetSpeciesName]"
+cc_colony_events.25.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], the 'Legate' of [root.GetName], died today after a brief illness. The populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] last wish was that a great academy be built on [root.GetName] to ensure that the next generation of officers for whom [cc_colony_leader.GetSheHe] has sown the seeds can reach their full potential. Officials on [root.GetName] have approached us with a plan to see this become a reality.\n\nShould we invest in the academy?"
 cc_colony_events.25.A: "Certainly!"
 cc_colony_events.25.B: "It is too expensive."
@@ -158,7 +158,7 @@ cc_colony_events.342.B:0 "It is too expensive."
 cc_colony_events.343.name:0 "Congregational Centre opens on [root.GetName]"
 cc_colony_events.343.desc:0 "The monument in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into a symbolic congregational site for pacifists in the [root.owner.GetName] and beyond."
 
-cc_colony_events.35.name:0 "Death of a Great [root.owner.GetSpeciesName]"
+cc_colony_events.35.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special shrine in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetSheHe]'s life and teachings can be remembered."
 cc_colony_events.35.A:0 "Build a Monument to this exemplar citizen."
 cc_colony_events.35.B:0 "It's too expensive"
@@ -276,7 +276,7 @@ cc_colony_events.642.B:0 "It is too expensive."
 cc_colony_events.643.name:0 "Mausoleum opens on [root.GetName]"
 cc_colony_events.643.desc:0 "The mausoleum in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into an important pilgrimage site for spiritualists in the [root.owner.GetName] and beyond."
 
-cc_colony_events.65.name:0 "Death of a Great [root.owner.GetSpeciesName]"
+cc_colony_events.65.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.65.desc:0 "[cc_colony_leader.GetName], [root.GetName]'s famous guru, died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special shrine in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetHisHer] life and teachings can be remembered."
 cc_colony_events.65.A:0 "Build a great shrine. [cc_colony_leader.GetSheHeCap] deserves it."
 cc_colony_events.65.B:0 "It's too expensive"
@@ -396,7 +396,7 @@ cc_colony_events.734.name:0 "Crackdown on [Root.GetName] fails"
 cc_colony_events.734.desc:0 "Attempts to track down and kill [cc_colony_leader.GetName] have failed. [cc_colony_leader.GetSheHeCap] has gathered [cc_colony_leader.GetHisHer] most trusted followers and has founded an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
 
 
-cc_colony_events.75.name:0 "Death of a Great [root.owner.GetSpeciesName]"
+cc_colony_events.75.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.75.desc:0 "[cc_colony_leader.GetName], whom many consider to have been the Founding Citizen of [root.GetName], died today after a brief illness. The populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] last wish was that a great university be built on [root.GetName] to ensure that the next generation of thinkers for which [cc_colony_leader.GetSheHe] has sown the seeds can rise up. Officials on [root.GetName] have approached us with a plan to see this become a reality.\n\nShould we invest in the university?"
 cc_colony_events.75.A: "Certainly!"
 cc_colony_events.75.B: "It is too expensive."
@@ -481,7 +481,7 @@ cc_colony_events.834.desc:0 "Attempts to track down and kill [cc_colony_leader.G
 
 
 
-cc_colony_events.85.name:0 "Death of a Great [root.owner.GetSpeciesName]"
+cc_colony_events.85.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.85.desc1:0 "[cc_colony_leader.GetName], Prince of [root.GetName], died today after a brief illness. [cc_colony_leader.GetSheHeCap] was well-regarded as a fair and wise leader of the planet, who led them ably through good times and bad, and the populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] son, backed by the majority of [root.GetName]'s populace, has requested that the title of Prince be made hereditary, and that he rule as his father did.\n\nShould we grant this wish?"
 cc_colony_events.85.desc2:0 "[cc_colony_leader.GetName], Princess of [root.GetName], died today after a brief illness. [cc_colony_leader.GetSheHeCap] was well-regarded as a fair and wise leader of the planet, who led them ably through good times and bad, and the populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] daughter, backed by the majority of [root.GetName]'s populace, has requested that the title of Princess be made hereditary, and that she rule as her mother did.\n\nShould we grant this wish?"
 cc_colony_events.85.A: "Certainly!"

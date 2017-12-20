@@ -118,7 +118,7 @@ cc_events_blackmail.206.B:0 "Fire the scientists."
 
 cc_events_blackmail.207.name:0 "Data on Interspecies Discrimination Revealed!"
 cc_events_blackmail.207.desc:0 "The hackers have revealed data detailing how administrators across the [root.GetName] have systematically discriminated against citizens of other species in allocating positions and benefits. The non-[root.GetSpeciesName] citizens had always claimed that they were not seen as equal, but their complaints had been swept under the doorway. They now feel vindicated in their distrust of the supposedly multicultural state, and are calling for extensive reforms."
-cc_events_blackmail.207.tooltip:0 "Every Pop that is not of your main species gains the modifier §R$cc_outrage_at_discrimination$§!, giving -15% happiness and +50% xenophobe ethics attaction."
+cc_events_blackmail.207.tooltip:0 "Every £pop Pop that is not of your main species gains the modifier §R$cc_outrage_at_discrimination$§!, giving -15% happiness and +50% xenophobe ethics attaction."
 
 cc_events_blackmail.208.name:0 "Prison Security Codes Leaked!"
 cc_events_blackmail.208.desc:0 "It turns out that the data the hackers stole was the security codes and layouts of the [root.GetName]'s high security prisons. Several of them were struck simultaneously today in a well-organised strike. A large number of prominent troublemakers have been released, as well as some feared criminals."
@@ -152,8 +152,8 @@ cc_emancipation.6.D.tooltip:0 "All supporters of the emancipation movement will 
 cc_emancipation.20.name:0 "Worries about the Ethics of Slavery"
 cc_emancipation.20.desc.breakaways:0 "The rebellion of the [breakaway_slaves.GetName] has sparked worries among elements of the [root.GetSpeciesAdj] about the sustainability of the practice, especially given the violent reprisals that former slaveholders faced on [breakaway_slaves.GetSpeciesAdj] worlds. At the same time, others have been drawn in by [breakaway_slaves.GetSpeciesAdj] propaganda about the evils of slavery and the crimes committed to them by their slaveowners. A shadowy manifesto calling for the end of slavery and other oppressive practices has been widely circuited, and despite efforts by authorities to ban it and track down its source, a growing portion of the population is increasingly receptive to such ideas."
 cc_emancipation.20.desc.neighbour:0 "Prolonged contact with the [egalitarian_neighbour.GetName] and their hostile propaganda has caused elements within the [root.GetName]'s population to rethink the issue of slavery. Despite the fact that slavery constitutes a main pillar of the [root.GetSpeciesAdj]'s economy, many increasingly have moral concerns with the absolute subjugation of a sentient being to the will of another. A shadowy manifesto calling for the end of slavery and other oppressive practices has been widely circuited, and despite efforts by authorities to ban it and track down its source, a growing portion of the population is increasingly receptive to such ideas."
-cc_emancipation.20.tooltip.A:0 "One third of non-slave pops will be given the modifier §R$cc_worried_about_slaves$§! for 15 years, giving them §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
-cc_emancipation.20.tooltip.B:0 "One quarter of non-slave pops will be given the modifier §R$cc_worried_about_slaves$§! for 15 years, giving them §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
+cc_emancipation.20.tooltip.A:0 "One third of non-slave £pops Pops will be given the modifier §R$cc_worried_about_slaves$§! for 15 years, giving them §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
+cc_emancipation.20.tooltip.B:0 "One quarter of non-slave £pops Pops will be given the modifier §R$cc_worried_about_slaves$§! for 15 years, giving them §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
 
 
 
@@ -164,7 +164,7 @@ cc_luddite.1.desc:0 "Groups of what can only be described as luddites - primitiv
 cc_luddite.2.name:0 "Luddites are smashing up Robots on [root.GetName]"
 cc_luddite.2.desc:0 "Despite their outrageous demands, the 'luddites' appear to have attracted support, and there are risks of copycat strikes on other planets. We must take action!\n\nWhat should we do about them?"
 cc_luddite.2.A:0 "We can do without robots on [root.GetName]."
-cc_luddite.2.A.tooltip:0 "All robot pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]. Additionally, there is a high chance that Ludditism will spread to other planets."
+cc_luddite.2.A.tooltip:0 "All robot £pops Pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]. Additionally, there is a high chance that Ludditism will spread to other planets."
 cc_luddite.2.B:0 "Ignore them - they will bow to progress, eventually."
 cc_luddite.2.B.tooltip:0 "There is a chance that there will be further strikes on this and other planets."
 cc_luddite.2.C.tooltip:0 "There is a reduced chance that there will be further strikes on this and other planets."
@@ -186,7 +186,7 @@ cc_luddite.11.desc:0 "Inspired by events on [first_luddite_planet.GetName], grou
 cc_luddite.12.name:0 "Luddism spreads to [root.GetName]"
 cc_luddite.12.desc:0 "What can we do to stop this wave of Luddism spreading further?"
 cc_luddite.12.A:0 "We can do without robots on [root.GetName] too."
-cc_luddite.12.A.tooltip:0 "All robot pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]."
+cc_luddite.12.A.tooltip:0 "All robot £pops Pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]."
 cc_luddite.12.B:0 "Ignore them - they too will bow to progress."
 cc_luddite.12.B.tooltip:0 "There is a chance that there will be further strikes on this planet."
 cc_luddite.12.C.tooltip:0 "There is a reduced chance that there will be further strikes on this planet."
@@ -197,16 +197,16 @@ cc_luddite.13.A:0 "We must listen to the people."
 cc_luddite.13.B:0 "We must stick the course."
 cc_luddite.13.B.tooltip:0 "Luddism is likely to continue to spread."
 cc_luddite.13.C.tooltip:0 "All future manifestations of Luddism during this crisis will be met with oppression."
-cc_luddite.13.D.tooltip:0 "All pops that have taken part in the Luddite movement will be killed. Further Luddism will not be allowed to happen."
+cc_luddite.13.D.tooltip:0 "All £pops Pops that have taken part in the Luddite movement will be killed. Further Luddism will not be allowed to happen."
 
 cc_luddite.15.name:0 "'Luddites' on [root.GetName] feel betrayed"
-cc_luddite.15.desc:0 "Despite our promises not to carry on using robots on [root.GetName], authorities have built new robotic pops. The populace are angry at our broken promises."
+cc_luddite.15.desc:0 "Despite our promises not to carry on using robots on [root.GetName], authorities have built new robotic £pops Pops. The populace are angry at our broken promises."
 cc_luddite.15.option:0 "Ah well."
 
 cc_luddite.20.name:0 "Worries about Robotic Workers"
 cc_luddite.20.desc.uprising:0 "Following the "Machine Uprising" in the [machine_uprising_victims.GetName], many citizens are worried about the [root.GetName]'s non-sapient machine workers. Although our authorities have moved quickly to demonstrate that the uprising in the [machine_uprising_victims.GetName] was a special case that is in no way similar to that of the [root.GetName]'s machines, many citizens feel that, in fact, they are every bit as vulnerable as the [machine_uprising_victims.GetSpeciesNamePlural]. Elements of the populace who have never been comfortable with the idea of robotic workers, claiming that they are marginalising the organic populace and threaten to make them redundant, have seized the initiative, and find that their views increasingly resound with those of the population as a whole."
 cc_luddite.20.desc.exterminators:0 "Following encounters with the [machine_exterminators.GetName], many citizens are worried about the [root.GetName]'s non-sapient machine workers. Although our authorities have moved quickly to demonstrate that the "Death Robots" are a special case that is in no way similar to that of the [root.GetName]'s machines, many citizens now feel that reliance on robotic workers is a potential existential risk to all organic species. Elements of the populace who have never been comfortable with the idea of robotic workers, claiming that they are marginalising the organic populace and threaten to make them redundant, have seized the initiative, and find that their views increasingly resound with those of the population as a whole."
-cc_luddite.20.tooltip:0 "One third of non-slave pops will be given the modifier §R$cc_worried_about_machines$§! for 15 years, giving them §R+100%§! $pop_ethic_spiritualist_attraction_mult$."
+cc_luddite.20.tooltip:0 "One third of non-slave £pops Pops will be given the modifier §R$cc_worried_about_machines$§! for 15 years, giving them §R+100%§! $pop_ethic_spiritualist_attraction_mult$."
 
 
 #Peace Protests
@@ -215,8 +215,8 @@ cc_peace.1.desc:0 "There is discontent among the populace at what they see as a 
 cc_peace.1.A:0 "Promise Peace."
 cc_peace.1.A.tooltip:0 "The Anti-War Movement will agree to suspend its actions for a year on the condition that you end hostilities in this time."
 cc_peace.1.B:0 "Ignore them."
-cc_peace.1.oppress.tooltip:0 "All pacifist pops on planets that are protesting will be subjected to oppression. Their output will be cut by 50%."
-cc_peace.1.D.tooltip:0 "All pacifist pops on planets that are protesting will be rounded up and killed."
+cc_peace.1.oppress.tooltip:0 "All pacifist £pops Pops on planets that are protesting will be subjected to oppression. Their output will be cut by 50%."
+cc_peace.1.D.tooltip:0 "All pacifist £pops Pops on planets that are protesting will be rounded up and killed."
 		
 cc_peace.2.name:0 "Anti-War Movement Betrayed"
 cc_peace.2.desc:0 "The government has broken its promises to make peace quickly. The Anti-War Movement feels betrayed, and has begun protesting with renewed vigour."
@@ -254,7 +254,7 @@ cc_luddite_movement_desc:0 "There is a movement pushing for the dismantling of a
 cc_bowed_to_luddism:0 "Forced to give up Robots"
 cc_bowed_to_luddism_desc:0 "The citizens managed to force this empire to give up on robotic workers."
 cc_empire_luddite_movement:0 "Luddite Movement"
-cc_empire_luddite_movement_desc:0 "There is an empire-wide movement pushing for the dismantling of all robotic workers on - by force if necessary."
+cc_empire_luddite_movement_desc:0 "There is an empire-wide movement pushing for the dismantling of all robotic workers - by force if necessary."
 cc_bowed_to_luddism_faction_pos:0 "Gave up Robots"
 cc_bowed_to_luddism_faction_neg:0 "Surrendered to Luddites"
 cc_luddite_faction_displeasure:0 "Surrendered to Luddites"
@@ -289,11 +289,11 @@ cc_literally_xenophile_country:0 "Large Minority of Practising Xenophiles"
 cc_literally_xenophile_country_desc:0 "At least 15% of the population of this Empire practices xenophilia, i.e. has partners of a different species."
 
 cc_practising_xenophile:0 "Practices Xenophilia"
-cc_practising_xenophile_desc:0 "This Pop openly has partners of different species, and is glad to live in an enlightened country where such practices are permitted."
+cc_practising_xenophile_desc:0 "This £pop Pop openly has partners of different species, and is glad to live in an enlightened country where such practices are permitted."
 cc_secretly_practising_xenophile:0 "Secretly Practices Xenophilia"
-cc_secretly_practising_xenophile:0 "This Pop has partners of a different species, but does so secretly, as the laws of this country do not presently officially allow such partnerships."
+cc_secretly_practising_xenophile:0 "This £pop Pop has partners of a different species, but does so secretly, as the laws of this country do not presently officially allow such partnerships."
 cc_secret_xenophile:0 "Secretly Xenophilic"
-cc_secret_xenophile_desc:0 "This Pop would like to be able to have partners of a different species, but the laws of its country ban such practices. It may try to escape to a more enlightened country."
+cc_secret_xenophile_desc:0 "This £pop Pop would like to be able to have partners of a different species, but the laws of its country ban such practices. It may try to escape to a more enlightened country."
 
 cc_xeno_marriage_allowed_xenoist:0 "Interspecies Marriage Allowed"
 cc_xeno_marriage_allowed_supremacist:0 "Unnatural Marriages Allowed"
@@ -302,8 +302,8 @@ cc_xeno_marriage_not_allowed_supremacist:0 "Unnatural Marriages Not Allowed"
 cc_xeno_marriage_banned_xenoist:0 "Interspecies Intercourse Banned"
 cc_xeno_marriage_banned_supremacist:0 "Unnatural Intercourse Banned"
 
-cc_recent_xenophile_wedding:0 "Recent Xenophilic Wedding"
-cc_recent_xenophile_wedding_desc:0 ""
+cc_recent_xenophile_wedding:0 "Recent Interspecies Wedding"
+cc_recent_xenophile_wedding_desc:0 "A promeninent interspecies wedding recently took place. It had a polarising effect: Although some elements of the population still abhor the very concept of such a union, others are delighted and see it as proof that the Empire has embraced the values of a modern, multispecies state."
 cc_recent_xenophile_wedding_xenophile:0 "Celebrating Recent Xenophilic Wedding"
 cc_recent_xenophile_wedding_xenophobe:0 "Disgusted at Recent Xenophilic Wedding"
 
@@ -372,10 +372,10 @@ cc_opinion_stole_our_technology:0 "Stole our Technology"
 #Policies ----------------------------------------------------------------------------------------------------------
 
 policy_cc_interspecies_marriage:0 "Interspecies Relationships"
-policy_cc_interspecies_marriage_desc:0 "We can decide whether or not pops from different species are allowed to marry or even have relationships with each other."
+policy_cc_interspecies_marriage_desc:0 "We can decide whether or not £pops Pops from different species are allowed to marry or even have relationships with each other."
 
 allow_im:0 "Allow Interspecies Marriage"
-allow_im_desc:0 "Legalise the marriage of amourous couples from different species.\n\nNote: Xenophilic pops will be happy at this and xenophilism is likely to increase as a practice, but if it takes hold in large numbers, this could hit the birth rate."
+allow_im_desc:0 "Legalise the marriage of amourous couples from different species.\n\nNote: Xenophilic £pops Pops will be happy at this and xenophilism is likely to increase as a practice, but if it takes hold in large numbers, this could hit the birth rate."
 allows_im_name:0 "Allows Interspecies Marriage"
 
 do_not_allow_im:0 "Do not allow Interspecies Marriage"
@@ -383,5 +383,5 @@ do_not_allow_im_desc:0 "Do not legalise marriage between individuals from differ
 does_not_allow_im_name:0 "Does not allow Interspecies Marriage"
 
 ban_im_completely:0 "Ban Interspecies Intercourse"
-ban_im_completely_desc:0 "Ban all intercourse between different species.\n\nNote: Xenophilic pops will consider themselves oppressed, and may flee to countries where xenophilia is legalised."
+ban_im_completely_desc:0 "Ban all intercourse between different species.\n\nNote: Xenophilic £pops Pops will consider themselves oppressed, and may flee to countries where xenophilia is legalised."
 bans_im_completely_name:0 "Bans Interspecies Intercourse"
