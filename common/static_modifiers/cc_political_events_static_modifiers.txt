@@ -338,7 +338,7 @@ cc_planet_hate_speech = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
 }
 
-cc_planet_hate_speech = {
+cc_planet_interspecies_tensions = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	planet_unrest_mult = 1
 	icon_frame = 3
@@ -351,4 +351,64 @@ cc_empire_interspecies_tensions = {
 
 cc_feels_unwelcome = {
 	pop_happiness = -0.2
+}
+
+cc_disrupted_government = {
+	tile_resource_energy_mult = -0.67
+	tile_resource_minerals_mult = -0.67
+	tile_resource_unity_mult = -0.67
+	tile_resource_physics_research_mult = -0.67
+	tile_resource_society_research_mult = -0.67
+	tile_resource_engineering_research_mult = -0.67
+	planet_unrest_mult = 0.5
+	
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
+}
+
+cc_pop_fears_genocide = {
+	pop_happiness = -0.5
+}
+
+cc_xenos_spared_from_massacre = {
+	faction_happiness = -0.2
+}
+
+cc_xenos_massacred = {
+	faction_happiness = -0.2
+}
+
+cc_xenos_disparaged = {
+	faction_happiness = -0.1
+}
+
+cc_xenos_disparaged_sup = {
+	faction_happiness = 0.1
+}
+
+cc_xenos_encouraged = {
+	faction_happiness = -0.1
+}
+
+cc_martial_law = {
+	tile_resource_unity_mult = -0.33
+	tile_resource_minerals_mult = -0.33
+	tile_resource_energy_mult = -0.33
+	tile_resource_physics_research_mult = -0.33
+	tile_resource_society_research_mult = -0.3
+	tile_resource_engineering_research_mult = -0.33
+	planet_unrest_mult = -0.5
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
+
+cc_xeno_reconciliation = {
+	pop_ethic_xenophile_attraction_mult = 0.8
+}
+
+cc_investment_package = {
+	planet_resource_energy_add = -30
+	planet_resource_minerals_add = -30
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
 }
