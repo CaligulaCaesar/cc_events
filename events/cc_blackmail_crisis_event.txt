@@ -883,12 +883,45 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		every_country = {
+			limit = {
+				is_rival = root
+				is_ai = no
+			}
+			country_event = { id = cc_events_blackmail.210 days = 5 }
+		}
+	}
+	
 	option = {
 		name = UNFORTUNATE
 		
 		add_modifier = {
 			modifier = cc_ship_designs_compromised
 			years = 15
+		}
+	}
+}
+
+#notify rivals
+country_event = {
+	id = cc_events_blackmail.210
+	title = cc_events_blackmail.210.name
+	desc = cc_events_blackmail.210.desc
+	picture = GFX_evt_fleet_evil
+	
+	is_triggered_only = yes
+
+	option = {
+		name = CCEXCELLENT
+		
+		tooltip = {
+			from = {
+				add_modifier = {
+					modifier = cc_ship_designs_compromised
+					years = 15
+				}
+			}
 		}
 	}
 }

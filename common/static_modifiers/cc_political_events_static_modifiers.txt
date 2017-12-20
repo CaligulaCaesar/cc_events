@@ -335,5 +335,20 @@ cc_planet_hate_speech = {
 	pop_ethic_xenophobe_attraction_mult = 1
 	planet_unrest_mult = 0.5
 	icon_frame = 3
-	icon = "gfx/interface/icons/planet_modifiers/pm_sow_unrest.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_planet_hate_speech = {
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	planet_unrest_mult = 1
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_empire_interspecies_tensions = {
+	pop_ethic_xenophobe_attraction_mult = 0.5
+}
+
+cc_feels_unwelcome = {
+	pop_happiness = -0.2
 }
