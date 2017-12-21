@@ -58,7 +58,7 @@ planet_event = {
 					owner = { NOT = { has_faction = prosperity } }
 				}
 				
-#				planet_event = { id = cc_colony_events.3 }
+				planet_event = { id = cc_colony_events.3 }
 			}
 			10 = {
 				modifier = {
@@ -99,6 +99,14 @@ planet_event = {
 							has_faction = isolationist
 						}
 					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_pop = { is_same_species = root.owner } }	#this would break it badly
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { any_owned_pop = { NOT = { is_same_species = root.owner } } }  #makes up for that
 				}
 				
 #				planet_event = { id = cc_colony_events.5 }
