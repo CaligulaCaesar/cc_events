@@ -133,24 +133,7 @@ country_event = {
 	title = ccfaction.1.name
 	picture = GFX_evt_smugglers_in_bar
 	
-	desc = {
-		trigger = {
-			hidden:event_target:cc_rebellious_faction = {
-				switch = {
-					trigger = is_pop_faction_type
-					xenoist = { text = ccfaction.1.xenoist }
-					supremacist = { text = ccfaction.1.supremacist }
-					isolationist = { text = ccfaction.1.isolationist }
-					progressive = { text = ccfaction.1.progressive }
-					totalitarian = { text = ccfaction.1.totalitarian }
-					imperialist = { text = ccfaction.1.imperialist }
-					prosperity = { text = ccfaction.1.prosperity }
-					traditionalist = { text = ccfaction.1.traditionalist }
-					technologist = { text = ccfaction.1.technologist }
-				}
-			}
-		}
-	}
+	desc = ccfaction.1.desc
 	
 	
 	trigger = {
@@ -891,24 +874,8 @@ country_event = {
 	title = ccfaction.2.name
 	picture = GFX_evt_alien_propaganda
 	
-	desc = {
-		trigger = {
-			hidden:event_target:cc_rebellious_faction = {
-				switch = {
-					trigger = is_pop_faction_type
-					xenoist = { text = ccfaction.2.xenoist }
-					supremacist = { text = ccfaction.2.supremacist }
-					isolationist = { text = ccfaction.2.isolationist }
-					progressive = { text = ccfaction.2.progressive }
-					totalitarian = { text = ccfaction.2.totalitarian }
-					imperialist = { text = ccfaction.2.imperialist }
-					prosperity = { text = ccfaction.2.prosperity }
-					traditionalist = { text = ccfaction.2.traditionalist }
-					technologist = { text = ccfaction.2.technologist }
-				}
-			}
-		}
-	}
+	desc = ccfaction.2.desc
+	
 	is_triggered_only = yes
 	
 	trigger = {
@@ -1126,9 +1093,6 @@ country_event = {
 	
 	trigger = { NOT = { has_country_flag = cc_continue_factional_revolt } }
 	
-	immediate = {
-		remove_all_faction_revolt_flags = yes
-	}
 	option = {
 		name = CCGOOD
 		
@@ -1136,6 +1100,7 @@ country_event = {
 		
 		custom_tooltip = cc_faction_revolt_modifiers_removed
 		hidden_effect = {
+			remove_all_faction_revolt_flags = yes
 			every_owned_planet = {
 				remove_all_seditious_talk = yes
 			}
@@ -2762,44 +2727,16 @@ country_event = {
 					}
 					
 					if = {
+						limit = {
+							OR = {
+								exists = event_target:cc_rebellious_faction_leader
+								exists = event_target:cc_new_reb_faction_leader
+							}
+						}
+						root = { country_event = { id = ccfaction.601 days = 1 } }
+					}
+					if = {
 						limit = { exists = event_target:cc_rebellious_faction_leader }
-						if = {
-							limit = { event_target:cc_rebellious_faction_leader = { leader_class = scientist } }
-							root = {
-								set_timed_country_flag = {
-									flag = cc_scientist_defects
-									days = 5
-								}
-							}
-						}
-						if = {
-							limit = { event_target:cc_rebellious_faction_leader = { leader_class = governor } }
-							root = {
-								set_timed_country_flag = {
-									flag = cc_governor_defects
-									days = 5
-								}
-							}
-						}
-						if = {
-							limit = { event_target:cc_rebellious_faction_leader = { leader_class = admiral } }
-							root = {
-								set_timed_country_flag = {
-									flag = cc_admiral_defects
-									days = 5
-								}
-							}
-						}
-						if = {
-							limit = { event_target:cc_rebellious_faction_leader = { leader_class = general } }
-							root = {
-								set_timed_country_flag = {
-									flag = cc_general_defects
-									days = 5
-								}
-							}
-						}
-
 						event_target:cc_rebellious_faction_leader = {
 							if = {
 								limit = {
@@ -2810,26 +2747,40 @@ country_event = {
 									}
 								}
 								exile_leader_as = cc_rebellious_faction_leader
-								prev = { set_leader = cc_rebellious_faction_leader }
-								root = { country_event = { id = ccfaction.601 days = 1 } }
 								
 								else = {
-									prev = {
-										create_leader = {
-											type = ruler
-											species = owner_main_species
-											name = random
-											skill = 200
-											traits = {}
+									root = {
+										create_fleet = {
+											name = "NAME_Other_Science_Ship"
+											effect = {
+												set_owner = root
+												create_ship_design = {
+													design = "NAME_Prototype"
+													ftl = root
+												}
+												create_ship = {
+													name = "NAME_From_Beyond"
+													design = last_created_design
+													graphical_culture = "extra_dimensional_01"
+													prefix = no
+													upgradable = no
+												}
+												set_location = root.capital_scope
+												save_event_target_as = deleted_ship
+											}
 										}
-										assign_leader = last_created_leader
-										ruler = {
-											add_random_leader_trait = yes
+										event_target:deleted_ship = {
+											set_leader = event_target:cc_rebellious_faction_leader
+											exile_leader_as = cc_rebellious_faction_leader
+											delete_fleet = this
 										}
 									}
 								}
 							}
 						}
+						prev = { set_leader = cc_rebellious_faction_leader }
+						root = { country_event = { id = ccfaction.601 days = 1 } }
+						
 						
 						else = {
 							create_leader = {
@@ -2842,6 +2793,77 @@ country_event = {
 							assign_leader = last_created_leader
 							ruler = {
 								add_random_leader_trait = yes
+							}
+						}
+					}
+					
+					if = {
+						limit = { exists = event_target:cc_new_reb_faction_leader }
+						event_target:cc_new_reb_faction_leader = {
+							if = {
+								limit = {
+									OR = {
+										leader_class = general
+										leader_class = admiral
+										leader_class = scientist
+									}
+								}
+								exile_leader_as = cc_new_reb_faction_leader
+								
+								else = {
+									root = {
+										create_fleet = {
+											name = "NAME_Other_Science_Ship"
+											effect = {
+												set_owner = root
+												create_ship_design = {
+													design = "NAME_Prototype"
+													ftl = root
+												}
+												create_ship = {
+													name = "NAME_From_Beyond"
+													design = last_created_design
+													graphical_culture = "extra_dimensional_01"
+													prefix = no
+													upgradable = no
+												}
+												set_location = root.capital_scope
+												save_event_target_as = deleted_ship
+											}
+										}
+										event_target:deleted_ship = {
+											set_leader = event_target:cc_new_reb_faction_leader
+											exile_leader_as = cc_new_reb_faction_leader
+											delete_fleet = this
+										}
+									}
+								}
+							}
+						}
+						prev = {
+							create_fleet = {
+								name = "NAME_Other_Science_Ship"
+								effect = {
+									set_owner = event_target:cc_breakaway_country
+									create_ship_design = {
+										design = "NAME_Prototype"
+										ftl = event_target:cc_breakaway_country
+									}
+									create_ship = {
+										name = "NAME_From_Beyond"
+										design = last_created_design
+										graphical_culture = "extra_dimensional_01"
+										prefix = no
+										upgradable = no
+									}
+									set_location = root.capital_scope
+									save_event_target_as = deleted_ship
+								}
+							}
+							event_target:deleted_ship = {
+								set_leader = event_target:cc_new_reb_faction_leader
+								leader = { unassign_leader = this }
+								delete_fleet = this
 							}
 						}
 					}
@@ -3219,43 +3241,16 @@ country_event = {
 							}
 							
 							if = {
+								limit = {
+									OR = {
+										exists = event_target:cc_rebellious_faction_leader
+										exists = event_target:cc_new_reb_faction_leader
+									}
+								}
+								root = { country_event = { id = ccfaction.601 days = 1 } }
+							}
+							if = {
 								limit = { exists = event_target:cc_rebellious_faction_leader }
-								if = {
-									limit = { event_target:cc_rebellious_faction_leader = { leader_class = scientist } }
-									root = {
-										set_timed_country_flag = {
-											flag = cc_scientist_defects
-											days = 5
-										}
-									}
-								}
-								if = {
-									limit = { event_target:cc_rebellious_faction_leader = { leader_class = governor } }
-									root = {
-										set_timed_country_flag = {
-											flag = cc_governor_defects
-											days = 5
-										}
-									}
-								}
-								if = {
-									limit = { event_target:cc_rebellious_faction_leader = { leader_class = admiral } }
-									root = {
-										set_timed_country_flag = {
-											flag = cc_admiral_defects
-											days = 5
-										}
-									}
-								}
-								if = {
-									limit = { event_target:cc_rebellious_faction_leader = { leader_class = general } }
-									root = {
-										set_timed_country_flag = {
-											flag = cc_general_defects
-											days = 5
-										}
-									}
-								}
 								event_target:cc_rebellious_faction_leader = {
 									if = {
 										limit = {
@@ -3266,26 +3261,41 @@ country_event = {
 											}
 										}
 										exile_leader_as = cc_rebellious_faction_leader
-										prev = { set_leader = cc_rebellious_faction_leader }
-										root = { country_event = { id = ccfaction.601 days = 1 } }
 										
 										else = {
-											prev = {
-												create_leader = {
-													type = ruler
-													species = owner_main_species
-													name = random
-													skill = 200
-													traits = {}
+											root = {
+												create_fleet = {
+													name = "NAME_Other_Science_Ship"
+													effect = {
+														set_owner = root
+														create_ship_design = {
+															design = "NAME_Prototype"
+															ftl = root
+														}
+														create_ship = {
+															name = "NAME_From_Beyond"
+															design = last_created_design
+															graphical_culture = "extra_dimensional_01"
+															prefix = no
+															upgradable = no
+														}
+														set_location = root.capital_scope
+														save_event_target_as = deleted_ship
+													}
 												}
-												assign_leader = last_created_leader
-												ruler = {
-													add_random_leader_trait = yes
+												event_target:deleted_ship = {
+													set_leader = event_target:cc_rebellious_faction_leader
+													exile_leader_as = cc_rebellious_faction_leader
+													delete_fleet = this
 												}
 											}
 										}
 									}
 								}
+								prev = { set_leader = cc_rebellious_faction_leader }
+								root = { country_event = { id = ccfaction.601 days = 1 } }
+								
+								
 								else = {
 									create_leader = {
 										type = ruler
@@ -3300,10 +3310,77 @@ country_event = {
 									}
 								}
 							}
+							
 							if = {
 								limit = { exists = event_target:cc_new_reb_faction_leader }
-								event_target:cc_new_reb_faction_leader = { exile_leader_as = cc_new_reb_faction_leader }
-							} #no idea how to get the guy back
+								event_target:cc_new_reb_faction_leader = {
+									if = {
+										limit = {
+											OR = {
+												leader_class = general
+												leader_class = admiral
+												leader_class = scientist
+											}
+										}
+										exile_leader_as = cc_new_reb_faction_leader
+										
+										else = {
+											root = {
+												create_fleet = {
+													name = "NAME_Other_Science_Ship"
+													effect = {
+														set_owner = root
+														create_ship_design = {
+															design = "NAME_Prototype"
+															ftl = root
+														}
+														create_ship = {
+															name = "NAME_From_Beyond"
+															design = last_created_design
+															graphical_culture = "extra_dimensional_01"
+															prefix = no
+															upgradable = no
+														}
+														set_location = root.capital_scope
+														save_event_target_as = deleted_ship
+													}
+												}
+												event_target:deleted_ship = {
+													set_leader = event_target:cc_new_reb_faction_leader
+													exile_leader_as = cc_new_reb_faction_leader
+													delete_fleet = this
+												}
+											}
+										}
+									}
+								}
+								prev = {
+									create_fleet = {
+										name = "NAME_Other_Science_Ship"
+										effect = {
+											set_owner = event_target:cc_breakaway_country
+											create_ship_design = {
+												design = "NAME_Prototype"
+												ftl = event_target:cc_breakaway_country
+											}
+											create_ship = {
+												name = "NAME_From_Beyond"
+												design = last_created_design
+												graphical_culture = "extra_dimensional_01"
+												prefix = no
+												upgradable = no
+											}
+											set_location = root.capital_scope
+											save_event_target_as = deleted_ship
+										}
+									}
+									event_target:deleted_ship = {
+										set_leader = event_target:cc_new_reb_faction_leader
+										leader = { unassign_leader = this }
+										delete_fleet = this
+									}
+								}
+							}
 						}
 					}
 				
@@ -3502,15 +3579,24 @@ country_event = {
 	title = ccfaction.601.name
 	desc = {
 		trigger = {
-			switch = {
-				trigger = has_country_flag
-				cc_scientist_defects = { text = ccfaction.601.desc.scientist }
-				cc_admiral_defects = { text = ccfaction.601.desc.admiral }
-				cc_general_defects = { text = ccfaction.601.desc.general }
-				cc_governor_defects = { text = ccfaction.601.desc.governor }
-				default = { text = ccfaction.601.desc }
-			}
+			exists = event_target:cc_rebellious_faction_leader
+			exists = event_target:cc_new_reb_faction_leader
 		}
+		text = ccfaction.601.both
+	}
+	desc = {
+		trigger = {
+			exists = event_target:cc_rebellious_faction_leader
+			NOT = { exists = event_target:cc_new_reb_faction_leader }
+		}
+		text = ccfaction.601.only1
+	}
+	desc = {
+		trigger = {
+			NOT = { exists = event_target:cc_rebellious_faction_leader }
+			exists = event_target:cc_new_reb_faction_leader
+		}
+		text = ccfaction.601.only2
 	}
 	
 	picture = GFX_evt_hangar_bay

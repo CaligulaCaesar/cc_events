@@ -1,0 +1,130 @@
+############################################
+###   SCRIPTED LOCALIZATION FOR FRENCH   ###
+###     Scripted by Caligula Caesar      ###
+############################################
+
+
+##To apply, use [root.GetFactionTypeAdj]
+
+#Ex.: "The [xenophilic/supremacist/whatever] faction"
+defined_text = {
+	name = GetFactionTypeAdj
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = xenoist }
+		}
+		localization_key = ccloc_xenophilic
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = supremacist }
+		}
+		localization_key = ccloc_supremacist
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = isolationist }
+		}
+		localization_key = ccloc_isolationist
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = progressive }
+		}
+		localization_key = ccloc_progressive
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = totalitarian }
+		}
+		localization_key = ccloc_totalitarian
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = imperialist }
+		}
+		localization_key = ccloc_imperialist
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = prosperity }
+		}
+		localization_key = ccloc_pacifistic
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = traditionalist }
+		}
+		localization_key = ccloc_traditionalist
+	}
+	text = {
+		trigger = {
+			exists = root
+			owner = {
+				count_pop_factions = {
+					limit = { is_same_value = root }
+					count = 1	
+				}
+			}
+			root = { is_pop_faction_type = technologist }
+		}
+		localization_key = ccloc_materialistic
+	}
+}
+
