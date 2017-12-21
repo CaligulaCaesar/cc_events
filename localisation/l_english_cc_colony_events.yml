@@ -28,7 +28,7 @@ cc_colony_events.22.B:0 "Release [cc_colony_leader.GetHimHer] and allow [cc_colo
 
 
 cc_colony_events.221.name:0 "Lingering Distrust on [Root.GetName]"
-cc_colony_events.221.desc:0 "Some years have passed, and protests at [cc_colony_leader.GetName]'s arrest have died down. However, [cc_colony_leader.GetHisHer] memory - and memory of how [cc_colony_leader.GetSheHe] was torn from [root.GetName] - remains, and has been written into [root.GetName]an folklore as a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
+cc_colony_events.221.desc:0 "Some years have passed, and protests at [cc_colony_leader.GetName]'s arrest have died down. However, [cc_colony_leader.GetHisHer] memory - and memory of how [cc_colony_leader.GetSheHe] was torn from [root.GetName] - remains, and has been written into [root.GetName]'s folklore as a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
 
 cc_colony_events.23.name:0 "Protestors free [cc_colony_leader.GetName]"
 cc_colony_events.23.desc:0 "[cc_colony_leader.GetName]'s arrest on [Root.GetName] has sparked massive protests. Local authorities failed to keep the situation under control, and in the chaos a group of protests broke through the defences at the planetary prison and released [cc_colony_leader.GetHimHer]. Our representatives have requested guidance from the executive as to how to deal with the situation."
@@ -37,7 +37,7 @@ cc_colony_events.23.B:0 "Arrest [cc_colony_leader.GetHimHer] again and take [cc_
 cc_colony_events.23.C:0 "Hunt down this mutineer and [cc_colony_leader.GetHisHer] followers. We will not tolerate sedition."
 
 cc_colony_events.231.name:0 "Arrest of [cc_colony_leader.GetName] successful"
-cc_colony_events.231.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have been successful. [cc_colony_leader.GetSheHeCap] is safely in our custody has been taken to [Root.Owner.Capital.GetName]. However, there are still widespread protests on [Root.GetName], and it is not clear whether the populace will ever come to trust us."
+cc_colony_events.231.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have been successful. [cc_colony_leader.GetSheHeCap] is safely in our custody and has been taken to [Root.Owner.Capital.GetName]. However, there are still widespread protests on [Root.GetName], and it is not clear whether the populace will ever come to trust us."
 cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
 
 cc_colony_events.232.name:0 "Arrest of [cc_colony_leader.GetName] unsuccessful"
@@ -55,7 +55,7 @@ cc_colony_events.25.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], the 'Legate' of [root.GetName], died today after a brief illness. The populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] last wish was that a great academy be built on [root.GetName] to ensure that the next generation of officers for whom [cc_colony_leader.GetSheHe] has sown the seeds can reach their full potential. Officials on [root.GetName] have approached us with a plan to see this become a reality.\n\nShould we invest in the academy?"
 cc_colony_events.25.A: "Certainly!"
 cc_colony_events.25.B: "It is too expensive."
-cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' Time."
+cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
 cc_colony_events.251.name:0 "Academy opens on [root.GetName]"
 cc_colony_events.251.desc:0 "The academy in [cc_colony_leader.GetName]'s honour has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people to who service this great nation."
 
@@ -128,7 +128,7 @@ cc_colony_events.33.B:0 "$cc_colony_events.63.B$"
 cc_colony_events.33.C:0 "Crackdown on the Ghandeis with our full force."
 
 cc_colony_events.331.name:0 "$cc_colony_events.231.name$"
-cc_colony_events.331.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have been successful. [cc_colony_leader.GetSheHeCap] is safely in our custody has been taken to [Root.Owner.Capital.GetName]. However, there are still widespread protests and non-violent disruptions on [Root.GetName], and it is not clear whether the populace will ever come to trust us."
+cc_colony_events.331.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have been successful. [cc_colony_leader.GetSheHeCap] is safely in our custody and has been taken to [Root.Owner.Capital.GetName]. However, there are still widespread protests and non-violent disruptions on [Root.GetName], and it is not clear whether the populace will ever come to trust us."
 cc_colony_events.331.option:0 "$CC_GOODIGUESS$"
 
 cc_colony_events.332.name:0 "$cc_colony_events.232.name$"
@@ -531,7 +531,7 @@ cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
 cc_colony_events.922.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have failed. The ringleaders caught wind of the plan and went into hiding, along with many of their trusted followers. They have set up an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
 
 cc_colony_events.923.name:0 "$cc_colony_events.221.name$"
-cc_colony_events.923.desc:0 "Some years have passed, and protests at the cessation of direct democracy on [root.GetName] have died down, but the memory of it hasn't. [root.GetName]'s period of democratic self-governance has gone down in [root.GetName]an folklore as a golden, innocent age, and its loss is a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
+cc_colony_events.923.desc:0 "Some years have passed, and protests at the cessation of direct democracy on [root.GetName] have died down, but the memory of it hasn't. [root.GetName]'s period of democratic self-governance has gone down in [root.GetName]'s folklore as a golden, innocent age, and its loss is a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
 
 cc_colony_events.924.name:0 "Underground Movement on [Root.GetName]"
 cc_colony_events.924.desc:0 "The expected end of protests on [root.GetName] did not materialise. They continued to cause issues until authorities were forced to disperse protesters. Since then, the movement has gone underground, seeking to win over the population and push for a restoration of democracy from the shadows."
