@@ -412,3 +412,11 @@ cc_investment_package = {
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
 }
+
+cc_ruled_against_us_pops = {
+	pop_happiness = -0.1
+}
+
+cc_ruled_in_our_favour_pops = {
+	pop_happiness = 0.1
+}
