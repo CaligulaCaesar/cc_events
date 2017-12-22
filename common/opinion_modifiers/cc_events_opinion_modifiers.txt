@@ -27,3 +27,32 @@ cc_allowed_genocide_of_us = {
 	}
 }
 
+
+cc_betrayed_us_ally = {
+	opinion = {
+		base = -100
+	}
+	
+	accumulative = yes
+	
+	min = -1000
+	
+	decay = {
+		base = -4
+	}
+}
+
+cc_ignored_ally = {
+	opinion = {
+		base = -50
+	}
+	
+	accumulative = yes
+	
+	min = -500
+	
+	decay = {
+		base = -4
+	}
+}
+

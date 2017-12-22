@@ -275,25 +275,48 @@ cc_colony_events.541.desc:0 "The assassination of [cc_colony_leader.GetName] was
 cc_colony_events.541.A:0 "No way."
 cc_colony_events.541.B:0 "We never liked them anyway."
 
+cc_colony_events.542.name:0 "The [from.owner.GetName] adopts a hostile Attitude"
+cc_colony_events.542.desc:0 "A charismatic, highly xenophobic orator called [cc_colony_leader.GetName] made a name for [cc_colony_leader.GetHimHer]self on [from.GetName] and other [from.owner.GetSpeciesAdj] planets through vicious speeches that publicly derided xenos and named foreign states - in particular, the [root.GetName] - as "Enemies of the People". After a particularly hostile set of speeches, as their ally, we discreetly asked the [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] to allow us to... eliminate the problem. However, incredibly, the [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] not only rejected our request, but even expressed support for [cc_colony_leader.GetName]'s views."
+cc_colony_events.542.option:0 "We will have to reassess our opinion of them."
+
+cc_colony_events.543.name:0 "Eliminating the Rabble Rouser"
+cc_colony_events.543.desc:0 "A charismatic, highly xenophobic orator called [cc_colony_leader.GetName] made a name for [cc_colony_leader.GetHimHer]self on [from.GetName] and other [from.owner.GetSpeciesAdj] planets through vicious speeches that publicly derided xenos and named foreign states - in particular, the [root.GetName] - as "Enemies of the People". After a particularly hostile set of speeches, as their ally, we discreetly asked the [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] to allow us to... eliminate the problem. [from.owner.leader.GetSheHe] agreed to this plan, so we have tasked our intelligence services to work with their [from.owner.GetSpeciesAdj] counterparts to plot [cc_colony_leader.GetName]'s demise."
+
+cc_colony_events.544.name:0 "[cc_colony_leader.GetName] Successfully Eliminated"
+cc_colony_events.544.desc:0 "The plot to eliminate [cc_colony_leader.GetName] was largely successful - the deed was done, and no incriminating evidence was left to link us to the assassination. Despite this, it seems that [cc_colony_leader.GetName]'s supporters are blaming us anyway - presumably, when one sees xeno conspiracies in everything, at some point one will actually be true. Regardless, the [from.owner.GetName] is covering for us, and has assured us that nothing will stand in the way of their continued friendship with the [root.GetName]."
+
+cc_colony_events.545.name:0 "The from.owner.GetName] Betrays Us!"
+cc_colony_events.545.desc:0 "[cc_colony_leader.GetName] was successfully eliminated - the deed was done, and no incriminating evidence was left to link us to the assassination. Despite this, it seems that [cc_colony_leader.GetName]'s supporters are blaming us anyway - presumably, when one sees xeno conspiracies in everything, at some point one will actually be true. Regardless, even though the [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle]'s had assured us that [from.owner.leader.GetSheHe] supported the plot, [from.owner.leader.GetSheHe] has since disavowed this and placed full responsibility for the plot on the [root.GetName], disparaging our empire in the most insulting of terms. When our ambassador demanded an explanation, he instructed that he had ten days to leave the planet..."
+cc_colony_events.545.option:0 "$cc_colony_events.542.option$"
+
 
 cc_colony_events.55.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], the 'Hegemon' of [root.GetName], died this morning. [cc_colony_leader.GetSheHe] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special Institute in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetHisHer] achievements - and, more importantly, the glory of the [cc_colony_leader.GetSpeciesAdj] people - can be properly celebrated."
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
-cc_colony_events.55.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
+cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
+cc_colony_events.55.C.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
+
 cc_colony_events.551.name:0 "Institute of Purity opens on [root.GetName]"
 cc_colony_events.551.desc.A:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into an important centre of thought for [cc_colony_leader.GetSpeciesAdj] nationalists."
 cc_colony_events.551.desc.B:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
+cc_xenophobe_martyr:0 "Memory of a Martyr"
+cc_xenophobe_martyr_desc:0 "The former Hegemon of this planet is seen as a martyr for the cause after their assassination through a xeno plot."
+
+cc_mourning_xenophobe:0 "Mourning a Hero"
+cc_mourning_and_angry_xenophobe:0 "Anger at response to death of a Hero"
 
 cc_xenophobe_hero:0 "Xenophobic Hero"
 cc_xenophobe_hero_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero, and would gladly follow them into battle against the xenos."
 cc_xenophobe_assassinated:0 "Hero Assassinated"
 cc_betrayed_us_ally:0 "Betrayed us"
+cc_ignored_ally:0 "Ignored our concerns"
 
-cc_xenophobe_institute_will_be_built:0 "\nThe Institute of Purity will take 5 years to complete. It will add the modifier §Y$cc_xenophobe_institute$§!, granting:\n     BONUSES TBA        \n$pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+cc_xenophobe_institute_will_be_built:0 "\nThe Institute of Purity will take 5 years to complete. It will add the modifier §Y$cc_xenophobe_institute$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\nOwn Species Migration Attraction: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+15%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+250%§!\n\nAdditionally, [cc_colony_leader.GetName]'s supporters will gain the permanent modifier §Y$cc_hostile_towards_xenos$§!, granting §R-10%§! $MOD_POP_OTHER_SPECIES_HAPPINESS$ and §Y+100%§! $pop_ethic_xenophobe_attraction_mult$."
 
-cc_minor_xenophobe_institute_will_be_built:0 "\nThe Hegemon's Institute will take 5 years to complete. It will add the modifier §Y$cc_minor_xenophobe_institute$§!, granting:\n                   BONUSES TBA \n$pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
+cc_minor_xenophobe_institute_will_be_built:0 "\nThe Hegemon's Institute will take 5 years to complete. It will add the modifier §Y$cc_minor_xenophobe_institute$§!, granting:\nOwn Species Migration Attraction: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+150%§!\n\nAdditionally, [cc_colony_leader.GetName]'s supporters will gain the permanent modifier §Y$cc_hostile_towards_xenos$§!, granting §R-10%§! $MOD_POP_OTHER_SPECIES_HAPPINESS$ and §Y+100%§! $pop_ethic_xenophobe_attraction_mult$."
+
 
 cc_founder_xenophobe:0 "Planetary Hegemon"
 cc_founder_xenophobe_desc:0 "This colony is governed by a charismatic individual whose personal mission it is to protect the planet from xeno influences."
@@ -308,8 +331,8 @@ cc_underground_xenophobe_movement_1_desc:0 "An underground movement centred arou
 cc_underground_xenophobe_movement_2:0 "Underground Xenophobe Movement"
 cc_underground_xenophobe_movement_2_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. Its ultimate aim is full independence from our empire."
 
-cc_xenophobes_offended:0 "Offended xenophobes"
-cc_xenophobes_offended_desc:0 "The xenophobe population on this planet is offended at the attitude of the new regime."
+cc_xenophobes_offended:0 "Offended Xenophobes"
+cc_xenophobes_offended_desc:0 "The xenophobic population on this planet is offended at the existance of the new regime."
 
 cc_xenophobe_institute_built_faction:0 "Institute of Purity Built"
 
@@ -325,6 +348,9 @@ cc_minor_xenophobe_institute_desc:0 "The memory of one of this planet's early ci
 
 cc_founders_memory_disrespected_1_xenophobe:0 "Local Hegemon Disrespected"
 cc_founders_memory_disrespected_1_xenophobe_desc:0 "The population is disappointed at the manner in which the parent state treated one of this planet's most treasured citizens."
+
+cc_founders_memory_disrespected_2_xenophobe:0 "$cc_founders_memory_disrespected_1_xenophobe$"
+cc_founders_memory_disrespected_2_xenophobe_desc:0 "$cc_founders_memory_disrespected_1_xenophobe_desc$"
 
 cc_hostile_towards_xenos:0 "Hostile towards xenos"
 
@@ -436,8 +462,8 @@ cc_major_protests_spiritualist_desc:0 "This Planet is experiencing major protest
 cc_spiritualist_leader_visit:0 "Visit by a famous Guru"
 cc_spiritualist_leader_visit_desc:0 "This planet was visited by a famous spiritualist guru."
 
-cc_mourning_spiritualist:0 "Sorrow at Death of Guru"
-cc_mourning_and_angry_spiritualist:0 "Anger at Response to Death of Guru"
+cc_mourning_spiritualist:0 "Sorrow at death of Guru"
+cc_mourning_and_angry_spiritualist:0 "Anger at response to death of Guru"
 
 cc_building_mausoleum:0 "Constructing a Mausoleum"
 cc_building_mausoleum_desc:0 "A Mausoleum in honour of an influential spiritualist guru is being built on this planet."
@@ -790,7 +816,6 @@ cc_cleanup_events.32.option:0 "Good Riddance."
 
 cc_cleanup_events.33.name:0 "Hegemon's Institute on [root.GetName]"
 cc_cleanup_events.33.desc:0 "The old owners of [root.GetName] had been building an institute in honour of a prominent politician who was native to the planet, and had made their name through virulently xenophobic rhetoric. If completed, it would have become a centre through which nationalists could have operate. It is ironic that they would build such a monument in the hour of their downfall. Our planetary authorities have cut short the construction of the institute."
-cc_cleanup_events.33.tooltip:0 "Once completed, the Institute will            Do I'm not sure what"
 
 cc_cleanup_events.34.name:0 "Hegemon's Institute on [root.GetName]"
 cc_cleanup_events.34.desc:0 "The old owners of [root.GetName] had set up an institute in honour of a prominent politician who was native to the planet. Although the politician's views were extremely xenophobic, representatives of the conquered populace have begged us not to destroy the building, which is treasured by the planet's inhabitants. Should we spare the building from destruction?"

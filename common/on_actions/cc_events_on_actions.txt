@@ -126,3 +126,16 @@ on_war_beginning = {
 		cc_peace.5
 	}
 }
+
+
+
+
+# A pop has finished migrating to another planet
+# Root = pop
+# From = Tile on the new planet
+# FromFrom = Tile on the old planet
+on_pop_migration_end = {
+	events = {
+		cc_colony_events.552
+	}
+}

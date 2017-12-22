@@ -219,12 +219,127 @@ planet_event = {
 
 		
 		
-		######################For xenophobe chain, will not ask you the question really most of the time. Own species will keep it, not own species won't. (Presumably have to do it via pop_percentage)
+		#Xenophobes (I treat them a bit differently...)
 		
+		if = {
+			limit = {
+				has_modifier = cc_founder_xenophobe
+				NOT = {
+					owner = {
+						root = {
+							OR = {
+								any_owned_pop = {
+									has_pop_flag = cc_xenophobe_species
+									is_same_species = prevprev
+								}
+								AND = {
+									NOT = {
+										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+										pop_percentage = {
+											limit = { is_same_species = prev }
+											percentage > 0.45
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			planet_event = { id = cc_cleanup_events.32 days = 15 random = 10 }			
+		}
+		if = {
+			limit = {
+				has_modifier = cc_building_xenophobe_institute
+				NOT = {
+					owner = {
+						root = {
+							OR = {
+								any_owned_pop = {
+									has_pop_flag = cc_xenophobe_species
+									is_same_species = prevprev
+								}
+								AND = {
+									NOT = {
+										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+										pop_percentage = {
+											limit = { is_same_species = prev }
+											percentage > 0.45
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			planet_event = { id = cc_cleanup_events.33 days = 15 random = 10 }			
+		}
 		
+		if = {
+			limit = {
+				OR = {
+					has_modifier = cc_xenophobe_institute
+					has_modifier = cc_minor_xenophobe_institute
+				}
+				NOT = {
+					owner = {
+						root = {
+							OR = {
+								any_owned_pop = {
+									has_pop_flag = cc_xenophobe_species
+									is_same_species = prevprev
+								}
+								AND = {
+									NOT = {
+										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+										pop_percentage = {
+											limit = { is_same_species = prev }
+											percentage > 0.45
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			planet_event = { id = cc_cleanup_events.34 days = 15 random = 10 }			
+		}
 		
+		if = {
+			limit = {
+				OR = {
+					has_modifier = cc_underground_xenophobe_movement_1
+					has_modifier = cc_underground_xenophobe_movement_2
+				}
+				NOT = {
+					owner = {
+						root = {
+							OR = {
+								any_owned_pop = {
+									has_pop_flag = cc_xenophobe_species
+									is_same_species = prevprev
+								}
+								AND = {
+									NOT = {
+										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+										pop_percentage = {
+											limit = { is_same_species = prev }
+											percentage > 0.45
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			planet_event = { id = cc_cleanup_events.35 days = 15 random = 10 }			
+		}
 	}
 }
+
 
 planet_event = {
 	id = cc_cleanup_events.2
@@ -2028,6 +2143,145 @@ planet_event = {
 
 
 
+#Xenophobes (a bit different)
+
+planet_event = {
+	id = cc_cleanup_events.32
+	title = cc_cleanup_events.32.name
+	desc = cc_cleanup_events.32.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_alien_segregation
+	
+	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	
+	option = {
+		name = cc_cleanup_events.32.option
+		
+		remove_modifier = cc_founder_xenophobe
+		
+		add_modifier = {
+			modifier = cc_xenophobes_offended
+			years = 20
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.33
+	title = cc_cleanup_events.33.name
+	desc = cc_cleanup_events.33.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_alien_segregation
+	
+	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_xenophobe_institute_cancelled
+			years = 10
+		}
+	}
+	
+	option = {
+		name = OK
+		
+		remove_modifier = cc_building_xenophobe_institute
+		
+		add_modifier = {
+			modifier = cc_xenophobes_offended
+			years = 20
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.34
+	title = cc_cleanup_events.34.name
+	desc = cc_cleanup_events.34.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_alien_segregation
+	
+	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_xenophobe_institute_cancelled
+			years = 10
+		}
+	}
+	
+	option = {
+		name = cc_cleanup_events.34.A
+		
+		if = {
+			limit = { has_modifier = cc_xenophobe_institute }
+			remove_modifier = cc_xenophobe_institute
+		}
+		if = {
+			limit = { has_modifier = cc_minor_xenophobe_institute }
+			remove_modifier = cc_minor_xenophobe_institute
+		}
+		
+		add_modifier = {
+			modifier = cc_xenophobes_offended
+			years = 20
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.35
+	title = cc_cleanup_events.35.name
+	desc = cc_cleanup_events.35.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_alien_segregation
+	
+	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_xenophobe_institute_cancelled
+			years = 10
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		
+		add_modifier = {
+			modifier = cc_xenophobes_offended
+			years = 20
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 planet_event = {
@@ -2042,6 +2296,7 @@ planet_event = {
 			has_modifier = cc_building_university
 			has_modifier = cc_building_milacademy
 			has_modifier = cc_building_pacmonument
+			has_modifier = cc_building_xenophobe_institute
 		}
 	}
 	
@@ -2077,6 +2332,14 @@ planet_event = {
 				years = 5
 			}
 			remove_modifier = cc_building_pacmonument
+		}
+		if = {
+			limit = { has_modifier = cc_building_xenophobe_institute }
+			set_timed_planet_flag = {
+				flag = cc_xenophobe_institute_cancelled
+				years = 5
+			}
+			remove_modifier = cc_building_xenophobe_institute
 		}
 	}
 }

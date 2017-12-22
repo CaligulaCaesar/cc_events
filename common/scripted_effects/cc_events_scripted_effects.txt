@@ -87,6 +87,63 @@ xenophilia_refugee_pop_effect = {
 }
 
 remove_all_political_colony_modifiers = {
+
+
+	if = {
+		limit = { has_modifier = cc_building_xenophobe_institute }
+		remove_modifier = cc_building_xenophobe_institute
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobe_institute }
+		remove_modifier = cc_xenophobe_institute
+	}
+	if = {
+		limit = { has_modifier = cc_minor_xenophobe_institute }
+		remove_modifier = cc_minor_xenophobe_institute
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobe_martyr }
+		remove_modifier = cc_xenophobe_martyr
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobe_hero }
+		remove_modifier = cc_xenophobe_hero
+	}
+	if = {
+		limit = { has_modifier = cc_founder_xenophobe }
+		remove_modifier = cc_founder_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophobe }
+		remove_modifier = cc_minor_protests_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophobe }
+		remove_modifier = cc_major_protests_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophobe_movement_1 }
+		remove_modifier = cc_underground_xenophobe_movement_1
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophobe_movement_2 }
+		remove_modifier = cc_underground_xenophobe_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobes_offended }
+		remove_modifier = cc_xenophobes_offended
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_1_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_1_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_2_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_2_xenophobe
+	}
+
+
+
 	if = {
 		limit = { any_owned_pop = { has_modifier = cc_lingering_oppression } }
 		every_owned_pop = {
@@ -356,6 +413,38 @@ remove_all_political_colony_modifiers = {
 }
 
 remove_rebel_irrelevant_political_colony_modifiers = {
+
+
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophobe }
+		remove_modifier = cc_minor_protests_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophobe }
+		remove_modifier = cc_major_protests_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophobe_movement_1 }
+		remove_modifier = cc_underground_xenophobe_movement_1
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophobe_movement_2 }
+		remove_modifier = cc_underground_xenophobe_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobes_offended }
+		remove_modifier = cc_xenophobes_offended
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_1_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_1_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_2_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_2_xenophobe
+	}
+
+
 	if = {
 		limit = { any_owned_pop = { has_modifier = cc_lingering_oppression } }
 		every_owned_pop = {
@@ -549,6 +638,80 @@ remove_rebel_irrelevant_political_colony_modifiers = {
 }
 
 remove_new_owner_irrelevant_political_colony_modifiers = {
+
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophobe }
+		remove_modifier = cc_minor_protests_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophobe }
+		remove_modifier = cc_major_protests_xenophobe
+	}
+	if = {
+		limit = {
+			has_modifier = cc_underground_xenophobe_movement_1
+			owner = {
+				root = {
+					OR = {
+						any_owned_pop = {
+							has_pop_flag = cc_xenophobe_species
+							is_same_species = prevprev
+						}
+						AND = {
+							NOT = {
+								any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+								pop_percentage = {
+									limit = { is_same_species = prev }
+									percentage > 0.45
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		remove_modifier = cc_underground_xenophobe_movement_1
+	}
+	if = {
+		limit = {
+			has_modifier = cc_underground_xenophobe_movement_2
+			owner = {
+				root = {
+					OR = {
+						any_owned_pop = {
+							has_pop_flag = cc_xenophobe_species
+							is_same_species = prevprev
+						}
+						AND = {
+							NOT = {
+								any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+								pop_percentage = {
+									limit = { is_same_species = prev }
+									percentage > 0.45
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		remove_modifier = cc_underground_xenophobe_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobes_offended }
+		remove_modifier = cc_xenophobes_offended
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_1_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_1_xenophobe
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_2_xenophobe }
+		remove_modifier = cc_founders_memory_disrespected_2_xenophobe
+	}
+
+
+
 	if = {
 		limit = { any_owned_pop = { has_modifier = cc_lingering_oppression } }
 		every_owned_pop = {
@@ -700,5 +863,4 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = { has_modifier = cc_planet_oppression }
 		remove_modifier = cc_planet_oppression
 	}
-
 }

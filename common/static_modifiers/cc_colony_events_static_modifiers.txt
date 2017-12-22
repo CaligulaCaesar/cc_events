@@ -112,7 +112,7 @@ cc_founder_spiritualist = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
 	tile_resource_unity_mult = 0.25
 	
-	icon_frame = 2
+	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_prophet.dds"
 }
 
@@ -120,7 +120,7 @@ cc_famous_guru = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
 	tile_resource_unity_mult = 0.25
 	
-	icon_frame = 2
+	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_prophet.dds"
 }
 
@@ -128,7 +128,7 @@ cc_spiritualist_leader_visit = {
 	pop_ethic_spiritualist_attraction_mult = 1
 	pop_happiness = 0.1
 	
-	icon_frame = 2
+	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_prophet.dds"
 }
 
@@ -523,3 +523,127 @@ cc_founders_memory_disrespected_1_militarist = {
 cc_mourning_martyr = {
 	pop_happiness = -0.1
 }
+
+
+
+#Xenophobes
+
+cc_xenophobe_martyr = {
+	pop_ethic_xenophobe_attraction_mult = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_mourning_xenophobe = {
+	faction_happiness = -0.1
+}
+
+cc_mourning_and_angry_xenophobe = {
+	faction_happiness = -0.25
+}
+
+cc_xenophobe_hero = {
+	pop_ethic_spiritualist_attraction_mult = 1
+	pop_happiness = 0.1
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_xenophobe_assassinated = {
+	faction_happiness = -0.15
+}
+
+cc_founder_xenophobe = {
+	planet_migration_all_pull = 0.5
+	planet_migration_xeno_pull = -1
+	pop_happiness = 0.1
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+}
+
+cc_minor_protests_xenophobe = {
+	pop_happiness = -0.05
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+}
+
+cc_major_protests_xenophobe = {
+	pop_happiness = -0.15
+	pop_ethic_xenophobe_attraction_mult = 2.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+}
+
+
+cc_underground_xenophobe_movement_1 = {
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	planet_unrest_mult = 0.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_underground_xenophobe_movement_2 = {
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	planet_unrest_add = 25
+	planet_unrest_mult = 0.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
+}
+
+cc_xenophobes_offended = {
+	pop_happiness = -0.25
+	pop_ethic_xenophobe_attraction_mult = 0.5
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_xenophobe_institute_built_faction = {
+	faction_happiness = 0.1
+}
+
+cc_building_xenophobe_institute = {
+	tile_resource_minerals_mult = -0.5
+	tile_resource_energy_mult = -0.5
+	
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+}
+
+cc_xenophobe_institute = {
+	tile_resource_unity_mult = 0.25
+	planet_migration_all_pull = 0.5
+	planet_migration_xeno_pull = -1
+	pop_happiness = 0.15
+	pop_ethic_xenophobe_attraction_mult = 2.5
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+}
+
+cc_minor_xenophobe_institute = {
+	planet_migration_all_pull = 0.5
+	planet_migration_xeno_pull = -1
+	pop_happiness = 0.1
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+}
+
+cc_founders_memory_disrespected_1_xenophobe = {
+	pop_happiness = -0.1
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_founders_memory_disrespected_2_xenophobe = {
+	pop_happiness = -0.15
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+cc_hostile_towards_xenos = {
+	pop_other_species_happiness	= -0.1
+	pop_ethic_xenophobe_attraction_mult = 1
+}
+
+
