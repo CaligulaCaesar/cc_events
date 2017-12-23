@@ -158,3 +158,17 @@ defined_text = {
 		localization_key = FRLOC_rice
 	}
 }
+
+
+#Ex.: "[de] lui / [d']elle"
+defined_text = {
+	name = GetDeDLead
+	text = {
+		trigger = { cc_loc_leader_masc = yes }
+		localization_key = FRLOC_de
+	}
+	text = {
+		trigger = { cc_loc_leader_fem = yes }
+		localization_key = FRLOC_d
+	}
+}

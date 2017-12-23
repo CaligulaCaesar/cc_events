@@ -2736,11 +2736,48 @@ planet_event = {
 					days = 5400
 				}
 			}
-			shift_ethic = ethic_xenophobe
 			event_target:ally = {
 				add_opinion_modifier = {
 					modifier = cc_ignored_ally
 					who = prev
+				}
+			}
+			shift_ethic = ethic_xenophobe
+			
+			if = {
+				limit = { has_faction = supremacist }
+				random_pop_faction = {
+					limit = { is_pop_faction_type = supremacist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = {
+									NOR = {
+										is_same_value = prevprev
+										is_pop_faction_type = isolationist
+									}
+								}
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
+							}
+						}
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = { NOT = { is_same_value = prevprev } }
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2948,11 +2985,47 @@ planet_event = {
 		name = cc_colony_events.541.B
 		
 		owner = {
-			shift_ethic = ethic_xenophobe
 			event_target:ally = {
 				add_opinion_modifier = {
 					modifier = cc_betrayed_us_ally
 					who = prev
+				}
+			}
+			shift_ethic = ethic_xenophobe
+			if = {
+				limit = { has_faction = supremacist }
+				random_pop_faction = {
+					limit = { is_pop_faction_type = supremacist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = {
+									NOR = {
+										is_same_value = prevprev
+										is_pop_faction_type = isolationist
+									}
+								}
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
+							}
+						}
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = { NOT = { is_same_value = prevprev } }
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
 				}
 			}
 		}

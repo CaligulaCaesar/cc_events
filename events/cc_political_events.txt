@@ -176,12 +176,99 @@ country_event = {
 					}
 				}
 				shift_ethic = "ethic_xenophobe"
+				
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
+											is_pop_faction_type = isolationist
+										}
+									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
+					else = {
+						random_pop_faction = {
+							limit = { is_pop_faction_type = isolationist }
+							add_modifier = { modifier = embraced_faction days = 3600 }
+							hidden_effect = { 
+								add_modifier = { modifier = embraced_faction_timer days = 3600 }
+								owner = {
+									every_pop_faction = {
+										limit = {
+											NOR = {
+												is_same_value = prevprev
+												is_pop_faction_type = xenoist
+											}
+										}
+										add_modifier = { modifier = embraced_another_faction days = 3600 }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			if = {
 				limit = {
 					has_ethic = ethic_xenophobe
 				}
 				shift_ethic = "ethic_fanatic_xenophobe"
+				
+
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
+											is_pop_faction_type = isolationist
+										}
+									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
+					else = {
+						random_pop_faction = {
+							limit = { is_pop_faction_type = isolationist }
+							add_modifier = { modifier = embraced_faction days = 3600 }
+							hidden_effect = { 
+								add_modifier = { modifier = embraced_faction_timer days = 3600 }
+								owner = {
+									every_pop_faction = {
+										limit = {
+											NOR = {
+												is_same_value = prevprev
+												is_pop_faction_type = xenoist
+											}
+										}
+										add_modifier = { modifier = embraced_another_faction days = 3600 }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			every_owned_pop = {
 				limit = { is_same_species = event_target:discriminated_species }
@@ -432,12 +519,100 @@ country_event = {
 					}
 				}
 				shift_ethic = "ethic_xenophobe"
+				
+
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
+											is_pop_faction_type = isolationist
+										}
+									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
+					else = {
+						random_pop_faction = {
+							limit = { is_pop_faction_type = isolationist }
+							add_modifier = { modifier = embraced_faction days = 3600 }
+							hidden_effect = { 
+								add_modifier = { modifier = embraced_faction_timer days = 3600 }
+								owner = {
+									every_pop_faction = {
+										limit = {
+											NOR = {
+												is_same_value = prevprev
+												is_pop_faction_type = xenoist
+											}
+										}
+										add_modifier = { modifier = embraced_another_faction days = 3600 }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			if = {
 				limit = {
 					has_ethic = ethic_xenophobe
 				}
 				shift_ethic = "ethic_fanatic_xenophobe"
+				
+
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
+											is_pop_faction_type = isolationist
+										}
+									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
+					else = {
+						random_pop_faction = {
+							limit = { is_pop_faction_type = isolationist }
+							add_modifier = { modifier = embraced_faction days = 3600 }
+							hidden_effect = { 
+								add_modifier = { modifier = embraced_faction_timer days = 3600 }
+								owner = {
+									every_pop_faction = {
+										limit = {
+											NOR = {
+												is_same_value = prevprev
+												is_pop_faction_type = xenoist
+											}
+										}
+										add_modifier = { modifier = embraced_another_faction days = 3600 }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			every_owned_pop = {
 				limit = { is_same_species = event_target:discriminated_species }
@@ -2027,8 +2202,28 @@ country_event = {
 		if = {
 			limit = { has_ethic = ethic_authoritarian }
 			shift_ethic = ethic_fanatic_authoritarian
-		}
+			random_pop_faction = {
+				limit = { is_pop_faction_type = totalitarian }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				hidden_effect = { 
+					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					owner = {
+						every_pop_faction = {
+							limit = {
+								NOR = {
+									is_same_value = prevprev
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = progressive
+								}
+							}
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+			}
 		
+		}
+
 		add_modifier = {
 			modifier = cc_defiance_of_law_mega
 			days = 3600
@@ -2215,13 +2410,13 @@ country_event = {
 					
 		event_target:cc_scandal_leader = { exile_leader_as = cc_disgraced_xenophobe }
 		
-			random_pop_faction = {
-				limit = { is_pop_faction_type = supremacist }
-				add_modifier = {
-					modifier = cc_recent_sex_scandal_friendly1
-					days = 3600
-				}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = supremacist }
+			add_modifier = {
+				modifier = cc_recent_sex_scandal_friendly1
+				days = 3600
 			}
+		}
 
 		ai_chance = {
 			factor = 2
