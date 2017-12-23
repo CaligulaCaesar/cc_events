@@ -2288,6 +2288,11 @@ planet_event = {
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
+			
+			every_owned_pop = {
+				limit = { is_same_species = root.owner }
+				set_pop_flag = cc_xenophobe_species
+			}
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2343,6 +2348,11 @@ planet_event = {
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
+			
+			every_owned_pop = {
+				limit = { is_same_species = root.owner }
+				set_pop_flag = cc_xenophobe_species
+			}
 		}
 		
 		ai_chance = { factor = 1 }
@@ -3396,15 +3406,25 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_modifier = cc_hostile_towards_xenos
+		OR = {
+			has_pop_flag = cc_xenophobe_species
+			has_modifier = cc_hostile_towards_xenos
+		}
 		owner = { NOT = { is_same_species = root } }
 	}
 	
 	immediate = {
-		remove_modifier = cc_hostile_towards_xenos
-		add_modifier = {
-			modifier = cc_hostile_towards_xenos
-			years = 15
+		if = {
+			limit = { has_modifier = cc_hostile_towards_xenos }
+			remove_modifier = cc_hostile_towards_xenos
+			add_modifier = {
+				modifier = cc_hostile_towards_xenos
+				years = 15
+			}
+		}
+		if = {
+			limit = { has_pop_flag = cc_xenophobe_species }
+			remove_pop_flag = cc_xenophobe_species
 		}
 	}
 }

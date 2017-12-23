@@ -107,26 +107,26 @@ cc_bribed_planet_desc:0 "Der Staat hat dieser Welt beträchtliche finanzielle Zu
 ###Events
 
 #these go in the place of [cc_rebellious_faction.GetFactionTypeAdj]
- ccloc_xenophilic:0 "xenophilistischen"
- ccloc_supremacist:0 "rassistischen"
- ccloc_isolationist:0 "isolationistischen"
- ccloc_progressive:0 "progressiven"
- ccloc_totalitarian:0 "totalitaristischen"
- ccloc_imperialist:0 "imperialistischen"
- ccloc_pacifistic:0 "pazifistischen"
- ccloc_traditionalist:0 "traditionalistischen"
- ccloc_materialistic:0 "materialistischen"
+ ccloc_xenophilic:0 "xenophilistisch"
+ ccloc_supremacist:0 "rassistisch"
+ ccloc_isolationist:0 "isolationistisch"
+ ccloc_progressive:0 "progressiv"
+ ccloc_totalitarian:0 "totalitaristisch"
+ ccloc_imperialist:0 "imperialistisch"
+ ccloc_pacifistic:0 "pazifistisch"
+ ccloc_traditionalist:0 "traditionalistisch"
+ ccloc_materialistic:0 "materialistisch"
 
 ccfaction.1.name:0 "Fraktionsgetriebene Volksverhetzung"
-ccfaction.1.desc:0 "A wave of dissatisfaction at the way the Empire is being governed has spread across the population, with clandestine calls for a more [cc_rebellious_faction.GetFactionTypeAdj] outlook. We believe that a hardcore group of activists affiliated to the [cc_rebellious_faction.GetName] are behind this agitation and are plotting to seek to break away from the [root.GetName], but the [cc_rebellious_faction.GetName] denies these accusations."
+ ccfaction.1.desc:0 "In der Bevölkerung hat sich Missvergnügen über die Regierung der [root.GetName] verbreitet. Heimlich wird eine mehr [cc_rebellious_faction.GetFactionTypeAdj]e Ausblick befürwortet. Wir halten es für wahrscheinlich, dass eine Gruppe von hardcore-Aktivisten, die mit der [cc_rebellious_faction.GetName] affiliiert sind, die Quelle dieser Unruhen sind, und das Ziel haben, sich von der [root.GetName] abzuspalten. Die [cc_rebellious_faction.GetName] bestreitet diese Vorwurfe."
 
-ccfaction.2.name:0 "The [cc_rebellious_faction.GetName] consolidates its Power"
-ccfaction.2.desc:0 "The agitations for a more [cc_rebellious_faction.GetFactionTypeAdj] focus to the government have spread and taken root in parts of the [root.GetName]. The [cc_rebellious_faction.GetName] has presented us with an official list of demands, claiming to have a popular mandate to represent these parts of the Empire and issuing veiled threats of separatism if their demands are not met. Urgent action is required to bring the Empire back together!"
+ccfaction.2.name:0 "Die [cc_rebellious_faction.GetName] konsolidiert ihre Macht"
+ ccfaction.2.desc:0 "Die aufrührerische Reden, die eine [cc_rebellious_faction.GetFactionTypeAdj]e Regierung fordern, haben sich verbreitet und in Teile der [root.GetName] Wurzeln geschlagen. Die [cc_rebellious_faction.GetName] hat uns ein Manifest gegeben, worin sie ihre Forderungen aufgelistet haben. Sie behaupten, einen populären Mandat zu haben, diese Planeten zu repräsentieren, und haben verschleierte Drohungen der Separatismus gemacht, falls ihre Forderungen nicht erfüllt werden. Wir müssen dringend handeln, um den Staat wieder standsicher zusammenzubringen!"
 
 
-ccfaction.21.name:0 "Factional Agitations Over"
-ccfaction.21.desc.fail:0 "The clandestine agitations of the [cc_rebellious_faction.GetName] have come to nothing and petered out peacefully."
-ccfaction.21.desc.succeed:0 "The agitations of the [cc_rebellious_faction.GetName] have convinced the leadership of the [root.GetName] to reform the government to have a more [cc_rebellious_faction.GetFactionTypeAdj] outlook that is more acceptable to the dissident group. The [cc_rebellious_faction.GetName]'s leaders are satisfied with the changes, and have ceased to agitate for change."
+ ccfaction.21.name:0 "End der Fraktionsgetriebenen Volksverhetzungen"
+ ccfaction.21.desc.fail:0 "Die heimliche Volksverhetzungen der [cc_rebellious_faction.GetName] sind zu nichts gekommen und haben sich friedlich in die Luft aufgelöst."
+ ccfaction.21.desc.succeed:0 "Die Aktionen der [cc_rebellious_faction.GetName] haben die Leitung der [root.GetName] überzeugt, die Regierung neuzugestalten, um besser die [cc_rebellious_faction.GetFactionTypeAdj]en Forderungen der [cc_rebellious_faction.GetName] zu gleichen. Ihre Vorsitzende sind mit diesen Änderungen zufrieden, und haben ihre heimlichen Volksverhetzungen beendet."
 
 ccfaction.3.name:0 "The [cc_new_reb_faction.GetName] has allied with the [cc_rebellious_faction.GetName]" 
 ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has in the recent past been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_rebellious_faction.GetFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
@@ -158,7 +158,7 @@ ccfaction.6.desc.succeed.dual:0 "In a bloodless coup, politicians affiliated wit
 ccfaction.6.desc.attempt.single:0 "Elements of the [cc_rebellious_faction.GetName] have launched an armed revolt against authorities on [cc_rebel_faction_capital.GetName]. They now style themselves as the [event_target:cc_breakaway_country.GetName], and are fighting for control of the planet. Most of the leadership of the [cc_rebellious_faction.GetName] has held back from wholeheartedly supporting the revolutionaries, but our intelligence services expect them to throw themselves behind them should the rebellion succeed."
 ccfaction.6.desc.attempt.dual:0 "Elements of the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] have launched an armed revolt against authorities on [cc_rebel_faction_capital.GetName]. They now style themselves as the [event_target:cc_breakaway_country.GetName], and are fighting for control of the planet. Most of the leadership of the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] have held back from wholeheartedly supporting the revolutionaries, but our intelligence services expect them to throw themselves behind them should the rebellion succeed."
 
- ccfaction.601.name:0 "[cc_rebellious_faction_leader.GetName] Defects!"
+ ccfaction.601.name:0 "Defections!"
  ccfaction.601.desc.both:0 "[cc_rebellious_faction_leader.GetTitle] [cc_rebellious_faction_leader.GetName] und [cc_new_reb_faction_leader.GetTitle] [cc_new_reb_faction_leader.GetName] sind zu der [cc_breakaway_country.GetName] überlaufen."
  ccfaction.601.desc.only1:0 "[cc_rebellious_faction_leader.GetTitle] [cc_rebellious_faction_leader.GetName] ist zu der [cc_breakaway_country.GetName] überlaufen und leitet jetzt die Rebellion gegen uns."
  ccfaction.601.desc.only2:0 "[cc_new_reb_faction_leader.GetTitle] [cc_new_reb_faction_leader.GetName] ist zu der [cc_breakaway_country.GetName] überlaufen."

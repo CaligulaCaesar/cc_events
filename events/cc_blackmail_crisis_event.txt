@@ -9,7 +9,7 @@ country_event = {
 	
 	picture = GFX_evt_metropolis
 	
-	mean_time_to_happen = { years = 150 }
+	mean_time_to_happen = { years = 100 }
 	
 	trigger = {
 		years_passed > 60
@@ -32,8 +32,27 @@ country_event = {
 		}
 	}
 	
+	modifier = {
+		factor = 1.5
+		any_country = {
+			OR = {
+				is_hostile_to = root
+				is_rival = root
+				is_domineering_to = root
+			}
+			relative_power = {
+				who = root
+				category = fleet
+				value = superior
+			}
+		}
+	}		
+	
 	immediate = {
-		set_country_flag = cc_has_had_blackmail
+		set_timed_country_flag = {
+			flag = cc_has_had_blackmail
+			years = 60
+		}
 	}
 	
 	option = {

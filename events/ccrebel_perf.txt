@@ -31,6 +31,20 @@ event = {
 						flag = ccrebel_perf_spiritualists_2
 						days = 31
 					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
+					}
 				}
 			}
 			every_owned_planet = {
@@ -67,6 +81,20 @@ event = {
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_authoritarians_2
 						days = 31
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
 					}
 				}
 			}
@@ -105,6 +133,20 @@ event = {
 						flag = ccrebel_perf_xenophiles_2
 						days = 31
 					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
+					}
 				}
 			}
 			every_owned_planet = {
@@ -141,6 +183,20 @@ event = {
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_materialists_2
 						days = 31
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
 					}
 				}
 			}
@@ -179,6 +235,20 @@ event = {
 						flag = ccrebel_perf_xenophobes_2
 						days = 31
 					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
+					}
 				}
 			}
 			every_owned_planet = {
@@ -215,6 +285,20 @@ event = {
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_egalitarians_2
 						days = 31
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
 					}
 				}
 			}
@@ -253,6 +337,20 @@ event = {
 						flag = ccrebel_perf_pacifists_2
 						days = 31
 					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
+					}
 				}
 			}
 			every_owned_planet = {
@@ -289,6 +387,20 @@ event = {
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_militarists_2
 						days = 31
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 31
+						}
 					}
 				}
 			}
