@@ -128,17 +128,17 @@ ccfaction.21.desc.fail:0 "The clandestine agitations of the [cc_rebellious_facti
 ccfaction.21.desc.succeed:0 "The agitations of the [cc_rebellious_faction.GetName] have convinced the leadership of the [root.GetName] to reform the government to have a more [cc_rebellious_faction.GetFactionTypeAdj] outlook that is more acceptable to the dissident group. The [cc_rebellious_faction.GetName]'s leaders are satisfied with the changes, and have ceased to agitate for change."
 
 ccfaction.3.name:0 "The [cc_new_reb_faction.GetName] has allied with the [cc_rebellious_faction.GetName]" 
-ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has in the recent past been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_rebellious_faction.GetFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
+ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has until now been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
 
 
 ccfaction.4.name:0 "The [cc_rebellious_faction.GetName] is attempting to secede"
-ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_rebellious_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
+ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
 ccfaction.4.single.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They plan to realise their dream of reshaping society towards a more [cc_rebellious_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
 
 ccfaction.41.name:0 "Factional Agitations Over"
 ccfaction.41.dual.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
 ccfaction.41.single.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
-ccfaction.41.dual.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj] and [cc_rebellious_faction.GetFactionTypeAdj]-minded citizens in future."
+ccfaction.41.dual.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj] and [cc_new_reb_faction.GetFactionTypeAdj]-minded citizens in future."
 ccfaction.41.single.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj]-minded citizens in future."
 
 ccfaction.42.name:0 "Revolt by the [cc_rebellious_faction.GetName] fails"
@@ -175,7 +175,7 @@ ccfaction.64.desc:0 "Our authorities have lost control of [fromfrom.GetName], wh
 
 
 #second wave revolt breaks free
-ccfaction.67.name:0 "Rebels on [from.GetName] have joined the [cc_breakaway_country.GetName]"
+ccfaction.67.name:0 "Rebels on [fromfrom.GetName] have joined the [cc_breakaway_country.GetName]"
 ccfaction.67.desc:0 "Our authorities have lost control of [fromfrom.GetName]. The new owners of the planet have ceded themselves to the [cc_breakaway_country.GetName] and have joined them in their revolt against us."
 
 #It fails
@@ -185,8 +185,8 @@ ccfaction.68.desc.second:0 "Our authorities have defeated revolutionaries affili
 
 
 #What to do with the sympathies planets?
-ccfaction.7.name:0 "Sympathisers with the [cc_breakaway_country.GetName]"
-ccfaction.7.desc:0 "There is considerable minority support for the [cc_breakaway_country.GetName] on [random_sympathies_planet.GetName] and other planets. The supporters of the breakaway planet are mobilising and will surely cause trouble if allowed to. How should we deal with them?"
+ccfaction.7.name:0 "The [cc_breakaway_country.GetName] Sympathisers"
+ccfaction.7.desc:0 "There is considerable minority support for the [cc_breakaway_country.GetName] on [random_sympathies_planet.GetName] and other planets. The supporters of the breakaway faction are mobilising and will surely cause trouble if allowed to. How should we deal with them?"
 ccfaction.7.A.tooltip:0 "All supporters of the breakaway faction on these planets will be killed. Other countries may be upset."
 ccfaction.7.B.tooltip:0 "All supporters of the breakaway faction on these planets will gain the modifier §R$cc_oppression$§!: -50% output of all resources."
 ccfaction.7.C:0 "Give them a generous subsidy."
@@ -195,7 +195,7 @@ ccfaction.7.D:0 "Do nothing."
 
 ccfaction.900.name:0 "Unrest caused by the [cc_rebellious_faction.GetName] is over"
 ccfaction.900.exists.desc:0 "The [root.GetName] has seen a period of tumult caused by the agitations of the [cc_rebellious_faction.GetName], which led to the secession of the [cc_breakaway_country.GetName]. However, with this secession, most of the troublesome elements have now left the [root.GetName]. Whilst the situation is far from ideal, we have at least been able to restore internal order."
-ccfaction.900.doesnotexist.desc:0 "The [root.GetName] has seen a period of tumult caused by the agitations of the [cc_rebellious_faction.GetName], which led to attempts at secession. These have been nipped in the bud - their independence was short-lived - which has allowed us to restore internal order in the [root.GetName]."
+ccfaction.900.doesnotexist.desc:0 "The [root.GetName] has seen a period of tumult caused by the agitations of the [cc_rebellious_faction.GetName], which led to attempts at secession. These have been nipped in the bud, and internal order within the [root.GetName] has been restored."
 
 CCWORRYING:0 "Worrying."
 CCGOOD:0 "Good to know."

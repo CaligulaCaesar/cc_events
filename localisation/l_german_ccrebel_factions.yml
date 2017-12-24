@@ -92,7 +92,7 @@ cc_failed_factional_revolt:0 "Fehlgeschlagene Fraktionsrevolte"
 cc_failed_factional_revolt_desc:0 "Die Bevölkerung wendet sich von der rebellierenden Fraktion, die dieser Welt nichts als Aufruhr und Unruhen gebracht hat, ab."
 
 cc_breakaway_sympathy:0 "Zustimmung für den abtrünnigen Staat"
-cc_breakaway_sympathy_desc:0 "Die abtrünngige Fraktion auf dieser Welt genießt nennenswerte Unterstützung durch einen Großteil der ansässigen Bevölkerung. Dies könnte zu Unannehmlichkeiten führen." 
+cc_breakaway_sympathy_desc:0 "Die abtrünnige Fraktion auf dieser Welt genießt nennenswerte Unterstützung durch einen Großteil der ansässigen Bevölkerung. Dies könnte zu Unannehmlichkeiten führen." 
 
 cc_empire_terror:0 "Schreckensstaat"
 cc_empire_terror_desc:0 "Der Staat hat seine eigene Bevölkerung massakriert."
@@ -120,27 +120,27 @@ cc_bribed_planet_desc:0 "Der Staat hat dieser Welt beträchtliche finanzielle Zu
 ccfaction.1.name:0 "Fraktionsgetriebene Volksverhetzung"
  ccfaction.1.desc:0 "In der Bevölkerung hat sich Missvergnügen über die Regierung der [root.GetName] verbreitet. Heimlich wird eine mehr [cc_rebellious_faction.GetFactionTypeAdj]e Ausblick befürwortet. Wir halten es für wahrscheinlich, dass eine Gruppe von hardcore-Aktivisten, die mit der [cc_rebellious_faction.GetName] affiliiert sind, die Quelle dieser Unruhen sind, und das Ziel haben, sich von der [root.GetName] abzuspalten. Die [cc_rebellious_faction.GetName] bestreitet diese Vorwurfe."
 
-ccfaction.2.name:0 "Die [cc_rebellious_faction.GetName] konsolidiert ihre Macht"
+ ccfaction.2.name:0 "Die [cc_rebellious_faction.GetName] konsolidiert ihre Macht"
  ccfaction.2.desc:0 "Die aufrührerische Reden, die eine [cc_rebellious_faction.GetFactionTypeAdj]e Regierung fordern, haben sich verbreitet und in Teile der [root.GetName] Wurzeln geschlagen. Die [cc_rebellious_faction.GetName] hat uns ein Manifest gegeben, worin sie ihre Forderungen aufgelistet haben. Sie behaupten, einen populären Mandat zu haben, diese Planeten zu repräsentieren, und haben verschleierte Drohungen der Separatismus gemacht, falls ihre Forderungen nicht erfüllt werden. Wir müssen dringend handeln, um den Staat wieder standsicher zusammenzubringen!"
 
 
- ccfaction.21.name:0 "End der Fraktionsgetriebenen Volksverhetzungen"
+ ccfaction.21.name:0 "Ende der fraktionsgetriebenen Volksverhetzungen"
  ccfaction.21.desc.fail:0 "Die heimliche Volksverhetzungen der [cc_rebellious_faction.GetName] sind zu nichts gekommen und haben sich friedlich in die Luft aufgelöst."
  ccfaction.21.desc.succeed:0 "Die Aktionen der [cc_rebellious_faction.GetName] haben die Leitung der [root.GetName] überzeugt, die Regierung neuzugestalten, um besser die [cc_rebellious_faction.GetFactionTypeAdj]en Forderungen der [cc_rebellious_faction.GetName] zu gleichen. Ihre Vorsitzende sind mit diesen Änderungen zufrieden, und haben ihre heimlichen Volksverhetzungen beendet."
 
-ccfaction.3.name:0 "The [cc_new_reb_faction.GetName] has allied with the [cc_rebellious_faction.GetName]" 
-ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has in the recent past been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_rebellious_faction.GetFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
-
+ ccfaction.3.name:0 "Die [cc_new_reb_faction.GetName] hat sich mit der [cc_rebellious_faction.GetName] verbunden" 
+ ccfaction.3.desc:0 "Die [cc_new_reb_faction.GetName], die bis jetzt nur ein kleines, regimekritisches Element in der [root.GetName] repräsentierte, hat sich mit der [cc_rebellious_faction.GetName], die aktiv für große Änderungen hetzt, ein Bündnis geschlossen. Sie haben ausreichende Gemeinsamkeit gefunden, um ihre Stimmen zusammenzubinden. Hiermit hoffen sie, den Rückhalt zu sichern, um ihre Vision eines [cc_rebellious_faction.GetFactionTypeAdj]en-[cc_new_reb_faction.GetFactionTypeAdj]en Staat zu verwirklichen - ob innerhalb der [root.GetName] oder als eigener Staat."
 
 ccfaction.4.name:0 "The [cc_rebellious_faction.GetName] is attempting to secede"
-ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_rebellious_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
+ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
 ccfaction.4.single.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They plan to realise their dream of reshaping society towards a more [cc_rebellious_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
 
-ccfaction.41.name:0 "Factional Agitations Over"
-ccfaction.41.dual.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
-ccfaction.41.single.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
-ccfaction.41.dual.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj] and [cc_rebellious_faction.GetFactionTypeAdj]-minded citizens in future."
-ccfaction.41.single.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj]-minded citizens in future."
+ ccfaction.41.name:0 "Ende der fraktionsgetriebenen Volksverhetzungen"
+ ccfaction.41.dual.fail.desc:0 "Die Versuche der [cc_rebellious_faction.GetName] und der [cc_new_reb_faction.GetName], die Regierung zu politischem Wechsel zu zwingen, sind zu nichts gekommen und haben sich friedlich in die Luft aufgelöst."
+ ccfaction.41.single.fail.desc:0 "Die Versuche der [cc_rebellious_faction.GetName], die Regierung zu politischem Wechsel zu zwingen, sind zu nichts gekommen und haben sich friedlich in die Luft aufgelöst."
+ ccfaction.41.dual.succeed.desc:0 "Die Versuche der [cc_rebellious_faction.GetName] und der [cc_new_reb_faction.GetName], die Regierung zu politischem Wechsel zu zwingen, sind ohne Anlass zur Gewalt erfolgt: Die Regierung hat versprochen, den Staat neuzugestalten und in Zukunft in einer Weise, die den [cc_rebellious_faction.GetFactionTypeAdj]en und den [cc_new_reb_faction.GetFactionTypeAdj]en Staatsbürgern angenehmer ist, zu regieren.
+ ccfaction.41.single.succeed.desc:0 "Die Versuche der [cc_rebellious_faction.GetName], die Regierung zu politischem Wechsel zu zwingen, sind ohne Anlass zur Gewalt erfolgt: Die Regierung hat versprochen, den Staat neuzugestalten und in Zukunft in einer Weise, die den [cc_rebellious_faction.GetFactionTypeAdj]en Staatsbürgern angenehmer ist, zu regieren."
+
 
 ccfaction.42.name:0 "Revolt by the [cc_rebellious_faction.GetName] fails"
 ccfaction.42.dual.fail.desc:0 "The attempts by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force through their demands by gaining independence from the [root.GetName] have failed. They simply didn't have the support necessary for the revolt to succeed, so the [root.GetName] has weathered the storm and remained united."
@@ -153,50 +153,48 @@ ccfaction.42.single.succeed.desc:0 "The threat of a declaration of independence 
 ccfaction.6.name:0 "The [cc_rebellious_faction.GetName] Revolts!"
 ccfaction.6.desc.succeed.single:0 "In a bloodless coup, politicians affiliated with the [cc_rebellious_faction.GetName] have seized power on [cc_rebel_faction_capital.GetName] and declared independence, citing the consistent and longstanding failure of the [root.GetName] to listen to the demands of their constituents. They now call themselves the [event_target:cc_breakaway_country.GetName]. The leadership of the [cc_rebellious_faction.GetName] has thrown itself behind the breakaway country, and has appealed for its followers to act now and join them in their struggle for independence. A period of turmoil lies ahead."
 ccfaction.6.desc.succeed.dual:0 "In a bloodless coup, politicians affiliated with the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] have seized power on [cc_rebel_faction_capital.GetName] and declared independence, citing the consistent and longstanding failure of the [root.GetName] to listen to the demands of their constituents. They now call themselves the [event_target:cc_breakaway_country.GetName]. The leadership of the rebellious factions have thrown themselves behind the breakaway country, and have appealed for their followers to act now and join them in their struggle for independence. A period of turmoil lies ahead."
-#ccfaction.6.desc.succeed.leader.single:0 ""
-#ccfaction.6.desc.succeed.leader.dual:0 ""
+
 ccfaction.6.desc.attempt.single:0 "Elements of the [cc_rebellious_faction.GetName] have launched an armed revolt against authorities on [cc_rebel_faction_capital.GetName]. They now style themselves as the [event_target:cc_breakaway_country.GetName], and are fighting for control of the planet. Most of the leadership of the [cc_rebellious_faction.GetName] has held back from wholeheartedly supporting the revolutionaries, but our intelligence services expect them to throw themselves behind them should the rebellion succeed."
 ccfaction.6.desc.attempt.dual:0 "Elements of the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] have launched an armed revolt against authorities on [cc_rebel_faction_capital.GetName]. They now style themselves as the [event_target:cc_breakaway_country.GetName], and are fighting for control of the planet. Most of the leadership of the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] have held back from wholeheartedly supporting the revolutionaries, but our intelligence services expect them to throw themselves behind them should the rebellion succeed."
 
- ccfaction.601.name:0 "Defections!"
+ ccfaction.601.name:0 "Treuebruch!"
  ccfaction.601.desc.both:0 "[cc_rebellious_faction_leader.GetTitle] [cc_rebellious_faction_leader.GetName] und [cc_new_reb_faction_leader.GetTitle] [cc_new_reb_faction_leader.GetName] sind zu der [cc_breakaway_country.GetName] überlaufen."
  ccfaction.601.desc.only1:0 "[cc_rebellious_faction_leader.GetTitle] [cc_rebellious_faction_leader.GetName] ist zu der [cc_breakaway_country.GetName] überlaufen und leitet jetzt die Rebellion gegen uns."
  ccfaction.601.desc.only2:0 "[cc_new_reb_faction_leader.GetTitle] [cc_new_reb_faction_leader.GetName] ist zu der [cc_breakaway_country.GetName] überlaufen."
 
-ccfaction.61.name:0 "[root.GetName] defects to the [cc_breakaway_country.GetName]"
-ccfaction.61.desc:0 "The administration of [root.GetName] has bowed to the demands of its populace after massive week-long demonstrations showed the scale of their support for the [cc_breakaway_country.GetName]. They have announced that they will be joining the secessionists."
-
-ccfaction.62.name:0 "Sympathisers of the [cc_breakaway_country.GetName] attempt to seize power on [root.GetName]"
-ccfaction.62.desc:0 "Supporters of the [cc_breakaway_country.GetName] have heeded the call to arms of their leaders, and have launched an armed revolt with the aim of joining the breakaway country."
+ ccfaction.61.name:0 "[root.GetName] ist zu der [cc_breakaway_country.GetName] überlaufen!"
+ ccfaction.61.desc:0 "Nach massiven, wochenlangen Demonstrationen, die das Ausmaß der öffentlichen Meinung zugunsten [cc_breakaway_country.GetName] klar gemacht haben, hat sich die planetare Regierung [root.GetName]s hat sich den Forderungen ihrer Bevölkerung gebeugt. Sie haben bekanntgemacht, dass sie sich den Sezessionisten anschließen werden."
+ ccfaction.62.name:0 "Sympathisers of the [cc_breakaway_country.GetName] attempt to seize power on [root.GetName]"
+ ccfaction.62.desc:0 "Anhänger der [cc_breakaway_country.GetName] haben den Ruf zur Auflehnung ihrer Anführer gehorcht und sind jetzt in bewaffneter Rebellion gegen uns. Ihr Ziel ist sich den Sezessionisten anzuschließen."
 
 
 #first wave revolt breaks free
-ccfaction.64.name:0 "[fromfrom.GetName] lost to the [cc_breakaway_country.GetName]"
-ccfaction.64.desc:0 "Our authorities have lost control of [fromfrom.GetName], which has fallen under the control of the [cc_rebellious_faction.GetName]. The new owners of the planet are now calling themselves the [cc_breakaway_country.GetName], and have appealed for all supporters of the [cc_rebellious_faction.GetName] to join them in their fight for independence from the [root.GetName]."
+ ccfaction.64.name:0 "[fromfrom.GetName] ist abgespalten!"
+ ccfaction.64.desc:0 "Unsere Behörden haben die Kontrolle über [fromfrom.GetName] verloren. Der Planet ist jetzt von der [cc_rebellious_faction.GetName] - was sich den Namen "[cc_breakaway_country.GetName]" genommen hat - regiert. Sie haben alle Anhänger der [cc_rebellious_faction.GetName] aufgerufen, ihnen im Unabhängigkeitskrieg gegen der [root.GetName] zu unterstützen."
 
 
 #second wave revolt breaks free
-ccfaction.67.name:0 "Rebels on [from.GetName] have joined the [cc_breakaway_country.GetName]"
-ccfaction.67.desc:0 "Our authorities have lost control of [fromfrom.GetName]. The new owners of the planet have ceded themselves to the [cc_breakaway_country.GetName] and have joined them in their revolt against us."
+ ccfaction.67.name:0 "Rebellen auf [fromfrom.GetName] haben sich die [cc_breakaway_country.GetName] angeschlossen!"
+ ccfaction.67.desc:0 "Unsere Behörden haben die Kontrolle über [fromfrom.GetName] verloren. Die neuen Besitzer des Planeten haben sich der [cc_breakaway_country.GetName] angeschlossen und sich somit an ihren Aufstand gegen uns beigetreten."
 
 #It fails
-ccfaction.68.name:0 "Factional Revolutionaries fail to seize [fromfrom.GetName]"
-ccfaction.68.desc.first:0 "Our authorities have defeated revolutionaries affiliated with the [cc_rebellious_faction.GetName] on [fromfrom.GetName] that sought to secede and join the [cc_breakaway_country.GetName]. Order has been re-established."
-ccfaction.68.desc.second:0 "Our authorities have defeated revolutionaries affiliated with the [cc_rebellious_faction.GetName] on [fromfrom.GetName] that sought to secede and found their own breakaway state. Order has been re-established."
+ ccfaction.68.name:0 "Fraktionsgetriebene Revolutionäre haben am Ergreifen [fromfrom.GetName]s gescheitert"
+ ccfaction.68.desc.first:0 "Unsere Behörden auf [fromfrom.GetName] haben gegen revolutionäre Anhänger der [cc_rebellious_faction.GetName] gesiegt. Sie hatten vor sich der [cc_breakaway_country.GetName] anzuschließen. Ordnung ist wieder wiederhergestellt worden."
+ ccfaction.68.desc.second:0 "Unsere Behörden auf [fromfrom.GetName] haben gegen revolutionäre Anhänger der [cc_rebellious_faction.GetName] gesiegt. Sie hatten vor, sich von uns abzutrennen und ihr eigener Staat zu gründen. Ordnung ist wieder wiederhergestellt worden."
 
 
 #What to do with the sympathies planets?
-ccfaction.7.name:0 "Sympathisers with the [cc_breakaway_country.GetName]"
-ccfaction.7.desc:0 "There is considerable minority support for the [cc_breakaway_country.GetName] on [random_sympathies_planet.GetName] and other planets. The supporters of the breakaway planet are mobilising and will surely cause trouble if allowed to. How should we deal with them?"
-ccfaction.7.A.tooltip:0 "All supporters of the breakaway faction on these planets will be killed. Other countries may be upset."
-ccfaction.7.B.tooltip:0 "All supporters of the breakaway faction on these planets will gain the modifier §R$cc_oppression$§!: -50% output of all resources."
-ccfaction.7.C:0 "Give them a generous subsidy."
-ccfaction.7.C.tooltip:0 "This will hopefully remind them of the benefits of being part of the [root.GetName]."
-ccfaction.7.D:0 "Do nothing."
+ ccfaction.7.name:0 "Sympathisanten der [cc_breakaway_country.GetName]"
+ ccfaction.7.desc:0 "Eine erhebliche Minderheit auf [random_sympathies_planet.GetName] und anderen Planeten unterstützt insgeheim die [cc_breakaway_country.GetName]. Die Anhänger der sezessionisten Fraktion mobilisieren und werden uns gewiss Unruhe stiften, sollten wir sie die Gelegenheit dazu geben. Wie sollen wir mit ihnen abhandeln?"
+ ccfaction.7.A.tooltip:0 "Alle Anhänger der abtrünnigen Faktion auf diesen Planeten werden getötet. Andere Staaten könnten Anstoß nehmen."
+ ccfaction.7.B.tooltip:0 "Alle Anhänger der abtrünnigen Faktion auf diesen Planeten bekommen den Modifikator §R$cc_oppression$§!: -50% Produktion aller Ressourcen."
+ ccfaction.7.C:0 "Gib ihnen eine großzügige Subvention."
+ ccfaction.7.C.tooltip:0 "Hoffentlich erinnert dies sie an den Vorteilen, Teil der [root.GetName] zu sein."
+ ccfaction.7.D:0 "Tue nichts."
 
-ccfaction.900.name:0 "Unrest caused by the [cc_rebellious_faction.GetName] is over"
-ccfaction.900.exists.desc:0 "The [root.GetName] has seen a period of tumult caused by the agitations of the [cc_rebellious_faction.GetName], which led to the secession of the [cc_breakaway_country.GetName]. However, with this secession, most of the troublesome elements have now left the [root.GetName]. Whilst the situation is far from ideal, we have at least been able to restore internal order."
-ccfaction.900.doesnotexist.desc:0 "The [root.GetName] has seen a period of tumult caused by the agitations of the [cc_rebellious_faction.GetName], which led to attempts at secession. These have been nipped in the bud - their independence was short-lived - which has allowed us to restore internal order in the [root.GetName]."
+ ccfaction.900.name:0 "Die Volksverhetzung der [cc_rebellious_faction.GetName] ist vorbei"
+ ccfaction.900.exists.desc:0 "Die [root.GetName] ist durch die von der Volksverhetzung der [cc_rebellious_faction.GetName] versachten Tumult geschwächt worden: Die [cc_rebellious_faction.GetName] ist abgespalten. Mit dieser Abspaltung haben jedoch die Mehrheit der aufrührerischen Elemente die [root.GetName] verlassen. Obwohl die Situation längst nicht ideal ist, haben wir zumindest innerhalb der [root.GetName] etwas Ordnung wiederhergestellt."
+ ccfaction.900.doesnotexist.desc:0 "Die [root.GetName] hat eine Zeit des Tumults, die von der Volksverhetzungen der [cc_rebellious_faction.GetName] verursacht wurden, überstanden. Zwar ist es zu Rebellionsversuche gekommen, diese wurden aber im Keim erstickt. Ordnung innerhalb der [root.GetName] ist somit wiederhergestellt."
 
  CCWORRYING:0 "Beunruhigend."
  CCGOOD:0 "Gut zu wissen."
@@ -204,8 +202,8 @@ ccfaction.900.doesnotexist.desc:0 "The [root.GetName] has seen a period of tumul
 
 
  ccfaction.9993.name:0 "Hochburg auf [root.GetName] bezwingt"
- ccfaction.9993.desc:0 "Wir haben [root.GetName] wieder unter unserem Einfluss gebracht. Es zählt nun nicht mehr zu den Hochburgen der [cc_rebellious_faction.GetName]. Unser Kontrolle über den Planeten ist hierdurch sicherer geworden."
- ccfaction.99931.desc:0 "Wir haben [root.GetName] wieder unter unserem Einfluss gebracht. Es zählt nun nicht mehr zu den Hochburgen der [cc_new_reb_faction.GetName]. Unser Kontrolle über den Planeten ist hierdurch sicherer geworden."
+ ccfaction.9993.desc:0 "Wir haben [root.GetName] wieder unter unserem Einfluss gebracht. Es zählt nun nicht mehr zu den Hochburgen der [cc_rebellious_faction.GetName]. Unsere Kontrolle über den Planeten ist hierdurch sicherer geworden."
+ ccfaction.99931.desc:0 "Wir haben [root.GetName] wieder unter unserem Einfluss gebracht. Es zählt nun nicht mehr zu den Hochburgen der [cc_new_reb_faction.GetName]. Unsere Kontrolle über den Planeten ist hierdurch sicherer geworden."
  ccfaction.9994.name:0 "[root.GetName] wird zu eine Hochburg der [cc_rebellious_faction.GetName]"
  ccfaction.9994.desc:0 "Die [cc_rebellious_faction.GetName] hat ausreichend Einfluss auf [root.GetName] aufgebaut, dass der Planet jetzt zu einer ihrer Hochburgen gezählt werden kann. Wir müssen dringend Maßnahmen ergreifen, sonst riskieren wir, Kontrolle über den Planeten verlieren."
  ccfaction.99941.desc:0 "Die [cc_new_reb_faction.GetName] hat ausreichend Einfluss auf [root.GetName] aufgebaut, dass der Planet jetzt zu einer ihrer Hochburgen gezählt werden kann. Wir müssen dringend Maßnahmen ergreifen, sonst riskieren wir, Kontrolle über den Planeten verlieren."
