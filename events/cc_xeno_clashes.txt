@@ -15,7 +15,6 @@ planet_event = {
 			has_planet_flag = pop_modification
 			owner = {
 				OR = {
-					has_country_flag = cc_xeno_empire_clashes
 					has_country_flag = cc_recent_xeno_empire_clashes
 					has_ethic = ethic_gestalt_consciousness
 				}
@@ -28,11 +27,11 @@ planet_event = {
 		
 		modifier = {
 			factor = 2
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
 			unrest < 1
 		}
 		modifier = {
 			factor = 2
+			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
 			unrest < 1
 		}
 		modifier = {
@@ -52,19 +51,18 @@ planet_event = {
 			has_planet_flag = ccrebel_perf_xenophobes_3
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.33
 			has_planet_flag = ccrebel_perf_xenophiles_1
 		}
 		modifier = {
-			factor = 1.25
-			has_planet_flag = ccrebel_perf_xenophiles_2
+			factor = 2
+			OR = {
+				has_planet_flag = ccrebel_perf_xenophiles_2
+				has_planet_flag = ccrebel_perf_xenophiles_3
+			}
 		}
 		modifier = {
-			factor = 1.25
-			has_planet_flag = ccrebel_perf_xenophiles_3
-		}
-		modifier = {
-			factor = 1.2
+			factor = 1.5
 			owner = { NOT = { has_faction = supremacist } }
 		}
 		modifier = {
@@ -186,6 +184,10 @@ planet_event = {
 			planet_event = { id = cc_xeno_clashes.3 days = 480 }
 			
 			else = { planet_event = { id = cc_xeno_clashes.4 days = 480 } }
+		}
+		set_timed_planet_flag = {
+			flag = cc_xeno_clashes
+			years = 30
 		}
 	}
 	
@@ -310,6 +312,13 @@ planet_event = {
 		owner = { is_same_value = event_target:cc_owner }
 		any_owned_pop = { species = { is_same_value = event_target:species1 } }
 		any_owned_pop = { species = { is_same_value = event_target:species2 } }
+	}
+	
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_xeno_clashes
+			years = 30
+		}
 	}
 	
 	option = {
@@ -614,6 +623,12 @@ country_event = {
 			add_modifier = {
 				modifier = cc_empire_interspecies_tensions
 				days = 3600
+			}
+			hidden_effect = {
+				set_timed_country_flag = {
+					flag = cc_recent_xeno_empire_clashes
+					years = 50
+				}
 			}
 		}
 
@@ -1291,6 +1306,12 @@ country_event = {
 				modifier = cc_empire_interspecies_tensions
 				days = 3600
 			}
+			hidden_effect = {
+				set_timed_country_flag = {
+					flag = cc_recent_xeno_empire_clashes
+					years = 50
+				}
+			}
 		}
 
 		every_owned_planet = {
@@ -1759,6 +1780,12 @@ country_event = {
 			modifier = cc_empire_interspecies_tensions
 			days = 3600
 		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = cc_recent_xeno_empire_clashes
+				years = 50
+			}
+		}
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
@@ -1805,6 +1832,12 @@ country_event = {
 		add_modifier = {
 			modifier = cc_empire_interspecies_tensions
 			days = 3600
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = cc_recent_xeno_empire_clashes
+				years = 50
+			}
 		}
 		
 		every_owned_planet = {
@@ -1914,6 +1947,13 @@ planet_event = {
 		owner = { is_same_value = event_target:cc_owner }
 		any_owned_pop = { species = { is_same_value = event_target:species1 } }
 		any_owned_pop = { species = { is_same_value = event_target:species2 } }
+	}
+	
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_xeno_clashes
+			years = 30
+		}
 	}
 	
 	option = {
@@ -2319,6 +2359,12 @@ country_event = {
 			add_modifier = {
 				modifier = cc_empire_interspecies_tensions
 				days = 3600
+			}
+			hidden_effect = {
+				set_timed_country_flag = {
+					flag = cc_recent_xeno_empire_clashes
+					years = 50
+				}
 			}
 		}
 
