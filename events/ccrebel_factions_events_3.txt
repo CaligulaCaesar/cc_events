@@ -5561,14 +5561,6 @@ event = {
 		every_country = {
 			limit = {
 				has_a_factional_revolt_active = no
-				any_owned_planet = {
-					OR = {
-						has_seditious_talk = yes
-						is_faction_stronghold = yes
-						has_faction_sympathies = yes
-						has_faction_sedition = yes
-					}
-				}
 			}
 			every_owned_planet = {
 				remove_all_faction_strongholds = yes

@@ -10,15 +10,15 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = {  
-		OR = {
-			has_political_colony_modifier = yes
-			has_seditious_talk = yes
-			is_faction_stronghold = yes
-			has_faction_sympathies = yes
-			has_faction_sedition = yes
-		}
-	}
+#	trigger = {  
+#		OR = {
+#			has_political_colony_modifier = yes
+#			has_seditious_talk = yes
+#			is_faction_stronghold = yes
+#			has_faction_sympathies = yes
+#			has_faction_sedition = yes
+#		}
+#	}
 	
 	immediate = {
 		#remove the ones not relevant to the new empire
@@ -2356,17 +2356,17 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	trigger = {
-		from = { 
-			OR = {
-				has_political_colony_modifier = yes
-				has_seditious_talk = yes
-				is_faction_stronghold = yes
-				has_faction_sympathies = yes
-				has_faction_sedition = yes
-			}
-		}
-	}
+#	trigger = {
+#		from = { 
+#			OR = {
+#				has_political_colony_modifier = yes
+#				has_seditious_talk = yes
+#				is_faction_stronghold = yes
+#				has_faction_sympathies = yes
+#				has_faction_sedition = yes
+#			}
+#		}
+#	}
 	
 	immediate = {
 		from = {
@@ -2415,13 +2415,13 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			has_political_colony_modifier = yes
-			has_seditious_talk = yes
-			is_faction_stronghold = yes
-			has_faction_sympathies = yes
-			has_faction_sedition = yes
-		}
+#		OR = {
+#			has_political_colony_modifier = yes
+#			has_seditious_talk = yes
+#			is_faction_stronghold = yes
+#			has_faction_sympathies = yes
+#			has_faction_sedition = yes
+#		}
 		
 		FROM = {
 			OR = {
@@ -2451,13 +2451,13 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			has_political_colony_modifier = yes
-			has_seditious_talk = yes
-			is_faction_stronghold = yes
-			has_faction_sympathies = yes
-			has_faction_sedition = yes
-		}
+#		OR = { #apparently, checking too many modifiers breaks it
+#			has_political_colony_modifier = yes
+#			has_seditious_talk = yes
+#			is_faction_stronghold = yes
+#			has_faction_sympathies = yes
+#			has_faction_sedition = yes
+#		}
 		
 		OR = {
 			AND = {
