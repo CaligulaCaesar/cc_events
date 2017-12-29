@@ -12,7 +12,7 @@ planet_event = {
 			is_country_type = default
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
-		has_political_colony_modifier = no
+		NOT = { has_planet_flag = cc_colony_story }
 		any_owned_pop = {
 			has_a_happiness_gauge = yes
 			is_enslaved = no
@@ -22,6 +22,8 @@ planet_event = {
 	}
 	
 	immediate = {
+		set_planet_flag = cc_colony_story
+
 		random_list = {
 			10 = {
 				modifier = {

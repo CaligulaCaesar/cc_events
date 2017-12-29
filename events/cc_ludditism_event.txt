@@ -1596,7 +1596,7 @@ country_event = {
 			hidden_effect = {
 				while = {
 					count = 5
-					country_event = { id = syndaw.401 }
+					country_event = { id = syndaw.401 days = 90 random = 90 }
 				}
 			}
 			set_policy = {

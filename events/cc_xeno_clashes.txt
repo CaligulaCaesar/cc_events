@@ -335,13 +335,26 @@ planet_event = {
 		}
 		
 		ai_chance = {
-			factor = 5
+			factor = 1
+			modifier = {
+				factor = 5
+				owner = { has_ethic = ethic_xenophobe }
+			}
+			modifier = {
+				factor = 5
+				owner = { has_ethic = ethic_xenophobe }
+			}
 			modifier = {
 				factor = 0
-				owner = {
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+				owner = { 
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						
+						any_owned_pop = {
+							NOT = { is_same_species = prev }
+							has_citizenship_rights = no
+						}
 					}
 				}
 			}
@@ -2152,13 +2165,26 @@ planet_event = {
 		}
 		
 		ai_chance = {
-			factor = 5
+			factor = 1
+			modifier = {
+				factor = 5
+				owner = { has_ethic = ethic_xenophobe }
+			}
+			modifier = {
+				factor = 5
+				owner = { has_ethic = ethic_xenophobe }
+			}
 			modifier = {
 				factor = 0
-				owner = {
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+				owner = { 
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						
+						any_owned_pop = {
+							NOT = { is_same_species = prev }
+							has_citizenship_rights = no
+						}
 					}
 				}
 			}
