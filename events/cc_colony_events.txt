@@ -2050,7 +2050,7 @@ planet_event = {
 		
 		hidden_effect = {
 			random = {
-				chance = 33
+				chance = 50
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
@@ -2081,7 +2081,7 @@ planet_event = {
 		
 		hidden_effect = {
 			random = {
-				chance = 33
+				chance = 50
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
@@ -2286,7 +2286,7 @@ planet_event = {
 		
 		hidden_effect = {
 			random = {
-				chance = 33
+				chance = 50
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
@@ -3365,16 +3365,6 @@ planet_event = {
 			modifier = cc_minor_xenophobe_institute
 			days = -1
 		}
-		every_owned_pop = {
-			limit = {
-				is_same_species = event_target:cc_colony_leader
-				has_ethic = ethic_xenophobe
-			}
-			add_modifier = {
-				modifier = cc_hostile_towards_xenos
-				days = -1
-			}
-		}
 		hidden_effect = { remove_modifier = cc_founder_xenophobe }
 	}
 	
@@ -3387,16 +3377,6 @@ planet_event = {
 			modifier = cc_xenophobe_institute
 			days = -1
 		}
-		every_owned_pop = {
-			limit = {
-				is_same_species = event_target:cc_colony_leader
-				has_ethic = ethic_xenophobe
-			}
-			add_modifier = {
-				modifier = cc_hostile_towards_xenos
-				days = -1
-			}
-		}
 		hidden_effect = { remove_modifier = cc_founder_xenophobe }
 	}
 }
@@ -3408,22 +3388,11 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			has_pop_flag = cc_xenophobe_species
-			has_modifier = cc_hostile_towards_xenos
-		}
+		has_pop_flag = cc_xenophobe_species
 		owner = { NOT = { is_same_species = root } }
 	}
 	
 	immediate = {
-		if = {
-			limit = { has_modifier = cc_hostile_towards_xenos }
-			remove_modifier = cc_hostile_towards_xenos
-			add_modifier = {
-				modifier = cc_hostile_towards_xenos
-				years = 15
-			}
-		}
 		if = {
 			limit = { has_pop_flag = cc_xenophobe_species }
 			remove_pop_flag = cc_xenophobe_species
