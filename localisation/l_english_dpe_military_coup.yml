@@ -1,0 +1,25 @@
+﻿l_english:
+
+dpe_military_coup.1.name:0 "The Navy petitions Government"
+dpe_military_coup.1.desc:0 "To [root.GetRulerTitle] [root.GetRulerName],\n\nNow is perhaps the moment to recognise the vital contribution the fleet plays in ensuring the safety and stability of the [root.GetName], and its standing in galactic politics. We are a powerful force that works tirelessly to counter threats to the state and its citizens. Our highly-trained crews are among the most skilful in the galaxy, and our state of the art warships are second to none.\n\nIt is therefore with deep regret that I view the plight of the navy in internal [root.GetSpeciesAdj] politics. It is very clear even to our under-officers - let alone our generals - that the navy is marginalised to the point of being taken for granted. Not only are our marines and officers criminally underpaid, but there is also excessive civilian interference in our activities: Civilian bodies determine our assignments, as well as our recruitment and promotion policies, and can even condemn successful commanders for supposed indiscretions during duty. On matters where the fleet's vital interests are under affected, the fleet simply doesn't have a voice.\n\nThis obstructs the navy from being able to fulfil its proper role in protecting the [root.GetName] from threats. It is not a situation that is in your interests as the [root.GetRulerTitle] to maintain. If there is no change in the state of affairs, we cannot guarantee the survival of the state or your government.\n\nKind Regards,\n[militarist.GetName],\nLeader of the [militarist_faction.GetName!] and chosen spokesperson of the [root.GetSpeciesAdj] Navy"
+dpe_military_coup.1.A:0 "It is time to adopt a more militaristic outlook."
+dpe_military_coup.1.B:0 "Perhaps the fleet should be paid more."
+dpe_extra_naval_expenses:0 "Extra Naval Expenses"
+dpe_extra_naval_expenses_desc:0 "The government is being forced to pay the fleet extra funds to ensure it remains loyal."
+dpe_military_coup.1.C:0 "The fleet and the government must remain separate."
+dpe_military_coup.1.C.tooltip:0 "Warning: Steps should be taken to reign in the fleet if this course of action is adopted."
+dpe_military_petition_rejected:0 "Petition Rejected"
+
+dpe_military_coup.2.name:0 "Naval Officers Disobedient"
+dpe_military_coup.2.desc:0 "It appears that several top naval officers are ignoring your orders. You cannot get through to them by any means of communication. Your advisors worry what this might portend. You have contacted other, lower-ranking officers, but they claim not to know of anything untoward."
+#CCWORRYING
+
+#(2 days later)
+dpe_military_coup.3.name:0 "Military Coup!"
+dpe_military_coup.3.desc:0 ""This is the [militarist.GetName]. I speak on behalf of the [root.GetSpeciesAdj] Navy. Our admirals have decided with unanimity that the [root.GetSpeciesAdj] government must be placed under our protection for the good of the state. Our cannons are locked onto you. If you do not surrender immediately, we will blow [root.GetGovtBuilding] to shreds. You have an hour to give your response.""
+dpe_military_coup.3.option:0 "We have no choice."
+
+#GetGovtBuilding:
+ccloc_democracy_building:0 "Parliament"
+ccloc_oligarchy_building:0 "the Council Buildings"
+ccloc_others_building:0 "your Palace"
