@@ -139,3 +139,12 @@ on_pop_migration_end = {
 		cc_colony_events.552
 	}
 }
+
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		dpe_scandal.99
+	}
+}

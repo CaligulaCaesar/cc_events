@@ -420,3 +420,14 @@ cc_ruled_against_us_pops = {
 cc_ruled_in_our_favour_pops = {
 	pop_happiness = 0.1
 }
+
+
+
+dpe_charity_unpopular_ruler = {
+	pop_citizen_happiness = -0.05
+	tile_resource_unity_mult = -0.25
+}
+
+dpe_charity_faction_undeserving = {
+	faction_happiness = -0.15
+}
