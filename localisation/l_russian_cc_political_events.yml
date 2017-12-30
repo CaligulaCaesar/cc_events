@@ -122,7 +122,6 @@ cc_emancipation.20.desc.neighbour:0 "Продолжительный контак
 cc_emancipation.20.tooltip.A:0 "Одной трети граждан £pops не-рабов будет предоставлен модификатор §R$cc_worried_about_slaves$§! дающий им на 15 лет §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
 cc_emancipation.20.tooltip.B:0 "Одной четверти граждан £pops не-рабов будет предоставлен модификатор §R$cc_worried_about_slaves$§! дающим им на 15 лет §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
 
-cc_worried_about_slaves:0 "Worried about Slavery"
 
 #Ludditism
 cc_luddite.1.name:0 "Луддиты разбивают Роботов на [root.GetName]"
@@ -165,8 +164,6 @@ cc_luddite.20.desc.uprising:0 "После "Восстания Машин" в [ma
 cc_luddite.20.desc.exterminators:0 "После встречи с [machine_exterminators.GetName] многие граждане в [root.GetName] выразили беспокойство по поводу неразумных машинных рабочих.  Хотя наши власти оперативно отреагировали с демонстрацией того, что "Роботы Смерти" особый случай, никоим образом не приминимый к машинам в [root.GetName], многие граждане всё же считают зависимость от роботизированных рабочих эксзистенциальным риском для всей органической жизни.Часть населения, которая никогда не была довольна идеей роботизирования рабочих, захватили инициативу и заявили, что эти банки принижают значение органических граждан и угрожают сделать их лишними. С подобными взглядами всё чаще и чаще стало соглашаться большинство."
 cc_luddite.20.tooltip:0 "Одной трети граждан £pops не-роботов будет предоставлен модификатор §R$cc_worried_about_machines$§! дающий им на 15 лет §R+100%§! $pop_ethic_spiritualist_attraction_mult$."
 
-cc_worried_about_machines:0 "Worried about Machines"
-
 #Peace Protests
 cc_peace.1.name:0 "Антивоенное Движение"
 cc_peace.1.desc:0 "Существует недовольство среди населения тем, что они считают нашу агрессивную войну против [cc_war_enemy.GetName] хищнической. Антивоенные марши распространились по [cc_peace_planet.GetName] и другим планетам. Этими массовыми ненасильственными актами сопротивления, которые всё чаще оборачиваются серьёзными неприятностями, руководит [peace_faction.GetName]. Появился слух, что они собираются идти маршем против правительства и занять территорию вокруг его здания на [cc_peace_planet.GetName] до тех пор, пока не настанет мира. Это вызовет серьёзный раскол.\n\nКак нам ответить?"
@@ -182,6 +179,11 @@ cc_peace.4.desc:0 "Правительство сдерживает своё об
 cc_peace.4.tooltip:0 "Антивоенное Движение ожидает, что мир продлиться минимум 5 лет."
 cc_peace.5.name:0 "Антивоенное Движение Предали"
 cc_peace.5.desc:0 "Антивоенное движение надеялось, что успех в принуждении правительства к установлению мира должен был привести к определённым успехам в управлении [root.GetName] и отношениях с другими государствами. Однако при новом объявление войны меньше через через пять лет после предыдущей, движение почувствовало себя преданными, и организовало протесты с новой силой."
+
+cc_events_mod.18.B.tooltip:0 "[cc_scandal_leader.GetTitle] [cc_scandal_leader.GetName] is removed from the game."
+cc_events_blackmail.201.A.tooltip:0 "[cc_first_corrupt.GetTitle] [cc_first_corrupt.GetName] is removed from the game.\n[cc_second_corrupt.GetTitle] [cc_second_corrupt.GetName] is removed from the game.\n[cc_third_corrupt.GetTitle] [cc_third_corrupt.GetName] is removed from the game."
+cc_events_blackmail.201.A.tooltip2:0 "[cc_fourth_corrupt.GetTitle] [cc_fourth_corrupt.GetName] is removed from the game."
+cc_events_mod.17.B.tooltip:0 "$CCREMOVERULER.tooltip$"
 
 #Modifiers ----------------------------------------------------------------------------------------------------------
 

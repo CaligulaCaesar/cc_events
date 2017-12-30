@@ -2088,8 +2088,12 @@ country_event = {
 	}
 	option = {
 		name = cc_events_mod.17.B
-					
-		ruler = { exile_leader_as = cc_disgraced_xenophobe }
+
+		custom_tooltip = cc_events_mod.17.B.tooltip
+		
+		hidden_effect = {
+			kill_leader = { type = ruler show_notification = no }
+		}
 		
 		if = {
 			limit = {
@@ -2408,7 +2412,10 @@ country_event = {
 	option = {
 		name = cc_events_mod.18.B
 					
-		event_target:cc_scandal_leader = { exile_leader_as = cc_disgraced_xenophobe }
+		event_target:cc_scandal_leader = { 
+			hidden_effect = { kill_leader = { show_notification = no } }
+		}
+		custom_tooltip = cc_events_mod.18.B.tooltip
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = supremacist }
