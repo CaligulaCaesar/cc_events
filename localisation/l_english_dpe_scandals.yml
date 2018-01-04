@@ -18,7 +18,12 @@ dpe_charity_faction_undeserving:0 "State funds given to the undeserving"
 dpe_scandal.2.name:0 "Corruption Scandal!"
 dpe_scandal.2.desc:0 "Reports have reached the public that two prominent [root.GetSpeciesAdj] officials have been engaging in corrupt activities. It seems that they have been channelling large portions of their departments' government budgets into their own pockets, and from there into off-world asteroid tax havens, costing the state millions. There is widespread outrage at this revelation, and troublemakers are quick to accuse those who appointed them of collusion. \n\nHow will you deal with the situation?"
 dpe_scandal.2.A:0 "They must stand down and face trial."
+dpe_scandal.2.A.tooltip:0 "[cc_first_corrupt.GetName] and [cc_second_corrupt.GetName] will be removed from the game."
 dpe_scandal.2.B:0 "Their services are too valuable. Keep them in their positions."
+
+#weakened it by 25%
+cc_outrage_at_corruption_1:0 "$cc_outrage_at_corruption$"
+cc_outrage_at_corruption_1_desc:0 "$cc_outrage_at_corruption_desc$"
 
 
 dpe_scandal.3.name:0 "[root.GetRulerTitle] [root.GetRulerName] does not Believe!"

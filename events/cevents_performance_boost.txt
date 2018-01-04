@@ -888,6 +888,82 @@ event = {
 				}
 			}
 		}
+		#corruption_scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				
+				OR = {
+					has_monthly_income = {
+						resource = minerals
+						value > 250
+					}
+					has_monthly_income = {
+						resource = energy
+						value > 250
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_corruption_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 500
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 500
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_corruption_scandal_more_likely
+					days = 31
+				}
+				if = {
+					limit = {
+						OR = {
+							has_monthly_income = {
+								resource = minerals
+								value > 750
+							}
+							has_monthly_income = {
+								resource = energy
+								value > 750
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = dpe_corruption_scandal_likely
+						days = 31
+					}
+					if = {
+						limit = {
+							OR = {
+								has_monthly_income = {
+									resource = minerals
+									value > 1000
+								}
+								has_monthly_income = {
+									resource = energy
+									value > 1000
+								}
+							}
+						}
+						set_timed_country_flag = {
+							flag = dpe_corruption_scandal_very_likely
+							days = 31
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1197,10 +1273,6 @@ country_event = {
 		modifier = {
 			factor = 1.5
 			NOT = { has_faction = progressive }
-		}
-		modifier = {
-			factor = 10
-			has_country_flag = dpe_satisfied_egalitarians
 		}
 		modifier = {
 			factor = 0.5
