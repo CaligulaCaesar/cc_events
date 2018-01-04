@@ -554,8 +554,8 @@ cc_xenophobe_assassinated = {
 }
 
 cc_founder_xenophobe = {
-	planet_migration_all_pull = 0.5
-	planet_migration_xeno_pull = -1
+	planet_migration_same_pull = 0.5
+	planet_migration_xeno_pull = -0.5
 	pop_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	icon_frame = 1
@@ -612,7 +612,7 @@ cc_building_xenophobe_institute = {
 
 cc_xenophobe_institute = {
 	tile_resource_unity_mult = 0.25
-	planet_migration_all_pull = 0.5
+	planet_migration_same_pull = 0.5
 	planet_migration_xeno_pull = -1
 	pop_happiness = 0.15
 	pop_ethic_xenophobe_attraction_mult = 2.5
@@ -621,7 +621,7 @@ cc_xenophobe_institute = {
 }
 
 cc_minor_xenophobe_institute = {
-	planet_migration_all_pull = 0.5
+	planet_migration_same_pull = 0.5
 	planet_migration_xeno_pull = -1
 	pop_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 1.5
