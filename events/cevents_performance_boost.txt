@@ -964,6 +964,52 @@ event = {
 				}
 			}
 		}
+		#Disbelief scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+				
+				exists = ruler
+				ruler = { NOT = { leader_of_faction = traditionalist } }
+				
+				has_faction = traditionalist
+				
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.3
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_disbelief_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					has_faction = technologist
+					
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support > 0.1
+						}
+						count = 1
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_disbelief_scandal_more_likely
+					days = 31
+				}
+			}
+		}	
 	}
 }
 

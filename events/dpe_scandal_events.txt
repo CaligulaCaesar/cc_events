@@ -238,7 +238,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = cc_events_blackmail.201.B
+		name = dpe_scandal.2.B
 		
 		add_modifier = {
 			modifier = cc_outrage_at_corruption
@@ -284,6 +284,141 @@ country_event = {
 		}
 	}
 }
+
+
+
+#Ruler does not Believe
+country_event = {
+	id = dpe_scandal.3
+	title = dpe_scandal.3.name
+	desc = dpe_scandal.3.desc
+	picture = GFX_evt_cc_priesthood
+	
+	trigger = {
+		has_country_flag = dpe_can_have_corruption_scandal
+
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+		
+		exists = ruler
+		ruler = { NOT = { leader_of_faction = traditionalist } }
+	}
+		
+		
+	mean_time_to_happen = {
+		years = 150
+		
+		modifier = {
+			factor = 0.75
+			has_faction = technologist
+		}
+		modifier = {
+			factor = 0.75
+			has_faction = technologist
+			ruler = { leader_of_faction = technologist }
+		}
+		
+		modifier = {
+			factor = 0.75
+			has_country_flag = dpe_disbelief_scandal_more_likely
+		}
+	}
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_disbelief_scandal
+			years = 50
+		}
+		
+		
+		SORT OUT STUFF
+	}
+			
+	
+	option = {
+		name = dpe_scandal.3.A
+		
+		custom_tooltip = dpe_scandal.3.A.tooltip
+		
+		hidden_effect = {
+			event_target:cc_first_corrupt = { kill_leader = { show_notification = no } }
+			event_target:cc_second_corrupt = { kill_leader = { show_notification = no } }
+		}
+		
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				influence < 200
+			}
+			modifier = {
+				factor = 0.8
+				if = {
+					limit = { exists = event_target:cc_first_corrupt }
+					event_target:cc_first_corrupt = { has_skill > 4 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				if = {
+					limit = { exists = event_target:cc_second_corrupt }
+					event_target:cc_second_corrupt = { has_skill > 4 }
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_scandal.3.B
+		
+		add_modifier = {
+			modifier = cc_outrage_at_corruption
+			years = 10
+		}
+		
+		ai_chance = {
+			modifier = {
+				factor = 2
+				NOT = { any_owned_planet = { unrest > 0 } }
+			}
+			modifier = {
+				factor = 0.5
+				influence > 200
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					if = {
+						limit = { exists = event_target:cc_first_corrupt }
+						event_target:cc_first_corrupt = { has_skill < 4 }
+					}
+					if = {
+						limit = { exists = event_target:cc_second_corrupt }
+						event_target:cc_second_corrupt = { has_skill < 4 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				if = {
+					limit = { exists = event_target:cc_first_corrupt }
+					event_target:cc_first_corrupt = { has_skill > 5 }
+				}
+			}
+			modifier = {
+				factor = 1.2
+				if = {
+					limit = { exists = event_target:cc_second_corrupt }
+					event_target:cc_second_corrupt = { has_skill > 5 }
+				}
+			}
+		}
+	}
+}
+
+
 
 
 
