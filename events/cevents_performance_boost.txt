@@ -1303,7 +1303,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = dpe_can_have_charity_scandal
-		NOT = { has_country_flag = dpe_satisfied_egalitarians
+		NOT = { has_country_flag = dpe_satisfied_egalitarians }
 	}
 
 	mean_time_to_happen = {
