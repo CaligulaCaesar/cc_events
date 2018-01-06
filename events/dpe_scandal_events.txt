@@ -66,7 +66,7 @@ country_event = {
 			}
 		}
 	}
-		
+
 	option = {
 		name = dpe_scandal.1.B
 		shift_ethic = ethic_egalitarian
@@ -332,88 +332,159 @@ country_event = {
 			flag = dpe_recent_disbelief_scandal
 			years = 50
 		}
-		
-		
-		SORT OUT STUFF
 	}
 			
 	
 	option = {
 		name = dpe_scandal.3.A
 		
+		trigger = { has_faction = technologist }
+		
+		shift_ethic = ethic_materialist
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = technologist }
+			add_modifier = { modifier = embraced_faction days = 3600 }
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = {
+							NOR = { is_same_value = prevprev }
+							is_pop_faction_type = traditionalist
+						}
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+
 		custom_tooltip = dpe_scandal.3.A.tooltip
 		
 		hidden_effect = {
-			event_target:cc_first_corrupt = { kill_leader = { show_notification = no } }
-			event_target:cc_second_corrupt = { kill_leader = { show_notification = no } }
+			country_event = { id = dpe_scandal.4 days = 15 }
+		}
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support > 0.5
+						}
+						count = 1
+					}
+					NOT = { has_country_flag = dpe_disbelief_scandal_more_likely }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = cc_many_materialists
+			}
+		}
+	}
+	option = {
+		name = dpe_scandal.3.B
+		custom_tooltip = dpe_scandal.3.B.tooltip
+		
+		add_modifier = {
+			modifier = dpe_unbelief_empire
+			days = 3600
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = { modifier = dpe_unbelief_faction days = 3600 }
 		}
 		
 		ai_chance = {
 			factor = 2
 			modifier = {
 				factor = 0.5
-				influence < 200
-			}
-			modifier = {
-				factor = 0.8
-				if = {
-					limit = { exists = event_target:cc_first_corrupt }
-					event_target:cc_first_corrupt = { has_skill > 4 }
+				OR = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support > 0.5
+						}
+						count = 1
+					}
+					NOT = { has_country_flag = dpe_disbelief_scandal_more_likely }
 				}
 			}
 			modifier = {
-				factor = 0.8
-				if = {
-					limit = { exists = event_target:cc_second_corrupt }
-					event_target:cc_second_corrupt = { has_skill > 4 }
-				}
+				factor = 0.5
+				ruler = { has_skill < 4 }
+			}
+			modifier = {
+				factor = 2
+				ruler = { has_skill > 4 }
+			}
+			modifier = {
+				factor = 2
+				ruler = { has_skill > 6 }
 			}
 		}
 	}
 	option = {
-		name = dpe_scandal.3.B
-		
-		add_modifier = {
-			modifier = cc_outrage_at_corruption
-			years = 10
+		name = dpe_scandal.3.C
+		custom_tooltip = dpe_scandal.3.C.tooltip
+		hidden_effect = {
+			kill_leader = { type = ruler show_notification = no }
 		}
 		
 		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.5
+					}
+					count = 1
+				}
+			}
 			modifier = {
 				factor = 2
-				NOT = { any_owned_planet = { unrest > 0 } }
+				ruler = { has_skill < 4 }
 			}
 			modifier = {
 				factor = 0.5
-				influence > 200
+				ruler = { has_skill > 4 }
 			}
 			modifier = {
 				factor = 0.5
-				AND = {
-					if = {
-						limit = { exists = event_target:cc_first_corrupt }
-						event_target:cc_first_corrupt = { has_skill < 4 }
-					}
-					if = {
-						limit = { exists = event_target:cc_second_corrupt }
-						event_target:cc_second_corrupt = { has_skill < 4 }
-					}
-				}
+				ruler = { has_skill > 6 }
 			}
-			modifier = {
-				factor = 1.2
-				if = {
-					limit = { exists = event_target:cc_first_corrupt }
-					event_target:cc_first_corrupt = { has_skill > 5 }
-				}
-			}
-			modifier = {
-				factor = 1.2
-				if = {
-					limit = { exists = event_target:cc_second_corrupt }
-					event_target:cc_second_corrupt = { has_skill > 5 }
-				}
-			}
+		}
+	}
+}
+
+#Ruler does not Believe
+country_event = {
+	id = dpe_scandal.4
+	title = dpe_scandal.4.name
+	desc = dpe_scandal.4.desc
+	picture = GFX_evt_cc_priesthood
+	
+	is_triggered_only = yes
+	
+	trigger = { has_faction = traditionalist }
+	
+	option = {
+		name = UNFORTUNATE
+		
+		add_modifier = {
+			modifier = dpe_damned_to_hell_empire
+			days = 3600
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = { modifier = dpe_damned_to_hell_faction days = 3600 }
 		}
 	}
 }
