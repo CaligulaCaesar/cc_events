@@ -269,7 +269,7 @@ cc_colony_events.451.name:0 "Cultural Exchange opens on [root.GetName]"
 cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour has been completed. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
 
 
-cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
 
 cc_founder_xenophile:0 "Xenophile Mediator"
@@ -296,6 +296,9 @@ cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory o
 
 cc_founders_memory_disrespected_1_xenophile:0 "Local Founding Citizen Disrespected"
 cc_founders_memory_disrespected_1_xenophile_desc:0 "The population is disappointed at the manner in which the parent state treated this planet's "Mediator", a well-regarded citizen who had sought good relations between all species."
+
+cc_founders_memory_disrespected_2_xenophile:0 "$cc_founders_memory_disrespected_1_xenophile$"
+cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespected_1_xenophile_desc$"
 
 
 #Xenophobe

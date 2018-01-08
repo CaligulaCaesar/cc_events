@@ -559,7 +559,7 @@ cc_founder_xenophobe = {
 	pop_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	icon_frame = 1
-	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_good_xenophobe.dds"
 }
 
 cc_minor_protests_xenophobe = {
@@ -647,3 +647,77 @@ cc_hostile_towards_xenos = {
 }
 
 
+
+#Xenophiles
+cc_founder_xenophile = {
+	planet_migration_xeno_pull = 1
+	pop_happiness = 0.05
+	pop_ethic_xenophile_attraction_mult = 1.5
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_good_xenophile.dds"
+}
+
+cc_minor_protests_xenophile = {
+	pop_happiness = -0.05
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+}
+
+cc_major_protests_xenophile = {
+	pop_happiness = -0.15
+	pop_ethic_xenophile_attraction_mult = 2.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+}
+
+
+cc_underground_xenophile_movement_1 = {
+	pop_ethic_xenophile_attraction_mult = 1.5
+	planet_unrest_mult = 0.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_xenophile.dds"
+}
+
+cc_underground_xenophile_movement_2 = {
+	pop_ethic_xenophile_attraction_mult = 1.5
+	planet_unrest_add = 25
+	planet_unrest_mult = 0.5
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
+}
+
+cc_xenophiles_offended = {
+	pop_happiness = -0.25
+	pop_ethic_xenophile_attraction_mult = 0.5
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_xenophile.dds"
+}
+
+cc_building_xenophile_institute = {
+	tile_resource_minerals_mult = -0.5
+	tile_resource_energy_mult = -0.5
+	
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
+}
+
+cc_xenophile_institute = {
+	tile_resource_unity_mult = 0.25
+	planet_migration_xeno_pull = 1
+	pop_happiness = 0.05
+	pop_ethic_xenophile_attraction_mult = 2.5
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_union.dds"
+}
+
+cc_founders_memory_disrespected_1_xenophile = {
+	pop_happiness = -0.1
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_xenophile.dds"
+}
+
+cc_founders_memory_disrespected_2_xenophile = {
+	pop_happiness = -0.15
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_xenophile.dds"
+}
