@@ -782,19 +782,17 @@ country_event = {
 	title = dpe_scandal.14.name
 	desc = {
 		trigger = {
-			hidden = {
-				switch = {
-					trigger = has_country_flag
-					dpe_escaped_slave_ruler_generic = { text = dpe_scandal.14.desc.generic }
-					dpe_escaped_slave_ruler_phile = { text = dpe_scandal.14.desc.phile }
-					dpe_escaped_slave_ruler_phobe = { text = dpe_scandal.14.desc.phobe }
-					dpe_escaped_slave_ruler_mat = { text = dpe_scandal.14.desc.mat }
-					dpe_escaped_slave_ruler_pac = { text = dpe_scandal.14.desc.pac }
-					dpe_escaped_slave_ruler_egal = { text = dpe_scandal.14.desc.egal }
-					dpe_escaped_slave_ruler_spir = { text = dpe_scandal.14.desc.spir }
-					dpe_escaped_slave_ruler_mil = { text = dpe_scandal.14.desc.mil }
-					default = { text = dpe_scandal.14.desc.generic }
-				}
+			switch = {
+				trigger = has_country_flag
+				dpe_escaped_slave_ruler_generic = { text = dpe_scandal.14.desc.generic }
+				dpe_escaped_slave_ruler_phile = { text = dpe_scandal.14.desc.phile }
+				dpe_escaped_slave_ruler_phobe = { text = dpe_scandal.14.desc.phobe }
+				dpe_escaped_slave_ruler_mat = { text = dpe_scandal.14.desc.mat }
+				dpe_escaped_slave_ruler_pac = { text = dpe_scandal.14.desc.pac }
+				dpe_escaped_slave_ruler_egal = { text = dpe_scandal.14.desc.egal }
+				dpe_escaped_slave_ruler_spir = { text = dpe_scandal.14.desc.spir }
+				dpe_escaped_slave_ruler_mil = { text = dpe_scandal.14.desc.mil }
+				default = { text = dpe_scandal.14.desc.generic }
 			}
 		}
 	}
