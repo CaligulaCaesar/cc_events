@@ -214,10 +214,91 @@ cc_underground_pacifist_movement_2_desc:0 "An underground resistance movement ce
 
 #Xenophile
 
+cc_colony_events.4.name:0 "Xenophilic Activist on [root.GetName]"
+cc_colony_events.4.desc.pos:0 "As our people begin stepping out into the stars, many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. Fortunately, [cc_colony_leader.GetSheHe] has taken pains not to be seen to be usurping our local authorities, and has consulted them before making important decisions. For their part, our local officials approve of [cc_colony_leader.GetHisHer] teachings and initiatives, and recommend integrating [cc_colony_leader.GetHimHer] into the local command structure." 
+cc_colony_events.4.desc.neut:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has not to this point used this authority to take a stance against the [root.owner.GetName] – indeed, [cc_colony_leader.GetSheHe] has so far cooperated well with our local authorities – but [cc_colony_leader.GetHisHer] ideas of what is best do deviate from those generally espoused by the [root.owner.GetName]'s leaders.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?"
+cc_colony_events.4.desc.neg:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain troublemaker named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has been using this new-found authority to take a line that is far from that represented by the [root.owner.GetName], and has been described as a "nuisance" by our local authorities.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?" 
+
+cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.4.C:0 "$cc_colony_events.3.C$"
+cc_colony_events.4.C.tooltip:0 "$cc_colony_events.remove_leader.tooltip$"
+
+
+cc_colony_events.41.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.41.desc:0 "$cc_colony_events.61.desc$"
+
+
+cc_colony_events.42.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.42.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.42.A:0 "$cc_colony_events.22.A.desc$"
+cc_colony_events.42.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.42.B:0 "Release [cc_colony_leader.GetHimHer]." 
+
+
+cc_colony_events.421.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.421.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.43.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.43.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.43.A:0 "$cc_colony_events.23.A$"
+cc_colony_events.43.B:0 "$cc_colony_events.23.B$"
+cc_colony_events.43.C:0 "Hunt down this agitator and [cc_colony_leader.GetHisHer] followers."
+
+cc_colony_events.431.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.431.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.431.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.432.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.432.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have failed. [cc_colony_leader.GetSheHeCap] has gathered [cc_colony_leader.GetHisHer] most trusted followers and has founded an underground movement with which [cc_colony_leader.GetSheHe] apparently hopes to protect [root.GetName]'s xeno communities from predation and discrimination. We can expect trouble from [cc_colony_leader.GetHimHer] for some time."
+
+cc_colony_events.433.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.433.desc:0 "$cc_colony_events.533.desc$"
+
+cc_colony_events.434.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.434.desc:0 "$cc_colony_events.234.desc$"
+
+
+cc_colony_events.45.name:0 "$cc_colony_events.55.name$"
+cc_colony_events.45.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHe] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. One of [cc_colony_leader.GetHisHer] final projects had been to ensure that [cc_colony_leader.GetHisHer] efforts to ensure peaceful and just relations between species are not forgotten by setting up an annual Cultural Exchange in [cc_colony_leader.GetHisHer]. However, [cc_colony_leader.GetSheHe] died before this could be realised. The mourning population on [root.GetName] have requested that [cc_colony_leader.GetName]'s last wish be honoured, and that government support for the Cultural Exchange be given."
+cc_colony_events.45.A: "House a Cultural Exchange"
+cc_colony_events.45.B: "$cc_colony_events.25.B$"
+cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
+cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
+
+cc_colony_events.451.name:0 "Cultural Exchange opens on [root.GetName]"
+cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour has been completed. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
+
+
+cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+
+cc_founder_xenophile:0 "Xenophile Mediator"
+cc_founder_xenophile_desc:0 "This colony is under the influence of a charismatic individual whose personal mission is to ensure the fair and equal treatment of all aliens."
+
+cc_minor_protests_xenophile:0 "Minor Protests"
+cc_minor_protests_xenophile_desc:0 "This Planet is experiencing minor protests following the arrest of one of their leaders."
+cc_major_protests_xenophile:0 "Major Protests"
+cc_major_protests_xenophile_desc:0 "This Planet is experiencing major protests following the arrest of one of their leaders."
+
+cc_underground_xenophile_movement_1:0 "Underground Xenophile Movement"
+cc_underground_xenophile_movement_1_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. It seeks to protect the planet's xeno communities from predation and discrimination."
+cc_underground_xenophile_movement_2:0 "Underground Xenophile Movement"
+cc_underground_xenophile_movement_2_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. Its ultimate aim is full independence from our empire."
+
+cc_xenophiles_offended:0 "Offended Xenophiles"
+cc_xenophiles_offended_desc:0 "The xenophobic population on this planet is offended at the attitude of the new regime."
+
+cc_building_xenophile_institute:0 "Preparing a Cultural Exchange"
+cc_building_xenophile_institute_desc:0 "A Cultural Exchange that is meant to secure the legacy of this planet's "Mediator" is being prepared."
+
+cc_xenophile_institute:0 "Cultural Exchange"
+cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory of a celebrated citizen who sought to improve interspecies relations. Their spirit and teachings live on in it, and will be remembered for as long as it is celebrated."
+
+cc_founders_memory_disrespected_1_xenophile:0 "Local Founding Citizen Disrespected"
+cc_founders_memory_disrespected_1_xenophile_desc:0 "The population is disappointed at the manner in which the parent state treated this planet's "Mediator", a well-regarded citizen who had sought good relations between all species."
 
 
 #Xenophobe
-
 
 cc_colony_events.5.name:0 "Nationalist Agitator on [root.GetName]"
 cc_colony_events.5.desc.pos:0 "As our people begin stepping out into the stars, many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has become especially prevalent in public discourse. This is mainly due to a certain passionate orator called [cc_colony_leader.GetName], whose speeches against all aliens have enraptured the new colonists, so much so that they have begun to call [cc_colony_leader.GetHimHer] "Hegemon" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. Fortunately, [cc_colony_leader.GetSheHe] has taken pains not to be seen to be usurping our local authorities, and has consulted them before making important decisions. For their part, our local officials approve of [cc_colony_leader.GetHisHer] teachings and initiatives, and recommend integrating [cc_colony_leader.GetHimHer] into the local command structure." 
