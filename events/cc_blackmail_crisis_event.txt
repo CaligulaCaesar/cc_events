@@ -13,18 +13,7 @@ country_event = {
 		years = 100
 		modifier = {
 			factor = 1.5
-			any_country = {
-				OR = {
-					is_hostile_to = root
-					is_rival = root
-					is_domineering_to = root
-				}
-				relative_power = {
-					who = root
-					category = fleet
-					value = superior
-				}
-			}
+			has_country_flag = cc_eventperf_has_superior_rival
 		}
 	}
 	
@@ -34,18 +23,7 @@ country_event = {
 		NOT = { has_country_flag = cc_has_had_blackmail }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = {
-			any_country = {
-				OR = {
-					is_hostile_to = root
-					is_rival = root
-					is_domineering_to = root
-				}
-				relative_power = {
-					who = root
-					category = fleet
-					value = overwhelming
-				}
-			}
+			has_country_flag = cc_eventperf_has_overwhelming_rival
 		}
 	}	
 	

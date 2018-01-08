@@ -56,10 +56,11 @@ dpe_scandal.10.B:0 "What do you want?"
 dpe_scandal.11.name:0 "Conspiracy Suppressed"
 dpe_scandal.11.desc:0 "It appears that the conspiracy was operated with a lot less competence than it first appeared. Through quick and ruthless action, the evidence has been suppressed."
 
-dpe_ruler_ruthless:0 "Ruthless"
+leader_trait_dpe_ruthless:0 "Ruthless"
+leader_trait_dpe_ruthless_desc:0 "This leader will not hesitate to do what is necessary."
 
 dpe_scandal.12.name:0 "Suppression of Conspiracy fails"
-dpe_scandal.12.desc:0 ""Fool! Did you really think I was acting alone?"\n\nAlthough the spy is arrested, within minutes you receive alarmed reports that copies of the evidence have been sent to every major distribution node in the [root.GetName] - as well as to several of the [root.GetName]'s rivals. Not long afterwards, the door to the [root.GetRulerTitle]'s private apartments burst open. The group that enters has representatives of virtually every power grouping in the [root.GetName]. [root.GetRulerName] looks to [root.leader.GetHisHer] former supporters for succour, but their eyes are cold and pitiless.\n\n"It's over," Vice-Chancellor [random_guy.GetName] says, and points a blaster directly at [root.GetRulerTitle] [root.GetRulerName]. "Surrender or die.""
+dpe_scandal.12.desc:0 ""Fool! Did you really think I was acting alone?"\n\nAlthough the spy is arrested, within minutes you receive alarmed reports that copies of the evidence have been sent to every major distribution node in the [root.GetName] - as well as to several of the [root.GetName]'s rivals. Not long afterwards, the door to the [root.GetRulerTitle]'s private apartments bursts open. The group that enters has representatives of virtually every power grouping in the [root.GetName]. [root.GetRulerName] looks to [root.leader.GetHisHer] former supporters for succour, but their eyes are cold and pitiless.\n\n"It's over," Vice-Chancellor [random_guy.GetName] says, and points a blaster directly at [root.GetRulerTitle] [root.GetRulerName]. "Surrender or die.""
 dpe_scandal.12.A:0 "Surrender."
 dpe_scandal.12.A.tooltip:0 "[root.GetRulerName] is sold as a slave."
 dpe_scandal.12.B:0 "Resist to the last."
@@ -81,47 +82,3 @@ dpe_scandal.14.B:0 "Unacceptable! Arrest the conspirator and suppress the eviden
 dpe_scandal.14.B.tooltip: "$dpe_scandal.10.A.tooltip$"
 
 
-
-dpe_scandal.20.name:0 "Treasonous Talk"
-dpe_scandal.20.desc:0 "Earlier today, [authoritarian.GetTitle] [authoritarian.GetName] held a major speech that was broadcast on all major communication channels. In it, [authoritarian.GetSheHe] came very near to expressing treasonous ideas: [authoritarian.GetSheHeCap] painted a picture of the [root.GetName] beset by challenges whilst the government, feeble and divided, stood by helplessly and did nothing. To solve this state of affairs, [authoritarian.GetSheHe] espoused the need for a new form of government, with a stronger executive - one capable of making the tough decisions required to restore [root.GetSpeciesAdj] greatness. [authoritarian.GetSheHeCap] hinted that, if the government failed to act, "concerned, patriotic citizens" would have to take matters into their own hands.\n\nSince then, [authoritarian.GetName] has been lying low. [authoritarian.GetHisHerCap] whereabouts are unknown, but [authoritarian.GetSheHe] left a heavily encrypted message apologising for the secrecy, but explaining that [authoritarian.GetSheHe] fears for [authoritarian.GetHisHer] life in the current political climate. [authoritarian.GetSheHeCap] also left details on how to contact [authoritarian.GetHimHer] if we were to "see reason".\n\nHow should we react?"
-dpe_scandal.20.A:0 "Arrest the traitor!"
-dpe_scandal.20.A.tooltip:0 "The Security Services will attempt to track down and arrest [authoritarian.GetName]."
-dpe_scandal.20.B:0 "Demand an explanation."
-dpe_scandal.20.C:0 "[authoritarian.GetSheHeCap] is right!"
-dpe_scandal.20.D:0 "Ignore [authoritarian.GetHimHer]."
-
-dpe_scandal.21.name:0 "[authoritarian.GetName] Arrested!"
-dpe_scandal.21.desc:0 "The Intelligence Services were able to track down and arrest [authoritarian.GetName]. [authoritarian.GetSheHeCap] is now on trial for treason against the state. Hopefully this is the last we hear of this matter."
-
-dpe_scandal.22.name:0 "Arrest of [authoritarian.GetName] fails!"
-dpe_scandal.22.desc:0 "Our intelligence services have failed to track down [authoritarian.GetName]. [authoritarian.GetHisHerCap] whereabouts - and current activities - are unknown. Who knows what [authoritarian.GetSheHe] is plotting?"
-
-dpe_scandal.23.name:0 "[authoritarian.GetName] Responds"
-dpe_scandal.23.desc:0 "I'm sorry, [root.GetRulerName]... but it is the simple truth, and it was my duty to speak it. I will not hesitate to act to safeguard the future of the [root.GetSpeciesAdj] state."
-dpe_scandal.23.option:0 "Keep [authoritarian.GetHimHer] talking."
-
-dpe_scandal.24.name:0 "$dpe_scandal.23.name$"
-dpe_scandal.24.desc:0 "Know that I have been planning this for a long time. Your only chance of saving face is to step down and let more able hands take over."
-dpe_scandal.24.A:0 "Not a chance. Arrest the traitor!"
-dpe_scandal.24.A.tooltip:0 "$dpe_scandal.20.A.tooltip$"
-dpe_scandal.24.B:0 "Maybe [authoritarian.GetSheHe] is right..."
-dpe_scandal_24.C:0 "Stay watchful."
-
-dpe_scandal.25.name:0 "Conspiracy Uncovered!"
-dpe_scandal.25.desc:0 "The [root.GetSpeciesAdj] intelligence agency has uncovered an extensive plot to establish an authoritarian form of government in the [root.GetName]. [authoritarian.GetName] is its figurehead, but it appears to have the support of a very large number of influential [root.GetSpeciesNamePlural], and an important faction within the military. If nothing is done, it is likely that they will soon be in a position to topple the current system and set up an authoritarian regime."
-dpe_scandal.25.A:0 "Enforce a full lock-down."
-dpe_state_in_lockdown:0 "State in Lockdown"
-dpe_state_in_lockdown_desc:0 "The government has locked down most non-essential activities in an effort to track down and suppress a conspiracy against it."
-dpe_scandal.25.A.tooltip:0 "The conspirators will find it hard to escape the lockdown."
-dpe_scandal.25.B:0 "Redouble our efforts to catch the plotters."
-
-dpe_scandal.26.name:0 "Conspiracy Ringleaders Arrested!"
-dpe_scandal.26.desc:0 "The [root.GetSpeciesAdj] intelligence agency and security services were able to pinpoint the identities and whereabouts of several ringleaders of the Authoritarian Conspiracy. With this information, they were able to arrest the plotters - among the [authoritarian.GetName] - and effectively snuff out the plot."
-
-dpe_scandal.27.name:0 "Conspiracy!"
-dpe_scandal.27.desc:0 ""I wish it had not come to this. But I will not let you destroy the [root.GetName]."\n\n[root.GetRulerTitle] [root.GetRulerName] turned around. It was [authoritarian.GetName], with a pistol pointed at [root.GetRulerName]. "Don't bother calling for the guards. They support me," [authoritarian.GetName] said coldly. "Now, you have two choices. You can sign this paper and give your support to the new regime, and then go into exile; or I will shoot you here and now. It is yours to decide.""
-dpe_scandal.27.A:0 "Go quietly."
-dpe_scandal.27.B:0 "Fight to the last."
-
-dpe_illegitimate_regime:0 "Illegitimate Regime"
-dpe_illegitimate_regime_desc:0 "The current regime came into power through a conspiracy that culminated in the assassination of the former ruler."

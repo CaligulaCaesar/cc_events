@@ -1009,7 +1009,70 @@ event = {
 					days = 31
 				}
 			}
-		}	
+		}
+		#Ruler is escaped slave
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				allows_slavery = yes
+				
+				NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
+				
+				NOT = { has_authority = auth_imperial }
+				exists = ruler
+				
+				any_owned_pop = {
+					is_same_species = root.ruler
+					is_enslaved = yes
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_escaped_slave_ruler_possible
+				days = 31
+			}
+		}
+		
+		every_country = {
+			limit = {
+				any_country = {
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					relative_power = {
+						who = root
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_overwhelming_rival
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				any_country = {
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					relative_power = {
+						who = root
+						category = fleet
+						value = superior
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_superior_rival
+				days = 31
+			}
+		}
 	}
 }
 
@@ -1326,4 +1389,21 @@ country_event = {
 		}
 	}
 	immediate = { country_event = { id = dpe_scandal.1 } }
+}
+
+
+#Ruler is an ex-slave
+country_event = {
+	id = cc_events_performance.11
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = dpe_escaped_slave_ruler_possible
+	}
+	
+	mean_time_to_happen = { years = 150 }
+	
+	immediate = {
+		country_event = { id = dpe_scandal.10 }
+	}
 }
