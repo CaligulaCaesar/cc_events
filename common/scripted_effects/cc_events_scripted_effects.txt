@@ -88,6 +88,48 @@ xenophilia_refugee_pop_effect = {
 
 remove_all_political_colony_modifiers = {
 
+	if = {
+		limit = { has_modifier = cc_founder_xenophile }
+		remove_modifier = cc_founder_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophile }
+		remove_modifier = cc_minor_protests_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophile }
+		remove_modifier = cc_major_protests_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophile_movement_1 }
+		remove_modifier = cc_underground_xenophile_movement_1
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophile_movement_2 }
+		remove_modifier = cc_underground_xenophile_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophiles_offended }
+		remove_modifier = cc_xenophiles_offended
+	}
+	if = {
+		limit = { has_modifier = cc_building_xenophile_institute }
+		remove_modifier = cc_building_xenophile_institute
+	}
+	if = {
+		limit = { has_modifier = cc_xenophile_institute }
+		remove_modifier = cc_xenophile_institute
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_1_xenophile }
+		remove_modifier = cc_founders_memory_disrespected_1_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_2_xenophile }
+		remove_modifier = cc_founders_memory_disrespected_2_xenophile
+	}
+
+
 
 	if = {
 		limit = { has_modifier = cc_building_xenophobe_institute }
@@ -414,6 +456,39 @@ remove_all_political_colony_modifiers = {
 
 remove_rebel_irrelevant_political_colony_modifiers = {
 
+	if = {
+		limit = { has_modifier = cc_founder_xenophile }
+		remove_modifier = cc_founder_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophile }
+		remove_modifier = cc_minor_protests_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophile }
+		remove_modifier = cc_major_protests_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophile_movement_1 }
+		remove_modifier = cc_underground_xenophile_movement_1
+	}
+	if = {
+		limit = { has_modifier = cc_underground_xenophile_movement_2 }
+		remove_modifier = cc_underground_xenophile_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophiles_offended }
+		remove_modifier = cc_xenophiles_offended
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_1_xenophile }
+		remove_modifier = cc_founders_memory_disrespected_1_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_founders_memory_disrespected_2_xenophile }
+		remove_modifier = cc_founders_memory_disrespected_2_xenophile
+	}
+
 
 	if = {
 		limit = { has_modifier = cc_minor_protests_xenophobe }
@@ -638,6 +713,44 @@ remove_rebel_irrelevant_political_colony_modifiers = {
 }
 
 remove_new_owner_irrelevant_political_colony_modifiers = {
+
+	if = {
+		limit = { has_modifier = cc_minor_protests_xenophile }
+		remove_modifier = cc_minor_protests_xenophile
+	}
+	if = {
+		limit = { has_modifier = cc_major_protests_xenophile }
+		remove_modifier = cc_major_protests_xenophile
+	}
+	if = {
+		limit = {
+			has_modifier = cc_underground_xenophile_movement_1
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		remove_modifier = cc_underground_xenophile_movement_1
+	}
+	if = {
+		limit = {
+			has_modifier = cc_underground_xenophile_movement_2
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		remove_modifier = cc_underground_xenophile_movement_2
+	}
+	if = {
+		limit = { has_modifier = cc_xenophiles_offended }
+		remove_modifier = cc_xenophiles_offended
+	}
+
 
 	if = {
 		limit = { has_modifier = cc_minor_protests_xenophobe }

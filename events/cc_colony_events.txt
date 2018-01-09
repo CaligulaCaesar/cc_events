@@ -72,6 +72,30 @@ planet_event = {
 					}
 				}
 				modifier = {
+					factor = 1.35
+					any_owned_pop = {
+						has_a_happiness_gauge = yes
+						root = {
+							any_owned_pop = {
+								NOT = { is_same_species = prevprev }
+								has_a_happiness_gauge = yes
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					owner = {
+						pop_percentage = {
+							limit = {
+								NOT = { is_same_species = root.owner }
+								has_a_happiness_gauge = yes
+							}
+							percentage < 0.1
+						}
+					}
+				}
+				modifier = {
 					factor = 0.35
 					NOT = { any_owned_pop = { has_ethic = ethic_xenophile } }
 				}
@@ -80,7 +104,7 @@ planet_event = {
 					owner = { NOT = { has_faction = xenoist } }
 				}
 				
-#				planet_event = { id = cc_colony_events.4 }
+				planet_event = { id = cc_colony_events.4 }
 			}
 			10 = {
 				modifier = {
@@ -2022,7 +2046,7 @@ planet_event = {
 		}
 		text = cc_colony_events.4.desc.neg
 	}
-	picture = GFX_evt_alien_propaganda
+	picture = GFX_evt_cc_alien_union
 	
 	is_triggered_only = yes
 	location = root
@@ -2297,7 +2321,7 @@ planet_event = {
 	title = cc_colony_events.421.name
 	desc = cc_colony_events.421.desc
 	
-	picture = GFX_evt_alien_segregation
+	picture = GFX_evt_burning_settlement
 	
 	is_triggered_only = yes
 	location = root
@@ -2693,7 +2717,7 @@ planet_event = {
 	
 	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
 	
-	picture = GFX_evt_cc_mausoleum
+	picture = GFX_evt_cc_alien_union
 	
 	is_triggered_only = yes
 	location = root

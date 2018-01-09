@@ -28,6 +28,7 @@ planet_event = {
 		remove_all_faction_seditions = yes
 		remove_all_seditious_talk = yes
 		
+		
 		if = {
 			limit = {
 				has_modifier = cc_founder_spiritualist
@@ -336,6 +337,51 @@ planet_event = {
 				}
 			}
 			planet_event = { id = cc_cleanup_events.35 days = 15 random = 10 }			
+		}
+		
+		
+		#Xenophiles
+		if = {
+			limit = {
+				has_modifier = cc_founder_xenophile
+				NOR = {
+					has_modifier = cc_building_xenophile_institute
+					has_modifier = cc_founders_memory_disrespected_1_xenophile
+					has_modifier = cc_founders_memory_disrespected_2_xenophile
+				}
+			}
+			planet_event = { id = cc_cleanup_events.36 days = 15 random = 10 }
+		}
+		if = {
+			limit = {
+				has_modifier = cc_building_xenophile_institute
+			}
+			planet_event = { id = cc_cleanup_events.37 days = 5 }
+			planet_event = { id = cc_cleanup_events.999 days = 3 }
+		}
+		if = {
+			limit = {
+				has_modifier = cc_xenophile_institute
+			}
+			planet_event = { id = cc_cleanup_events.38 days = 15 random = 10 }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = cc_founders_memory_disrespected_1_xenophile
+					has_modifier = cc_founders_memory_disrespected_2_xenophile
+				}
+			}
+			planet_event = { id = cc_cleanup_events.39 days = 15 random = 10 }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = cc_underground_xenophile_movement_1
+					has_modifier = cc_underground_xenophile_movement_2
+				}
+			}
+			planet_event = { id = cc_cleanup_events.40 days = 15 random = 10 }
 		}
 	}
 }
@@ -2274,7 +2320,359 @@ planet_event = {
 
 
 
+planet_event = {
+	id = cc_cleanup_events.36
+	title = cc_cleanup_events.36.name
+	desc = cc_cleanup_events.36.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_cc_alien_union
+	
+	location = root
+	
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founder_xenophile
+	}
+	
+	option = {
+		name = CCYES
+		
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+			}
+		}
+	}
+	option = {
+		name = CCNO
+		
+		remove_modifier = cc_founder_xenophile
+		
+		add_modifier = {
+			modifier = cc_xenophiles_offended
+			years = 20
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+	}
+}
 
+
+planet_event = {
+	id = cc_cleanup_events.37
+	title = cc_cleanup_events.37.name
+	desc = cc_cleanup_events.37.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_cc_alien_union
+	
+	location = root
+	
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_building_xenophile_institute
+	}
+	
+	option = {
+		name = CCYES
+		custom_tooltip = cc_cleanup_events.3.tooltip
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+			}
+		}
+	}
+	option = {
+		name = CCNO
+		
+		remove_modifier = cc_building_xenophile_institute
+		if = {
+			limit = { has_modifier = cc_founder_xenophile }
+			remove_modifier = cc_founder_xenophile
+		}
+		
+		set_timed_planet_flag = {
+			flag = cc_xenophile_institute_cancelled
+			years = 5
+		}
+		
+		add_modifier = {
+			modifier = cc_xenophiles_offended
+			years = 20
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.38
+	title = cc_cleanup_events.38.name
+	desc = cc_cleanup_events.38.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_cc_alien_union
+	
+	location = root
+	
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_xenophile_institute
+	}
+	
+	option = {
+		name = CCYES
+		
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+			}
+		}
+	}
+	option = {
+		name = CCNO
+		
+		remove_modifier = cc_xenophile_institute
+		
+		add_modifier = {
+			modifier = cc_xenophiles_offended
+			years = 20
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOR = {
+					owner = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.39
+	title = cc_cleanup_events.39.name
+	desc = cc_cleanup_events.39.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_cc_alien_union
+	
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_founders_memory_disrespected_1_xenophile
+			has_modifier = cc_founders_memory_disrespected_2_xenophile
+		}
+	}
+	
+	option = {
+		name = CCYES
+		
+		add_modifier = {
+			modifier = cc_building_xenophile_institute
+			days = 1800
+		}
+		if = {
+			limit = { has_modifier = cc_founders_memory_disrespected_1_xenophile }
+			remove_modifier = cc_founders_memory_disrespected_1_xenophile
+		}
+		if = {
+			limit = { has_modifier = cc_founders_memory_disrespected_2_xenophile }
+			remove_modifier = cc_founders_memory_disrespected_2_xenophile
+		}
+		custom_tooltip = cc_xenophile_institute_will_be_built
+		hidden_effect = { planet_event = { id = cc_cleanup_events.41 days = 1800 } }
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+			}
+		}
+	}
+	option = {
+		name = CCNO
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.40
+	title = cc_cleanup_events.40.name
+	desc = cc_cleanup_events.40.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	picture = GFX_evt_ground_combat
+	
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_xenophile_movement_1
+			has_modifier = cc_underground_xenophile_movement_2
+		}
+	}
+	
+	option = {
+		name = CCYES
+		
+		if = {
+			limit = { has_modifier = cc_underground_xenophile_movement_1 }
+			remove_modifier = cc_underground_xenophile_movement_1
+		}
+		if = {
+			limit = { has_modifier = cc_underground_xenophile_movement_2 }
+			remove_modifier = cc_underground_xenophile_movement_2
+		}
+
+		add_modifier = {
+			modifier = cc_building_xenophile_institute
+			days = 1800
+		}
+		custom_tooltip = cc_xenophile_institute_will_be_built
+
+		hidden_effect = { planet_event = { id = cc_cleanup_events.41 days = 1800 } }
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+			}
+		}
+	}
+	option = {
+		name = CCNO
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.41
+	title = cc_cleanup_events.41.name
+	desc = cc_cleanup_events.41.desc
+	
+	is_triggered_only = yes
+	location = root
+	
+	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
+	
+	picture = GFX_evt_cc_alien_union
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CCGOODGOOD
+		
+		add_modifier = {
+			modifier = cc_xenophile_institute
+			days = -1
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_founder_xenophile }
+				remove_modifier = cc_founder_xenophile
+			}
+		}
+	}
+}
 
 
 
@@ -2297,6 +2695,7 @@ planet_event = {
 			has_modifier = cc_building_milacademy
 			has_modifier = cc_building_pacmonument
 			has_modifier = cc_building_xenophobe_institute
+			has_modifier = cc_building_xenophile_institute
 		}
 	}
 	
@@ -2340,6 +2739,14 @@ planet_event = {
 				years = 5
 			}
 			remove_modifier = cc_building_xenophobe_institute
+		}
+		if = {
+			limit = { has_modifier = cc_building_xenophile_institute }
+			set_timed_planet_flag = {
+				flag = cc_xenophile_institute_cancelled
+				years = 5
+			}
+			remove_modifier = cc_building_xenophile_institute
 		}
 	}
 }
