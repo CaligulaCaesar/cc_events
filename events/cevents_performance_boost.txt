@@ -555,7 +555,7 @@ event = {
 				every_owned_planet = {
 					limit = {
 						has_planet_flag = ccrebel_perf_spiritualists_2
-						has_political_colony_modifier = no
+						NOT = { has_planet_flag = cc_colony_story }
 						owner = {
 							any_owned_planet = {
 								NOT = { is_same_value = prevprev }
@@ -577,7 +577,7 @@ event = {
 					every_owned_planet = {
 						limit = {
 							has_planet_flag = ccrebel_perf_spiritualists_2
-							has_political_colony_modifier = no
+							NOT = { has_planet_flag = cc_colony_story }
 							owner = {
 								any_owned_planet = {
 									NOT = { is_same_value = prevprev }

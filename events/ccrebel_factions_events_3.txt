@@ -2947,7 +2947,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 80
 				}
-				planet_event = { id = ccfaction.61 days = 20 random 15 }
+				planet_event = { id = ccfaction.61 days = 20 random = 15 }
 			}
 			
 			every_owned_planet = { #revolts in the others
@@ -2956,7 +2956,7 @@ country_event = {
 					is_faction_stronghold = yes
 					NOT = { unrest > 80 }
 				}
-				planet_event = { id = ccfaction.62 days = 20 random 15 }
+				planet_event = { id = ccfaction.62 days = 20 random = 15 }
 			}
 			
 			country_event = { id = ccfaction.7 days = 45 }
@@ -4056,7 +4056,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 80
 				}
-				planet_event = { id = ccfaction.61 days = 20 random 15 }
+				planet_event = { id = ccfaction.61 days = 20 random = 15 }
 			}
 			
 			every_owned_planet = { #revolts in the others
@@ -4065,7 +4065,7 @@ country_event = {
 					is_faction_stronghold = yes
 					NOT = { unrest > 80 }
 				}
-				planet_event = { id = ccfaction.62 days = 20 random 15 }
+				planet_event = { id = ccfaction.62 days = 20 random = 15 }
 			}
 			
 			
