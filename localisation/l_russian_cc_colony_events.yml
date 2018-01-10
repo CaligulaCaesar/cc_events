@@ -155,7 +155,7 @@ cc_colony_events.5.desc.neut:0 "Как только наши люди отпра
 cc_colony_events.5.desc.neg:0 "Как только наши люди отправились к звёздам, многие из них сразу же задумались: "Что мы будем делать, когда найдём другую жизнь?"\n\nНа [root.GetName] эта тема стала особенно животрепещущей среди населения. Основным виновником этого можно считать страстного оратора по имени [cc_colony_leader.GetName], чьи речи против всякой инопланетной жизни так вдохновили новых колонистов, что они стали называть его "Гегемон" и следовать его советам, даже при наличии верховной власти [root.owner.GetSpeciesAdj]. [cc_colony_leader.GetSheHeCap] использовал свою новоприобретённую власть, чтобы занять позицию далекую от официально принятой в [root.owner.GetName]. Местные власти описали его, как "угрозу всякой порядочности и нашим галактическим отношениям".\n\nЧто нам делать с [cc_colony_leader.GetHimHer]?" 
 cc_colony_events.5.B:0 "$cc_colony_events.3.B$"
 cc_colony_events.5.C:0 "$cc_colony_events.3.C$"
-cc_colony_events.5.C.tooltip:0 "$cc_colony_events.remove_leader.tooltip$"
+cc_colony_events.5.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 cc_colony_events.51.name:0 "$cc_colony_events.21.name$"
 cc_colony_events.51.desc:0 "На планете [Root.GetName] проходят небольшие протесты в связи с недавним арестом [cc_colony_leader.GetName], но они не получили широкого распространения, и большинство населения приняло обвинения против   [cc_colony_leader.GetHimHer]. Похоже, что речи и демагогия [cc_colony_leader.GetHisHer] оказались не таким уж и почитаемыми!"
 cc_colony_events.52.name:0 "$cc_colony_events.22.name$"
