@@ -67,33 +67,33 @@ cc_milacademy_will_be_built:0 "\nThe Military Academy will take 5 years to compl
  cc_founder_militarist_desc:0 "Diese Kolonie ist von einem pensionierten Marineoffizier, der sich den Titel 'Legat' genommen hat, geleitet."
 
  cc_militarist_influence:0 "Militäristischer Einfluss"
-cc_militarist_influence_desc:0 "A retired naval officer is advising the authorities of this colony."
+ cc_militarist_influence_desc:0 "Ein pensionierter Marineoffizier berät die planetaren Behörden."
 
  cc_minor_protests_militarist:0 "Kleine Proteste"
-cc_minor_protests_militarist_desc:0 "This Planet is experiencing minor protests following the arrest of a well-regarded retired naval officer."
+ cc_minor_protests_militarist_desc:0 "Nach der Festnahme eines angesehenen pensionierten Marineoffiziers gibt es auf diesem Planeten kleine Proteste."
  cc_major_protests_militarist:0 "Große Proteste"
-cc_major_protests_militarist_desc:0 "This Planet is experiencing major protests following the arrest of a well-regarded retired naval officer."
+ cc_major_protests_militarist_desc:0 "Nach der Festnahme eines angesehenen pensionierten Marineoffiziers gibt es auf diesem Planeten große Proteste."
 
 cc_underground_militarist_movement_1:0 "Underground Militarist Movement"
 cc_underground_militarist_movement_1_desc:0 "An underground movement centred around a dissident former naval officer is active on this planet. It seeks to spread ideas and practices that go against the ideals of our empire."
 cc_underground_militarist_movement_2:0 "Underground Militarist Movement"
 cc_underground_militarist_movement_2_desc:0 "An underground movement centred around a dissident former naval officer is active on this planet. Its ultimate aim is full independence from our empire."
 
-cc_militarists_offended:0 "Offended Militarists"
-cc_militarists_offended_desc:0 "The militarist population on this planet is offended at the attitude of the new regime."
+ cc_militarists_offended:0 "Beleidigte Militaristen"
+ cc_militarists_offended_desc:0 "Die militaristische Bevölkerung dieses Planeten fühlt sich von dem neuen Regime entfremdet."
 
-cc_milacademy_built_faction:0 "Military Academy Built"
+ cc_milacademy_built_faction:0 "Militärakademie gegründet"
 
-cc_building_milacademy:0 "Constructing a Military Academy"
-cc_building_milacademy_desc:0 "A military academy is being built on this planet."
+ cc_building_milacademy:0 "Errichtet eine Militärakademie"
+ cc_building_milacademy_desc:0 "Eine Militärakademie wird auf diesem Planeten errichtet."
 
-cc_milacademy:0 "Military Academy"
-cc_milacademy_desc:0 "The Military Academy on this planet is an important centre of military learning. Aspiring officers travel light years to visit it and learn from the best military minds."
+ cc_milacademy:0 "Militärakademie"
+ cc_milacademy_desc:0 "Die Militärakademie auf diesem Planeten ist ein wichtiges Zentrum der militärischen Lehre. Ehrgeizige Offiziere reisen viele Lichtjahre, um es zu besuchen und von den besten militärischen Denkern zu lernen."
 
 cc_founders_memory_disrespected_1_militarist:0 "Local Naval Officer Disrespected"
 cc_founders_memory_disrespected_1_militarist_desc:0 "The population is disappointed at the manner in which the parent state treated a retired naval officer who had made this planet their home."
 
-cc_mourning_martyr:0 "Mourning Martyr"
+ cc_mourning_martyr:0 "Betrauert Tod des Märtyrers"
 
 
 
@@ -216,7 +216,7 @@ cc_underground_pacifist_movement_2_desc:0 "An underground resistance movement ce
 
 cc_colony_events.4.name:0 "Xenophilic Activist on [root.GetName]"
 cc_colony_events.4.desc.pos:0 "As our people begin stepping out into the stars, many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. Fortunately, [cc_colony_leader.GetSheHe] has taken pains not to be seen to be usurping our local authorities, and has consulted them before making important decisions. For their part, our local officials approve of [cc_colony_leader.GetHisHer] teachings and initiatives, and recommend integrating [cc_colony_leader.GetHimHer] into the local command structure." 
-cc_colony_events.4.desc.neut:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has not to this point used this authority to take a stance against the [root.owner.GetName] – indeed, [cc_colony_leader.GetSheHe] has so far cooperated well with our local authorities – but [cc_colony_leader.GetHisHer] ideas of what is best do deviate from those generally espoused by the [root.owner.GetName]'s leaders.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?"
+cc_colony_events.4.desc.neut:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has not to this point used this authority to take a stance against the [root.owner.GetName] - indeed, [cc_colony_leader.GetSheHe] has so far cooperated well with our local authorities - but [cc_colony_leader.GetHisHer] ideas of what is best do deviate from those generally espoused by the [root.owner.GetName]'s leaders.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?"
 cc_colony_events.4.desc.neg:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain troublemaker named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has been using this new-found authority to take a line that is far from that represented by the [root.owner.GetName], and has been described as a "nuisance" by our local authorities.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?" 
 
 cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
