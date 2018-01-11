@@ -142,23 +142,23 @@
  cc_colony_events.334.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] aufzuspüren und hinzurichten, sind gescheitert. [cc_colony_leader.GetSheHeCap] hat [cc_colony_leader.GetHisHer]e treusten Anhänger zusammengebracht und eine Untergrundbewegung gegründet, durch der [cc_colony_leader.GetSheHe] anscheinend Frieden durch Unabhängigkeit von der [Root.Owner.GetName] gewinnen will. Leider haben einige verbitterte Führer [cc_colony_leader.GetHisHer]er Bewegung angefangen, die Anwendung von Gewalt zur Befreiung [Root.GetName]s von der "größeren Übel" der [root.owner.GetName] zu befürworten. Wir können langfristigen Tumult erwarten."
 
  cc_colony_events.34.name:0 "[cc_colony_leader.GetName]s Ruhm steigt"
-cc_colony_events.34.desc:0 "Over the past 15 years, [cc_colony_leader.GetName] has been a leading figure on [Root.GetName]. [cc_colony_leader.GetSheHeCap] is very popular with the inhabitants, so much so that [cc_colony_leader.GetHisHer] reputation has spread. [cc_colony_leader.GetSheHeCap] is now seen as an inspiration by all peaceful-minded people in this part of the [root.owner.GetName]. In fact, [cc_colony_leader.GetSheHe] is planning a tour of worlds to visit [cc_colony_leader.GetHisHer] admirers!"
+ cc_colony_events.34.desc:0 "Während den letzten 15 Jahren ist [cc_colony_leader.GetName] eine führende Figur auf [Root.GetName] gewesen. [cc_colony_leader.GetSheHeCap] ist bei den Einwohnern sehr beliebt, so sehr, dass er auch jenseits [root.GetName]s viele Bewunderer gesammelt hat. [cc_colony_leader.GetSheHeCap] wird nun von allen friedliebenden Personen in diesem Teil der [root.owner.GetName] als Inspiration angesehen. Deshalb plant [cc_colony_leader.GetSheHe] eine Weltentour, um [cc_colony_leader.GetSheHe] [cc_colony_leader.GetHisHer]e Bewunderer zu besuchen!"
 
  cc_colony_events.341.name:0 "[cc_colony_leader.GetName]s Weltentour vorbei"
-cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the worlds in [cc_colony_leader.GetHisHer] sector of the [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] followers were overjoyed to have the chance to see and hear from the great [cc_colony_leader.GetSpeciesName] thinker, and are inspired by [cc_colony_leader.GetHisHer] example. [cc_colony_leader.GetHisHerCap] fame has reached new heights."
-
+ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] hat die Welten in [cc_colony_leader.GetHisHer]em Sektor des [root.owner.GetName]s besucht. [cc_colony_leader.GetHisHerCap]e Anhänger waren überglücklich, die Chance zu haben, vom großartigen [cc_colony_leader.GetSpeciesName] Denker zu sehen und zu hören, und sind inspiriert von [cc_colony_leader.GetHisHer]em Beispiel. [cc_colony_leader.GetHisHerCap] Ruhm hat somit neue Höhen erreicht."
 
  cc_colony_events.342.name:0 "[cc_colony_leader.GetName]s Weltentour endet auf tragischer Weise"
-cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] was meeting with supporters on [random_visit_planet.GetName] when a half-crazed fanatic imperialist shot [cc_colony_leader.GetHimHer] down before [cc_colony_leader.GetHisHer] guards could react. Unfortunately, the crowd tore apart the assassin before she could be questioned. This has fuelled conspiracy theories, which claim that someone - perhaps even someone high in the [root.owner.GetSpeciesAdj] government - was behind the assassination. There are also claims that [root.owner.GetSpeciesAdj] authorities on [random_visit_planet.GetName] failed to provide [cc_colony_leader.GetName] with adequate security, thus allowing the tragedy to happen. As a result, the pacifist community in the [root.owner.GetName] is up in arms. The leadership [pacifist_faction.GetName] has met with government officials amidst the chaos and has made clear their upset, but also suggesting that, to soothe pacifists' hurt, [cc_colony_leader.GetName] should be given a state funeral and a great shrine should be built in [cc_colony_leader.GetHisHer] honour on [root.GetName]."
-cc_colony_events.342.A:0 "Do it. [cc_colony_leader.GetSheHeCap] deserves it."
+ cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer Imperialist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die pazifistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [pazifist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Pazifisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Denkmal zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird." 
+
+ cc_colony_events.342.A:0 "Tu es. [cc_colony_leader.GetSheHeCap] hat es verdient."
  cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
  cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.343.name:0 "Pazifistisches Versammlungszentrum auf [root.GetName] eröffnet"
-cc_colony_events.343.desc:0 "The monument in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into a symbolic congregational site for pacifists in the [root.owner.GetName] and beyond."
+ cc_colony_events.343.desc:0 "Das Denkmal zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. The monument in [cc_colony_leader.GetName]'s honour has been completed. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen, und viele [cc_colony_leader.GetHisHer]er Anhänger sind von anderen Welten zur Feier des Tages gekommen. Wir vermuten, dass dies zu einem symbolischen Versammlungszentrum für Pazifisten in- und sogar außerhalb der [root.owner.GetName] entwickeln wird."
 
  cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
-cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special shrine in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetSheHe]'s life and teachings can be remembered."
+ cc_colony_events.35.desc:0 "[cc_colony_leader.GetName], der 'Legat' von [root.GetName], ist heute nach einer kurzen Krankheit gestorben. Die Bevölkerung [root.GetName]s ist in Trauer, und verlangt, dass wir ein Denkmal zu [cc_colony_leader.GetHisHer]er Ehre errichten, sodass sie einen Ort haben werden, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
  cc_colony_events.35.A:0 "Errichte ein Denkmal."
  cc_colony_events.35.B:0 "Es ist zu teuer."
  cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] war bloß ein Störenfried. Dass man [cc_colony_leader.GetIhnSieDE] schnell vergisst!"
@@ -166,7 +166,7 @@ cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_co
  cc_colony_events.35.C.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
 
  cc_minor_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_pacmonument$§! hinzu:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
-cc_colony_events.351.desc:0 "The monument in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
+ cc_colony_events.351.desc:0 "Das Denkmal zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
 
  cc_pacifists_offended:0 "Beleidigte Pazifisten"
  cc_pacifists_offended_desc:0 "Die pazifistische Bevölkerung dieses Planeten fühlt sich von der neuen Regime entfremdet."
@@ -177,10 +177,10 @@ cc_colony_events.351.desc:0 "The monument in [cc_colony_leader.GetName]'s honour
  cc_founder_pacifist:0 "Angesehener pazifistischer Aktivist"
  cc_founder_pacifist_desc:0 "Die Gründerfigur dieses Planeten ist ein pazifistischer Aktivist, bekannt als der 'Ghandei'. Sie sind von der Bevölkerung hoch angesehen, und ihre Lehren sind von vielen befolgt."
 
-cc_minor_protests_pacifist:0 "$cc_minor_protests_militarist$"
+ cc_minor_protests_pacifist:0 "$cc_minor_protests_militarist$"
  cc_minor_protests_pacifist_desc:0 "Nach der Festnahme eines angesehenen Aktivisten gibt es auf diesem Planeten kleine Proteste."
 
-cc_major_protests_pacifist:0 "$cc_major_protests_militarist$"
+ cc_major_protests_pacifist:0 "$cc_major_protests_militarist$"
  cc_major_protests_pacifist_desc:0 "Nach der Festnahme eines angesehenen Aktivisten gibt es auf diesem Planeten große Proteste."
 
  cc_pacifist_leader_visit:0 "Besuch des 'Ghandeis'"
@@ -201,8 +201,8 @@ cc_major_protests_pacifist:0 "$cc_major_protests_militarist$"
  cc_founders_memory_disrespected_1_pacifist:0 "Einheimischer pazifistischer Aktivist verachtet"
  cc_founders_memory_disrespected_1_pacifist_desc:0 "Die Bevölkerung ist entgeistert von der Weise, auf der der Staat einen einheimischen pazifistischen Aktivisten behandelt hat."
 
-cc_founders_memory_disrespected_2_pacifist:0 "$cc_founders_memory_disrespected_1_pacifist$"
-cc_founders_memory_disrespected_2_pacifist_desc:0 "$cc_founders_memory_disrespected_1_pacifist_desc$"
+ cc_founders_memory_disrespected_2_pacifist:0 "$cc_founders_memory_disrespected_1_pacifist$"
+ cc_founders_memory_disrespected_2_pacifist_desc:0 "$cc_founders_memory_disrespected_1_pacifist_desc$"
 
  cc_underground_pacifist_movement_1:0 "Pazifistische Untergrundbewegung"
  cc_underground_pacifist_movement_1_desc:0 "Eine Untergrundbewegung, die von einem regimekritischen pazifistischen Aktivisten geführt wird, ist auf diesem Planeten aktiv. Es versucht Ideen und Bräuche, die gegen die Idealen unseres Staates sind, zu verbreiten."
