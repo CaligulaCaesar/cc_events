@@ -13,7 +13,7 @@
 
  cc_colony_events.2.C:0 "Gib der Petition statt."
  cc_colony_events.2.D:0 "Was glaubt [cc_colony_leader.GetSheHe], wer [cc_colony_leader.GetSheHe] ist? Verhaftet [cc_colony_leader.GetIhnSieDE]!"
-cc_colony_events.2.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+ cc_colony_events.2.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 
 
  cc_colony_events.21.name:0 "Kleine Proteste auf [root.GetName]"
@@ -39,7 +39,7 @@ cc_colony_events.2.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 
  cc_colony_events.231.name:0 "Verhaftung von [cc_colony_leader.GetName] erfolgreich"
  cc_colony_events.231.desc:0 "Wir haben [cc_colony_leader.GetName] erfolgreich festgenommen. [cc_colony_leader.GetSheHeCap] steht jetzt unter Hausarrest auf [Root.Owner.Capital.GetName]. Jedoch gibt es immer noch weitverbreitete Proteste auf [Root.GetName], und es ist unklar, ob die Bevölkerung uns jemals wirklich vertrauen wird."
-cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
+ cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
 
  cc_colony_events.232.name:0 "Verhaftung von [cc_colony_leader.GetName] scheitert"
  cc_colony_events.232.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] festzunehmen, sind gescheitert. [cc_colony_leader.GetSheHeCap] hat [cc_colony_leader.GetHisHer]e treusten Anhänger zusammengebracht und eine Untergrundbewegung gegründet, durch der [cc_colony_leader.GetSheHe] anscheinend [root.GetName] von xenoistische Einflüsse verteidigen will. Wir können davon ausgehen, dass [cc_colony_leader.GetSheHe] unsere Behörden noch langfristig Probleme bereiten wird."
@@ -58,7 +58,7 @@ cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
  cc_colony_events.25.A: "Allerdings!"
  cc_colony_events.25.B: "Es ist zu teuer."
  cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
- cc_colony_events.251.name:0 "Militärakademie öffnet auf [root.GetName]"
+ cc_colony_events.251.name:0 "Militärakademie auf [root.GetName] eröffnet"
  cc_colony_events.251.desc:0 "Die Militärakademie zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe des [root.owner.GerRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
  cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
@@ -106,62 +106,62 @@ cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
 
  cc_colony_events.3.B:0 "Toleriere [cc_colony_leader.GetIhnSieDE]."
  cc_colony_events.3.C:0 "[cc_colony_leader.GetSheHeCap] ist ein Störenfried. Verhafte [cc_colony_leader.GetIhnSieDE]!"
-cc_colony_events.3.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+ cc_colony_events.3.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 
 
-cc_colony_events.31.name:0 "$cc_colony_events.21.name$"
+ cc_colony_events.31.name:0 "$cc_colony_events.21.name$"
  cc_colony_events.31.desc:0 "Nach der Verhaftung von [cc_colony_leader.GetName] gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die Anklagen, die wir [cc_colony_leader.GetIhmIhrDE] vorgeworfen haben. Es scheint, als wären [cc_colony_leader.GetHisHer]e Lehren doch nicht so verehrt wie wir dachten!"
 
-cc_colony_events.32.name:0 "$cc_colony_events.22.name$"
+ cc_colony_events.32.name:0 "$cc_colony_events.22.name$"
  cc_colony_events.32.desc:0 "Die Verhaftung von [cc_colony_leader.GetName] hat große Proteste auf [Root.GetName] ausgelöst. Es wird verlangt, dass [cc_colony_leader.GetSheHe] freigesetzt wird. Obwohl die meisten Demonstranten nicht gewalttätig geworden sind - sie protestieren für den Pazifismus - haben sie jedoch verschiedene Formen des gewaltfreien Protests angewandt, die für unsere Behörden höchst störend sind. Unsere lokalen Beamten haben uns nach Beratung gefragt, wie sie die Situation bewältigen sollen."
 
-cc_colony_events.32.A:0 "$cc_colony_events.22.A$"
-cc_colony_events.32.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+ cc_colony_events.32.A:0 "$cc_colony_events.22.A$"
+ cc_colony_events.32.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
  cc_colony_events.32.B:0 "Befreie [cc_colony_leader.GetIhnSieDE]."
 
 
-cc_colony_events.321.name:0 "$cc_colony_events.221.name$"
-cc_colony_events.321.desc:0 "$cc_colony_events.221.desc$"
+ cc_colony_events.321.name:0 "$cc_colony_events.221.name$"
+ cc_colony_events.321.desc:0 "$cc_colony_events.221.desc$"
 
-cc_colony_events.33.name:0 "$cc_colony_events.23.name$"
-cc_colony_events.33.desc:0 "$cc_colony_events.23.desc$"
-cc_colony_events.33.A:0 "$cc_colony_events.63.A$"
-cc_colony_events.33.B:0 "$cc_colony_events.63.B$"
+ cc_colony_events.33.name:0 "$cc_colony_events.23.name$"
+ cc_colony_events.33.desc:0 "$cc_colony_events.23.desc$"
+ cc_colony_events.33.A:0 "$cc_colony_events.63.A$"
+ cc_colony_events.33.B:0 "$cc_colony_events.63.B$"
  cc_colony_events.33.C:0 "Verfolge diese 'Ghandeier' mit unserer vollen Macht."
 
-cc_colony_events.331.name:0 "$cc_colony_events.231.name$"
+ cc_colony_events.331.name:0 "$cc_colony_events.231.name$"
  cc_colony_events.331.desc:0 "Wir haben [cc_colony_leader.GetName] erfolgreich festgenommen. [cc_colony_leader.GetSheHeCap] steht jetzt unter Hausarrest auf [Root.Owner.Capital.GetName]. Jedoch gibt es immer noch weitverbreitete Proteste und gewaltfreie Störungsaktionen auf [Root.GetName], und es ist unklar, ob die Bevölkerung uns jemals wirklich vertrauen wird."
-cc_colony_events.331.option:0 "$CC_GOODIGUESS$"
+ cc_colony_events.331.option:0 "$CC_GOODIGUESS$"
 
-cc_colony_events.332.name:0 "$cc_colony_events.232.name$"
+ cc_colony_events.332.name:0 "$cc_colony_events.232.name$"
  cc_colony_events.332.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] festzunehmen, sind gescheitert. [cc_colony_leader.GetSheHeCap] hat [cc_colony_leader.GetHisHer]e treusten Anhänger zusammengebracht und eine Untergrundbewegung gegründet, durch der [cc_colony_leader.GetSheHe] anscheinend [cc_colony_leader.GetHisHer]e Lehren (die mittlerweile durchaus anti-Establishment geworden sind) auf dem Planeten verbreiten will. Wir können davon ausgehen, dass [cc_colony_leader.GetSheHe] unsere Behörden noch langfristig Probleme bereiten wird."
-cc_colony_events.333.name:0 "$cc_colony_events.233.name$"
-cc_colony_events.333.desc:0 "$cc_colony_events.233.desc$"
+ cc_colony_events.333.name:0 "$cc_colony_events.233.name$"
+ cc_colony_events.333.desc:0 "$cc_colony_events.233.desc$"
 
-cc_colony_events.334.name:0 "$cc_colony_events.234.name$"
+ cc_colony_events.334.name:0 "$cc_colony_events.234.name$"
  cc_colony_events.334.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] aufzuspüren und hinzurichten, sind gescheitert. [cc_colony_leader.GetSheHeCap] hat [cc_colony_leader.GetHisHer]e treusten Anhänger zusammengebracht und eine Untergrundbewegung gegründet, durch der [cc_colony_leader.GetSheHe] anscheinend Frieden durch Unabhängigkeit von der [Root.Owner.GetName] gewinnen will. Leider haben einige verbitterte Führer [cc_colony_leader.GetHisHer]er Bewegung angefangen, die Anwendung von Gewalt zur Befreiung [Root.GetName]s von der "größeren Übel" der [root.owner.GetName] zu befürworten. Wir können langfristigen Tumult erwarten."
 
-cc_colony_events.34.name:0 "[cc_colony_leader.GetName]'s Fame spreads"
+ cc_colony_events.34.name:0 "[cc_colony_leader.GetName]s Ruhm steigt"
 cc_colony_events.34.desc:0 "Over the past 15 years, [cc_colony_leader.GetName] has been a leading figure on [Root.GetName]. [cc_colony_leader.GetSheHeCap] is very popular with the inhabitants, so much so that [cc_colony_leader.GetHisHer] reputation has spread. [cc_colony_leader.GetSheHeCap] is now seen as an inspiration by all peaceful-minded people in this part of the [root.owner.GetName]. In fact, [cc_colony_leader.GetSheHe] is planning a tour of worlds to visit [cc_colony_leader.GetHisHer] admirers!"
 
-cc_colony_events.341.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds complete"
+ cc_colony_events.341.name:0 "[cc_colony_leader.GetName]s Weltentour vorbei"
 cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the worlds in [cc_colony_leader.GetHisHer] sector of the [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] followers were overjoyed to have the chance to see and hear from the great [cc_colony_leader.GetSpeciesName] thinker, and are inspired by [cc_colony_leader.GetHisHer] example. [cc_colony_leader.GetHisHerCap] fame has reached new heights."
 
 
-cc_colony_events.342.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds ends in Tragedy"
+ cc_colony_events.342.name:0 "[cc_colony_leader.GetName]s Weltentour endet auf tragischer Weise"
 cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] was meeting with supporters on [random_visit_planet.GetName] when a half-crazed fanatic imperialist shot [cc_colony_leader.GetHimHer] down before [cc_colony_leader.GetHisHer] guards could react. Unfortunately, the crowd tore apart the assassin before she could be questioned. This has fuelled conspiracy theories, which claim that someone - perhaps even someone high in the [root.owner.GetSpeciesAdj] government - was behind the assassination. There are also claims that [root.owner.GetSpeciesAdj] authorities on [random_visit_planet.GetName] failed to provide [cc_colony_leader.GetName] with adequate security, thus allowing the tragedy to happen. As a result, the pacifist community in the [root.owner.GetName] is up in arms. The leadership [pacifist_faction.GetName] has met with government officials amidst the chaos and has made clear their upset, but also suggesting that, to soothe pacifists' hurt, [cc_colony_leader.GetName] should be given a state funeral and a great shrine should be built in [cc_colony_leader.GetHisHer] honour on [root.GetName]."
 cc_colony_events.342.A:0 "Do it. [cc_colony_leader.GetSheHeCap] deserves it."
  cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
-cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
+ cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
-cc_colony_events.343.name:0 "Congregational Centre opens on [root.GetName]"
+ cc_colony_events.343.name:0 "Pazifistisches Versammlungszentrum auf [root.GetName] eröffnet"
 cc_colony_events.343.desc:0 "The monument in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into a symbolic congregational site for pacifists in the [root.owner.GetName] and beyond."
 
-cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
+ cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
 cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special shrine in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetSheHe]'s life and teachings can be remembered."
-cc_colony_events.35.A:0 "Build a Monument to this exemplar citizen."
+ cc_colony_events.35.A:0 "Errichte ein Denkmal."
  cc_colony_events.35.B:0 "Es ist zu teuer."
-cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] was just a troublemaker. May [cc_colony_leader.GetHisHer] memory be forgotten."
+ cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] war bloß ein Störenfried. Dass man [cc_colony_leader.GetIhnSieDE] schnell vergisst!"
 
  cc_colony_events.35.C.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
 
@@ -193,10 +193,10 @@ cc_major_protests_pacifist:0 "$cc_major_protests_militarist$"
  cc_building_pacmonument_desc:0 "Ein Denkmal zur Ehre eines angesehenen pazifistischen Aktivisten wird auf diesem Planeten errichtet."
 
  cc_minor_pacmonument:0 "Denkmal eines pazifistischen Aktivisten"
-cc_minor_pacmonument_desc:0 "The memory of one of this planet's early colonists, a pacifist activist, is still held in high regard here, with many attending celebrations for the activist's official day each year."
+ cc_minor_pacmonument_desc:0 "Die Erinnerung an einem pazifistischen Aktivisten, der einer der ersten Kolonisten dieses Planeten war, ist noch geschätzt, und viele feiern jedes Jahr sein Namenstag."
 
-cc_pacifist_centre:0 "Congregational Pacifist Site"
-cc_pacifist_centre_desc:0 "The Monument in memory of an influential pacifist activist on this planet is a congregational site that their followers travel many light years to visit."
+ cc_pacifist_centre:0 "Pazifistisches Versammlungszentrum"
+ cc_pacifist_centre_desc:0 "Das Denkmal zur Ehre eines angesehenen pazifistischen Aktivisten auf diesem Planeten ist ein Versammlungszentrum für Pazifisten, die viele Lichtjahre reisen um es zu besuchen."
 
  cc_founders_memory_disrespected_1_pacifist:0 "Einheimischer pazifistischer Aktivist verachtet"
  cc_founders_memory_disrespected_1_pacifist_desc:0 "Die Bevölkerung ist entgeistert von der Weise, auf der der Staat einen einheimischen pazifistischen Aktivisten behandelt hat."
