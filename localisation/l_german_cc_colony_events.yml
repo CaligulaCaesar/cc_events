@@ -76,7 +76,7 @@ cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
 
  cc_underground_militarist_movement_1:0 "Militaristische Untergrundbewegung"
  cc_underground_militarist_movement_1_desc:0 "Eine Untergrundbewegung, die von einem pensionierten Marineoffizier geführt wird, ist auf diesem Planeten aktiv. Es versucht Ideen und Bräuche, die gegen die Idealen unseres Staates sind, zu verbreiten."
- cc_underground_militarist_movement_2:0 "Militaristische Untergrundbewegung"
+ cc_underground_militarist_movement_2:0 "Militaristische Widerstandsbewegung"
  cc_underground_militarist_movement_2_desc:0 "Eine Untergrundbewegung, die von einem pensionierten Marineoffizier geführt wird, ist auf diesem Planeten aktiv. Ihr endgültiges Ziel ist es, Unabhängigkeit von unserem Staat zu gewinnen."
 
  cc_militarists_offended:0 "Beleidigte Militaristen"
@@ -151,7 +151,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds ends in Tragedy"
 cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] was meeting with supporters on [random_visit_planet.GetName] when a half-crazed fanatic imperialist shot [cc_colony_leader.GetHimHer] down before [cc_colony_leader.GetHisHer] guards could react. Unfortunately, the crowd tore apart the assassin before she could be questioned. This has fuelled conspiracy theories, which claim that someone - perhaps even someone high in the [root.owner.GetSpeciesAdj] government - was behind the assassination. There are also claims that [root.owner.GetSpeciesAdj] authorities on [random_visit_planet.GetName] failed to provide [cc_colony_leader.GetName] with adequate security, thus allowing the tragedy to happen. As a result, the pacifist community in the [root.owner.GetName] is up in arms. The leadership [pacifist_faction.GetName] has met with government officials amidst the chaos and has made clear their upset, but also suggesting that, to soothe pacifists' hurt, [cc_colony_leader.GetName] should be given a state funeral and a great shrine should be built in [cc_colony_leader.GetHisHer] honour on [root.GetName]."
 cc_colony_events.342.A:0 "Do it. [cc_colony_leader.GetSheHeCap] deserves it."
-cc_pacmonument_will_be_built:0 "\nThe Monument will take 5 years to complete. It will add the modifier §Y$cc_pacifist_centre$§!, granting:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+ cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.343.name:0 "Congregational Centre opens on [root.GetName]"
@@ -160,7 +160,7 @@ cc_colony_events.343.desc:0 "The monument in [cc_colony_leader.GetName]'s honour
 cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
 cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special shrine in [cc_colony_leader.GetHisHer] honour where [cc_colony_leader.GetSheHe]'s life and teachings can be remembered."
 cc_colony_events.35.A:0 "Build a Monument to this exemplar citizen."
-cc_colony_events.35.B:0 "It's too expensive"
+ cc_colony_events.35.B:0 "Es ist zu teuer."
 cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] was just a troublemaker. May [cc_colony_leader.GetHisHer] memory be forgotten."
 
  cc_colony_events.35.C.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
@@ -171,45 +171,44 @@ cc_colony_events.351.desc:0 "The monument in [cc_colony_leader.GetName]'s honour
  cc_pacifists_offended:0 "Beleidigte Pazifisten"
  cc_pacifists_offended_desc:0 "Die pazifistische Bevölkerung dieses Planeten fühlt sich von der neuen Regime entfremdet."
 
-cc_pacifist_protectorate:0 "Pacifist Protectorate"
-cc_pacifist_protectorate_desc:0 "The owners of this planet made peace with the dissident pacifists by declaring the planet a Pacifist Protectorate."
+ cc_pacifist_protectorate:0 "Pazifistisches Protektorat"
+ cc_pacifist_protectorate_desc:0 "Die Herrscher dieses Planeten haben Frieden mit den regimekritischen Pazifisten geschlossen, indem sie den Planeten zu einem pazifistischen Protektorat gemacht haben."
 
-cc_founder_pacifist:0 "Prominent Pacifist Activist"
-cc_founder_pacifist_desc:0 "The Founding Citizen of this planet is a pacifist activist known as the 'Ghandei'. They are held in high esteem by the populace, and their teachings are widely followed."
+ cc_founder_pacifist:0 "Angesehener pazifistischer Aktivist"
+ cc_founder_pacifist_desc:0 "Die Gründerfigur dieses Planeten ist ein pazifistischer Aktivist, bekannt als der 'Ghandei'. Sie sind von der Bevölkerung hoch angesehen, und ihre Lehren sind von vielen befolgt."
 
 cc_minor_protests_pacifist:0 "$cc_minor_protests_militarist$"
-cc_minor_protests_pacifist_desc:0 "This Planet is experiencing minor protests following the arrest of one of a prominent activist."
+ cc_minor_protests_pacifist_desc:0 "Nach der Festnahme eines angesehenen Aktivisten gibt es auf diesem Planeten kleine Proteste."
 
 cc_major_protests_pacifist:0 "$cc_major_protests_militarist$"
-cc_major_protests_pacifist_desc:0 "This Planet is experiencing major protests following the arrest of one of a prominent activist."
+ cc_major_protests_pacifist_desc:0 "Nach der Festnahme eines angesehenen Aktivisten gibt es auf diesem Planeten große Proteste."
 
-cc_pacifist_leader_visit:0 "Visit by the 'Ghandei'"
-cc_pacifist_leader_visit_desc:0 "This planet was visited by a famous pacifist activist known as the 'Ghandei'."
+ cc_pacifist_leader_visit:0 "Besuch des 'Ghandeis'"
+ cc_pacifist_leader_visit_desc:0 "Dieser Planet wurde von dem 'Ghandei', einen berühmten pazifistischen Aktivisten, besucht."
 
-cc_mourning_pacifist:0 "Sorrow at Death of 'Ghandei'"
-cc_mourning_and_angry_pacifist:0 "Anger at Response to Death of 'Ghandei'"
+ cc_mourning_pacifist:0 "Trauer überm Tod des 'Ghandeis'"
+ cc_mourning_and_angry_pacifist:0 "Wut über Reaktion zum Tod des 'Ghandeis'"
 
-cc_building_pacmonument:0 "Constructing a Monument"
-cc_building_pacmonument_desc:0 "A Monument in honour of an influential pacifist activist is being built on this planet."
+ cc_building_pacmonument:0 "Errichtet ein Denkmal"
+ cc_building_pacmonument_desc:0 "Ein Denkmal zur Ehre eines angesehenen pazifistischen Aktivisten wird auf diesem Planeten errichtet."
 
-cc_minor_pacmonument:0 "Pacifist Activist's Monument"
+ cc_minor_pacmonument:0 "Denkmal eines pazifistischen Aktivisten"
 cc_minor_pacmonument_desc:0 "The memory of one of this planet's early colonists, a pacifist activist, is still held in high regard here, with many attending celebrations for the activist's official day each year."
 
 cc_pacifist_centre:0 "Congregational Pacifist Site"
 cc_pacifist_centre_desc:0 "The Monument in memory of an influential pacifist activist on this planet is a congregational site that their followers travel many light years to visit."
 
-cc_founders_memory_disrespected_1_pacifist:0 "Local Pacifist Activist Disrespected"
-cc_founders_memory_disrespected_1_pacifist_desc:0 "The population is disappointed at the manner in which the parent state treated a famous activist whose home was this planet."
+ cc_founders_memory_disrespected_1_pacifist:0 "Einheimischer pazifistischer Aktivist verachtet"
+ cc_founders_memory_disrespected_1_pacifist_desc:0 "Die Bevölkerung ist entgeistert von der Weise, auf der der Staat einen einheimischen pazifistischen Aktivisten behandelt hat."
 
-cc_founders_memory_disrespected_2_pacifist:0 "Local Pacifist Activist Disrespected"
-cc_founders_memory_disrespected_2_pacifist_desc:0 "The population is disappointed at the manner in which the parent state treated a famous activist whose home was this planet."
+cc_founders_memory_disrespected_2_pacifist:0 "$cc_founders_memory_disrespected_1_pacifist$"
+cc_founders_memory_disrespected_2_pacifist_desc:0 "$cc_founders_memory_disrespected_1_pacifist_desc$"
 
-cc_underground_pacifist_movement_1:0 "Underground Pacifist Movement"
-cc_underground_pacifist_movement_1_desc:0 "An underground movement centred around a dissident pacifist activist's teachings is active on this planet. It seeks to spread ideas that go against the ideals of our empire."
+ cc_underground_pacifist_movement_1:0 "Pazifistische Untergrundbewegung"
+ cc_underground_pacifist_movement_1_desc:0 "Eine Untergrundbewegung, die von einem regimekritischen pazifistischen Aktivisten geführt wird, ist auf diesem Planeten aktiv. Es versucht Ideen und Bräuche, die gegen die Idealen unseres Staates sind, zu verbreiten."
 
-cc_underground_pacifist_movement_2:0 "Underground Pacifist Resistance Movement"
-cc_underground_pacifist_movement_2_desc:0 "An underground resistance movement centred around a dissident pacifist activist's teachings is active on this planet. Its ultimate aim is to achieve peace through full independence from our empire. Unfortunately, in their bitterness at the situation, some elements of the movement have begun advocating the use of violence to free themselves from the "greater evil" of the parent state."
-
+ cc_underground_pacifist_movement_2:0 "Pazifistische Widerstandsbewegung"
+ cc_underground_pacifist_movement_2_desc:0 "Eine Untergrundbewegung, die von einem regimekritischen pazifistischen Aktivisten geführt wird, ist auf diesem Planeten aktiv. Ihr endgültiges Ziel ist es, Frieden durch Unabhängigkeit von dem Staat zu gewinnen. Leider haben einige verbitterte Führer der Bewegung angefangen, die Anwendung von Gewalt zur Befreiung des Planeten von der "größeren Übel" unseres Staates zu befürworten."
 
 #Xenophile
 
