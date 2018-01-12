@@ -13,7 +13,7 @@ is_valid_xenophilia_refugee_pop = {
 			is_country_type = default
 			NOT = { has_policy_flag = refugees_not_allowed } 
 			has_policy_flag = allows_im
-			root = {
+			prevprev = {
 				OR = { 
 					has_citizenship_type = { type = citizenship_full country = prev }
 					has_citizenship_type = { type = citizenship_caste_system country = prev }
@@ -27,7 +27,7 @@ is_valid_xenophilia_refugee_pop = {
 				}
 			}
 			any_owned_planet = {
-				habitability = { who = root value > 0.2 }
+				habitability = { who = prevprevprev value > 0.2 }
 				any_tile = {
 					has_blocker = no
 					has_pop = no

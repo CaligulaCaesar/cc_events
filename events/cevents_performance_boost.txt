@@ -841,6 +841,91 @@ event = {
 				}
 			}
 		}
+		#literally xenophile
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_policy_flag = bans_im_completely
+			}
+			every_owned_pop = {
+				limit = { is_valid_xenophilia_refugee_pop = yes }
+				set_timed_planet_flag = {
+					flag = is_valid_xenophilia_refugee_pop
+					days = 31
+				}
+			}
+		}
+		#Prominent IM
+		every_country = {
+			limit = {
+				is_country_type = default
+				
+				NOT = { has_country_flag = cc_recent_prominent_IM }
+				has_policy_flag = allows_im
+				
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+					}
+					has_a_happiness_gauge = yes
+					OR = {
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
+					}
+				}
+				any_owned_leader = {
+					NOR = {
+						leader_class = ruler
+						leader_of_faction = supremacist
+						leader_of_faction = isolationist
+						has_leader_flag = cc_married
+					}
+					is_same_species = prev
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_PIM_possible
+				days = 31
+			}
+		}
+		
+		#Xeno Sex Scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_country_flag = cc_recent_sex_scandal }
+		
+				OR = {
+					has_policy_flag = bans_im_completely
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+		
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+						is_robot_pop = no
+					}
+					has_a_happiness_gauge = yes
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_xeno_sex_scandal_possible
+				days = 31
+			}
+			every_owned_leader = {
+				limit = { leader_of_faction = xenoist }
+				set_timed_leader_flag = {
+					flag = cc_xenoist_leader
+					days = 31
+				}
+			}
+		}
 	}
 }
 
@@ -1124,4 +1209,103 @@ planet_event = {
 	}
 	
 	immediate = { planet_event = { id = cc_colony_events.100 } }
+}
+
+
+
+
+
+
+##Prominent Interspecies Marriage
+country_event = {
+	id = cc_events_performance.15
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = cc_eventperf_PIM_possible
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	immediate = { country_event = { id = cc_events_mod.16 } }
+}
+	
+
+#Xeno Sex Scandal
+country_event = {
+	id = cc_events_performance.16
+	title = cc_events_mod.17.name
+	desc = cc_events_mod.17.desc
+	
+	picture = GFX_evt_news_room
+	
+	trigger = {
+		has_country_flag = cc_eventperf_xeno_sex_scandal_possible
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		
+		modifier = {
+			factor = 0.8
+			has_country_flag = cc_eventperf_has_minority
+		}
+		modifier = {
+			factor = 0.9
+			has_policy_flag = bans_im_completely
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_faction = xenoist }
+		}
+		modifier = {
+			factor = 0.75
+			any_owned_leader = {
+				has_leader_flag = cc_xenoist_leader
+			}
+		}
+		modifier = {
+			factor = 0.5
+			exists = ruler
+			ruler = { has_leader_flag = cc_xenoist_leader }
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	immediate = {
+	
+		random_list = {
+			3 = {
+				country_event = { id = cc_events_mod.17 }
+				modifier = {
+					factor = 0
+					NOT = { exists = ruler }
+				}
+				modifier = {
+					factor = 0.75
+					exists = ruler
+					ruler = { leader_of_faction = supremacist }
+				}
+				modifier = {
+					factor = 3
+					exists = ruler
+					ruler = { leader_of_faction = xenoist }
+				}
+			}
+			4 = { country_event = { id = cc_events_mod.18 } }
+		}
+	}
 }

@@ -1575,12 +1575,11 @@ pop_event = {
 	hide_window = yes
 	
 	trigger = {	
+		has_pop_flag = is_valid_xenophilia_refugee_pop
 		exists = owner
 		owner = {
-			is_country_type = default
 			has_policy_flag = bans_im_completely
-		}	
-		is_valid_xenophilia_refugee_pop = yes
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1836,7 +1835,7 @@ country_event = {
 	}
 }
 
-
+#triggered in perf
 ##Prominent Interspecies Marriage
 country_event = {
 	id = cc_events_mod.16
@@ -1845,6 +1844,8 @@ country_event = {
 	
 	picture = GFX_evt_cc_alien_union
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 		
@@ -1858,33 +1859,20 @@ country_event = {
 			}
 			has_a_happiness_gauge = yes
 			OR = {
-				has_citizenship_type = { country = root type = citizenship_full }
-				has_citizenship_type = { country = root type = citizenship_limited }
-				has_citizenship_type = { country = root type = citizenship_caste_system }
-				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+				has_citizenship_type = { type = citizenship_full }
+				has_citizenship_type = { type = citizenship_limited }
+				has_citizenship_type = { type = citizenship_caste_system }
+				has_citizenship_type = { type = citizenship_caste_system_limited }
 			}
 		}
 		any_owned_leader = {
 			NOR = {
-				is_same_value = root.leader
+				leader_class = ruler
 				leader_of_faction = supremacist
 				leader_of_faction = isolationist
 				has_leader_flag = cc_married
 			}
 			is_same_species = root
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		
-		modifier = {
-			factor = 0.9
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
-			factor = 0.75
-			has_ethic = ethic_fanatic_xenophile
 		}
 	}
 	
@@ -1963,7 +1951,7 @@ country_event = {
 }
 
 
-
+#triggered in perf
 #Xeno Sex Scandal
 country_event = {
 	id = cc_events_mod.17
@@ -1972,6 +1960,8 @@ country_event = {
 	
 	picture = GFX_evt_news_room
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 		
@@ -1994,28 +1984,6 @@ country_event = {
 				is_robot_pop = no
 			}
 			has_a_happiness_gauge = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_minority
-		}
-		modifier = {
-			factor = 0.9
-			has_policy_flag = bans_im_completely
-		}
-		modifier = {
-			factor = 0.5
-			exists = ruler
-			ruler = { leader_of_faction = xenoist }
-		}
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
 	
@@ -2274,6 +2242,7 @@ country_event = {
 	}
 }
 
+#triggered in perf
 #Same, but for a random leader that isn't the ruler
 country_event = {
 	id = cc_events_mod.18
@@ -2282,6 +2251,8 @@ country_event = {
 	
 	picture = GFX_evt_news_room
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 
@@ -2302,32 +2273,6 @@ country_event = {
 				is_robot_pop = no
 			}
 			has_a_happiness_gauge = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 75
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_minority
-		}
-		modifier = {
-			factor = 0.9
-			has_policy_flag = bans_im_completely
-		}
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_fanatic_xenophobe
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { has_faction = xenoist }
-		}
-		modifier = {
-			factor = 0.75
-			any_owned_leader = {
-				leader_of_faction = xenoist
-			}
 		}
 	}
 	

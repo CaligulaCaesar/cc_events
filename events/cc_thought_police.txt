@@ -51,7 +51,13 @@ pop_event = {
 		if = {
 			limit = { is_valid_TP_refugee_pop = yes }
 			random_list = {
-				6 = { TP_refugee_pop_effect = yes }
+				6 = {
+					TP_refugee_pop_effect = yes
+					modifier = {
+						factor = 1.2
+						happiness < 0.2
+					}
+				}
 				4 = { kill_pop = yes }
 			}
 			else = { kill_pop = yes }
