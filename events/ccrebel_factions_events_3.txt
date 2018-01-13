@@ -2298,8 +2298,36 @@ country_event = {
 }
 
 
-
 #Factional Revolt Begins (needs a planet willing to revolt)
+#Performance event
+country_event = {
+	id = ccfaction.101
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = cc_factional_revolt_can_attempt
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+		modifier = {
+			factor = 0.75
+			has_country_flag = cc_factional_revolt_attempt_will_succeed
+		}
+		modifier = {
+			factor = 0.75
+			has_country_flag = cc_factional_revolt_attempt_2planets
+		}
+		modifier = {
+			factor = 0.75
+			has_country_flag = cc_factional_revolt_attempt_3planets
+		}
+	}
+	immediate = { country_event = { id = ccfaction.6 }
+}
+
+
+#Actual event
 country_event = {
 	id = ccfaction.6
 	title = ccfaction.6.name
@@ -2362,6 +2390,8 @@ country_event = {
 	
 	location = event_target:cc_rebel_faction_capital
 	
+	is_triggered_only = yes
+
 	trigger = {
 		has_factional_revolt_stage3 = yes
 		NOR = {
@@ -2375,82 +2405,6 @@ country_event = {
 			exists = controller
 			controller = { is_same_value = root }
 			has_modifier = cc_faction_acute_unrest
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 360
-		modifier = {
-			factor = 0.75
-			any_owned_planet = {
-				is_faction_stronghold = yes
-				unrest > 99
-				has_ground_combat = no
-				exists = controller
-				controller = { is_same_value = root }
-				has_modifier = cc_faction_acute_unrest
-			}
-		}
-		modifier = {
-			factor = 0.75
-			any_owned_planet = {
-				is_faction_stronghold = yes
-				unrest > 80
-				has_ground_combat = no
-				exists = controller
-				controller = { is_same_value = root }
-				has_modifier = cc_faction_acute_unrest
-				
-				root = {
-					any_owned_planet = {
-						NOT = { is_same_value = prevprev }
-						is_faction_stronghold = yes
-						unrest > 80
-						has_ground_combat = no
-						exists = controller
-						controller = { is_same_value = root }
-						has_modifier = cc_faction_acute_unrest
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			any_owned_planet = {
-				is_faction_stronghold = yes
-				unrest > 80
-				has_ground_combat = no
-				exists = controller
-				controller = { is_same_value = root }
-				has_modifier = cc_faction_acute_unrest
-				
-				root = {
-					any_owned_planet = {
-						NOT = { is_same_value = prevprev }
-						is_faction_stronghold = yes
-						unrest > 80
-						has_ground_combat = no
-						exists = controller
-						controller = { is_same_value = root }
-						has_modifier = cc_faction_acute_unrest
-						
-						root = {
-							any_owned_planet = {
-								NOR = {
-									is_same_value = prevprev
-									is_same_value = prevprevprevprev
-								}
-								is_faction_stronghold = yes
-								unrest > 80
-								has_ground_combat = no
-								exists = controller
-								controller = { is_same_value = root }
-								has_modifier = cc_faction_acute_unrest
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 	
@@ -4507,6 +4461,7 @@ country_event = {
 				flag = recent_unrest_event
 				years = 7
 			}
+			planet_event = { id = ccfaction.71 days = 30 }
 		}
 		random_owned_planet = {
 			limit = {
@@ -5218,9 +5173,52 @@ country_event = {
 }
 
 
-#MTTH event for sympathy revolts
+#Gatekeeper for sympathy revolts (better practice than an MTTH)
 planet_event = {
 	id = ccfaction.71
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_modifier = cc_breakaway_sympathy
+		owner = {
+			any_country = {
+				has_relation_flag = {
+					who = prev
+					flag = cc_breakaway_country
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			2 = {
+				planet_event = { id = ccfaction.72 }
+				modifier = {
+					factor = 0
+					NOT = {
+						AND = {
+							exists = controller
+							controller = { is_same_value = root.owner }
+							has_ground_combat = no
+							unrest > 80
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					unrest > 99
+				}
+			}
+			98 = { planet_event = { id = ccfaction.71 days = 30 } }
+		}
+	}
+}
+		
+	
+planet_event = {
+	id = ccfaction.72
 	title = ccfaction.62.name
 	desc = ccfaction.62.desc
 	
@@ -5228,13 +5226,7 @@ planet_event = {
 	
 	location = root
 	
-	mean_time_to_happen = {
-		months = 60
-		modifier = {
-			factor = 0.67
-			unrest > 99
-		}
-	}
+	is_triggered_only = yes
 	
 	trigger = {
 		exists = controller

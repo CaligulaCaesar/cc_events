@@ -2,6 +2,7 @@
 
 namespace = cc_luddite
 
+#triggered in performance
 planet_event = {
 	id = cc_luddite.1
 	title = cc_luddite.1.name
@@ -10,6 +11,8 @@ planet_event = {
 	picture = GFX_evt_organic_oppression
 	location = root
 	
+	is_triggered_only = yes
+
 	trigger = {
 		exists = owner
 		has_owner = yes
@@ -17,48 +20,23 @@ planet_event = {
 			is_country_type = default
 			has_policy_flag = robots_allowed
 			NOR = {
+				has_ethic = ethic_gestalt_consciousness
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
-				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = cc_luddite_movement
+				has_country_flag = cc_recent_luddite_movement
+				has_country_flag = cc_first_luddite_strike
 			}
 		}
 		unrest > 0
-		NOR = {
-			has_planet_flag = cc_luddite_strike
-			owner = {
-				OR = {
-					has_country_flag = cc_luddite_movement
-					has_country_flag = cc_recent_luddite_movement
-				}
-			}
-		}
+		NOT = { has_planet_flag = cc_luddite_strike }
 		any_owned_pop = { is_non_sapient_robot = yes }
 		any_owned_pop = {
 			has_ethic = ethic_spiritualist
 			has_citizenship_rights = yes
 			happiness < 0.4
-			NOT = { has_modifier = pop_recently_conquered }
 		}
 #		owner = { has_faction = traditionalist }
-	}
-	
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.67
-			has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
-		}
-	
-		modifier = {
-			factor = 0.85
-			owner = { has_faction = traditionalist }
-		}
-		
-		modifier = {
-			factor = 2.5
-			owner = { has_country_flag = cc_has_had_luddite_crisis }
-		}
 	}
 	
 	immediate = {
@@ -68,6 +46,12 @@ planet_event = {
 		}
 		save_event_target_as = first_luddite_planet
 		
+		owner = {
+			set_timed_country_flag = {
+				flag = cc_first_luddite_strike
+				years = 10
+			}
+		}
 	}
 
 	option = {
