@@ -1305,7 +1305,16 @@ country_event = {
 					ruler = { leader_of_faction = xenoist }
 				}
 			}
-			4 = { country_event = { id = cc_events_mod.18 } }
+			4 = {
+				country_event = { id = cc_events_mod.18 }
+				modifier = {
+					factor = 1.5
+					any_owned_leader = {
+						NOT = { leader_class = ruler }
+						leader_of_faction = xenoist
+					}
+				}
+			}
 		}
 	}
 }
