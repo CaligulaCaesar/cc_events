@@ -849,7 +849,7 @@ event = {
 			}
 			every_owned_pop = {
 				limit = { is_valid_xenophilia_refugee_pop = yes }
-				set_timed_planet_flag = {
+				set_timed_pop_flag = {
 					flag = is_valid_xenophilia_refugee_pop
 					days = 31
 				}
@@ -1098,16 +1098,14 @@ event = {
 						has_planet_flag = cc_eventperf_potential_ludditism_planet
 						owner = {
 							any_owned_planet = {
-								limit = {
-									has_planet_flag = cc_eventperf_potential_ludditism_planet
-									NOT = { is_same_value = prevprev }
-								}
+								has_planet_flag = cc_eventperf_potential_ludditism_planet
+								NOT = { is_same_value = prevprev }
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = has_country_flag = cc_eventperf_ludditism_2planets
+					flag = cc_eventperf_ludditism_2planets
 					days = 31
 				}
 				if = {
@@ -1116,18 +1114,14 @@ event = {
 							has_planet_flag = cc_eventperf_potential_ludditism_planet
 							owner = {
 								any_owned_planet = {
-									limit = {
-										has_planet_flag = cc_eventperf_potential_ludditism_planet
-										NOT = { is_same_value = prevprev }
-										owner = {
-											any_owned_planet = {
-												limit = {
-													has_planet_flag = cc_eventperf_potential_ludditism_planet
-													NOR = {
-														is_same_value = prevprev
-														is_same_value = prevprevprevprev
-													}
-												}
+									has_planet_flag = cc_eventperf_potential_ludditism_planet
+									NOT = { is_same_value = prevprev }
+									owner = {
+										any_owned_planet = {
+											has_planet_flag = cc_eventperf_potential_ludditism_planet
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
 										}
 									}
@@ -1136,7 +1130,7 @@ event = {
 						}
 					}
 					set_timed_country_flag = {
-						flag = has_country_flag = cc_eventperf_ludditism_3planets
+						flag = cc_eventperf_ludditism_3planets
 						days = 31
 					}
 					random_owned_planet = {
@@ -1150,20 +1144,16 @@ event = {
 								has_planet_flag = cc_eventperf_potential_ludditism_planet
 								owner = {
 									any_owned_planet = {
-										limit = {
-											has_planet_flag = cc_eventperf_potential_ludditism_planet
-											NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
-											NOT = { is_same_value = prevprev }
-											owner = {
-												any_owned_planet = {
-													limit = {
-														has_planet_flag = cc_eventperf_potential_ludditism_planet
-														NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-													}
+										has_planet_flag = cc_eventperf_potential_ludditism_planet
+										NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
+										NOT = { is_same_value = prevprev }
+										owner = {
+											any_owned_planet = {
+												has_planet_flag = cc_eventperf_potential_ludditism_planet
+												NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
+												NOR = {
+													is_same_value = prevprev
+													is_same_value = prevprevprevprev
 												}
 											}
 										}
@@ -1172,7 +1162,7 @@ event = {
 							}
 						}
 						set_timed_country_flag = {
-							flag = has_country_flag = cc_eventperf_ludditism_4planets
+							flag = cc_eventperf_ludditism_4planets
 							days = 31
 						}
 					}
@@ -1257,16 +1247,14 @@ event = {
 						has_planet_flag = cc_eventperf_potential_emancipation_planet
 						owner = {
 							any_owned_planet = {
-								limit = {
-									has_planet_flag = cc_eventperf_potential_emancipation_planet
-									NOT = { is_same_value = prevprev }
-								}
+								has_planet_flag = cc_eventperf_potential_emancipation_planet
+								NOT = { is_same_value = prevprev }
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = has_country_flag = cc_eventperf_emancipation_2planets
+					flag = cc_eventperf_emancipation_2planets
 					days = 31
 				}
 				if = {
@@ -1275,18 +1263,14 @@ event = {
 							has_planet_flag = cc_eventperf_potential_emancipation_planet
 							owner = {
 								any_owned_planet = {
-									limit = {
-										has_planet_flag = cc_eventperf_potential_emancipation_planet
-										NOT = { is_same_value = prevprev }
-										owner = {
-											any_owned_planet = {
-												limit = {
-													has_planet_flag = cc_eventperf_potential_emancipation_planet
-													NOR = {
-														is_same_value = prevprev
-														is_same_value = prevprevprevprev
-													}
-												}
+									has_planet_flag = cc_eventperf_potential_emancipation_planet
+									NOT = { is_same_value = prevprev }
+									owner = {
+										any_owned_planet = {
+											has_planet_flag = cc_eventperf_potential_emancipation_planet
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
 										}
 									}
@@ -1295,7 +1279,7 @@ event = {
 						}
 					}
 					set_timed_country_flag = {
-						flag = has_country_flag = cc_eventperf_emancipation_3planets
+						flag = cc_eventperf_emancipation_3planets
 						days = 31
 					}
 					random_owned_planet = {
@@ -1309,20 +1293,16 @@ event = {
 								has_planet_flag = cc_eventperf_potential_emancipation_planet
 								owner = {
 									any_owned_planet = {
-										limit = {
-											has_planet_flag = cc_eventperf_potential_emancipation_planet
-											NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
-											NOT = { is_same_value = prevprev }
-											owner = {
-												any_owned_planet = {
-													limit = {
-														has_planet_flag = cc_eventperf_potential_emancipation_planet
-														NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-													}
+										has_planet_flag = cc_eventperf_potential_emancipation_planet
+										NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
+										NOT = { is_same_value = prevprev }
+										owner = {
+											any_owned_planet = {
+												has_planet_flag = cc_eventperf_potential_emancipation_planet
+												NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
+												NOR = {
+													is_same_value = prevprev
+													is_same_value = prevprevprevprev
 												}
 											}
 										}
@@ -1331,7 +1311,7 @@ event = {
 							}
 						}
 						set_timed_country_flag = {
-							flag = has_country_flag = cc_eventperf_emancipation_4planets
+							flag = cc_eventperf_emancipation_4planets
 							days = 31
 						}
 					}
