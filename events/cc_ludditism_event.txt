@@ -1552,8 +1552,9 @@ country_event = {
 		}
 		set_timed_country_flag = {
 			flag = cc_luddite_movement
-			years = 10
+			days = 3600
 		}
+		country_event = { id = cc_luddite.999 days = 3601 }
 		set_timed_country_flag = {
 			flag = cc_recent_luddite_movement
 			years = 50
@@ -1996,6 +1997,21 @@ event = {
 				
 				planet_event = { id = cc_luddite.15 }
 			}
+		}
+	}
+}
+
+
+#stop luddism from recurring after 10 years of empire movement
+country_event = {
+	id = cc_luddite.999
+	hide_window = yes
+	is_triggered_only = yes
+		
+	immediate = {
+		every_owned_planet = { 
+			limit = { has_planet_flag = cc_luddite_strike }
+			remove_planet_flag = cc_luddite_strike
 		}
 	}
 }
