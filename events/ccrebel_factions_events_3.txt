@@ -4461,6 +4461,7 @@ country_event = {
 				flag = recent_unrest_event
 				years = 7
 			}
+			owner = { save_event_target_as = cc_faction_revolted_from_country_check }
 			planet_event = { id = ccfaction.71 days = 30 }
 		}
 		random_owned_planet = {
@@ -5181,7 +5182,9 @@ planet_event = {
 	
 	trigger = {
 		has_modifier = cc_breakaway_sympathy
+		NOT = { has_planet_flag = cc_has_tried_sympathy_revolt }
 		owner = {
+			is_same_value = event_target:cc_faction_revolted_from_country_check
 			any_country = {
 				has_relation_flag = {
 					who = prev
@@ -5193,7 +5196,7 @@ planet_event = {
 	
 	immediate = {
 		random_list = {
-			2 = {
+			12 = {
 				planet_event = { id = ccfaction.72 }
 				modifier = {
 					factor = 0
@@ -5211,7 +5214,7 @@ planet_event = {
 					unrest > 99
 				}
 			}
-			98 = { planet_event = { id = ccfaction.71 days = 30 } }
+			988 = { planet_event = { id = ccfaction.71 days = 30 } }
 		}
 	}
 }
@@ -5249,6 +5252,10 @@ planet_event = {
 		set_timed_planet_flag = {
 			flag = cc_revolution
 			days = 60
+		}
+		set_timed_planet_flag = {
+			flag = cc_has_tried_sympathy_revolt
+			days = 2400
 		}
 
 		random_country = {
