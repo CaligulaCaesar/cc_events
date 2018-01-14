@@ -10,43 +10,8 @@ pop_event = {
 	desc = OK
 	
 	hide_window = yes
-	
-	trigger = {
-	
-		has_pop_flag = cc_thought_police_target
-	
-		happiness < 0.4
-		
-		#these are safeguards to avoid changes between months
-		exists = owner
-		owner = { has_edict = cc_thought_police }
-		NOT = { has_ethic = ethic_authoritarian }
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		modifier = {
-			factor = 0.8
-			has_ethic = ethic_egalitarian
-		}
-#		modifier = { #left out for performance reasons. Bumped of getting away up a bit and the mtth down.
-#			factor = 0.8
-#			is_valid_TP_refugee_pop = yes
-#		}
-		modifier = {
-			factor = 0.8
-			happiness < 0.3
-		}
-		modifier = {
-			factor = 0.8
-			happiness < 0.2
-		}
-		modifier = {
-			factor = 0.8
-			happiness < 0.1
-		}
-	}
-	
+	is_triggered_only = yes
+
 	immediate = {
 		if = {
 			limit = { is_valid_TP_refugee_pop = yes }

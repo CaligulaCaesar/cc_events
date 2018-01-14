@@ -16,6 +16,7 @@ planet_event = {
 			owner = {
 				OR = {
 					has_country_flag = cc_recent_xeno_empire_clashes
+					has_country_flag = cc_recent_first_xeno_clashes
 					has_ethic = ethic_gestalt_consciousness
 				}
 			}
@@ -76,7 +77,13 @@ planet_event = {
 	}
 	
 	immediate = {
-		owner = { save_event_target_as = cc_owner }
+		owner = {
+			save_event_target_as = cc_owner
+			set_timed_country_flag = {
+				flag = cc_recent_first_xeno_clashes
+				years = 5
+			}
+		}
 		if = {
 			limit = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
 			owner.species = { save_event_target_as = species1 }

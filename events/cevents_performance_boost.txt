@@ -810,6 +810,11 @@ event = {
 			}
 			every_owned_pop = {
 				limit = {
+					happiness < 0.4
+					if = {
+						limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
+						NOT = { has_ethic = ethic_authoritarian }
+					}
 					if = {
 						limit = { owner = { has_ethic = ethic_spiritualist } }
 						NOT = { has_ethic = ethic_spiritualist }
@@ -823,7 +828,14 @@ event = {
 						NOT = { has_ethic = ethic_pacifist }
 					}
 					if = {
-						limit = { owner = { has_ethic = ethic_militarist } }
+						limit = {
+							owner = {
+								NOR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+							}
+						}
 						NOT = { has_ethic = ethic_militarist }
 					}
 					if = {
@@ -831,14 +843,18 @@ event = {
 						NOT = { has_ethic = ethic_xenophile }
 					}
 					if = {
-						limit = { owner = { has_ethic = ethic_xenophobe } }
+						limit = {
+							owner = {
+								NOR = {
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+						}
 						NOT = { has_ethic = ethic_xenophobe }
 					}
 				}
-				set_timed_pop_flag = {
-					flag = cc_thought_police_target
-					days = 31
-				}
+				pop_event = { id = cc_events_performance.22 }
 			}
 		}
 		#literally xenophile
@@ -849,9 +865,18 @@ event = {
 			}
 			every_owned_pop = {
 				limit = { is_valid_xenophilia_refugee_pop = yes }
-				set_timed_pop_flag = {
-					flag = is_valid_xenophilia_refugee_pop
-					days = 31
+				pop_event = { id = cc_events_performance.20 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_valid_civic = civic_fanatic_purifiers
+						has_policy_flag = purge_allowed
+					}
+				}
+				every_owned_pop = {
+					limit = { has_modifier = cc_secret_xenophile }
+					pop_event = { id = cc_events_performance.21 }
 				}
 			}
 		}
@@ -1318,10 +1343,31 @@ event = {
 				}						
 			}
 		}
+		
+		#More xenophile pop events
+		every_country = {
+			if = {
+				limit = { has_country_flag = cc_eventperf_has_minorities }
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = cc_literally_xenophile
+						has_a_happiness_gauge = yes
+					}
+					pop_event = { id = cc_events_performance.6 }
+				}
+				else = {
+					every_owned_pop = {
+						limit = {
+							has_pop_flag = cc_literally_xenophile_manifested
+							has_a_happiness_gauge = yes
+						}
+						pop_event = { id = cc_events_performance.7 }
+					}
+				}
+			}
+		}					
 	}
 }
-
-
 
 
 
@@ -1423,50 +1469,45 @@ country_event = {
 }
 
 
-	
 
+#converted from a 50 mtth into a monthly pulse
 pop_event = {
 	id = cc_events_performance.6
 	hide_window = yes
+	is_triggered_only = yes
 	
-	trigger = {
-		has_a_happiness_gauge = yes
-		has_pop_flag = cc_literally_xenophile
-		exists = owner
-		owner = { has_country_flag = cc_eventperf_has_minorities }
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		
-		modifier = {
-			factor = 0.8
-			exists = owner
-			owner = { has_country_flag = cc_has_had_interspecies_marriage }
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_xenophobe
-		}
-		modifier = {
-			factor = 0.5
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
-			factor = 0.8
-			
-			exists = owner
-			owner = { has_country_flag = cc_eventperf_founder_is_minority }
+	immediate = {
+		random_list = {
+			115 = {
+				pop_event = { id = cc_events_mod.10 }
+				modifier = {
+					factor = 1.25
+					owner = { has_country_flag = cc_has_had_interspecies_marriage }
+				}
+				modifier = {
+					factor = 0.5
+					has_ethic = ethic_xenophobe
+				}
+				modifier = {
+					factor = 2
+					has_ethic = ethic_xenophile
+				}
+				modifier = {
+					factor = 1.25
+					owner = { has_country_flag = cc_eventperf_founder_is_minority }
+				}
+			}			
+			99885 = { }
 		}
 	}
-	
-	immediate = { pop_event = { id = cc_events_mod.10 } }
 }
 
 
+#converted from a 50 mtth into a monthly pulse
 pop_event = {
 	id = cc_events_performance.7
 	hide_window = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		has_a_happiness_gauge = yes
@@ -1475,21 +1516,22 @@ pop_event = {
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minorities } }
 	}
 	
-	mean_time_to_happen = {
-		years = 50
-		modifier = {
-			factor = 2
-			exists = owner
-			owner = { has_policy_flag = allows_im }
-		}
-		modifier = {
-			factor = 0.5
-			exists = owner
-			owner = { NOT = { has_country_flag = cc_eventperf_a_small_minority } }
+	immediate = {
+		random_list = {
+			115 = {
+				pop_event = { id = cc_events_mod.11 }
+				modifier = {
+					factor = 0.5
+					owner = { has_policy_flag = allows_im }
+				}
+				modifier = {
+					factor = 2
+					owner = { NOT = { has_country_flag = cc_eventperf_a_small_minority } }
+				}
+			}			
+			99885 = { }
 		}
 	}
-	
-	immediate = { pop_event = { id = cc_events_mod.11 } }
 }
 	
 	
@@ -1927,6 +1969,78 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 					}
 				}
 			}
+		}
+	}
+}
+
+
+#Literally xenophile - replacing mtth
+pop_event = {
+	id = cc_events_performance.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			165 = {
+				pop_event = { id = cc_events_mod.13 }
+				modifier = {
+					factor = 1.33
+					NOT = { is_same_species = owner }
+				}
+			}			
+			99835 = { }
+		}
+	}
+}
+
+pop_event = {
+	id = cc_events_performance.21
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			115 = {
+				pop_event = { id = cc_events_mod.14 }
+				modifier = {
+					factor = 1.33
+					NOT = { is_same_species = owner }
+				}
+			}			
+			99885 = { }
+		}
+	}
+}
+
+#Thought Police
+pop_event = {
+	id = cc_events_performance.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			115 = {
+				pop_event = { id = cc_thought_police.1 }
+				modifier = {
+					factor = 1.25
+					has_ethic = ethic_egalitarian
+				}
+				modifier = {
+					factor = 1.25
+					happiness < 0.3
+				}
+				modifier = {
+					factor = 1.25
+					happiness < 0.2
+				}
+				modifier = {
+					factor = 1.25
+					happiness < 0.1
+				}
+			}			
+			99885 = { }
 		}
 	}
 }

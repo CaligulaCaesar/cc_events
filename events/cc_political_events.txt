@@ -1567,28 +1567,22 @@ country_event = {
 		}
 	}
 }
-	
+
+#triggered in performance
 # Pop escapes into a country where it can be 'literally xenophile'
 pop_event = {
 	id = cc_events_mod.13
 	title = OK
 	desc = OK
 	
+	is_triggered_only = yes
 	hide_window = yes
 	
 	trigger = {	
-		has_pop_flag = is_valid_xenophilia_refugee_pop
+		is_valid_xenophilia_refugee_pop = yes
 		exists = owner
 		owner = {
 			has_policy_flag = bans_im_completely
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 35
-		modifier = {
-			factor = 0.75
-			NOT = { is_same_species = owner }
 		}
 	}
 	
@@ -1613,6 +1607,7 @@ pop_event = {
 	}
 }
 
+#triggered in performance
 #pop purged for being 'literally xenophile'
 pop_event = {
 	id = cc_events_mod.14
@@ -1620,7 +1615,8 @@ pop_event = {
 	desc = OK
 	
 	hide_window = yes
-	
+	is_triggered_only = yes
+
 	trigger = {
 		has_modifier = cc_secret_xenophile
 		
@@ -1632,14 +1628,6 @@ pop_event = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_policy_flag = purge_allowed
 			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		modifier = {
-			factor = 0.75
-			NOT = { is_same_species = owner }
 		}
 	}
 	

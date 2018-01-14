@@ -48,7 +48,7 @@ country_edict = {
 			NOT = { any_owned_planet = { unrest > 0 } }
 		}	
 		modifier = {
-			factor = 0
+			factor = 0.5
 			NOT = { has_faction = progressive }
 		}
 		modifier = {
