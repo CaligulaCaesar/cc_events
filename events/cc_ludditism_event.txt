@@ -440,7 +440,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					15 = {
 						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 0.33
@@ -450,7 +450,7 @@ planet_event = {
 							}
 						}
 					}
-					92 = { }
+					985 = { }
 				}
 			}
 		}
@@ -464,7 +464,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					15 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 0.33
@@ -474,7 +474,7 @@ planet_event = {
 							}
 						}
 					}
-					92 = { }
+					985 = { }
 				}
 			}
 		}
@@ -661,7 +661,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					35 = {
+					9 = {
 						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 0.5
@@ -671,7 +671,7 @@ planet_event = {
 							}
 						}
 					}
-					965 = { }
+					991 = { }
 				}
 			}
 		}
@@ -685,7 +685,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					35 = {
+					9 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 0.5
@@ -695,7 +695,7 @@ planet_event = {
 							}
 						}
 					}
-					965 = { }
+					991 = { }
 				}
 			}
 		}
@@ -714,8 +714,8 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						10 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
-						90 = { }
+						8 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						92 = { }
 					}
 				}
 			}
@@ -882,14 +882,14 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = { planet_event = { id = cc_luddite.8 days = 15 random = 10 }
+					2 = { planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 2
 							NOT = { has_modifier = cc_planet_oppression }
 							owner = { has_country_flag = cc_ignoring_luddites }
 						}
 					}
-					992 = { }
+					998 = { }
 				}
 			}
 		}
@@ -903,14 +903,14 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					2 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 2
 							owner = { has_country_flag = cc_ignoring_luddites }
 						}
 					}
-					992 = { }
+					998 = { }
 				}
 			}
 		}
@@ -929,8 +929,8 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						5 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
-						95 = { }
+						2 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						98 = { }
 					}
 				}
 			}
