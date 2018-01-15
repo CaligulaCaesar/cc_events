@@ -11,26 +11,11 @@ country_event = {
 	
 	mean_time_to_happen = {
 		years = 100
-		modifier = {
-			factor = 1.5
-			any_country = {
-				OR = {
-					is_hostile_to = root
-					is_rival = root
-					is_domineering_to = root
-				}
-				relative_power = {
-					who = root
-					category = fleet
-					value = superior
-				}
-			}
-		}
 	}
 	
 	trigger = {
 		years_passed > 60
-		num_owned_planets > 5
+		num_owned_planets > 7
 		NOT = { has_country_flag = cc_has_had_blackmail }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = {
@@ -40,10 +25,17 @@ country_event = {
 					is_rival = root
 					is_domineering_to = root
 				}
-				relative_power = {
-					who = root
-					category = fleet
-					value = overwhelming
+				OR = {
+					relative_power = {
+						who = root
+						category = fleet
+						value = overwhelming
+					}
+					relative_power = {
+						who = root
+						category = fleet
+						value = overwhelming
+					}
 				}
 			}
 		}
