@@ -2667,6 +2667,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
+				NOT = { has_country_flag = cc_recent_xenophobe_incident }
 				any_relation = {
 					NOR = {
 						is_same_species = prev
@@ -2686,15 +2687,21 @@ planet_event = {
 			flag = cc_famous_leader
 			years = 25
 		}
-		
+
 		owner = {
 			set_country_flag = cc_has_had_xenophobe_incident
+
 			if = {
 				limit = {
 					NOR = {
 						has_ethic = ethic_xenophobe
 						has_ethic = ethic_fanatic_xenophobe
 					}
+				}
+
+				set_timed_country_flag = {
+					flag = cc_recent_xenophobe_incident
+					years = 25
 				}
 
 				random_relation = {
