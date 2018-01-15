@@ -70,21 +70,21 @@ country_event = {
 }
 planet_event = {
 	id = ccfaction.113
-	title = CCs_TEST_EVENT
-	desc = CCs_TEST_EVENT
+	title = OK
+	desc = OK
 	is_triggered_only = yes
 	
 	picture = GFX_evt_arguing_senate
 	
 	option = {
-		name = A
+		name = OK
 		add_modifier = {
 			modifier = cc_planet_test1
 			days = -1
 		}
 	}
 	option = {
-		name = B
+		name = OK
 		add_modifier = {
 			modifier = cc_planet_test2
 			days = -1
@@ -4461,7 +4461,6 @@ country_event = {
 				flag = recent_unrest_event
 				years = 7
 			}
-			owner = { save_event_target_as = cc_faction_revolted_from_country_check }
 			planet_event = { id = ccfaction.71 days = 30 }
 		}
 		random_owned_planet = {
@@ -5184,7 +5183,7 @@ planet_event = {
 		has_modifier = cc_breakaway_sympathy
 		NOT = { has_planet_flag = cc_has_tried_sympathy_revolt }
 		owner = {
-			is_same_value = event_target:cc_faction_revolted_from_country_check
+			has_modifier = cc_country_factional_unrest
 			any_country = {
 				has_relation_flag = {
 					who = prev
