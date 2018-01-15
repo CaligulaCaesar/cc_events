@@ -2050,7 +2050,7 @@ planet_event = {
 		
 		hidden_effect = {
 			random = {
-				chance = 50
+				chance = 33
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
@@ -2080,9 +2080,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -2285,9 +2291,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -2345,9 +2357,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 33
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -2670,6 +2688,7 @@ planet_event = {
 		}
 		
 		owner = {
+			set_country_flag = cc_has_had_xenophobe_incident
 			if = {
 				limit = {
 					NOR = {
@@ -2677,6 +2696,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
+
 				random_relation = {
 					limit = {
 						NOR = {
