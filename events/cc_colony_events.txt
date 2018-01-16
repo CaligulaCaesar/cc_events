@@ -1611,6 +1611,12 @@ planet_event = {
 			flag = cc_famous_leader
 			years = 25
 		}
+		owner = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = prosperity }
+				save_event_target_as = pacifist_faction
+			}
+		}
 	}
 	
 	option = {
@@ -4050,6 +4056,12 @@ planet_event = {
 		set_timed_planet_flag = {
 			flag = cc_famous_leader
 			years = 25
+		}
+		owner = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = traditionalist }
+				save_event_target_as = spiritualist_faction
+			}
 		}
 	}
 	
