@@ -1,0 +1,347 @@
+
+namespace = dpe_diplo
+
+
+country_event = {
+	id = dpe_diplo.1
+	title = dpe_diplo.1.name
+	desc = dpe_diplo.1.desc
+	
+	picture = GFX_evt_cc_military_ceremony
+	
+	trigger = {
+		is_country_type = default
+		NOT = { has_country_flag = dpe_recent_militarists_want_war }
+		is_at_war = no
+		is_subject = no
+		OR = {
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
+			AND = {
+				has_faction = imperialist
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = imperialist
+						support > 0.22
+					}
+					count = 1
+				}
+			}
+		}
+		years_of_peace = {
+			value > 15
+			delay = 20
+		}
+		has_federation = no
+		any_relation = {
+			root = {
+				is_rival = prev
+				can_declare_war = prev
+			}
+			any_owned_planet = {
+				is_neighbor_of = prevprev
+			}
+			NOR = {
+				relative_power = {
+					who = prev
+					category = fleet
+					value = superior
+				}
+				relative_power = {
+					who = prev
+					category = fleet
+					value = overwhelming
+				}
+			}
+			NOT = {
+				any_relation = {
+					has_communications = prevprev
+					OR = {
+						has_defensive_pact = prev
+						is_in_federation_with = prev
+					}
+					relative_power = {
+						who = prevprev
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 3
+			is_ai = yes
+		}
+	}
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_militarists_want_war
+			years = 60
+		}
+		random_relation = {
+			limit = {
+				root = {
+					is_rival = prev
+					can_declare_war = prev
+				}
+				any_owned_planet = {
+					is_neighbor_of = prevprev
+				}
+				NOR = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value = superior
+					}
+					relative_power = {
+						who = prev
+						category = fleet
+						value = overwhelming
+					}
+				}
+				NOT = {
+					any_relation = {
+						has_communications = prevprev
+						OR = {
+							has_defensive_pact = prev
+							is_in_federation_with = prev
+						}
+						relative_power = {
+							who = prevprev
+							category = fleet
+							value = overwhelming
+						}
+					}
+				}
+			}
+			save_event_target_as = enemy
+		}
+	}
+	
+	option = { #declare war immediately
+		name = dpe_diplo.1.A
+
+		declare_war = {
+			who = event_target:enemy
+		}
+		add_war_demand = {
+			type = "humiliate"
+			parameter:country = event_target:enemy
+			warscore_cost = 10
+			target = this
+			enemy = event_target:enemy
+		}
+		add_war_demand = {
+			type = "dpe_cede_borders"
+			parameter:country = event_target:enemy
+			warscore_cost = 75
+			target = this
+			enemy = event_target:enemy
+		}
+		ai_chance = {
+			modifier = {
+				factor = 0
+				event_target:enemy = {
+					any_relation = {
+						has_communications = prevprev
+						OR = {
+							has_defensive_pact = prev
+							is_in_federation_with = prev
+						}
+						relative_power = {
+							who = prevprev
+							category = fleet
+							value = superior
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2.5
+				event_target:enemy = {
+					OR = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value = inferior
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = pathetic
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #declare war on own terms
+		name = dpe_diplo.1.B
+		custom_tooltip = dpe_diplo.1.B.tooltip
+		
+		hidden_effect = { country_event = { id = dpe_diplo.2 days = 360 } }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = { #refuse
+		name = dpe_diplo.1.C
+		
+		add_modifier = {
+			modifier = dpe_ruler_looks_weak
+			days = 360
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_ruler_looks_weak_faction
+				days = 360
+			}
+		}
+		
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					is_neighbor_of = event_target:enemy
+					count_pops = {
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_militarist
+						}
+						count > 4
+					}
+				}
+				set_timed_planet_flag = {
+					flag = dpe_militarists_want_war_planet
+					days = 496
+				}
+				planet_event = { id = dpe_diplo.3 days = 45 }
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = dpe_diplo.2
+	title = dpe_diplo.2.name
+	desc = dpe_diplo.2.desc
+	
+	picture = GFX_evt_cc_military_ceremony
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		is_subject = no
+		has_federation = no
+		exists = event_target:enemy
+		event_target:enemy = {
+			is_rival = root
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		
+		add_modifier = {
+			modifier = dpe_ruler_looks_weak
+			days = 360
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_ruler_looks_weak_and_breaks_promises_faction
+				days = 360
+			}
+		}
+		
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					is_neighbor_of = event_target:enemy
+					count_pops = {
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_militarist
+						}
+						count > 4
+					}
+				}
+				set_timed_planet_flag = {
+					flag = dpe_militarists_want_war_planet
+					days = 496
+				}
+				planet_event = { id = dpe_diplo.3 days = 45 }
+			}
+		}
+	}
+}
+
+
+
+
+
+planet_event = {
+	id = dpe_diplo.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_planet_flag = dpe_militarists_want_war_planet
+		owner = {
+			is_at_war = no
+			is_subject = no
+			has_federation = no
+			exists = event_target:enemy
+			event_target:enemy = {
+				is_rival = prev
+			}
+		}
+		count_pops = {
+			limit = {
+				has_ethic = ethic_militarist
+				has_citizenship_rights = yes
+			}
+			count > 3
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			3 = {
+				planet_event = { id = dpe_diplo.4 }
+				modifier = {
+					factor = 1.5
+					unrest > 0
+				}
+				modifier = {
+					factor = 1.5
+					unrest > 30
+				}
+				modifier = {
+					factor = 2
+					count_pops = {
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_militarist
+						}
+						count > 6
+					}
+				}
+			}
+			97 = { planet_event = { id = dpe_diplo.3 days = 30 } }
+		}
+	}
+}
+
+
