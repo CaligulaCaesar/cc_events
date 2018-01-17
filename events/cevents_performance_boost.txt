@@ -1023,7 +1023,7 @@ event = {
 				exists = ruler
 				
 				any_owned_pop = {
-					is_same_species = root.ruler
+					is_same_species = prev.ruler
 					is_enslaved = yes
 				}
 			}
@@ -1037,12 +1037,12 @@ event = {
 			limit = {
 				any_country = {
 					OR = {
-						is_hostile_to = root
-						is_rival = root
-						is_domineering_to = root
+						is_hostile_to = prev
+						is_rival = prev
+						is_domineering_to = prev
 					}
 					relative_power = {
-						who = root
+						who = prev
 						category = fleet
 						value = overwhelming
 					}
@@ -1057,12 +1057,12 @@ event = {
 			limit = {
 				any_country = {
 					OR = {
-						is_hostile_to = root
-						is_rival = root
-						is_domineering_to = root
+						is_hostile_to = prev
+						is_rival = prev
+						is_domineering_to = prev
 					}
 					relative_power = {
-						who = root
+						who = prev
 						category = fleet
 						value = superior
 					}
@@ -1070,6 +1070,25 @@ event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_eventperf_has_superior_rival
+				days = 31
+			}
+		}
+		#Authoritarian Conspiracy
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_authority = auth_democratic
+				NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
+				has_country_flag = cc_eventperf_has_overwhelming_rival
+				is_at_war = no
+				has_faction = totalitarian
+				any_owned_leader = {
+					NOT = { leader_class = ruler }
+					leader_of_faction = totalitarian
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_can_have_authoritarian_conspiracy
 				days = 31
 			}
 		}
@@ -1405,5 +1424,22 @@ country_event = {
 	
 	immediate = {
 		country_event = { id = dpe_scandal.10 }
+	}
+}
+
+
+#Authoritarian Conspiracy
+country_event = {
+	id = cc_events_performance.12
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = cc_eventperf_can_have_authoritarian_conspiracy
+	}
+	
+	mean_time_to_happen = { years = 150 }
+	
+	immediate = {
+		country_event = { id = dpe_conspiracy.20 }
 	}
 }

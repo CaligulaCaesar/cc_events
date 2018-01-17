@@ -12,6 +12,9 @@ dpe_conspiracy.20.D:0 "Ignore [authoritarian.GetHimHer]."
 dpe_conspiracy.21.name:0 "[authoritarian.GetName] Arrested!"
 dpe_conspiracy.21.desc:0 "The Intelligence Services were able to track down and arrest [authoritarian.GetName]. [authoritarian.GetSheHeCap] is now on trial for treason against the state. Hopefully this is the last we hear of this matter."
 
+dpe_conspiracy.211.name:0 "[authoritarian.GetName] admits Conspiracy!"
+dpe_conspiracy.211.desc:0 "After facing rigorous questioning, [authoritarian.GetName] admitted to being part of a conspiracy against the [root.GetRulerTitle]. However, once we managed to get names from [authoritarian.GetHimHer], it quickly became clear that the majority of the conspirators had taken fright at [authoritarian.GetName]'s arrest and were now in voluntary exile in the [rival.GetName]. Our border forces have been instructed to prevent them from re-entering the [root.GetName]. [root.GetSpeciesAdj] citizens can breathe a sigh of relief."
+
 dpe_conspiracy.22.name:0 "Arrest of [authoritarian.GetName] fails!"
 dpe_conspiracy.22.desc:0 "Our intelligence services have failed to track down [authoritarian.GetName]. [authoritarian.GetHisHerCap] whereabouts - and current activities - are unknown. Who knows what [authoritarian.GetSheHe] is plotting?"
 
@@ -23,28 +26,41 @@ dpe_conspiracy.24.name:0 "$dpe_conspiracy.23.name$"
 dpe_conspiracy.24.desc:0 "Know that I have been planning this for a long time. Your only chance of saving face is to step down and let more able hands take over."
 dpe_conspiracy.24.A:0 "Not a chance. Arrest the traitor!"
 dpe_conspiracy.24.A.tooltip:0 "$dpe_conspiracy.20.A.tooltip$"
+dpe_conspiracy.24.A.response:0 "So be it."
 dpe_conspiracy.24.B:0 "Maybe [authoritarian.GetSheHe] is right..."
+dpe_conspiracy.24.B.tooltip:0 "$dpe_conspiracy.27.A.tooltip$"
+dpe_conspiracy.24.B.response:0 "Excellent. My faith in the [root.GetName] is restored."
 dpe_conspiracy_24.C:0 "Stay watchful."
 
 dpe_conspiracy.25.name:0 "Conspiracy Uncovered!"
 dpe_conspiracy.25.desc:0 "The [root.GetSpeciesAdj] intelligence agency has uncovered an extensive plot to establish an authoritarian form of government in the [root.GetName]. [authoritarian.GetName] is its figurehead, but it appears to have the support of a very large number of influential [root.GetSpeciesNamePlural], and an important faction within the military. If nothing is done, it is likely that they will soon be in a position to topple the current system and set up an authoritarian regime."
 dpe_conspiracy.25.A:0 "Enforce a full lock-down."
-dpe_state_in_lockdown:0 "State in Lockdown"
-dpe_state_in_lockdown_desc:0 "The government has locked down most non-essential activities in an effort to track down and suppress a conspiracy against it."
 dpe_conspiracy.25.A.tooltip:0 "The conspirators will find it hard to escape the lockdown."
 dpe_conspiracy.25.B:0 "Redouble our efforts to catch the plotters."
+
+dpe_state_in_lockdown:0 "State in Lockdown"
+dpe_state_in_lockdown_desc:0 "The government has locked down most non-essential activities in an effort to track down and suppress a conspiracy against it."
+dpe_state_in_lockdown_faction:0 "Civil Liberties Curtailed"
 
 dpe_conspiracy.26.name:0 "Conspiracy Ringleaders Arrested!"
 dpe_conspiracy.26.desc:0 "The [root.GetSpeciesAdj] intelligence agency and security services were able to pinpoint the identities and whereabouts of several ringleaders of the Authoritarian Conspiracy. With this information, they were able to arrest the plotters - among the [authoritarian.GetName] - and effectively snuff out the plot."
 
 dpe_conspiracy.27.name:0 "Conspiracy!"
 dpe_conspiracy.27.desc:0 ""I wish it had not come to this. But I will not let you destroy the [root.GetName]."\n\n[root.GetRulerTitle] [root.GetRulerName] turns around. It is [authoritarian.GetName], with a pistol pointed at [root.GetRulerName]. "Don't bother calling for the guards. They support me," [authoritarian.GetName] says coldly. "Now, you have two choices. You can sign this paper and give your support to the new regime, and then go into exile; or I will shoot you here and now. It is yours to decide.""
+dpe_conspiracy.27.desc.clever:0 ""I wish it had not come to this. But I will not let you destroy the [root.GetName]."\n\n[root.GetRulerTitle] [root.GetRulerName] turns around. It is [authoritarian.GetName], with a pistol pointed at [root.GetRulerName]. "You!"\n\n[authoritarian.GetName] smiles coldly. "Yes, me. You almost had us, you know. It was almost enough for me to doubt whether I was right to act as I am. Almost." [authoritarian.GetSheHeCap] sighs theatrically. "Don't bother calling for the guards. They support me. Now, you have two choices. You can sign this paper and give your support to the new regime, and then go into exile; or I will shoot you here and now. It is yours to decide.""
+dpe_conspiracy.27.desc.stupid:0 ""I wish it had not come to this. But I will not let you destroy the [root.GetName]."\n\n[root.GetRulerTitle] [root.GetRulerName] turns around. It is [authoritarian.GetName], with a pistol pointed at [root.GetRulerName].\n\n"I didn't see this coming," [root.GetRulerName] says.\n\n[authoritarian.GetName] smiles coldly. "That is exactly the problem. You have always been too weak to do what is necessary." [authoritarian.GetSheHeCap] sighs theatrically. "Don't bother calling for the guards. They support me. Now, you have two choices. You can sign this paper and give your support to the new regime, and then go into exile; or I will shoot you here and now. It is yours to decide.""
 dpe_conspiracy.27.A:0 "Go quietly."
+dpe_conspiracy.27.A.tooltip:0 "[root.GetRulerTitle] [root.GetRulerName] steps down and goes into exile."
 dpe_conspiracy.27.B:0 "Fight to the last."
 
 dpe_illegitimate_regime:0 "Illegitimate Regime"
 dpe_illegitimate_regime_desc:0 "The current regime came into power through a conspiracy that culminated in the assassination of the former ruler."
 
+dpe_seized_control_faction:0 "Seized Control"
+dpe_lost_control_faction:0 "Lost Control through Conspiracy"
+
+dpe_conspiracy.28.name:0 "Conspiracy Fizzles Out"
+dpe_conspiracy.28.desc:0 "There were whispers of sedition when [authoritarian.GetName] dropped off the radar. However, our intelligence services have remained loyal and have successfully foiled all attempted plots. Rebellious activities have died down, and [authoritarian.GetName] been sighted settling down into exile in the [rival.GetName], having resigned [authoritarian.GetHimHer]self to failure."
 
 
 

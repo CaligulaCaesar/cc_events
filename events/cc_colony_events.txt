@@ -2094,12 +2094,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
-				planet_event = { id = cc_colony_events.44 days = 5400 }
-			}
 			planet_event = { id = cc_colony_events.45 days = 10800 }
-
 		}
 		
 		trigger = {
@@ -2121,12 +2116,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
-				planet_event = { id = cc_colony_events.44 days = 5400 }
-			}
 			planet_event = { id = cc_colony_events.45 days = 10800 }
-			
 		}
 		
 		trigger = {
@@ -2360,10 +2350,6 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 33
-				planet_event = { id = cc_colony_events.44 days = 5400 }
-			}
 			planet_event = { id = cc_colony_events.45 days = 10800 }
 		}
 		
@@ -2622,12 +2608,7 @@ planet_event = {
 			days = 1800
 		}
 		
-		if = {
-			limit = { has_planet_flag = cc_famous_leader }
-			custom_tooltip = cc_xenophile_institute_will_be_built
-			
-			else = { custom_tooltip = cc_minor_xenophile_institute_will_be_built }
-		}
+		custom_tooltip = cc_xenophile_institute_will_be_built
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.451 days = 1800 } }
 		
@@ -2726,7 +2707,7 @@ planet_event = {
 		name = CCGOODGOOD
 		
 		add_modifier = {
-			modifier = cc_minor_xenophile_institute
+			modifier = cc_xenophile_institute
 			days = -1
 		}
 		hidden_effect = { remove_modifier = cc_founder_xenophile }

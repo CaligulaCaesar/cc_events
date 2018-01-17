@@ -1,0 +1,599 @@
+
+namespace = dpe_conspiracy
+
+#Triggered in Performance
+country_event = {
+	id = dpe_conspiracy.20
+	title = dpe_conspiracy.20.name
+	desc = dpe_conspiracy.20.desc
+	
+	picture = GFX_alien_propaganda
+	
+	trigger = {
+		is_country_type = default
+		has_authority = auth_democratic
+		NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
+		any_country = {
+			OR = {
+				is_hostile_to = root
+				is_rival = root
+				is_domineering_to = root
+			}
+			relative_power = {
+				who = root
+				category = fleet
+				value = overwhelming
+			}
+		}
+		is_at_war = no
+		has_faction = totalitarian
+		any_owned_leader = {
+			NOT = { leader_class = ruler }
+			leader_of_faction = totalitarian
+		}
+	}
+	
+	immediate = {
+		random_owned_leader = {
+			limit = { leader_of_faction = totalitarian }
+			save_event_target_as = authoritarian
+			
+			exile_leader_as = dpe_authoritarian_conspirator
+		}
+		set_timed_country_flag = {
+			flag = cc_recent_authoritarian_conspiracy
+			years = 50
+		}
+		country_event = { id = dpe_conspiracy.28 days = 360 }
+	}
+	
+	option = {
+		name = dpe_conspiracy.20.A
+		custom_tooltip = dpe_conspiracy.20.A.tooltip
+		
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_conspiracy.21 days = 45 } }
+				1 = { country_event = { id = dpe_conspiracy.22 days = 60 } }
+			}
+		}
+	}
+	option = {
+		name = dpe_conspiracy.20.B
+		
+		hidden_effect = {
+			country_event = { id = dpe_conspiracy.23 days = 10 }
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = dpe_conspiracy.20.C
+		
+		shift_ethic = ethic_authoritarian
+		change_government = { authority = auth_dictatorial }
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = totalitarian }
+			add_modifier = { modifier = embraced_faction days = 3600 }
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = { NOT = { is_same_value = prevprev } }
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = dpe_authoritarian_conspiracy_chain_ended
+				years = 1
+			}
+		}
+		
+		trigger = {
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = totalitarian
+					support > 0.15
+				}
+				count = 1
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 0
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = totalitarian
+							support > 0.2
+						}
+						count = 1
+					}
+				}
+			}
+		}				
+	}
+	option = {
+		name = dpe_conspiracy.20.D
+
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = dpe_didnt_bother_on_conspiracy
+				days = 361
+			}
+			country_event = { id = dpe_conspiracy.27 days = 360 }
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = dpe_conspiracy.21
+	title = dpe_conspiracy.21.name
+	desc = dpe_conspiracy.21.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = { id = dpe_conspiracy.211 days = 30 }			
+	}
+	option = { name = CCEXCELLENT }
+}
+
+country_event = {
+	id = dpe_conspiracy.211
+	title = dpe_conspiracy.211.name
+	desc = dpe_conspiracy.211.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_authoritarian_conspiracy_chain_ended
+			years = 1
+		}
+		if = {
+			limit = {
+				any_country = {
+					is_country_type = default
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = default
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
+				}
+				save_event_target_as = rival
+			}
+			
+			else = {
+				random_country = {
+					limit = {
+						is_country_type = default
+						NOR = {
+							has_ethic = ethic_gestalt_consciousness
+							has_ethic = ethic_fanatic_xenophobe
+							is_in_federation_with = root
+						}
+					}
+					save_event_target_as = rival
+				}
+			}
+		}					
+	}
+	option = { name = CCEXCELLENT }
+}
+
+country_event = {
+	id = dpe_conspiracy.22
+	title = dpe_conspiracy.22.name
+	desc = dpe_conspiracy.22.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = dpe_conspiracy.25 days = 180 } }
+			1 = { country_event = { id = dpe_conspiracy.27 days = 270 } }
+		}
+	}
+	option = { name = UNFORTUNATE }
+}
+
+
+country_event = {
+	id = dpe_conspiracy.23
+	title = dpe_conspiracy.23.name
+	desc = dpe_conspiracy.23.desc
+	picture = GFX_evt_cc_espionage
+	diplomatic = yes
+
+	picture_event_data = { #maybe check how this looks
+		portrait = event_target:authoritarian
+		room = root.ruler
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = dpe_conspiracy.23.option
+		hidden_effect = { country_event = { id = dpe_conspiracy.24 } }
+	}
+}
+
+country_event = {
+	id = dpe_conspiracy.24
+	title = dpe_conspiracy.24.name
+	desc = dpe_conspiracy.24.desc
+	picture = GFX_evt_cc_espionage
+	diplomatic = yes
+
+	picture_event_data = { #maybe check how this looks
+		portrait = event_target:authoritarian
+		room = root.ruler
+	}
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = dpe_conspiracy.24.A
+		custom_tooltip = dpe_conspiracy.24.A.tooltip
+		
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_conspiracy.21 days = 45 } }
+				1 = { country_event = { id = dpe_conspiracy.22 days = 60 } }
+			}
+		}
+		
+		response_text = dpe_conspiracy.24.A.response
+	}
+	option = {
+		name = dpe_conspiracy.24.B
+		
+		custom_tooltip = dpe_conspiracy.24.B.tooltip
+		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		
+		shift_ethic = ethic_authoritarian
+		change_government = { authority = auth_dictatorial }
+		
+		set_leader = dpe_authoritarian_conspirator
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = totalitarian }
+			add_modifier = { modifier = embraced_faction days = 3600 }
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = { NOT = { is_same_value = prevprev } }
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = dpe_authoritarian_conspiracy_chain_ended
+				years = 1
+			}
+		}
+		
+		response_text = dpe_conspiracy.24.B.response
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = totalitarian
+							support > 0.15
+						}
+						count = 1
+					}
+				}
+			}
+		}				
+	}
+	option = {
+		name = dpe_conspiracy.24.C
+
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_conspiracy.25 days = 180 } }
+				2 = { country_event = { id = dpe_conspiracy.27 days = 270 } }
+			}
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = dpe_conspiracy.25
+	title = dpe_conspiracy.25.name
+	desc = dpe_conspiracy.25.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dpe_conspiracy.25.A
+		custom_tooltip = dpe_conspiracy.25.A.tooltip
+		
+		add_modifier = {
+			modifier = dpe_state_in_lockdown
+			days = 180
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = progressive }
+			add_modifier = {
+				modifier = dpe_state_in_lockdown_faction
+				days = 180
+			}
+		}
+			
+		
+		hidden_effect = {
+			random_list = {
+				3 = { country_event = { id = dpe_conspiracy.26 days = 90 } }
+				1 = { country_event = { id = dpe_conspiracy.27 days = 90 } }
+			}
+		}
+		
+		ai_chance = {
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+		}
+	}
+	option = {
+		name = dpe_conspiracy.25.B
+		
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_conspiracy.26 days = 90 } }
+				1 = { country_event = { id = dpe_conspiracy.27 days = 90 } }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_conspiracy.26
+	title = dpe_conspiracy.26.name
+	desc = dpe_conspiracy.26.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_authoritarian_conspiracy_chain_ended
+			years = 1
+		}				
+	}
+	option = { name = CCEXCELLENT }
+}
+
+
+country_event = {
+	id = dpe_conspiracy.27
+	title = dpe_conspiracy.27.name
+	desc = {
+		trigger = {
+			NOR = {
+				has_country_flag = dpe_didnt_bother_on_conspiracy
+				has_country_flag = dpe_uncovered_authoritarian_conspiracy
+			}
+			text = dpe_conspiracy.27.desc
+		}
+	}
+	desc = {
+		trigger = { has_country_flag = dpe_uncovered_authoritarian_conspiracy }
+		text = dpe_conspiracy.27.desc.clever
+	}
+	desc = {
+		trigger = { has_country_flag = dpe_didnt_bother_on_conspiracy }
+		text = dpe_conspiracy.27.desc.stupid
+	}
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_faction = totalitarian
+		exists = event_target:authoritarian
+		any_country = {
+			OR = {
+				is_hostile_to = root
+				is_rival = root
+				is_domineering_to = root
+			}
+			relative_power = {
+				who = root
+				category = fleet
+				value = overwhelming
+			}
+		}
+	}
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_authoritarian_conspiracy_chain_ended
+			years = 1
+		}
+	}
+	
+	option = {
+		name = dpe_conspiracy.27.A
+		custom_tooltip = dpe_conspiracy.27.A.tooltip
+		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		shift_ethic = ethic_authoritarian
+		change_government = { authority = auth_dictatorial }
+		set_leader = dpe_authoritarian_conspirator
+		random_pop_faction = {
+			limit = { is_pop_faction_type = totalitarian }
+			add_modifier = {
+				modifier = dpe_seized_control_faction
+				days = 3600
+			}
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = {
+							NOR = {
+								is_same_value = prevprev
+								is_pop_faction_type = progressive
+							}
+						}
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = progressive }
+			add_modifier = {
+				modifier = dpe_lost_control_faction
+				days = 3600
+			}
+		}
+	}
+	option = {
+		name = dpe_conspiracy.27.B
+		kill_leader = { type = ruler }
+		add_modifier = {
+			modifier = dpe_illegitimate_regime
+			days = 4800
+		}
+		shift_ethic = ethic_authoritarian
+		change_government = { authority = auth_dictatorial }
+		set_leader = dpe_authoritarian_conspirator
+		random_pop_faction = {
+			limit = { is_pop_faction_type = totalitarian }
+			add_modifier = {
+				modifier = dpe_seized_control_faction
+				days = 3600
+			}
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = {
+							NOR = {
+								is_same_value = prevprev
+								is_pop_faction_type = progressive
+							}
+						}
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = progressive }
+			add_modifier = {
+				modifier = dpe_lost_control_faction
+				days = 3600
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_conspiracy.28
+	title = dpe_conspiracy.28.name
+	desc = dpe_conspiracy.28.desc
+	picture = GFX_evt_cc_espionage
+	
+	is_triggered_only = yes
+	
+	trigger = { NOT = { has_country_flag = dpe_authoritarian_conspiracy_chain_ended } }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					is_country_type = default
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = default
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
+				}
+				save_event_target_as = rival
+			}
+			
+			else = {
+				random_country = {
+					limit = {
+						is_country_type = default
+						NOR = {
+							has_ethic = ethic_gestalt_consciousness
+							has_ethic = ethic_fanatic_xenophobe
+							is_in_federation_with = root
+						}
+					}
+					save_event_target_as = rival
+				}
+			}
+		}					
+	}
+	option = { name = CCEXCELLENT }
+}
