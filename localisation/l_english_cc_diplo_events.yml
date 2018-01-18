@@ -1,0 +1,31 @@
+﻿l_english:
+
+dpe_diplo.1.name:0 "The Populace begs for War"
+dpe_diplo.1.desc:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], whose leaders have recently been openly derisive about the [root.GetSpeciesNamePlural], claiming that we are cowardly and have no honour. The outraged population demands war."
+dpe_diplo.1.A:0 "Declare War."
+dpe_diplo.1.A.tooltip:0 "The war demands will be $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
+dpe_diplo.1.B: "Patience. We will declare war soon on our own terms."
+dpe_diplo.1.B.tooltip:0 "This will allow you to choose War Demands. If you wait for more than a year before declaring war, militarists in the [root.GetName] will be upset."
+dpe_diplo.1.C:0 "War is too risky right now."
+
+#B + No war declaration in a year
+dpe_diplo.2.name:0 "Broken Promises"
+dpe_diplo.2.desc:0 "The nationalists are disappointed that you have failed to keep your promises of declaring war on the [enemy.GetName]. They feel that the [root.GetName] has been humiliated, and that they, as [root.GetSpeciesNamePlural], can no longer hold their heads high among their peers. As a result, a significant number of citizens have turned against the current government."
+
+#C or follow-up to .2:
+dpe_diplo.4.name:0 "Border Incident"
+dpe_diplo.4.desc:0 "Dismayed at the refusal of the [root.owner.GetName] to make war on the [enemy.GetName], some hardcore jingoists on [root.GetName] hijacked an old cruiser that had been stationed there and flew it into the [enemy.GetName], shooting down several merchant ships and a mining outpost before it was driven away. [enemy.GetSpeciesAdj] authorities are furious, and demand that the perpetrators be handed over and an indemnity be paid. On the other hand, the [root.owner.GetSpeciesAdj] population is rallying behind the hijackers, calling the heroes and demanding further action against the [enemy.GetName].\n\nWhat action should be taken?"
+dpe_diplo.4.A:0 "We shall give them their war."
+dpe_diplo.4.B:0 "Surrender the hijackers and pay the indemnity."
+
+dpe_ruler_looks_weak:0 "Government looks weak"
+dpe_ruler_looks_weak_desc:0 "The government looks weak, as it refused to declare war on its enemies to restore the nation's honour."
+dpe_ruler_looks_weak_faction:0 "Weak and cowardly government"
+dpe_ruler_looks_weak_and_breaks_promises_faction:0 "Weak, cowardly and lying government"
+
+war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
+war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
+war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
+war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
+war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
+war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"

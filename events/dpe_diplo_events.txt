@@ -129,6 +129,14 @@ country_event = {
 				}
 			}
 			save_event_target_as = enemy
+			
+			every_owned_planet = {
+				limit = { is_neighbor_of = prevprev }
+				set_timed_planet_flag = {
+					flag = dpe_will_cede_in_war
+					days = 5
+				}
+			}
 		}
 	}
 	
@@ -138,21 +146,31 @@ country_event = {
 		declare_war = {
 			who = event_target:enemy
 		}
-		custom_tooltip = dpe_diplo.1.A
-		
-		add_war_demand = {
-			type = "humiliate"
-			parameter:country = event_target:enemy
-			warscore_cost = 10
-			target = this
-			enemy = event_target:enemy
+		custom_tooltip = dpe_diplo.1.A.tooltip
+		tooltip = {
+			event_target:enemy = {
+				every_owned_planet = {
+					limit = { has_planet_flag = dpe_will_cede_in_war }
+					set_owner = root
+				}
+			}
 		}
-		add_war_demand = {
-			type = "dpe_cede_borders"
-			parameter:country = event_target:enemy
-			warscore_cost = 75
-			target = this
-			enemy = event_target:enemy
+		
+		hidden_effect = {
+			add_war_demand = {
+				type = "humiliate"
+				parameter:country = event_target:enemy
+				warscore_cost = 10
+				target = this
+				enemy = event_target:enemy
+			}
+			add_war_demand = {
+				type = "dpe_cede_borders"
+				parameter:country = event_target:enemy
+				warscore_cost = 75
+				target = this
+				enemy = event_target:enemy
+			}
 		}
 		ai_chance = {
 			modifier = {
