@@ -57,12 +57,13 @@ country_event = {
 				1 = { country_event = { id = dpe_conspiracy.22 days = 60 } }
 			}
 		}
+		ai_chance = { factor = 1.5 }
 	}
 	option = {
 		name = dpe_conspiracy.20.B
 		
 		hidden_effect = {
-			country_event = { id = dpe_conspiracy.23 days = 10 }
+			country_event = { id = dpe_conspiracy.23 days = 5 }
 		}
 		
 		ai_chance = { factor = 0 }
@@ -71,7 +72,37 @@ country_event = {
 		name = dpe_conspiracy.20.C
 		
 		shift_ethic = ethic_authoritarian
-		change_government = { authority = auth_dictatorial }
+
+		if = {
+			limit = { has_civic = civic_mechanists }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_mechanists
+					civic = civic_cutthroat_politics
+				}
+			}
+			
+			else = {
+				if = {
+					limit = { has_civic = civic_syncretic_evolution }
+					change_government = {
+						authority = auth_dictatorial
+						civics = {
+							civic = civic_syncretic_evolution
+							civic = civic_cutthroat_politics
+						}
+					}
+					
+					else = {
+						change_government = {
+							authority = auth_dictatorial
+							civics = random
+						}
+					}
+				}
+			}
+		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
@@ -103,6 +134,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				NOT = {
@@ -236,9 +268,8 @@ country_event = {
 	picture = GFX_evt_cc_espionage
 	diplomatic = yes
 
-	picture_event_data = { #maybe check how this looks
-		portrait = event_target:authoritarian
-		room = root.ruler
+	picture_event_data = {
+		room = no_video_feed_room
 	}
 
 	is_triggered_only = yes
@@ -256,9 +287,8 @@ country_event = {
 	picture = GFX_evt_cc_espionage
 	diplomatic = yes
 
-	picture_event_data = { #maybe check how this looks
-		portrait = event_target:authoritarian
-		room = root.ruler
+	picture_event_data = {
+		room = no_video_feed_room
 	}
 
 	is_triggered_only = yes
@@ -284,7 +314,36 @@ country_event = {
 		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
 		
 		shift_ethic = ethic_authoritarian
-		change_government = { authority = auth_dictatorial }
+		if = {
+			limit = { has_civic = civic_mechanists }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_mechanists
+					civic = civic_cutthroat_politics
+				}
+			}
+			
+			else = {
+				if = {
+					limit = { has_civic = civic_syncretic_evolution }
+					change_government = {
+						authority = auth_dictatorial
+						civics = {
+							civic = civic_syncretic_evolution
+							civic = civic_cutthroat_politics
+						}
+					}
+					
+					else = {
+						change_government = {
+							authority = auth_dictatorial
+							civics = random
+						}
+					}
+				}
+			}
+		}
 		
 		set_leader = dpe_authoritarian_conspirator
 
@@ -464,7 +523,36 @@ country_event = {
 		custom_tooltip = dpe_conspiracy.27.A.tooltip
 		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
 		shift_ethic = ethic_authoritarian
-		change_government = { authority = auth_dictatorial }
+		if = {
+			limit = { has_civic = civic_mechanists }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_mechanists
+					civic = civic_cutthroat_politics
+				}
+			}
+			
+			else = {
+				if = {
+					limit = { has_civic = civic_syncretic_evolution }
+					change_government = {
+						authority = auth_dictatorial
+						civics = {
+							civic = civic_syncretic_evolution
+							civic = civic_cutthroat_politics
+						}
+					}
+					
+					else = {
+						change_government = {
+							authority = auth_dictatorial
+							civics = random
+						}
+					}
+				}
+			}
+		}
 		set_leader = dpe_authoritarian_conspirator
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
@@ -503,7 +591,36 @@ country_event = {
 			days = 4800
 		}
 		shift_ethic = ethic_authoritarian
-		change_government = { authority = auth_dictatorial }
+		if = {
+			limit = { has_civic = civic_mechanists }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_mechanists
+					civic = civic_cutthroat_politics
+				}
+			}
+			
+			else = {
+				if = {
+					limit = { has_civic = civic_syncretic_evolution }
+					change_government = {
+						authority = auth_dictatorial
+						civics = {
+							civic = civic_syncretic_evolution
+							civic = civic_cutthroat_politics
+						}
+					}
+					
+					else = {
+						change_government = {
+							authority = auth_dictatorial
+							civics = random
+						}
+					}
+				}
+			}
+		}
 		set_leader = dpe_authoritarian_conspirator
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }

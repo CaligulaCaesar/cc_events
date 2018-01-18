@@ -825,7 +825,7 @@ country_event = {
 				kill_leader = { type = ruler show_notification = no }
 			}
 			shift_ethic = ethic_egalitarian
-			change_government = { authority = auth_democratic }
+#			change_government = { authority = auth_democratic }
 			
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
