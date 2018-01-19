@@ -8,27 +8,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		random_country = {
-			limit = {
-				is_rival = root
-				NOT = { is_at_war_with = root }
-			}
+		random_neighbor_country = {
 			root = {
 				declare_war = { who = prev }
-				add_war_demand = {
-					type = "humiliate"
-					parameter:country = prev
-					warscore_cost = 10
-					target = this
-					enemy = prev
-				}
-				add_war_demand = {
-					type = "dpe_cede_borders"
-					parameter:country = prev
-					warscore_cost = 75
-					target = this
-					enemy = prev
-				}
+				declare_white_peace_with = { who = prev }
 			}
 		}
 	}

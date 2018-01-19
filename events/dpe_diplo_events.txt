@@ -477,9 +477,11 @@ planet_event = {
 		name = dpe_diplo.4.B
 		
 		owner = {
-			add_modifier = {
-				modifier = dpe_indemnity_paid
-				days = 360
+			capital_scope = {
+				add_modifier = {
+					modifier = dpe_indemnity_paid
+					days = 360
+				}
 			}
 			add_modifier = {
 				modifier = humiliated
@@ -493,9 +495,11 @@ planet_event = {
 		}
 		
 		event_target:enemy = {
-			add_modifier = {
-				modifier = dpe_indemnity_receive
-				days = 360
+			capital_scope = {
+				add_modifier = {
+					modifier = dpe_indemnity_receive
+					days = 360
+				}
 			}
 		}
 		
@@ -626,15 +630,19 @@ country_event = { #AI-only event
 	option = { #pay up
 		name = OK
 		
-		add_modifier = {
-			modifier = dpe_indemnity_paid
-			days = 360
+		capital_scope = {
+			add_modifier = {
+				modifier = dpe_indemnity_paid
+				days = 360
+			}
 		}
 		
 		from = {
-			add_modifier = {
-				modifier = dpe_indemnity_receive
-				days = 360
+			capital_scope = {
+				add_modifier = {
+					modifier = dpe_indemnity_receive
+					days = 360
+				}
 			}
 		}
 		
@@ -822,9 +830,11 @@ country_event = {
 		name = CCEXCELLENT
 		
 		tooltip = {
-			add_modifier = {
-				modifier = dpe_indemnity_receive
-				days = 360
+			capital_scope = {
+				add_modifier = {
+					modifier = dpe_indemnity_receive
+					days = 360
+				}
 			}
 		}
 	}
