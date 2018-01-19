@@ -562,10 +562,16 @@ planet_event = {
 				days = 3600
 			}
 		}
-		add_modifier = {
-			modifier = cc_planet_interspecies_tensions
-			days = 3600
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_planet_hate_speech }
+				remove_modifier = cc_planet_hate_speech
+			}
 		}
+#		add_modifier = {
+#			modifier = cc_planet_interspecies_tensions
+#			days = 3600
+#		}
 		add_modifier = {
 			modifier = cc_investment_package
 			days = 3600
