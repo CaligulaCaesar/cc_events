@@ -1171,6 +1171,8 @@ event = {
 					any_relation = {
 						is_ai = no
 						NOT = { has_country_flag = dpe_recent_militarists_incident }
+						has_federation = no
+						has_policy_flag = unrestricted_wars
 						prev = {
 							OR = {
 								is_rival = prev

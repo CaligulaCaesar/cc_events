@@ -1335,7 +1335,8 @@ pop_event = {
 pop_event = {
 	id = cc_events_mod.11
 	hide_window = yes
-	
+	is_triggered_only = yes
+
 	trigger = {
 		has_a_happiness_gauge = yes
 		has_pop_flag = cc_literally_xenophile_manifested
