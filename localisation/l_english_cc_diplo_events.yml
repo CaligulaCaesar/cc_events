@@ -32,7 +32,7 @@ dpe_diplo.5.desc.hive:0 "Some disruptive elements in the [from.GetName] have lau
 dpe_diplo.5.A:0 "Demand justice"
 dpe_diplo.5.A.tooltip:0 "If the [from.GetName] accepts, a truce will be declared and the [root.GetName] will be paid an indemnity of 100 minerals for a year. If they reject it, war will be declared with the war demands $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
 dpe_diplo.5.B:0 "Seek to ease the tensions"
-"Dismayed at the refusal of the [root.owner.GetName] to make war on the [enemy.GetName], some hardcore jingoists on [root.GetName] hijacked an old cruiser that had been stationed there and flew it into the [enemy.GetName], shooting down several merchant ships and a mining outpost before it was driven away. [enemy.GetSpeciesAdj] authorities are furious, and demand that the perpetrators be handed over and an indemnity be paid. On the other hand, the [root.owner.GetSpeciesAdj] population is rallying behind the hijackers, calling the heroes and demanding further action against the [enemy.GetName].\n\nWhat action should be taken?"
+
 
 dpe_diplo.7.name:0 "Indemnity Paid"
 dpe_diplo.7.desc:0 "We will hand over the perpetrators and pay you your indemnity. May you choke on them!"
@@ -56,10 +56,10 @@ war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_border
 war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
 
 
-dpe_diplo.100.title:0 "The [enemy.GetName]'s Response"
+dpe_diplo.100.name:0 "The [enemy.GetName]'s Response"
 #This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
 HM_DOW_ACCEPT_DPE:0 "Seeking to destroy one of us is seeking to destroy us all. The [enemy.GetName] now stands against the [From.GetName]."
 dpe_diplo.100.option:0 "Whatever."
 
-dpe_diplo.101.title:0 "The [from.GetName] Declares War!"
+dpe_diplo.101.name:0 "The [from.GetName] Declares War!"
 dpe_diplo.101.option:0 "Prepare for War!"

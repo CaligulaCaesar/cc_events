@@ -261,7 +261,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_ai = no
+						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
 					planet_event = { id = dpe_diplo.3 days = 45 random = 10 }
@@ -269,7 +269,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_ai = yes
+					owner = { is_ai = yes }
 					event_target:enemy = { is_ai = no }
 				}
 				event_target:enemy = { country_event = { id = dpe_diplo.5 days = 270 random = 180 } }
@@ -342,7 +342,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_ai = no
+						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
 					planet_event = { id = dpe_diplo.3 days = 45 random = 10 }
@@ -440,9 +440,10 @@ planet_event = {
 	option = {
 		name = dpe_diplo.4.A
 		
-		
-		declare_war = {
-			who = event_target:enemy
+		owner = {
+			declare_war = {
+				who = event_target:enemy
+			}
 		}
 		custom_tooltip = dpe_diplo.1.A.tooltip
 		tooltip = {
@@ -455,22 +456,24 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			add_war_demand = {
-				type = "humiliate"
-				parameter:country = event_target:enemy
-				warscore_cost = 10
-				target = this
-				enemy = event_target:enemy
-			}
-			add_war_demand = {
-				type = "dpe_cede_borders"
-				parameter:country = event_target:enemy
-				warscore_cost = 75
-				target = this
-				enemy = event_target:enemy
-			}
+			owner = {
+				add_war_demand = {
+					type = "humiliate"
+					parameter:country = event_target:enemy
+					warscore_cost = 10
+					target = this
+					enemy = event_target:enemy
+				}
+				add_war_demand = {
+					type = "dpe_cede_borders"
+					parameter:country = event_target:enemy
+					warscore_cost = 75
+					target = this
+					enemy = event_target:enemy
+				}
 			
-			country_event = { id = dpe_diplo.100 scopes = { from = root } }
+				country_event = { id = dpe_diplo.100 scopes = { from = root } }
+			}
 		}
 	}
 	option = {
@@ -506,7 +509,7 @@ planet_event = {
 		hidden_effect = {
 			owner = {
 				remove_modifier = dpe_ruler_looks_weak
-				declare_war	= event_target:enemy
+				declare_war	= { who = event_target:enemy }
 				declare_white_peace_with = event_target:enemy
 			}
 		}
@@ -557,7 +560,7 @@ country_event = {
 			limit = { is_neighbor_of = from }
 			save_event_target_as = attacked_planet
 			
-			system = {
+			solar_system = {
 				random_fleet_in_system = {
 					limit = {
 						any_owned_ship = {
@@ -574,8 +577,10 @@ country_event = {
 		from = {
 			every_owned_planet = {
 				limit = { is_neighbor_of = root }
-				set_timed_planet_flag = dpe_will_cede_in_war
-				days = 5
+				set_timed_planet_flag = {
+					flag = dpe_will_cede_in_war
+					days = 5
+				}
 			}
 		}
 	}
@@ -623,7 +628,9 @@ country_event = {
 country_event = { #AI-only event
 	id = dpe_diplo.6
 	title = OK
-	option = OK
+	desc = OK
+	
+	picture = GFX_evt_exploding_ship #picked randomly
 	
 	is_triggered_only = yes
 	
@@ -654,7 +661,7 @@ country_event = { #AI-only event
 		
 		#test this: (tooltip: a truce will be declared)
 		hidden_effect = {
-			declare_war	= event_target:enemy
+			declare_war	= { who = event_target:enemy }
 			declare_white_peace_with = event_target:enemy
 		}
 		
@@ -854,7 +861,7 @@ country_event = {
 
 country_event = {
 	id = dpe_diplo.100
-	name = dpe_diplo.100.title
+	title = dpe_diplo.100.name
 	
 	desc = {
 		trigger = {
@@ -1092,7 +1099,7 @@ country_event = {
 
 country_event = {
 	id = dpe_diplo.101
-	name = dpe_diplo.101.title
+	title = dpe_diplo.101.name
 	
 	desc = {
 		trigger = {

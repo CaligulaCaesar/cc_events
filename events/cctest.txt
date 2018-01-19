@@ -11,7 +11,7 @@ country_event = {
 		random_neighbor_country = {
 			root = {
 				declare_war = { who = prev }
-				declare_white_peace_with = { who = prev }
+				declare_white_peace_with = prev
 			}
 		}
 	}
