@@ -9,11 +9,23 @@ country_event = {
 	
 	immediate = {
 		random_neighbor_country = {
+			save_event_target_as = whatever
 			root = {
 				declare_war = { who = prev }
-				declare_white_peace_with = prev
+				country_event = { id = cctest.2 days = 1 }
 			}
 		}
 	}
 }
-			
+
+
+country_event = {
+	id = cctest.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		declare_white_peace_with = event_target:whatever
+	}
+}

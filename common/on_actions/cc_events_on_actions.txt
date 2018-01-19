@@ -148,3 +148,13 @@ on_ruler_set = {
 		dpe_scandal.99
 	}
 }
+
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		dpe_diplo.8
+	}
+}

@@ -713,7 +713,16 @@ remove_rebel_irrelevant_political_colony_modifiers = {
 }
 
 remove_new_owner_irrelevant_political_colony_modifiers = {
-
+	
+	if = {
+		limit = { has_modifier = dpe_indemnity_receive }
+		remove_modifier = dpe_indemnity_receive
+	}
+	if = {
+		limit = { has_modifier = dpe_indemnity_paid }
+		remove_modifier = dpe_indemnity_paid
+	}
+	
 	if = {
 		limit = { has_modifier = cc_minor_protests_xenophile }
 		remove_modifier = cc_minor_protests_xenophile

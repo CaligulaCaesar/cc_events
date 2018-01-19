@@ -1164,6 +1164,38 @@ event = {
 				flag = dpe_militarist_protests_incident_possible
 				days = 31
 			}
+			
+			if = {
+				limit = {
+					is_ai = yes
+					any_relation = {
+						is_ai = no
+						NOT = { has_country_flag = dpe_recent_militarists_incident }
+						prev = {
+							OR = {
+								is_rival = prev
+								is_hostile_to = prev
+								is_domineering_to = prev
+							}
+							NOT = { has_truce = prev }
+						}
+						any_owned_planet = {
+							is_neighbor_of = prevprev
+						}
+						NOT = {
+							relative_power = {
+								who = prev
+								category = fleet
+								value = overwhelming
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_militarists_incident_secondary_possible
+					days = 31
+				}
+			}			
 		}
 	}
 }
@@ -1521,7 +1553,7 @@ country_event = {
 
 #Militarist Protests
 country_event = {
-	id = cc_events_performance.13
+	id = cc_events_performance.25
 	hide_window = yes
 
 	trigger = {
@@ -1529,7 +1561,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 10
+		years = 15
 #		modifier = {
 #			factor = 3
 #			is_ai = yes
@@ -1548,5 +1580,47 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+#Militarists hijack
+country_event = {
+	id = cc_events_performance.26
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = dpe_militarists_incident_secondary_possible
+	}
+	
+	mean_time_to_happen = { #the conditions are fairly improbable
+		years = 40
+	}
+	
+	immediate = {
+		random_relation = {
+			limit = {
+				is_ai = no
+				NOT = { has_country_flag = dpe_recent_militarists_incident }
+				prev = {
+					OR = {
+						is_rival = prev
+						is_hostile_to = prev
+						is_domineering_to = prev
+					}
+					NOT = { has_truce = prev }
+				}
+				any_owned_planet = {
+					is_neighbor_of = prevprev
+				}
+				NOT = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			country_event = { id = dpe_diplo.5 }
+		}			
 	}
 }

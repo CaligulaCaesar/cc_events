@@ -509,14 +509,14 @@ planet_event = {
 		hidden_effect = {
 			owner = {
 				remove_modifier = dpe_ruler_looks_weak
-				declare_war	= { who = event_target:enemy }
-				declare_white_peace_with = event_target:enemy
+#				declare_war	= { who = event_target:enemy } #doesn't work
+#				declare_white_peace_with = event_target:enemy
 			}
 		}
 	}
 }
 
-
+#also triggered separately via perf, because I wanted a bit of a higher chance of it happening
 #these guys raided us, how to respond?
 country_event = {
 	id = dpe_diplo.5
@@ -539,11 +539,9 @@ country_event = {
 
 	trigger = {
 		NOT = { is_at_war_with = from }
-		
-		NOR = {
-			has_federation = yes
-			has_policy_flag = unrestricted_wars
-		}
+		NOT = { has_country_flag = dpe_recent_militarists_incident }
+		has_federation = no
+		has_policy_flag = unrestricted_wars
 			
 		from = {
 			OR = {
@@ -556,6 +554,10 @@ country_event = {
 	}
 	
 	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_militarists_incident
+			years = 40
+		}
 		random_owned_planet = {
 			limit = { is_neighbor_of = from }
 			save_event_target_as = attacked_planet
@@ -659,11 +661,11 @@ country_event = { #AI-only event
 		}
 		hidden_effect = { remove_modifier = dpe_ruler_looks_weak }
 		
-		#test this: (tooltip: a truce will be declared)
-		hidden_effect = {
-			declare_war	= { who = event_target:enemy }
-			declare_white_peace_with = event_target:enemy
-		}
+		#test this: (tooltip: a truce will be declared) #doesn't work
+#		hidden_effect = {
+#			declare_war	= { who = event_target:enemy }
+#			declare_white_peace_with = event_target:enemy
+#		}
 		
 		from = { country_event = { id = dpe_diplo.7 } }
 		
@@ -823,6 +825,7 @@ country_event = {
 		text = dpe_diplo.7.desc.machine
 	}
 	
+	is_triggered_only = yes
 	diplomatic = yes
 	
 	picture_event_data = {
@@ -841,6 +844,69 @@ country_event = {
 				add_modifier = {
 					modifier = dpe_indemnity_receive
 					days = 360
+				}
+			}
+		}
+	}
+}
+
+
+
+#In case they actually declare war
+country_event = {
+	id = dpe_diplo.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_modifier = humiliated
+		any_owned_planet = { has_modifier = dpe_indemnity_paid }
+	}
+	
+	immediate = {
+		from = {
+			every_war_participant = {
+				set_timed_country_flag = {
+					flag = dpe_war_opponent
+					days = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_country_flag = dpe_war_opponent
+					from = {	
+						NOT = {
+							is_war_participant = {
+								who = prev
+								side = root
+							}
+						}
+					}
+					any_owned_planet = { has_modifier = dpe_indemnity_receive }
+				}
+			}
+			random_owned_planet = {
+				limit = { has_modifier = dpe_indemnity_paid }
+				remove_modifier = dpe_indemnity_paid
+			}
+			random_country = {
+				limit = {
+					has_country_flag = dpe_war_opponent
+					from = {	
+						NOT = {
+							is_war_participant = {
+								who = prev
+								side = root
+							}
+						}
+					}
+					any_owned_planet = { has_modifier = dpe_indemnity_receive }
+				}
+				random_owned_planet = {
+					limit = { has_modifier = dpe_indemnity_receive }
+					remove_modifier = dpe_indemnity_receive
 				}
 			}
 		}
