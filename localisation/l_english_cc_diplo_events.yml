@@ -2,6 +2,8 @@
 
 dpe_diplo.1.name:0 "The Populace begs for War"
 dpe_diplo.1.desc:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], whose leaders have recently been openly derisive about the [root.GetSpeciesNamePlural], claiming that we are cowardly and have no honour. The outraged population demands war."
+dpe_diplo.1.desc.machine:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it recently emerged that the Machine Intelligence had issued a directive to its subroutines that stated that the [root.GetSpeciesNamePlural] were officially to be considered as "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
+dpe_diplo.1.desc.hive:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it was recently discovered that the Hive's official thoughts on the [root.GetSpeciesNamePlural] are that they are "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
 dpe_diplo.1.A:0 "Declare War."
 dpe_diplo.1.A.tooltip:0 "The war demands will be $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
 dpe_diplo.1.B: "Patience. We will declare war soon on our own terms."
@@ -23,9 +25,41 @@ dpe_ruler_looks_weak_desc:0 "The government looks weak, as it refused to declare
 dpe_ruler_looks_weak_faction:0 "Weak and cowardly government"
 dpe_ruler_looks_weak_and_breaks_promises_faction:0 "Weak, cowardly and lying government"
 
+dpe_diplo.5.name:0 "Border Incident"
+dpe_diplo.5.desc:0 "A group of nationalists in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to harass our civilian traders and attack our stations, destroying one of them. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. The populace is outraged, and is demanding the [from.GetName] hands over the perpetrators and pay damages."
+dpe_diplo.5.desc.machine:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt our subroutines. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
+dpe_diplo.5.desc.hive:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt the hive's activities. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
+dpe_diplo.5.A:0 "Demand justice"
+dpe_diplo.5.A.tooltip:0 "If the [from.GetName] accepts, a truce will be declared and the [root.GetName] will be paid an indemnity of 100 minerals for a year. If they reject it, war will be declared with the war demands $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
+dpe_diplo.5.B:0 "Seek to ease the tensions"
+"Dismayed at the refusal of the [root.owner.GetName] to make war on the [enemy.GetName], some hardcore jingoists on [root.GetName] hijacked an old cruiser that had been stationed there and flew it into the [enemy.GetName], shooting down several merchant ships and a mining outpost before it was driven away. [enemy.GetSpeciesAdj] authorities are furious, and demand that the perpetrators be handed over and an indemnity be paid. On the other hand, the [root.owner.GetSpeciesAdj] population is rallying behind the hijackers, calling the heroes and demanding further action against the [enemy.GetName].\n\nWhat action should be taken?"
+
+dpe_diplo.7.name:0 "Indemnity Paid"
+dpe_diplo.7.desc:0 "We will hand over the perpetrators and pay you your indemnity. May you choke on them!"
+dpe_diplo.7.desc.machine:0 "We will hand over the perpetrators and pay you your indemnity. May they overload your processors!"
+
+dpe_indemnity_paid:0 "Paying Indemnity"
+dpe_indemnity_paid_desc:0 "This Empire is paying another Empire an indemnity to stave off their wrath."
+dpe_indemnity_receive:0 "Receiving Indemnity"
+dpe_indemnity_receive_desc:0 "This Empire is being paid an indemnity by another Empire to stave off their wrath."
+
+dpe_militarist_unrest:0 "Upset Militarists"
+dpe_militarist_unrest_desc:0 "The militarist populace on this planet is upset at the failure of the government to stand by them against the Empire's enemies."
+
+dpe_eased_tensions:0 "Eased Tensions"
+
 war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
 war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
 war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
 war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
 war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
 war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
+
+
+dpe_diplo.100.title:0 "The [enemy.GetName]'s Response"
+#This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
+HM_DOW_ACCEPT_DPE:0 "Seeking to destroy one of us is seeking to destroy us all. The [enemy.GetName] now stands against the [From.GetName]."
+dpe_diplo.100.option:0 "Whatever."
+
+dpe_diplo.101.title:0 "The [from.GetName] Declares War!"
+dpe_diplo.101.option:0 "Prepare for War!"
