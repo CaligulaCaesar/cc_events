@@ -210,11 +210,14 @@ event = {
 			}
 		}
 		
+		#Pacifist Protests
 		every_country = {
 			limit = {
 				is_country_type = default
+				NOT = { has_country_flag = cc_recent_pacifist_protests }
 				is_at_war = yes
 				is_war_leader = yes
+				has_faction = prosperity
 				any_owned_planet = {
 					count_pops = {
 						limit = {
@@ -224,9 +227,25 @@ event = {
 						count > 2
 					}
 				}
+				any_war = {
+					is_war_participant = { who = prev side = attackers }
+					attacker_war_score > 60
+
+					NOT = {
+						prev = {
+							any_war = {
+								OR = {
+									is_war_participant = { who = prev side = attackers }
+									is_war_participant = { who = prev side = defenders }
+								}
+								NOT = { is_same_value = prevprev }
+							}
+						}
+					}
+				}
 			}
 			set_timed_country_flag = {
-				flag = cc_eventperf_has_a_pacifist_planet_war
+				flag = cc_eventperf_pacifist_planet_war_events_possible
 				days = 31
 			}
 		}
@@ -1542,29 +1561,7 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
-		NOT = { has_country_flag = cc_recent_pacifist_protests }
-		has_faction = prosperity
-		is_at_war = yes
-		is_war_leader = yes
-		
-		has_country_flag = cc_eventperf_has_a_pacifist_planet_war
-		
-		any_war = {
-			is_war_participant = { who = root side = attackers }
-			attacker_war_score > 60
-
-			NOT = {
-				root = {
-					any_war = {
-						OR = {
-							is_war_participant = { who = root side = attackers }
-							is_war_participant = { who = root side = defenders }
-						}
-						NOT = { is_same_value = prevprev }
-					}
-				}
-			}
-		}
+		has_country_flag = cc_eventperf_pacifist_planet_war_events_possible
 	}
 	
 	mean_time_to_happen = {
