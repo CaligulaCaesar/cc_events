@@ -1212,10 +1212,10 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
+		has_country_flag = cc_eventperf_has_minority
+		
 		is_country_type = default
 		has_faction = xenoist
-		
-		has_country_flag = cc_eventperf_has_minority
 		
 		NOR = {
 			has_country_flag = recent_xenophobic_comments
@@ -1281,7 +1281,9 @@ country_event = {
 	id = cc_events_performance.4
 	hide_window = yes
 	
-	trigger = {
+	trigger = {		
+		has_country_flag = cc_eventperf_literally_xenophiles
+
 		is_country_type = default
 		
 		has_faction = xenoist
@@ -1289,8 +1291,6 @@ country_event = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = { has_country_flag = cc_has_had_interspecies_marriage }
 		
-		
-		has_country_flag = cc_eventperf_literally_xenophiles
 	}
 	
 	mean_time_to_happen = {
@@ -1382,12 +1382,12 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
+		has_country_flag = cc_eventperf_has_a_pacifist_planet_war
 		NOT = { has_country_flag = cc_recent_pacifist_protests }
 		has_faction = prosperity
 		is_at_war = yes
 		is_war_leader = yes
 		
-		has_country_flag = cc_eventperf_has_a_pacifist_planet_war
 		
 		any_war = {
 			is_war_participant = { who = root side = attackers }
@@ -1511,6 +1511,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
+			exists = ruler
 			ruler = { leader_of_faction = progressive }
 		}
 	}
