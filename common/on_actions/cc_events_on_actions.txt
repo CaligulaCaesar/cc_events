@@ -124,6 +124,7 @@ on_war_ended = {
 on_war_beginning = {
 	events = {
 		cc_peace.5
+		dpe_diplo.8
 	}
 }
 
@@ -150,11 +151,13 @@ on_ruler_set = {
 }
 
 
-# A war is beginning, executed for every country in the war.
-# Root = Country
-# From = War
-on_war_beginning = {
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
 	events = {
-		dpe_diplo.8
+		dpe_conspiracy.6
 	}
 }

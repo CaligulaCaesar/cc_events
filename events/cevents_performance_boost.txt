@@ -1199,6 +1199,60 @@ event = {
 				}
 			}			
 		}
+		#Military Coup
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_egalitarian
+				}
+				is_at_war = no
+				is_subject = no
+				has_faction = imperialist
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = imperialist
+						happiness < 0.4
+					}
+				}
+				NOT = {
+					any_country = {
+						OR = {
+							is_hostile_to = prev
+							is_rival = prev
+							is_domineering_to = prev
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = overwhelming
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+						used_naval_capacity_percent > 1
+						
+						else = { used_naval_capacity_percent > 1.2 }
+					}
+				}
+				any_owned_leader = {
+					NOT = { leader_class = ruler }
+					leader_of_faction = imperialist
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_military_coup_possible
+				days = 31
+			}
+		}
 	}
 }
 
@@ -1548,7 +1602,17 @@ country_event = {
 	mean_time_to_happen = { years = 150 }
 	
 	immediate = {
-		country_event = { id = dpe_conspiracy.20 }
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_conspiracy.20 }
+			
+			else = {
+				random_list = {
+					3 = { country_event = { id = dpe_conspiracy.20 } }
+					2 = { }
+				}
+			}
+		}
 	}
 }
 
@@ -1595,8 +1659,8 @@ country_event = {
 		has_country_flag = dpe_militarists_incident_secondary_possible
 	}
 	
-	mean_time_to_happen = { #the conditions are fairly improbable
-		years = 40
+	mean_time_to_happen = { #the conditions are fairly improbable, and it also has a small chance of happening via dpe_diplo.1
+		years = 45
 	}
 	
 	immediate = {
@@ -1627,3 +1691,30 @@ country_event = {
 		}			
 	}
 }
+
+#Military Coup Chain
+country_event = {
+	id = cc_events_performance.27
+	hide_window = yes
+	
+	trigger = { has_country_flag = dpe_military_coup_possible }
+	
+	mean_time_to_happen = {
+		years = 120
+	}
+
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_conspiracy.1 }
+			
+			else = {
+				random_list = {
+					2 = { country_event = { id = dpe_conspiracy.1 } }
+					3 = { }
+				}
+			}
+		}
+	}
+}
+		
