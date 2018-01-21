@@ -955,5 +955,156 @@ country_event = {
 }
 		
 
+country_event = {
+	id = dpe_conspiracy.2
+	title = dpe_conspiracy.2.name
+	desc = dpe_conspiracy.2.desc
+	picture = GFX_evt_hangar_bay
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		is_at_war = no
+		is_subject = no
+		has_faction = imperialist
+		count_pop_factions = {
+			limit = {
+				is_pop_faction_type = imperialist
+				happiness < 0.4
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+				used_naval_capacity_percent > 1
+				
+				else = { used_naval_capacity_percent > 1.2 }
+			}
+		}
+		any_owned_leader = {
+			NOT = { leader_class = ruler }
+			leader_of_faction = imperialist
+		}
+	}
+	
+	immediate = {
+		country_event = { id = dpe_conspiracy.3 days = 3 }
+	}
+	
+	option = { name = CCWORRYING }
+}
+
+
+country_event = {
+	id = dpe_conspiracy.3
+	title = dpe_conspiracy.3.name
+	desc = dpe_conspiracy.3.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:militarist
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = root.ruler
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = { #just in case
+		NOR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		any_owned_leader = {
+			NOT = { leader_class = ruler }
+			leader_of_faction = imperialist
+		}
+	}
+	
+	immediate = {
+		random_owned_leader = {
+			limit = { leader_of_faction = imperialist }
+			save_event_target_as = militarist
+			exile_leader_as = dpe_militarist_coup_leader
+		}
+	}
+	
+	option = {
+		name = dpe_conspiracy.3.option
 		
-######Note: .3 must remove dpe_military_petition_rejected
+		shift_ethic = militarist
+		
+		custom_tooltip = dpe_conspiracy.3.tooltip
+		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		
+		if = {
+			limit = { NOT = { has_authority = auth_dictatorial } }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_distinguished_admiralty
+					civic = civic_police_state
+				}
+			}
+		}
+		
+		set_leader = dpe_militarist_coup_leader
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			
+			add_modifier = {
+				modifier = dpe_seized_control_faction
+				days = 3600
+			}
+		
+			hidden_effect = { 
+				remove_modifier = dpe_military_petition_rejected
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = {
+							NOR = {
+								is_same_value = prevprev
+								is_pop_faction_type = progressive
+								is_pop_faction_type = prosperity
+							}
+						}
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_faction = prosperity }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = prosperity }
+				
+				add_modifier = {
+					modifier = dpe_military_coup_faction
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = { has_faction = progressive }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = progressive }
+				
+				add_modifier = {
+					modifier = dpe_military_coup_faction
+					days = 3600
+				}
+			}
+		}
+	}
+}
