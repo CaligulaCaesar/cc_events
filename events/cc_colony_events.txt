@@ -5494,8 +5494,34 @@ planet_event = {
 		}
 	}
 	option = {
-		name = cc_colony_events.82.B
+		name = cc_colony_events.82.B1
 		
+		trigger = {
+			event_target:cc_colony_leader = { NOT = { gender = female } }
+		}
+
+		add_modifier = {
+			modifier = cc_colony_monarchy
+			days = -1
+		}
+		add_modifier = {
+			modifier = cc_colony_distrusts
+			years = 15
+		}
+		
+		hidden_effect = {
+			planet_event = { id = cc_colony_events.85 days = 10800 }
+		}
+		
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = cc_colony_events.82.B2
+		
+		trigger = {
+			event_target:cc_colony_leader = { gender = female }
+		}
+
 		add_modifier = {
 			modifier = cc_colony_monarchy
 			days = -1
