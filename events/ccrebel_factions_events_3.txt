@@ -3534,21 +3534,21 @@ country_event = {
 			exists = event_target:cc_rebellious_faction_leader
 			exists = event_target:cc_new_reb_faction_leader
 		}
-		text = ccfaction.601.both
+		text = ccfaction.601.desc.both
 	}
 	desc = {
 		trigger = {
 			exists = event_target:cc_rebellious_faction_leader
 			NOT = { exists = event_target:cc_new_reb_faction_leader }
 		}
-		text = ccfaction.601.only1
+		text = ccfaction.601.desc.only1
 	}
 	desc = {
 		trigger = {
 			NOT = { exists = event_target:cc_rebellious_faction_leader }
 			exists = event_target:cc_new_reb_faction_leader
 		}
-		text = ccfaction.601.only2
+		text = ccfaction.601.desc.only2
 	}
 	
 	picture = GFX_evt_hangar_bay
