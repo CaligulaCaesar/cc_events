@@ -476,6 +476,44 @@ country_event = {
 
 country_event = {
 	id = dpe_conspiracy.27
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_faction = totalitarian
+		any_country = {
+			OR = {
+				is_hostile_to = root
+				is_rival = root
+				is_domineering_to = root
+			}
+			relative_power = {
+				who = root
+				category = fleet
+				value = overwhelming
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { exists = ruler }
+			country_event = { id = dpe_conspiracy.2700 }
+			
+			else = {
+				country_event = { id = dpe_conspiracy.27 days = 30 }
+				country_event = { id = dpe_conspiracy.28 days = 46 }
+				set_timed_country_flag = {
+					flag = dpe_authoritarian_conspiracy_chain_extended
+					days = 30
+				}
+			}
+		}
+	}
+}
+	
+country_event = {
+	id = dpe_conspiracy.2700
 	title = dpe_conspiracy.27.name
 	desc = {
 		trigger = {
@@ -500,7 +538,6 @@ country_event = {
 	
 	trigger = {
 		has_faction = totalitarian
-		exists = event_target:authoritarian
 		any_country = {
 			OR = {
 				is_hostile_to = root
@@ -665,9 +702,18 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	trigger = { NOT = { has_country_flag = dpe_authoritarian_conspiracy_chain_ended } }
+	trigger = {
+		NOR = {
+			has_country_flag = dpe_authoritarian_conspiracy_chain_ended
+			has_country_flag = dpe_authoritarian_conspiracy_chain_extended
+		}
+	}
 	
 	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_authoritarian_conspiracy_chain_ended
+			days = 3600
+		}
 		if = {
 			limit = {
 				any_country = {
@@ -789,6 +835,7 @@ country_event = {
 			NOT = { leader_class = ruler }
 			leader_of_faction = imperialist
 		}
+		exists = ruler
 	}
 	
 	immediate = {
@@ -866,7 +913,7 @@ country_event = {
 			days = -1
 		}
 		
-		hidden_effect = { country_event = { id = dpe_conspiracy.4 days = 7200 } }
+		hidden_effect = { country_event = { id = dpe_conspiracy.4 days = 5400 } }
 		
 		ai_chance = {
 			factor = 1
@@ -957,6 +1004,53 @@ country_event = {
 
 country_event = {
 	id = dpe_conspiracy.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		is_at_war = no
+		is_subject = no
+		has_faction = imperialist
+		count_pop_factions = {
+			limit = {
+				is_pop_faction_type = imperialist
+				happiness < 0.4
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+				used_naval_capacity_percent > 1
+				
+				else = { used_naval_capacity_percent > 1.2 }
+			}
+		}
+		any_owned_leader = {
+			NOT = { leader_class = ruler }
+			leader_of_faction = imperialist
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { exists = ruler }
+			country_event = { id = dpe_conspiracy.2000 }
+			else = { country_event = { id = dpe_conspiracy.2 days = 30 } }
+		}
+	}
+}
+	
+	
+country_event = {
+	id = dpe_conspiracy.2000
 	title = dpe_conspiracy.2.name
 	desc = dpe_conspiracy.2.desc
 	picture = GFX_evt_hangar_bay
@@ -1103,6 +1197,425 @@ country_event = {
 				add_modifier = {
 					modifier = dpe_military_coup_faction
 					days = 3600
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = dpe_conspiracy.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_subject = no
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+				used_naval_capacity_percent > 1
+				
+				else = { used_naval_capacity_percent > 1.2 }
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = { #mtth is about 15 years
+			95 = { country_event = { id = dpe_conspiracy.4 days = 390 random = 30 } }
+			
+			5 = {
+				country_event = { id = dpe_conspiracy.400 }
+				
+				modifier = {
+					factor = 0
+					NOT = {
+						NOR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+							has_ethic = ethic_fanatic_egalitarian
+						}
+						is_at_war = no
+						has_faction = imperialist
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = imperialist
+								happiness < 0.5
+							}
+						}
+						any_owned_leader = {
+							NOT = { leader_class = ruler }
+							leader_of_faction = imperialist
+						}
+						exists = ruler
+					}
+				}
+				modifier = {
+					factor = 0
+					is_ai = yes
+					NOR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_conspiracy.400
+	title = dpe_conspiracy.4.name
+	desc = dpe_conspiracy.4.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:militarist
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = root.ruler
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		is_at_war = no
+		is_subject = no
+		has_faction = imperialist
+		count_pop_factions = {
+			limit = {
+				is_pop_faction_type = imperialist
+				happiness < 0.5
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+				used_naval_capacity_percent > 1
+				
+				else = { used_naval_capacity_percent > 1.2 }
+			}
+		}
+		any_owned_leader = {
+			NOT = { leader_class = ruler }
+			leader_of_faction = imperialist
+		}
+	}
+	
+	immediate = {
+		random_owned_leader = {
+			limit = { leader_of_faction = imperialist }
+			save_event_target_as = militarist
+		}
+	}
+	
+	option = {
+		name = dpe_conspiracy.4.A
+		hidden_effect = { remove_modifier = dpe_extra_naval_expenses }
+		add_modifier = {
+			modifier = dpe_extra_naval_expenses_2
+			days = -1
+		}
+		
+		ai_chance = {
+			factor = 0.01
+		}
+	}
+	option = {
+		name = dpe_conspiracy.4.B
+		custom_tooltip = dpe_conspiracy.4.B.tooltip
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_military_petition_rejected
+				days = 3600
+			}
+		}
+		
+		hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
+		
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = dpe_conspiracy.4.C
+		
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		
+		hidden_effect = { country_event = { id = dpe_conspiracy.5 } }
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = dpe_conspiracy.5
+	title = dpe_conspiracy.5.name
+	desc = dpe_conspiracy.5.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:militarist
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = root.ruler
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dpe_conspiracy.5.A
+		
+		remove_modifier = dpe_extra_naval_expenses
+		
+		add_modifier = {
+			modifier = dpe_navy_RandD
+			days = 10800
+		}
+	}		
+		
+	option = {
+		name = dpe_conspiracy.5.B
+		
+		custom_tooltip = dpe_conspiracy.5.B.tooltip
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_military_petition_rejected
+				days = 3600
+			}
+		}
+		
+		hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+country_event = {
+	id = dpe_conspiracy.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			fromfrom = { is_war_participant = { who = prev side = root } }
+			OR = {
+				used_naval_capacity_percent < 0.65
+				any_relation = {
+					NOT = { is_country_type = fallen_empire }
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+					}
+					relative_power = {
+						who = root
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			OR = {
+				has_modifier = dpe_extra_naval_expenses
+				has_modifier = dpe_extra_naval_expenses_2
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				fromfrom = { is_war_participant = { who = prev side = root } }
+				OR = {
+					used_naval_capacity_percent < 0.65
+					any_relation = {
+						NOT = { is_country_type = fallen_empire }
+						OR = {
+							is_hostile_to = root
+							is_rival = root
+							is_domineering_to = root
+						}
+						relative_power = {
+							who = root
+							category = fleet
+							value = overwhelming
+						}
+					}
+				}
+				OR = {
+					has_modifier = dpe_extra_naval_expenses
+					has_modifier = dpe_extra_naval_expenses_2
+				}
+			}
+			country_event = { id = dpe_conspiracy.600 days = 60 }
+		}
+	}
+}
+
+country_event = {
+	id = dpe_conspiracy.600
+	title = dpe_conspiracy.6.name
+	desc = dpe_conspiracy.6.desc
+	picture = GFX_evt_ship_in_orbit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dpe_conspiracy.6.A
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOR = {
+					AND = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+						used_naval_capacity_percent > 0.8
+					}
+					used_naval_capacity_percent > 1.0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_conspiracy.6.B
+		
+		if = {
+			limit = { has_modifier = dpe_extra_naval_expenses }
+			remove_modifier = dpe_extra_naval_expenses
+			add_modifier = {
+				modifier = dpe_rebuilding_fleet
+				days = 5400
+			}
+		}
+		if = {
+			limit = { has_modifier = dpe_extra_naval_expenses_2 }
+			remove_modifier = dpe_extra_naval_expenses_2
+			add_modifier = {
+				modifier = dpe_rebuilding_fleet_2
+				days = 5400
+			}
+		}
+		
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_naval_pay_cut_faction
+				days = 3600
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = dpe_conspiracy.6.C
+	
+		if = {
+			limit = { has_modifier = dpe_extra_naval_expenses }
+			remove_modifier = dpe_extra_naval_expenses
+		}
+		if = {
+			limit = { has_modifier = dpe_extra_naval_expenses_2 }
+			remove_modifier = dpe_extra_naval_expenses_2
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_navy_privileges_cut_faction
+				days = 3600
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+						used_naval_capacity_percent > 1
+					}
+					used_naval_capacity_percent > 1.2
+				}
+			}
+			custom_tooltip = dpe_conspiracy.6.C.tooltip
+			hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
+			
+			else = {
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+								used_naval_capacity_percent > 0.8
+							}
+							used_naval_capacity_percent > 1.0
+						}
+					}
+					custom_tooltip = dpe_conspiracy.6.C.tooltip2
+					hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+						used_naval_capacity_percent > 0.8
+					}
+					used_naval_capacity_percent > 1.0
 				}
 			}
 		}
