@@ -1215,7 +1215,11 @@ event = {
 				count_pop_factions = {
 					limit = {
 						is_pop_faction_type = imperialist
-						happiness < 0.4
+						
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
 					}
 				}
 				NOT = {

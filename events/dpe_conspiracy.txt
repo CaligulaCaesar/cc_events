@@ -803,7 +803,11 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				happiness < 0.4
+				
+				pop_percentage = {
+					limit = { happiness < 0.4 }
+					percentage > 0.75
+				}
 			}
 		}
 		NOT = {
@@ -913,7 +917,13 @@ country_event = {
 			days = -1
 		}
 		
-		hidden_effect = { country_event = { id = dpe_conspiracy.4 days = 5400 } }
+		hidden_effect = {
+			country_event = { id = dpe_conspiracy.4 days = 5400 }
+			set_timed_country_flag = {
+				flag = dpe_navy_might_demand_more
+				days = 18000
+			}
+		}
 		
 		ai_chance = {
 			factor = 1
@@ -1019,7 +1029,10 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				happiness < 0.4
+				pop_percentage = {
+					limit = { happiness < 0.4 }
+					percentage > 0.75
+				}
 			}
 		}
 		if = {
@@ -1069,7 +1082,10 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				happiness < 0.4
+				pop_percentage = {
+					limit = { happiness < 0.4 }
+					percentage > 0.75
+				}
 			}
 		}
 		if = {
@@ -1211,6 +1227,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		has_country_flag = dpe_navy_might_demand_more
 		is_subject = no
 		if = {
 			limit = {
@@ -1245,7 +1262,10 @@ country_event = {
 						count_pop_factions = {
 							limit = {
 								is_pop_faction_type = imperialist
-								happiness < 0.5
+								pop_percentage = {
+									limit = { happiness < 0.5 }
+									percentage > 0.75
+								}
 							}
 						}
 						any_owned_leader = {
@@ -1295,7 +1315,10 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				happiness < 0.5
+				pop_percentage = {
+					limit = { happiness < 0.5 }
+					percentage > 0.75
+				}
 			}
 		}
 		if = {
