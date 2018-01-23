@@ -1242,10 +1242,10 @@ event = {
 							has_ethic = ethic_pacifist
 							has_ethic = ethic_fanatic_pacifist
 						}
-						used_naval_capacity_percent > 1
-						
-						else = { used_naval_capacity_percent > 1.2 }
 					}
+					used_naval_capacity_percent > 1
+						
+					else = { used_naval_capacity_percent > 1.2 }
 				}
 				any_owned_leader = {
 					NOT = { leader_class = ruler }

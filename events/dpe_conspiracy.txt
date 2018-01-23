@@ -830,10 +830,10 @@ country_event = {
 					has_ethic = ethic_pacifist
 					has_ethic = ethic_fanatic_pacifist
 				}
-				used_naval_capacity_percent > 1
-				
-				else = { used_naval_capacity_percent > 1.2 }
 			}
+			used_naval_capacity_percent > 1
+				
+			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
 			NOT = { leader_class = ruler }
@@ -1041,10 +1041,10 @@ country_event = {
 					has_ethic = ethic_pacifist
 					has_ethic = ethic_fanatic_pacifist
 				}
-				used_naval_capacity_percent > 1
-				
-				else = { used_naval_capacity_percent > 1.2 }
 			}
+			used_naval_capacity_percent > 1
+				
+			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
 			NOT = { leader_class = ruler }
@@ -1094,10 +1094,10 @@ country_event = {
 					has_ethic = ethic_pacifist
 					has_ethic = ethic_fanatic_pacifist
 				}
-				used_naval_capacity_percent > 1
-				
-				else = { used_naval_capacity_percent > 1.2 }
 			}
+			used_naval_capacity_percent > 1
+				
+			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
 			NOT = { leader_class = ruler }
@@ -1151,7 +1151,7 @@ country_event = {
 	option = {
 		name = dpe_conspiracy.3.option
 		
-		shift_ethic = militarist
+		shift_ethic = ethic_militarist
 		
 		custom_tooltip = dpe_conspiracy.3.tooltip
 		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
@@ -1235,10 +1235,10 @@ country_event = {
 					has_ethic = ethic_pacifist
 					has_ethic = ethic_fanatic_pacifist
 				}
-				used_naval_capacity_percent > 1
-				
-				else = { used_naval_capacity_percent > 1.2 }
 			}
+			used_naval_capacity_percent > 1
+				
+			else = { used_naval_capacity_percent > 1.2 }
 		}
 	}
 	
@@ -1327,10 +1327,10 @@ country_event = {
 					has_ethic = ethic_pacifist
 					has_ethic = ethic_fanatic_pacifist
 				}
-				used_naval_capacity_percent > 1
-				
-				else = { used_naval_capacity_percent > 1.2 }
 			}
+			used_naval_capacity_percent > 1
+				
+			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
 			NOT = { leader_class = ruler }
