@@ -393,7 +393,7 @@ cc_colony_events.546.B:0 "Try to make amends: Denounce the assassination attempt
 cc_colony_events.546.C:0 "Apologise and step down."
 
 cc_colony_events.547.name:0 "Assassination Plot Fails"
-cc_colony_events.547.desc:0 Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName], and strained our relationship with them - though for now, their leadership has assured us that their attitude towards us has not changed."
+cc_colony_events.547.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName], and strained our relationship with them - though for now, their leadership has assured us that their attitude towards us has not changed."
 cc_colony_events.548.name:0 "Treachery!"
 cc_colony_events.548.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName]. Spooked by the popular tumult, the [from.owner.GetSpeciesAdj] government has sought to shift the blame to us, denouncing the [root.GetName] in terms that mirror [cc_colony_leader.GetName]'s rhetoric. When our ambassador demanded an explanation, he was instructed that he had ten days to leave the planet. It appears our relations with them have taken a sharp turn for the worse!"
 cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
@@ -409,6 +409,8 @@ cc_colony_events.551.name:0 "Institute of Purity opens on [root.GetName]"
 cc_colony_events.551.desc.A:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into an important centre of thought for [cc_colony_leader.GetSpeciesAdj] nationalists."
 cc_colony_events.551.desc.B:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
+cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
+cc_xenophobe_hero_1_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero, and would gladly follow them into battle against either the xenos or their sympathisers in government."
 cc_widespread_xenophobic_unrest:0 "Widespread Xenophobic Unrest"
 cc_widespread_xenophobic_unrest_desc:0 "There is widespread support for the aggrieved xenophobic faction, which has proof that the state tried to assassinate one of its leaders on behalf of a foreign power."
 cc_xenophobe_assassinated_attempt:0 "Attempted Assassination of Hegemon"

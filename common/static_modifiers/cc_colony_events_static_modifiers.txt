@@ -653,7 +653,15 @@ cc_xenophobe_assassinated_attempt = {
 
 cc_widespread_xenophobic_unrest = {
 	planet_unrest_mult = 0.1
-	pop_ethic_xenophobe_attraction_mult = 1
+	pop_ethic_xenophobe_attraction_mult = 0.75
+}
+
+cc_xenophobe_hero_1 = {
+	pop_ethic_spiritualist_attraction_mult = 0.75
+	planet_unrest_mult = 0.1
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
 }
 
 #Xenophiles

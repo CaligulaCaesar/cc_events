@@ -3391,20 +3391,22 @@ planet_event = {
 			planet_event = { id = cc_colony_events.5400 }
 			
 			else = {
-				random_relation = {
-					limit = {
-						NOR = {
-							is_same_species = prev
-							has_authority = auth_machine_intelligence
+				owner = {
+					random_relation = {
+						limit = {
+							NOR = {
+								is_same_species = prev
+								has_authority = auth_machine_intelligence
+							}
+							OR = {
+								has_defensive_pact = prev
+								is_in_federation_with = prev
+							}
 						}
-						OR = {
-							has_defensive_pact = prev
-							is_in_federation_with = prev
-						}
+						save_event_target_as = ally
+						
+						country_event = { id = cc_colony_events.540 }
 					}
-					save_event_target_as = ally
-					
-					country_event = { id = cc_colony_events.540 }
 				}
 			}
 		}
@@ -3422,7 +3424,7 @@ country_event = {
 	
 	option = {
 		name = cc_colony_events.540.A
-		hidden_effect = { from = { planet_event = id = cc_colony_events.5400 } }
+		hidden_effect = { from = { planet_event = { id = cc_colony_events.5400 } } }
 		ai_chance = { factor = 100 } #I mean, why would I want the AI not to do this? :P
 	}
 	option = {
@@ -3695,13 +3697,7 @@ planet_event = {
 			}
 		}
 		
-		tooltip = {
-			remove_modifier = cc_founder_xenophobe
-			add_modifier = {
-				modifier = cc_xenophobe_martyr
-				days = 9000
-			}
-		}
+		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
 		trigger = {
 			owner = {
@@ -4063,6 +4059,24 @@ planet_event = {
 					}
 				}
 			}
+			every_owned_planet = {
+				limit = {
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = {
+						has_ethic = ethic_xenophobe
+						is_same_species = root.owner
+					}
+				}
+				add_modifier = {
+					modifier = cc_xenophobe_hero_1
+					days = 5400
+				}
+			}
 		}
 		add_modifier = {
 			modifier = cc_colony_distrusts
@@ -4151,6 +4165,24 @@ planet_event = {
 					}
 				}
 			}
+			every_owned_planet = {
+				limit = {
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = {
+						has_ethic = ethic_xenophobe
+						is_same_species = root.owner
+					}
+				}
+				add_modifier = {
+					modifier = cc_xenophobe_hero
+					days = 5400
+				}
+			}
 		}
 		hidden_effect = {
 			event_target:ally = {
@@ -4211,24 +4243,44 @@ planet_event = {
 				country_event = { id = cc_colony_events.547 }
 			}
 		}
-		tooltip = CCREMOVERULER.tooltip
-
-		if = {
-			limit = { has_faction = supremacist }
-			random_pop_faction = {
-				limit = { is_pop_faction_type = supremacist }
-				add_modifier = {
-					modifier = cc_xenophobe_assassinated_attempt
-					days = 5400
-				}
-			}
-			else = {
+		custom_tooltip = CCREMOVERULER.tooltip
+		
+		owner = {
+			if = {
+				limit = { has_faction = supremacist }
 				random_pop_faction = {
-					limit = { is_pop_faction_type = isolationist }
+					limit = { is_pop_faction_type = supremacist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated_attempt
 						days = 5400
 					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = {
+							modifier = cc_xenophobe_assassinated_attempt
+							days = 5400
+						}
+					}
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = {
+						has_ethic = ethic_xenophobe
+						is_same_species = root.owner
+					}
+				}
+				add_modifier = {
+					modifier = cc_xenophobe_hero_1
+					days = 5400
 				}
 			}
 		}
