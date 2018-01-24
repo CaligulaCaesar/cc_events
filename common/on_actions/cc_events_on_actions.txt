@@ -124,6 +124,7 @@ on_war_ended = {
 on_war_beginning = {
 	events = {
 		cc_peace.5
+		dpe_diplo.8
 	}
 }
 
@@ -137,5 +138,26 @@ on_war_beginning = {
 on_pop_migration_end = {
 	events = {
 		cc_colony_events.552
+	}
+}
+
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		dpe_scandal.99
+	}
+}
+
+
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
+	events = {
+		dpe_conspiracy.6
 	}
 }

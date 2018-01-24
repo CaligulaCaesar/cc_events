@@ -95,7 +95,12 @@ planet_event = {
 					add_modifier = { modifier = embraced_faction_timer days = 3600 }
 					owner = {
 						every_pop_faction = {
-							limit = { NOT = { is_same_value = prevprev } }
+							limit = {
+								NOR = {
+									is_same_value = prevprev
+									is_pop_faction_type = totalitarian
+								}
+							}
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
@@ -716,7 +721,12 @@ planet_event = {
 					add_modifier = { modifier = embraced_faction_timer days = 3600 }
 					owner = {
 						every_pop_faction = {
-							limit = { NOT = { is_same_value = prevprev } }
+							limit = {
+								NOR = {
+									is_same_value = prevprev
+									is_pop_faction_type = totalitarian
+								}
+							}
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
@@ -940,7 +950,12 @@ country_event = {
 				add_modifier = { modifier = embraced_faction_timer days = 3600 }
 				owner = {
 					every_pop_faction = {
-						limit = { NOT = { is_same_value = prevprev } }
+						limit = {
+							NOR = {
+								is_same_value = prevprev
+								is_pop_faction_type = totalitarian
+							}
+						}
 						add_modifier = { modifier = embraced_another_faction days = 3600 }
 					}
 				}

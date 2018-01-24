@@ -18,26 +18,9 @@ country_event = {
 		num_owned_planets > 7
 		NOT = { has_country_flag = cc_has_had_blackmail }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = {
-			any_country = {
-				OR = {
-					is_hostile_to = root
-					is_rival = root
-					is_domineering_to = root
-				}
-				OR = {
-					relative_power = {
-						who = root
-						category = fleet
-						value = overwhelming
-					}
-					relative_power = {
-						who = root
-						category = fleet
-						value = overwhelming
-					}
-				}
-			}
+		NOR = {
+			has_country_flag = cc_eventperf_has_overwhelming_rival
+			has_country_flag = cc_eventperf_has_superior_rival
 		}
 	}	
 	

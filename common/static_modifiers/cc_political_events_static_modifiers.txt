@@ -165,6 +165,11 @@ cc_outrage_at_corruption = {
 	pop_government_ethic_attraction = -0.5
 }
 
+cc_outrage_at_corruption_1 = {
+	pop_citizen_happiness = -0.15
+	pop_government_ethic_attraction = -0.35
+}
+
 cc_outrage_at_police_violence = {
 	pop_ethic_egalitarian_attraction_mult = 1
 }
@@ -418,4 +423,102 @@ cc_ruled_against_us_pops = {
 
 cc_ruled_in_our_favour_pops = {
 	pop_happiness = 0.1
+}
+
+
+
+dpe_charity_unpopular_ruler = {
+	pop_citizen_happiness = -0.05
+	tile_resource_unity_mult = -0.25
+}
+
+dpe_charity_faction_undeserving = {
+	faction_happiness = -0.15
+}
+
+
+dpe_unbelief_faction = {
+	faction_happiness = -0.1
+}
+
+dpe_unbelief_empire = {
+	country_resource_influence_mult = -0.25
+}
+
+dpe_damned_to_hell_faction = {
+	faction_happiness = -0.15
+}
+
+dpe_damned_to_hell_empire = {
+	pop_citizen_happiness = -0.1
+	country_resource_influence_mult = -0.35
+	tile_resource_unity_mult = -0.25
+}
+
+
+dpe_state_in_lockdown = {
+	pop_citizen_happiness = -0.1
+	country_resource_minerals_mult = -0.33
+	country_resource_influence_add = -1
+	pop_migration_speed = -1
+}
+
+dpe_state_in_lockdown_faction = {
+	faction_happiness = -0.1
+}
+
+dpe_illegitimate_regime = {
+	pop_citizen_happiness = -0.05
+	pop_government_ethic_attraction = -0.2
+}
+
+dpe_seized_control_faction = {
+	faction_happiness = 0.1
+}
+
+dpe_lost_control_faction = {
+	faction_happiness = -0.2
+}
+
+
+
+dpe_extra_naval_expenses = {
+	ship_upkeep_mult = 0.1
+}
+
+dpe_extra_naval_expenses_2 = {
+	ship_upkeep_mult = 0.2
+}
+
+dpe_military_petition_rejected = {
+	faction_happiness = -0.10
+}
+
+dpe_military_coup_faction = {
+	faction_happiness = -0.25
+}
+
+dpe_navy_RandD = {
+	country_resource_energy_mult = -0.05
+	country_resource_minerals_mult = -0.1
+	country_engineering_tech_research_speed = 0.1
+	country_physics_tech_research_speed = 0.1
+}
+
+dpe_rebuilding_fleet = {
+	spaceport_ship_build_cost_mult = -0.1
+	spaceport_ship_build_speed_mult = 0.33
+}
+
+dpe_rebuilding_fleet_2 = {
+	spaceport_ship_build_cost_mult = -0.2
+	spaceport_ship_build_speed_mult = 0.33
+}
+
+dpe_naval_pay_cut_faction = {
+	faction_happiness = -0.05
+}
+
+dpe_navy_privileges_cut_faction = {
+	faction_happiness = -0.1
 }

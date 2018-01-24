@@ -1,0 +1,37 @@
+
+#Dunno how full this will get (surely more opinion modifiers than static ones on diplo), but started a new file for the hell of it
+
+
+dpe_ruler_looks_weak = { #mild version of "humiliated"
+	country_resource_influence_mult = -0.25
+	pop_citizen_happiness = -0.05
+}
+
+dpe_ruler_looks_weak_faction = {
+	faction_happiness = -0.15
+}
+dpe_ruler_looks_weak_and_breaks_promises_faction = {
+	faction_happiness = -0.25
+}
+
+dpe_indemnity_paid = {
+	planet_resource_minerals_add = -100
+	
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
+}
+
+dpe_indemnity_receive = {
+	planet_resource_minerals_add = 100
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
+}
+
+dpe_militarist_unrest = {
+	pop_ethic_militarist_attraction_mult = 0.8
+	planet_unrest_add = 30
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
+}

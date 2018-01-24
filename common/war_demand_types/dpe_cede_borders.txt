@@ -1,0 +1,107 @@
+
+dpe_cede_borders = {
+	is_conquest_type = yes
+	execution_order = 0
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 75
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	possible = {
+		always = yes
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	demandable = {
+		custom_tooltip = {
+			fail_text = "war_demand_dpe_cede_borders_not_under_our_control"
+			parameter:country = {
+				NOT = {
+					any_owned_planet = {
+						is_neighbor_of = fromfromfrom
+						
+						controller = {
+							OR = {
+								is_country = fromfromfrom
+								fromfrom = {
+									is_war_participant = {
+										who = prev
+										side = fromfromfrom
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		parameter:country = {
+		
+			every_owned_planet = {
+				limit = {
+					is_neighbor_of = fromfromfrom
+					controller = {
+						NOR = {
+							is_country = from
+							fromfrom = {
+								is_war_participant = {
+									who = prev
+									side = from
+								}
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = { is_original_owner = fromfromfrom }						
+					}
+					
+					add_threat = {
+						who = fromfromfrom
+						amount = 3 # scales to pops
+					}
+
+					fromfromfrom = {
+						set_timed_country_flag = {
+							flag = imperialist_conquest_timed_flag
+							days = 7200 # 20 years
+						}
+					}	
+
+					conquer = fromfromfrom		# conquer applies the recently conquered malus
+					
+					else = {
+						add_threat = {
+							who = fromfromfrom
+							amount = 1 # scales to pops
+						}					
+					
+						set_owner = fromfromfrom
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 500
+	}
+}
