@@ -148,6 +148,97 @@ cc_underground_pacifist_movement_1_desc:0 "На этой планете дейс
 cc_underground_pacifist_movement_2:0 "Подпольное Движение Сопротивления Пацифистов"
 cc_underground_pacifist_movement_2_desc:0 "На этой планете действует Подпольное Движение, сконцентрированное вокруг учения пацифического диссидента. Их конечная цель - добиться мира благодаря полной независимости от нашей империи. К несчастью, в бочку дёгтя добавили ещё одну ложку -  некоторые люди из этого движения стали призывать к использованию насилия, чтобы освободиться от "великого зла" [root.owner.GetName]. Мы можем ожидать беспорядки какое-то время."
 
+
+#Xenophile
+
+cc_colony_events.4.name:0 "Xenophilic Activist on [root.GetName]"
+cc_colony_events.4.desc.pos:0 "As our people begin stepping out into the stars, many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. Fortunately, [cc_colony_leader.GetSheHe] has taken pains not to be seen to be usurping our local authorities, and has consulted them before making important decisions. For their part, our local officials approve of [cc_colony_leader.GetHisHer] teachings and initiatives, and recommend integrating [cc_colony_leader.GetHimHer] into the local command structure." 
+cc_colony_events.4.desc.neut:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has not to this point used this authority to take a stance against the [root.owner.GetName] - indeed, [cc_colony_leader.GetSheHe] has so far cooperated well with our local authorities - but [cc_colony_leader.GetHisHer] ideas of what is best do deviate from those generally espoused by the [root.owner.GetName]'s leaders.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?"
+cc_colony_events.4.desc.neg:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain troublemaker named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has been using this new-found authority to take a line that is far from that represented by the [root.owner.GetName], and has been described as a "nuisance" by our local authorities.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?" 
+
+cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.4.C:0 "$cc_colony_events.3.C$"
+cc_colony_events.4.C.tooltip:0 "$cc_colony_events.remove_leader.tooltip$"
+
+
+cc_colony_events.41.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.41.desc:0 "$cc_colony_events.61.desc$"
+
+
+cc_colony_events.42.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.42.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.42.A:0 "$cc_colony_events.22.A.desc$"
+cc_colony_events.42.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.42.B:0 "Release [cc_colony_leader.GetHimHer]." 
+
+
+cc_colony_events.421.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.421.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.43.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.43.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.43.A:0 "$cc_colony_events.23.A$"
+cc_colony_events.43.B:0 "$cc_colony_events.23.B$"
+cc_colony_events.43.C:0 "Hunt down this agitator and [cc_colony_leader.GetHisHer] followers."
+
+cc_colony_events.431.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.431.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.431.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.432.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.432.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have failed. [cc_colony_leader.GetSheHeCap] has gathered [cc_colony_leader.GetHisHer] most trusted followers and has founded an underground movement with which [cc_colony_leader.GetSheHe] apparently hopes to protect [root.GetName]'s xeno communities from predation and discrimination. We can expect trouble from [cc_colony_leader.GetHimHer] for some time."
+
+cc_colony_events.433.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.433.desc:0 "$cc_colony_events.533.desc$"
+
+cc_colony_events.434.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.434.desc:0 "$cc_colony_events.234.desc$"
+
+
+cc_colony_events.45.name:0 "$cc_colony_events.55.name$"
+cc_colony_events.45.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHe] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. One of [cc_colony_leader.GetHisHer] final projects had been to ensure that [cc_colony_leader.GetHisHer] efforts to ensure peaceful and just relations between species are not forgotten by setting up an annual Cultural Exchange in [cc_colony_leader.GetHisHer]. However, [cc_colony_leader.GetSheHe] died before this could be realised. The mourning population on [root.GetName] have requested that [cc_colony_leader.GetName]'s last wish be honoured, and that government support for the Cultural Exchange be given."
+cc_colony_events.45.A: "House a Cultural Exchange"
+cc_colony_events.45.B: "$cc_colony_events.25.B$"
+cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
+cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
+
+cc_colony_events.451.name:0 "Cultural Exchange opens on [root.GetName]"
+cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour has been completed. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
+
+
+cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+
+cc_founder_xenophile:0 "Xenophile Mediator"
+cc_founder_xenophile_desc:0 "This colony is under the influence of a charismatic individual whose personal mission is to ensure the fair and equal treatment of all aliens."
+
+cc_minor_protests_xenophile:0 "Minor Protests"
+cc_minor_protests_xenophile_desc:0 "This Planet is experiencing minor protests following the arrest of one of their leaders."
+cc_major_protests_xenophile:0 "Major Protests"
+cc_major_protests_xenophile_desc:0 "This Planet is experiencing major protests following the arrest of one of their leaders."
+
+cc_underground_xenophile_movement_1:0 "Underground Xenophile Movement"
+cc_underground_xenophile_movement_1_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. It seeks to protect the planet's xeno communities from predation and discrimination."
+cc_underground_xenophile_movement_2:0 "Underground Xenophile Movement"
+cc_underground_xenophile_movement_2_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. Its ultimate aim is full independence from our empire."
+
+cc_xenophiles_offended:0 "Offended Xenophiles"
+cc_xenophiles_offended_desc:0 "The xenophobic population on this planet is offended at the attitude of the new regime."
+
+cc_building_xenophile_institute:0 "Preparing a Cultural Exchange"
+cc_building_xenophile_institute_desc:0 "A Cultural Exchange that is meant to secure the legacy of this planet's "Mediator" is being prepared."
+
+cc_xenophile_institute:0 "Cultural Exchange"
+cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory of a celebrated citizen who sought to improve interspecies relations. Their spirit and teachings live on in it, and will be remembered for as long as it is celebrated."
+
+cc_founders_memory_disrespected_1_xenophile:0 "Local Founding Citizen Disrespected"
+cc_founders_memory_disrespected_1_xenophile_desc:0 "The population is disappointed at the manner in which the parent state treated this planet's "Mediator", a well-regarded citizen who had sought good relations between all species."
+
+cc_founders_memory_disrespected_2_xenophile:0 "$cc_founders_memory_disrespected_1_xenophile$"
+cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespected_1_xenophile_desc$"
+
+
+
 #Xenophobe
 
 cc_colony_events.5.name:0 "Националист-Агитатор на [root.GetName]"
@@ -187,6 +278,13 @@ cc_colony_events.54.desc.pos:0 "За последние 15 лет [cc_colony_lea
 
 #Non-xenophobe variant:
 
+#Non-xenophobe variant:
+#see old .542 translation, you should be able to use a lot of that here
+cc_colony_events.540.name:0 "A Foreign Nuisance" 
+cc_colony_events.540.desc:0 "Our ally, the [from.owner.GetName] have been tolerating an outspoken and charismatic xenophobe named [cc_colony_leader.GetName] for decades. [cc_colony_leader.GetSheHeCap] made a name for [cc_colony_leader.GetHimHer]self on [from.GetName] and other [from.owner.GetSpeciesAdj] planets through vicious speeches that publicly derided xenos and named foreign states - in particular, the [root.GetName] - as "Enemies of the People". [cc_colony_leader.GetSheHeCap] recently held a series of particularly hostile speeches, in which [cc_colony_leader.GetSheHe] condemned our people, traditions, and government, and openly called for not only an end to our alliance with the [from.owner.GetName], but that the [from.owner.GetName] should take a hostile stance against us. We have reports of our diplomates and merchants being harassed and assaulted by [cc_colony_leader.GetName]'s xenophobes. Something must be done!" 
+cc_colony_events.540.A:0 "Contact our allies, we can help them... eliminate the problem."
+cc_colony_events.540.B:0 "It isn't worth the risk."
+
 cc_colony_events.54.desc.neg:0 "За последние 15 лет [cc_colony_leader.GetName] был ведущей фигурой на [Root.GetName]. [cc_colony_leader.GetSheHeCap] зарядил энергией население [root.owner.GetSpeciesAdj], хотя и оказался весьма противоречой фигурой для Общества за Права Ксеносов. Недавно, риторика [cc_colony_leader.GetHisHer] против ксеносов вывела из себя нашего союзника [ally.GetName]. Их посол обратился к [root.owner.GetRulerTitle] [root.owner.GetRulerName] с предложением о готовности правительства [ally.GetSpeciesAdj] и [ally.GetRulerTitle] помочь в устранении этой разбойника... а так же объяснением, что в противном случае, [ally.GetName] не потерпят подобного и дальше.\n\nЧто нам делать?"
 cc_colony_events.54.A:0 "[cc_colony_leader.GetName] лоялен гражданам [root.owner.GetSpeciesAdj]."
 cc_colony_events.54.B:0 "Очень хорошо. Давайте устраним [cc_colony_leader.GetHimHer]."
@@ -195,15 +293,30 @@ cc_colony_events.541.desc:0 "Убийство [cc_colony_leader.GetName] про�
 cc_colony_events.541.A:0 "Ни за что."
 cc_colony_events.541.B:0 "Всё равно мы их никогда не любили."
 cc_colony_events.542.name:0 "[from.owner.GetName] стновятся Враждебными"
-cc_colony_events.542.desc:0 "Харизматичный и крайне ксенофобных оратор по имени [cc_colony_leader.GetName] сделал себе имя на [from.GetName] и других планетах [from.owner.GetSpeciesAdj] благодаря разным речам, публично порочащим и высмеиваюищим всех ксеносов, а так же иностранные государства. В частности, он называл [root.GetName] "Врагами Народа". После особенно ожесточенной речи, мы, как союзники, попросили [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] позволить нам... устранить проблему. Однако, невероятно, но [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] не только отклонили нашу просьбу, но и выразили всесторонню поддержку взглядов [cc_colony_leader.GetName]."
+#cc_colony_events.542.desc:0 "Харизматичный и крайне ксенофобных оратор по имени [cc_colony_leader.GetName] сделал себе имя на [from.GetName] и других планетах [from.owner.GetSpeciesAdj] благодаря разным речам, публично порочащим и высмеиваюищим всех ксеносов, а так же иностранные государства. В частности, он называл [root.GetName] "Врагами Народа". После особенно ожесточенной речи, мы, как союзники, попросили [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] позволить нам... устранить проблему. Однако, невероятно, но [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] не только отклонили нашу просьбу, но и выразили всесторонню поддержку взглядов [cc_colony_leader.GetName]."
+cc_colony_events.542.desc:0 "You put us in a difficult position, [root.GetSpeciesNamePlural]: We must choose between our friends and our citizens. After careful consideration, we have agreed that the primary purpose of the [from.GetName]'s government is to serve the good of the citizens. For that reason, we regret to inform you that we will neither support nor tolerate any moves to forcibly eliminate [cc_colony_leader.GetName]."
 cc_colony_events.542.option:0 "Нам придётся переоценить наше мнение о них."
 cc_colony_events.543.name:0 "Устраните этого Разбойника"
-cc_colony_events.543.desc:0 "Харизматичнный и крайне ксенофобный оратор по имени [cc_colony_leader.GetName], сделавший себе имя на [from.GetName] и других планетах [from.owner.GetSpeciesAdj]благодаря разным речам, публично порочащим и высмеиваюищим всех ксеносов, а так же иностранные государства. В частности, он называл [root.GetName] "Врагами Народа". После особенно ожесточенной речи, как их союзники, мы осторожно попросили [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] позволить нам... устранить проблему. [from.owner.leader.GetSheHe] согласился с нашим планом, а потому мы поручили нашими разведывательным службам работать с их коллегами из [from.owner.GetSpeciesAdj], чтобы ускорить кончину [cc_colony_leader.GetName]."
+#cc_colony_events.543.desc:0 "Харизматичнный и крайне ксенофобный оратор по имени [cc_colony_leader.GetName], сделавший себе имя на [from.GetName] и других планетах [from.owner.GetSpeciesAdj]благодаря разным речам, публично порочащим и высмеиваюищим всех ксеносов, а так же иностранные государства. В частности, он называл [root.GetName] "Врагами Народа". После особенно ожесточенной речи, как их союзники, мы осторожно попросили [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] позволить нам... устранить проблему. [from.owner.leader.GetSheHe] согласился с нашим планом, а потому мы поручили нашими разведывательным службам работать с их коллегами из [from.owner.GetSpeciesAdj], чтобы ускорить кончину [cc_colony_leader.GetName]."
+cc_colony_events.543.desc:0 "We will gladly work with you to eliminate the troublemaker, "Hegemon" [cc_colony_leader.GetName]! We have instructed our intelligence agency to work with yours to devise a plan to move forwards. Very soon, the threat [cc_colony_leader.GetSheHe] poses will be neutralised."
 cc_colony_events.544.name:0 "[cc_colony_leader.GetName] Успешно Ликвидирован"
 cc_colony_events.544.desc:0 "Заговор с целью уничтожения [cc_colony_leader.GetName] оказался в значительной степени успешным  -  дело было сделано, и никаких доказательств, могущих связать нас с убийством, не осталось. Несмотря на это, кажется, что сторонники [cc_colony_leader.GetName] в любом случае обвиняют нас. Видимо, когда ты везде и во всём видишь заговор, то с высокой вероятностью один из них окажется правдой. В любом случае, [from.owner.GetName] решили защитить нас, заверив, что ничто не помешает продолжению их дружбы с [root.GetName]."
 cc_colony_events.545.name:0 "[from.owner.GetName] Предал Нас!"
 cc_colony_events.545.desc:0 "[cc_colony_leader.GetName] был успешно ликвидирован - дело было сделано, и никаких доказательств, могущих связать нас с убийством, не осталось. Несмотря на это, кажется, что сторонники [cc_colony_leader.GetName] в любом случае обвиняют нас. Видимо, когда ты везде и во всём видишь заговор, то с высокой вероятностью один из них окажется правдой. И несмотря на заверения, что [from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle] поддержать заговор, [from.owner.leader.GetSheHe] теперь отрицает любую причастность к нему и возлагают полную ответственность на [root.GetName], унижая при этом нашу империю в самых оскорбительны терминах. Когда наш посол потребовал объяснений, ему заявили, что у него осталось десять дней, чтобы покинуть планету..."
 cc_colony_events.545.option:0 "$cc_colony_events.542.option$"
+
+cc_colony_events.546.name:0 "Assassination Failed!" 
+cc_colony_events.546.desc:0 "Our intelligence operatives failed to kill [cc_colony_leader.GetName], and were captured In the attempt. We were unable to retrieve them without compromising our involvement further, so they were left to their fate. Unfortunately, it seems that they've cracked and revealed not only that we tried to kill [cc_colony_leader.GetHimHer], but also that we did so on behalf of the [ally.GetName]. This has sparked unrest across the nation. [cc_colony_leader.GetName]'s supporters are outraged, and have begun calling for open resistance to the central government - calls which are receiving a reasonable amount of support among the general population, with many disgusted that the government would side with a foreign power against one of its own citizens. As a result, protests calling for the government to resign are widespread.\n\n[ally.GetName]'s ambassador has apologised for the failure of the mission, and offered what support the [ally.GetName] can, though she suggests that further [ally.GetSpeciesAdj] involvement may cause adverse reactions in the present climate - following threats to his life, he has taken refuge in the government building.\n\nMeanwhile, [cc_colony_leader.GetName], whose fame has reached new heights, is visiting supporters on planets in [cc_colony_leader.GetHisHer] part of the [root.owner.GetName], and is calling on them to support [cc_colony_leader.GetHimHer], a "true [root.owner.GetSpeciesName]", against the "traitors" in the government.\n\nHow will we maintain order during these troubled times?" 
+cc_colony_events.546.A:0 "We will weather the storm."
+cc_colony_events.546.B:0 "Try to make amends: Denounce the assassination attempt and the [ally.GetSpeciesNamePlural]."
+cc_colony_events.546.C:0 "Apologise and step down."
+
+cc_colony_events.547.name:0 "Assassination Plot Fails"
+cc_colony_events.547.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName], and strained our relationship with them - though for now, their leadership has assured us that their attitude towards us has not changed."
+cc_colony_events.548.name:0 "Treachery!"
+cc_colony_events.548.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName]. Spooked by the popular tumult, the [from.owner.GetSpeciesAdj] government has sought to shift the blame to us, denouncing the [root.GetName] in terms that mirror [cc_colony_leader.GetName]'s rhetoric. When our ambassador demanded an explanation, he was instructed that he had ten days to leave the planet. It appears our relations with them have taken a sharp turn for the worse!"
+cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
+
 cc_colony_events.55.name:0 "Смерть Великого [cc_colony_leader.GetSpeciesName]"
 cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], "Гегемон" [root.GetName], умер этим утром. [cc_colony_leader.GetSheHe] страдал от слабого здоровья некоторое время, и, наконец, лихорадка его добила. Население на [root.GetName] в трауре и попросило нас построить специальный Институт в честь [cc_colony_leader.GetHisHer], где бы достижения "Гегемона", а что важнее слава народа [cc_colony_leader.GetSpeciesAdj], могли бы должны образом почитаться."
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
@@ -213,6 +326,14 @@ cc_colony_events.55.C.tooltip:0 "Влияние [cc_colony_leader.GetName] ис�
 cc_colony_events.551.name:0 "Иститут Чистоты на [root.GetName]"
 cc_colony_events.551.desc.A:0 "Институт в честь [cc_colony_leader.GetName] построили. Его открытие вызвало большой ажиотаж среди последователей [cc_colony_leader.GetHisHer], которые прибыли из других миров по этому случаю. Мы верим, что это место станет важным центром националистов [cc_colony_leader.GetSpeciesAdj]."
 cc_colony_events.551.desc.B:0 "Институт в честь [cc_colony_leader.GetName] построили. Население на [root.GetName] отныне имеет место, чтобы помнить достижения и учение [cc_colony_leader.GetHisHer]."
+
+cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
+cc_xenophobe_hero_1_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero, and would gladly follow them into battle against either the xenos or their sympathisers in government."
+cc_widespread_xenophobic_unrest:0 "Widespread Xenophobic Unrest"
+cc_widespread_xenophobic_unrest_desc:0 "There is widespread support for the aggrieved xenophobic faction, which has proof that the state tried to assassinate one of its leaders on behalf of a foreign power."
+cc_xenophobe_assassinated_attempt:0 "Attempted Assassination of Hegemon"
+cc_ally_xenophobic_rhetoric:0 "Xenophobic Rhetoric"
+
 cc_xenophobe_martyr:0 "Память о Мученике"
 cc_xenophobe_martyr_desc:0 "Бывший Гегемон этой планеты признан мучеником из-за его убийства ксеносами с помощью заговора."
 cc_mourning_xenophobe:0 "Траурный Герой"
@@ -600,6 +721,27 @@ cc_cleanup_events.34.A:0 "Оставьте им их героев."
 
 cc_cleanup_events.35.name:0 "Подпольное Движение Ксенофобов на [root.GetName]"
 cc_cleanup_events.35.desc:0 "Подпольное движение ксенофобом создавало проблемы для бывших хозяев [Root.GetName]. Теперь, когда мы завоевали планету, они чувствуют, что их предыдущие деяния были оправданы, а посему они решили удвоить усилия по защиты планеты от влияния инопланетной мрази."
+
+
+cc_cleanup_events.36.name:0 "Prominent Xenoist Activist on [root.GetName]"
+cc_cleanup_events.36.desc:0 "A prominent xenoist activist is active on [root.GetName], and is the centrepoint of the planet's influential movement for peace and cooperation between species. Should they be allowed to remain in their position?"
+
+cc_cleanup_events.37.name:0 "Cultural Exchange on [root.GetName]"
+cc_cleanup_events.37.desc:0 "The old owners of [root.GetName] had been preparing a Cultural Exchange in honour of a prominent xenoist activist who was native to the planet. If completed, it will be contribute to establishing the planet's reputation as a multispecies haven. Should we continue to support it?"
+cc_cleanup_events.37.tooltip:0 "Once completed, the Cultural Exchange will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+cc_cleanup_events.38.name:0 "Cultural Exchange on [root.GetName]"
+cc_cleanup_events.38.desc:0 "The old owners of [root.GetName] had set up a Cultural Exchange in honour of a prominent xenoist activist who was native to the planet. It serves to secure the activist's legacy and establish the planet's reputation as a multispecies haven. Should we allow it to continue to exist?"
+
+cc_cleanup_events.39.name:0 "The Memory of a famous Activist on [root.GetName]"
+cc_cleanup_events.39.desc:0 "The old owners of [root.GetName] had offended the xenophile population on [root.GetName] by not establishing a Cultural Exchange, as a recently-deceased prominent activist who was native to the planet had wanted to. Should we establish one ourselves?"
+
+cc_cleanup_events.40.name:0 "Underground Xenophile Movement on [root.GetName]"
+cc_cleanup_events.40.desc:0 "An underground xenophile movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that a Cultural Exchange be established on the planet to cement it as a haven of goodwill and peace between species.\n\nShould we establish the Cultural Exchange?"
+
+cc_cleanup_events.41.name:0 "Cultural Exchange on [root.GetName] complete"
+cc_cleanup_events.41.desc:0 "The Cultural Exchange in honour of [root.GetName]'s famous xenoist activist has been completed. The populace on [root.GetName] now have a place to remember their leader's teachings and achievements, and are confident that their planet's peace and goodwill between species will be maintained."
+
 
 #General Modifiers
 cc_colony_distrusts:0 "Недоверие к Своему Государству"
