@@ -106,11 +106,10 @@ cc_xeno_clashes.4.C:0 "Введите военное положение до т�
 cc_xeno_clashes.4.D:0 "Отправить команду для переговоров."
 cc_xeno_clashes.4.E:0 "Ни один из них не достоин места в [root.owner.GetName]."
 
-cc_xeno_clashes.4.A.tooltip:0 "The [root.owner.GetName]'s [species2.GetAdj] population will be insulted, but the [species1.GetSpeciesNamePlural] will feel vindicated."
-cc_xeno_clashes.4.B.tooltip:0 "The [root.owner.GetName]'s [species1.GetAdj] population will be insulted, but the [species2.GetSpeciesNamePlural] will feel vindicated."
-cc_xeno_clashes.4.D.tooltip:0 "Maybe the tensions can be resolved through diplomacy."
-cc_xeno_clashes.4.E.tooltip:0 "The [root.owner.GetName]'s [species1.GetAdj] and [species2.GetAdj] populations will be insulted."
-
+cc_xeno_clashes.4.A.tooltip:0 "Сообщество [species2.GetAdj] в [root.owner.GetName] будет оскорблено, но [species1.GetSpeciesNamePlural] почувствуют себя оправданными." 
+cc_xeno_clashes.4.B.tooltip:0 "Сообщество [species1.GetAdj] в [root.owner.GetName] будет оскорблено, но [species2.GetSpeciesNamePlural] почувствуют себя оправданными."
+cc_xeno_clashes.4.D.tooltip:0 "Может быть, разногласия можно разрешить с помощью дипломатии."
+cc_xeno_clashes.4.E.tooltip:0 "Сообщество [species1.GetAdj] и [species2.GetAdj] в [root.owner.GetName] будет оскорблено."
 #E:
 cc_xeno_clashes.41.name:0 "Фомирование Фронта Независимости [species1.GetAdj]-[species2.GetAdj]"
 cc_xeno_clashes.41.desc:0 "К проклятому [root.GetRulerTitle] [root.GetRulerName],\n\nДо этих самых пор, мы, нижеподписавшиеся, находились в разногласиях. Однако ваш ответ привёл нас к осознанию того, что у нас есть общий враг - [root.GetSpeciesNamePlural]. Мы разрешили наши проблемы и примирились с различиями, и теперь готовы действовать вместе для создания гармоничного государства вне состава [root.GetName].\n\nС уважением,\n[annoyed_xeno.GetName] и [annoyed_xeno2.GetName]\nЛидеры Фронта Независимости [species1.GetAdj]-[species2.GetAdj]."
