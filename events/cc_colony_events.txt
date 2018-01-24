@@ -3329,6 +3329,118 @@ planet_event = {
 
 planet_event = {
 	id = cc_colony_events.54
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		exists = controller
+		controller = { is_same_value = root.owner }
+		orbital_bombardment = no
+		
+		has_modifier = cc_founder_xenophobe
+		owner = {
+			any_owned_planet = {
+				NOT = { is_same_value = root }
+				distance = {
+					source = root
+					min_distance = 0
+					max_distance = 75
+				}
+				any_owned_pop = {
+					has_ethic = ethic_xenophobe
+					is_same_species = root.owner
+				}
+			}
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+			
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				any_relation = {
+					NOR = {
+						is_same_species = prev
+						has_authority = auth_machine_intelligence
+					}
+					OR = {
+						has_defensive_pact = prev
+						is_in_federation_with = prev
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			planet_event = { id = cc_colony_events.5400 }
+			
+			else = {
+				random_relation = {
+					limit = {
+						NOR = {
+							is_same_species = prev
+							has_authority = auth_machine_intelligence
+						}
+						OR = {
+							has_defensive_pact = prev
+							is_in_federation_with = prev
+						}
+					}
+					save_event_target_as = ally
+					
+					country_event = { id = cc_colony_events.540 }
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cc_colony_events.540
+	title = cc_colony_events.540.name
+	desc = cc_colony_events.540.desc
+	picture = GFX_evt_alien_propaganda
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cc_colony_events.540.A
+		hidden_effect = { from = { planet_event = id = cc_colony_events.5400 } }
+		ai_chance = { factor = 100 } #I mean, why would I want the AI not to do this? :P
+	}
+	option = {
+		name = cc_colony_events.540.B
+		
+		from.owner = {
+			add_opinion_modifier = {
+				modifier = cc_ally_xenophobic_rhetoric
+				who = root
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+	
+planet_event = {
+	id = cc_colony_events.5400
 	title = cc_colony_events.54.name
 	desc = {
 		trigger = {
@@ -3404,30 +3516,6 @@ planet_event = {
 		set_timed_planet_flag = {
 			flag = cc_famous_leader
 			years = 25
-		}
-		
-		owner = {
-			if = {
-				limit = {
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-				}
-				random_relation = {
-					limit = {
-						NOR = {
-							is_same_species = prev
-							has_authority = auth_machine_intelligence
-						}
-						OR = {
-							has_defensive_pact = prev
-							is_in_federation_with = prev
-						}
-					}
-					save_event_target_as = ally
-				}
-			}
 		}
 	}
 	
@@ -3595,12 +3683,15 @@ planet_event = {
 		name = cc_colony_events.54.B
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.541 days = 45 random = 20 }
 			event_target:ally = {
 				if = {
 					limit = { is_ai = no }
 					country_event = { id = cc_colony_events.543 }
 				}
+			}
+			random_list = {
+				3 = { planet_event = { id = cc_colony_events.541 days = 45 random = 20 } }
+				2 = { planet_event = { id = cc_colony_events.546 days = 45 random = 20 } }
 			}
 		}
 		
@@ -3682,6 +3773,15 @@ planet_event = {
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated
 						days = 5400
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = {
+							modifier = cc_xenophobe_assassinated
+							days = 5400
+						}
 					}
 				}
 			}
@@ -3788,6 +3888,7 @@ planet_event = {
 			days = 9000
 		}
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				owner = {
@@ -3836,7 +3937,15 @@ country_event = {
 	id = cc_colony_events.542
 	title = cc_colony_events.542.name
 	desc = cc_colony_events.542.desc
-	picture = GFX_evt_cc_assassination
+
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from.owner
+		planet_background = from.owner
+		graphical_culture = from.owner
+		city_level = from.owner
+		room = from.owner.ruler
+	}
 
 	is_triggered_only = yes
 	
@@ -3861,12 +3970,20 @@ country_event = {
 	id = cc_colony_events.543
 	title = cc_colony_events.543.name
 	desc = cc_colony_events.543.desc
-	picture = GFX_evt_cc_assassination
+
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from.owner
+		planet_background = from.owner
+		graphical_culture = from.owner
+		city_level = from.owner
+		room = from.owner.ruler
+	}
 
 	is_triggered_only = yes
 	
 	option = {
-		name = OK
+		name = CCEXCELLENT
 	}
 }
 
@@ -3897,7 +4014,7 @@ country_event = {
 		tooltip = {
 			from.owner = {
 				shift_ethic = ethic_xenophobe
-				event_target:ally = {
+				root = {
 					add_opinion_modifier = {
 						modifier = cc_betrayed_us_ally
 						who = prev
@@ -3907,6 +4024,289 @@ country_event = {
 		}
 	}
 }
+
+#Assassination Fails
+
+planet_event = {
+	id = cc_colony_events.546
+	title = cc_colony_events.546.name
+	desc = cc_colony_events.546.desc
+	picture = GFX_evt_cc_assassination
+
+	is_triggered_only = yes
+	location = root
+	
+	option = {
+		name = cc_colony_events.546.A
+		
+		owner = {
+			add_modifier = {
+				modifier = cc_widespread_xenophobic_unrest
+				days = 3600
+			}
+			if = {
+				limit = { has_faction = supremacist }
+				random_pop_faction = {
+					limit = { is_pop_faction_type = supremacist }
+					add_modifier = {
+						modifier = cc_xenophobe_assassinated_attempt
+						days = 5400
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = {
+							modifier = cc_xenophobe_assassinated_attempt
+							days = 5400
+						}
+					}
+				}
+			}
+		}
+		add_modifier = {
+			modifier = cc_colony_distrusts
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ally = {
+				country_event = { id = cc_colony_events.547 }
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				owner = {
+					OR = {
+						count_pop_factions = {
+							limit = {
+								support > 0.2
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
+							count > 0
+						}
+						count_pop_factions = {
+							limit = {
+								support > 0.1
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
+							count > 1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = cc_colony_events.546.B
+		
+		owner = {
+			event_target:ally = {
+				add_opinion_modifier = {
+					modifier = cc_betrayed_us_ally
+					who = prev
+				}
+			}
+			shift_ethic = ethic_xenophobe
+			if = {
+				limit = { has_faction = supremacist }
+				random_pop_faction = {
+					limit = { is_pop_faction_type = supremacist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = {
+									NOR = {
+										is_same_value = prevprev
+										is_pop_faction_type = isolationist
+									}
+								}
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
+							}
+						}
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = { NOT = { is_same_value = prevprev } }
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:ally = {
+				country_event = { id = cc_colony_events.548 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = { has_ai_personality = federation_builders }
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					OR = {
+						count_pop_factions = {
+							limit = {
+								support > 0.2
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
+							count > 0
+						}
+						count_pop_factions = {
+							limit = {
+								support > 0.1
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
+							count > 1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = cc_colony_events.546.C
+		trigger = { exists = ruler }
+			
+		hidden_effect = {
+			owner = { kill_leader = { type = ruler show_notification = no } }
+			event_target:ally = {
+				country_event = { id = cc_colony_events.547 }
+			}
+		}
+		tooltip = CCREMOVERULER.tooltip
+
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xenophobe_assassinated_attempt
+					days = 5400
+				}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = {
+						modifier = cc_xenophobe_assassinated_attempt
+						days = 5400
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 2.5
+			modifier = {
+				factor = 0.5
+				ruler = { has_skill > 4 }
+			}
+			modifier = {
+				factor = 0.67
+				ruler = { has_skill > 5 }
+			}
+			modifier = {
+				factor = 0.67
+				ruler = { has_skill > 6 }
+			}
+			modifier = {
+				factor = 0.67
+				ruler = { has_skill > 7 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cc_colony_events.547
+	title = cc_colony_events.547.name
+	desc = cc_colony_events.547.desc
+	picture = GFX_evt_cc_assassination
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+		
+		from.owner = {
+			add_opinion_modifier = {
+				modifier = cc_ally_xenophobic_rhetoric
+				who = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cc_colony_events.548
+	title = cc_colony_events.548.name
+	desc = cc_colony_events.548.desc
+	picture = GFX_evt_cc_assassination
+
+	is_triggered_only = yes
+	
+	option = {
+		name = cc_colony_events.548.option
+		
+		tooltip = {
+			from.owner = {
+				shift_ethic = ethic_xenophobe
+				root = {
+					add_opinion_modifier = {
+						modifier = cc_betrayed_us_ally
+						who = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
 
 planet_event = {
 	id = cc_colony_events.55

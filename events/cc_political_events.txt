@@ -143,10 +143,10 @@ country_event = {
 		}
 		hidden_effect = {
 			kill_leader = { type = ruler show_notification = no }
-			add_modifier = {
-				modifier = cc_acceeded_to_demands_xenophile
-				days = 3600
-			}
+		}
+		add_modifier = {
+			modifier = cc_acceeded_to_demands_xenophile
+			days = 3600
 		}
 		ai_chance = {
 			factor = 1
