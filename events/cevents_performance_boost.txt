@@ -936,6 +936,7 @@ event = {
 			}
 		}
 		
+		
 		#Xeno Sex Scandal
 		every_country = {
 			limit = {
@@ -1384,9 +1385,431 @@ event = {
 					}
 				}
 			}
-		}					
+		}
+		
+		
+		
+		#charity scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_country_flag = dpe_recent_charity_scandal }
+				OR = {
+					AND = {
+						has_ethic = ethic_fanatic_materialist
+						NOT = { has_ethic = ethic_egalitarian }
+					}
+					AND = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = ruler
+					ruler = { NOT = { leader_of_faction = totalitarian } }
+				}
+				set_timed_country_flag = {
+					flag = dpe_can_have_charity_scandal
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = progressive
+							support > 0.1
+							pop_percentage = {
+								limit = { happiness > 0.5 }
+								percentage > 0.74
+							}
+						}
+						count = 1
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_satisfied_egalitarians
+					days = 31
+				}
+			}
+		}
+		#corruption_scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				
+				OR = {
+					has_monthly_income = {
+						resource = minerals
+						value > 250
+					}
+					has_monthly_income = {
+						resource = energy
+						value > 250
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_corruption_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 500
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 500
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_corruption_scandal_more_likely
+					days = 31
+				}
+				if = {
+					limit = {
+						OR = {
+							has_monthly_income = {
+								resource = minerals
+								value > 750
+							}
+							has_monthly_income = {
+								resource = energy
+								value > 750
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = dpe_corruption_scandal_likely
+						days = 31
+					}
+					if = {
+						limit = {
+							OR = {
+								has_monthly_income = {
+									resource = minerals
+									value > 1000
+								}
+								has_monthly_income = {
+									resource = energy
+									value > 1000
+								}
+							}
+						}
+						set_timed_country_flag = {
+							flag = dpe_corruption_scandal_very_likely
+							days = 31
+						}
+					}
+				}
+			}
+		}
+		#Disbelief scandal
+		every_country = {
+			limit = {
+				is_country_type = default
+
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+				
+				exists = ruler
+				ruler = { NOT = { leader_of_faction = traditionalist } }
+				
+				has_faction = traditionalist
+				
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.3
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_disbelief_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					has_faction = technologist
+					
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support > 0.1
+						}
+						count = 1
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_disbelief_scandal_more_likely
+					days = 31
+				}
+			}
+		}
+		#Ruler is escaped slave
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				allows_slavery = yes
+				
+				NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
+				
+				NOT = { has_authority = auth_imperial }
+				exists = ruler
+				
+				any_owned_pop = {
+					is_same_species = prev.ruler
+					is_enslaved = yes
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_escaped_slave_ruler_possible
+				days = 31
+			}
+		}
+		
+		every_country = {
+			limit = {
+				any_country = {
+					OR = {
+						is_hostile_to = prev
+						is_rival = prev
+						is_domineering_to = prev
+					}
+					relative_power = {
+						who = prev
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_overwhelming_rival
+				days = 31
+			}
+		}
+		every_country = {
+			limit = {
+				any_country = {
+					OR = {
+						is_hostile_to = prev
+						is_rival = prev
+						is_domineering_to = prev
+					}
+					relative_power = {
+						who = prev
+						category = fleet
+						value = superior
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_superior_rival
+				days = 31
+			}
+		}
+		#Authoritarian Conspiracy
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_authority = auth_democratic
+				NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
+				has_country_flag = cc_eventperf_has_overwhelming_rival
+				is_at_war = no
+				has_faction = totalitarian
+				any_owned_leader = {
+					NOT = { leader_class = ruler }
+					leader_of_faction = totalitarian
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_can_have_authoritarian_conspiracy
+				days = 31
+			}
+		}
+		
+		#Militarist Protests
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_country_flag = dpe_recent_militarists_want_war }
+				is_at_war = no
+				is_subject = no
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+					AND = {
+						has_faction = imperialist
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = imperialist
+								support > 0.22
+							}
+							count = 1
+						}
+					}
+				}
+				years_of_peace = {
+					value > 15
+					delay = 20
+				}
+				has_federation = no
+				any_relation = {
+					is_country_type = default
+					prev = {
+						OR = {
+							is_rival = prev
+							is_hostile_to = prev
+							is_domineering_to = prev
+						}
+						NOT = { has_truce = prev }
+					}
+					any_owned_planet = {
+						is_neighbor_of = prevprev
+					}
+					NOR = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value = superior
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = overwhelming
+						}
+					}
+					NOT = {
+						any_relation = {
+							has_communications = prevprev
+							OR = {
+								has_defensive_pact = prev
+								is_in_federation_with = prev
+							}
+							relative_power = {
+								who = prevprev
+								category = fleet
+								value = overwhelming
+							}
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_militarist_protests_incident_possible
+				days = 31
+			}
+			
+			if = {
+				limit = {
+					is_ai = yes
+					any_relation = {
+						is_ai = no
+						NOT = { has_country_flag = dpe_recent_militarists_incident }
+						has_federation = no
+						has_policy_flag = unrestricted_wars
+						prev = {
+							OR = {
+								is_rival = prev
+								is_hostile_to = prev
+								is_domineering_to = prev
+							}
+							NOT = { has_truce = prev }
+						}
+						any_owned_planet = {
+							is_neighbor_of = prevprev
+						}
+						NOT = {
+							relative_power = {
+								who = prev
+								category = fleet
+								value = overwhelming
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_militarists_incident_secondary_possible
+					days = 31
+				}
+			}			
+		}
+		#Military Coup
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_egalitarian
+				}
+				is_at_war = no
+				is_subject = no
+				has_faction = imperialist
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = imperialist
+						
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+				}
+				NOT = {
+					any_country = {
+						OR = {
+							is_hostile_to = prev
+							is_rival = prev
+							is_domineering_to = prev
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = overwhelming
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					used_naval_capacity_percent > 1
+						
+					else = { used_naval_capacity_percent > 1.2 }
+				}
+				any_owned_leader = {
+					NOT = { leader_class = ruler }
+					leader_of_faction = imperialist
+				}
+				exists = ruler
+			}
+			set_timed_country_flag = {
+				flag = dpe_military_coup_possible
+				days = 31
+			}
+		}
 	}
 }
+
+
+
 
 
 
@@ -1612,7 +2035,7 @@ country_event = {
 	immediate = { country_event = { id = cc_peace.1 } }
 }
 	
-	
+
 	
 planet_event = {
 	id = cc_events_performance.9
@@ -1641,7 +2064,81 @@ planet_event = {
 	immediate = { planet_event = { id = cc_colony_events.100 } }
 }
 
+country_event = {
+	id = cc_events_performance.10
+	hide_window = yes
 
+	trigger = {
+		has_country_flag = dpe_can_have_charity_scandal
+		NOT = { has_country_flag = dpe_satisfied_egalitarians }
+	}
+
+	mean_time_to_happen = {
+		years = 120
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_faction = progressive }
+		}
+		modifier = {
+			factor = 0.5
+			exists = ruler
+			ruler = { leader_of_faction = progressive }
+		}
+	}
+	immediate = { country_event = { id = dpe_scandal.1 } }
+}
+
+
+#Ruler is an ex-slave
+country_event = {
+	id = cc_events_performance.11
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = dpe_escaped_slave_ruler_possible
+	}
+	
+	mean_time_to_happen = { years = 150 }
+	
+	immediate = {
+		country_event = { id = dpe_scandal.10 }
+	}
+}
+
+
+#Authoritarian Conspiracy
+country_event = {
+	id = cc_events_performance.12
+	hide_window = yes
+	
+	trigger = {
+		has_country_flag = cc_eventperf_can_have_authoritarian_conspiracy
+	}
+	
+	mean_time_to_happen = { years = 150 }
+	
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_conspiracy.20 }
+			
+			else = {
+				random_list = {
+					3 = { country_event = { id = dpe_conspiracy.20 } }
+					2 = { }
+				}
+			}
+		}
+	}
+}
 
 
 
@@ -2038,6 +2535,108 @@ pop_event = {
 				}
 			}			
 			99885 = { }
+		}
+	}
+}
+
+
+
+#Militarist Protests
+country_event = {
+	id = cc_events_performance.25
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = dpe_militarist_protests_incident_possible
+	}
+	
+	mean_time_to_happen = {
+		years = 15
+#		modifier = {
+#			factor = 3
+#			is_ai = yes
+#		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_diplo.1 }
+			
+			else = {
+				random_list = {
+					2 = { country_event = { id = dpe_diplo.1 } }
+					3 = { }
+				}
+			}
+		}
+	}
+}
+
+#Militarists hijack
+country_event = {
+	id = cc_events_performance.26
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = dpe_militarists_incident_secondary_possible
+	}
+	
+	mean_time_to_happen = { #the conditions are fairly improbable, and it also has a small chance of happening via dpe_diplo.1
+		years = 45
+	}
+	
+	immediate = {
+		random_relation = {
+			limit = {
+				is_ai = no
+				NOT = { has_country_flag = dpe_recent_militarists_incident }
+				prev = {
+					OR = {
+						is_rival = prev
+						is_hostile_to = prev
+						is_domineering_to = prev
+					}
+					NOT = { has_truce = prev }
+				}
+				any_owned_planet = {
+					is_neighbor_of = prevprev
+				}
+				NOT = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			country_event = { id = dpe_diplo.5 }
+		}			
+	}
+}
+
+#Military Coup Chain
+country_event = {
+	id = cc_events_performance.27
+	hide_window = yes
+	
+	trigger = { has_country_flag = dpe_military_coup_possible }
+	
+	mean_time_to_happen = {
+		years = 120
+	}
+
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_conspiracy.1 }
+			
+			else = {
+				random_list = {
+					2 = { country_event = { id = dpe_conspiracy.1 } }
+					3 = { }
+				}
+			}
 		}
 	}
 }

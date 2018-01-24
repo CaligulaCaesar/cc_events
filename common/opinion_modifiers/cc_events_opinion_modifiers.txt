@@ -27,7 +27,6 @@ cc_allowed_genocide_of_us = {
 	}
 }
 
-
 cc_betrayed_us_ally = {
 	opinion = {
 		base = -100
@@ -56,3 +55,30 @@ cc_ignored_ally = {
 	}
 }
 
+dpe_eased_tensions = {
+	opinion = {
+		base = 50
+	}
+	
+	accumulative = yes
+	
+	max = 150
+	
+	decay = {
+		base = 4
+	}
+}
+
+cc_ally_xenophobic_rhetoric = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = yes
+	
+	min = -300
+	
+	decay = {
+		base = -3
+	}
+}

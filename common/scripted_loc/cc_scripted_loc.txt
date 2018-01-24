@@ -128,3 +128,27 @@ defined_text = {
 	}
 }
 
+
+
+
+#"Parliament / the Council Buildings / your Palace"
+defined_text = {
+	name = GetGovtBuilding
+	text = {
+		trigger = { has_authority = auth_democratic }
+		localization_key = ccloc_democracy_building
+	}
+	text = {
+		trigger = { has_authority = auth_oligarchic }
+		localization_key = ccloc_oligarchy_building
+	}
+	text = {
+		trigger = {
+			NOR = {
+				has_authority = auth_democratic
+				has_authority = auth_oligarchic
+			}
+		}
+		localization_key = ccloc_others_building
+	}
+}
