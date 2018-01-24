@@ -772,21 +772,17 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 	if = {
 		limit = {
 			has_modifier = cc_underground_xenophobe_movement_1
-			owner = {
-				root = {
-					OR = {
-						any_owned_pop = {
-							has_pop_flag = cc_xenophobe_species
-							is_same_species = prevprev
-						}
-						AND = {
-							NOT = {
-								any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-								pop_percentage = {
-									limit = { is_same_species = prev }
-									percentage > 0.45
-								}
-							}
+			OR = {
+				any_owned_pop = {
+					has_pop_flag = cc_xenophobe_species
+					is_same_species = root.owner
+				}
+				AND = {
+					NOT = {
+						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+						pop_percentage = {
+							limit = { is_same_species = root.owner }
+							percentage > 0.45
 						}
 					}
 				}
@@ -797,21 +793,17 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 	if = {
 		limit = {
 			has_modifier = cc_underground_xenophobe_movement_2
-			owner = {
-				root = {
-					OR = {
-						any_owned_pop = {
-							has_pop_flag = cc_xenophobe_species
-							is_same_species = prevprev
-						}
-						AND = {
-							NOT = {
-								any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-								pop_percentage = {
-									limit = { is_same_species = prev }
-									percentage > 0.45
-								}
-							}
+			OR = {
+				any_owned_pop = {
+					has_pop_flag = cc_xenophobe_species
+					is_same_species = root.owner
+				}
+				AND = {
+					NOT = {
+						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+						pop_percentage = {
+							limit = { is_same_species = root.owner }
+							percentage > 0.45
 						}
 					}
 				}
@@ -820,7 +812,24 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		remove_modifier = cc_underground_xenophobe_movement_2
 	}
 	if = {
-		limit = { has_modifier = cc_xenophobes_offended }
+		limit = {
+			has_modifier = cc_xenophobes_offended
+			OR = {
+				any_owned_pop = {
+					has_pop_flag = cc_xenophobe_species
+					is_same_species = root.owner
+				}
+				AND = {
+					NOT = {
+						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
+						pop_percentage = {
+							limit = { is_same_species = root.owner }
+							percentage > 0.45
+						}
+					}
+				}
+			}
+		}
 		remove_modifier = cc_xenophobes_offended
 	}
 	if = {

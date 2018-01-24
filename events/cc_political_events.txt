@@ -1567,29 +1567,22 @@ country_event = {
 		}
 	}
 }
-	
+
+#triggered in performance
 # Pop escapes into a country where it can be 'literally xenophile'
 pop_event = {
 	id = cc_events_mod.13
 	title = OK
 	desc = OK
 	
+	is_triggered_only = yes
 	hide_window = yes
 	
 	trigger = {	
+		is_valid_xenophilia_refugee_pop = yes
 		exists = owner
 		owner = {
-			is_country_type = default
 			has_policy_flag = bans_im_completely
-		}	
-		is_valid_xenophilia_refugee_pop = yes
-	}
-	
-	mean_time_to_happen = {
-		years = 35
-		modifier = {
-			factor = 0.75
-			NOT = { is_same_species = owner }
 		}
 	}
 	
@@ -1614,6 +1607,7 @@ pop_event = {
 	}
 }
 
+#triggered in performance
 #pop purged for being 'literally xenophile'
 pop_event = {
 	id = cc_events_mod.14
@@ -1621,7 +1615,8 @@ pop_event = {
 	desc = OK
 	
 	hide_window = yes
-	
+	is_triggered_only = yes
+
 	trigger = {
 		has_modifier = cc_secret_xenophile
 		
@@ -1633,14 +1628,6 @@ pop_event = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_policy_flag = purge_allowed
 			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		modifier = {
-			factor = 0.75
-			NOT = { is_same_species = owner }
 		}
 	}
 	
@@ -1838,7 +1825,7 @@ country_event = {
 	}
 }
 
-
+#triggered in perf
 ##Prominent Interspecies Marriage
 country_event = {
 	id = cc_events_mod.16
@@ -1847,6 +1834,8 @@ country_event = {
 	
 	picture = GFX_evt_cc_alien_union
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 		
@@ -1860,33 +1849,20 @@ country_event = {
 			}
 			has_a_happiness_gauge = yes
 			OR = {
-				has_citizenship_type = { country = root type = citizenship_full }
-				has_citizenship_type = { country = root type = citizenship_limited }
-				has_citizenship_type = { country = root type = citizenship_caste_system }
-				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+				has_citizenship_type = { type = citizenship_full }
+				has_citizenship_type = { type = citizenship_limited }
+				has_citizenship_type = { type = citizenship_caste_system }
+				has_citizenship_type = { type = citizenship_caste_system_limited }
 			}
 		}
 		any_owned_leader = {
 			NOR = {
-				is_same_value = root.leader
+				leader_class = ruler
 				leader_of_faction = supremacist
 				leader_of_faction = isolationist
 				has_leader_flag = cc_married
 			}
 			is_same_species = root
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		
-		modifier = {
-			factor = 0.9
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
-			factor = 0.75
-			has_ethic = ethic_fanatic_xenophile
 		}
 	}
 	
@@ -1965,7 +1941,7 @@ country_event = {
 }
 
 
-
+#triggered in perf
 #Xeno Sex Scandal
 country_event = {
 	id = cc_events_mod.17
@@ -1974,6 +1950,8 @@ country_event = {
 	
 	picture = GFX_evt_news_room
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 		
@@ -1996,28 +1974,6 @@ country_event = {
 				is_robot_pop = no
 			}
 			has_a_happiness_gauge = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_minority
-		}
-		modifier = {
-			factor = 0.9
-			has_policy_flag = bans_im_completely
-		}
-		modifier = {
-			factor = 0.5
-			exists = ruler
-			ruler = { leader_of_faction = xenoist }
-		}
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
 	
@@ -2090,8 +2046,12 @@ country_event = {
 	}
 	option = {
 		name = cc_events_mod.17.B
-					
-		ruler = { exile_leader_as = cc_disgraced_xenophobe }
+
+		custom_tooltip = cc_events_mod.17.B.tooltip
+		
+		hidden_effect = {
+			kill_leader = { type = ruler show_notification = no }
+		}
 		
 		if = {
 			limit = {
@@ -2272,6 +2232,7 @@ country_event = {
 	}
 }
 
+#triggered in perf
 #Same, but for a random leader that isn't the ruler
 country_event = {
 	id = cc_events_mod.18
@@ -2280,6 +2241,8 @@ country_event = {
 	
 	picture = GFX_evt_news_room
 	
+	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 
@@ -2300,32 +2263,6 @@ country_event = {
 				is_robot_pop = no
 			}
 			has_a_happiness_gauge = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 75
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_minority
-		}
-		modifier = {
-			factor = 0.9
-			has_policy_flag = bans_im_completely
-		}
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_fanatic_xenophobe
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { has_faction = xenoist }
-		}
-		modifier = {
-			factor = 0.75
-			any_owned_leader = {
-				leader_of_faction = xenoist
-			}
 		}
 	}
 	
@@ -2410,7 +2347,10 @@ country_event = {
 	option = {
 		name = cc_events_mod.18.B
 					
-		event_target:cc_scandal_leader = { exile_leader_as = cc_disgraced_xenophobe }
+		event_target:cc_scandal_leader = { 
+			hidden_effect = { kill_leader = { show_notification = no } }
+		}
+		custom_tooltip = cc_events_mod.18.B.tooltip
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = supremacist }

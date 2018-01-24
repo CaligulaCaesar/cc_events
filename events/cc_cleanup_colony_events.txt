@@ -10,6 +10,11 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = {
+		exists = owner
+		NOT = { has_planet_flag = cc_just_conquered }
+	}
+	
 #	trigger = {  
 #		OR = {
 #			has_political_colony_modifier = yes
@@ -21,6 +26,11 @@ planet_event = {
 #	}
 	
 	immediate = {
+		set_timed_planet_flag = { #this is because someone said the same event happened 3 times and I can only see why it would happen twice...
+			flag = cc_just_conquered
+			days = 3
+		}
+		
 		#remove the ones not relevant to the new empire
 		remove_new_owner_irrelevant_political_colony_modifiers = yes
 		remove_all_faction_strongholds = yes
@@ -32,12 +42,22 @@ planet_event = {
 		if = {
 			limit = {
 				has_modifier = cc_founder_spiritualist
+				NOR = {
+					has_modifier = cc_building_mausoleum
+					has_modifier = cc_founders_memory_disrespected_1_spiritualist
+					has_modifier = cc_founders_memory_disrespected_2_spiritualist
+				}
 			}
 			planet_event = { id = cc_cleanup_events.2 days = 15 random = 10 }
 		}	
 		if = {
 			limit = {
 				has_modifier = cc_famous_guru
+				NOR = {
+					has_modifier = cc_building_mausoleum
+					has_modifier = cc_founders_memory_disrespected_1_spiritualist
+					has_modifier = cc_founders_memory_disrespected_2_spiritualist
+				}
 			}
 			planet_event = { id = cc_cleanup_events.2 days = 15 random = 10 }
 		}
@@ -45,7 +65,7 @@ planet_event = {
 			limit = {
 				has_modifier = cc_building_mausoleum
 			}
-			planet_event = { id = cc_cleanup_events.3 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.3 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
 		if = {
@@ -97,7 +117,7 @@ planet_event = {
 		
 		if = {
 			limit = { has_modifier = cc_building_university }
-			planet_event = { id = cc_cleanup_events.11 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.11 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
 		if = {
@@ -105,7 +125,13 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.12 days = 15 random = 10 }
 		}
 		if = {
-			limit = { has_modifier = cc_founder_materialist }
+			limit = {
+				has_modifier = cc_founder_materialist
+				NOR = {
+					has_modifier = cc_building_university
+					has_modifier = cc_founders_memory_disrespected_1_materialist
+				}
+			}
 			planet_event = { id = cc_cleanup_events.13 days = 15 random = 10 }
 		}
 		if = {
@@ -150,7 +176,13 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.19 days = 15 random = 10 }
 		}
 		if = {
-			limit = { has_modifier = cc_founder_militarist }
+			limit = {
+				has_modifier = cc_founder_militarist
+				NOR = {
+					has_modifier = cc_building_milacademy
+					has_modifier = cc_founders_memory_disrespected_1_militarist
+				}
+			}
 			planet_event = { id = cc_cleanup_events.20 days = 15 random = 10 }
 		}
 		if = {
@@ -168,7 +200,7 @@ planet_event = {
 		}
 		if = {
 			limit = { has_modifier = cc_building_milacademy }
-			planet_event = { id = cc_cleanup_events.24 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.24 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
 		
@@ -176,6 +208,11 @@ planet_event = {
 		if = {
 			limit = {
 				has_modifier = cc_founder_pacifist
+				NOR = {
+					has_modifier = cc_building_pacmonument
+					has_modifier = cc_founders_memory_disrespected_1_pacifist
+					has_modifier = cc_founders_memory_disrespected_2_pacifist
+				}
 			}
 			planet_event = { id = cc_cleanup_events.25 days = 15 random = 10 }
 		}	
@@ -183,7 +220,7 @@ planet_event = {
 			limit = {
 				has_modifier = cc_building_pacmonument
 			}
-			planet_event = { id = cc_cleanup_events.26 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.26 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
 		if = {
@@ -225,6 +262,7 @@ planet_event = {
 		if = {
 			limit = {
 				has_modifier = cc_founder_xenophobe
+				NOT = { has_modifier = cc_building_xenophobe_institute }
 				NOT = {
 					owner = {
 						root = {
@@ -247,7 +285,7 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_cleanup_events.32 days = 15 random = 10 }			
+			planet_event = { id = cc_cleanup_events.32 days = 15 random = 10 }
 		}
 		if = {
 			limit = {
@@ -274,7 +312,8 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_cleanup_events.33 days = 15 random = 10 }			
+			planet_event = { id = cc_cleanup_events.33 days = 5 }
+			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
 		
 		if = {
@@ -398,7 +437,13 @@ planet_event = {
 	
 	location = root
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_famous_guru
+			has_modifier = cc_founder_spiritualist
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -447,6 +492,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -492,6 +538,14 @@ planet_event = {
 		name = CCNO
 		
 		remove_modifier = cc_building_mausoleum
+		if = {
+			limit = { has_modifier = cc_founder_spiritualist }
+			remove_modifier = cc_founder_spiritualist
+		}
+		if = {
+			limit = { has_modifier = cc_famous_guru }
+			remove_modifier = cc_famous_guru
+		}
 		
 		set_timed_planet_flag = {
 			flag = cc_mausoleum_cancelled
@@ -513,6 +567,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -530,7 +585,10 @@ planet_event = {
 	
 	location = root
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_minor_mausoleum
+	}
 	
 	option = {
 		name = CCYES
@@ -588,7 +646,13 @@ planet_event = {
 	
 	picture = GFX_evt_cc_priesthood
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_founders_memory_disrespected_1_spiritualist
+			has_modifier = cc_founders_memory_disrespected_2_spiritualist
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -637,6 +701,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -663,6 +728,16 @@ planet_event = {
 			modifier = cc_minor_mausoleum
 			days = -1
 		}
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_founder_spiritualist }
+				remove_modifier = cc_founder_spiritualist
+			}
+			if = {
+				limit = { has_modifier = cc_famous_guru }
+				remove_modifier = cc_famous_guru
+			}
+		}
 	}
 }
 
@@ -676,7 +751,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_spiritualist_movement_1
+			has_modifier = cc_underground_spiritualist_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -725,7 +806,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_priesthood
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_spiritualist_protectorate
+	}
 	
 	option = {
 		name = CCYES
@@ -767,6 +851,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -782,7 +867,10 @@ planet_event = {
 	
 	picture = GFX_evt_galactic_senate
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_colony_direct_democracy
+	}
 	
 	option = {
 		name = CCYES
@@ -832,6 +920,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_egalitarian
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -847,7 +936,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_egalitarian_movement_1
+			has_modifier = cc_underground_egalitarian_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -908,7 +1003,10 @@ planet_event = {
 	
 	picture = GFX_evt_galactic_senate
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_colony_democracy_unhappy
+	}
 	
 	option = {
 		name = CCYES
@@ -943,6 +1041,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = { has_authority = auth_democratic }
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -989,6 +1088,11 @@ planet_event = {
 		
 		remove_modifier = cc_building_university
 		
+		if = {
+			limit = { has_modifier = cc_founder_materialist }
+			remove_modifier = cc_founder_materialist
+		}
+		
 		set_timed_planet_flag = {
 			flag = cc_university_cancelled
 			years = 5
@@ -1009,6 +1113,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1024,7 +1129,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_university
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_university
+	}
 	
 	option = {
 		name = CCYES
@@ -1082,7 +1190,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_physics_research
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founder_materialist
+	}
 	
 	option = {
 		name = CCYES
@@ -1124,6 +1235,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1139,7 +1251,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_materialist_movement_1
+			has_modifier = cc_underground_materialist_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -1183,6 +1301,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1199,7 +1318,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_university
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founders_memory_disrespected_1_materialist
+	}
 	
 	option = {
 		name = CCYES
@@ -1242,6 +1364,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1267,6 +1390,12 @@ planet_event = {
 		add_modifier = {
 			modifier = cc_university
 			days = -1
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_founder_materialist }
+				remove_modifier = cc_founder_materialist
+			}
 		}
 		owner = {
 			if = {
@@ -1294,7 +1423,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_throne_room
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_colony_monarchy
+	}
 	
 	option = {
 		name = CCYES
@@ -1344,6 +1476,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_authoritarian
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1359,7 +1492,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_authoritarian_movement_1
+			has_modifier = cc_underground_authoritarian_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -1420,7 +1559,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_throne_room
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_colony_monarchy_unhappy
+	}
 	
 	option = {
 		name = CCYES
@@ -1450,6 +1592,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = { has_authority = auth_imperial }
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1468,7 +1611,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_military_ceremony
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_milacademy
+	}
 	
 	option = {
 		name = CCYES
@@ -1526,7 +1672,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_military_ceremony
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founder_militarist
+	}
 	
 	option = {
 		name = CCYES
@@ -1568,6 +1717,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_militarist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1583,7 +1733,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_militarist_movement_1
+			has_modifier = cc_underground_militarist_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -1627,6 +1783,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_militarist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1643,7 +1800,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_military_ceremony
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founders_memory_disrespected_1_militarist
+	}
 	
 	option = {
 		name = CCYES
@@ -1686,6 +1846,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_militarist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1711,6 +1872,12 @@ planet_event = {
 		add_modifier = {
 			modifier = cc_milacademy
 			days = -1
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_founder_militarist }
+				remove_modifier = cc_founder_militarist
+			}
 		}
 		owner = {
 			if = {
@@ -1767,6 +1934,11 @@ planet_event = {
 		name = CCNO
 		
 		remove_modifier = cc_building_milacademy
+
+		if = {
+			limit = { has_modifier = cc_founder_militarist }
+			remove_modifier = cc_founder_militarist
+		}
 		
 		set_timed_planet_flag = {
 			flag = cc_milacademy_cancelled
@@ -1788,6 +1960,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_militarist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1806,7 +1979,10 @@ planet_event = {
 	
 	location = root
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founder_pacifist
+	}
 	
 	option = {
 		name = CCYES
@@ -1831,14 +2007,7 @@ planet_event = {
 	option = {
 		name = CCNO
 		
-		if = {
-			limit = { has_modifier = cc_founder_pacifist }
-			remove_modifier = cc_founder_pacifist
-		}
-		if = {
-			limit = { has_modifier = cc_famous_guru }
-			remove_modifier = cc_famous_guru
-		}
+		remove_modifier = cc_founder_pacifist
 		
 		add_modifier = {
 			modifier = cc_pacifists_offended
@@ -1855,6 +2024,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_pacifist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1901,6 +2071,11 @@ planet_event = {
 		
 		remove_modifier = cc_building_pacmonument
 		
+		if = {
+			limit = { has_modifier = cc_founder_pacifist }
+			remove_modifier = cc_founder_pacifist
+		}
+		
 		set_timed_planet_flag = {
 			flag = cc_pacmonument_cancelled
 			years = 5
@@ -1921,6 +2096,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_pacifist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1938,7 +2114,13 @@ planet_event = {
 	
 	location = root
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_minor_pacmonument
+			has_modifier = cc_pacifist_centre
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -2003,7 +2185,13 @@ planet_event = {
 	
 	picture = GFX_evt_cc_peace_march
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_founders_memory_disrespected_1_pacifist
+			has_modifier = cc_founders_memory_disrespected_2_pacifist
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -2052,6 +2240,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_pacifist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2091,7 +2280,13 @@ planet_event = {
 	
 	picture = GFX_evt_ground_combat
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_pacifist_movement_1
+			has_modifier = cc_underground_pacifist_movement_2
+		}
+	}
 	
 	option = {
 		name = CCYES
@@ -2140,7 +2335,10 @@ planet_event = {
 	
 	picture = GFX_evt_cc_peace_march
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_pacifist_protectorate
+	}
 	
 	option = {
 		name = CCYES
@@ -2182,6 +2380,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_pacifist
 					}
 				}
+				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2201,7 +2400,10 @@ planet_event = {
 	
 	picture = GFX_evt_alien_segregation
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_founder_xenophobe
+	}
 	
 	option = {
 		name = cc_cleanup_events.32.option
@@ -2225,7 +2427,10 @@ planet_event = {
 	
 	picture = GFX_evt_alien_segregation
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		has_modifier = cc_building_xenophobe_institute
+	}
 	
 	immediate = {
 		set_timed_planet_flag = {
@@ -2238,6 +2443,13 @@ planet_event = {
 		name = OK
 		
 		remove_modifier = cc_building_xenophobe_institute
+		
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = cc_founder_xenophobe }
+				remove_modifier = cc_founder_xenophobe
+			}
+		}
 		
 		add_modifier = {
 			modifier = cc_xenophobes_offended
@@ -2256,12 +2468,11 @@ planet_event = {
 	
 	picture = GFX_evt_alien_segregation
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
-	
-	immediate = {
-		set_timed_planet_flag = {
-			flag = cc_xenophobe_institute_cancelled
-			years = 10
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_xenophobe_institute
+			has_modifier = cc_minor_xenophobe_institute
 		}
 	}
 	
@@ -2294,12 +2505,11 @@ planet_event = {
 	
 	picture = GFX_evt_alien_segregation
 	
-	trigger = { NOT = { has_planet_flag = cc_conquered_purge } }
-	
-	immediate = {
-		set_timed_planet_flag = {
-			flag = cc_xenophobe_institute_cancelled
-			years = 10
+	trigger = {
+		NOT = { has_planet_flag = cc_conquered_purge }
+		OR = {
+			has_modifier = cc_underground_xenophobe_movement_1
+			has_modifier = cc_underground_xenophobe_movement_2
 		}
 	}
 	

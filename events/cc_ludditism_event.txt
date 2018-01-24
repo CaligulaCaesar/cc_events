@@ -2,6 +2,7 @@
 
 namespace = cc_luddite
 
+#triggered in performance
 planet_event = {
 	id = cc_luddite.1
 	title = cc_luddite.1.name
@@ -10,6 +11,8 @@ planet_event = {
 	picture = GFX_evt_organic_oppression
 	location = root
 	
+	is_triggered_only = yes
+
 	trigger = {
 		exists = owner
 		has_owner = yes
@@ -17,48 +20,23 @@ planet_event = {
 			is_country_type = default
 			has_policy_flag = robots_allowed
 			NOR = {
+				has_ethic = ethic_gestalt_consciousness
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
-				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = cc_luddite_movement
+				has_country_flag = cc_recent_luddite_movement
+				has_country_flag = cc_first_luddite_strike
 			}
 		}
 		unrest > 0
-		NOR = {
-			has_planet_flag = cc_luddite_strike
-			owner = {
-				OR = {
-					has_country_flag = cc_luddite_movement
-					has_country_flag = cc_recent_luddite_movement
-				}
-			}
-		}
+		NOT = { has_planet_flag = cc_luddite_strike }
 		any_owned_pop = { is_non_sapient_robot = yes }
 		any_owned_pop = {
 			has_ethic = ethic_spiritualist
 			has_citizenship_rights = yes
 			happiness < 0.4
-			NOT = { has_modifier = pop_recently_conquered }
 		}
 #		owner = { has_faction = traditionalist }
-	}
-	
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.67
-			has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
-		}
-	
-		modifier = {
-			factor = 0.85
-			owner = { has_faction = traditionalist }
-		}
-		
-		modifier = {
-			factor = 2.5
-			owner = { has_country_flag = cc_has_had_luddite_crisis }
-		}
 	}
 	
 	immediate = {
@@ -68,6 +46,12 @@ planet_event = {
 		}
 		save_event_target_as = first_luddite_planet
 		
+		owner = {
+			set_timed_country_flag = {
+				flag = cc_first_luddite_strike
+				years = 10
+			}
+		}
 	}
 
 	option = {
@@ -137,7 +121,23 @@ planet_event = {
 					}
 				}
 			}
-			hidden_effect = { country_event = { id = syndaw.401 } }
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_country_flag = synthetic_empire
+						has_ascension_perk = ap_the_flesh_is_weak
+						has_policy_flag = ai_full_rights
+						has_country_flag = no_machine_uprising
+						has_policy_flag = robots_outlawed
+					}
+					OR = {
+						has_technology = tech_combat_computers_3
+						has_technology = tech_synthetic_workers
+					}
+				}
+				hidden_effect = { country_event = { id = syndaw.401 } }
+			}
 		}
 		
 		
@@ -456,7 +456,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					15 = {
 						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 0.33
@@ -466,7 +466,7 @@ planet_event = {
 							}
 						}
 					}
-					92 = { }
+					985 = { }
 				}
 			}
 		}
@@ -480,7 +480,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					15 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 0.33
@@ -490,7 +490,7 @@ planet_event = {
 							}
 						}
 					}
-					92 = { }
+					985 = { }
 				}
 			}
 		}
@@ -677,7 +677,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					35 = {
+					9 = {
 						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 0.5
@@ -687,7 +687,7 @@ planet_event = {
 							}
 						}
 					}
-					965 = { }
+					991 = { }
 				}
 			}
 		}
@@ -701,7 +701,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					35 = {
+					9 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 0.5
@@ -711,7 +711,7 @@ planet_event = {
 							}
 						}
 					}
-					965 = { }
+					991 = { }
 				}
 			}
 		}
@@ -730,8 +730,8 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						10 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
-						90 = { }
+						8 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						92 = { }
 					}
 				}
 			}
@@ -898,14 +898,14 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = { planet_event = { id = cc_luddite.8 days = 15 random = 10 }
+					2 = { planet_event = { id = cc_luddite.8 days = 15 random = 10 }
 						modifier = {
 							factor = 2
 							NOT = { has_modifier = cc_planet_oppression }
 							owner = { has_country_flag = cc_ignoring_luddites }
 						}
 					}
-					992 = { }
+					998 = { }
 				}
 			}
 		}
@@ -919,14 +919,14 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					8 = {
+					2 = {
 						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
 						modifier = {
 							factor = 2
 							owner = { has_country_flag = cc_ignoring_luddites }
 						}
 					}
-					992 = { }
+					998 = { }
 				}
 			}
 		}
@@ -945,8 +945,8 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						5 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
-						95 = { }
+						2 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						98 = { }
 					}
 				}
 			}
@@ -1310,7 +1310,24 @@ planet_event = {
 					}
 				}
 			}
-			hidden_effect = { country_event = { id = syndaw.401 } }
+			
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_country_flag = synthetic_empire
+						has_ascension_perk = ap_the_flesh_is_weak
+						has_policy_flag = ai_full_rights
+						has_country_flag = no_machine_uprising
+						has_policy_flag = robots_outlawed
+					}
+					OR = {
+						has_technology = tech_combat_computers_3
+						has_technology = tech_synthetic_workers
+					}
+				}
+				hidden_effect = { country_event = { id = syndaw.401 } }
+			}
 		}
 		
 		
@@ -1568,8 +1585,9 @@ country_event = {
 		}
 		set_timed_country_flag = {
 			flag = cc_luddite_movement
-			years = 10
+			days = 3600
 		}
+		country_event = { id = cc_luddite.999 days = 3601 }
 		set_timed_country_flag = {
 			flag = cc_recent_luddite_movement
 			years = 50
@@ -1592,65 +1610,75 @@ country_event = {
 			}
 		}
 
-		owner = {
-			hidden_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_country_flag = synthetic_empire
+						has_ascension_perk = ap_the_flesh_is_weak
+						has_policy_flag = ai_full_rights
+						has_country_flag = no_machine_uprising
+						has_policy_flag = robots_outlawed
+					}
+					OR = {
+						has_technology = tech_combat_computers_3
+						has_technology = tech_synthetic_workers
+					}
+				}
 				while = {
 					count = 5
 					country_event = { id = syndaw.401 days = 90 random = 90 }
 				}
 			}
-			set_policy = {
-				policy = robot_pop_policy
-				option = robot_pops_outlawed
-				cooldown = yes
-			}
+		}
+		set_policy = {
+			policy = robot_pop_policy
+			option = robot_pops_outlawed
+			cooldown = yes
+		}
+		add_modifier = {
+			modifier = cc_bowed_to_luddism
+			days = 3600
+		}
+		every_owned_planet = {
+			limit = { has_modifier = cc_luddite_movement }
+			remove_modifier = cc_luddite_movement
 			add_modifier = {
-				modifier = cc_bowed_to_luddism
-				days = 3600
+				modifier = cc_luddite_celebration
+				years = 10
 			}
-			every_owned_planet = {
-				limit = { has_modifier = cc_luddite_movement }
-				remove_modifier = cc_luddite_movement
-				add_modifier = {
-					modifier = cc_luddite_celebration
-					years = 10
-				}
+		}
+		if = {
+			limit = { has_faction = technologist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = technologist }
+				add_modifier = { modifier = cc_bowed_to_luddism_faction_neg days = 3600 }
 			}
-			if = {
-				limit = { has_faction = technologist }
-				random_pop_faction = {
-					limit = { is_pop_faction_type = technologist }
-					add_modifier = { modifier = cc_bowed_to_luddism_faction_neg days = 3600 }
-				}
-			}
-			if = {
-				limit = { has_faction = traditionalist }
-				random_pop_faction = {
-					limit = { is_pop_faction_type = traditionalist }
-					add_modifier = { modifier = cc_bowed_to_luddism_faction_pos  days = 3600 }
-				}
+		}
+		if = {
+			limit = { has_faction = traditionalist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = traditionalist }
+				add_modifier = { modifier = cc_bowed_to_luddism_faction_pos days = 3600 }
 			}
 		}
 		
 		
 		trigger = {
-			owner = {
-				NOT = { has_ethic = ethic_fanatic_materialist }
-			}
+			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 		
 		ai_chance = {
 			modifier = {
 				factor = 0
-				owner = { has_ethic = ethic_materialist }
+				has_ethic = ethic_materialist
 			}
 			modifier = {
 				factor = 5
-				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -1675,11 +1703,11 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				owner = { has_ethic = ethic_materialist }
+				has_ethic = ethic_materialist
 			}
 			modifier = {
 				factor = 3
-				owner = { has_ethic = ethic_fanatic_materialist }
+				has_ethic = ethic_fanatic_materialist
 			}
 		}
 	}
@@ -2012,6 +2040,21 @@ event = {
 				
 				planet_event = { id = cc_luddite.15 }
 			}
+		}
+	}
+}
+
+
+#stop luddism from recurring after 10 years of empire movement
+country_event = {
+	id = cc_luddite.999
+	hide_window = yes
+	is_triggered_only = yes
+		
+	immediate = {
+		every_owned_planet = { 
+			limit = { has_planet_flag = cc_luddite_strike }
+			remove_planet_flag = cc_luddite_strike
 		}
 	}
 }

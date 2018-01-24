@@ -1635,6 +1635,12 @@ planet_event = {
 			flag = cc_famous_leader
 			years = 25
 		}
+		owner = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = prosperity }
+				save_event_target_as = pacifist_faction
+			}
+		}
 	}
 	
 	option = {
@@ -2787,7 +2793,7 @@ planet_event = {
 		
 		hidden_effect = {
 			random = {
-				chance = 50
+				chance = 33
 				planet_event = { id = cc_colony_events.54 days = 5400 }
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
@@ -2817,9 +2823,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -3022,9 +3034,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 50
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -3082,9 +3100,15 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			random = {
-				chance = 33
+			if = {
+				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5400 }
+				else = {
+					random = {
+						chance = 33
+						planet_event = { id = cc_colony_events.54 days = 5400 }
+					}
+				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 10800 }
 			
@@ -3364,6 +3388,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
+				NOT = { has_country_flag = cc_recent_xenophobe_incident }
 				any_relation = {
 					NOR = {
 						is_same_species = prev
@@ -3500,6 +3525,7 @@ planet_event = {
 						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
+				NOT = { has_country_flag = cc_recent_xenophobe_incident }
 				any_relation = {
 					NOR = {
 						is_same_species = prev
@@ -3518,6 +3544,24 @@ planet_event = {
 		set_timed_planet_flag = {
 			flag = cc_famous_leader
 			years = 25
+		}
+
+		owner = {
+			set_country_flag = cc_has_had_xenophobe_incident
+
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+
+				set_timed_country_flag = {
+					flag = cc_recent_xenophobe_incident
+					years = 25
+				}
+			}
 		}
 	}
 	
@@ -4351,11 +4395,6 @@ country_event = {
 		}
 	}
 }
-
-
-
-
-
 
 
 
@@ -5212,6 +5251,12 @@ planet_event = {
 		set_timed_planet_flag = {
 			flag = cc_famous_leader
 			years = 25
+		}
+		owner = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = traditionalist }
+				save_event_target_as = spiritualist_faction
+			}
 		}
 	}
 	
@@ -6644,8 +6689,34 @@ planet_event = {
 		}
 	}
 	option = {
-		name = cc_colony_events.82.B
+		name = cc_colony_events.82.B1
 		
+		trigger = {
+			event_target:cc_colony_leader = { NOT = { gender = female } }
+		}
+
+		add_modifier = {
+			modifier = cc_colony_monarchy
+			days = -1
+		}
+		add_modifier = {
+			modifier = cc_colony_distrusts
+			years = 15
+		}
+		
+		hidden_effect = {
+			planet_event = { id = cc_colony_events.85 days = 10800 }
+		}
+		
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = cc_colony_events.82.B2
+		
+		trigger = {
+			event_target:cc_colony_leader = { gender = female }
+		}
+
 		add_modifier = {
 			modifier = cc_colony_monarchy
 			days = -1
@@ -7526,7 +7597,7 @@ planet_event = {
 		
 		orbital_bombardment = no
 	
-		has_political_colony_modifier = no
+		NOT = { has_planet_flag = cc_colony_story }
 		count_pops = {
 			count > 5
 			limit = { has_ethic = ethic_spiritualist }

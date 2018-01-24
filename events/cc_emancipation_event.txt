@@ -1,6 +1,7 @@
 
 namespace = cc_emancipation
 
+#triggered in performance now
 planet_event = {
 	id = cc_emancipation.1
 	title = cc_emancipation.1.name
@@ -16,6 +17,8 @@ planet_event = {
 	picture = GFX_evt_cc_emancipation
 	location = root
 	
+	is_triggered_only = yes
+
 	trigger = {
 		exists = owner
 		has_owner = yes
@@ -23,17 +26,14 @@ planet_event = {
 			is_country_type = default
 			allows_slavery = yes
 			has_faction = progressive
-		}
-		unrest > 0
-		NOR = {
-			has_planet_flag = cc_emancipation_movement
-			owner = {
-				OR = {
-					has_country_flag = cc_emancipation_movement
-					has_country_flag = cc_recent_emancipation_movement
-				}
+			NOR = {
+				has_country_flag = cc_emancipation_movement
+				has_country_flag = cc_recent_emancipation_movement
+				has_country_flag = cc_emancipation_first_strike
 			}
 		}
+		unrest > 0
+		NOT = { has_planet_flag = cc_emancipation_movement }
 		any_owned_pop = {
 			is_enslaved = yes
 			has_a_happiness_gauge = yes
@@ -42,29 +42,6 @@ planet_event = {
 		any_owned_pop = {
 			has_ethic = ethic_egalitarian
 			is_enslaved = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.75
-			has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
-		}
-	
-		modifier = {
-			factor = 0.75
-			owner = {
-				any_neighbor_country = {
-					has_ethic = ethic_fanatic_egalitarian
-				}
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			owner = { has_country_flag = cc_has_had_emancipation_crisis }
 		}
 	}
 	
@@ -82,6 +59,10 @@ planet_event = {
 					}
 				}
 				save_event_target_as = neighbour_that_is_egalitarian
+			}
+			set_timed_country_flag = {
+				flag = cc_emancipation_first_strike
+				years = 10
 			}
 		}
 		save_event_target_as = slaveryplanet
@@ -127,7 +108,7 @@ planet_event = {
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = { modifier = cc_emancipation_furious  days = 3600 }
+				add_modifier = { modifier = cc_emancipation_furious days = 3600 }
 			}
 		}
 		
@@ -753,7 +734,7 @@ planet_event = {
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = { modifier = cc_emancipation_furious  days = 3600 }
+				add_modifier = { modifier = cc_emancipation_furious days = 3600 }
 			}
 		}
 		
@@ -982,7 +963,7 @@ country_event = {
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
-			add_modifier = { modifier = cc_emancipation_furious  days = 3600 }
+			add_modifier = { modifier = cc_emancipation_furious days = 3600 }
 		}
 		
 		

@@ -421,12 +421,17 @@ country_event = {
 	option = {
 		name = cc_events_blackmail.201.A
 		
-		event_target:cc_first_corrupt = { exile_leader_as = cc_first_corrupt }
-		event_target:cc_second_corrupt = { exile_leader_as = cc_second_corrupt }
-		event_target:cc_third_corrupt = { exile_leader_as = cc_third_corrupt }
+		custom_tooltip = cc_events_blackmail.201.A.tooltip
+		
+		hidden_effect = {
+			event_target:cc_first_corrupt = { kill_leader = { show_notification = no } }
+			event_target:cc_second_corrupt = { kill_leader = { show_notification = no } }
+			event_target:cc_third_corrupt = { kill_leader = { show_notification = no } }
+		}
 		if = {
 			limit = { exists = event_target:cc_fourth_corrupt }
-			event_target:cc_fourth_corrupt = { exile_leader_as = cc_fourth_corrupt }
+			custom_tooltip = cc_events_blackmail.201.A.tooltip2
+			hidden_effect = { event_target:cc_fourth_corrupt = { kill_leader = { show_notification = no } } }
 		}
 		
 		ai_chance = {
