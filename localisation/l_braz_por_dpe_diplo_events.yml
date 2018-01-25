@@ -1,0 +1,65 @@
+﻿l_braz_por:
+
+dpe_diplo.1.name:0 "A População Clama Pela Guerra"
+dpe_diplo.1.desc:0 "O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], cujos líderes tem abertamente desprezado os [root.GetSpeciesNamePlural], dizendo que somos covardes e não temos honra. Nossa população, ultrajada, exige a guerra."
+dpe_diplo.1.desc.machine:0 " O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], que recentemente sua Inteligência Maquinária emitiu uma diretriz para suas sub-unidades que afirma que os [root.GetSpeciesNamePlural] estão oficialmente considerados "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige guerra."
+dpe_diplo.1.desc.hive:0 " O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], já que foi descoberto recentemente que os pensamentos oficiais da Colmeia sobre [root.GetSpeciesNamePlural] é que somos "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige a guerra."
+dpe_diplo.1.A:0 "Declare guerra."
+dpe_diplo.1.A.tooltip:0 "As exigências de guerra serão $war_demand_humiliate_header$ e $war_demand_dpe_cede_borders_header$. Nossas exigências são eles cederem estes planetas:"
+dpe_diplo.1.B: "Paciência. Vamos declarar guerra logo em nossos próprios termos."
+dpe_diplo.1.B.tooltip:0 "Isso permitirá que você escolha as demandas de guerra. Mas se você ficar mais de um ano sem declarar a guerra, os militaristas em [root.GetName] ficarão irritados."
+dpe_diplo.1.C:0 "A guerra é muito arriscada agora."
+
+#B + No war declaration in a year
+dpe_diplo.2.name:0 "Promessa Quebrada"
+dpe_diplo.2.desc:0 " Os nacionalistas estão desapontados por não ter cumprido suas promessas de declarar a guerra em [enemy.GetName]. Eles acham que [root.GetName] foi humilhado e que eles, como [root.GetSpeciesNamePlural], não podem mais manter suas cabeças erguidas entre seus pares. Como resultado, um número significativo de cidadãos se voltou contra o atual governo."
+
+#C or follow-up to .2:
+dpe_diplo.4.name:0 "Incidente fronteiriço"
+dpe_diplo.4.desc:0 "Consternados com a recusa de [root.owner.GetName] para declarar guerra contra [enemy.GetName], alguns nacionalistas fanáticos de [root.GetName] um velho cruzador que estava estacionado e foram até [enemy.GetName], atingindo vários navios mercantes e um posto de mineração antes de ser abatido. As autoridades [enemy.GetSpeciesAdj] estão furiosas, e exigem que os perpetradores sejam entregues e uma indemnização seja. Por outro lado, a população [root.owner.GetSpeciesAdj] está enaltecendo os sequestradores, chamando-os de heróis e exigindo novos ataques contra [enemy.GetName].\n\nComo devemos agir?"
+dpe_diplo.4.A:0 "Nós devemos dar-lhes a guerra que tanto querem."
+dpe_diplo.4.B:0 "Entregue os sequestradores e pague a indenização."
+
+dpe_ruler_looks_weak:0 "Governo Demonstra Fraqueza"
+dpe_ruler_looks_weak_desc:0 "O governo demonstrou fraqueza, como se recusou a declarar a guerra aos seus inimigos para restaurar a honra da nação."
+dpe_ruler_looks_weak_faction:0 "Governo fraco e covarde"
+dpe_ruler_looks_weak_and_breaks_promises_faction:0 "Governo fraco, covarde e inofensivo"
+
+dpe_diplo.5.name:0 "Incidente Fronteiriço"
+dpe_diplo.5.desc:0 "Um grupo de nacionalistas de [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. A população está ultrajada, e exige que [from.GetName] entregue os sequestradores e pague pelos danos causados."
+dpe_diplo.5.desc.machine:0 "Alguns indivíduos rebeldes em [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. O que [root.GetName] deve fazer contra essa ação?"
+dpe_diplo.5.desc.hive:0 " Um grupo de nacionalistas de [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. O que [root.GetName] deve fazer contra essa ação?"
+dpe_diplo.5.A:0 "Exigência justa"
+dpe_diplo.5.A.tooltip:0 "Se [from.GetName] aceitar, o [root.GetName] receberão indenização de 100 minerais por um ano. Se o rejeitarem, a guerra será declarada com as demandas de guerra $war_demand_humiliate_header$ e $war_demand_dpe_cede_borders_header$. A última demanda é ceder os seguintes planetas:"
+dpe_diplo.5.B:0 "Procure Aliviar as Tensões"
+
+
+dpe_diplo.7.name:0 "Indenização Paga"
+dpe_diplo.7.desc:0 "Nós entregaremos os sequestradores e pagaremos sua indenização. Você pode se engasgar com eles!"
+dpe_diplo.7.desc.machine:0 " Nós entregaremos os sequestradores e pagaremos sua indenização. Que eles sobrecarreguem seus processadores!"
+
+dpe_indemnity_paid:0 "Pagando Indenização"
+dpe_indemnity_paid_desc:0 "Este Império está pagando a outro Império uma indenização para evitar sua ira."
+dpe_indemnity_receive:0 "Recebendo Indenização"
+dpe_indemnity_receive_desc:0 "Este Império está recebendo uma indenização de outro Império para evitar sua ira."
+
+dpe_militarist_unrest:0 "Militaristas Irritados"
+dpe_militarist_unrest_desc:0 "A população militarista neste planeta está chateada com o fracasso do governo em se opor aos Inimigos do Império."
+
+dpe_eased_tensions:0 "Tensões Minimizadas"
+
+war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
+war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
+war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
+war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] irá ceder todos os planetas fronteiriços para [GetCountry.GetName]."
+war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
+war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
+
+
+dpe_diplo.100.name:0 "A Resposta [enemy.GetName]"
+#This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
+HM_DOW_ACCEPT_DPE:0 "Se está procurando destruir um de nós então está procurando destruir todos nós. O [enemy.GetName] agora está contra [From.GetName]."
+dpe_diplo.100.option:0 "Tanto faz."
+
+dpe_diplo.101.name:0 "O [from.GetName] Declara Guerra!"
+dpe_diplo.101.option:0 "Prepare-se para a Guerra!"

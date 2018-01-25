@@ -30,3 +30,78 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = cctest.3
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		
+		random_relation = {
+			limit = {
+				is_country_type = default
+				any_owned_planet = {
+					is_neighbor_of = prevprev
+				}
+			}
+			root = {
+				declare_war = {
+					who = prev
+				}
+				add_war_demand = {
+					type = "humiliate"
+					parameter:country = prev
+					warscore_cost = 10
+					target = this
+					enemy = prev
+				}
+				add_war_demand = {
+					type = "dpe_cede_borders"
+					parameter:country = prev
+					warscore_cost = 75
+					target = this
+					enemy = prev
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.4
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		
+		random_relation = {
+			limit = {
+				is_country_type = default
+				root = {
+					any_owned_planet = {
+						is_neighbor_of = prevprev
+					}
+				}
+			}
+			declare_war = {
+				who = prev
+			}
+			add_war_demand = {
+				type = "humiliate"
+				parameter:country = prev
+				warscore_cost = 10
+				target = this
+				enemy = prev
+			}
+			add_war_demand = {
+				type = "dpe_cede_borders"
+				parameter:country = prev
+				warscore_cost = 75
+				target = this
+				enemy = prev
+			}
+		}
+	}
+}

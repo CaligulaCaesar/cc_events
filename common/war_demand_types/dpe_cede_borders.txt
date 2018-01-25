@@ -10,7 +10,7 @@ dpe_cede_borders = {
 	}
 	
 	warscore_cost = {
-		base = 75
+		base = 90
 	}
 	
 	potential = {
@@ -26,28 +26,29 @@ dpe_cede_borders = {
 	}
 	
 	demandable = {
-		custom_tooltip = {
-			fail_text = "war_demand_dpe_cede_borders_not_under_our_control"
-			parameter:country = {
-				NOT = {
-					any_owned_planet = {
-						is_neighbor_of = fromfromfrom
-						
-						controller = {
-							OR = {
-								is_country = fromfromfrom
-								fromfrom = {
-									is_war_participant = {
-										who = prev
-										side = fromfromfrom
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		always = yes
+#		custom_tooltip = {
+#			fail_text = "war_demand_dpe_cede_borders_not_under_our_control"
+#			parameter:country = {
+#				NOT = {
+#					any_owned_planet = {
+#						is_neighbor_of = fromfromfrom
+#						
+#						controller = {
+#							OR = {
+#								is_country = fromfromfrom
+#								fromfrom = {
+#									is_war_participant = {
+#										who = prev
+#										side = fromfromfrom
+#									}
+#								}
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
 	}
 	
 	effect = {
@@ -56,17 +57,17 @@ dpe_cede_borders = {
 			every_owned_planet = {
 				limit = {
 					is_neighbor_of = fromfromfrom
-					controller = {
-						NOR = {
-							is_country = from
-							fromfrom = {
-								is_war_participant = {
-									who = prev
-									side = from
-								}
-							}
-						}
-					}
+#					controller = {
+#						OR = {
+#							is_country = fromfromfrom
+#							fromfrom = {
+#								is_war_participant = {
+#									who = prev
+#									side = fromfromfrom
+#								}
+#							}
+#						}
+#					}
 				}
 				
 				if = {
