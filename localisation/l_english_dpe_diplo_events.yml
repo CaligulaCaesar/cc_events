@@ -54,7 +54,8 @@ war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_heade
 war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
 war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
 war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
-
+war_demand_dpe_cede_borders_not_under_our_control:0 "Planets must be controlled by us or our allies to be ceded with this demand. No neighbouring planets currently meet this criterion."
+dpe_event_war_demand:0 "Special Event War Demand"
 
 dpe_diplo.100.name:0 "The [enemy.GetName]'s Response"
 #This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]

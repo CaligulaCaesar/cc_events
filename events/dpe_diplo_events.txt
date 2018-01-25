@@ -175,7 +175,7 @@ country_event = {
 			add_war_demand = {
 				type = "dpe_cede_borders"
 				parameter:country = event_target:enemy
-				warscore_cost = 75
+				warscore_cost = 90
 				target = this
 				enemy = event_target:enemy
 			}
@@ -467,7 +467,7 @@ planet_event = {
 				add_war_demand = {
 					type = "dpe_cede_borders"
 					parameter:country = event_target:enemy
-					warscore_cost = 75
+					warscore_cost = 90
 					target = this
 					enemy = event_target:enemy
 				}
@@ -744,7 +744,7 @@ country_event = { #AI-only event
 			add_war_demand = {
 				type = "dpe_cede_borders"
 				parameter:country = root
-				warscore_cost = 75
+				warscore_cost = 90
 				target = this
 				enemy = root
 			}

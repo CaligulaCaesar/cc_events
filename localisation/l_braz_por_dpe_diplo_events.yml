@@ -54,7 +54,8 @@ war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_heade
 war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] irá ceder todos os planetas fronteiriços para [GetCountry.GetName]."
 war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
 war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
-
+war_demand_dpe_cede_borders_not_under_our_control:0 "Os planetas devem ser controlados por nós ou por nossos aliados antes de serem cedidos como demanda de guerra. Atualmente, nenhum planeta escolhido cumpre este critério."
+dpe_event_war_demand:0 "Evento Especial de Demanda de Guerra"
 
 dpe_diplo.100.name:0 "A Resposta [enemy.GetName]"
 #This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]

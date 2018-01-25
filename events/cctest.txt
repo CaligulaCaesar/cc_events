@@ -38,13 +38,14 @@ country_event = {
 	
 	immediate = {
 		
-		random_relation = {
+		random_country = {
 			limit = {
 				is_country_type = default
 				any_owned_planet = {
 					is_neighbor_of = prevprev
 				}
 			}
+			save_event_target_as = enemy
 			root = {
 				declare_war = {
 					who = prev
@@ -59,10 +60,11 @@ country_event = {
 				add_war_demand = {
 					type = "dpe_cede_borders"
 					parameter:country = prev
-					warscore_cost = 75
+					warscore_cost = 90
 					target = this
 					enemy = prev
 				}
+				country_event = { id = dpe_diplo.100 scopes = { from = root } }
 			}
 		}
 	}
@@ -98,9 +100,14 @@ country_event = {
 			add_war_demand = {
 				type = "dpe_cede_borders"
 				parameter:country = prev
-				warscore_cost = 75
+				warscore_cost = 90
 				target = this
 				enemy = prev
+			}
+			save_event_target_as = root_country
+			root = {
+				save_event_target_as = enemy
+				country_event = { id = dpe_diplo.101 scopes = { from = event_target:root_country } }
 			}
 		}
 	}
