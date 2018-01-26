@@ -3364,6 +3364,7 @@ planet_event = {
 		
 		has_modifier = cc_founder_xenophobe
 		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
 			any_owned_planet = {
 				NOT = { is_same_value = root }
 				distance = {

@@ -38,6 +38,27 @@ planet_event = {
 		remove_all_faction_seditions = yes
 		remove_all_seditious_talk = yes
 		
+		if = {
+			limit = {
+				from = { has_civic = civic_machine_assimilator }
+			}
+			set_timed_planet_flag = {
+				flag = cc_conquered_purge
+				years = 1
+			}
+			planet_event = { id = cc_cleanup_events.9991 days = 30 }
+		}
+		
+		if = {
+			limit = {
+				from = { has_civic = civic_machine_servitor }
+			}
+			set_timed_planet_flag = {
+				flag = cc_conquered_purge
+				years = 1
+			}
+			planet_event = { id = cc_cleanup_events.9992 days = 2160 random = 720 }
+		}
 		
 		if = {
 			limit = {
@@ -2965,6 +2986,38 @@ planet_event = {
 }
 
 
+#Assimilator planet loop (to remove the modifier once assimilation is complete)
+planet_event = {
+	id = cc_cleanup_events.9991
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { owner = { has_civic = civic_machine_assimilator } }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { any_owned_pop = { has_a_happiness_gauge = yes } } }
+			remove_all_political_colony_modifiers = yes
+			
+			else = { planet_event = { id = cc_cleanup_events.9991 days = 30 } }
+		}
+	}
+}
+
+#I could put some flavour text in here, but can't be bothered right now
+planet_event = {
+	id = cc_cleanup_events.9992
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = { owner = { has_civic = civic_machine_servitor } }
+
+	immediate = {
+#		remove_rebel_irrelevant_political_colony_modifiers = yes
+		remove_all_political_colony_modifiers = yes
+	}
+}
+
 
 # Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
 # This = Rebel Country
@@ -3021,7 +3074,7 @@ pop_event = {
 		from = {
 			set_timed_planet_flag = {
 				flag = cc_conquered_purge
-				years = 50
+				years = 1
 			}
 		}
 	}

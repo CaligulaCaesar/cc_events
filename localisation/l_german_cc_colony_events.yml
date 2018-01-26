@@ -52,7 +52,7 @@
  cc_colony_events.235.name:0 "Verhaftung von [cc_colony_leader.GetName] scheitert auf katastrophale Weise"
  cc_colony_events.235.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] festzunehmen, sind gescheitert. [cc_colony_leader.GetSheHeCap] kam entweder im Kreuzfeuer ums Leben, oder [cc_colony_leader.GetSheHe] hat sich das eigene Leben genommen. Leider ist [cc_colony_leader.GetSheHe] hierdurch zu ein[cc_colony_leader.GetEmErDE] Märtyrer[cc_colony_leader.GetXInDE] geworden, und [cc_colony_leader.GetHisHer]e Volkstümlichkeit hat sich nach [cc_colony_leader.GetHisHer]em Tod zu neue Höhen aufgeschwungen. [cc_colony_leader.GetHisHerCap]e treusten Anhänger haben eine Untergrundbewegung gegründet, durch die sie die Unabhängigkeit [root.GetName]s von der [Root.Owner.GetName] gewinnen wollen. Wir können langfristigen Tumult erwarten."
  cc_colony_events.25.name:0 "Tod ein[cc_colony_leader.GetEsErDE] großen [cc_colony_leader.GetSpeciesName]en"
- cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], der 'Legat' von [root.GetName], ist heute nach einer kurzen Krankheit gestorben. Die Bevölkerung [root.GetName]s ist in Trauer. [cc_colony_leader.GetHisHerCap] letzter Wunsch war es, eine große Militärakademie auf [root.GetName] zu bauen, so dass die nächste Generation von Offizieren, für welche [cc_colony_leader.GetSheHe] den Weg bereitet hat, ihr Potenzial erreichen können. Unsere Behörden auf [root.GetName] haben einen Plan vorgeschlagen, durch den dieser Wunsch verwirklicht werden könnte.\n\nSollen wir in die Akademie investieren?"
+ cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], der 'Legat' von [root.GetName], ist heute nach einer kurzen Krankheit gestorben. Die Bevölkerung [root.GetName]s ist in Trauer. [cc_colony_leader.GetHisHerCap] letzter Wunsch war es, eine große Militärakademie auf [root.GetName] zu bauen, so dass die nächste Generation von Offizieren, für wem [cc_colony_leader.GetSheHe] den Weg bereitet hat, ihr Potenzial erreichen kann. Unsere Behörden auf [root.GetName] haben einen Plan vorgeschlagen, durch den dieser Wunsch verwirklicht werden könnte.\n\nSollen wir in die Akademie investieren?"
  cc_colony_events.25.A: "Allerdings!"
  cc_colony_events.25.B: "Es ist zu teuer."
  cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
@@ -210,89 +210,92 @@
 
 #Xenophile
 
-cc_colony_events.4.name:0 "Xenophilic Activist on [root.GetName]"
-cc_colony_events.4.desc.pos:0 "As our people begin stepping out into the stars, many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. Fortunately, [cc_colony_leader.GetSheHe] has taken pains not to be seen to be usurping our local authorities, and has consulted them before making important decisions. For their part, our local officials approve of [cc_colony_leader.GetHisHer] teachings and initiatives, and recommend integrating [cc_colony_leader.GetHimHer] into the local command structure." 
-cc_colony_events.4.desc.neut:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain kind-hearted soul named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has not to this point used this authority to take a stance against the [root.owner.GetName] - indeed, [cc_colony_leader.GetSheHe] has so far cooperated well with our local authorities - but [cc_colony_leader.GetHisHer] ideas of what is best do deviate from those generally espoused by the [root.owner.GetName]'s leaders.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?"
-cc_colony_events.4.desc.neg:0 "As our people begin stepping out into the stars many have begun to wonder, what do we do when we find other life? \n\nOn [root.GetName], this topic has been especially prevalent in public discourse. This is mainly due to a certain troublemaker named [cc_colony_leader.GetName], who has begun calling for systems to be created to ensure the fair and equal treatment of all aliens. This ideology is becoming highly popular among the new colonists, who have become enamoured with the idea of [root.GetName] becoming a multicultural haven. They have begun to call [cc_colony_leader.GetHimHer] the "Mediator" and follow [cc_colony_leader.GetHisHer] advice, even before that of higher [root.owner.GetSpeciesAdj] authorities. [cc_colony_leader.GetSheHe] has been using this new-found authority to take a line that is far from that represented by the [root.owner.GetName], and has been described as a "nuisance" by our local authorities.\n\nWhat should we do about [cc_colony_leader.GetHimHer]?" 
+ cc_colony_events.4.name:0 "Xenophilisch[cc_colony_leader.GetErEDE] Aktivist[cc_colony_leader.GetXInDE] auf [root.GetName]"
+ cc_colony_events.4.desc.pos:0 "Jetzt da die [root.owner.GetSpeciesNamePlural] in die Sterne hinausgehen, fragen sich viele, was wir machen sollen, wenn wir andere intelligente Lebewesen treffen.\n\nAuf [root.GetName] ist dieses Thema besonders aktuell geworden. Dies liegt vor allem an einem gewissen gutherzigen Personen namens[cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDE] die Erschaffung von Systemen fordert, die die faire und gleiche Behandlung aller Xenos zu gewährleisten. Diese Ideologie wird unter den neuen Kolonisten sehr populär, die sich in die Idee verliebt haben, dass [root.GetName] zu einer multikulturellen 'Xenooase' wird. Sie haben begonnen, [cc_colony_leader.GetHimHer] [cc_colony_leader.GetDenDieDE] "Mediator[cc_colony_leader.GetXInDE]" zu nennen und [cc_colony_leader.GetHisHer]en Rat zu folgen, sogar vor dem der höheren [root.owner.GetSpeciesAdj]en-Behörden. Zum Glück hat sich [cc_colony_leader.GetSheHe] sich bemüht, die örtlichen Behörden zu konsultieren, bevor [cc_colony_leader.GetSheHe] wichtige Entscheidungen trifft. Ihrerseits befürworten unsere lokalen Beamten [cc_colony_leader.GetHisHer]e Lehren und Initiativen und empfehlen, [cc_colony_leader.GetIhnSieDE] in die lokale Befehlsstruktur zu integrieren."
+ cc_colony_events.4.desc.neut:0 "Jetzt da die [root.owner.GetSpeciesNamePlural] in die Sterne hinausgehen, fragen sich viele, was wir machen sollen, wenn wir andere intelligente Lebewesen treffen.\n\nAuf [root.GetName] ist dieses Thema besonders aktuell geworden. Dies liegt vor allem an einem gewissen gutherzigen Personen namens[cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDE] die Erschaffung von Systemen fordert, die die faire und gleiche Behandlung aller Xenos zu gewährleisten. Diese Ideologie wird unter den neuen Kolonisten sehr populär, die sich in die Idee verliebt haben, dass [root.GetName] zu einer multikulturellen 'Xenooase' wird. Sie haben begonnen, [cc_colony_leader.GetHimHer] [cc_colony_leader.GetDenDieDE] "Mediator[cc_colony_leader.GetXInDE]" zu nennen und [cc_colony_leader.GetHisHer]en Rat zu folgen, sogar vor dem der höheren [root.owner.GetSpeciesAdj]en-Behörden. [cc_colony_leader.GetSheHeCap] hat bisher nicht [cc_colony_leader.GetHisHer]e neu-erworbene Autorität benutzt, um sich gegen die [root.owner.GetName] zu stellen, und kooperiert stattdessen mit der lokalen Regierung. Jedoch scheinen [cc_colony_leader.GetHisHer]e grundsätzliche Ideale von den der [root.owner.GetName] abzuweichen.\n\nWie sollen wir mit der Situation umgehen?"
+ cc_colony_events.4.desc.neg:0 "Jetzt da die [root.owner.GetSpeciesNamePlural] in die Sterne hinausgehen, fragen sich viele, was wir machen sollen, wenn wir andere intelligente Lebewesen treffen.\n\nAuf [root.GetName] ist dieses Thema besonders aktuell geworden. Dies liegt vor allem an einem gewissen Störenfried namens[cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDE] die Erschaffung von Systemen fordert, die die faire und gleiche Behandlung aller Xenos zu gewährleisten. Diese Ideologie wird unter den neuen Kolonisten sehr populär, die sich in die Idee verliebt haben, dass [root.GetName] zu einer multikulturellen 'Xenooase' wird. Sie haben begonnen, [cc_colony_leader.GetHimHer] [cc_colony_leader.GetDenDieDE] "Mediator[cc_colony_leader.GetXInDE]" zu nennen und [cc_colony_leader.GetHisHer]en Rat zu folgen, sogar vor dem der höheren [root.owner.GetSpeciesAdj]en-Behörden. [cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDE] von unseren lokalen Behörden als "störend" beschrieben wird, hat [cc_colony_leader.GetHisHer]e neu gefundene Autorität begrüßt und angefangen, für eine Position einzutreten, die weit von der Leitkultur der [root.owner.GetName] abweicht.\n\nWie sollen wir mit der Situation umgehen?"
 
-cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
-cc_colony_events.4.C:0 "$cc_colony_events.3.C$"
-cc_colony_events.4.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
-
-
-cc_colony_events.41.name:0 "$cc_colony_events.21.name$"
-cc_colony_events.41.desc:0 "$cc_colony_events.61.desc$"
+ cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
+ cc_colony_events.4.C:0 "$cc_colony_events.3.C$"
+ cc_colony_events.4.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 
 
-cc_colony_events.42.name:0 "$cc_colony_events.22.name$"
-cc_colony_events.42.desc:0 "$cc_colony_events.22.desc$"
-cc_colony_events.42.A:0 "$cc_colony_events.22.A.desc$"
-cc_colony_events.42.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
-cc_colony_events.42.B:0 "Release [cc_colony_leader.GetHimHer]." 
+ cc_colony_events.41.name:0 "$cc_colony_events.21.name$"
+ cc_colony_events.41.desc:0 "$cc_colony_events.61.desc$"
 
 
-cc_colony_events.421.name:0 "$cc_colony_events.221.name$"
-cc_colony_events.421.desc:0 "$cc_colony_events.221.desc$"
+ cc_colony_events.42.name:0 "$cc_colony_events.22.name$"
+ cc_colony_events.42.desc:0 "$cc_colony_events.22.desc$"
+ cc_colony_events.42.A:0 "$cc_colony_events.22.A.desc$"
+ cc_colony_events.42.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+ cc_colony_events.42.B:0 "Befreit [cc_colony_leader.GetIhnSieDE]." 
 
-cc_colony_events.43.name:0 "$cc_colony_events.23.name$"
-cc_colony_events.43.desc:0 "$cc_colony_events.23.desc$"
-cc_colony_events.43.A:0 "$cc_colony_events.23.A$"
-cc_colony_events.43.B:0 "$cc_colony_events.23.B$"
- cc_colony_events.43.C:0 "Verfolgt diesen Volksverhetzer und [cc_colony_leader.GetHisHer]e Anhänger."
-cc_colony_events.431.name:0 "$cc_colony_events.231.name$"
-cc_colony_events.431.desc:0 "$cc_colony_events.231.desc$"
-cc_colony_events.431.option:0 "$CC_GOODIGUESS$"
 
-cc_colony_events.432.name:0 "$cc_colony_events.232.name$"
+ cc_colony_events.421.name:0 "$cc_colony_events.221.name$"
+ cc_colony_events.421.desc:0 "$cc_colony_events.221.desc$"
+
+ cc_colony_events.43.name:0 "$cc_colony_events.23.name$"
+ cc_colony_events.43.desc:0 "$cc_colony_events.23.desc$"
+ cc_colony_events.43.A:0 "$cc_colony_events.23.A$"
+ cc_colony_events.43.B:0 "$cc_colony_events.23.B$"
+ cc_colony_events.43.C:0 "Verfolgt diesen Störenfried und [cc_colony_leader.GetHisHer]e Anhänger."
+ cc_colony_events.431.name:0 "$cc_colony_events.231.name$"
+ cc_colony_events.431.desc:0 "$cc_colony_events.231.desc$"
+ cc_colony_events.431.option:0 "$CC_GOODIGUESS$"
+
+ cc_colony_events.432.name:0 "$cc_colony_events.232.name$"
  cc_colony_events.432.desc:0 "Unsere Versuche, [cc_colony_leader.GetName] festzunehmen, sind gescheitert. [cc_colony_leader.GetSheHeCap] hat [cc_colony_leader.GetHisHer]e treusten Anhänger zusammengebracht und eine Untergrundbewegung gegründet, durch der [cc_colony_leader.GetSheHe] anscheinend die xenoistischen Gemeinden [root.GetName]s von Diskrimination verteidigen will. Wir können davon ausgehen, dass [cc_colony_leader.GetSheHe] unsere Behörden noch langfristig Probleme bereiten wird."
-cc_colony_events.433.name:0 "$cc_colony_events.233.name$"
-cc_colony_events.433.desc:0 "$cc_colony_events.533.desc$"
+ cc_colony_events.433.name:0 "$cc_colony_events.233.name$"
+ cc_colony_events.433.desc:0 "$cc_colony_events.533.desc$"
 
-cc_colony_events.434.name:0 "$cc_colony_events.234.name$"
-cc_colony_events.434.desc:0 "$cc_colony_events.234.desc$"
-
-
-cc_colony_events.45.name:0 "$cc_colony_events.55.name$"
-cc_colony_events.45.desc:0 "[cc_colony_leader.GetName] died this morning. [cc_colony_leader.GetSheHe] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. One of [cc_colony_leader.GetHisHer] final projects had been to ensure that [cc_colony_leader.GetHisHer] efforts to ensure peaceful and just relations between species are not forgotten by setting up an annual Cultural Exchange in [cc_colony_leader.GetHisHer]. However, [cc_colony_leader.GetSheHe] died before this could be realised. The mourning population on [root.GetName] have requested that [cc_colony_leader.GetName]'s last wish be honoured, and that government support for the Cultural Exchange be given."
-cc_colony_events.45.A: "House a Cultural Exchange"
-cc_colony_events.45.B: "$cc_colony_events.25.B$"
-cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
-cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
-
-cc_colony_events.451.name:0 "Cultural Exchange opens on [root.GetName]"
-cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour has been completed. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
+ cc_colony_events.434.name:0 "$cc_colony_events.234.name$"
+ cc_colony_events.434.desc:0 "$cc_colony_events.234.desc$"
 
 
-cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+ cc_colony_events.45.name:0 "$cc_colony_events.55.name$"
+ cc_colony_events.45.desc:0 "[cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDEDE] "Mediator[cc_colony_leader.GetXInDE]" [root.GetName]s, [cc_colony_leader.GetDerDieDEDE] schon einige Zeit an einem schlechten Gesundheitszustand litt, ist heute Morgen gestorben. Einer [cc_colony_leader.GetHisHer]er letzten Projekte war es, eine "Kulturelle Expo" zu erschaffen, die dafür sorgen soll, dass [cc_colony_leader.GetHisHer] Bestreben nach friedlichen und gerechten Beziehungen zwischen Spezies nach [cc_colony_leader.GetHisHer]em Tod nicht vergessen werden. Jedoch ist [cc_colony_leader.GetSheHe] gestorben, bevor dieses Projekt verwirklicht werden konnte. Die Bevölkerung [root.GetName]s ist in Trauer, und verlangt, dass wir [cc_colony_leader.GetName]s letzten Wunsch respektieren und die "Kulturelle Expo" staatliche Unterstützung geben."
 
 
-cc_founder_xenophile:0 "Xenophile Mediator"
-cc_founder_xenophile_desc:0 "This colony is under the influence of a charismatic individual whose personal mission is to ensure the fair and equal treatment of all aliens."
+ cc_colony_events.45.A: "Etabliere eine Kulturelle Expo"
+ cc_colony_events.45.B: "$cc_colony_events.25.B$"
+ cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
+ cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
+
+ cc_colony_events.451.name:0 "Kulturelle Expo auf [root.GetName] eingeweiht"
+ cc_colony_events.451.desc:0 "Die "Kulturelle Expo zu [cc_colony_leader.GetName]s Ehre ist ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. [cc_colony_leader.GetName]s Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
+
+ cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophile_institute$§! hinzu:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+
+ cc_founder_xenophile:0 "Xenophilischer Mediator"
+ cc_founder_xenophile_desc:0 "Diese Kolonie ist unter dem Einfluss einer charismatischen Person, deren Lebenszweck es ist, die faire und gleiche Behandlung aller Xenos zu gewährleisten."
 
  cc_minor_protests_xenophile:0 "Kleine Proteste"
-cc_minor_protests_xenophile_desc:0 "This Planet is experiencing minor protests following the arrest of one of their leaders."
+ cc_minor_protests_xenophile_desc:0 "Nach der Festnahme eines angesehenen Xenoisten gibt es auf diesem Planeten kleine Proteste."
  cc_major_protests_xenophile:0 "Große Proteste"
-cc_major_protests_xenophile_desc:0 "This Planet is experiencing major protests following the arrest of one of their leaders."
+ cc_major_protests_xenophile_desc:0 "Nach der Festnahme eines angesehenen Xenoisten gibt es auf diesem Planeten große Proteste."
 
-cc_underground_xenophile_movement_1:0 "Underground Xenophile Movement"
-cc_underground_xenophile_movement_1_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. It seeks to protect the planet's xeno communities from predation and discrimination."
-cc_underground_xenophile_movement_2:0 "Underground Xenophile Movement"
-cc_underground_xenophile_movement_2_desc:0 "An underground movement centred around a charismatic dissident is active on this planet. Its ultimate aim is full independence from our empire."
+ cc_underground_xenophile_movement_1:0 "Xenophilische Untergrundbewegung"
+ cc_underground_xenophile_movement_1_desc:0 "Eine Untergrundbewegung, die von einem charismatischen Xenoisten geführt wird, ist auf diesem Planeten aktiv. Es versucht, die Xeno-Gemeinden des Planeten von Diskrimination zu verteidigen."
+ cc_underground_xenophile_movement_2:0 "Xenophilische Widerstandsbewegung"
+ cc_underground_xenophile_movement_2_desc:0 "Eine Untergrundbewegung, die von einem charismatischen Xenoisten geführt wird, ist auf diesem Planeten aktiv. Ihr endgültiges Ziel ist es, Frieden durch Unabhängigkeit von dem Staat zu gewinnen."
 
-cc_xenophiles_offended:0 "Offended Xenophiles"
-cc_xenophiles_offended_desc:0 "The xenophobic population on this planet is offended at the attitude of the new regime."
+ cc_xenophiles_offended:0 "Beleidigte Xenoisten"
+ cc_xenophiles_offended_desc:0 "Die xenophilische Bevölkerung dieses Planeten fühlt sich von dem neuen Regime entfremdet."
 
-cc_building_xenophile_institute:0 "Preparing a Cultural Exchange"
-cc_building_xenophile_institute_desc:0 "A Cultural Exchange that is meant to secure the legacy of this planet's "Mediator" is being prepared."
+ cc_building_xenophile_institute:0 "Vorbereitet eine Kulturelle Expo"
+ cc_building_xenophile_institute_desc:0 "Eine Kulturelle Expo, die dafür sorgen soll, dass das Bestreben des "Mediatoren" nach friedlichen und gerechten Beziehungen zwischen Spezies nach seinem Tod erhalten bleibt, wird vorbereitet."
 
-cc_xenophile_institute:0 "Cultural Exchange"
-cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory of a celebrated citizen who sought to improve interspecies relations. Their spirit and teachings live on in it, and will be remembered for as long as it is celebrated."
+ cc_xenophile_institute:0 "Kulturelle Expo"
+ cc_xenophile_institute_desc:0 "Dieser Planet veranstaltet eine Kulturelle Expo zur Ehre eines angesehenen Bürgers, der bessere Interspeziesverhältnisse förderte. Sein Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
 
-cc_founders_memory_disrespected_1_xenophile:0 "Local Founding Citizen Disrespected"
-cc_founders_memory_disrespected_1_xenophile_desc:0 "The population is disappointed at the manner in which the parent state treated this planet's "Mediator", a well-regarded citizen who had sought good relations between all species."
 
-cc_founders_memory_disrespected_2_xenophile:0 "$cc_founders_memory_disrespected_1_xenophile$"
-cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespected_1_xenophile_desc$"
+
+ cc_founders_memory_disrespected_1_xenophile:0 "Gründerfigur verachtet"
+ cc_founders_memory_disrespected_1_xenophile_desc:0 "Die Bevölkerung ist entgeistert von der Art und Weise, auf der der Staat ihren "Mediatoren" (ein angesehener Bürger, der gute Verhältnisse zwischen allen Spezies förderte) behandelt hat."
+
+ cc_founders_memory_disrespected_2_xenophile:0 "$cc_founders_memory_disrespected_1_xenophile$"
+ cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespected_1_xenophile_desc$"
 
 
 #Xenophobe
@@ -517,7 +520,7 @@ cc_hostile_towards_xenos:0 "Hostile towards xenos"
  cc_colony_events.643.desc:0 "Das Mausoleum zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen, und viele [cc_colony_leader.GetHisHer]er Anhänger sind von anderen Welten zur Feier des Tages gekommen. Wir vermuten, dass dies zu einer wichtigen Pilgerfahrtsdestination für Spiritualisten in- und sogar außerhalb der [root.owner.GetName] entwickeln wird."
 
  cc_colony_events.65.name:0 "$cc_colony_events.25.name$"
- cc_colony_events.65.desc:0 "[cc_colony_leader.GetName], der berühmte Guru [root.GetName]s, der schon einige Zeit an einem schlechten Gesundheitszustand, ist heute Morgen gestorben. Die Bevölkerung [root.GetName]s ist in Trauer, und verlangt, dass wir einen Schrein zu [cc_colony_leader.GetHisHer]er Ehre errichten, sodass sie einen Ort haben werden, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
+ cc_colony_events.65.desc:0 "[cc_colony_leader.GetName], der berühmte Guru [root.GetName]s, der schon einige Zeit an einem schlechten Gesundheitszustand litt, ist heute Morgen gestorben. Die Bevölkerung [root.GetName]s ist in Trauer, und verlangt, dass wir einen Schrein zu [cc_colony_leader.GetHisHer]er Ehre errichten, sodass sie einen Ort haben werden, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
  cc_colony_events.65.A:0 "Errichtet ein Mausoleum. [cc_colony_leader.GetSheHeCap] hat es verdient."
  cc_colony_events.65.B:0 "$cc_colony_events.35.B$"
  cc_colony_events.65.C:0 "$cc_colony_events.35.C$"
@@ -638,35 +641,35 @@ cc_hostile_towards_xenos:0 "Hostile towards xenos"
 
 
  cc_colony_events.75.name:0 "$cc_colony_events.25.name$"
-cc_colony_events.75.desc:0 "[cc_colony_leader.GetName], whom many consider to have been the Founding Citizen of [root.GetName], died today after a brief illness. The populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] last wish was that a great university be built on [root.GetName] to ensure that the next generation of thinkers for which [cc_colony_leader.GetSheHe] has sown the seeds can rise up. Officials on [root.GetName] have approached us with a plan to see this become a reality.\n\nShould we invest in the university?"
+ cc_colony_events.75.desc:0 "[cc_colony_leader.GetName], [cc_colony_leader.GetDerDieDE] von vielen als Gründerfigur [root.GetName]s angesehen wird, ist heute nach einer kurzen Krankheit gestorben. Die Bevölkerung [root.GetName]s ist in Trauer. [cc_colony_leader.GetHisHerCap] letzter Wunsch war es, eine große Universität auf [root.GetName] zu errichten, sodass die nächste Generation von Denkern, für wem [cc_colony_leader.GetSheHe] den Weg bereitet hat, ihr Potenzial erreichen kann. Unsere Behörden auf [root.GetName] haben einen Plan vorgeschlagen, durch den dieser Wunsch verwirklicht werden könnte.\n\nSollen wir in die Universität investieren?"
  cc_colony_events.75.A: "Allerdings!"
  cc_colony_events.75.B: "$cc_colony_events.25.B$"
 
  cc_colony_events.75.B.tooltip:0 "$cc_colony_events.35.C.tooltip$"
 
-cc_colony_events.751.name:0 "University opens on [root.GetName]"
-cc_colony_events.751.desc:0 "The university in [cc_colony_leader.GetName]'s honour has been completed. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of learning within the [root.owner.GetName]. Furthermore, materialists across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to scientific progress."
+ cc_colony_events.751.name:0 "Universität auf [root.GetName] eröffnet"
+ cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe des [root.owner.GerRulerTitle]s an dem technologischen Fortschritt."
 
-cc_university_will_be_built:0 "\nThe University will take 5 years to complete. It will add the modifier §Y$cc_university$§!, granting:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 
-cc_founder_materialist:0 "Prominent Intellectual"
-cc_founder_materialist_desc:0 "The Founding Citizen of this planet is a former university professor. They are held in high esteem by the populace, and their words are widely followed."
+ cc_founder_materialist:0 "Angesehener Intellektueller"
+ cc_founder_materialist_desc:0 "Die Gründerfigur dieses Planeten ist ein ehemaliger Professor, der von der Bevölkerung hoch angesehen wird, und dessen Lehren von vielen befolgt werden."
  cc_minor_protests_materialist:0 "$cc_minor_protests_militarist$"
-cc_minor_protests_materialist_desc:0 "This Planet is experiencing minor protests following the arrest of one of a prominent intellectual."
+ cc_minor_protests_materialist_desc:0 "Nach der Festnahme eines angesehenen Intellektuellen gibt es auf diesem Planeten kleine Proteste."
  cc_major_protests_materialist:0 "$cc_major_protests_militarist$"
-cc_major_protests_materialist_desc:0 "This Planet is experiencing major protests following the arrest of one of a prominent intellectual."
-cc_underground_materialist_movement_1:0 "Underground Intellectual Movement"
-cc_underground_materialist_movement_1_desc:0 "An underground movement centred around a dissident intellectual's teaching is active on this planet. It seeks to spread ideas that go against the ideals of our empire."
-cc_underground_materialist_movement_2:0 "Underground Intellectual Movement"
-cc_underground_materialist_movement_2_desc:0 "An underground resistance movement centred around a dissident intellectual's teachings is active on this planet. Its ultimate aim is full independence from our empire."
-cc_building_university:0 "Constructing a Museum"
-cc_building_university_desc:0 "A major university is being built on this planet."
-cc_university:0 "Centre of Learning"
-cc_university_desc:0 "The University on this planet is an important centre of learning, which students and intellectuals alike travel light years to visit and study at."
-cc_university_built_faction:0 "University Built"
-cc_founders_memory_disrespected_1_materialist:0 "Local Intellectual Disrespected"
-cc_founders_memory_disrespected_1_materialist_desc:0 "The population is disappointed at the manner in which the parent state treated a famous intellectual native to this planet."
+ cc_major_protests_materialist_desc:0 "Nach der Festnahme eines angesehenen Intellektuellen gibt es auf diesem Planeten große Proteste."
+ cc_underground_materialist_movement_1:0 "Intellektuelle Untergrundbewegung"
+ cc_underground_materialist_movement_1_desc:0 "Eine Untergrundbewegung, die von einem regimekritischen Intellektuellen geführt wird, ist auf diesem Planeten aktiv. Es versucht Ideen und Bräuche, die gegen die Idealen unseres Staates sind, zu verbreiten."
+ cc_underground_materialist_movement_2:0 "Intellektuelle Widerstandsbewegung"
+ cc_underground_materialist_movement_2_desc:0 "Eine Untergrundbewegung, die von einem regimekritischen Intellektuellen geführt wird, ist auf diesem Planeten aktiv. Ihr endgültiges Ziel ist es, Frieden durch Unabhängigkeit von dem Staat zu gewinnen."
+ cc_building_university:0 "Errichtet eine Universität"
+ cc_building_university_desc:0 "Eine wichtige Universität wird auf diesem Planeten errichtet."
+ cc_university:0 "Bildungszentrum"
+ cc_university_desc:0 "Die Universität auf diesem Planeten ist ein wichtiges Bildungszentrum. Studenten und Intellektuellen reisen viele Lichtjahre, um dort ein Studium zu betreiben."
+ cc_university_built_faction:0 "Universität errichtet"
+ cc_founders_memory_disrespected_1_materialist:0 "Einheimischer Intellektueller verachtet"
+ cc_founders_memory_disrespected_1_materialist_desc:0 "Die Bevölkerung ist entgeistert von der Art und Weise, auf der der Staat einen einheimischen Intellektuellen behandelt hat."
 
  cc_materialists_offended:0 "Beleidigte Materialisten"
  cc_materialists_offended_desc:0 "Die materialistische Bevölkerung dieses Planeten fühlt sich von dem neuen Regime entfremdet."
@@ -949,11 +952,11 @@ cc_cleanup_events.41.desc:0 "The Cultural Exchange in honour of [root.GetName]'s
 
 
 #General Modifiers
-cc_colony_distrusts:0 "Distrust of the Parent State"
-cc_colony_distrusts_desc:0 "Many in this colony distrust the parent state as a result of previous events in the colony's history."
+ cc_colony_distrusts:0 "Misstrauen gegenüber dem Staat"
+ cc_colony_distrusts_desc:0 "Große Teile der Bevölkerung dieser Kolonie misstrauen den Staat als Folge früheren Ereignissen in der Geschichte der Kolonie."
 
-cc_lingering_oppression:0 "Lingering Oppression from Crackdown"
-cc_oppression:0 "Subject of Crackdown"
+ cc_lingering_oppression:0 "Verweilende Auswirkung der Maßregelung"
+ cc_oppression:0 "Maßregelung"
 
-cc_planet_oppression:0 "Oppressive Crackdown"
-cc_planet_oppression_desc:0 "The government has launched an oppressive crackdown of dissidents on this planet."
+ cc_planet_oppression:0 "Maßregelung"
+ cc_planet_oppression_desc:0 "Die Regierung führt eine oppressive Maßregelung gegen Regimekritiker auf diesem Planeten."
