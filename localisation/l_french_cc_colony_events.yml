@@ -12,7 +12,7 @@ cc_colony_events.2.A2:0 "Donnez-lui un rôle de conseill[cc_colony_leader.GetErE
 cc_colony_events.2.B:0 "Rappellez-[cc_colony_leader.GetLeLaLead], [cc_colony_leader.GetSheHe] a clairement oublié sa place."
 
 cc_colony_events.2.C:0 "Autoriser la pétition."
-cc_colony_events.2.D:0 "[cc_colony_leader.GetSheHeCap] a clairement oublié [cc_colony_leader.GetHisHer] place. Arrêtez-[cc_colony_leader.GetLeLaLead]."
+cc_colony_events.2.D:0 "[cc_colony_leader.GetSheHeCap] a clairement oublié sa place. Arrêtez-[cc_colony_leader.GetLeLaLead]."
 cc_colony_events.2.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
 
 
@@ -28,7 +28,7 @@ cc_colony_events.22.B:0 "Relachez-[cc_colony_leader.GetLeLaLead] et l'autoriser 
 
 
 cc_colony_events.221.name:0 "Méfiance persistante sur [Root.GetName]"
-cc_colony_events.221.desc:0 "Quelques années ont passé, et les manifestations sur [cc_colony_leader.GetName] se sont essoufflées. Cependant, le souvenir de [cc_colony_leader.GetHisHer] - et de la manière dont [cc_colony_leader.GetSheHe] a été arrachée à [root.GetName] - sont toujours présents, et sont entrés dans le folklore local, source de beaucoup d'amertume. Il y a peu de chance que les habitants en viennent à avoir entière confiance dans l'état mère."
+cc_colony_events.221.desc:0 "Quelques années ont passé, et les manifestations sur [cc_colony_leader.GetName] se sont essoufflées. Cependant, le souvenir [cc_colony_leader.GetDeluiDelleLead] - et de la manière dont [cc_colony_leader.GetSheHe] a été arrachée à [root.GetName] - sont toujours présents, et sont entrés dans le folklore local, source de beaucoup d'amertume. Il y a peu de chance que les habitants en viennent à avoir entière confiance dans l'état mère."
 
 cc_colony_events.23.name:0 "Des manifestants libèrent [cc_colony_leader.GetName]"
 cc_colony_events.23.desc:0 "L'arrestation de [cc_colony_leader.GetName] sur [Root.GetName] a délcenché des manifestations massives. Les autorités locales n'arrivent pas à garder la situation sous contrôle, et dans le chaos un groupe de manifestant a réussi à pénétrer dans la prison locale pour libérer [cc_colony_leader.GetName]. Nos agents demandent conseil pour gérer cette situation."
@@ -112,7 +112,7 @@ cc_colony_events.31.desc:0 "L'arrestation récente de [cc_colony_leader.GetName]
 
 
 cc_colony_events.32.name:0 "$cc_colony_events.22.name$"
-cc_colony_events.32.desc:0 "L'arrestation de [cc_colony_leader.GetName] sur [Root.GetName] a déclenché l'apparition de grosses manifestations exigeant la libération de [cc_colony_leader.GetHisHer]. Bien que la majorité des manifestants ne recourent pas à la violence - puisqu'ils se prétendent pacifistes -, ils ont mis en place plusieurs types de protestations non-violentes qui gênant énormément le bon fonctionnement de notre administration. Les autorités locales demandent conseil sur comment gérer au mieux cette situation."
+cc_colony_events.32.desc:0 "L'arrestation de [cc_colony_leader.GetName] sur [Root.GetName] a déclenché l'apparition de grosses manifestations exigeant la libération [cc_colony_leader.GetDeluiDelleLead]. Bien que la majorité des manifestants ne recourent pas à la violence - puisqu'ils se prétendent pacifistes -, ils ont mis en place plusieurs types de protestations non-violentes qui gênant énormément le bon fonctionnement de notre administration. Les autorités locales demandent conseil sur comment gérer au mieux cette situation."
 cc_colony_events.32.A:0 "$cc_colony_events.22.A$"
 cc_colony_events.32.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
 cc_colony_events.32.B:0 "Relâchez-[cc_colony_leader.GetLeLaLead]."
@@ -161,7 +161,7 @@ cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
 cc_colony_events.35.desc:0 "[cc_colony_leader.GetName] est mort ce matin. [cc_colony_leader.GetSheHeCap] avait des problèmes de santé depuis un moment, et la fièvre a fini par avoir raison de lui. La population de [root.GetName] est en deuil, et a demandé à ce que nous construisions un monument spécial en son honneur où les gens pourront se rappeler sa vie et ses enseignements."
 cc_colony_events.35.A:0 "Construire un monument pour ce citoyen exemplaire."
 cc_colony_events.35.B:0 "C'est trop cher"
-cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] était juste un trouble-fête. Qu'[cc_colony_leader.GetHisHer] tombe dans l'oubli."
+cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] était juste un trouble-fête. Qu'[cc_colony_leader.GetSheHe] tombe dans l'oubli."
 
 cc_colony_events.35.C.tooltip:0 "[root.GetName] sera libérée de l'influence de [cc_colony_leader.GetName] dans 30 ans."
 
@@ -344,7 +344,7 @@ cc_colony_events.532.name:0 "$cc_colony_events.232.name$"
 cc_colony_events.532.desc:0 "La tentative d'arrestation de [cc_colony_leader.GetName] a échoué. [cc_colony_leader.GetName] a rassemblé ses plus fidèles partisans et a créé un mouvement clandestin avec lequel [cc_colony_leader.GetSheHe] espère protéger le [root.GetName] des interférences aliens. Nous pouvons nous attendre à des ennuis de sa part pour un moment."
 
 cc_colony_events.533.name:0 "$cc_colony_events.233.name$"
-cc_colony_events.533.desc:0 "Les tentatives pour traquer et tuer [cc_colony_leader.GetName] et ses partisans [cc_colony_leader.GetHisHer] ont réussi dans les grandes largeurs. Leur fléau a été purgé de notre colonie. Cependant, il nous faudra du temps pour regagner la confiance de la population."
+cc_colony_events.533.desc:0 "Les tentatives pour traquer et tuer [cc_colony_leader.GetName] et ses partisans ont réussi dans les grandes largeurs. Leur fléau a été purgé de notre colonie. Cependant, il nous faudra du temps pour regagner la confiance de la population."
 
 cc_colony_events.534.name:0 "$cc_colony_events.234.name$"
 cc_colony_events.534.desc:0 "$cc_colony_events.234.desc$"
@@ -361,7 +361,7 @@ cc_colony_events.540.B:0 "It isn't worth the risk."
 
 #Excellent!
 #Non-xenophobe variant:
-cc_colony_events.54.desc.neg:0 "Ces 15 dernières années, [cc_colony_leader.GetName] fut une figure emblématique sur [Root.GetName]. [cc_colony_leader.GetSheHeCap] a redynamisé la population [root.owner.GetSpeciesAdj], bien qu'[cc_colony_leader.GetSheHe] soit très controversé[cc_colony_leader.GetXELead] auprès des groupes de défense des droits des xénos, entre autres. Récemment, [cc_colony_leader.GetHisHer] rhetorique anti-xéno a dépassé les bornes pour notre allié, le [ally.GetName]. Leur ambassadeur a exprimé leur disposition à nous aider à nous débarrasser de cet[cc_colony_leader.GetXTeLead] agitat[cc_colony_leader.GetEurRiceLead]... tout en indiquant clairement que, à défaut de cela, des insultes supplémentaires visant la [ally.GetName] ne serait pas toléré.\n\nQue devons-nous faire ?"
+cc_colony_events.54.desc.neg:0 "Ces 15 dernières années, [cc_colony_leader.GetName] fut une figure emblématique sur [Root.GetName]. [cc_colony_leader.GetSheHeCap] a redynamisé la population [root.owner.GetSpeciesAdj], bien qu'[cc_colony_leader.GetSheHe] soit très controversé[cc_colony_leader.GetXELead] auprès des groupes de défense des droits des xénos, entre autres. Récemment, sa rhétorique anti-xéno a dépassé les bornes pour notre allié, le [ally.GetName]. Leur ambassadeur a exprimé leur disposition à nous aider à nous débarrasser de cet[cc_colony_leader.GetXTeLead] agitat[cc_colony_leader.GetEurRiceLead]... tout en indiquant clairement que, à défaut de cela, des insultes supplémentaires visant la [ally.GetName] ne serait pas toléré.\n\nQue devons-nous faire ?"
 cc_colony_events.54.A:0 "[cc_colony_leader.GetName] est un[cc_colony_leader.GetXELead] citoyen[cc_colony_leader.GetXNeLead] [root.owner.GetSpeciesAdj] loyal[cc_colony_leader.GetXELead]."
 cc_colony_events.54.B:0 "Très bien. Qu'on l'élimine."
 
@@ -523,7 +523,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 
 
 cc_colony_events.642.name:0 "Le Tour des Mondes de [cc_colony_leader.GetName] finit sur une tragédie"
-cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] rencontrait ses partisans sur [random_visit_planet.GetName] quand un fanatique anti-spiritualiste à moitié fou lui a tiré dessus [cc_colony_leader.GetHisHer] avant que ses gardes du corps puissent réagir. Malheureusement, la foule a battu à mort l'assassin avant que nous puissions l'interroger. Cela a donné naissances à des théories conspirationnistes, affirmant que quelqu'un - peut-être même quelqu'un haut placé dans le gouvernement [root.owner.GetSpeciesAdj] - était derrière l'assassinat. Il circule également des affirmations que les autorités [root.owner.GetSpeciesAdj] sur [random_visit_planet.GetName] n'étaient pas parvenu à offre à [cc_colony_leader.GetName] une protection adéquate, et ainsi permettant à cette tragédie de se produire. En conséquence, la communauté spiritualiste du [root.owner.GetName] sont outragés. Le dirigeant de [spiritualist_faction.GetName] a rencontré des membres du gouvernement au milieu de ce chaos et leur a fait part de leur mécontentement, mais il a aussi suggéré que, pour apaiser les spiritualistes, [cc_colony_leader.GetName] pourrait recevoir des funérailles d'état et un grand mausolée pourrait être construit en son honneur sur [root.GetName]."
+cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] rencontrait ses partisans sur [random_visit_planet.GetName] quand un fanatique anti-spiritualiste à moitié fou lui a tiré dessus avant que ses gardes du corps puissent réagir. Malheureusement, la foule a battu à mort l'assassin avant que nous puissions l'interroger. Cela a donné naissances à des théories conspirationnistes, affirmant que quelqu'un - peut-être même quelqu'un haut placé dans le gouvernement [root.owner.GetSpeciesAdj] - était derrière l'assassinat. Il circule également des affirmations que les autorités [root.owner.GetSpeciesAdj] sur [random_visit_planet.GetName] n'étaient pas parvenu à offre à [cc_colony_leader.GetName] une protection adéquate, et ainsi permettant à cette tragédie de se produire. En conséquence, la communauté spiritualiste du [root.owner.GetName] sont outragés. Le dirigeant de [spiritualist_faction.GetName] a rencontré des membres du gouvernement au milieu de ce chaos et leur a fait part de leur mécontentement, mais il a aussi suggéré que, pour apaiser les spiritualistes, [cc_colony_leader.GetName] pourrait recevoir des funérailles d'état et un grand mausolée pourrait être construit en son honneur sur [root.GetName]."
 cc_colony_events.642.A:0 "Faites-le. [cc_colony_leader.GetSheHeCap] le mérite."
 cc_mausoleum_will_be_built:0 "\nLe Mausolée prendra 5 ans à construire. Il ajoutera le modificateur §Y$cc_religious_centre$§!, donnant :\n$tile_resource_unity_mult$ : §G+50%§!\n$planet_resource_unity_add$ : §G+2§!\n$MOD_POP_HAPPINESS$ : §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$ : §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$ : §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
@@ -535,7 +535,7 @@ cc_colony_events.65.name:0 "$cc_colony_events.25.name$"
 cc_colony_events.65.desc:0 "[cc_colony_leader.GetName], le gourou célèbre [root.GetName], est mort ce matin. [cc_colony_leader.GetSheHeCap] se battait contre la maladie depuis un moment, et une fièvre l'a finalement achevé. La population de [root.GetName] est en deuil, et demande que l'on construise un autel spécial en son honneur où les gens pourront se rappeler sa vie et ses enseignements."
 cc_colony_events.65.A:0 "Construisez un grand autel. [cc_colony_leader.GetSheHeCap] le mérite."
 cc_colony_events.65.B:0 "C'est trop cher !"
-cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap] était juste un[cc_colony_leader.GetXELead] agitat[cc_colony_leader.GetEurRiceLead]. Qu'[cc_colony_leader.GetHisHer] tombe dans l'oubli."
+cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap] était juste un[cc_colony_leader.GetXELead] agitat[cc_colony_leader.GetEurRiceLead]. Qu'[cc_colony_leader.GetSheHe] tombe dans l'oubli."
 
 cc_colony_events.65.C.tooltip:0 "[root.GetName] sera libre de l'influence de [cc_colony_leader.GetName] dans 30 ans."
 
@@ -653,7 +653,7 @@ cc_colony_events.734.desc:0 "$cc_colony_events.234.desc$"
 
 
 cc_colony_events.75.name:0 "$cc_colony_events.25.name$"
-cc_colony_events.75.desc:0 "[cc_colony_leader.GetName], que de nombreuses personnes considèrent comme [cc_colony_leader.GetLeLaLead] Premi[cc_colony_leader.GetErEreLead] Citoyen[cc_colony_leader.GetXNeLead] de [root.GetName], est mort aujourd'hui après une brève maladie. Le peuple de [root.GetName] est en deuil. [cc_colony_leader.GetHisHerCap] dernier voeux était qu'une université soit construite sur [root.GetName] pour assurer le futur d'une nouvelle génération de penseurs. Les responsables sur [root.GetName] nous ont contacté pour transformer ce rêve en réalité.\n\nDevrions-nous investir dans l'université ?"
+cc_colony_events.75.desc:0 "[cc_colony_leader.GetName], que de nombreuses personnes considèrent comme [cc_colony_leader.GetLeLaLead] Premi[cc_colony_leader.GetErEreLead] Citoyen[cc_colony_leader.GetXNeLead] de [root.GetName], est mort aujourd'hui après une brève maladie. Le peuple de [root.GetName] est en deuil. Son dernier voeux était qu'une université soit construite sur [root.GetName] pour assurer le futur d'une nouvelle génération de penseurs. Les responsables sur [root.GetName] nous ont contacté pour transformer ce rêve en réalité.\n\nDevrions-nous investir dans l'université ?"
 cc_colony_events.75.A: "Certainement !"
 cc_colony_events.75.B: "$cc_colony_events.25.B$"
 
