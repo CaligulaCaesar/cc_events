@@ -758,51 +758,50 @@
 
  
 #Egalitarian
-cc_colony_events.9.name:0 "Direct Democracy on [root.GetName]"
+ cc_colony_events.9.name:0 "Direkte Democratie auf [root.GetName]"
 cc_colony_events.9.desc.pos:0 "The citizens on [root.GetName] have taken the initiative of setting up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. This will surely enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens."
 cc_colony_events.9.desc.neut:0 "The citizens on [root.GetName] have taken the initiative of setting up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. They claim that this will enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens. However, many in the [root.owner.GetSpeciesAdj] government are uncomfortable with this experiment, as they feel that it is of an un-[root.owner.GetSpeciesAdj] nature.\n\nShould it be allowed to continue?"
 cc_colony_events.9.desc.neg:0 "The citizens on [root.GetName] have shown a worrying degree of independent thought. They have set up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. They claim that this will enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens. However, many in the [root.owner.GetSpeciesAdj] government feel that this is a dangerous experiment that goes directly contrary to the [root.owner.GetName]'s values and could even undermine its stability.\n\nWhat should we do about it?"
-cc_colony_events.9.B:0 "It may continue."
-cc_colony_events.9.C:0 "Ban it."
-cc_colony_events.9.C.tooltip:0 "The response of the population to this course of action is unpredictable."
+ cc_colony_events.9.B:0 "Es darf weitergehen."
+ cc_colony_events.9.C:0 "Verbietet es."
+ cc_colony_events.9.C.tooltip:0 "Die Reaktion der Bevölkerung zu dieser Handlungsoption ist nicht vorhersehbar."
 
-cc_colony_events.91.name:0 "$cc_colony_events.21.name$"
+ cc_colony_events.91.name:0 "$cc_colony_events.21.name$"
  cc_colony_events.91.desc:0 "Nachdem wir ihren direkten Demokratie beendet haben, gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die höhere Autorität der [root.owner.GetName]. Es scheint, als wäre ihre "Demokratie" doch nicht so geschätzt wie wir dachten!"
 
-cc_colony_events.92.name:0 "$cc_colony_events.22.name$"
+ cc_colony_events.92.name:0 "$cc_colony_events.22.name$"
 cc_colony_events.92.desc:0 "The imposed cancellation of [root.GetName]'s experiment into direct democracy has sparked major protests, with demands for its restitution widespread. Elements of the protests have turned violent, and our local authorities are having difficulties keeping the populace under control. They have requested guidance from the executive as to how to deal with the situation."
-cc_colony_events.92.A:0 "Crush the Protests."
-cc_colony_events.92.B:0 "The Protests will Pass." 
-cc_colony_events.92.C:0 "Restore [root.GetName]'s Direct Democracy."
+ cc_colony_events.92.A:0 "Die Proteste niederdrücken!"
+ cc_colony_events.92.B:0 "Die Proteste werden vorübergehen." 
+ cc_colony_events.92.C:0 "Direkte Demokratie auf [root.GetName] doch zulassen."
 
-cc_colony_events.921.name:0 "$cc_colony_events.233.name$"
+ cc_colony_events.921.name:0 "$cc_colony_events.233.name$"
 cc_colony_events.921.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have succeeded. The ringleaders have all been arrested or killed, as have any of their followers foolish enough to try and resist us. Their scourge has been eliminated from our colony. However, it will take time to win over the populace's hearts and minds."
 
-cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
+ cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
 cc_colony_events.922.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have failed. The ringleaders caught wind of the plan and went into hiding, along with many of their trusted followers. They have set up an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
 
-cc_colony_events.923.name:0 "$cc_colony_events.221.name$"
+ cc_colony_events.923.name:0 "$cc_colony_events.221.name$"
 cc_colony_events.923.desc:0 "Some years have passed, and protests at the cessation of direct democracy on [root.GetName] have died down, but the memory of it hasn't. [root.GetName]'s period of democratic self-governance has gone down in [root.GetName]'s folklore as a golden, innocent age, and its loss is a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
 
-cc_colony_events.924.name:0 "Underground Movement on [Root.GetName]"
+ cc_colony_events.924.name:0 "Untergrundbewegung auf [Root.GetName]"
 cc_colony_events.924.desc:0 "The expected end of protests on [root.GetName] did not materialise. They continued to cause issues until authorities were forced to disperse protesters. Since then, the movement has gone underground, seeking to win over the population and push for a restoration of democracy from the shadows."
 
 
 
-cc_colony_direct_democracy:0 "Direct Democracy"
-cc_colony_direct_democracy_desc:0 "This colony is governed by a planet-wide direct democracy."
-cc_colony_democracy_unhappy:0 "Direct Democracy Removed"
-cc_colony_democracy_unhappy_desc:0 "This colony is upset that its system of direct democratic self-governance was ended by the current regime."
+ cc_colony_direct_democracy:0 "Direkte Demokratie"
+ cc_colony_direct_democracy_desc:0 "Diese Kolonie ist von einer planetweiten direkten Demokratie regiert."
+ cc_colony_democracy_unhappy:0 "Direkte Demokratie aufgelöst"
+ cc_colony_democracy_unhappy_desc:0 "Diese Kolonie ist entsetzt, dass ihr System der direkten Demokratie von der jetztigen Regime aufgelöst wurde."
 
-cc_minor_protests_egalitarian:0 "$cc_minor_protests_militarist$"
-cc_minor_protests_egalitarian_desc:0 "This Planet is experiencing minor protests following the banning of its system of direct democracy."
-cc_major_protests_egalitarian:0 "$cc_major_protests_militarist$"
-cc_major_protests_egalitarian_desc:0 "This Planet is experiencing major protests following the banning of its system of direct democracy."
-cc_underground_egalitarian_movement_1:0 "Underground Pro-Democracy Movement"
-cc_underground_egalitarian_movement_1_desc:0 "An underground movement centred around the re-establishment of direct democracy is active on this planet. It seeks to spread ideas that go against the ideals of our empire."
-cc_underground_egalitarian_movement_2:0 "Underground Pro-Democracy Movement"
-cc_underground_egalitarian_movement_2_desc:0 "An underground movement seeking the re-establishment of direct democracy and ultimately full independence from our empire is active on this planet."
-
+ cc_minor_protests_egalitarian:0 "$cc_minor_protests_militarist$"
+ cc_minor_protests_egalitarian_desc:0 "Nach der Auflösung der planetaren direkten Demokratie gibt es auf diesem Planeten kleine Proteste."
+ cc_major_protests_egalitarian:0 "$cc_major_protests_militarist$"
+ cc_major_protests_egalitarian_desc:0 "Nach der Auflösung der planetaren direkten Demokratie gibt es auf diesem Planeten große Proteste."
+ cc_underground_egalitarian_movement_1:0 "Pro-Demokratische Untergrundbewegung"
+ cc_underground_egalitarian_movement_1_desc:0 "Eine Untergrundbewegung, die ein System der direkten Demokratie etablieren will, ist auf diesem Planeten aktiv. Es versucht, Ideen und Bräuche, die gegen die Idealen unseres Staates sind, zu verbreiten."
+ cc_underground_egalitarian_movement_2:0 "Pro-Demokratische Widerstandsbewegung"
+ cc_underground_egalitarian_movement_2_desc:0 "Eine Untergrundbewegung, die ein System der direkten Demokratie etablieren will, ist auf diesem Planeten aktiv. Ihr endgültiges Ziel ist es, Frieden durch Unabhängigkeit von dem Staat zu gewinnen."
 
 
 #Generic
