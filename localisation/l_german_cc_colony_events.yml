@@ -767,16 +767,16 @@ cc_colony_events.9.desc.neg:0 "The citizens on [root.GetName] have shown a worry
  cc_colony_events.9.C.tooltip:0 "Die Reaktion der Bevölkerung zu dieser Handlungsoption ist nicht vorhersehbar."
 
  cc_colony_events.91.name:0 "$cc_colony_events.21.name$"
- cc_colony_events.91.desc:0 "Nachdem wir ihren direkten Demokratie beendet haben, gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die höhere Autorität der [root.owner.GetName]. Es scheint, als wäre ihre "Demokratie" doch nicht so geschätzt wie wir dachten!"
+ cc_colony_events.91.desc:0 "Nachdem wir ihren direkten Demokratie aufgelöst haben, gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die höhere Autorität der [root.owner.GetName]. Es scheint, als wäre ihre "Demokratie" doch nicht so geschätzt wie wir dachten!"
 
  cc_colony_events.92.name:0 "$cc_colony_events.22.name$"
-cc_colony_events.92.desc:0 "The imposed cancellation of [root.GetName]'s experiment into direct democracy has sparked major protests, with demands for its restitution widespread. Elements of the protests have turned violent, and our local authorities are having difficulties keeping the populace under control. They have requested guidance from the executive as to how to deal with the situation."
+ cc_colony_events.92.desc:0 "Die Auflösen von [root.GetName]s Experiment der direkten Demokratie hat große Proteste verursacht, und viele fordern, dass es rückgängig gemacht wird. Teilweise ist sogar Gewalt ausgebrochen, und unsere lokalen Beamten haben Schwierigkeiten, die Bevölkerung unter Kontrolle zu behalten. Sie haben uns nach Beratung gefragt, wie sie die Situation bewältigen sollen."
  cc_colony_events.92.A:0 "Die Proteste niederdrücken!"
  cc_colony_events.92.B:0 "Die Proteste werden vorübergehen." 
  cc_colony_events.92.C:0 "Direkte Demokratie auf [root.GetName] doch zulassen."
 
  cc_colony_events.921.name:0 "$cc_colony_events.233.name$"
-cc_colony_events.921.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have succeeded. The ringleaders have all been arrested or killed, as have any of their followers foolish enough to try and resist us. Their scourge has been eliminated from our colony. However, it will take time to win over the populace's hearts and minds."
+ cc_colony_events.921.desc:0 "Wir haben die pro-demokratische Proteste auf [root.GetName] erfolgreich niedergedrückt. Deren Anführer wurden aufgespürt und hingerichtet. Sie werden unsere Kolonie nicht mehr mit ihrer Aufrührerei plagen. Dennoch wird es Zeit brauchen, bis wir das Vertrauen der Bevölkerung gewinnen."
 
  cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
 cc_colony_events.922.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have failed. The ringleaders caught wind of the plan and went into hiding, along with many of their trusted followers. They have set up an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
@@ -875,11 +875,11 @@ cc_cleanup_events.18.desc:0 "The old owners of [root.GetName] had offended the m
 
 
 
-cc_cleanup_events.19.name:0 "Military Academy on [root.GetName]"
-cc_cleanup_events.19.desc:0 "The old owners of [root.GetName] had built a major military academy on [root.GetName]. It is the centre of the planet's influential militarist network. Should we spare the building from destruction?"
+ cc_cleanup_events.19.name:0 "Militärakademie auf [root.GetName]"
+ cc_cleanup_events.19.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Militärakademie auf [root.GetName] errichtet. Es steht im Zentrum der Netzwerk von Militaristen, die auf dem Planeten einflussreich sind. Sollten wir es von der Vernichtung verschonen?"
 
-cc_cleanup_events.20.name:0 "The Legate of [root.GetName]"
-cc_cleanup_events.20.desc:0 "A prominent former naval officer currently holds the title of 'Legate of [root.GetName]', and is well-regarded by the populace. They are the centrepoint of the planet's influential network of intellectuals. Should they be allowed to remain in their position?"
+ cc_cleanup_events.20.name:0 "Der Legat von [root.GetName]"
+ cc_cleanup_events.20.desc:0 "Ein pensionierter hochdekorierter Marineoffizier, der 'Legat von [root.GetName]', ist von der Bevölkerung gut angesehen. Sie sind das Zentrum der Netzwerk von Militaristen, die auf dem Planeten einflussreich sind. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
 
 cc_cleanup_events.21.name:0 "Underground Militarist Movement on [root.GetName]"
 cc_cleanup_events.21.desc:0 "An underground militarist movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that a major military academy be built.\n\nShould we build this military academy?"
@@ -890,9 +890,9 @@ cc_cleanup_events.22.desc:0 "The old owners of [root.GetName] had offended the m
 cc_cleanup_events.23.name:0 "Military Academy opens on [root.GetName]"
 cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people to who service this great nation."
 
-cc_cleanup_events.24.name:0 "Military Academy on [root.GetName]"
-cc_cleanup_events.24.desc:0 "The old owners of [root.GetName] had been building a major military academy on [root.GetName]. It is the centre of the planet's influential militarist network. Should we continue building the academy?"
-cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.24.name:0 "Militärakademie auf [root.GetName]"
+ cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt der Netzwerk von Militaristen, die auf dem Planeten einflussreich sind, werden. Sollten wir die Akademie weiterbauen?"
+ cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 
