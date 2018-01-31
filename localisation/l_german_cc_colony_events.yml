@@ -758,7 +758,7 @@
 
  
 #Egalitarian
- cc_colony_events.9.name:0 "Direkte Democratie auf [root.GetName]"
+ cc_colony_events.9.name:0 "Direkte Demokratie auf [root.GetName]"
 cc_colony_events.9.desc.pos:0 "The citizens on [root.GetName] have taken the initiative of setting up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. This will surely enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens."
 cc_colony_events.9.desc.neut:0 "The citizens on [root.GetName] have taken the initiative of setting up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. They claim that this will enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens. However, many in the [root.owner.GetSpeciesAdj] government are uncomfortable with this experiment, as they feel that it is of an un-[root.owner.GetSpeciesAdj] nature.\n\nShould it be allowed to continue?"
 cc_colony_events.9.desc.neg:0 "The citizens on [root.GetName] have shown a worrying degree of independent thought. They have set up a system of direct democracy, which will take care of the day-to-day running of the colony. In their system, most questions of policy will be voted on by the entire population (which, in this day and age, can vote with little more than a thought); only basic tasks requiring coordination are carried out by officials, who are elected by lot from among the citizenry. They claim that this will enable them to have better cohesion in their budding community and make the right decisions for how to please the citizens. However, many in the [root.owner.GetSpeciesAdj] government feel that this is a dangerous experiment that goes directly contrary to the [root.owner.GetName]'s values and could even undermine its stability.\n\nWhat should we do about it?"
@@ -767,10 +767,10 @@ cc_colony_events.9.desc.neg:0 "The citizens on [root.GetName] have shown a worry
  cc_colony_events.9.C.tooltip:0 "Die Reaktion der Bevölkerung zu dieser Handlungsoption ist nicht vorhersehbar."
 
  cc_colony_events.91.name:0 "$cc_colony_events.21.name$"
- cc_colony_events.91.desc:0 "Nachdem wir ihren direkten Demokratie aufgelöst haben, gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die höhere Autorität der [root.owner.GetName]. Es scheint, als wäre ihre "Demokratie" doch nicht so geschätzt wie wir dachten!"
+ cc_colony_events.91.desc:0 "Nachdem wir ihren direkte Demokratie aufgelöst haben, gab es auf [root.GetName] kleine Proteste, sie haben sich aber nicht verbreitet, und die Mehrheit der Bevölkerung akzeptiert die höhere Autorität der [root.owner.GetName]. Es scheint, als wäre ihre "Demokratie" doch nicht so geschätzt wie wir dachten!"
 
  cc_colony_events.92.name:0 "$cc_colony_events.22.name$"
- cc_colony_events.92.desc:0 "Die Auflösen von [root.GetName]s Experiment der direkten Demokratie hat große Proteste verursacht, und viele fordern, dass es rückgängig gemacht wird. Teilweise ist sogar Gewalt ausgebrochen, und unsere lokalen Beamten haben Schwierigkeiten, die Bevölkerung unter Kontrolle zu behalten. Sie haben uns nach Beratung gefragt, wie sie die Situation bewältigen sollen."
+ cc_colony_events.92.desc:0 "Die Auflösung der direkten Demokratie auf [root.GetName] hat große Proteste verursacht, und viele fordern, dass es rückgängig gemacht wird. Teilweise ist sogar Gewalt ausgebrochen, und unsere lokalen Beamten haben Schwierigkeiten, die Bevölkerung unter Kontrolle zu behalten. Sie haben uns nach Beratung gefragt, wie sie die Situation bewältigen sollen."
  cc_colony_events.92.A:0 "Die Proteste niederdrücken!"
  cc_colony_events.92.B:0 "Die Proteste werden vorübergehen." 
  cc_colony_events.92.C:0 "Direkte Demokratie auf [root.GetName] doch zulassen."
@@ -779,20 +779,19 @@ cc_colony_events.9.desc.neg:0 "The citizens on [root.GetName] have shown a worry
  cc_colony_events.921.desc:0 "Wir haben die pro-demokratische Proteste auf [root.GetName] erfolgreich niedergedrückt. Deren Anführer wurden aufgespürt und hingerichtet. Sie werden unsere Kolonie nicht mehr mit ihrer Aufrührerei plagen. Dennoch wird es Zeit brauchen, bis wir das Vertrauen der Bevölkerung gewinnen."
 
  cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
-cc_colony_events.922.desc:0 "Attempts to crush the pro-democratic protests on [root.GetName] have failed. The ringleaders caught wind of the plan and went into hiding, along with many of their trusted followers. They have set up an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
-
+ cc_colony_events.922.desc:0 "Unsere Versuche, die pro-demokratische Proteste auf [root.GetName] niederzudrücken, sind gescheitert. Die Anführer der Proteste wurden von unserem Plan vorhergewarnt, und verstecken sich mit viele ihrer treuesten Anhänger vor unseren Behörden. Sie haben eine Untergrundbewegung gegründet, durch die sie anscheinend die Unabhängigkeit [root.GetName]s von der [Root.Owner.GetName] gewinnen will. Wir können langfristigen Tumult erwarten."
+ 
  cc_colony_events.923.name:0 "$cc_colony_events.221.name$"
-cc_colony_events.923.desc:0 "Some years have passed, and protests at the cessation of direct democracy on [root.GetName] have died down, but the memory of it hasn't. [root.GetName]'s period of democratic self-governance has gone down in [root.GetName]'s folklore as a golden, innocent age, and its loss is a cause for much bitterness. It is unlikely that the inhabitants will ever come to fully trust the parent state."
-
+ cc_colony_events.923.desc:0 "Einige Jahre sind vergangen, und Proteste gegen die Auflösung der direkten Demokratie auf [root.GetName] haben nachgelassen. Dennoch bleibt das Gedächtnis an der demokratischen Selbstverwaltung, das zunehmend als eine goldene Zeit der Unschuld betrachtet wird. Deren Auflösung verursacht somit viel Verbitterung. Es ist unwahrscheinlich, dass die Bevölkerung jemals ihrem Vaterland wirklich vertrauen wird."
+ 
  cc_colony_events.924.name:0 "Untergrundbewegung auf [Root.GetName]"
-cc_colony_events.924.desc:0 "The expected end of protests on [root.GetName] did not materialise. They continued to cause issues until authorities were forced to disperse protesters. Since then, the movement has gone underground, seeking to win over the population and push for a restoration of democracy from the shadows."
-
+ cc_colony_events.924.desc:0 "Die vorausgesehene Ende der Proteste auf [root.GetName] hat sich nie ereignet. Sie haben so lange Probleme bereitet, bis unsere Behörden gezwungen wurden, die Demonstranten durch Gewalt auseinanderzutreiben. Seitdem ist die pro-Demokratie Bewegung im Untergrund getaucht. Es versucht dennoch, uns zu zwingen, die direkte Demokratie wiedereinzuführen. Wir können langfristigen Tumult erwarten."
 
 
  cc_colony_direct_democracy:0 "Direkte Demokratie"
  cc_colony_direct_democracy_desc:0 "Diese Kolonie ist von einer planetweiten direkten Demokratie regiert."
  cc_colony_democracy_unhappy:0 "Direkte Demokratie aufgelöst"
- cc_colony_democracy_unhappy_desc:0 "Diese Kolonie ist entsetzt, dass ihr System der direkten Demokratie von der jetztigen Regime aufgelöst wurde."
+ cc_colony_democracy_unhappy_desc:0 "Diese Kolonie ist entsetzt, dass ihr System der direkten Demokratie von der jetzigen Regime aufgelöst wurde."
 
  cc_minor_protests_egalitarian:0 "$cc_minor_protests_militarist$"
  cc_minor_protests_egalitarian_desc:0 "Nach der Auflösung der planetaren direkten Demokratie gibt es auf diesem Planeten kleine Proteste."
@@ -887,8 +886,8 @@ cc_cleanup_events.21.desc:0 "An underground militarist movement had been making 
 cc_cleanup_events.22.name:0 "The Memory of a famous Naval Officer on [root.GetName]"
 cc_cleanup_events.22.desc:0 "The old owners of [root.GetName] had offended the militarist population on [root.GetName] by not building a military academy in honour of a prominent naval officer who had made the planet their home. Should we build one ourselves?"
 
-cc_cleanup_events.23.name:0 "Military Academy opens on [root.GetName]"
-cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people to who service this great nation."
+ cc_cleanup_events.23.name:0 "Militärakademie auf [root.GetName] eröffnet" 
+ cc_cleanup_events.23.desc:0 "Die Militärakademie auf [root.GetName] ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
  cc_cleanup_events.24.name:0 "Militärakademie auf [root.GetName]"
  cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt der Netzwerk von Militaristen, die auf dem Planeten einflussreich sind, werden. Sollten wir die Akademie weiterbauen?"
