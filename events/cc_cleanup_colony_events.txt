@@ -26,6 +26,16 @@ planet_event = {
 #	}
 	
 	immediate = {
+		if = {
+			limit = {
+				has_planet_flag = cc_conquered_purge
+				NOT = { any_owned_pop = { is_being_purged = yes } }
+			}
+			remove_planet_flag = cc_conquered_purge
+		}
+			
+			
+			
 		set_timed_planet_flag = { #this is because someone said the same event happened 3 times and I can only see why it would happen twice...
 			flag = cc_just_conquered
 			days = 3
@@ -40,24 +50,18 @@ planet_event = {
 		
 		if = {
 			limit = {
-				from = { has_civic = civic_machine_assimilator }
+				from = {
+					OR = {
+						has_civic = civic_machine_servitor
+						has_civic = civic_machine_assimilator
+					}
+				}
 			}
 			set_timed_planet_flag = {
 				flag = cc_conquered_purge
-				years = 1
+				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9991 days = 30 }
-		}
-		
-		if = {
-			limit = {
-				from = { has_civic = civic_machine_servitor }
-			}
-			set_timed_planet_flag = {
-				flag = cc_conquered_purge
-				years = 1
-			}
-			planet_event = { id = cc_cleanup_events.9992 days = 2160 random = 720 }
+			planet_event = { id = cc_cleanup_events.9992 days = 2400 random = 720 }
 		}
 		
 		if = {
@@ -2986,24 +2990,6 @@ planet_event = {
 }
 
 
-#Assimilator planet loop (to remove the modifier once assimilation is complete)
-planet_event = {
-	id = cc_cleanup_events.9991
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = { owner = { has_civic = civic_machine_assimilator } }
-	
-	immediate = {
-		if = {
-			limit = { NOT = { any_owned_pop = { has_a_happiness_gauge = yes } } }
-			remove_all_political_colony_modifiers = yes
-			
-			else = { planet_event = { id = cc_cleanup_events.9991 days = 30 } }
-		}
-	}
-}
-
 #I could put some flavour text in here, but can't be bothered right now
 planet_event = {
 	id = cc_cleanup_events.9992
@@ -3074,8 +3060,9 @@ pop_event = {
 		from = {
 			set_timed_planet_flag = {
 				flag = cc_conquered_purge
-				years = 1
+				years = 25
 			}
+			planet_event = { id = cc_cleanup_events.9992 days = 2400 random = 720 }
 		}
 	}
 }
