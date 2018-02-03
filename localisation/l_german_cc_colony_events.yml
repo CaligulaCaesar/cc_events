@@ -263,7 +263,7 @@
  cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
 
  cc_colony_events.451.name:0 "Kulturelle Expo auf [root.GetName] eingeweiht"
- cc_colony_events.451.desc:0 "Die "Kulturelle Expo zu [cc_colony_leader.GetName]s Ehre ist ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. [cc_colony_leader.GetName]s Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
+ cc_colony_events.451.desc:0 "Die "Kulturelle Expo" zu [cc_colony_leader.GetName]s Ehre ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. [cc_colony_leader.GetName]s Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
 
  cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophile_institute$§! hinzu:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
@@ -815,11 +815,11 @@
  cc_cleanup_events.2.desc:0 "Auf [root.GetName] steht ein angesehener Guru im Zentrum des Netzwerks von Spiritualisten, die auf dem Planeten einflussreich ist. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
 
  cc_cleanup_events.3.name:0 "Mausoleum zur Ehre eines Gurus auf [root.GetName]"
- cc_cleanup_events.3.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, ein Mausoleum zur Ehre eines angesehenen Gurus auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Spiritualistenwerden, das auf dem Planeten einflussreich ist. Sollten wir das Mausoleum weiterbauen?"
+ cc_cleanup_events.3.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, ein Mausoleum zur Ehre eines angesehenen Gurus auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Spiritualisten werden, das auf dem Planeten einflussreich ist. Sollten wir das Mausoleum weiterbauen?"
  cc_cleanup_events.3.tooltip:0 "Nach der Fertigstellung wird das Mausoleum die Einigkeitsleistung, Zufriedenheit und spiritualistische Regierungsgesinnung des Planeten erhöhen."
 
  cc_cleanup_events.4.name:0 "Mausoleum zur Ehre eines Gurus auf [root.GetName]"
- cc_cleanup_events.4.desc:0 "Die alten Herrscher von [root.GetName] hatten ein Mausoleum zur Ehre eines angesehenen Gurus auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Spiritualisten, die auf dem Planeten einflussreich ist. Sollten wir es von der Vernichtung verschonen?"
+ cc_cleanup_events.4.desc:0 "Die alten Herrscher von [root.GetName] hatten ein Mausoleum zur Ehre eines angesehenen Gurus auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Spiritualisten, die auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"
 
  cc_cleanup_events.5.name:0 "Das Gedächtnis an einem Guru auf [root.GetName]"
  cc_cleanup_events.5.desc:0 "Die alten Herrscher von [root.GetName] hatten die spiritualistische Bevölkerung verärgert, indem sie sich verweigert haben, ein Mausoleum zur Ehre eines angesehenen Gurus, der auf dem Planeten zuhause war, zu errichten. Sollten wir eins errichten?"
@@ -848,7 +848,7 @@
  cc_cleanup_events.11.tooltip:0 "\nNach der Fertigstellung wird die Universität den Modifikator §Y$cc_university$§! hinzufügen:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
  cc_cleanup_events.12.name:0 "Universität auf [root.GetName]"
- cc_cleanup_events.12.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Universität auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist. Sollten wir es von der Vernichtung verschonen?"
+ cc_cleanup_events.12.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Universität auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"
 
  cc_cleanup_events.13.name:0 "Angesehener Intellektuelle auf [root.GetName]"
  cc_cleanup_events.13.desc:0 "Auf [root.GetName] steht ein angesehener Intellektuelle im Zentrum des Netzwerks von Materialisten, die auf dem Planeten einflussreich ist. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
@@ -878,7 +878,7 @@
 
 
  cc_cleanup_events.19.name:0 "Militärakademie auf [root.GetName]"
- cc_cleanup_events.19.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Militärakademie auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Militaristen, die auf dem Planeten einflussreich ist. Sollten wir es von der Vernichtung verschonen?"
+ cc_cleanup_events.19.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Militärakademie auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Militaristen, die auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"
 
  cc_cleanup_events.20.name:0 "Der Legat von [root.GetName]"
  cc_cleanup_events.20.desc:0 "Ein pensionierter hochdekorierter Marineoffizier, der 'Legat von [root.GetName]', ist von der Bevölkerung gut angesehen. Sie sind das Zentrum des Netzwerks von Militaristen, die auf dem Planeten einflussreich ist. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
@@ -893,69 +893,69 @@
  cc_cleanup_events.23.desc:0 "Die Militärakademie auf [root.GetName] ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
  cc_cleanup_events.24.name:0 "Militärakademie auf [root.GetName]"
- cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Militaristenwerden, das auf dem Planeten einflussreich ist. Sollten wir die Akademie weiterbauen?"
+ cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Militaristen werden, das auf dem Planeten einflussreich ist. Sollten wir die Akademie weiterbauen?"
  cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 
-cc_cleanup_events.25.name:0 "Prominent Pacifist Activist on [root.GetName]"
-cc_cleanup_events.25.desc:0 "A prominent pacifist activist is active on [root.GetName], and is the centrepoint of the planet's influential pacifistic 'Ghandeis' network. Should they be allowed to remain in their position?"
+ cc_cleanup_events.25.name:0 "Angesehener Pazifistischer Aktivist auf [root.GetName]"
+ cc_cleanup_events.25.desc:0 "Auf [root.GetName] steht ein angesehener pazifistischer Aktivist im Zentrum des Netzwerks von Pazifisten, die auf dem Planeten einflussreich ist. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
 
-cc_cleanup_events.26.name:0 "Monument to a famous Activist on [root.GetName]"
-cc_cleanup_events.26.desc:0 "The old owners of [root.GetName] had been building a monument in honour of a prominent pacifist activist who was native to the planet. If completed, it will be the centre of the planet's influential pacifistic 'Ghandeis' network. Should we continue building the monument?"
-cc_cleanup_events.26.tooltip:0 "Once completed, the Monument will increase the planet's Unity Output, Happiness and Pacifist Attraction."
+ cc_cleanup_events.26.name:0 "Monument zur Ehre eines berühmten Aktivisten auf [root.GetName]"
+ cc_cleanup_events.26.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, ein Monument zur Ehre eines angesehenen pazifistischen Aktivisten auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Pazifisten werden, das auf dem Planeten einflussreich ist. Sollten wir das Monument weiterbauen?"
+ cc_cleanup_events.26.tooltip:0 "Nach der Fertigstellung wird das Mausoleum die Einigkeitsleistung, Zufriedenheit und pazifistische Regierungsgesinnung des Planeten erhöhen."
 
-cc_cleanup_events.27.name:0 "Monument to a famous Activist on [root.GetName]"
-cc_cleanup_events.27.desc:0 "The old owners of [root.GetName] had set up a monument in honour of a prominent pacifist activist who was native to the planet. It is the centre of the planet's influential pacifistic 'Ghandeis' network. Should we spare the building from destruction?"
+ cc_cleanup_events.27.name:0 "Monument zur Ehre eines berühmten Aktivisten auf [root.GetName]"
+ cc_cleanup_events.27.desc:0 "Die alten Herrscher von [root.GetName] hatten ein Monument zur Ehre eines angesehenen pazifistischen Aktivisten auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Pazifisten, die auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"
 
-cc_cleanup_events.28.name:0 "The Memory of a famous Activist on [root.GetName]"
-cc_cleanup_events.28.desc:0 "The old owners of [root.GetName] had offended the pacifist population on [root.GetName] by not building a monument to a prominent activist who was native to the planet. Should we build one ourselves?"
+ cc_cleanup_events.28.name:0 "Das Gedächtnis an einem berühmten Aktivisten auf [root.GetName]"
+ cc_cleanup_events.28.desc:0 "Die alten Herrscher von [root.GetName] hatten die pazifistische Bevölkerung verärgert, indem sie sich verweigert haben, ein Monument zur Ehre eines angesehenen Aktivisten, der auf dem Planeten zuhause war, zu errichten. Sollten wir eins errichten?"
+ 
+ cc_cleanup_events.29.name:0 "Monument auf [root.GetName] fertiggestellt"
+ cc_cleanup_events.29.desc:0 "Das Monument zur Ehre des berühmten Aktivisten von [root.GetName] ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an seine Lehren und Leben erinnern können."
 
-cc_cleanup_events.29.name:0 "Monument on [root.GetName] complete"
-cc_cleanup_events.29.desc:0 "The monument in honour of [root.GetName]'s famous pacifist activist has been completed. The populace on [root.GetName] now have a place to remember their leader's teachings and achievements."
+ cc_cleanup_events.30.name:0 "Pazifistische Untergrundbewegung auf [root.GetName]"
+ cc_cleanup_events.30.desc:0 "Eine pazifistische Untergrundbewegung hat die alten Herrscher von [Root.GetName] Probleme bereitet. Ihre Vorsitzenden haben mit uns getroffen, und sich bereit erklärt, die Waffen niederzulegen, unter der Bedingung, dass wir die Pazifisten auf dem Planeten bestimmte Sonderrechte geben.\n\nSollen ihnen diese Rechte geben?"
 
-cc_cleanup_events.30.name:0 "Underground Pacifist Movement on [root.GetName]"
-cc_cleanup_events.30.desc:0 "An underground pacifist movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that certain privileges be given to the pacifistic population on the planet.\n\nShould we give them those rights?"
-
-cc_cleanup_events.31.name:0 "[root.GetName] is a Pacifist Protectorate"
-cc_cleanup_events.31.desc:0 "The pacifist populace on [root.GetName] was given a certain level of privileges under the old regime. Should these be continued?"
+ cc_cleanup_events.31.name:0 "[root.GetName] is ein Pazifistisches Protektorat"
+ cc_cleanup_events.31.desc:0 "Die pazifistische Bevölkerung auf [root.GetName] wurde von der alten Regime einige Sonderrechte gegeben. Sollten wir diese bestätigen?"
 
 
 
-cc_cleanup_events.32.name:0 "Prominent Xenophobic Politician on [root.GetName] Commits Suicide"
-cc_cleanup_events.32.desc:0 "A prominent xenophobic speaker was active on [root.GetName] before the conquest. They had been known as the planet's 'Hegemon' and had claimed that they would protect the planet from xeno influences. Now, with their dreams in tatters, they have ended their life rather than face further humiliation."
+ cc_cleanup_events.32.name:0 "Angesehener xenophobischer Politiker auf [root.GetName] begeht Selbstmord"
+ cc_cleanup_events.32.desc:0 "Ein angesehener xenophobischer Politiker war auf [root.GetName] vor dessen Eroberung aktiv. Sie waren als 'Hegemon' des Planeten bekannt, und behaupteten, dass sie es von xenoistische Einflüsse beschützen würden. Jetzt, mit ihrem Traum in Trümmern, haben sie Selbstmord begangen, statt weitere Beschämungen zu erleben müssen."
  cc_cleanup_events.32.option:0 "Und tschüss!"
 
-cc_cleanup_events.33.name:0 "Hegemon's Institute on [root.GetName]"
-cc_cleanup_events.33.desc:0 "The old owners of [root.GetName] had been building an institute in honour of a prominent politician who was native to the planet, and had made their name through virulently xenophobic rhetoric. If completed, it would have become a centre through which nationalists could have operate. It is ironic that they would build such a monument in the hour of their downfall. Our planetary authorities have cut short the construction of the institute."
+ cc_cleanup_events.33.name:0 "Reinheitsinstitut auf [root.GetName]"
+ cc_cleanup_events.33.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, ein Institut zur Ehre eines angesehenen einheimischen Politikers, der für seine durchaus xenophobischen Ansichten und Reden bekannt war, auf [root.GetName] zu errichten. Falls es fertiggestellt wird, würde es zur Mittelpunkt eines Netzwerks von Nationalisten auf dem Planeten werden. Es ist ironisch, dass sie solch ein Monument bauen würden, genau im Moment ihres Untergangs. Unsere neuen Behörden haben die Konstruktion des Instituts abgebrochen."
 
-cc_cleanup_events.34.name:0 "Hegemon's Institute on [root.GetName]"
-cc_cleanup_events.34.desc:0 "The old owners of [root.GetName] had set up an institute in honour of a prominent politician who was native to the planet. Although the politician's views were extremely xenophobic, representatives of the conquered populace have begged us not to destroy the building, which is treasured by the planet's inhabitants. Should we spare the building from destruction?"
-cc_cleanup_events.34.A:0 "Let them keep their heroes."
-
-
-cc_cleanup_events.35.name:0 "Underground Xenophobe Movement on [root.GetName]"
-cc_cleanup_events.35.desc:0 "An underground xenophobe movement had been making trouble for the previous owners of [Root.GetName]. Now that we have conquered the planet, they feel vindicated in their earlier actions, and are intent on redoubling their effort to protect the planet from xeno influences."
+ cc_cleanup_events.34.name:0 "Hegemoneninstitut auf [root.GetName]"
+ cc_cleanup_events.34.desc:0 "Die alten Herrscher von [root.GetName] hatten ein Institut zur Ehre eines angesehenen Politikers auf [root.GetName] errichtet. Obwohl die Ansichten des Politikers durchaus xenophobisch waren, haben Stellvertreter der eroberten Bevölkerung uns angefleht, das Gebäude nicht zu zerstören, da es von ihnen sehr geschätzt wird. Sollten wir es von Vernichtung verschonen?"
+ cc_cleanup_events.34.A:0 "Lass sie ihre Helden behalten."
 
 
-cc_cleanup_events.36.name:0 "Prominent Xenoist Activist on [root.GetName]"
-cc_cleanup_events.36.desc:0 "A prominent xenoist activist is active on [root.GetName], and is the centrepoint of the planet's influential movement for peace and cooperation between species. Should they be allowed to remain in their position?"
+ cc_cleanup_events.35.name:0 "Xenophobische Untergrundbewegung auf [root.GetName]"
+ cc_cleanup_events.35.desc:0 "Eine xenophobische Untergrundbewegung hat die alten Herrscher von [Root.GetName] Probleme bereitet. Jetzt da wir den Planeten erobert haben, fühlen sie sich bestätigt in ihren früheren Aktionen, und haben vor, ihre Bemühungen zu verstärken, den Planeten von xenoistische Einflüsse zu beschützen."
 
-cc_cleanup_events.37.name:0 "Cultural Exchange on [root.GetName]"
-cc_cleanup_events.37.desc:0 "The old owners of [root.GetName] had been preparing a Cultural Exchange in honour of a prominent xenoist activist who was native to the planet. If completed, it will be contribute to establishing the planet's reputation as a multispecies haven. Should we continue to support it?"
+
+ cc_cleanup_events.36.name:0 "Angesehener xenoistischer Aktivist auf [root.GetName]"
+ cc_cleanup_events.36.desc:0 "Auf [root.GetName] steht ein angesehener Aktivist im Zentrum des Netzwerks von Pazifisten, die auf dem Planeten für Frieden und Wohlwollen zwischen Spezies sorgt. Sollten sie erlaubt sein, in ihrer Position zu bleiben?"
+
+ cc_cleanup_events.37.name:0 "Kulturelle Expo auf [root.GetName]"
+ cc_cleanup_events.37.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine kulturelle Expo zur Ehre eines angesehenen Aktivisten auf [root.GetName] zu erstellen. Falls fertiggestellt, wird es dem Planeten den Ruf geben, ein freier Hafen für alle Spezies zu sein. Sollen wir es weiterhin unterstützen?"
  cc_cleanup_events.37.tooltip:0 "Nach der Fertigstellung wird die kulturelle Expo den Modifikator §Y$cc_xenophile_institute$§! hinzufügen:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
-cc_cleanup_events.38.name:0 "Cultural Exchange on [root.GetName]"
-cc_cleanup_events.38.desc:0 "The old owners of [root.GetName] had set up a Cultural Exchange in honour of a prominent xenoist activist who was native to the planet. It serves to secure the activist's legacy and establish the planet's reputation as a multispecies haven. Should we allow it to continue to exist?"
+ cc_cleanup_events.38.name:0 "Kulturelle Expo auf [root.GetName]"
+ cc_cleanup_events.38.desc:0 "Die alten Herrscher von [root.GetName] hatten eine kulturelle Expo zur Ehre eines angesehenen Aktivisten auf [root.GetName] unterstützt. Es stellt sicher, dass das Gedächtnis an ihm erhalten bleibt, und gibt dem Planeten den Ruf, ein freier Hafen für alle Spezies zu sein. Soll es weiter existieren dürfen?"
+ 
+ cc_cleanup_events.39.name:0 "Das Gedächtnis an einem berühmten Aktivisten auf [root.GetName]"
+ cc_cleanup_events.39.desc:0 "Die alten Herrscher von [root.GetName] hatten die xenoistische Bevölkerung verärgert, indem sie sich verweigert haben, eine kulturelle Expo zur Ehre eines angesehenen Aktivisten, der auf dem Planeten zuhause war, zu etablieren. Sollten wir eins etablieren?"
 
-cc_cleanup_events.39.name:0 "The Memory of a famous Activist on [root.GetName]"
-cc_cleanup_events.39.desc:0 "The old owners of [root.GetName] had offended the xenophile population on [root.GetName] by not establishing a Cultural Exchange, as a recently-deceased prominent activist who was native to the planet had wanted to. Should we establish one ourselves?"
+ cc_cleanup_events.40.name:0 "Xenoistische Untergrundbewegung auf [root.GetName]"
+ cc_cleanup_events.40.desc:0 "Eine xenoistische Untergrundbewegung hat die alten Herrscher von [Root.GetName] Probleme bereitet. Ihre Vorsitzenden haben mit uns getroffen, und sich bereit erklärt, die Waffen niederzulegen, unter der Bedingung, dass wir eine kulturelle Expo auf dem Planeten unterstützen, durch die sie sicherstellen wollen, dass Frieden und Wohlwollen zwischen Spezies dauerhaft erhalten bleibt.\n\nSollen ihnen diese Rechte geben?"
 
-cc_cleanup_events.40.name:0 "Underground Xenophile Movement on [root.GetName]"
-cc_cleanup_events.40.desc:0 "An underground xenophile movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that a Cultural Exchange be established on the planet to cement it as a haven of goodwill and peace between species.\n\nShould we establish the Cultural Exchange?"
-
-cc_cleanup_events.41.name:0 "Cultural Exchange on [root.GetName] complete"
-cc_cleanup_events.41.desc:0 "The Cultural Exchange in honour of [root.GetName]'s famous xenoist activist has been completed. The populace on [root.GetName] now have a place to remember their leader's teachings and achievements, and are confident that their planet's peace and goodwill between species will be maintained."
+ cc_cleanup_events.41.name:0 "Kulturelle Expo auf [root.GetName] eingeweiht"
+ cc_cleanup_events.41.desc:0 "Die "Kulturelle Expo" zur Ehre des berühmten Aktivisten von [root.GetName] ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an seine Lehren und Leben erinnern können, und sind sich sicher, dass Frieden und Wohlwollen zwischen Spezies dauerhaft erhalten bleiben wird."
 
 
 #General Modifiers
