@@ -42,6 +42,15 @@ planet_event = {
 					owner = { NOT = { has_faction = imperialist } }
 				}
 				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_militarist_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_militarist_story }
+				}
+				
 				planet_event = { id = cc_colony_events.2 }
 			}
 			10 = {
@@ -59,6 +68,15 @@ planet_event = {
 				modifier = {
 					factor = 0.5
 					owner = { NOT = { has_faction = prosperity } }
+				}
+				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_pacifist_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_pacifist_story }
 				}
 				
 				planet_event = { id = cc_colony_events.3 }
@@ -104,6 +122,15 @@ planet_event = {
 					owner = { NOT = { has_faction = xenoist } }
 				}
 				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_xenophile_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_xenophile_story }
+				}
+				
 				planet_event = { id = cc_colony_events.4 }
 			}
 			10 = {
@@ -131,9 +158,25 @@ planet_event = {
 					factor = 0
 					NOT = { any_owned_pop = { is_same_species = root.owner } }	#this would break it badly
 				}
-				modifier = {
+				modifier = {  #makes up for that
 					factor = 1.5
-					NOT = { any_owned_pop = { NOT = { is_same_species = root.owner } } }  #makes up for that
+					NOT = {
+						any_owned_pop = {
+							NOT = {
+								is_same_species = root.owner
+								has_a_happiness_gauge = yes
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_xenophobe_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_xenophobe_story }
 				}
 				
 				planet_event = { id = cc_colony_events.5 }
@@ -155,6 +198,15 @@ planet_event = {
 					owner = { NOT = { has_faction = traditionalist } }
 				}
 				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_spiritualist_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_spiritualist_story }
+				}
+				
 				planet_event = { id = cc_colony_events.6 }
 			}
 			10 = {
@@ -174,6 +226,15 @@ planet_event = {
 					owner = { NOT = { has_faction = technologist } }
 				}
 				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_materialist_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_materialist_story }
+				}
+				
 				planet_event = { id = cc_colony_events.7 }
 			}
 			10 = {
@@ -191,6 +252,15 @@ planet_event = {
 				modifier = {
 					factor = 0.5
 					owner = { NOT = { has_faction = totalitarian } }
+				}
+				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_authoritarian_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_authoritarian_story }
 				}
 				
 				planet_event = { id = cc_colony_events.8 }
@@ -214,6 +284,15 @@ planet_event = {
 				modifier = {
 					factor = 0.5
 					owner = { NOT = { has_faction = progressive } }
+				}
+				
+				modifier = {
+					factor = 0.75
+					owner = { has_country_flag = cc_has_had_egalitarian_story }
+				}
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = cc_recent_egalitarian_story }
 				}
 				
 				planet_event = { id = cc_colony_events.9 }
@@ -271,6 +350,18 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_militarist_story } }
+				set_country_flag = cc_has_had_militarist_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_militarist_story
+				days = 3600
+			}
+		}
+			
+	
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -1058,6 +1149,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_pacifist_story } }
+				set_country_flag = cc_has_had_pacifist_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_pacifist_story
+				days = 3600
+			}
+		}
+		
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -2058,6 +2160,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_xenophile_story } }
+				set_country_flag = cc_has_had_xenophile_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_xenophile_story
+				days = 3600
+			}
+		}
+		
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -2769,6 +2882,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_xenophobe_story } }
+				set_country_flag = cc_has_had_xenophobe_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_xenophobe_story
+				days = 3600
+			}
+		}
+		
 		owner = {
 			create_leader = {
 				type = general
@@ -4676,6 +4800,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_spiritualist_story } }
+				set_country_flag = cc_has_had_spiritualist_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_spiritualist_story
+				days = 3600
+			}
+		}
+		
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -5673,6 +5808,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_materialist_story } }
+				set_country_flag = cc_has_had_materialist_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_materialist_story
+				days = 3600
+			}
+		}
+		
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -6399,6 +6545,17 @@ planet_event = {
 	location = root
 	
 	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_authoritarian_story } }
+				set_country_flag = cc_has_had_authoritarian_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_authoritarian_story
+				days = 3600
+			}
+		}
+		
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
@@ -7159,6 +7316,19 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
+	immediate = {
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_egalitarian_story } }
+				set_country_flag = cc_has_had_egalitarian_story
+			}
+			set_timed_country_flag = {
+				flag = cc_recent_egalitarian_story
+				days = 3600
+			}
+		}
+	}
+	
 	option = {
 		name = CCEXCELLENT
 		trigger = {
@@ -7572,6 +7742,7 @@ planet_event = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		owner = {
+			NOT = { has_country_flag = cc_recent_spiritualist_story }
 			is_country_type = default
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 			has_faction = traditionalist
@@ -7608,6 +7779,12 @@ planet_event = {
 #	mean_time_to_happen = { years = 100 }
 	
 	immediate = {
+		owner = {
+			set_timed_country_flag = {
+				flag = cc_recent_spiritualist_story
+				days = 3600
+			}
+		}
 		if = {
 			limit = {
 				any_owned_pop = { is_same_species = owner }
