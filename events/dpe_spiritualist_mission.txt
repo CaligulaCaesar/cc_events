@@ -54,6 +54,7 @@ country_event = {
 			is_country_type = default
 			has_communications = prev
 			NOR = {
+				is_at_war_with = prev
 				has_defensive_pact = prev
 				is_in_federation_with = prev
 				
@@ -95,6 +96,7 @@ country_event = {
 				is_country_type = default
 				has_communications = prev
 				NOR = {
+					is_at_war_with = prev
 					has_defensive_pact = prev
 					is_in_federation_with = prev
 					
@@ -132,6 +134,7 @@ country_event = {
 					has_communications = prev
 					has_ethic = ethic_gestalt_consciousness
 					NOR = {
+						is_at_war_with = prev
 						is_hostile_to = prev
 						is_rival = prev
 						
@@ -151,6 +154,7 @@ country_event = {
 						has_ethic = ethic_gestalt_consciousness
 						has_authority = auth_hive_mind
 						NOR = {
+							is_at_war_with = prev
 #							is_hostile_to = prev
 #							is_rival = prev
 							
@@ -169,6 +173,7 @@ country_event = {
 						has_ethic = ethic_gestalt_consciousness
 						has_authority = auth_hive_mind
 						NOR = {
+							is_at_war_with = prev
 #							is_hostile_to = prev
 #							is_rival = prev
 							
@@ -189,6 +194,7 @@ country_event = {
 							has_ethic = ethic_gestalt_consciousness
 							has_authority = auth_machine_intelligence
 							NOR = {
+								is_at_war_with = prev
 #									is_hostile_to = prev
 #									is_rival = prev
 								

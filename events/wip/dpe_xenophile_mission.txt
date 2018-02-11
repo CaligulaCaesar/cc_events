@@ -8,6 +8,7 @@
 		
 		is_country_type = default
 		is_subject = no
+		NOT = { is_at_war = yes }
 		
 		NOT = { has_country_flag = dpe_recent_xenophile_mission }
 		
@@ -30,13 +31,14 @@
 		
 		any_relation = {
 			is_country_type = default
+			NOT = { is_at_war = yes }
 			is_subject = no
 			has_country_flag = dpe_new_relation
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 			
 			capital_scope = { NOT = { is_surveyed = prevprev }
 
-			root = {
+			prev = {
 				NOT = { any_owned_pop = { is_same_species = prevprev } }
 				
 				NOR = {
@@ -67,6 +69,7 @@
 			limit = {
 				is_country_type = default
 				is_subject = no
+				NOT = { is_at_war = yes }
 				has_relation_flag = {
 					who = prev
 					flag = dpe_new_relation
