@@ -1,0 +1,105 @@
+
+
+
+
+
+	trigger = {
+		years_passed < 75
+		
+		is_country_type = default
+		is_subject = no
+		
+		NOT = { has_country_flag = dpe_recent_xenophile_mission }
+		
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = xenoist
+					support > 0.15
+					pop_percentage = {
+						percentage > 0.75
+						happiness > 0.55
+					}
+				}
+				count = 1
+			}
+		}
+		
+		any_relation = {
+			is_country_type = default
+			is_subject = no
+			has_country_flag = dpe_new_relation
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			
+			capital_scope = { NOT = { is_surveyed = prevprev }
+
+			root = {
+				NOT = { any_owned_pop = { is_same_species = prevprev } }
+				
+				NOR = {
+					any_relation = {
+						is_same_species = prevprev
+						OR = {
+							NOT = { has_country_flag = dpe_new_relation }
+							has_relation_flag = {
+								who = prev
+								flag = dpe_has_had_xenophile_mission
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_xenophile_mission
+			days = 5400
+		}
+		
+		
+		random_relation = {
+			limit = {
+				is_country_type = default
+				is_subject = no
+				has_relation_flag = {
+					who = prev
+					flag = dpe_new_relation
+				}
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				
+				capital_scope = { NOT = { is_surveyed = prevprev }
+
+				root = {
+					NOT = { any_owned_pop = { is_same_species = prevprev } }
+					
+					NOR = {
+						any_relation = {
+							is_same_species = prevprev
+							OR = {
+								NOT = { has_country_flag = dpe_new_relation }
+								has_relation_flag = {
+									who = prev
+									flag = dpe_has_had_xenophile_mission
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		remove_relation_flag = {
+			who = prev
+			flag = dpe_new_relation
+		}
+		set_relation_flag = {
+			who = prev
+			flag = dpe_has_had_xenophile_mission
+		}
+		save_event_target_as = dpe_new_contact
+			

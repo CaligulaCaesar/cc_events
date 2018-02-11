@@ -35,3 +35,10 @@ dpe_militarist_unrest = {
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
 }
+
+dpe_missionary_faction = { faction_happiness = 0.05 }
+dpe_missionary_faction_rejected = { faction_happiness = -0.05 }
+dpe_missionary_faction_rejected1 = { faction_happiness = -0.10 }
+
+dpe_missionary_country = { pop_ethic_spiritualist_attraction_mult = 0.33 }
+dpe_missionary_country_rejected = { pop_ethic_spiritualist_attraction_mult = -0.25 }

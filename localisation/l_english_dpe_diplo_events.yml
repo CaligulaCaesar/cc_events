@@ -64,3 +64,44 @@ dpe_diplo.100.option:0 "Whatever."
 
 dpe_diplo.101.name:0 "The [from.GetName] Declares War!"
 dpe_diplo.101.option:0 "Prepare for War!"
+
+
+#Spiritualist Mission
+
+
+dpe_spiritualist_mission.2.name:0 "Send a Mission to the [dpe_neighbour.GetName]?"
+dpe_spiritualist_mission.2.desc:0 "Many of our stellar neighbours don’t seem to be believers in any religion. Some even seem to worship their machines and inventions. A group within the clergy have discussed sending missions to save the souls of these unfortune and misguided xenos. Currently, most of the discussion is centered around the [dpe_neighbour.GetName]. Shall we authorise the mission to go and spread the good word amongst the [dpe_neighbour.GetSpeciesNamePlural]?"
+dpe_spiritualist_mission.2.A:0 "Yes, we must offer them enlightenment."
+dpe_spiritualist_mission.2.B:0 "No, they are unworthy of our glorious religion."
+dpe_spiritualist_mission.2.C:0 "No, these clerics need to learn their place. I am the one in charge here!"
+
+dpe_spiritualist_mission.2.D:0 "Perhaps the [dpe_ally.GetName] would be a better candidate?"
+dpe_spiritualist_mission.2.E:0 "Let’s be ambitious - send the mission to the [dpe_hive.GetName]."
+dpe_spiritualist_mission.2.E.tooltip:0 "This may be a futile endeavour. Who can say how the Hive will react?"
+dpe_spiritualist_mission.2.F:0 "Let’s be ambitious - send the mission to the [dpe_machines.GetName]."
+dpe_spiritualist_mission.2.F.tooltip:0 "This is probably a futile endeavour."
+
+dpe_missionary_faction:0 "Accepted Foreign Mission"
+dpe_missionary_faction_rejected:0 "Rejected Foreign Mission"
+dpe_missionary_faction_rejected1:0 "$dpe_missionary_faction_rejected$"
+dpe_missionary_country:0 "Proselytising"
+dpe_missionary_country_desc:0 "The efforts of this country to spread its faith have reinvigorated the spiritualist movement within the country as well."
+dpe_missionary_country_rejected:0 "Spiritualists put in their Place"
+dpe_missionary_country_rejected_desc:0 "The spiritualist establishment overstepped its bounds and has been put in its place by the government."
+
+dpe_spiritualist_mission.3.name:0 "The [from.GetSpeciesAdj] Missionaries"
+dpe_spiritualist_mission.3.desc.machine:0 "Dear... Machines, we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities, even the most depraved soul. It is therefore an ethical imperative for us to offer this salvation, even to you, a monstrous construction that should never have existed. Will you accept salvation and listen to the Word of our missionaries?"
+dpe_spiritualist_mission.3.desc.hive:0 "Dear [root.GetSpeciesNamePlural], we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities if we follow the correct practices. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.3.option.hive.A:0 "Why do you bother us with this nonsense?"
+dpe_spiritualist_mission.3.option.hive.B:0 "Your ideas are strange to us, but interesting. Perhaps we will consider further cooperation."
+dpe_spiritualist_mission.3.option.devourers:0 "Why does the food talk to us?"
+dpe_spiritualist_mission.3.option.machine:0 "Joke unsuccessful. Kindly leave us alone."
+dpe_spiritualist_mission.3.option.exterminator:0 "You will be annihilated."
+
+dpe_spiritualist_mission_insult:0 "Insulting Missionaries"
+dpe_spiritualist_mission_ignored:0 "Ignored our Holy Message"
+dpe_spiritualist_mission_hive_listened:0 "Interesting Ideas"
+dpe_spiritualist_mission_hive_listened1:0 "Heard our Message"
+
+dpe_spiritualist_mission.300.name:0 "The [from.GetName]'s Response"
+dpe_spiritualist_mission.300.A:0 "We tried our best to save you."

@@ -79,6 +79,56 @@ cc_ally_xenophobic_rhetoric = {
 	min = -300
 	
 	decay = {
-		base = -3
+		base = 3
+	}
+}
+
+
+
+dpe_spiritualist_mission_insult = {
+	opinion = {
+		base = -50
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 5
+	}
+}
+
+dpe_spiritualist_mission_ignored = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spiritualist_mission_hive_listened = {
+	opinion = {
+		base = 30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spiritualist_mission_hive_listened1 = {
+	opinion = {
+		base = 30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
 	}
 }
