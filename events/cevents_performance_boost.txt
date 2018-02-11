@@ -1027,12 +1027,27 @@ event = {
 								exists = controller
 								controller = { is_same_value = prev.owner }
 								has_modifier = cc_faction_acute_unrest
+								
+								owner = {
+									any_owned_planet = {
+										NOR = {
+											is_same_value = prevprev
+											is_same_value = prevprevprevprev
+										}
+										is_faction_stronghold = yes
+										unrest > 80
+										has_ground_combat = no
+										exists = controller
+										controller = { is_same_value = prev.owner }
+										has_modifier = cc_faction_acute_unrest
+									}
+								}
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_factional_revolt_attempt_2planets
+					flag = cc_factional_revolt_attempt_3planets
 					days = 31
 				}
 				if = {
@@ -1067,6 +1082,37 @@ event = {
 											exists = controller
 											controller = { is_same_value = prev.owner }
 											has_modifier = cc_faction_acute_unrest
+											owner = {
+												any_owned_planet = {
+													NOR = {
+														is_same_value = prevprev
+														is_same_value = prevprevprevprev
+														is_same_value = prevprevprevprev.prevprev
+													}
+													is_faction_stronghold = yes
+													unrest > 80
+													has_ground_combat = no
+													exists = controller
+													controller = { is_same_value = prev.owner }
+													has_modifier = cc_faction_acute_unrest
+													owner = {
+														any_owned_planet = {
+															NOR = {
+																is_same_value = prevprev
+																is_same_value = prevprevprevprev
+																is_same_value = prevprevprevprev.prevprev
+																is_same_value = prevprevprevprev.prevprevprev
+															}
+															is_faction_stronghold = yes
+															unrest > 80
+															has_ground_combat = no
+															exists = controller
+															controller = { is_same_value = prev.owner }
+															has_modifier = cc_faction_acute_unrest
+														}
+													}
+												}
+											}
 										}
 									}
 								}
@@ -1074,7 +1120,7 @@ event = {
 						}
 					}
 					set_timed_country_flag = {
-						flag = cc_factional_revolt_attempt_3planets
+						flag = cc_factional_revolt_attempt_5planets
 						days = 31
 					}
 				}

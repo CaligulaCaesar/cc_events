@@ -140,15 +140,17 @@ country_event = {
 					country_event = { id = cc_events_blackmail.204 days = 15 }
 					modifier = {
 						factor = 0
-						NOR = {
-							has_ethic = ethic_militarist
-							has_ethic = ethic_fanatic_militarist
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
 						OR = {
-							has_ethic = ethic_pacifist
-							has_ethic = ethic_fanatic_pacifist
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+							OR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
 						}
 					}
 					modifier = {
