@@ -2010,11 +2010,6 @@ country_event = {
 	
 	immediate = {
 
-#		country_event = { id = ccfaction.42 days = 180 }
-#		country_event = { id = ccfaction.900 days = 360 }
-		country_event = { id = ccfaction.42 days = 541 }
-		country_event = { id = ccfaction.900 days = 2521 }
-		
 		#set event targets for the second faction (for desc)
 		if = {
 			limit = { has_secondary_factional_revolt_active = yes }
@@ -2134,6 +2129,12 @@ country_event = {
 				days = 2520
 			}
 		}
+
+#		country_event = { id = ccfaction.42 days = 180 }
+#		country_event = { id = ccfaction.900 days = 360 }
+		country_event = { id = ccfaction.42 days = 541 }
+		country_event = { id = ccfaction.900 days = 2521 }
+		country_event = { id = ccfaction.101 days = 31 }
 	}
 	option = {
 		name = CCWORRYING
@@ -2308,22 +2309,28 @@ country_event = {
 		has_country_flag = cc_factional_revolt_can_attempt
 	}
 	
-	mean_time_to_happen = {
-		days = 360
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_factional_revolt_attempt_will_succeed
-		}
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_factional_revolt_attempt_2planets
-		}
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_factional_revolt_attempt_3planets
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			25 = {
+				country_event = { id = ccfaction.6 }
+				modifier = {
+					factor = 1.5
+					has_country_flag = cc_factional_revolt_attempt_will_succeed
+				}
+				modifier = {
+					factor = 1.5
+					has_country_flag = cc_factional_revolt_attempt_2planets
+				}
+				modifier = {
+					factor = 2
+					has_country_flag = cc_factional_revolt_attempt_5planets
+				}
+			}
+			962 = { country_event = { id = ccfaction.101 days = 10 } }
 		}
 	}
-	immediate = { country_event = { id = ccfaction.6 } }
 }
 
 
@@ -2429,15 +2436,58 @@ country_event = {
 				years = 10
 			}
 			
+
+			random_owned_planet = {
+				limit = {
+					is_faction_stronghold = yes
+					unrest > 99
+					has_ground_combat = no
+					exists = controller
+					controller = { is_same_value = root }
+					has_modifier = cc_faction_acute_unrest
+				}
+				save_event_target_as = cc_rebel_faction_capital
+				
+				if = {
+					limit = { NOT = { any_owned_pop = { is_same_species = root } } }
+					random_pop = { change_species = root }
+				}
+			}	
+				
+			
 			#create country, swap owner, get other planets to swap.
 			create_country = {
 				name = random
 				type = default
-				species = root.species
+				species = root
 				ignore_initial_colony_error = yes
 				day_zero_contact = no
 				flag = random
 				effect = {
+
+					event_target:cc_rebel_faction_capital = {
+						if = {
+							limit = { has_modifier = cc_faction_acute_unrest }
+							remove_modifier = cc_faction_acute_unrest
+						}
+						remove_all_faction_strongholds = yes
+						remove_all_faction_sympathies = yes
+						remove_all_faction_seditions = yes
+						
+						set_owner = prev
+						
+						solar_system = {
+							every_fleet_in_system = {
+								limit = {
+									exists = owner
+									owner = { is_same_value = root }
+									any_owned_ship = { is_ship_class = shipclass_military_station }
+								}
+								set_owner = prevprevprev
+							}
+						}
+					}
+				
 					remove_all_ethics = yes
 					#primary ethic
 					if = {
@@ -2680,17 +2730,28 @@ country_event = {
 						years = 10
 					}
 					
-					if = {
-						limit = {
-							OR = {
-								exists = event_target:cc_rebellious_faction_leader
-								exists = event_target:cc_new_reb_faction_leader
+					root = {
+						if = {
+							limit = {
+								OR = {
+									AND = {
+										exists = event_target:cc_rebellious_faction_leader
+										event_target:cc_rebellious_faction_leader = { NOT = { leader_class = ruler } }
+									}
+									AND = {
+										exists = event_target:cc_new_reb_faction_leader
+										event_target:cc_new_reb_faction_leader = { NOT = { leader_class = ruler } }
+									}
+								}
 							}
+							country_event = { id = ccfaction.601 }
 						}
-						root = { country_event = { id = ccfaction.601 } }
 					}
 					if = {
-						limit = { exists = event_target:cc_rebellious_faction_leader }
+						limit = { 
+							exists = event_target:cc_rebellious_faction_leader
+							root.ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+						}
 						event_target:cc_rebellious_faction_leader = {
 							if = {
 								limit = {
@@ -2725,7 +2786,7 @@ country_event = {
 										}
 										event_target:deleted_ship = {
 											set_leader = event_target:cc_rebellious_faction_leader
-											exile_leader_as = cc_rebellious_faction_leader
+											leader = { exile_leader_as = cc_rebellious_faction_leader }
 											delete_fleet = this
 										}
 									}
@@ -2751,7 +2812,10 @@ country_event = {
 					}
 					
 					if = {
-						limit = { exists = event_target:cc_new_reb_faction_leader }
+						limit = {
+							exists = event_target:cc_new_reb_faction_leader
+							root.ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
+						}
 						event_target:cc_new_reb_faction_leader = {
 							if = {
 								limit = {
@@ -2786,7 +2850,7 @@ country_event = {
 										}
 										event_target:deleted_ship = {
 											set_leader = event_target:cc_new_reb_faction_leader
-											exile_leader_as = cc_new_reb_faction_leader
+											leader = { exile_leader_as = cc_new_reb_faction_leader }
 											delete_fleet = this
 										}
 									}
@@ -2822,45 +2886,6 @@ country_event = {
 					}
 				}
 			}
-
-			random_owned_planet = {
-				limit = {
-					is_faction_stronghold = yes
-					unrest > 99
-					has_ground_combat = no
-					exists = controller
-					controller = { is_same_value = root }
-					has_modifier = cc_faction_acute_unrest
-				}
-				save_event_target_as = cc_rebel_faction_capital
-				
-				set_owner = event_target:cc_breakaway_country
-				
-				solar_system = {
-					every_fleet_in_system = {
-						limit = {
-							exists = owner
-							owner = { is_same_value = root }
-							any_owned_ship = { is_ship_class = shipclass_military_station }
-						}
-						set_owner = event_target:cc_breakaway_country
-					}
-				}
-				
-				if = {
-					limit = { has_modifier = cc_faction_acute_unrest }
-					remove_modifier = cc_faction_acute_unrest
-				}
-				remove_all_faction_strongholds = yes
-				if = {
-					limit = { has_faction_sympathies = yes }
-					remove_all_faction_sympathies = yes
-				}
-				if = {
-					limit = { has_faction_sedition = yes }
-					remove_all_faction_seditions = yes
-				}
-			}
 			
 			event_target:cc_breakaway_country = {
 				add_minerals = 200 # Should be atleast the required amount for a spaceport
@@ -2882,7 +2907,7 @@ country_event = {
 					}
 					surveyed = {
 						set_surveyed = yes
-						surveyor = root
+						surveyor = prev
 					}
 				}
 				
@@ -2930,6 +2955,11 @@ country_event = {
 				
 				
 					set_planet_flag = revolt_in_progress
+					
+					if = {
+						limit = { NOT = { any_owned_pop = { is_same_species = root } } }
+						random_pop = { change_species = root }
+					}
 					
 					#create rebels
 					
@@ -3193,17 +3223,28 @@ country_event = {
 								years = 10
 							}
 							
-							if = {
-								limit = {
-									OR = {
-										exists = event_target:cc_rebellious_faction_leader
-										exists = event_target:cc_new_reb_faction_leader
+							root = {
+								if = {
+									limit = {
+										OR = {
+											AND = {
+												exists = event_target:cc_rebellious_faction_leader
+												event_target:cc_rebellious_faction_leader = { NOT = { leader_class = ruler } }
+											}
+											AND = {
+												exists = event_target:cc_new_reb_faction_leader
+												event_target:cc_new_reb_faction_leader = { NOT = { leader_class = ruler } }
+											}
+										}
 									}
+									country_event = { id = ccfaction.601 }
 								}
-								root = { country_event = { id = ccfaction.601 } }
 							}
 							if = {
-								limit = { exists = event_target:cc_rebellious_faction_leader }
+								limit = {
+									exists = event_target:cc_rebellious_faction_leader
+									root.ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+								}
 								event_target:cc_rebellious_faction_leader = {
 									if = {
 										limit = {
@@ -3238,7 +3279,7 @@ country_event = {
 												}
 												event_target:deleted_ship = {
 													set_leader = event_target:cc_rebellious_faction_leader
-													exile_leader_as = cc_rebellious_faction_leader
+													leader = { exile_leader_as = cc_rebellious_faction_leader }
 													delete_fleet = this
 												}
 											}
@@ -3264,7 +3305,10 @@ country_event = {
 							}
 							
 							if = {
-								limit = { exists = event_target:cc_new_reb_faction_leader }
+								limit = {
+									exists = event_target:cc_new_reb_faction_leader
+									root.ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
+								}
 								event_target:cc_new_reb_faction_leader = {
 									if = {
 										limit = {
@@ -3299,7 +3343,7 @@ country_event = {
 												}
 												event_target:deleted_ship = {
 													set_leader = event_target:cc_new_reb_faction_leader
-													exile_leader_as = cc_new_reb_faction_leader
+													leader = { exile_leader_as = cc_new_reb_faction_leader }
 													delete_fleet = this
 												}
 											}
@@ -3531,22 +3575,44 @@ country_event = {
 	title = ccfaction.601.name
 	desc = {
 		trigger = {
-			exists = event_target:cc_rebellious_faction_leader
-			exists = event_target:cc_new_reb_faction_leader
+			AND = {
+				exists = event_target:cc_rebellious_faction_leader
+				ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+				exists = event_target:cc_new_reb_faction_leader
+				ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
+			}
 		}
 		text = ccfaction.601.desc.both
 	}
 	desc = {
 		trigger = {
-			exists = event_target:cc_rebellious_faction_leader
-			NOT = { exists = event_target:cc_new_reb_faction_leader }
+			AND = {
+				exists = event_target:cc_rebellious_faction_leader
+				ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+				OR = {
+					NOT = { exists = event_target:cc_new_reb_faction_leader }
+					AND = {
+						exists = event_target:cc_new_reb_faction_leader
+						ruler = { is_same_value = event_target:cc_new_reb_faction_leader }
+					}
+				}
+			}
 		}
 		text = ccfaction.601.desc.only1
 	}
 	desc = {
 		trigger = {
-			NOT = { exists = event_target:cc_rebellious_faction_leader }
-			exists = event_target:cc_new_reb_faction_leader
+			AND = {
+				OR = {
+					NOT = { exists = event_target:cc_rebellious_faction_leader }
+					AND = {
+						exists = event_target:cc_rebellious_faction_leader
+						ruler = { is_same_value = event_target:cc_rebellious_faction_leader }
+					}
+				}
+				exists = event_target:cc_new_reb_faction_leader
+				ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
+			}
 		}
 		text = ccfaction.601.desc.only2
 	}
@@ -3571,7 +3637,7 @@ country_event = {
 			country_event = { id = rebellionscript.1 scopes = { from = capital_scope } }
 			create_fleet_from_naval_cap = 0.5
 			
-			else = { create_fleet_from_naval_cap = 1 }
+			else = { create_fleet_from_naval_cap = 2 }
 		}
 		
 
