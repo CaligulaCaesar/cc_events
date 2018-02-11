@@ -522,3 +522,27 @@ dpe_naval_pay_cut_faction = {
 dpe_navy_privileges_cut_faction = {
 	faction_happiness = -0.1
 }
+
+dpe_encouraged_competition = {
+	country_resource_energy_mult = 0.05
+}
+
+dpe_disgruntled_CEO = {
+	planet_unrest_add = 20
+	
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
+}
+
+dpe_patents_national_interest = { faction_happiness = 0.1 }
+dpe_patents_denied_faction = { faction_happiness = -0.1 }
+dpe_innovative_CEO_faction = { faction_happiness = 0.05 }
+
+
+dpe_innovative_CEO = {
+	tile_resource_energy_mult = 0.2
+	tile_resource_physics_research_mult = 0.1
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
+}
