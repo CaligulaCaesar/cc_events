@@ -1,6 +1,11 @@
 
 namespace = cc_events_mod
 
+@tier3researchreward = 12
+@tier3researchmin = 100
+@tier3researchmax = 10000
+
+
 #triggered in performance
 country_event = {
 	id = cc_events_mod.1
@@ -2530,6 +2535,13 @@ country_event = {
 		
 		trigger = { has_faction = totalitarian }
 		
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
