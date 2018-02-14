@@ -1,0 +1,240 @@
+
+#This event is necessary to ensure that only new contacts are taken into account.
+#yearly pulse
+event = {
+	id = dpe_xenophile_mission.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { years_passed < 75 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_civic = civic_fanatic_purifier
+				}
+			}
+			every_relation = {
+				limit = {
+					NOT = {
+						has_relation_flag = {
+							who = prev
+							flag = dpe_comms_established
+						}
+					}
+					is_country_type = default
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_civic = civic_fanatic_purifier
+					}
+				}
+				set_relation_flag = {
+					who = prev
+					flag = dpe_comms_established
+				}
+				set_timed_relation_flag = {
+					who = prev
+					flag = dpe_new_relation
+					days = 735
+				}
+				save_event_target_as = dpe_new_contact
+
+				prev = {
+					if = {
+						limit = {
+							is_subject = no
+							NOT = { has_country_flag = dpe_recent_xenophile_mission }
+							OR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+								
+								count_pop_factions = {
+									limit = {
+										is_pop_faction_type = xenoist
+										support > 0.15
+										pop_percentage = {
+											percentage > 0.75
+											happiness > 0.55
+										}
+									}
+									count = 1
+								}
+							}
+							
+							event_target:dpe_new_contact = {
+								is_at_war = no
+								is_subject = no
+
+								NOT = { has_country_flag = dpe_recent_xenophile_mission }
+
+								capital_scope = { NOT = { is_surveyed = prevprev } }
+
+								NOT = { any_owned_pop = { is_same_species = prevprev } }
+								
+								NOR = {
+									any_relation = {
+										is_same_species = prevprev
+										OR = {
+											NOT = {
+												has_relation_flag = {
+													flag = dpe_new_relation
+													who = prev
+												}
+											}
+											has_relation_flag = {
+												who = prev
+												flag = dpe_has_had_xenophile_mission
+											}
+										}
+									}
+								}
+
+								prev = {
+									NOT = { any_owned_pop = { is_same_species = prevprev } }
+									
+									NOR = {
+										any_relation = {
+											is_same_species = prevprev
+											OR = {
+												NOT = {
+													has_relation_flag = {
+														flag = dpe_new_relation
+														who = prev
+													}
+												}
+												has_relation_flag = {
+													who = prev
+													flag = dpe_has_had_xenophile_mission
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						country_event = { id = dpe_xenophile_mission.2 days = 21 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:dpe_new_contact
+
+		is_at_war = no
+		is_subject = no
+		NOT = { has_country_flag = dpe_recent_xenophile_mission }
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = xenoist
+					support > 0.15
+					pop_percentage = {
+						percentage > 0.75
+						happiness > 0.55
+					}
+				}
+				count = 1
+			}
+		}
+		
+		event_target:dpe_new_contact = {
+			is_at_war = no
+			is_subject = no
+			NOT = { has_country_flag = dpe_recent_xenophile_mission }
+
+			has_relation_flag = {
+				who = prev
+				flag = dpe_new_relation
+			}
+			NOT = {
+				any_relation = {
+					is_same_species = prevprev
+					has_relation_flag = {
+						who = prev
+						flag = dpe_has_had_xenophile_mission
+					}
+				}
+			}
+
+			prev = {
+				NOT = {
+					any_relation = {
+						is_same_species = prevprev
+						has_relation_flag = {
+							who = prev
+							flag = dpe_has_had_xenophile_mission
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			2 = {
+				country_event = { id = dpe_xenophile_mission.3 }
+				modifier = {
+					factor = 0.8
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				modifier = {
+					factor = 1.25
+					has_ethic = ethic_fanatic_xenophile
+				}
+				modifier = {
+					factor = 1.25
+					event_target:dpe_new_contact = {
+						OR = {
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+				}
+				modifier = {
+					factor = 0.8
+					event_target:dpe_new_contact = {
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+			98 = { country_event = { id = dpe_xenophile_mission.2 days = 21 }
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.3
+	
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_xenophile_mission
+			days = 5400
+		}
+		
+		
+		
+		#if the thing happens, the reverse dpe_recent_xenophile_mission also needs to be given.
