@@ -70,15 +70,15 @@ dpe_diplo.101.option:0 "Prepare for War!"
 
 
 dpe_spiritualist_mission.2.name:0 "Send a Mission to the [dpe_neighbour.GetName]?"
-dpe_spiritualist_mission.2.desc:0 "Many of our stellar neighbours don’t seem to be believers in any religion. Some even seem to worship their machines and inventions. A group within the clergy have discussed sending missions to save the souls of these unfortune and misguided xenos. Currently, most of the discussion is centered around the [dpe_neighbour.GetName]. Shall we authorise the mission to go and spread the good word amongst the [dpe_neighbour.GetSpeciesNamePlural]?"
+dpe_spiritualist_mission.2.desc:0 "Many of our stellar neighbours don't seem to be believers in any religion. Some even seem to worship their machines and inventions. A group within the clergy have discussed sending missions to save the souls of these unfortune and misguided xenos. Currently, most of the discussion is centered around the [dpe_neighbour.GetName]. Shall we authorise the mission to go and spread the good word amongst the [dpe_neighbour.GetSpeciesNamePlural]?"
 dpe_spiritualist_mission.2.A:0 "Yes, we must offer them enlightenment."
 dpe_spiritualist_mission.2.B:0 "No, they are unworthy of our glorious religion."
 dpe_spiritualist_mission.2.C:0 "No, these clerics need to learn their place. I am the one in charge here!"
 
 dpe_spiritualist_mission.2.D:0 "Perhaps the [dpe_ally.GetName] would be a better candidate?"
-dpe_spiritualist_mission.2.E:0 "Let’s be ambitious - send the mission to the [dpe_hive.GetName]."
+dpe_spiritualist_mission.2.E:0 "Let's be ambitious - send the mission to the [dpe_hive.GetName]."
 dpe_spiritualist_mission.2.E.tooltip:0 "This may be a futile endeavour. Who can say how the Hive will react?"
-dpe_spiritualist_mission.2.F:0 "Let’s be ambitious - send the mission to the [dpe_machines.GetName]."
+dpe_spiritualist_mission.2.F:0 "Let's be ambitious - send the mission to the [dpe_machines.GetName]."
 dpe_spiritualist_mission.2.F.tooltip:0 "This is probably a futile endeavour."
 
 dpe_missionary_faction:0 "Accepted Foreign Mission"
@@ -91,7 +91,7 @@ dpe_missionary_country_rejected_desc:0 "The spiritualist establishment overstepp
 
 dpe_spiritualist_mission.3.name:0 "The [from.GetSpeciesAdj] Missionaries"
 dpe_spiritualist_mission.3.desc.machine:0 "Dear... Machines, we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities, even the most depraved soul. It is therefore an ethical imperative for us to offer this salvation, even to you, a monstrous construction that should never have existed. Will you accept salvation and listen to the Word of our missionaries?"
-dpe_spiritualist_mission.3.desc.hive:0 "Dear [root.GetSpeciesNamePlural], we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities if we follow the correct practices. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.3.desc.hive:0 "Dear [root.GetSpeciesNamePlural], we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities if we follow the correct practices. In the name of all that is good in the galaxy, we wish to offer you Enlightenment. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
 dpe_spiritualist_mission.3.option.hive.A:0 "Why do you bother us with this nonsense?"
 dpe_spiritualist_mission.3.option.hive.B:0 "Your ideas are strange to us, but interesting. Perhaps we will consider further cooperation."
 dpe_spiritualist_mission.3.option.devourers:0 "Why does the food talk to us?"
@@ -105,3 +105,44 @@ dpe_spiritualist_mission_hive_listened1:0 "Heard our Message"
 
 dpe_spiritualist_mission.300.name:0 "The [from.GetName]'s Response"
 dpe_spiritualist_mission.300.A:0 "We tried our best to save you."
+
+
+dpe_spiritualist_mission.4.name:0 "Will you accept our Missionaries?"
+dpe_spiritualist_mission.4.desc.normal:0 "Dear [root.GetSpeciesNamePlural], we [from.GetSpeciesNamePlural] hold the conviction that all can find salvation before our Deities if we follow the correct practices. In the name of all that is good in the galaxy, we wish to offer you Enlightenment. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.4.desc.ally:0 "Dear friend, we [from.GetSpeciesNamePlural] have always had good relations with your people. Your salvation is a great worry for us - we couldn't help but notice that your practices diverge from ours in certain, important ways. We wish to offer you Enlightenment, so that you can face your Maker without fear of Damnation. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.4.A:0 "Our people will not suffer xenos telling us what to do."
+dpe_spiritualist_mission.4.B:0 "We will let them in, but don't try any tricks - we will be watching you!"
+dpe_spiritualist_mission.4.C:0 "We will be glad to host your mission, friend."
+dpe_spiritualist_mission.4.D:0 "(Lie) Of course we will host your mission."
+dpe_spiritualist_mission.4.D.tooltip:0 "\nWe will secretly take measures to hinder their message from being spread. The [from.GetName] will be angered if they discover that we are doing this."
+
+dpe_spiritualist_mission_accepted_mission:0 "Hosted our Missionaries"
+#dpe_hosting_spiritualist_mission:0 "Hosting Missionaries"
+dpe_hosting_spiritualist_mission_planet:0 "Hosting Missionaries"
+dpe_hosting_spiritualist_mission_planet_desc:0 "This planet is hosting missionaries from one of the state's neighbours."
+
+dpe_spiritualist_mission.41.name:0 "The [from.GetName] declines"
+dpe_spiritualist_mission.41.desc:0 "Our people will not suffer xenos telling us what to do. We will not accept your missionaries."
+dpe_spiritualist_mission.41.option:0 "Then you have damned yourselves."
+
+dpe_spiritualist_mission.411.name:0 "The [fromfrom.GetName] rejected our Mission"
+dpe_spiritualist_mission.411.desc:0 "The [dpe_neighbour.GetName] have refused to allow our mission to travel to their lands. Many clerics are furious that these ignorant xenos would choose to damn themselves. Others are of a milder temper and believe that the divine simply has another species in mind for salvation at the moment. Should we attempt to send our missionaries elsewhere?"
+dpe_spiritualist_mission.411.option:0 "Better not"
+
+dpe_spiritualist_mission.42.name:0 "The [from.GetName] accepts"
+dpe_spiritualist_mission.42.desc:0 "Thank you for your offer. We will gladly host your missionaries."
+dpe_spiritualist_mission.42.option:0 "You are welcome."
+
+dpe_spiritualist_mission.421.name:0 "Our Mission departs for the [fromfrom.GetName]"
+dpe_spiritualist_mission.421.desc:0 "The mission to deliver salvation to the [dpe_neighbour.GetSpeciesNamePlural] departed today. We eagerly await news of their success."
+
+dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on [dpe_mission_host_planet.GetName] and throughout the [dpe_neighbour.GetName]."
+
+#Xenophile Mission
+
+dpe_xenophile_mission.3.name:0 "Discovery of the [dpe_new_contact.GetName]"
+dpe_xenophile_mission.3.desc:0 "Many [root.GetSpeciesNamePlural] are fascinated at the discovery of the [dpe_new_contact.GetName], a new highly advanced xeno society. News outlets are abuzz with speculation about the [dpe_new_contact.GetSpeciesNamePlural], and the population beg to be able to learn more. Inspired by this wave of enthusiasm, the [xenophile_faction.GetName] has approached government officials with an ambitious plan to reach out to the [dpe_new_contact.GetSpeciesNamePlural] and propose a cultural exchange, so that [root.GetSpeciesNamePlural] and [dpe_new_contact.GetSpeciesNamePlural] can learn to understand each other better. If the [dpe_new_contact.GetName] agrees, several private starship will take a group of [root.GetSpeciesNamePlural] to the [dpe_new_contact.GetName], where they will spend several months living among [dpe_new_contact.GetSpeciesNamePlural], with the [dpe_new_contact.GetName] reciprocating in kind. Should we propose such an exchange?"
+dpe_xenophile_mission.3.A:0 "Of course."
+dpe_xenophile_mission.3.B:0 "No, we will get to know them in due course."
+
+dpe_rejected_xenophile_mission_faction:0 "Rejected Discovery Mission"
