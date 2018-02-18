@@ -973,7 +973,7 @@ country_event = {
 				modifier = dpe_hosting_spiritualist_mission_planet
 				days = -1
 			}
-			add_planet_flag = dpe_hosting_spiritualist_mission_planet.from
+			add_planet_flag = dpe_hosting_spiritualist_mission_planet@from
 		}
 		from = {
 			add_opinion_modifier = {
@@ -1615,7 +1615,7 @@ country_event = {
 		
 		event_target:dpe_mission_host_planet = {
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
-			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet.event_target:dpe_missionary_country }
+			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet@event_target:dpe_missionary_country }
 		}
 
 		add_opinion_modifier = {
@@ -1707,7 +1707,7 @@ country_event = {
 		}
 		event_target:dpe_mission_host_planet = {
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
-			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet.event_target:dpe_missionary_country }
+			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet@event_target:dpe_missionary_country }
 		}
 
 		tooltip = {
@@ -1821,7 +1821,7 @@ country_event = {
 		
 		event_target:dpe_mission_host_planet = {
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
-			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet.event_target:dpe_missionary_country }
+			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet@event_target:dpe_missionary_country }
 		}
 
 		from = {
@@ -1891,7 +1891,7 @@ planet_event = {
 	
 	immediate = {
 		random_country = {
-			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet.prev } }
+			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@prev } }
 			
 			country_event = { id = dpe_spiritualist_mission.971 days = 3 }
 			
@@ -1907,7 +1907,7 @@ country_event = {
 	picture = GFX_hangar_bay
 	
 	trigger = {
-		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet.root }
+		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@root }
 		any_country = {
 			has_relation_flag = {
 				who = root
@@ -1920,7 +1920,7 @@ country_event = {
 		from = {
 			save_event_target_as = dpe_mission_host_planet
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
-			remove_planet_flag = dpe_hosting_spiritualist_mission_planet.root
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
 		}
 
 		random_country = {
@@ -2014,7 +2014,7 @@ country_event = {
 		random_owned_planet = {
 			limit = { has_modifier = dpe_hosting_spiritualist_mission_planet }
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
-			remove_planet_flag = dpe_hosting_spiritualist_mission_planet.event_target:dpe_missionary_country
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@event_target:dpe_missionary_country
 			save_event_target_as = dpe_mission_host_planet
 		}
 		
