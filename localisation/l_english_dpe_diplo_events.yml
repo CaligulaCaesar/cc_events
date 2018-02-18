@@ -138,7 +138,7 @@ dpe_spiritualist_mission.421.desc:0 "The mission to deliver salvation to the [dp
 
 dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on [dpe_mission_host_planet.GetName] and throughout the [dpe_neighbour.GetName]."
 
-
+dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Two £pops pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
 
 dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
 dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries’ message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
@@ -165,6 +165,17 @@ dpe_spiritualist_mission.74.desc:0 "The recent activities of the [from.GetSpecie
 dpe_spiritualist_mission.74.A:0 "I see."
 dpe_spiritualist_mission.74.B:0 "We should send them home anyway, just in case."
 
+dpe_spiritualist_mission.75.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
+dpe_spiritualist_mission.75.desc:0 "Dear [root.GetSpeciesNamePlural], we regret to inform you that the [from.GetName] has come to the decision that your missionaries are a disruptive influence. We have therefore ordered them to cease their activities and return home. We hope that you will not take this personally."
+
+
+
+
+dpe_spiritualist_mission.971.name:0 "Our Missionaries return Home"
+dpe_spiritualist_mission.971.desc:0 "The [dpe_neighbour.GetName] has lost control of [dpe_mission_host_planet.GetName], the planet where our missionaries were active. Fortunately, our missionaries were able to escape the chaos, and have returned home."
+
+dpe_spiritualist_mission.972.name:0 "[from.GetSpeciesAdj] Missionaries return Home"
+dpe_spiritualist_mission.972.desc:0 "With the loss of [dpe_mission_host_planet.GetName] to the [fromfromfrom.GetName], the [from.GetSpeciesAdj] missionaries have elected to return home."
 
 dpe_spiritualist_mission.98.name:0 "War with the Missionaries!"
 dpe_spiritualist_mission.98.desc:0 "The war between us and the [dpe_missionary_country.GetName] has put us in an awkward position. They had set up a mission on [dpe_mission_host_planet.GetName], which we now have to decide what to do with. Some have advocated simply deporting them back to their homeland, others want to make a statement by killing them. What should be done?" 
