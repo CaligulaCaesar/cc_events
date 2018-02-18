@@ -79,6 +79,7 @@ country_event = {
 					OR = {
 						has_defensive_pact = prev
 						is_in_federation_with = prev
+						is_guaranteeing = prev
 					}
 					relative_power = {
 						who = prevprev
@@ -127,6 +128,7 @@ country_event = {
 						OR = {
 							has_defensive_pact = prev
 							is_in_federation_with = prev
+							is_guaranteeing = prev
 						}
 						relative_power = {
 							who = prevprev
@@ -193,6 +195,7 @@ country_event = {
 						OR = {
 							has_defensive_pact = prev
 							is_in_federation_with = prev
+							is_guaranteeing = prev
 						}
 						relative_power = {
 							who = prevprev
@@ -691,6 +694,7 @@ country_event = { #AI-only event
 							OR = {
 								has_defensive_pact = prev
 								is_in_federation_with = prev
+								is_guaranteeing = prev
 							}
 							OR = {
 								relative_power = {
@@ -773,6 +777,7 @@ country_event = { #AI-only event
 							OR = {
 								has_defensive_pact = prev
 								is_in_federation_with = prev
+								is_guaranteeing = prev
 							}
 							OR = {
 								relative_power = {

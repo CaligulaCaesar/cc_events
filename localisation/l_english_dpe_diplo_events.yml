@@ -138,6 +138,59 @@ dpe_spiritualist_mission.421.desc:0 "The mission to deliver salvation to the [dp
 
 dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on [dpe_mission_host_planet.GetName] and throughout the [dpe_neighbour.GetName]."
 
+
+
+dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
+dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries’ message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
+dpe_spiritualist_mission.7.A:0 "The mission has done its job, recall it."
+dpe_spiritualist_mission.7.B:0 "Publicly accuse the [dpe_neighbour.GetSpeciesNamePlural]."
+dpe_spiritualist_mission.7.C:0 "The mission will continue, even in the face of adversity."
+
+dpe_spirmission_accused_us:0 "Accused us of Deceitfulness"
+dpe_spirmission_deceived:0 "Obstructing Mission"
+
+dpe_spiritualist_mission.71.name:0 "The [from.GetName] accuses us!"
+dpe_spiritualist_mission.71.desc:0 "Dear [root.GetSpeciesNamePlural], it has come to our attention that you have been obstructing the activities of our mission to provide your people with salvation. Kindly cease doing so, for your own good! It is not to late for your souls to be saved."
+dpe_spiritualist_mission.71.option:0 "How dare you! The activities of the mission cease today."
+
+dpe_spiritualist_mission.72.name:0 "The [from.GetName] responds"
+dpe_spiritualist_mission.72.desc:0 "$dpe_spiritualist_mission.71.desc$"
+dpe_spiritualist_mission.72.option:0 "Poor fools, to reject our enlightenment."
+
+dpe_spiritualist_mission.73.name:0 "The [from.GetSpeciesAdj] Mission leaves!"
+dpe_spiritualist_mission.73.desc:0 "After some limited successes, the [from.GetSpeciesAdj] mission to provide us with their "salvation" has departed, claiming to have achieved its aims. We believe that the [from.GetSpeciesNamePlural] had realised that we were obstructing them and decided that the easiest course of action was to leave. Although the [from.GetSpeciesAdj] ambassador has expressed a certain coolness towards us that he hadn't previously, this is a price worth paying for having contained the spread of their "religion"."
+
+dpe_spiritualist_mission.74.name:0 "Our Obstruction uncovered"
+dpe_spiritualist_mission.74.desc:0 "The recent activities of the [from.GetSpeciesAdj] mission leave no room for doubt: They somehow got wind of our obstruction efforts, and are now attempting to counteract them. However, although they have had some limited success in their mission, our intelligence services assure us that they will be able to keep the situation in hand."
+dpe_spiritualist_mission.74.A:0 "I see."
+dpe_spiritualist_mission.74.B:0 "We should send them home anyway, just in case."
+
+
+dpe_spiritualist_mission.98.name:0 "War with the Missionaries!"
+dpe_spiritualist_mission.98.desc:0 "The war between us and the [dpe_missionary_country.GetName] has put us in an awkward position. They had set up a mission on [dpe_mission_host_planet.GetName], which we now have to decide what to do with. Some have advocated simply deporting them back to their homeland, others want to make a statement by killing them. What should be done?" 
+dpe_spiritualist_mission.98.A:0 "Kill them all, we will show them what happens when they trifle with us!"
+dpe_spiritualist_mission.98.A.tooltip:0 "Relations with all empires not allied in this war: §R-30§!\nRelations with the [dpe_missionary_country.GetName]: §R-100§!"
+dpe_spiritualist_mission.98.B:0 "Send them home. We may be enemies, but we are not savages."
+dpe_spiritualist_mission.98.B.tooltip:0 "Relations with all empires not allied in this war: §G+30§!\nRelations with the [dpe_missionary_country.GetName]: §R+50§!"
+dpe_spiritualist_mission.98.C:0 "Imprison them. They’ve seen too much to be allowed to aid our enemy."
+
+dpe_dishonourable_in_war:0 "Dishonourable in War"
+dpe_killed_missionaries_faction:0 "Murdered missionaries"
+dpe_killed_missionaries_faction1:0 "Killed the enemy agents"
+dpe_honourable_in_war:0 "Honourable in War"
+dpe_not_killed_missionaries_faction:0 "Let enemy agents go"
+
+dpe_spiritualist_mission.981.name:0 "Our Missionaries slaughtered!"
+dpe_spiritualist_mission.981.desc:0 "We have received word that, at the outbreak of war, the heathen [dpe_neighbour.GetSpeciesNamePlural] that we were trying to enlighten slaughtered our missionaries. The people are outraged at this atrocity!"
+dpe_spiritualist_mission.981.option:0 "The savages will pay for this!"
+dpe_spiritualist_mission.982.name:0 "Our Missionaries returned to us!"
+Due to our current conflict with the [dpe_neighbour.GetName], our missionaries have been returned to us. They say they were treated decently, but most of their belongings and materials were confiscated."
+dpe_spiritualist_mission.982.option:0 "Things could be worse, all things considered."
+dpe_spiritualist_mission.983.name:0 "Our Missionaries imprisoned!"
+dpe_spiritualist_mission.983.desc:0 "The recent outbreak of hostilities between us and the [dpe_neighbour.GetName] has led to some unintended consequences. Our attempts to enlighten them have put our citizens in danger. They are currently held in custody on [dpe_mission_host_planet.GetName], and all requests for them to be freed have been ignored."
+dpe_spiritualist_mission.983.option:0 "At least they are still alive."
+
+
 #Xenophile Mission
 
 dpe_xenophile_mission.3.name:0 "Discovery of the [dpe_new_contact.GetName]"

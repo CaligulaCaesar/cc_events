@@ -256,6 +256,12 @@ country_event = {
 						}
 					}
 				}
+				modifier = {
+					factor = 0.8
+					event_target:dpe_new_contact = {
+						NOT = { has_ai_personality_behaviour = multispecies }
+					}
+				}
 			}
 			98 = { country_event = { id = dpe_xenophile_mission.2 days = 21 } }
 		}
@@ -291,13 +297,17 @@ country_event = {
 		ai_chance = {
 			factor = 3
 			modifier = {
-				factor = 2
+				factor = 2.5
 				event_target:dpe_new_contact = {
 					OR = {
 						has_ethic = ethic_xenophile
 						has_ethic = ethic_fanatic_xenophile
 					}
 				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:dpe_new_contact = { is_ai = no }
 			}
 		}
 	}
@@ -314,15 +324,19 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 0
+				factor = 0.75
 				NOR = {
 					has_ethic = ethic_xenophile
 					has_ethic = ethic_fanatic_xenophile
-					event_target:dpe_new_contact = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				event_target:dpe_new_contact = {
+					OR = {
+						NOT = { has_ai_personality_behaviour = multispecies }
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
 			}

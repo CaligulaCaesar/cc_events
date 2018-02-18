@@ -144,3 +144,56 @@ dpe_spiritualist_mission_accepted_mission = {
 		base = 3
 	}
 }
+
+
+dpe_dishonourable_in_war = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = yes
+	
+	min = -100
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_honourable_in_war = {
+	opinion = {
+		base = 30
+	}
+	
+	accumulative = yes
+	
+	max = 50
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spirmission_deceived = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spirmission_accused_us = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}

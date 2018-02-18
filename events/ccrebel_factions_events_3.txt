@@ -2490,86 +2490,43 @@ country_event = {
 				
 					remove_all_ethics = yes
 					#primary ethic
-					if = {
-						limit = { root = { has_country_flag = cc_imperialist_revolt_active } }
-						country_add_ethic = ethic_fanatic_militarist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_prosperity_revolt_active } }
-						country_add_ethic = ethic_fanatic_pacifist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_totalitarian_revolt_active } }
-						country_add_ethic = ethic_fanatic_authoritarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_progressive_revolt_active } }
-						country_add_ethic = ethic_fanatic_egalitarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_technologist_revolt_active } }
-						country_add_ethic = ethic_fanatic_materialist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_traditionalist_revolt_active } }
-						country_add_ethic = ethic_fanatic_spiritualist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_xenoist_revolt_active } }
-						country_add_ethic = ethic_fanatic_xenophile
-					}
-					if = {
-						limit = {
-							root = {
-								OR = {
-									has_country_flag = cc_supremacist_revolt_active
-									has_country_flag = cc_isolationist_revolt_active
-								}
-							}
-						}
-						country_add_ethic = ethic_fanatic_xenophobe
+					switch = {
+						trigger = has_country_flag
+						cc_imperialist_revolt_active = { country_add_ethic = ethic_fanatic_militarist }
+						cc_prosperity_revolt_active = { country_add_ethic = ethic_fanatic_pacifist }
+						cc_totalitarian_revolt_active = { country_add_ethic = ethic_fanatic_authoritarian }
+						cc_progressive_revolt_active = { country_add_ethic = ethic_fanatic_egalitarian }
+						cc_technologist_revolt_active = { country_add_ethic = ethic_fanatic_materialist }
+						cc_traditionalist_revolt_active = { country_add_ethic = ethic_fanatic_spiritualist }
+						cc_xenoist_revolt_active = { country_add_ethic = ethic_fanatic_xenophile }
+						cc_supremacist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
+						cc_isolationist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
+						default = { }
 					}
 					
 					#secondary ethic
-					if = {
-						limit = { root = { has_country_flag = cc_imperialist_secondary_revolt_active } }
-						country_add_ethic = ethic_militarist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_prosperity_secondary_revolt_active } }
-						country_add_ethic = ethic_pacifist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_totalitarian_secondary_revolt_active } }
-						country_add_ethic = ethic_authoritarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_progressive_secondary_revolt_active } }
-						country_add_ethic = ethic_egalitarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_technologist_secondary_revolt_active } }
-						country_add_ethic = ethic_materialist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_traditionalist_secondary_revolt_active } }
-						country_add_ethic = ethic_spiritualist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_xenoist_secondary_revolt_active } }
-						country_add_ethic = ethic_xenophile
-					}
-					if = {
-						limit = {
-							root = {
-								OR = {
-									has_country_flag = cc_supremacist_secondary_revolt_active
-									has_country_flag = cc_isolationist_secondary_revolt_active
-								}
+					switch = {
+						trigger = has_country_flag
+						cc_imperialist_secondary_revolt_active = { country_add_ethic = ethic_militarist }
+						cc_prosperity_secondary_revolt_active = { country_add_ethic = ethic_pacifist }
+						cc_totalitarian_secondary_revolt_active = { country_add_ethic = ethic_authoritarian }
+						cc_progressive_secondary_revolt_active = { country_add_ethic = ethic_egalitarian }
+						cc_technologist_secondary_revolt_active = { country_add_ethic = ethic_materialist }
+						cc_traditionalist_secondary_revolt_active = { country_add_ethic = ethic_spiritualist }
+						cc_xenoist_secondary_revolt_active = { country_add_ethic = ethic_xenophile }
+						cc_supremacist_secondary_revolt_active = {
+							if = {
+								limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+								country_add_ethic = ethic_xenophobe
 							}
-							NOT = { has_ethic = ethic_fanatic_xenophobe }
 						}
-						country_add_ethic = ethic_xenophobe
+						cc_isolationist_secondary_revolt_active = {
+							if = {
+								limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+								country_add_ethic = ethic_xenophobe
+							}
+						}
+						default = { }
 					}
 					
 					if = {
@@ -2983,86 +2940,43 @@ country_event = {
 							
 							
 							#primary ethic
-							if = {
-								limit = { root = { has_country_flag = cc_imperialist_revolt_active } }
-								country_add_ethic = ethic_fanatic_militarist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_prosperity_revolt_active } }
-								country_add_ethic = ethic_fanatic_pacifist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_totalitarian_revolt_active } }
-								country_add_ethic = ethic_fanatic_authoritarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_progressive_revolt_active } }
-								country_add_ethic = ethic_fanatic_egalitarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_technologist_revolt_active } }
-								country_add_ethic = ethic_fanatic_materialist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_traditionalist_revolt_active } }
-								country_add_ethic = ethic_fanatic_spiritualist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_xenoist_revolt_active } }
-								country_add_ethic = ethic_fanatic_xenophile
-							}
-							if = {
-								limit = {
-									root = {
-										OR = {
-											has_country_flag = cc_supremacist_revolt_active
-											has_country_flag = cc_isolationist_revolt_active
-										}
-									}
-								}
-								country_add_ethic = ethic_fanatic_xenophobe
+							switch = {
+								trigger = has_country_flag
+								cc_imperialist_revolt_active = { country_add_ethic = ethic_fanatic_militarist }
+								cc_prosperity_revolt_active = { country_add_ethic = ethic_fanatic_pacifist }
+								cc_totalitarian_revolt_active = { country_add_ethic = ethic_fanatic_authoritarian }
+								cc_progressive_revolt_active = { country_add_ethic = ethic_fanatic_egalitarian }
+								cc_technologist_revolt_active = { country_add_ethic = ethic_fanatic_materialist }
+								cc_traditionalist_revolt_active = { country_add_ethic = ethic_fanatic_spiritualist }
+								cc_xenoist_revolt_active = { country_add_ethic = ethic_fanatic_xenophile }
+								cc_supremacist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
+								cc_isolationist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
+								default = { }
 							}
 							
 							#secondary ethic
-							if = {
-								limit = { root = { has_country_flag = cc_imperialist_secondary_revolt_active } }
-								country_add_ethic = ethic_militarist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_prosperity_secondary_revolt_active } }
-								country_add_ethic = ethic_pacifist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_totalitarian_secondary_revolt_active } }
-								country_add_ethic = ethic_authoritarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_progressive_secondary_revolt_active } }
-								country_add_ethic = ethic_egalitarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_technologist_secondary_revolt_active } }
-								country_add_ethic = ethic_materialist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_traditionalist_secondary_revolt_active } }
-								country_add_ethic = ethic_spiritualist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_xenoist_secondary_revolt_active } }
-								country_add_ethic = ethic_xenophile
-							}
-							if = {
-								limit = {
-									root = {
-										OR = {
-											has_country_flag = cc_supremacist_secondary_revolt_active
-											has_country_flag = cc_isolationist_secondary_revolt_active
-										}
+							switch = {
+								trigger = has_country_flag
+								cc_imperialist_secondary_revolt_active = { country_add_ethic = ethic_militarist }
+								cc_prosperity_secondary_revolt_active = { country_add_ethic = ethic_pacifist }
+								cc_totalitarian_secondary_revolt_active = { country_add_ethic = ethic_authoritarian }
+								cc_progressive_secondary_revolt_active = { country_add_ethic = ethic_egalitarian }
+								cc_technologist_secondary_revolt_active = { country_add_ethic = ethic_materialist }
+								cc_traditionalist_secondary_revolt_active = { country_add_ethic = ethic_spiritualist }
+								cc_xenoist_secondary_revolt_active = { country_add_ethic = ethic_xenophile }
+								cc_supremacist_secondary_revolt_active = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
 									}
-									NOT = { has_ethic = ethic_fanatic_xenophobe }
 								}
-								country_add_ethic = ethic_xenophobe
+								cc_isolationist_secondary_revolt_active = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
+									}
+								}
+								default = { }
 							}
 							
 							if = {
@@ -4251,11 +4165,11 @@ country_event = {
 	id = ccfaction.68
 	title = ccfaction.68.name
 	desc = {
-		trigger = { has_planet_flag = cc_faction_revolt_capital }
+		trigger = { fromfrom = { has_planet_flag = cc_faction_revolt_capital } }
 		text = ccfaction.68.desc.first
 	}
 	desc = {
-		trigger = { has_planet_flag = cc_faction_revolt_planet }
+		trigger = { fromfrom = { has_planet_flag = cc_faction_revolt_planet } }
 		text = ccfaction.68.desc.second
 	}
 	
