@@ -138,10 +138,35 @@ dpe_spiritualist_mission.421.desc:0 "The mission to deliver salvation to the [dp
 
 dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on [dpe_mission_host_planet.GetName] and throughout the [dpe_neighbour.GetName]."
 
+
+dpe_spiritualist_mission.5.name:0 "Our Mission establishes itself successfully"
+dpe_spiritualist_mission.5.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. According to their first reports, the local [dpe_neighbour.GetSpeciesNamePlural] are open to our teaching, and many have converted already! The missionaries will continue their work, and are optimistic that they will be able to offer our salvation to further [dpe_neighbour.GetSpeciesNamePlural] and ensure that spiritualism holds an appropriate role in the [dpe_neighbour.GetSpeciesAdj] state."
+
+
+dpe_spiritualist_mission.59.name:0 "Our Mission establishes itself"
+dpe_spiritualist_mission.59.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. However, they report that they are struggling to get their views across to the local population and haven't attracted much of a following yet. We can only hope that with time they will come to have a greater impact."
+
+dpe_spiritualist_mission.591.name:0 "The [from.GetSpeciesAdj] Mission establishes itself"
+dpe_spiritualist_mission.591.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, they have so far struggled to get their views across to the local population and haven't attracted much of a following yet."
+dpe_spiritualist_mission.591.desc.ally:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances, and the missionaries have established themselves fine. However, they have so far struggled to get their views across to the local population and haven't attracted much of a following yet."
+
+
+dpe_spiritualist_mission.6.name:0 "Our Mission faces Resistance"
+dpe_spiritualist_mission.6.desc:0 "The mission to the [dpe_neighbour.GetName] has been set up, and we have just received the first set of reports. Unfortunately, the locals are not very happy about our teachings. The missionaries mention being harassed, threatened, and even assaulted by local civilians upset at our presence. The local authorities are trying to maintain peace, but a full security team will be necessary to ensure the safety of our mission. Should we persist in our efforts or recall the mission?" 
+dpe_spiritualist_mission.6.A:0 "Recall the mission, the Will of the Divine has been made clear."
+dpe_spiritualist_mission.6.B:0 "We must persist and try to save the [dpe_neighbour.GetSpeciesNamePlural] from themselves!"
+
+
+dpe_spirmission_minor_mission:0 "Spiritualist Missionaries"
+dpe_spirmission_minor_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. However, they have not attracted a large following, so their impact is only moderate."
+dpe_spirmission_major_mission:0 "$dpe_spirmission_minor_mission$"
+dpe_spirmission_major_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. Their words are popular among the people, and many are pulled towards their views."
+
+dpe_spiritualist_mission_planet_success.tooltip:0 "Four £pops pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
 dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Two £pops pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
 
 dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
-dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries’ message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
+dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries' message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
 dpe_spiritualist_mission.7.A:0 "The mission has done its job, recall it."
 dpe_spiritualist_mission.7.B:0 "Publicly accuse the [dpe_neighbour.GetSpeciesNamePlural]."
 dpe_spiritualist_mission.7.C:0 "The mission will continue, even in the face of adversity."
@@ -183,7 +208,7 @@ dpe_spiritualist_mission.98.A:0 "Kill them all, we will show them what happens w
 dpe_spiritualist_mission.98.A.tooltip:0 "Relations with all empires not allied in this war: §R-30§!\nRelations with the [dpe_missionary_country.GetName]: §R-100§!"
 dpe_spiritualist_mission.98.B:0 "Send them home. We may be enemies, but we are not savages."
 dpe_spiritualist_mission.98.B.tooltip:0 "Relations with all empires not allied in this war: §G+30§!\nRelations with the [dpe_missionary_country.GetName]: §R+50§!"
-dpe_spiritualist_mission.98.C:0 "Imprison them. They’ve seen too much to be allowed to aid our enemy."
+dpe_spiritualist_mission.98.C:0 "Imprison them. They've seen too much to be allowed to aid our enemy."
 
 dpe_dishonourable_in_war:0 "Dishonourable in War"
 dpe_killed_missionaries_faction:0 "Murdered missionaries"

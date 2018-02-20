@@ -1747,6 +1747,28 @@ event = {
 							}
 						}
 					}
+					NOT = {
+						count_potential_war_participants = {
+							attacker = prev
+							defender = this
+							side = this
+							limit = {
+								OR = {
+									relative_power = {
+										who = prev
+										category = fleet
+										value = equivalent
+									}
+									relative_power = {
+										who = prev
+										category = fleet
+										value = superior
+									}
+								}
+							}
+							count > 2
+						}
+					}
 				}
 			}
 			set_timed_country_flag = {

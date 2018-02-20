@@ -57,7 +57,7 @@ cc_colony_events.25.A: "Certainement !"
 cc_colony_events.25.B: "C'est beaucoup trop cher."
 cc_colony_events.25.B.tooltip:0 "L'influence de [cc_colony_leader.GetName] se dissipera dans une 30aine d'années."
 cc_colony_events.251.name:0 "Une académie ouvre sur [root.GetName]"
-cc_colony_events.251.desc:0 "L'académie en l'honneur de [cc_colony_leader.GetName] a été construite. Elle comprend une imposante statue du feu dirigeant. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre de l'apprentissage militaire dans le [root.owner.GetName]. De plus, les militaristes et leurs partisans à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GerRulerTitle] à son peuple et à leur service."
+cc_colony_events.251.desc:0 "L'académie en l'honneur de [cc_colony_leader.GetName] a été construite. Elle comprend une imposante statue du feu dirigeant. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre de l'apprentissage militaire dans le [root.owner.GetName]. De plus, les militaristes et leurs partisans à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GetRulerTitle] à son peuple et à leur service."
 
 cc_milacademy_will_be_built:0 "\nL'académie militaire sera finie dans 5 ans. Elle va ajouter le modificateur §Y$cc_milacademy$§!, donnant : \n$MOD_PLANET_FORTIFICATION_STRENGTH$ : §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$ : §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$ : §G+10%§!\n$pop_ethic_militarist_attraction_mult$ : §Y+150%§!"
 
@@ -661,7 +661,7 @@ cc_colony_events.75.B: "$cc_colony_events.25.B$"
 cc_colony_events.75.B.tooltip:0 "L'influence de [cc_colony_leader.GetName] sur la colonie disparaîtra dans 30 ans."
 
 cc_colony_events.751.name:0 "Une Université ouvre sur [root.GetName]"
-cc_colony_events.751.desc:0 "L'université en l'honneur de [cc_colony_leader.GetName] a été construite. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre d'apprentissage dans le [root.owner.GetName]. De plus, les matérialistes à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GerRulerTitle] envers le progrès scientifique."
+cc_colony_events.751.desc:0 "L'université en l'honneur de [cc_colony_leader.GetName] a été construite. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre d'apprentissage dans le [root.owner.GetName]. De plus, les matérialistes à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GetRulerTitle] envers le progrès scientifique."
 
 cc_university_will_be_built:0 "\nL'Université va prendre 5 ans à construire. Elle ajoutera le modificateur §Y$cc_university$§!, donnant :\n$tile_resource_physics_research_mult$ : §G+33%§!\n$tile_resource_society_research_mult$ : §G+33%§!\n$tile_resource_engineering_research_mult$ : §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$ : §G+25%§!\n$pop_ethic_materialist_attraction_mult$ : §Y+150%§!"
 
@@ -869,7 +869,7 @@ cc_cleanup_events.15.name:0 "Le souvenir d'un intellectuel célèbre sur [root.G
 cc_cleanup_events.15.desc:0 "The old owners of [root.GetName] had offended the materialist population on [root.GetName] by not building a university in honour of a prominent intellectual who was native to the planet. Should we build one ourselves?"
 
 cc_cleanup_events.151.name:0 "Une Université ouvre sur [root.GetName]"
-cc_cleanup_events.151.desc:0 "L'Université sur [root.GetName] a été construite. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre d'apprentissage dans le [root.owner.GetName]. De plus, les matérialistes et leurs partisans à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GerRulerTitle] au progrès scientifique."
+cc_cleanup_events.151.desc:0 "L'Université sur [root.GetName] a été construite. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre d'apprentissage dans le [root.owner.GetName]. De plus, les matérialistes et leurs partisans à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GetRulerTitle] au progrès scientifique."
 
 
 cc_cleanup_events.16.name:0 "Principauté sur [root.GetName]"
@@ -896,7 +896,7 @@ cc_cleanup_events.22.name:0 "Souvenir d'un officier naval à la retraite célèb
 cc_cleanup_events.22.desc:0 "The old owners of [root.GetName] had offended the militarist population on [root.GetName] by not building a military academy in honour of a prominent naval officer who had made the planet their home. Should we build one ourselves?"
 
 cc_cleanup_events.23.name:0 "Une Académie militaire ouvre sur [root.GetName]"
-cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people to who service this great nation."
+cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to the people to who service this great nation."
 
 cc_cleanup_events.24.name:0 "Académie military sur [root.GetName]"
 cc_cleanup_events.24.desc:0 "Les anciens propriétaires de [root.GetName] était de construire une académie militaire [root.GetName]. C'est le centre du réseau d'influence militariste de la planète. Devons-nous continuer sa construction ?"

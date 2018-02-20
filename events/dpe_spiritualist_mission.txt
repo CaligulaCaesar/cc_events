@@ -20,7 +20,7 @@ country_event = {
 	title = dpe_spiritualist_mission.2.name
 	desc = dpe_spiritualist_mission.2.desc
 	
-	picture = GFX_cc_priesthood
+	picture = GFX_evt_cc_priesthood
 	location = event_target:dpe_neighbour.capital_scope
 	
 	is_triggered_only = yes
@@ -945,7 +945,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				has_migration_treaty = from
+				has_diplo_migration_treaty = from
 			}
 			modifier = {
 				factor = 2
@@ -973,7 +973,7 @@ country_event = {
 				modifier = dpe_hosting_spiritualist_mission_planet
 				days = -1
 			}
-			add_planet_flag = dpe_hosting_spiritualist_mission_planet@from
+			hidden_effect = { set_planet_flag = dpe_hosting_spiritualist_mission_planet@from }
 		}
 		from = {
 			add_opinion_modifier = {
@@ -1017,6 +1017,7 @@ country_event = {
 							}							
 						}
 					}
+					1 = { country_event = { id = dpe_spiritualist_mission.59 days = 180 random = 45 } }
 					1 = { country_event = { id = dpe_spiritualist_mission.6 days = 180 random = 45 } }
 				}
 			}
@@ -1128,6 +1129,7 @@ country_event = {
 							}							
 						}
 					}
+					1 = { country_event = { id = dpe_spiritualist_mission.59 days = 180 random = 45 } }
 					1 = { country_event = { id = dpe_spiritualist_mission.6 days = 180 random = 45 } }
 				}
 			}
@@ -1167,6 +1169,10 @@ country_event = {
 				modifier = dpe_hosting_spiritualist_mission_planet
 				days = -1
 			}
+		}
+		set_relation_flag = {
+			who = from
+			flag = dpe_spirmission_obstructing
 		}
 		from = {
 			add_opinion_modifier = {
@@ -1211,6 +1217,7 @@ country_event = {
 							}							
 						}
 					}
+					1 = { country_event = { id = dpe_spiritualist_mission.59 days = 180 random = 45 } }
 					2 = { country_event = { id = dpe_spiritualist_mission.6 days = 180 random = 45 } }
 				}
 			}
@@ -1294,7 +1301,7 @@ country_event = {
 	id = dpe_spiritualist_mission.411
 	title = dpe_spiritualist_mission.411.name
 	desc = dpe_spiritualist_mission.411.desc
-	picture = GFX_cc_priesthood
+	picture = GFX_evt_cc_priesthood
 
 	is_triggered_only = yes
 	
@@ -1440,28 +1447,179 @@ country_event = {
 	id = dpe_spiritualist_mission.421
 	title = dpe_spiritualist_mission.421.name
 	desc = dpe_spiritualist_mission.421.desc
-	picture = GFX_cc_priesthood
+	picture = GFX_evt_cc_priesthood
 
 	is_triggered_only = yes
 	
-	option = { OK }
+	option = { name = OK }
 }
 
 
 country_event = {
 	id = dpe_spiritualist_mission.5
+	title = dpe_spiritualist_mission.5.name
+	desc = dpe_spiritualist_mission.5.desc
+	
+	picture = GFX_evt_cc_priesthood
 	
 	is_triggered_only = yes
 
-	stuff
+	trigger = {
+		any_country = {
+			root = {
+				has_relation_flag = {
+					who = prev
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+		}
+	}
+
+	immediate = {
+		event_target:dpe_mission_host_planet = {
+			while = {
+				count = 4
+				random_pop = {
+					limit = {
+						has_a_happiness_gauge = yes
+						NOT = { has_ethic = ethic_spiritualist }
+					}
+					pop_change_ethic = ethic_spiritualist
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = CCEXCELLENT
+		custom_tooltip = dpe_spiritualist_mission_planet_success.tooltip
+		
+		tooltip = {
+			from = {
+				add_modifier = {
+					modifier = dpe_spirmission_major_mission
+					days = -1
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_spiritualist_mission.51 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.59
+	title = dpe_spiritualist_mission.59.name
+	desc = dpe_spiritualist_mission.59.desc
+	
+	picture = GFX_evt_cc_priesthood
+	
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			root = {
+				has_relation_flag = {
+					who = prev
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+		
+		tooltip = {
+			from = {
+				add_modifier = {
+					modifier = dpe_spirmission_minor_mission
+					days = -1
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_spiritualist_mission.591 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.591
+	title = dpe_spiritualist_mission.591.name
+	desc = {
+		trigger = {
+			NOR = {
+				has_defensive_pact = from
+				is_in_federation_with = from
+			}
+		}
+		text = dpe_spiritualist_mission.591.desc.normal
+	}
+	desc = {
+		trigger = {
+			OR = {
+				has_defensive_pact = from
+				is_in_federation_with = from
+			}
+		}
+		text = dpe_spiritualist_mission.591.desc.ally
+	}
+	
+	picture = GFX_evt_cc_priesthood
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		
+		add_modifier = {
+			modifier = dpe_spirmission_minor_mission
+			days = -1
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_spiritualist_mission.10 days = 3600 }
+			}
+		}
+	}
 }
 
 country_event = {
 	id = dpe_spiritualist_mission.6
+	title = dpe_spiritualist_mission.6.name
+	desc = dpe_spiritualist_mission.6.desc
+	
+	picture = GFX_evt_alien_propaganda
 	
 	is_triggered_only = yes
 
-	stuff
+	trigger = {
+		any_country = {
+			root = {
+				has_relation_flag = {
+					who = prev
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_spiritualist_mission.6.A
+		stuff = yes
+		
+	}
+	option = {
+		name = dpe_spiritualist_mission.6.B
+		stuff = yes
+		
+	}
 }
 	
 	
@@ -1470,7 +1628,7 @@ country_event = {
 	title = dpe_spiritualist_mission.7.name
 	desc = dpe_spiritualist_mission.7.desc
 	
-	picture = GFX_cc_priesthood
+	picture = GFX_evt_cc_priesthood
 	
 	is_triggered_only = yes
 	
@@ -1489,6 +1647,18 @@ country_event = {
 		add_opinion_modifier = {
 			who = from
 			modifier = dpe_spirmission_deceived
+		}
+		event_target:dpe_mission_host_planet = {
+			while = {
+				count = 2
+				random_pop = {
+					limit = {
+						has_a_happiness_gauge = yes
+						NOT = { has_ethic = ethic_spiritualist }
+					}
+					pop_change_ethic = ethic_spiritualist
+				}
+			}
 		}
 	}
 	
@@ -1598,20 +1768,6 @@ country_event = {
 		name = dpe_spiritualist_mission.71.option
 		
 		custom_tooltip = dpe_spiritualist_mission_planet_mid_success.tooltip
-		hidden_effect = {
-			event_target:dpe_mission_host_planet = {
-				while = {
-					count = 2
-					random_pop = {
-						limit = {
-							has_a_happiness_gauge = yes
-							NOT = { has_ethic = ethic_spiritualist }
-						}
-						pop_change_ethic = ethic_spiritualist
-					}
-				}
-			}
-		}
 		
 		event_target:dpe_mission_host_planet = {
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
@@ -1680,7 +1836,7 @@ country_event = {
 	title = dpe_spiritualist_mission.73.name
 	desc = dpe_spiritualist_mission.73.desc
 	
-	picture = GFX_hangar_bay
+	picture = GFX_evt_hangar_bay
 	
 	is_triggered_only = yes
 	
@@ -1691,20 +1847,6 @@ country_event = {
 		name = CCEXCELLENT
 		
 		custom_tooltip = dpe_spiritualist_mission_planet_mid_success.tooltip
-		hidden_effect = {
-			event_target:dpe_mission_host_planet = {
-				while = {
-					count = 2
-					random_pop = {
-						limit = {
-							has_a_happiness_gauge = yes
-							NOT = { has_ethic = ethic_spiritualist }
-						}
-						pop_change_ethic = ethic_spiritualist
-					}
-				}
-			}
-		}
 		event_target:dpe_mission_host_planet = {
 			remove_modifier = dpe_hosting_spiritualist_mission_planet
 			hidden_effect = { remove_planet_flag = dpe_hosting_spiritualist_mission_planet@event_target:dpe_missionary_country }
@@ -1727,7 +1869,7 @@ country_event = {
 	title = dpe_spiritualist_mission.74.name
 	desc = dpe_spiritualist_mission.74.desc
 	
-	picture = GFX_cc_priesthood
+	picture = GFX_evt_cc_priesthood
 	
 	is_triggered_only = yes
 	
@@ -1739,18 +1881,6 @@ country_event = {
 		
 		custom_tooltip = dpe_spiritualist_mission_planet_mid_success.tooltip
 		hidden_effect = {
-			event_target:dpe_mission_host_planet = {
-				while = {
-					count = 2
-					random_pop = {
-						limit = {
-							has_a_happiness_gauge = yes
-							NOT = { has_ethic = ethic_spiritualist }
-						}
-						pop_change_ethic = ethic_spiritualist
-					}
-				}
-			}
 			from = {
 				country_event = { id = dpe_spiritualist_mission.10 days = 3600 }
 			}
@@ -1904,7 +2034,7 @@ country_event = {
 	title = dpe_spiritualist_mission.971.name
 	desc = dpe_spiritualist_mission.971.desc
 	
-	picture = GFX_hangar_bay
+	picture = GFX_evt_hangar_bay
 	
 	trigger = {
 		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@root }
@@ -1935,8 +2065,24 @@ country_event = {
 				who = root
 			}
 			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			if = {
 				limit = { has_modifier = dpe_spirmission_minor_mission }
 				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
 			}
 			country_event = { id = dpe_spiritualist_mission.972 }
 		}
@@ -1951,7 +2097,7 @@ country_event = {
 	title = dpe_spiritualist_mission.972.name
 	desc = dpe_spiritualist_mission.972.desc
 	
-	picture = GFX_hangar_bay
+	picture = GFX_evt_hangar_bay
 	
 	is_triggered_only = yes
 
@@ -1967,6 +2113,8 @@ country_event = {
 	id = dpe_spiritualist_mission.98
 	title = dpe_spiritualist_mission.98.name
 	desc = dpe_spiritualist_mission.98.desc
+	
+	picture = GFX_evt_cc_priesthood
 	
 	is_triggered_only = yes
 	
@@ -2024,11 +2172,26 @@ country_event = {
 		}
 		
 		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			remove_relation_flag = {
+				who = from
+				flag = dpe_spirmission_obstructing
+			}
+		}
+		
+		if = {
 			limit = { has_modifier = dpe_spirmission_minor_mission }
 			remove_modifier = dpe_spirmission_minor_mission
 		}
-		
-		get rid of all the previous modifiers!
+		if = {
+			limit = { has_modifier = dpe_spirmission_major_mission }
+			remove_modifier = dpe_spirmission_major_mission
+		}
 	}
 	
 	option = {
@@ -2068,24 +2231,30 @@ country_event = {
 			limit = { has_faction = traditionalist }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = traditionalist }
-				add_modifier = dpe_killed_missionaries_faction
-				days = 3600
+				add_modifier = {
+					modifier = dpe_killed_missionaries_faction
+					days = 3600
+				}
 			}
 		}
 		if = {
 			limit = { has_faction = imperialist }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = imperialist }
-				add_modifier = dpe_killed_missionaries_faction1
-				days = 3600
+				add_modifier = {
+					modifier = dpe_killed_missionaries_faction1
+					days = 3600
+				}
 			}
 		}
 		if = {
 			limit = { has_faction = totalitarian }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = dpe_killed_missionaries_faction1
-				days = 3600
+				add_modifier = {
+					modifier = dpe_killed_missionaries_faction1
+					days = 3600
+				}
 			}
 		}
 		ai_chance = {
@@ -2203,16 +2372,20 @@ country_event = {
 			limit = { has_faction = imperialist }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = imperialist }
-				add_modifier = dpe_not_killed_missionaries_faction
-				days = 3600
+				add_modifier = {
+					modifier = dpe_not_killed_missionaries_faction
+					days = 3600
+				}
 			}
 		}
 		if = {
 			limit = { has_faction = totalitarian }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = dpe_not_killed_missionaries_faction
-				days = 3600
+				add_modifier = {
+					modifier = dpe_not_killed_missionaries_faction
+					days = 3600
+				}
 			}
 		}
 		ai_chance = {
@@ -2254,7 +2427,7 @@ country_event = {
 					has_ethic = ethic_xenophile
 					has_ethic = ethic_pacifist
 				}
-				has_ai_personality = federation_builder
+				has_ai_personality = federation_builders
 			}
 			modifier = {
 				factor = 2
@@ -2278,6 +2451,8 @@ country_event = {
 	title = dpe_spiritualist_mission.981.name
 	desc = dpe_spiritualist_mission.981.desc
 	
+	picture = GFX_evt_cc_execution
+
 	is_triggered_only = yes
 	
 	option = { name = dpe_spiritualist_mission.981.option }
@@ -2288,6 +2463,8 @@ country_event = {
 	title = dpe_spiritualist_mission.982.name
 	desc = dpe_spiritualist_mission.982.desc
 	
+	picture = GFX_evt_cc_priesthood
+
 	is_triggered_only = yes
 	
 	option = { name = dpe_spiritualist_mission.982.option }
@@ -2298,6 +2475,8 @@ country_event = {
 	title = dpe_spiritualist_mission.983.name
 	desc = dpe_spiritualist_mission.983.desc
 	
+	picture = GFX_evt_cc_priesthood
+
 	is_triggered_only = yes
 	
 	option = { name = dpe_spiritualist_mission.983.option }
