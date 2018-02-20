@@ -3099,6 +3099,14 @@ planet_event = {
 		remove_all_faction_sympathies = yes
 		remove_all_faction_seditions = yes
 		remove_all_seditious_talk = yes
+		
+		#Added for Spiritualist Mission
+		if = {
+			limit = {
+				has_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+			planet_event = { id = dpe_spiritualist_mission.963 }
+		}
 	}
 }
 
@@ -3145,5 +3153,22 @@ planet_event = {
 		remove_all_faction_sympathies = yes
 		remove_all_faction_seditions = yes
 		remove_all_seditious_talk = yes
+		
+		#Added for Spiritualist Mission
+		if = {
+			limit = {
+				controller = { is_country_type = "ai_empire" }
+				has_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+			planet_event = { id = dpe_spiritualist_mission.961 }
+		}
+
+		if = {
+			limit = {
+				controller = { is_country_type = "swarm" }
+				has_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+			planet_event = { id = dpe_spiritualist_mission.962 }
+		}
 	}
 }

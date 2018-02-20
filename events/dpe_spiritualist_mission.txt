@@ -2006,7 +2006,283 @@ country_event = {
 }
 
 
-Add events for Crises capturing planets!
+#Contingency
+planet_event = {
+	id = dpe_spiritualist_mission.961
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@prev } }
+			
+			country_event = { id = dpe_spiritualist_mission.9611 }
+			
+		}	
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.9611
+	title = dpe_spiritualist_mission.9611.name
+	desc = dpe_spiritualist_mission.9611.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	trigger = {
+		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@root }
+		any_country = {
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			save_event_target_as = dpe_mission_host_planet
+			remove_modifier = dpe_hosting_spiritualist_mission_planet
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+		}
+
+		random_country = {
+			limit = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+			remove_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			country_event = { id = dpe_spiritualist_mission.9612 }
+		}
+	}
+
+	option = { name = UNFORTUNATE }
+}
+
+
+country_event = {
+	id = dpe_spiritualist_mission.9612
+	title = dpe_spiritualist_mission.9612.name
+	desc = dpe_spiritualist_mission.9612.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	option = { name = UNFORTUNATE }
+}
+
+#Swarm
+planet_event = {
+	id = dpe_spiritualist_mission.962
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@prev } }
+			
+			country_event = { id = dpe_spiritualist_mission.9621 }
+			
+		}	
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.9621
+	title = dpe_spiritualist_mission.9621.name
+	desc = dpe_spiritualist_mission.9621.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	trigger = {
+		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@root }
+		any_country = {
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			save_event_target_as = dpe_mission_host_planet
+			remove_modifier = dpe_hosting_spiritualist_mission_planet
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+		}
+
+		random_country = {
+			limit = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+			remove_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			country_event = { id = dpe_spiritualist_mission.9622 }
+		}
+	}
+
+	option = { name = UNFORTUNATE }
+}
+
+
+country_event = {
+	id = dpe_spiritualist_mission.9622
+	title = dpe_spiritualist_mission.9622.name
+	desc = dpe_spiritualist_mission.9622.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	option = { name = UNFORTUNATE }
+}
+
+#Extradimensionals
+planet_event = {
+	id = dpe_spiritualist_mission.963
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@prev } }
+			
+			country_event = { id = dpe_spiritualist_mission.9631 }
+			
+		}	
+	}
+}
+country_event = {
+	id = dpe_spiritualist_mission.9631
+	title = dpe_spiritualist_mission.9631.name
+	desc = dpe_spiritualist_mission.9631.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	trigger = {
+		from = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@root }
+		any_country = {
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			save_event_target_as = dpe_mission_host_planet
+			remove_modifier = dpe_hosting_spiritualist_mission_planet
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+		}
+
+		random_country = {
+			limit = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_spiritualist_mission_received
+				}
+			}
+			remove_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			country_event = { id = dpe_spiritualist_mission.9632 }
+		}
+	}
+
+	option = { name = UNFORTUNATE }
+}
+
+
+country_event = {
+	id = dpe_spiritualist_mission.9632
+	title = dpe_spiritualist_mission.9632.name
+	desc = dpe_spiritualist_mission.9632.desc
+	
+	picture = GFX_evt_city_ruins
+	
+	is_triggered_only = yes
+
+	option = { name = UNFORTUNATE }
+}
 
 #Fired whenever a new owner is set for a planet,
 #be it after a war or through a trade
