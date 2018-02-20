@@ -1,8 +1,23 @@
 
 namespace = cctest
 
-country_event = {
+event = {
 	id = cctest.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { is_ai = no }
+			country_event = { id = cctest.11 }
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.15
 	
 	hide_window = yes
 	is_triggered_only = yes
@@ -17,7 +32,6 @@ country_event = {
 		}
 	}
 }
-
 
 country_event = {
 	id = cctest.2
@@ -112,3 +126,7 @@ country_event = {
 		}
 	}
 }
+
+
+
+	
