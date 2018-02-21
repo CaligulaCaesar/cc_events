@@ -2122,7 +2122,7 @@ country_event = {
 		hidden_effect = {
 			from = {
 				country_event = { id = dpe_spiritualist_mission.63 days = 19 }
-				country_event = { id = dpe_spiritualist_mission.64 days = 360 } }
+				country_event = { id = dpe_spiritualist_mission.64 days = 360 }
 			}
 		}
 
@@ -2325,7 +2325,7 @@ country_event = {
 	option = {
 		name = CCGOOD
 		
-		hidden_effect = { from = { country_event = dpe_spiritualist_mission.65 } }
+		hidden_effect = { from = { country_event = { id = dpe_spiritualist_mission.65 } } }
 	}
 }
 
@@ -2341,7 +2341,7 @@ country_event = {
 	option = {
 		name = CCGOOD
 		
-		hidden_effect = { from = { country_event = dpe_spiritualist_mission.10 days = 3240 } }
+		hidden_effect = { from = { country_event = { id = dpe_spiritualist_mission.10 days = 3240 } } }
 	}
 }
 	
@@ -3462,8 +3462,6 @@ country_event = {
 #Country sending missionaries dies
 country_event = {
 	id = dpe_spiritualist_mission.99
-	title = dpe_spiritualist_mission.99.name
-	desc = dpe_spiritualist_mission.99.desc
 	
 	hide_window = yes
 	is_triggered_only = yes
