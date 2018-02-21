@@ -68,7 +68,6 @@ dpe_diplo.101.option:0 "Prepare for War!"
 
 #Spiritualist Mission
 
-
 dpe_spiritualist_mission.2.name:0 "Send a Mission to the [dpe_neighbour.GetName]?"
 dpe_spiritualist_mission.2.desc:0 "Many of our stellar neighbours don't seem to be believers in any religion. Some even seem to worship their machines and inventions. A group within the clergy have discussed sending missions to save the souls of these unfortune and misguided xenos. Currently, most of the discussion is centered around the [dpe_neighbour.GetName]. Shall we authorise the mission to go and spread the good word amongst the [dpe_neighbour.GetSpeciesNamePlural]?"
 dpe_spiritualist_mission.2.A:0 "Yes, we must offer them enlightenment."
@@ -142,6 +141,17 @@ dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on
 dpe_spiritualist_mission.5.name:0 "Our Mission establishes itself successfully"
 dpe_spiritualist_mission.5.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. According to their first reports, the local [dpe_neighbour.GetSpeciesNamePlural] are open to our teaching, and many have converted already! The missionaries will continue their work, and are optimistic that they will be able to offer our salvation to further [dpe_neighbour.GetSpeciesNamePlural] and ensure that spiritualism holds an appropriate role in the [dpe_neighbour.GetSpeciesAdj] state."
 
+dpe_spiritualist_mission.51.name:0 "The [dpe_missionary_country.GetSpeciesAdj] Mission establishes itself successfully"
+dpe_spiritualist_mission.51.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, but they've also noticed something that may be concerning: A sizeable portion of the local population is actually partaking in the ceremonies and rituals that the missionaries put on. It seems like this religion of theirs may be catching on. Should we tolerate this?"
+dpe_spiritualist_mission.51.desc.ally:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances. The missionaries have established themselves fine, and in fact, they have found many [root.GetSpeciesNamePlural] to be receptive to their message. However, there are those within our population who worry that part of [root.GetSpeciesAdj] identity could be lost of the missionaries are allowed to continue to have free reign. How should we react?"
+dpe_spiritualist_mission.51.normal.A:0 "If we were afraid of their religion, we shouldn't have let them in in the first place."
+dpe_spiritualist_mission.51.normal.B:0 "Send them home - we never thought that anyone would actually fall for their ludicrous space cult!"
+dpe_spiritualist_mission.51.ally.A:0 "Of course they may stay."
+dpe_spiritualist_mission.51.ally.B:0 "We should find an excuse to send them home."
+
+dpe_spiritualist_mission.52.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
+dpe_spiritualist_mission.52.desc:0 "Dear [root.GetSpeciesNamePlural]... we regret to inform you that we must send your mission to us home. Although they had many interesting things to tell us, we have discovered that their presence violates an ancient [from.GetSpeciesAdj] law regulating the propagation of foreign ideologies. Please don't hold this against us."
+dpe_spiritualist_mission.52.option:0 "So you don't want our Salvation?"
 
 dpe_spiritualist_mission.59.name:0 "Our Mission establishes itself"
 dpe_spiritualist_mission.59.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. However, they report that they are struggling to get their views across to the local population and haven't attracted much of a following yet. We can only hope that with time they will come to have a greater impact."
@@ -156,6 +166,28 @@ dpe_spiritualist_mission.6.desc:0 "The mission to the [dpe_neighbour.GetName] ha
 dpe_spiritualist_mission.6.A:0 "Recall the mission, the Will of the Divine has been made clear."
 dpe_spiritualist_mission.6.B:0 "We must persist and try to save the [dpe_neighbour.GetSpeciesNamePlural] from themselves!"
 
+dpe_spiritualist_mission.601.name:0 "The [from.GetSpeciesNamePlural] recall their Mission"
+dpe_spiritualist_mission.601.desc:0 "The [from.GetSpeciesAdj] mission has been recalled by their government due to tensions with the locals on [dpe_mission_host_planet.GetName]. Following a series of unfortunate occurences, it was deemed too dangerous to allow the mission to continue. The situation on [dpe_mission_host_planet.GetName] is quickly returning to normal, and the local officials are confident that order will be fully restored."
+dpe_spiritualist_mission.601.option:0 "It is the probably for the best."
+
+
+dpe_spiritualist_mission.61.name:0 "Resistance to the [dpe_missionary_country.GetSpeciesAdj] Mission"
+dpe_spiritualist_mission.61.desc:0 "The local officials near the mission on [dpe_mission_host_planet.GetName] have reported a plethora of issues stemming from the presence of the [dpe_missionary_country.GetSpeciesAdj] mission, which has not been received well. Harassment, intimidation, destruction of property, and graffiti are just the beginning of a long list of problems that have arisen recently. So far, the local law enforcement has done its best to keep things calm as they waited for us to make an official decision on the matter. However, many advisors raise concerns that the situation could escalate rapidly, as local security officers are faced with the dilemma of either protecting their own beliefs or maintaining law and order. For their part, the [dpe_missionary_country.GetSpeciesNamePlural] have expressed the firm intention of keeping on with their mission."
+dpe_spiritualist_mission.61.A:0 "Send them home to stop the situation from escalating."
+dpe_spiritualist_mission.61.B:0 "We will try to protect the missionaries, but they stay at their own risk."
+
+dpe_spiritualist_mission.62.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
+dpe_spiritualist_mission.62.desc:0 "The situation on [dpe_mission_host_planet.GetName] has deteriorated beyond our control. We must send your mission home to avoid destabilising the planet."
+dpe_spiritualist_mission.62.option.A:0 "A shame - all we wanted was your Salvation."
+dpe_spiritualist_mission.62.option.B:0 "How dare you."
+
+
+dpe_spiritualist_mission.64.name:0 "The Situation on [dpe_mission_host_planet.GetName] stabilises"
+dpe_spiritualist_mission.64.desc:0 "Fortunately, the situation surrounding our mission on [dpe_mission_host_planet.GetName] has calmed down. The locals have become slightly more accepting of our presence, and the missionaries have learned their boundaries. It seems we have reached a delicate equilibrium."
+dpe_spiritualist_mission.65.name:0 "$dpe_spiritualist_mission.64.name$"
+dpe_spiritualist_mission.65.desc:0 "Fortunately, the situation surrounding the [dpe_missionary_country.GetSpeciesAdj] mission on [dpe_mission_host_planet.GetName] has calmed down. The locals have become slightly more accepting of the xenos, and the xenos have learned their boundaries. It seems we have reached a delicate equilibrium."
+
+dpe_spirmission_sent_mission_home:0 "Sent Mission Home"
 
 dpe_spirmission_minor_mission:0 "Spiritualist Missionaries"
 dpe_spirmission_minor_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. However, they have not attracted a large following, so their impact is only moderate."
@@ -241,6 +273,15 @@ dpe_spiritualist_mission.982.option:0 "Things could be worse, all things conside
 dpe_spiritualist_mission.983.name:0 "Our Missionaries imprisoned!"
 dpe_spiritualist_mission.983.desc:0 "The recent outbreak of hostilities between us and the [dpe_neighbour.GetName] has led to some unintended consequences. Our attempts to enlighten them have put our citizens in danger. They are currently held in custody on [dpe_mission_host_planet.GetName], and all requests for them to be freed have been ignored."
 dpe_spiritualist_mission.983.option:0 "At least they are still alive."
+
+dpe_spiritualist_mission.991.name:0 "The [LastKilledCountryName] collapses!"
+dpe_spiritualist_mission.991.desc:0 "The [LastKilledCountryName] has collapsed in the face of all its struggles. Their missionaries now have no home to return to. What should we do about them?"
+dpe_spiritualist_mission.991.A:0 "Grant them citizenship, it's the least we can do."
+dpe_spiritualist_mission.991.B:0 "They will make good slaves."
+dpe_spiritualist_mission.991.C:0 "They will have to find their new home elsewhere." 
+
+dpe_missionary_planet:0 "Settled Missionaries"
+dpe_missionary_planet_desc:0 "Former missionaries from a fallen neighbour have made this planet their home."
 
 
 #Xenophile Mission

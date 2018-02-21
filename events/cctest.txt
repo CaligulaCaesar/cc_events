@@ -1,23 +1,11 @@
 
 namespace = cctest
 
-event = {
-	id = cctest.1
-	
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		random_country = {
-			limit = { is_ai = no }
-			country_event = { id = cctest.11 }
-		}
-	}
-}
+
 
 
 country_event = {
-	id = cctest.15
+	id = cctest.1
 	
 	hide_window = yes
 	is_triggered_only = yes

@@ -137,6 +137,7 @@ country_event = {
 	
 	
 	trigger = {
+		NOT = { has_global_flag = irm_main_on } #disables for Imperial Routine mod as that messes with factions
 		NOT = { has_country_flag = cc_recent_factional_revolt }
 		is_country_type = default
 		num_owned_planets > 5

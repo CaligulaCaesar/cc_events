@@ -32,7 +32,7 @@ dpe_militarist_unrest = {
 	pop_ethic_militarist_attraction_mult = 0.8
 	planet_unrest_add = 30
 	
-	icon_frame = 1
+	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
 }
 
@@ -52,6 +52,14 @@ dpe_hosting_spiritualist_mission_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_spiritualist.dds"
 }
 
+dpe_missionary_planet = {
+	pop_ethic_spiritualist_attraction_mult = 0.8
+	planet_resource_unity_add = 2
+	
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_good_spiritualist.dds"
+}
+
 dpe_rejected_xenophile_mission_faction = { faction_happiness = -0.1 }
 
 dpe_killed_missionaries_faction = { faction_happiness = -0.2 }
@@ -60,3 +68,12 @@ dpe_not_killed_missionaries_faction = { faction_happiness = -0.1 }
 
 dpe_spirmission_minor_mission = { pop_ethic_spiritualist_attraction_mult = 0.4 }
 dpe_spirmission_major_mission = { pop_ethic_spiritualist_attraction_mult = 0.8 }
+
+dpe_hosting_spirmission_planet_turbulence = {
+	pop_ethic_xenophobe_attraction_mult = 2
+	planet_unrest_add = 25
+
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
+	

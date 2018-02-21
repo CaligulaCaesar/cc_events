@@ -461,6 +461,11 @@ remove_all_political_colony_modifiers = {
 		limit = { has_modifier = cc_spiritualists_offended }
 		remove_modifier = cc_spiritualists_offended
 	}
+	
+	if = {
+		limit = { has_modifier = dpe_missionary_planet }
+		remove_modifier = dpe_missionary_planet
+	}
 }
 
 remove_rebel_irrelevant_political_colony_modifiers = {

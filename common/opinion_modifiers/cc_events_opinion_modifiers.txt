@@ -197,3 +197,17 @@ dpe_spirmission_accused_us = {
 		base = 3
 	}
 }
+
+dpe_spirmission_sent_mission_home = {
+	opinion = {
+		base = -20
+	}
+	
+	accumulative = yes
+	
+	min = -50
+	
+	decay = {
+		base = 3
+	}
+}
