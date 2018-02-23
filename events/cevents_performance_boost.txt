@@ -229,7 +229,7 @@ event = {
 				}
 				any_war = {
 					is_war_participant = { who = prev side = attackers }
-					attacker_war_score > 60
+					defender_war_exhaustion > 60
 
 					NOT = {
 						prev = {
@@ -2091,7 +2091,7 @@ country_event = {
 			factor = 0.5
 			any_war = {
 				is_war_participant = { who = root side = attackers }
-				attacker_war_score > 80
+				defender_war_exhaustion > 80
 			}
 		}
 	}
@@ -2113,7 +2113,7 @@ planet_event = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 	}
 	
 	mean_time_to_happen = {

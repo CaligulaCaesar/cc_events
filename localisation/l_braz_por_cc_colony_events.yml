@@ -59,7 +59,7 @@ cc_colony_events.25.B.tooltip:0 "A influência de [cc_colony_leader.GetName] des
 cc_colony_events.251.name:0 "Academia abre em [root.GetName]"
 cc_colony_events.251.desc:0 "A academia militar em honra de [cc_colony_leader.GetName] foi terminada. Possui uma estátua proeminente do líder agora falecido. Sua abertura foi recebida com alegria pelos habitantes da colônia, que sentem que [root.GetName] foi colocado no mapa como importante centro de aprendizagem militar dentro de [root.owner.GetName]. Além disso, os membros do serviço e seus apoiadores [root.owner.GetName] estão satisfeitos com a prova da dedicação [root.owner.GetRulerTitle] por seus súditos que servem esta extraordinária nação."
 
-cc_milacademy_will_be_built:0 "\nA Academia Militar vai levar 5 anos para ficar pronta. Adicionará o efeito §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nA Academia Militar vai levar 5 anos para ficar pronta. Adicionará o efeito §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 cc_founder_militarist:0 "Enviado Planetário"
 cc_founder_militarist_desc:0 "Esta colônia é governada por um oficial naval aposentado que recebeu o título de 'Enviado'."
@@ -896,7 +896,7 @@ cc_cleanup_events.23.desc:0 "A Academia em [root.GetName] está pronta. Possui u
 
 cc_cleanup_events.24.name:0 "Academia Militar em construção em [root.GetName]"
 cc_cleanup_events.24.desc:0 "Os antigos senhores de [root.GetName] começaram a construir uma grande academia em [root.GetName]. Quando terminada ela será o centro da influente Rede Planetária de Militares. Gostaria de terminar a construção?"
-cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 

@@ -20,7 +20,7 @@ country_event = {
 		
 		any_war = {
 			is_war_participant = { who = root side = attackers }
-			attacker_war_score > 60
+			defender_war_exhaustion > 60
 
 			NOT = {
 				root = {

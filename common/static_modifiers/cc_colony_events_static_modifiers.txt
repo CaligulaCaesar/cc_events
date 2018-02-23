@@ -442,8 +442,9 @@ cc_underground_authoritarian_movement_2 = {
 
 
 cc_founder_militarist = {
-	planet_fortification_strength = 0.5
+	planet_orbital_bombardment_damage = -0.15
 	planet_army_build_speed_mult = 0.25
+	planet_army_build_cost_mult = -0.1
 	pop_citizen_happiness = 0.05
 	pop_ethic_militarist_attraction_mult = 1.5
 	icon_frame = 1
@@ -451,8 +452,9 @@ cc_founder_militarist = {
 }
 
 cc_militarist_influence = {
-	planet_fortification_strength = 0.25
+	planet_orbital_bombardment_damage = -0.1
 	planet_army_build_speed_mult = 0.15
+	planet_army_build_cost_mult = -0.05
 	pop_ethic_militarist_attraction_mult = 0.8
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_legate.dds"
@@ -488,7 +490,7 @@ cc_underground_militarist_movement_2 = {
 
 cc_militarists_offended = {
 	pop_happiness = -0.2
-	planet_fortification_strength = -0.5
+	planet_army_build_speed_mult = -0.5
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
 }
@@ -506,8 +508,9 @@ cc_building_milacademy = {
 }
 
 cc_milacademy = {
-	planet_fortification_strength = 0.75
+	planet_orbital_bombardment_damage = -0.2
 	planet_army_build_speed_mult = 0.5
+	planet_army_build_cost_mult = -0.15
 	pop_citizen_happiness = 0.1
 	pop_ethic_militarist_attraction_mult = 1.5
 	icon_frame = 1

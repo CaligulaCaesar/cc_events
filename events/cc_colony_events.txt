@@ -1715,7 +1715,7 @@ planet_event = {
 		has_owner = yes
 		exists = controller
 		controller = { is_same_value = root.owner }
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_pacifist
 		owner = {
@@ -3484,7 +3484,7 @@ planet_event = {
 		has_owner = yes
 		exists = controller
 		controller = { is_same_value = root.owner }
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
 		owner = {
@@ -3622,7 +3622,7 @@ planet_event = {
 		has_owner = yes
 		exists = controller
 		controller = { is_same_value = root.owner }
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
 		owner = {
@@ -5366,7 +5366,7 @@ planet_event = {
 		has_owner = yes
 		exists = controller
 		controller = { is_same_value = root.owner }
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_spiritualist
 		owner = {
@@ -7767,7 +7767,7 @@ planet_event = {
 			}
 		}
 		
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 	
 		NOT = { has_planet_flag = cc_colony_story }
 		count_pops = {

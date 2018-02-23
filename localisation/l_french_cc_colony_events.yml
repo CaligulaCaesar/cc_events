@@ -59,7 +59,7 @@ cc_colony_events.25.B.tooltip:0 "L'influence de [cc_colony_leader.GetName] se di
 cc_colony_events.251.name:0 "Une académie ouvre sur [root.GetName]"
 cc_colony_events.251.desc:0 "L'académie en l'honneur de [cc_colony_leader.GetName] a été construite. Elle comprend une imposante statue du feu dirigeant. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre de l'apprentissage militaire dans le [root.owner.GetName]. De plus, les militaristes et leurs partisans à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GetRulerTitle] à son peuple et à leur service."
 
-cc_milacademy_will_be_built:0 "\nL'académie militaire sera finie dans 5 ans. Elle va ajouter le modificateur §Y$cc_milacademy$§!, donnant : \n$MOD_PLANET_FORTIFICATION_STRENGTH$ : §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$ : §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$ : §G+10%§!\n$pop_ethic_militarist_attraction_mult$ : §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nL'académie militaire sera finie dans 5 ans. Elle va ajouter le modificateur §Y$cc_milacademy$§!, donnant : \n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$ : §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$ : §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$ : §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$ : §G+10%§!\n$pop_ethic_militarist_attraction_mult$ : §Y+150%§!"
 
 cc_founder_militarist:0 "Légat Planétaire"
 cc_founder_militarist_desc:0 "Cette colonie est gouvernée par un officier de la flotte à la retraite auquel on a donné le titre de "Légat"."
@@ -900,7 +900,7 @@ cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. I
 
 cc_cleanup_events.24.name:0 "Académie military sur [root.GetName]"
 cc_cleanup_events.24.desc:0 "Les anciens propriétaires de [root.GetName] était de construire une académie militaire [root.GetName]. C'est le centre du réseau d'influence militariste de la planète. Devons-nous continuer sa construction ?"
-cc_cleanup_events.24.tooltip:0 "\nUne fois construite, l'académie militaire ajoutera le modificateur §Y$cc_milacademy$§!, donnant :\n$MOD_PLANET_FORTIFICATION_STRENGTH$ : §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$ : §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$ : §G+10%§!\n$pop_ethic_militarist_attraction_mult$ : §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\nUne fois construite, l'académie militaire ajoutera le modificateur §Y$cc_milacademy$§!, donnant :\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$ : §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$ : §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$ : §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$ : §G+10%§!\n$pop_ethic_militarist_attraction_mult$ : §Y+150%§!"
 
 
 

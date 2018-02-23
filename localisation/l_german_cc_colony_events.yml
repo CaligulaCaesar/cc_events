@@ -60,7 +60,7 @@
  cc_colony_events.251.name:0 "Militärakademie auf [root.GetName] eröffnet"
  cc_colony_events.251.desc:0 "Die Militärakademie zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
- cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
  cc_founder_militarist:0 "Planetares Legat"
  cc_founder_militarist_desc:0 "Diese Kolonie ist von einem pensionierten Marineoffizier, der sich den Titel 'Legat' genommen hat, geleitet."
@@ -894,7 +894,7 @@
 
  cc_cleanup_events.24.name:0 "Militärakademie auf [root.GetName]"
  cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Militaristen werden, das auf dem Planeten einflussreich ist. Sollten wir die Akademie weiterbauen?"
- cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 

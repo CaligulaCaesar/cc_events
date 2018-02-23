@@ -1468,11 +1468,9 @@ country_event = {
 
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 	}
@@ -1858,11 +1856,9 @@ country_event = {
 
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 	}
@@ -1938,11 +1934,9 @@ country_event = {
 
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 	}
@@ -2244,11 +2238,9 @@ country_event = {
 	
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 		exists = event_target:dpe_mission_host_planet
@@ -2302,6 +2294,111 @@ country_event = {
 }
 
 
+
+country_event = {
+	id = dpe_spiritualist_mission.631
+	title = dpe_spiritualist_mission.631.name
+	desc = dpe_spiritualist_mission.631.desc
+	
+	picture = GFX_evt_cc_execution
+	
+	is_triggered_only
+	
+	immediate = {
+		event_target:dpe_neighbour = {
+			remove_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+		}
+		event_target:dpe_mission_host_planet = {
+			remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+			remove_modifier = dpe_hosting_spiritualist_mission_planet
+		}
+	}
+	option = {
+		name = dpe_spiritualist_mission.631.A
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = {
+				modifier = dpe_spirmission_killed_faction
+				days = 3600
+			}
+		}
+		
+		add_opinion_modifier = {
+			who = event_target:dpe_neighbour
+			modifier = dpe_spirmission_killed_opinion
+		}
+		
+		hidden_effect = { event_target:dpe_neighbour = { country_event = { id = dpe_spiritualist_mission.632 } } }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = dpe_spiritualist_mission.631.B
+		
+		add_modifier = {
+			modifier = dpe_spirmission_killed_xenophobia
+			days = 3600
+		}
+		add_opinion_modifier = {
+			who = event_target:dpe_neighbour
+			modifier = dpe_spirmission_killed_opinion2
+		}
+		
+		hidden_effect = { event_target:dpe_neighbour = { country_event = { id = dpe_spiritualist_mission.633 } } }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				event_target:dpe_neighbour = {
+					OR = {
+						has_defensive_pact = root
+						is_in_federation_with = root
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						OR = {
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
+							pop_percentage = {
+								limit = { happiness < 0.4 }
+								percentage > 0.75
+							}
+						}
+					}
+					count > 0
+				}
+			}
+			modifier = {
+				factor = 2
+				count_pop_factions = {
+					limit = {
+						OR = {
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
+							pop_percentage = {
+								limit = { happiness > 0.59 }
+								percentage > 0.75
+							}
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+}
+
 country_event = {
 	id = dpe_spiritualist_mission.64
 	title = dpe_spiritualist_mission.64.name
@@ -2313,11 +2410,9 @@ country_event = {
 	
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 	}
@@ -2341,6 +2436,11 @@ country_event = {
 	option = {
 		name = CCGOOD
 		
+		add_modifier = {
+			modifier = dpe_spirmission_minor_mission
+			days = -1
+		}
+		
 		hidden_effect = { from = { country_event = { id = dpe_spiritualist_mission.10 days = 3240 } } }
 	}
 }
@@ -2357,11 +2457,9 @@ country_event = {
 	
 	trigger = {
 		any_country = {
-			root = {
-				has_relation_flag = {
-					who = prev
-					flag = dpe_spiritualist_mission_received
-				}
+			has_relation_flag = {
+				who = root
+				flag = dpe_spiritualist_mission_received
 			}
 		}
 	}
@@ -3470,7 +3568,7 @@ country_event = {
 		is_country_type = default
 		any_country = {
 			has_relation_flag = {
-				who = prev
+				who = root
 				flag = dpe_spiritualist_mission_received
 			}
 		}
@@ -3480,7 +3578,7 @@ country_event = {
 		random_country = {
 			limit = {
 				has_relation_flag = {
-					who = prev
+					who = root
 					flag = dpe_spiritualist_mission_received
 				}
 			}

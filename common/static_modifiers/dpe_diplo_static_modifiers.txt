@@ -76,4 +76,8 @@ dpe_hosting_spirmission_planet_turbulence = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
-	
+dpe_spirmission_killed_faction = { faction_happiness = -0.2 }
+dpe_spirmission_killed_xenophobia = {
+	pop_ethic_xenophobe_attraction_mult = 1.5
+	planet_unrest_mult = 0.5
+}

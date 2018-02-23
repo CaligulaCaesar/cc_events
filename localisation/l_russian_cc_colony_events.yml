@@ -44,7 +44,7 @@ cc_colony_events.25.B: "Это слишком дорого."
 cc_colony_events.25.B.tooltip:0 "Влияние [cc_colony_leader.GetName] закончится через 30 лет."
 cc_colony_events.251.name:0 "Открытие Академии на [root.GetName]"
 cc_colony_events.251.desc:0 "Академия в честь [cc_colony_leader.GetName] построена. Её особенностью является статуя ныне почившего лидера. Открытие Академии встретили с большой радостью жители колонии, которые теперь считают [root.GetName] центром военной подготовки. Кроме того, военные и их сторонники рады тому, что [root.owner.GetRulerTitle] так самоотверженно поддержал тех, кто защищает нашу великую нацию."
-cc_milacademy_will_be_built:0 "\nВоенная Академия построится через 5 лет. Она добавит модификатор §Y$cc_milacademy$§!, дающий:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nВоенная Академия построится через 5 лет. Она добавит модификатор §Y$cc_milacademy$§!, дающий:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 cc_founder_militarist:0 "Планетарный Легат"
 cc_founder_militarist_desc:0 "Этой колонией управляет отставной офицер флота, которому пожаловали титул "Легата"."
 cc_militarist_influence:0 "Влияние Военных"
@@ -682,7 +682,7 @@ cc_cleanup_events.23.name:0 "Открытие Военной Академии н
 cc_cleanup_events.23.desc:0 "Академия на [root.GetName] построена. Она отличается выдающейся статуей давно почившего лидера. Её открытие было встречено с огромной радостью жителями колонии, которые отныне почувствовали, что их планета нанесена на карту, как важный центр военной подготовки в [root.owner.GetName]. Кроме того, все военные и их сторонники в [root.owner.GetName] рады доказательству того, что [root.owner.GetRulerTitle] уважает и поддерживает тех, кто служит и защищает эту великую нацию".
 cc_cleanup_events.24.name:0 "Военная Академия на [root.GetName]"
 cc_cleanup_events.24.desc:0 "Старые хозяева [root.GetName] строили большую военную академию, которая должна была стать влиятельным центром военных на планете. Должны ли мы продолжить строительство?"
-cc_cleanup_events.24.tooltip:0 "\nОднажды построенная, Военная Академия добавит модификатор §Y$cc_milacademy$§!, дающий:\n$Сила планетарной обороны$: §G+75%§!\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\nОднажды построенная, Военная Академия добавит модификатор §Y$cc_milacademy$§!, дающий:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 cc_cleanup_events.25.name:0 "Выдающийся Пацифический Активист на [root.GetName]"
 cc_cleanup_events.25.desc:0 "На [root.GetName] действует выдающийся пацифический активист, являющийся ядром влиятельной пацифической сети под названием "Гандеи". Должны ли мы оставить всё как есть?"
 

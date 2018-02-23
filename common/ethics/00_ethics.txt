@@ -22,11 +22,11 @@ ethic_fanatic_authoritarian = {
 	country_modifier = {
 		country_resource_influence_add = 1
 		pop_slave_resource_output = 0.10
-#		planet_building_cost_mult = -0.1
 	}
 	
 	tags = {
 		ETHIC_ALLOWS_CASTE_SYSTEM
+		ETHIC_ALLOWS_SLAVERY
 		ETHIC_ONLY_AUTOCRACY
 	}	
 	
@@ -45,11 +45,11 @@ ethic_authoritarian = {
 	country_modifier = {
 		country_resource_influence_add = 0.5
 		pop_slave_resource_output = 0.05
-#		planet_building_cost_mult = -0.05
 	}	
 	
 	tags = {
 		ETHIC_ALLOWS_CASTE_SYSTEM
+		ETHIC_ALLOWS_SLAVERY
 		ETHIC_NEVER_DEMOCRACY
 	}	
 	
@@ -930,9 +930,8 @@ ethic_fanatic_xenophobe = {
 	}
 	
 	country_modifier = {		
-		rivalry_influence_gain = 0.3
-		country_border_mult = 0.3
-#		country_resource_unity_mult = 0.1
+		country_starbase_influence_cost_mult = -0.4
+		country_claim_influence_cost_mult = -0.2
 	}
 	
 	random_weight = {
@@ -957,9 +956,8 @@ ethic_xenophobe = {
 	}	
 	
 	country_modifier = {
-		rivalry_influence_gain = 0.15
-		country_border_mult = 0.15
-#		country_resource_unity_mult = 0.05
+		country_starbase_influence_cost_mult = -0.2
+		country_claim_influence_cost_mult = -0.1
 	}
 	
 	random_weight = {
@@ -997,6 +995,13 @@ ethic_xenophobe = {
 			has_valid_civic = civic_fanatic_purifiers
 		}
 	}
+	
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
+		trigger = {
+			has_valid_civic = civic_inwards_perfection
+		}
+	}		
 	
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
@@ -1620,6 +1625,20 @@ ethic_xenophile = {
 				}
 			}
 		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FANATIC_PURIFIERS_NEG
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}		
+	
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_INWARDS_PERFECTION_NEG
+		trigger = {
+			has_valid_civic = civic_inwards_perfection
+		}
 	}	
 
 	pop_attraction_tag = {
@@ -1701,6 +1720,14 @@ ethic_xenophile = {
 			factor = 2.5
 			has_ethic = ethic_fanatic_xenophile
 		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_fanatic_purifiers
+		}	
 		modifier = {
 			factor = 1.5
 			is_country_type = default
@@ -1968,8 +1995,7 @@ ethic_fanatic_militarist = {
 	regular_variant = ethic_militarist
 	
 	tags = {
-		ETHIC_ALLOW_FULL_BOMBARDMENT
-		ETHIC_CHEAPER_WARGOALS
+		ETHIC_ALLOW_NO_RETREAT
 	}	
 	
 	country_modifier = {
@@ -1991,8 +2017,7 @@ ethic_militarist = {
 	fanatic_variant = ethic_fanatic_militarist
 	
 	tags = {
-		ETHIC_ALLOW_FULL_BOMBARDMENT
-		ETHIC_CHEAPER_WARGOALS
+		ETHIC_ALLOW_NO_RETREAT
 	}		
 	
 	country_modifier = {
@@ -2394,6 +2419,25 @@ ethic_militarist = {
 				can_be_military_leader = yes
 			}
 			from = {
+				owner = { 
+					any_neighbor_country = {		
+						from = { is_neighbor_of = prev }
+						OR = {
+							is_hostile_to = from.owner
+							is_domineering_to = from.owner
+							is_rival = from.owner						
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_citizenship_rights = yes
+				can_be_military_leader = yes
+			}
+			from = {
 				has_planet_flag = cc_eventperf_planet_hostile_border
 				owner = { 
 					NOR = {
@@ -2513,6 +2557,7 @@ ethic_fanatic_pacifist = {
 	
 	tags = {
 		ETHIC_DISALLOW_OFFENSIVE_WARS
+		ETHIC_DISALLOW_FULL_BOMBARDMENT
 	}	
 	
 	country_modifier = {
@@ -2541,6 +2586,7 @@ ethic_pacifist = {
 	
 	tags = {
 		ETHIC_DISALLOW_CONQUEST_WARS
+		ETHIC_DISALLOW_FULL_BOMBARDMENT
 	}
 	
 	random_weight = {
@@ -2583,6 +2629,13 @@ ethic_pacifist = {
 				value > 20
 				delay = 50
 			}
+		}
+	}	
+	
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
+		trigger = {
+			has_valid_civic = civic_inwards_perfection
 		}
 	}	
 	
@@ -2639,6 +2692,10 @@ ethic_pacifist = {
 			}
 			has_faction = prosperity
 		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_inwards_perfection
+		}				
 		modifier = {
 			factor = 0.5
 			has_valid_civic = civic_fanatic_purifiers
@@ -2837,6 +2894,25 @@ ethic_pacifist = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			OR = {
+				has_citizenship_rights = yes
+				can_be_military_leader = yes
+			}			
+			from = {
+				owner = { 
+					any_neighbor_country = {		
+						from = { is_neighbor_of = prev }
+						OR = {
+							is_hostile_to = from.owner
+							is_domineering_to = from.owner
+							is_rival = from.owner						
+						}
+					}
+				}
+			}
+		}	
+		modifier = {
 			factor = 1.5		
 			from = {
 				NOT = { has_planet_flag = cc_eventperf_planet_hostile_border }
@@ -2915,7 +2991,7 @@ ethic_pacifist = {
 }
 
 ethic_fanatic_spiritualist = {
-	cost = 2
+	cost = 2 
 	category = "spi"
 	category_value = 0
 	
@@ -2925,12 +3001,13 @@ ethic_fanatic_spiritualist = {
 
 	tags = {
 		ETHIC_ALLOWS_TEMPLE
+		ETHIC_ALLOWS_HALLOW_WORLD
 		ETHIC_DISALLOW_AI
 	}	
 	
 	country_modifier = {
-		planet_unrest_mult = -0.3
-		pop_government_ethic_attraction = 0.3
+		country_resource_unity_mult = 0.20
+		edict_cost = -0.10
 	}
 	
 	random_weight = {
@@ -2947,12 +3024,13 @@ ethic_spiritualist = {
 	
 	tags = {
 		ETHIC_ALLOWS_TEMPLE
+		ETHIC_ALLOWS_HALLOW_WORLD
 		ETHIC_DISALLOW_AI
 	}		
 	
 	country_modifier = {
-		planet_unrest_mult = -0.15
-		pop_government_ethic_attraction = 0.15
+		country_resource_unity_mult = 0.10
+		edict_cost = -0.05
 	}
 	
 	random_weight = {
@@ -3533,7 +3611,7 @@ ethic_materialist = {
 		desc = POP_ATTRACTION_MATERIALIST_RESEARCH_POS
 		trigger = {
 			any_relation = {
-				has_research_agreement = root
+				root = { has_research_agreement = prev }
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -3639,7 +3717,7 @@ ethic_materialist = {
 		modifier = {
 			factor = 1.33
 			any_relation = {
-				has_research_agreement = root
+				root = { has_research_agreement = prev }
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -3886,10 +3964,10 @@ ethic_gestalt_consciousness = {
 	tags = {
 		ETHIC_GESTALT_CONSCIOUSNESS_NO_TUTORIAL
 		ETHIC_GESTALT_CONSCIOUSNESS_AUTHORITY
-		ETHIC_ALLOW_FULL_BOMBARDMENT
 		ETHIC_GESTALT_CONSCIOUSNESS_IMMORTAL_RULER
 		ETHIC_GESTALT_CONSCIOUSNESS_NO_FACTIONS
 		ETHIC_GESTALT_CONSCIOUSNESS_DOMESTIC_POP_SURVIVAL
+		ETHIC_ALLOW_NO_RETREAT	
 	}
 	
 	random_weight = {

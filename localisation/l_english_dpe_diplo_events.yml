@@ -5,7 +5,7 @@ dpe_diplo.1.desc:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] ha
 dpe_diplo.1.desc.machine:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it recently emerged that the Machine Intelligence had issued a directive to its subroutines that stated that the [root.GetSpeciesNamePlural] were officially to be considered as "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
 dpe_diplo.1.desc.hive:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it was recently discovered that the Hive's official thoughts on the [root.GetSpeciesNamePlural] are that they are "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
 dpe_diplo.1.A:0 "Declare War."
-dpe_diplo.1.A.tooltip:0 "The war demands will be $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
+#dpe_diplo.1.A.tooltip:0 "The war demands will be $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
 dpe_diplo.1.B: "Patience. We will declare war soon on our own terms."
 dpe_diplo.1.B.tooltip:0 "This will allow you to choose War Demands. If you wait for more than a year before declaring war, militarists in the [root.GetName] will be upset."
 dpe_diplo.1.C:0 "War is too risky right now."
@@ -30,7 +30,7 @@ dpe_diplo.5.desc:0 "A group of nationalists in the [from.GetName] have launched 
 dpe_diplo.5.desc.machine:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt our subroutines. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
 dpe_diplo.5.desc.hive:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt the hive's activities. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
 dpe_diplo.5.A:0 "Demand justice"
-dpe_diplo.5.A.tooltip:0 "If the [from.GetName] accepts, the [root.GetName] will be paid an indemnity of 100 minerals for a year. If they reject it, war will be declared with the war demands $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
+dpe_diplo.5.A.tooltip:0 "If the [from.GetName] accepts, the [root.GetName] will be paid an indemnity of 100 minerals for a year. If they reject it, the [from.GetName] will get claims on our systems that neighbour them and war will be declared with the war goal $wg_conquest$."
 dpe_diplo.5.B:0 "Seek to ease the tensions"
 
 
@@ -181,6 +181,16 @@ dpe_spiritualist_mission.62.desc:0 "The situation on [dpe_mission_host_planet.Ge
 dpe_spiritualist_mission.62.option.A:0 "A shame - all we wanted was your Salvation."
 dpe_spiritualist_mission.62.option.B:0 "How dare you."
 
+
+dpe_spiritualist_mission.631.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that took place recently at our mission on [dpe_mission_host_planet.GetName]. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed parts of the city and killed even more of our faithful. The [dpe_neighbour.GetName] has officially sent our mission home, even though no members of the mission survived the attack, and they request that we refrain from sending any non-essential personnel to their empire in the foreseeable future."
+dpe_spiritualist_mission.631.A:0 "We should have recalled them earlier."
+dpe_spiritualist_mission.631.B:0 "The [dpe_neighbour.GetSpeciesNamePlural] are to blame for this tragedy!"
+
+dpe_spirmission_killed_faction:0 "Angry at failure to recall Missionaries"
+dpe_spirmission_killed_opinion:0 "Missionaries Massacred"
+dpe_spirmission_killed_xenophobia:0 "Massacre of Missionaries by Xenos"
+dpe_spirmission_killed_xenophobia_desc:0 "A mission to spread the faith to a xeno country ended with the missionaries being massacred by the xenos. Trust in xenos has taken a significant hit as a result."
+dpe_spirmission_killed_opinion2:0 "Missionaries Massacred"
 
 dpe_spiritualist_mission.64.name:0 "The Situation on [dpe_mission_host_planet.GetName] stabilises"
 dpe_spiritualist_mission.64.desc:0 "Fortunately, the situation surrounding our mission on [dpe_mission_host_planet.GetName] has calmed down. The locals have become slightly more accepting of our presence, and the missionaries have learned their boundaries. It seems we have reached a delicate equilibrium."
