@@ -2,4 +2,25 @@
 namespace = cctest
 
 
+country_event = {
+	id = cctest.1
 	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				distance = {
+					min_distance = 0
+					max_distance = 120
+					source = root.capital_scope
+				}
+			}
+			add_modifier = {
+				modifier = cc_religious_centre
+				days = -1
+			}
+		}
+	}
+}

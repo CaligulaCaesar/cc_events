@@ -2,14 +2,22 @@
 # Empire edicts
 ##########################################################################
 
+@Edict1Cost = 100
+@Edict2Cost = 200
+@Edict3Cost = 300
+
+@EdictDuration = 3600
+
+
 country_edict = {
 	name = "cc_thought_police"
+	
+	length = @EdictDuration
+	cost = { influence = @Edict3Cost }
+	
 	modifier = {
 		pop_government_ethic_attraction = 0.2
 	}
-	
-	influence_cost = 2
-	
 	potential = {
 		OR = {
 			has_valid_civic = civic_fanatic_purifiers

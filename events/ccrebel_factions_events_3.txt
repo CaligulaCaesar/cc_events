@@ -1057,16 +1057,18 @@ country_event = {
 					}
 				}
 				
-				owner = {
-					any_owned_planet = {
-						count_pops = {
-							limit = { has_same_faction_as_faction = yes }
-							count > 4
-						}
-						distance = {
-							source = prevprev
-							min_distance = 0
-							max_distance = 65
+				closest_system = {
+					min_steps = 0
+					max_steps = 2
+					limit = {
+						has_owner = yes
+						is_within_borders_of = prev.owner
+						any_planet = {
+							has_owner = yes
+							count_pops = {
+								limit = { has_same_faction_as_faction = yes }
+								count > 4
+							}
 						}
 					}
 				}
@@ -1776,17 +1778,18 @@ country_event = {
 						count > 2
 					}
 				}
-				
-				owner = {
-					any_owned_planet = {
-						count_pops = {
-							limit = { has_same_faction_as_2nd_faction = yes }
-							count > 4
-						}
-						distance = {
-							source = prevprev
-							min_distance = 0
-							max_distance = 65
+				closest_system = {
+					min_steps = 0
+					max_steps = 2
+					limit = {
+						has_owner = yes
+						is_within_borders_of = prev.owner
+						any_planet = {
+							has_owner = yes
+							count_pops = {
+								limit = { has_same_faction_as_2nd_faction = yes }
+								count > 4
+							}
 						}
 					}
 				}
@@ -5640,13 +5643,15 @@ event = {
 							limit = {
 								has_1st_faction_sedition = yes
 								NOT = {
-									owner = {
-										any_owned_planet = {
-											has_1st_faction_stronghold = yes
-											distance = {
-												source = prevprev
-												min_distance = 0
-												max_distance = 65
+									closest_system = {
+										min_steps = 0
+										max_steps = 2
+										limit = {
+											has_owner = yes
+											is_within_borders_of = prev.owner
+											any_planet = {
+												has_owner = yes
+												has_1st_faction_stronghold = yes
 											}
 										}
 									}
@@ -5716,13 +5721,15 @@ event = {
 								has_1st_faction_sedition = no
 								has_1st_faction_sympathies = no
 								has_1st_faction_stronghold = no
-								owner = {
-									any_owned_planet = {
-										has_1st_faction_stronghold = yes
-										distance = {
-											source = prevprev
-											min_distance = 0
-											max_distance = 65
+								closest_system = {
+									min_steps = 0
+									max_steps = 2
+									limit = {
+										has_owner = yes
+										is_within_borders_of = prev.owner
+										any_planet = {
+											has_owner = yes
+											has_1st_faction_stronghold = yes
 										}
 									}
 								}
@@ -5782,13 +5789,15 @@ event = {
 								limit = {
 									has_2nd_faction_sedition = yes
 									NOT = {
-										owner = {
-											any_owned_planet = {
-												has_2nd_faction_stronghold = yes
-												distance = {
-													source = prevprev
-													min_distance = 0
-													max_distance = 65
+										closest_system = {
+											min_steps = 0
+											max_steps = 2
+											limit = {
+												has_owner = yes
+												is_within_borders_of = prev.owner
+												any_planet = {
+													has_owner = yes
+													has_2nd_faction_stronghold = yes
 												}
 											}
 										}
@@ -5854,13 +5863,15 @@ event = {
 									has_2nd_faction_sedition = no
 									has_2nd_faction_sympathies = no
 									has_2nd_faction_stronghold = no
-									owner = {
-										any_owned_planet = {
-											has_2nd_faction_stronghold = yes
-											distance = {
-												source = prevprev
-												min_distance = 0
-												max_distance = 65
+									closest_system = {
+										min_steps = 0
+										max_steps = 2
+										limit = {
+											has_owner = yes
+											is_within_borders_of = prev.owner
+											any_planet = {
+												has_owner = yes
+												has_2nd_faction_stronghold = yes
 											}
 										}
 									}
