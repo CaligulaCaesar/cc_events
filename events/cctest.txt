@@ -24,3 +24,31 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = cctest.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { which = cc_test_variable value = 10 }
+		change_variable = { which = cc_test_variable value = 10 }
+		subtract_variable = { which = cc_test_variable value = 5 }
+		change_variable = { which = cc_test_variable value = -10 }
+	}
+}
+
+country_event = {
+	id = cctest.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		multiply_variable = { which = cc_test_variable value = 10 }
+		divide_variable = { which = cc_test_variable value = 5 }
+	}
+}
+

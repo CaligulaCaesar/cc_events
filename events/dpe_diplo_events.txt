@@ -497,15 +497,6 @@ planet_event = {
 				attacker_war_goal = wg_conquest
 			}
 		}
-		custom_tooltip = dpe_diplo.1.A.tooltip
-		tooltip = {
-			event_target:enemy = {
-				every_owned_planet = {
-					limit = { has_planet_flag = dpe_will_cede_in_war }
-					set_owner = root
-				}
-			}
-		}
 		
 		hidden_effect = {
 			owner = {

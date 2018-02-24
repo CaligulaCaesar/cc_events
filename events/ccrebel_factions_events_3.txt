@@ -2413,6 +2413,7 @@ country_event = {
 			is_faction_stronghold = yes
 			unrest > 80
 			has_ground_combat = no
+			has_orbital_bombardment = no
 			exists = controller
 			controller = { is_same_value = root }
 			has_modifier = cc_faction_acute_unrest
@@ -2429,6 +2430,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 99
 					has_ground_combat = no
+					has_orbital_bombardment = no
 					exists = controller
 					controller = { is_same_value = root }
 					has_modifier = cc_faction_acute_unrest
@@ -2446,6 +2448,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 99
 					has_ground_combat = no
+					has_orbital_bombardment = no
 					exists = controller
 					controller = { is_same_value = root }
 					has_modifier = cc_faction_acute_unrest
@@ -2481,6 +2484,14 @@ country_event = {
 						set_owner = prev
 						
 						solar_system = {
+							starbase = {
+								set_owner = prevprevprev
+							}
+							add_claims = {
+								who = root
+								num_of_claims = 1
+								show_notification = no
+							}
 							every_fleet_in_system = {
 								limit = {
 									exists = owner
@@ -2761,7 +2772,7 @@ country_event = {
 								type = ruler
 								species = owner_main_species
 								name = random
-								skill = 200
+								skill = 2
 								traits = {}
 							}
 							assign_leader = last_created_leader
@@ -2906,6 +2917,7 @@ country_event = {
 						is_faction_stronghold = yes
 						unrest > 80
 						has_ground_combat = no
+						has_orbital_bombardment = no
 						exists = controller
 						controller = { is_same_value = root }
 						has_modifier = cc_faction_acute_unrest
@@ -3208,7 +3220,7 @@ country_event = {
 										type = ruler
 										species = owner_main_species
 										name = random
-										skill = 200
+										skill = 2
 										traits = {}
 									}
 									assign_leader = last_created_leader
@@ -3621,11 +3633,20 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_ground_combat = no
+		has_orbital_bombardment = no
 	}
 	
 	immediate = {
 	
 		solar_system = {
+			starbase = {
+				set_owner = event_target:cc_breakaway_country
+			}
+			add_claims = {
+				who = root.owner
+				num_of_claims = 1
+				show_notification = no
+			}
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
@@ -3777,6 +3798,7 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_ground_combat = no
+		has_orbital_bombardment = no
 	}
 	
 	is_triggered_only = yes
@@ -3973,6 +3995,17 @@ country_event = {
 			remove_planet_flag = revolt_in_progress 
 			remove_planet_flag = cc_faction_revolt_capital
 			save_event_target_as = cc_rebel_faction_capital
+			
+			solar_system = {
+				starbase = {
+					set_owner = root
+					add_claims = {
+						who = from.owner
+						num_of_claims = 1
+						show_notification = no
+					}
+				}
+			}
 		}
 		from.owner = {
 			remove_country_flag = cc_factional_revolt_attempt
@@ -4068,7 +4101,7 @@ country_event = {
 			type = ruler
 			species = owner_main_species
 			name = random
-			skill = 200
+			skill = 2
 			traits = {}
 		}
 		assign_leader = last_created_leader
@@ -4103,6 +4136,17 @@ country_event = {
 			remove_planet_flag = revolt_in_progress 
 			remove_planet_flag = cc_faction_revolt_planet
 			save_event_target_as = cc_rebel_faction_capital
+
+			solar_system = {
+				starbase = {
+					set_owner = root
+					add_claims = {
+						who = from.owner
+						num_of_claims = 1
+						show_notification = no
+					}
+				}
+			}
 		}
 		from.owner = {
 			save_event_target_as = rebelled_against
@@ -4265,6 +4309,11 @@ country_event = {
 			
 		fromfrom = {
 			set_owner = root
+			solar_system = {
+				starbase = {
+					set_owner = root
+				}
+			}
 			hidden_effect = {
 				if = {
 					limit = { has_modifier = capital }
@@ -5182,6 +5231,7 @@ planet_event = {
 							exists = controller
 							controller = { is_same_value = root.owner }
 							has_ground_combat = no
+							has_orbital_bombardment = no
 							unrest > 80
 						}
 					}
@@ -5213,6 +5263,7 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		has_modifier = cc_breakaway_sympathy
 		has_ground_combat = no
+		has_orbital_bombardment = no
 		unrest > 80
 		
 		owner = {
