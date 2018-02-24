@@ -3469,7 +3469,7 @@ country_event = {
 								create_army = {
 									owner = event_target:cc_breakaway_country
 									species = root.species
-									type = "defense_army"
+									type = "assault_army"
 								}
 							}
 						}
@@ -3955,7 +3955,7 @@ planet_event = {
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country
-						type = "defense_army"
+						type = "assault_army"
 					}
 				}
 			}
@@ -3999,11 +3999,11 @@ country_event = {
 			solar_system = {
 				starbase = {
 					set_owner = root
-					add_claims = {
-						who = from.owner
-						num_of_claims = 1
-						show_notification = no
-					}
+				}
+				add_claims = {
+					who = from.owner
+					num_of_claims = 1
+					show_notification = no
 				}
 			}
 		}
@@ -4140,11 +4140,11 @@ country_event = {
 			solar_system = {
 				starbase = {
 					set_owner = root
-					add_claims = {
-						who = from.owner
-						num_of_claims = 1
-						show_notification = no
-					}
+				}
+				add_claims = {
+					who = from.owner
+					num_of_claims = 1
+					show_notification = no
 				}
 			}
 		}
@@ -5487,7 +5487,7 @@ planet_event = {
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country
-						type = "defense_army"
+						type = "assault_army"
 					}
 				}
 			}
