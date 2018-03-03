@@ -1601,6 +1601,7 @@ event = {
 		#Ruler is escaped slave
 		every_country = {
 			limit = {
+				years_passed > 10
 				is_country_type = default
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				allows_slavery = yes

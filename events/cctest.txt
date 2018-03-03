@@ -33,12 +33,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		capital_scope = {
-			set_variable = { which = cc_test_variable value = 10 }
-			change_variable = { which = cc_test_variable value = 10 }
-			subtract_variable = { which = cc_test_variable value = 5 }
-			change_variable = { which = cc_test_variable value = -7 }
-		}
+		set_variable = { which = cc_test_variable value = 10 }
+		change_variable = { which = cc_test_variable value = 10 }
+		subtract_variable = { which = cc_test_variable value = 5 }
+		change_variable = { which = cc_test_variable value = -7 }
 	}
 }
 
@@ -49,10 +47,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		capital_scope = {
-			multiply_variable = { which = cc_test_variable value = 10 }
-			divide_variable = { which = cc_test_variable value = 5 }
-		}
+		multiply_variable = { which = cc_test_variable value = 10 }
+		divide_variable = { which = cc_test_variable value = 5 }
 	}
 }
 

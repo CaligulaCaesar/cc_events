@@ -37,7 +37,11 @@ country_edict = {
 	}
 	
 	ai_weight = {
-		weight = 0.5
+		weight = 0.75	
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
 		modifier = {
 			factor = 2
 			has_policy_flag = slavery_allowed
