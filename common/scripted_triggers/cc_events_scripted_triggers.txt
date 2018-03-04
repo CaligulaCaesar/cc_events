@@ -159,3 +159,38 @@ is_evil_empire = {
 		}
 	}
 }
+
+
+
+dpe_talent_flavour_scientist_university = {
+	event_target:dpe_talent_planet = { has_modifier = cc_university }
+}
+
+dpe_talent_flavour_scientist_default = {
+	NOT = { event_target:dpe_talent_planet = { has_modifier = cc_university } }
+}
+
+dpe_talent_flavour_general_academy = {
+	event_target:dpe_talent_planet = { has_modifier = cc_milacademy }
+}
+
+dpe_talent_flavour_general_default = {
+	NOT = { event_target:dpe_talent_planet = { has_modifier = cc_milacademy } }
+}
+
+dpe_talent_flavour_governor_royal = {
+	event_target:dpe_talent_planet = { has_modifier = cc_colony_monarchy }
+}
+
+dpe_talent_flavour_governor_democracy = {
+	event_target:dpe_talent_planet = { has_modifier = cc_colony_direct_democracy }
+}
+
+dpe_talent_flavour_governor_default = {
+	event_target:dpe_talent_planet = {
+		NOR = {
+			has_modifier = cc_colony_monarchy
+			has_modifier = cc_colony_direct_democracy
+		}
+	}
+}

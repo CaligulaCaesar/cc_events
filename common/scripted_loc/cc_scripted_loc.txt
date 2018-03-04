@@ -152,3 +152,102 @@ defined_text = {
 		localization_key = ccloc_others_building
 	}
 }
+
+
+
+
+#"the [Particles] Professor"
+defined_text = {
+	name = GetDPETalentField
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_materials }
+		localization_key = materials
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_propulsion }
+		localization_key = propulsion
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_voidcraft }
+		localization_key = voidcraft
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_robotics }
+		localization_key = robotics
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_industry }
+		localization_key = industry
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_field_manipulation }
+		localization_key = field_manipulation
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_particles }
+		localization_key = particles
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_computing }
+		localization_key = computing
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_metaphysics }
+		localization_key = metaphysics
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_statecraft }
+		localization_key = statecraft
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_biology }
+		localization_key = biology
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_military_theory }
+		localization_key = military_theory
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_new_worlds }
+		localization_key = new_worlds
+	}
+	text = {
+		trigger = { has_country_flag = dpe_talent_professor_psionics }
+		localization_key = psionics
+	}
+}
+
+
+#Used for the 'local talent discovered' events
+defined_text = {
+	name = GetDPETalentFlavour
+
+	text = {
+		trigger = { dpe_talent_flavour_scientist_university = yes }
+		localization_key = dpe_talent_flavour_scientist_university
+	}
+	text = {
+		trigger = { dpe_talent_flavour_scientist_default = yes }
+		localization_key = dpe_talent_flavour_scientist_default
+	}
+	text = {
+		trigger = { dpe_talent_flavour_general_academy = yes }
+		localization_key = dpe_talent_flavour_general_academy
+	}
+	text = {
+		trigger = { dpe_talent_flavour_general_default = yes }
+		localization_key = dpe_talent_flavour_general_default
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_royal = yes }
+		localization_key = dpe_talent_flavour_governor_royal
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_democracy = yes }
+		localization_key = dpe_talent_flavour_governor_democracy
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_default = yes }
+		localization_key = dpe_talent_flavour_governor_default
+	}
+}

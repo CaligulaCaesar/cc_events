@@ -87,6 +87,41 @@ xenophilia_refugee_pop_effect = {
 }
 
 remove_all_political_colony_modifiers = {
+
+	if = {
+		limit = { has_modifier = cc_authoritarian_influence1 }
+		remove_modifier = cc_authoritarian_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_egalitarian_influence1 }
+		remove_modifier = cc_egalitarian_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_xenophile_influence1 }
+		remove_modifier = cc_xenophile_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_xenophobe_influence1 }
+		remove_modifier = cc_xenophobe_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_materialist_influence1 }
+		remove_modifier = cc_materialist_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_spiritualist_influence1 }
+		remove_modifier = cc_spiritualist_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_pacifist_influence1 }
+		remove_modifier = cc_pacifist_influence1
+	}
+	if = {
+		limit = { has_modifier = cc_militarist_influence1 }
+		remove_modifier = cc_militarist_influence1
+	}
+
+
 	if = {
 		limit = { has_modifier = dpe_unity_planet }
 		remove_modifier = dpe_unity_planet

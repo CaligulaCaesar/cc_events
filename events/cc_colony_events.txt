@@ -404,7 +404,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 10800 }
+			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -486,7 +486,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 10800 }
+			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -663,7 +663,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 10800 }
+			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -714,7 +714,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 10800 }
+			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1005,6 +1005,14 @@ planet_event = {
 		has_modifier = cc_founder_militarist
 		NOT = { has_planet_flag = cc_leader_dead }
 	}
+
+	immediate = {
+		remove_modifier = cc_founder_militarist
+		add_modifier = {
+			modifier = cc_militarist_influence1
+			years = 30
+		}
+	}
 	
 	option = {
 		name = cc_colony_events.25.A
@@ -1040,15 +1048,6 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_colony_events.25.B.tooltip
-		
-		hidden_effect = {
-			remove_modifier = cc_founder_militarist
-
-			add_modifier = {
-				modifier = cc_founder_militarist
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 5
@@ -1097,7 +1096,7 @@ planet_event = {
 				}
 			}
 		}
-		hidden_effect = { remove_modifier = cc_founder_militarist }
+		hidden_effect = { remove_modifier = cc_militarist_influence1 }
 	}
 }
 
@@ -1204,9 +1203,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 }
+				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 10800 }
+			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -1230,9 +1229,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 }
+				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 10800 }
+			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -1411,9 +1410,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 }
+				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 10800 }
+			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1466,9 +1465,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 }
+				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 10800 }
+			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1835,6 +1834,11 @@ planet_event = {
 			flag = cc_leader_dead
 			years = 20
 		}
+		remove_modifier = cc_founder_pacifist
+		add_modifier = {
+			modifier = cc_pacifist_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -1920,7 +1924,7 @@ planet_event = {
 			modifier = cc_pacifist_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_pacifist }
+		hidden_effect = { remove_modifier = cc_pacifist_influence1 }
 	}
 }
 
@@ -1942,6 +1946,11 @@ planet_event = {
 	}
 	
 	immediate = {
+		remove_modifier = cc_founder_pacifist
+		add_modifier = {
+			modifier = cc_pacifist_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -2007,6 +2016,15 @@ planet_event = {
 				}
 			}
 		}
+
+		hidden_effect = {
+			remove_modifier = cc_pacifist_influence1
+		}
+
+		add_modifier = {
+			modifier = cc_pacifist_influence1
+			days = -1
+		}
 		
 		ai_chance = {
 			factor = 5
@@ -2040,14 +2058,6 @@ planet_event = {
 		
 		custom_tooltip = cc_colony_events.35.C.tooltip
 		
-		hidden_effect = {
-			remove_modifier = cc_founder_pacifist
-
-			add_modifier = {
-				modifier = cc_founder_pacifist
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 10
@@ -2094,7 +2104,7 @@ planet_event = {
 			modifier = cc_minor_pacmonument
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_pacifist }
+		hidden_effect = { remove_modifier = cc_pacifist_influence1 }
 	}
 	
 	option = {
@@ -2106,7 +2116,7 @@ planet_event = {
 			modifier = cc_pacifist_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_pacifist }
+		hidden_effect = { remove_modifier = cc_pacifist_influence1 }
 	}
 }
 
@@ -2213,7 +2223,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 10800 }
+			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -2235,7 +2245,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 10800 }
+			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -2418,7 +2428,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 10800 }
+			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2469,7 +2479,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 10800 }
+			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2717,6 +2727,11 @@ planet_event = {
 	}
 	
 	immediate = {
+		remove_modifier = cc_founder_xenophile
+		add_modifier = {
+			modifier = cc_xenophile_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -2752,6 +2767,15 @@ planet_event = {
 			years = 10
 		}
 		
+		hidden_effect = {
+			remove_modifier = cc_xenophile_influence1
+
+			add_modifier = {
+				modifier = cc_xenophile_influence1
+				days = -1
+			}
+		}
+
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -2783,15 +2807,6 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_colony_events.45.C.tooltip
-		
-		hidden_effect = {
-			remove_modifier = cc_founder_xenophile
-
-			add_modifier = {
-				modifier = cc_founder_xenophile
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 10
@@ -2829,7 +2844,7 @@ planet_event = {
 			modifier = cc_xenophile_institute
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_xenophile }
+		hidden_effect = { remove_modifier = cc_xenophile_influence1 }
 	}
 }
 
@@ -2918,9 +2933,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.54 days = 5400 }
+				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.55 days = 10800 }
+			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -2949,15 +2964,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 }
+				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 }
+						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 10800 }
+			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
 			
 			
 			every_owned_pop = {
@@ -3160,15 +3175,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 }
+				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 }
+						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 10800 }
+			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -3226,15 +3241,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 }
+				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 }
+						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 10800 }
+			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -4542,6 +4557,11 @@ planet_event = {
 	}
 	
 	immediate = {
+		remove_modifier = cc_founder_xenophobe
+		add_modifier = {
+			modifier = cc_xenophobe_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -4607,6 +4627,14 @@ planet_event = {
 			years = 10
 		}
 		
+		hidden_effect = {
+			remove_modifier = cc_xenophobe_influence1
+		}
+		add_modifier = {
+			modifier = cc_xenophobe_influence1
+			days = -1
+		}
+
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			owner = {
@@ -4664,14 +4692,6 @@ planet_event = {
 		
 		custom_tooltip = cc_colony_events.55.C.tooltip
 		
-		hidden_effect = {
-			remove_modifier = cc_founder_xenophobe
-
-			add_modifier = {
-				modifier = cc_founder_xenophobe
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 10
@@ -4718,7 +4738,7 @@ planet_event = {
 			modifier = cc_minor_xenophobe_institute
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_xenophobe }
+		hidden_effect = { remove_modifier = cc_xenophobe_influence1 }
 	}
 	
 	option = {
@@ -4730,7 +4750,7 @@ planet_event = {
 			modifier = cc_xenophobe_institute
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_xenophobe }
+		hidden_effect = { remove_modifier = cc_xenophobe_influence1 }
 	}
 }
 
@@ -4855,9 +4875,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 }
+				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 10800 }
+			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -4881,9 +4901,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 }
+				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 10800 }
+			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -5062,9 +5082,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 }
+				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 10800 }
+			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -5117,9 +5137,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 }
+				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 10800 }
+			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -5486,6 +5506,11 @@ planet_event = {
 			flag = cc_leader_dead
 			years = 20
 		}
+		remove_modifier = cc_founder_spiritualist
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -5571,7 +5596,7 @@ planet_event = {
 			modifier = cc_religious_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_spiritualist }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 }
 
@@ -5593,6 +5618,11 @@ planet_event = {
 	}
 	
 	immediate = {
+		remove_modifier = cc_founder_spiritualist
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -5659,6 +5689,14 @@ planet_event = {
 			}
 		}
 		
+		hidden_effect = {
+			remove_modifier = cc_spiritualist_influence1
+		}
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			days = -1
+		}
+
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -5691,14 +5729,6 @@ planet_event = {
 		
 		custom_tooltip = cc_colony_events.65.C.tooltip
 		
-		hidden_effect = {
-			remove_modifier = cc_founder_spiritualist
-
-			add_modifier = {
-				modifier = cc_founder_spiritualist
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 10
@@ -5745,7 +5775,7 @@ planet_event = {
 			modifier = cc_minor_mausoleum
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_spiritualist }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 	
 	option = {
@@ -5757,7 +5787,7 @@ planet_event = {
 			modifier = cc_religious_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_spiritualist }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 }
 
@@ -5861,7 +5891,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 10800 }
+			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -5883,7 +5913,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 10800 }
+			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -6060,7 +6090,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 10800 }
+			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6111,7 +6141,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 10800 }
+			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6360,6 +6390,14 @@ planet_event = {
 		NOT = { has_planet_flag = cc_leader_dead }
 	}
 	
+	immediate = {
+		remove_modifier = cc_founder_materialist
+		add_modifier = {
+			modifier = cc_materialist_influence1
+			years = 30
+		}
+	}
+
 	option = {
 		name = cc_colony_events.75.A
 		
@@ -6394,15 +6432,6 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_colony_events.75.B.tooltip
-		
-		hidden_effect = {
-			remove_modifier = cc_founder_materialist
-
-			add_modifier = {
-				modifier = cc_founder_materialist
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 5
@@ -6451,7 +6480,7 @@ planet_event = {
 				}
 			}
 		}
-		hidden_effect = { remove_modifier = cc_founder_materialist }
+		hidden_effect = { remove_modifier = cc_materialist_influence1 }
 	}
 }
 
@@ -6598,7 +6627,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -6621,7 +6650,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -6682,7 +6711,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		trigger = {
@@ -6863,7 +6892,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6885,7 +6914,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6936,7 +6965,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 10800 }
+			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -7212,6 +7241,12 @@ planet_event = {
 	option = {
 		name = cc_colony_events.85.B
 		
+		remove_modifier = cc_colony_monarchy
+		add_modifier = {
+			modifier = cc_authoritarian_influence1
+			years = 30
+		}
+
 		add_modifier = {
 			modifier = cc_colony_monarchy_unhappy
 			years = 10
@@ -8447,6 +8482,18 @@ planet_event = {
 
 	is_triggered_only = yes
 	location = root
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = cc_leader_dead
+			years = 20
+		}
+		remove_modifier = cc_famous_guru
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			years = 30
+		}
+	}
 	
 	option = {
 		name = cc_colony_events.642.A
@@ -8531,7 +8578,7 @@ planet_event = {
 			modifier = cc_religious_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_famous_guru }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 }
 
@@ -8550,6 +8597,11 @@ planet_event = {
 	}
 	
 	immediate = {
+		remove_modifier = cc_famous_guru
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			years = 30
+		}
 	}
 	
 	option = {
@@ -8603,6 +8655,13 @@ planet_event = {
 			years = 10
 		}
 		
+		hidden_effect = {
+			remove_modifier = cc_spiritualist_influence1
+		}
+		add_modifier = {
+			modifier = cc_spiritualist_influence1
+			days = -1
+		}
 		owner = {
 			random_pop_faction = {
 				limit = { is_pop_faction_type = traditionalist }
@@ -8644,14 +8703,6 @@ planet_event = {
 		
 		custom_tooltip = cc_colony_events.65.C.tooltip
 		
-		hidden_effect = {
-			remove_modifier = cc_famous_guru
-
-			add_modifier = {
-				modifier = cc_famous_guru
-				years = 30
-			}
-		}
 		
 		ai_chance = {
 			factor = 10
@@ -8698,7 +8749,7 @@ planet_event = {
 			modifier = cc_minor_mausoleum
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_spiritualist }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 	
 	option = {
@@ -8710,7 +8761,7 @@ planet_event = {
 			modifier = cc_religious_centre
 			days = -1
 		}
-		hidden_effect = { remove_modifier = cc_founder_spiritualist }
+		hidden_effect = { remove_modifier = cc_spiritualist_influence1 }
 	}
 }
 

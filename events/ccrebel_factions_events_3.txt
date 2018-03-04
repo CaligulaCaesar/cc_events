@@ -36,61 +36,60 @@
 
 namespace = ccfaction
 
-#test event
-
-country_event = {
-	id = ccfaction.111
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		every_pop_faction = {
-			add_modifier = {
-				modifier = cc_faction_test_modifier
-				days = -1
-			}
-		}
-		every_owned_planet = { set_planet_flag = recent_unrest_event }
-		country_event = { id = ccfaction.1 days = 15 }
-	}
-}
-country_event = {
-	id = ccfaction.112
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		every_pop_faction = {
-			add_modifier = {
-				modifier = cc_faction_test_modifier_1
-				days = -1
-			}
-		}
-	}
-}
-planet_event = {
-	id = ccfaction.113
-	title = OK
-	desc = OK
-	is_triggered_only = yes
-	
-	picture = GFX_evt_arguing_senate
-	
-	option = {
-		name = OK
-		add_modifier = {
-			modifier = cc_planet_test1
-			days = -1
-		}
-	}
-	option = {
-		name = OK
-		add_modifier = {
-			modifier = cc_planet_test2
-			days = -1
-		}
-	}
-}
+#test events
+#country_event = {
+#	id = ccfaction.111
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		every_pop_faction = {
+#			add_modifier = {
+#				modifier = cc_faction_test_modifier
+#				days = -1
+#			}
+#		}
+#		every_owned_planet = { set_planet_flag = recent_unrest_event }
+#		country_event = { id = ccfaction.1 days = 15 }
+#	}
+#}
+#country_event = {
+#	id = ccfaction.112
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		every_pop_faction = {
+#			add_modifier = {
+#				modifier = cc_faction_test_modifier_1
+#				days = -1
+#			}
+#		}
+#	}
+#}
+#planet_event = {
+#	id = ccfaction.113
+#	title = OK
+#	desc = OK
+#	is_triggered_only = yes
+#	
+#	picture = GFX_evt_arguing_senate
+#	
+#	option = {
+#		name = OK
+#		add_modifier = {
+#			modifier = cc_planet_test1
+#			days = -1
+#		}
+#	}
+#	option = {
+#		name = OK
+#		add_modifier = {
+#			modifier = cc_planet_test2
+#			days = -1
+#		}
+#	}
+#}
 
 #performance booster event
 country_event = {

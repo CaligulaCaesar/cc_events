@@ -37,3 +37,101 @@ dpe_smallpos_events.5.desc:0 "The [dpe_dissident_faction.GetName], led by [dpe_d
 
 dpe_persuasive_leader:0 "Persuasive Ruler"
 dpe_unpersuasive_leader:0 "Unconvincing Ruler"
+
+
+
+
+
+#Coding: Not too high mtth but big chance of 0. Governor will be more likely on planets with monarchies and democracies (extra flavour text there), admiral and general with military academies, and scientist with universities. Also via ethics and absolute number of planets (boost when >12 and >25)
+
+dpe_smallpos_events.11.name:0 "Talented Scientist Uncovered"
+dpe_smallpos_events.11.desc:0 "[dpe_talent_leader.GetName], a local Professor [root.GetDPETalentFlavour] who specialises in [root.GetDPETalentField], has been making ground-breaking progress in [dpe_talent_leader.GetHisHer] field. Some of your advisors have suggested hiring [dpe_talent_leader.GetHimHer] to carry forward [dpe_talent_leader.GetHisHer] research for the state, though the planet's academic community is quite keen on keeping [dpe_talent_leader.GetHimHer]!"
+dpe_smallpos_events.11.A:0 "Hire [dpe_talent_leader.GetHimHer]."
+#Spend normal leader costs
+dpe_smallpos_events.11.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 scientist who specialises in [root.GetDPETalentField], is added to the leader pool."
+dpe_smallpos_events.11.B:0 "[dpe_talent_leader.GetSheHeCap] is of more use to [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_physicist:0 "Talented Physicist"
+dpe_planet_talented_physicist_desc:0 "This planet benefits from the services of a talented physicist."
+dpe_planet_talented_engineer:0 "Talented Engineer"
+dpe_planet_talented_engineer_desc:0 "This planet benefits from the services of a talented engineer."
+dpe_planet_talented_biologist:0 "Talented Biologist"
+dpe_planet_talented_biologist_desc:0 "This planet benefits from the services of a talented biologist."
+dpe_planet_talented_compscientist:0 "Talented Computer Scientist"
+dpe_planet_talented_compscientist_desc:0 "This planet benefits from the services of a talented computer scientist."
+dpe_planet_talented_socscientist:0 "Talented Social Scientist"
+dpe_planet_talented_socscientist_desc:0 "This planet benefits from the services of a talented social scientist."
+
+
+dpe_smallpos_events.12.name:0 "Talented General Uncovered"
+dpe_smallpos_events.12.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour], has impressed visiting [root.GetSpeciesAdj] Army Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made a General of the Army. However, [dpe_talent_planet.GetName] are equally keen on keeping [dpe_talent_leader.GetHimHer] and putting [dpe_talent_leader.GetHimHer] in charge of the defence of the planet."
+dpe_smallpos_events.12.A:0 "Hire [dpe_talent_leader.GetHimHer]."
+dpe_smallpos_events.12.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 general, is added to the leader pool."
+dpe_smallpos_events.12.B:0 "[dpe_talent_leader.GetSheHeCap] is of more use to [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_general:0 "Talented General"
+dpe_planet_talented_general_desc:0 "This planet benefits from the services of a talented general."
+
+
+dpe_smallpos_events.13.name:0 "Talented Official Uncovered"
+dpe_smallpos_events.13.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour], has impressed visiting [root.GetSpeciesAdj] Officials with [dpe_talent_leader.GetHisHer] leadership abilities and good governance record. They have put [dpe_talent_leader.GetHisHer] name forward to be given higher responsibilities within the [root.GetName]'s governance structure. However, [dpe_talent_leader.GetSheHe] is beloved by [dpe_talent_planet.GetName]'s population, who would be sad to see [dpe_talent_leader.GetHimHer] go."
+dpe_smallpos_events.13.A:0 "Hire [dpe_talent_leader.GetHimHer]."
+dpe_smallpos_events.13.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 governor, is added to the leader pool."
+dpe_smallpos_events.13.B:0 "[dpe_talent_leader.GetSheHeCap] is of more use to [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_governor:0 "Capable Official"
+dpe_planet_talented_governor_desc:0 "This planet benefits from the services of a highly capable governor."
+
+
+dpe_smallpos_events.14.name:0 "Talented Naval Officer Uncovered"
+dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], the naval officer in charge of [dpe_talent_starport.GetName], has impressed visiting [root.GetSpeciesAdj] Navy Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made an Admiral of the Fleet."
+dpe_smallpos_events.14.A:0 "Hire [dpe_talent_leader.GetHimHer]."
+dpe_smallpos_events.14.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 admiral, is added to the leader pool."
+dpe_smallpos_events.14.B:0 "[dpe_talent_leader.GetSheHeCap] is of more use where [dpe_talent_leader.GetSheHe] is."
+
+dpe_planet_talented_admiral:0 "Talented Naval Officer"
+dpe_planet_talented_admiral_desc:0 "This starport benefits from the services of a highly capable naval officer."
+
+
+#GetDPETalentFlavour:
+dpe_talent_flavour_scientist_university:0 "at [dpe_talent_planet.GetName]'s university"
+dpe_talent_flavour_scientist_default:0 "from [dpe_talent_planet.GetName]"
+
+dpe_talent_flavour_general_academy:0 "a graduate of [dpe_talent_planet.GetName]'s military academy"
+dpe_talent_flavour_general_default:0 "a local general from [dpe_talent_planet.GetName]"
+
+dpe_talent_flavour_governor_royal:0 "a member of [dpe_talent_planet.GetName]'s royal family"
+dpe_talent_flavour_governor_democracy:0 "an official who has helped govern [dpe_talent_planet.GetName]'s local democracy"
+dpe_talent_flavour_governor_default:0 "a local official from [dpe_talent_planet.GetName]"
+
+#GetDPETalentField: Uses Vanilla "materials" etc localisations
+
+
+
+
+
+#These are actually for colony events, but that file is bloated
+#+2/3 or 3/4 of normal attraction
+cc_authoritarian_influence1:0 "Monarchist Influence"
+cc_authoritarian_influence1_desc:0 "This planet is influenced by the memory of a local monarch who used to rule the planet."
+
+cc_egalitarian_influence1:0 "Monarchist Influence"
+cc_egalitarian_influence1_desc:0 "This planet is influenced by the memory of their former system of direct democratic self-governance."
+
+cc_xenophile_influence1:0 "Xenophile Influence"
+cc_xenophile_influence1_desc:0 "This planet is influenced by the memory of a distinguished xenophile activist who was beloved by the planet's population."
+
+cc_xenophobe_influence1:0 "Xenophobic Influence"
+cc_xenophobe_influence1_desc:0 "This planet is influenced by the memory of the "Hegemon", a charismatic individual who sought to protect the planet from outside influences."
+
+cc_materialist_influence1:0 "Materialist Influence"
+cc_materialist_influence1_desc:0 "This planet is influenced by the memory of a local intellectual who was beloved by the planet's population."
+
+cc_spiritualist_influence1:0 "Spiritualist Influence"
+cc_spiritualist_influence1_desc:0 "This planet is influenced by the memory of a local guru who was beloved by the planet's population."
+
+cc_pacifist_influence1:0 "Pacifist Influence"
+cc_pacifist_influence1_desc:0 "This planet is influenced by the memory of a distinguished pacifist activist who was beloved by the planet's population."
+
+cc_militarist_influence1:0 "$cc_militarist_influence$"
+cc_militarist_influence1_desc:0 "This planet is influenced by the memory of a retired naval officer who used to be the 'Legate' of this planet."
