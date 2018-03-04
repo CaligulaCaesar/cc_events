@@ -90,6 +90,7 @@ country_event = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
+						exists = leader
 					}
 					count > 0
 				}
@@ -104,6 +105,7 @@ country_event = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
 							}
+							exists = leader
 						}
 						count > 0
 					}
@@ -115,8 +117,10 @@ country_event = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
+						exists = leader
 					}
 					save_event_target_as = dpe_dissident_faction
+					leader = { save_event_target_as = dpe_dissident_faction_leader }
 				}
 				else = {
 					if = {
@@ -128,6 +132,7 @@ country_event = {
 										limit = { happiness < 0.4 }
 										percentage > 0.75
 									}
+									exists = leader
 								}
 								count > 0
 							}
@@ -139,8 +144,10 @@ country_event = {
 									limit = { happiness < 0.4 }
 									percentage > 0.75
 								}
+								exists = leader
 							}
 							save_event_target_as = dpe_dissident_faction
+							leader = { save_event_target_as = dpe_dissident_faction_leader }
 						}
 						else = {
 							if = {
@@ -152,8 +159,10 @@ country_event = {
 												limit = { happiness < 0.4 }
 												percentage > 0.75
 											}
+											exists = leader
 										}
 										count > 0
+										leader = { save_event_target_as = dpe_dissident_faction_leader }
 									}
 								}
 								random_pop_faction = {
@@ -163,8 +172,10 @@ country_event = {
 											limit = { happiness < 0.4 }
 											percentage > 0.75
 										}
+										exists = leader
 									}
 									save_event_target_as = dpe_dissident_faction
+									leader = { save_event_target_as = dpe_dissident_faction_leader }
 								}
 								else = {
 									random_pop_faction = {
@@ -173,8 +184,10 @@ country_event = {
 												limit = { happiness < 0.4 }
 												percentage > 0.75
 											}
+											exists = leader
 										}
 										save_event_target_as = dpe_dissident_faction
+										leader = { save_event_target_as = dpe_dissident_faction_leader }
 									}
 								}
 							}
