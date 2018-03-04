@@ -7779,6 +7779,7 @@ planet_event = {
 #	mean_time_to_happen = { years = 100 }
 	
 	immediate = {
+		set_planet_flag = cc_colony_story
 		owner = {
 			set_timed_country_flag = {
 				flag = cc_recent_spiritualist_story

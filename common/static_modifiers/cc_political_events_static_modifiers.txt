@@ -546,3 +546,20 @@ dpe_innovative_CEO = {
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
 }
+
+
+dpe_unity_planet = {
+	planet_resource_unity_add = 2
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_unity.dds"
+}
+
+dpe_persuasive_leader = {
+	pop_government_ethic_attraction = 0.33
+}
+
+dpe_unpersuasive_leader = {
+	pop_government_ethic_attraction = -0.25
+	country_resource_influence_mult = -0.25
+}

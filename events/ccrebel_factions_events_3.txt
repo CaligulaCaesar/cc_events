@@ -2497,47 +2497,152 @@ country_event = {
 								set_owner = prevprevprev
 							}
 						}
+						#Give them two nearby systems (without planets)
+						closest_system = {
+							max_steps = 2
+							limit = {
+								exists = owner
+								owner = { is_same_value = root }
+								has_owner = no
+							}
+							starbase = { set_owner = prevprev }
+						}
+						closest_system = {
+							max_steps = 2
+							limit = {
+								exists = owner
+								owner = { is_same_value = root }
+								has_owner = no
+							}
+							starbase = { set_owner = prevprev }
+						}
+
+	
+						#adding the chance to subsidise the rebels if you have Potent Rebellions
+						root = { save_event_target_as = old_owner }
+						
+						if = {
+							limit = {
+								any_country = {
+									NOT = { is_country_type = fallen_empire }
+									NOR = {
+										has_valid_civic = civic_fanatic_purifiers
+										has_valid_civic = civic_hive_devouring_swarm
+										has_valid_civic = civic_machine_terminator
+										has_valid_civic = civic_barbaric_despoilers
+									}
+									any_owned_planet = {
+										distance = {
+											source = prevprev
+											max_distance = 150
+										}
+									}
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								NOT = { is_country_type = fallen_empire }
+								NOR = {
+									has_valid_civic = civic_fanatic_purifiers
+									has_valid_civic = civic_hive_devouring_swarm
+									has_valid_civic = civic_machine_terminator
+									has_valid_civic = civic_barbaric_despoilers
+								}
+								any_owned_planet = {
+									distance = {
+										source = prevprev
+										max_distance = 150
+									}
+								}
+								
+								opinion = {
+									who = event_target:old_owner
+									value < -50
+								}
+								OR = {
+									is_hostile_to = event_target:old_owner
+									is_angry_to = event_target:old_owner
+									is_rival = event_target:old_owner
+									is_disloyal_to = event_target:old_owner
+									is_domineering_to = event_target:old_owner
+								}
+								AND = {
+									OR = {
+										has_country_resource = {
+											type = minerals
+											amount > 2000
+										}
+										has_monthly_income = {
+											resource = minerals
+											value > 100
+										}
+									}
+									OR = {
+										has_monthly_income = {
+											resource = energy
+											value > 100
+										}
+										energy > 2000
+									}
+								}
+							}
+							prevprev = {
+								set_timed_relation_flag = {
+									flag = ccrebel_may_support_rebels
+									who = prev
+									days = 15
+								}
+							}
+							country_event = { id = ccrebel_sow_unrest.4 days = 14 }
+						}
 					}
 				
 					remove_all_ethics = yes
 					#primary ethic
-					switch = {
-						trigger = has_country_flag
-						cc_imperialist_revolt_active = { country_add_ethic = ethic_fanatic_militarist }
-						cc_prosperity_revolt_active = { country_add_ethic = ethic_fanatic_pacifist }
-						cc_totalitarian_revolt_active = { country_add_ethic = ethic_fanatic_authoritarian }
-						cc_progressive_revolt_active = { country_add_ethic = ethic_fanatic_egalitarian }
-						cc_technologist_revolt_active = { country_add_ethic = ethic_fanatic_materialist }
-						cc_traditionalist_revolt_active = { country_add_ethic = ethic_fanatic_spiritualist }
-						cc_xenoist_revolt_active = { country_add_ethic = ethic_fanatic_xenophile }
-						cc_supremacist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
-						cc_isolationist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
-						default = { }
-					}
+					root = {
+						switch = {
+							trigger = has_country_flag
+							cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
+							cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
+							cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
+							cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
+							cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
+							cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
+							cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
+							cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+							cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+							default = { }
+						}
 					
-					#secondary ethic
-					switch = {
-						trigger = has_country_flag
-						cc_imperialist_secondary_revolt_active = { country_add_ethic = ethic_militarist }
-						cc_prosperity_secondary_revolt_active = { country_add_ethic = ethic_pacifist }
-						cc_totalitarian_secondary_revolt_active = { country_add_ethic = ethic_authoritarian }
-						cc_progressive_secondary_revolt_active = { country_add_ethic = ethic_egalitarian }
-						cc_technologist_secondary_revolt_active = { country_add_ethic = ethic_materialist }
-						cc_traditionalist_secondary_revolt_active = { country_add_ethic = ethic_spiritualist }
-						cc_xenoist_secondary_revolt_active = { country_add_ethic = ethic_xenophile }
-						cc_supremacist_secondary_revolt_active = {
-							if = {
-								limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-								country_add_ethic = ethic_xenophobe
+						#secondary ethic
+						switch = {
+							trigger = has_country_flag
+							cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
+							cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
+							cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
+							cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
+							cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
+							cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
+							cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
+							cc_supremacist_secondary_revolt_active = {
+								prev = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
+									}
+								}
 							}
-						}
-						cc_isolationist_secondary_revolt_active = {
-							if = {
-								limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-								country_add_ethic = ethic_xenophobe
+							cc_isolationist_secondary_revolt_active = {
+								prev = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
+									}
+								}
 							}
+							default = { }
 						}
-						default = { }
 					}
 					
 					if = {
@@ -2949,43 +3054,49 @@ country_event = {
 							
 							
 							#primary ethic
-							switch = {
-								trigger = has_country_flag
-								cc_imperialist_revolt_active = { country_add_ethic = ethic_fanatic_militarist }
-								cc_prosperity_revolt_active = { country_add_ethic = ethic_fanatic_pacifist }
-								cc_totalitarian_revolt_active = { country_add_ethic = ethic_fanatic_authoritarian }
-								cc_progressive_revolt_active = { country_add_ethic = ethic_fanatic_egalitarian }
-								cc_technologist_revolt_active = { country_add_ethic = ethic_fanatic_materialist }
-								cc_traditionalist_revolt_active = { country_add_ethic = ethic_fanatic_spiritualist }
-								cc_xenoist_revolt_active = { country_add_ethic = ethic_fanatic_xenophile }
-								cc_supremacist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
-								cc_isolationist_revolt_active = { country_add_ethic = ethic_fanatic_xenophobe }
-								default = { }
-							}
+							root = {
+								switch = {
+									trigger = has_country_flag
+									cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
+									cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
+									cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
+									cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
+									cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
+									cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
+									cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
+									cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+									cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+									default = { }
+								}
 							
-							#secondary ethic
-							switch = {
-								trigger = has_country_flag
-								cc_imperialist_secondary_revolt_active = { country_add_ethic = ethic_militarist }
-								cc_prosperity_secondary_revolt_active = { country_add_ethic = ethic_pacifist }
-								cc_totalitarian_secondary_revolt_active = { country_add_ethic = ethic_authoritarian }
-								cc_progressive_secondary_revolt_active = { country_add_ethic = ethic_egalitarian }
-								cc_technologist_secondary_revolt_active = { country_add_ethic = ethic_materialist }
-								cc_traditionalist_secondary_revolt_active = { country_add_ethic = ethic_spiritualist }
-								cc_xenoist_secondary_revolt_active = { country_add_ethic = ethic_xenophile }
-								cc_supremacist_secondary_revolt_active = {
-									if = {
-										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-										country_add_ethic = ethic_xenophobe
+								#secondary ethic
+								switch = {
+									trigger = has_country_flag
+									cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
+									cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
+									cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
+									cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
+									cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
+									cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
+									cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
+									cc_supremacist_secondary_revolt_active = {
+										prev = {
+											if = {
+												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+												country_add_ethic = ethic_xenophobe
+											}
+										}
 									}
-								}
-								cc_isolationist_secondary_revolt_active = {
-									if = {
-										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-										country_add_ethic = ethic_xenophobe
+									cc_isolationist_secondary_revolt_active = {
+										prev = {
+											if = {
+												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+												country_add_ethic = ethic_xenophobe
+											}
+										}
 									}
+									default = { }
 								}
-								default = { }
 							}
 							
 							if = {
@@ -3654,7 +3765,20 @@ planet_event = {
 		}
 	
 	
+		#Give them a nearby system (without planets)
+		closest_system = {
+			max_steps = 2
+			limit = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+				has_owner = no
+			}
+			starbase = { set_owner = event_target:cc_breakaway_country }
+		}
+
+
 		set_owner = event_target:cc_breakaway_country
+
 
 		if = {
 			limit = { has_modifier = cc_faction_acute_unrest }
@@ -4302,24 +4426,20 @@ country_event = {
 	}
 	
 	immediate = {
-			
-		fromfrom = {
-			set_owner = root
-			solar_system = {
-				starbase = {
-					set_owner = root
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_modifier = capital }
-					remove_modifier = capital
-				}
-			}
-			planet_event = { id = ccfaction.691 days = 2 }
-		}
-			
 		from = {
+			every_owned_starbase = {
+				set_owner = root
+			}
+			every_owned_planet = {
+				set_owner = root
+				hidden_effect = {
+					if = {
+						limit = { has_modifier = capital }
+						remove_modifier = capital
+					}
+					planet_event = { id = ccfaction.691 days = 2 }
+				}
+			}
 			set_country_flag = silence_destroy_event
 			destroy_country = yes
 		}

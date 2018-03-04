@@ -87,6 +87,10 @@ xenophilia_refugee_pop_effect = {
 }
 
 remove_all_political_colony_modifiers = {
+	if = {
+		limit = { has_modifier = dpe_unity_planet }
+		remove_modifier = dpe_unity_planet
+	}
 
 	if = {
 		limit = { has_modifier = dpe_innovative_CEO }
@@ -469,6 +473,10 @@ remove_all_political_colony_modifiers = {
 }
 
 remove_rebel_irrelevant_political_colony_modifiers = {
+	if = {
+		limit = { has_modifier = dpe_unity_planet }
+		remove_modifier = dpe_unity_planet
+	}
 
 	if = {
 		limit = { has_modifier = dpe_disgruntled_CEO }
@@ -731,6 +739,10 @@ remove_rebel_irrelevant_political_colony_modifiers = {
 }
 
 remove_new_owner_irrelevant_political_colony_modifiers = {
+	if = {
+		limit = { has_modifier = dpe_unity_planet }
+		remove_modifier = dpe_unity_planet
+	}
 	
 	if = {
 		limit = { has_modifier = dpe_disgruntled_CEO }

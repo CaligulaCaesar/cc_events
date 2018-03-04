@@ -1,0 +1,248 @@
+
+namespace = dpe_smallpos_events
+
+planet_event = {
+	id = dpe_smallpos_events.1
+	hide_window = yes
+
+	trigger = { has_planet_flag = dpe_potential_unity_planet }
+
+	mean_time_to_happen = { years = 50 }
+
+	immediate = {
+		planet_event = { id = dpe_smallpos_events.2 }
+	}
+}
+
+planet_event = {
+	id = dpe_smallpos_events.2
+	title = dpe_smallpos_events.2.name
+	desc = dpe_smallpos_events.2.desc
+	picture = GFX_evt_unity_symbol
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = dpe_recent_unity_planet
+			}
+		}
+		NOT = { has_planet_flag = dpe_unity_planet }
+		unrest < 1
+		count_pops = {
+			limit = { has_a_happiness_gauge = yes }
+			count > 7
+		}
+		pop_percentage = {
+			limit = { happiness > 0.55 }
+			percentage > 0.75
+		}
+	}
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_unity_planet
+			years = 40
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_unity_planet
+				years = 10
+			}
+		}
+	}
+
+	option = {
+		name = CCEXCELLENT
+		add_modifier = {
+			modifier = dpe_unity_planet
+			days = 3600
+		}
+	}
+}
+
+
+#Leader Debates
+country_event = {
+	id = dpe_smallpos_events.3
+	hide_window = yes
+	
+	trigger = { has_country_flag = dpe_can_have_ruler_debate }
+	
+	mean_time_to_happen = { years = 20 }
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+				}
+				NOT = { has_country_flag = dpe_recent_ruler_debate }
+				exists = ruler
+				count_pop_factions = {
+					limit = {
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count > 0
+				}
+			}
+		
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							support > 0.15
+							pop_percentage = {
+								limit = { happiness < 0.4 }
+								percentage > 0.75
+							}
+						}
+						count > 0
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						support > 0.15
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					save_event_target_as = dpe_dissident_faction
+				}
+				else = {
+					if = {
+						limit = {
+							count_pop_factions = {
+								limit = {
+									support > 0.10
+									pop_percentage = {
+										limit = { happiness < 0.4 }
+										percentage > 0.75
+									}
+								}
+								count > 0
+							}
+						}
+						random_pop_faction = {
+							limit = {
+								support > 0.10
+								pop_percentage = {
+									limit = { happiness < 0.4 }
+									percentage > 0.75
+								}
+							}
+							save_event_target_as = dpe_dissident_faction
+						}
+						else = {
+							if = {
+								limit = {
+									count_pop_factions = {
+										limit = {
+											support > 0.05
+											pop_percentage = {
+												limit = { happiness < 0.4 }
+												percentage > 0.75
+											}
+										}
+										count > 0
+									}
+								}
+								random_pop_faction = {
+									limit = {
+										support > 0.05
+										pop_percentage = {
+											limit = { happiness < 0.4 }
+											percentage > 0.75
+										}
+									}
+									save_event_target_as = dpe_dissident_faction
+								}
+								else = {
+									random_pop_faction = {
+										limit = {
+											pop_percentage = {
+												limit = { happiness < 0.4 }
+												percentage > 0.75
+											}
+										}
+										save_event_target_as = dpe_dissident_faction
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		
+			if = {
+				limit = {
+					ruler = { NOT = { leader_of_faction = event_target:dpe_dissident_faction } }
+				}
+				set_timed_country_flag = {
+					flag = dpe_recent_ruler_debate
+					days = 7200
+				}
+				random_list = {
+					2 = { country_event = { id = dpe_smallpos_events.4 } }
+					1 = { country_event = { id = dpe_smallpos_events.5 } }
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_smallpos_events.4
+	title = dpe_smallpos_events.4.name
+	desc = dpe_smallpos_events.4.desc
+	picture = GFX_evt_arguing_senate
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = dpe_smallpos_events.4.option
+
+		
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 3
+			min = 30
+			max = 10000
+		}
+
+		add_modifier = {
+			modifier = dpe_persuasive_leader
+			days = 1080
+		}
+	}
+}
+
+country_event = {
+	id = dpe_smallpos_events.5
+	title = dpe_smallpos_events.5.name
+	desc = dpe_smallpos_events.5.desc
+	picture = GFX_evt_arguing_senate
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = WORRYING
+
+		add_modifier = {
+			modifier = dpe_unpersuasive_leader
+			days = 1080
+		}
+	}
+}

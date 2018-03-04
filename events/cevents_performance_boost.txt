@@ -1870,6 +1870,62 @@ event = {
 				days = 31
 			}
 		}
+
+		#Unity Planets
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_country_flag = dpe_recent_unity_planet
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					unrest < 1
+					NOT = { has_planet_flag = dpe_unity_planet }
+					count_pops = {
+						limit = { has_a_happiness_gauge = yes }
+						count > 7
+					}
+					pop_percentage = {
+						limit = { happiness > 0.55 }
+						percentage > 0.75
+					}
+				}
+				set_timed_planet_flag = {
+					flag = dpe_potential_unity_planet
+				   days = 31
+				}
+			}
+		}
+
+		#Leader Debates
+		
+		every_country = {
+			limit = {
+				is_country_type = default
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+				}
+				NOT = { has_country_flag = dpe_recent_ruler_debate }
+				exists = ruler
+				count_pop_factions = {
+					limit = {
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count > 0
+				}
+			}
+			set_timed_country_flag = {
+			flag = dpe_can_have_ruler_debate
+			days = 31
+			}
+		}
 	}
 }
 

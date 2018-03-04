@@ -217,7 +217,7 @@ country_event = {
 		
 		
 		hidden_effect = {
-			country_event = { id = dpe_diplo.100 scopes = { from = root } }
+			country_event = { id = dpe_diplo.100 }
 			event_target:enemy = { country_event = { id = dpe_diplo.101 } }
 		}
 		ai_chance = {
@@ -500,7 +500,7 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = {
-				country_event = { id = dpe_diplo.100 scopes = { from = root } }
+				country_event = { id = dpe_diplo.10000 }
 			}
 		}
 	}
@@ -542,6 +542,14 @@ planet_event = {
 			}
 		}
 	}
+}
+
+country_event = {
+	id = dpe_diplo.10000
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = { country_event = { id = dpe_diplo.100 } }
 }
 
 #also triggered separately via perf, because I wanted a bit of a higher chance of it happening
@@ -940,7 +948,7 @@ country_event = {
 	
 	immediate = {
 		from = { save_event_target_as = enemy }
-		country_event = { id = dpe_diplo.100 scopes = { from = root } }
+		country_event = { id = dpe_diplo.10000 }
 	}
 }
 
