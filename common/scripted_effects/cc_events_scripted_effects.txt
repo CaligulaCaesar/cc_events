@@ -86,7 +86,49 @@ xenophilia_refugee_pop_effect = {
 	}		
 }
 
+
+dpe_talent_scientist_give_speciality = {
+	random_list = {
+		2 = { add_trait = leader_trait_expertise_materials }
+		2 = { add_trait = leader_trait_expertise_propulsion }
+		2 = { add_trait = leader_trait_expertise_voidcraft }
+		2 = { add_trait = leader_trait_expertise_industry }
+		2 = { add_trait = leader_trait_expertise_field_manipulation }
+		2 = { add_trait = leader_trait_expertise_particles }
+		2 = { add_trait = leader_trait_expertise_computing }
+		2 = { add_trait = leader_trait_expertise_new_worlds }
+		2 = { add_trait = leader_trait_expertise_statecraft }
+		2 = { add_trait = leader_trait_expertise_biology }
+		2 = { add_trait = leader_trait_expertise_military_theory }
+	}
+}
+
 remove_all_political_colony_modifiers = {
+	if = {
+		limit = { has_modifier = dpe_planet_talented_physicist }
+		remove_modifier = dpe_planet_talented_physicist
+	}
+	if = {
+		limit = { has_modifier = dpe_planet_talented_engineer }
+		remove_modifier = dpe_planet_talented_engineer
+	}
+	if = {
+		limit = { has_modifier = dpe_planet_talented_biologist }
+		remove_modifier = dpe_planet_talented_biologist
+	}
+	if = {
+		limit = { has_modifier = dpe_planet_talented_socscientist }
+		remove_modifier = dpe_planet_talented_socscientist
+	}
+	if = {
+		limit = { has_modifier = dpe_planet_talented_general }
+		remove_modifier = dpe_planet_talented_general
+	}
+	if = {
+		limit = { has_modifier = dpe_planet_talented_governor }
+		remove_modifier = dpe_planet_talented_governor
+	}
+
 
 	if = {
 		limit = { has_modifier = cc_authoritarian_influence1 }

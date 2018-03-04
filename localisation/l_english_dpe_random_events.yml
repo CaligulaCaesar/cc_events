@@ -2,6 +2,25 @@
 
 #Political Events is too long and unwieldy. Hopefully I will add more things here.
 
+#Rebellion Modifiers
+revolutionary_boost_05:0 "Rebellion Starter Bonus"
+revolutionary_boost_05_desc:0 "Bonus to help rebellions pack a punch.\n\n"
+revolutionary_boost_1:0 "$revolutionary_boost_05$"
+revolutionary_boost_1_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_2:0 "$revolutionary_boost_05$"
+revolutionary_boost_2_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_3:0 "$revolutionary_boost_05$"
+revolutionary_boost_3_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_4:0 "$revolutionary_boost_05$"
+revolutionary_boost_4_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_5:0 "$revolutionary_boost_05$"
+revolutionary_boost_5_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_6:0 "$revolutionary_boost_05$"
+revolutionary_boost_6_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_mobilisation:0 "Revolutionary Mobilisation"
+revolutionary_mobilisation_desc:0 "The whole of society is mobilised towards making the revolution a success.\n\n"
+
+
 cc_events_mod.57.name:0 "Start-up on the Rise"
 cc_events_mod.57.desc:0 "A privately owned Merchant Corporation on [dpe_merchant_planet.GetName] has been gaining popularity among your people. The company's scientists have developed several original uses of modern computing technology that make feats that were until recently beyond the general populace's wildest dreams possible! The CEO of the company, [dpe_CEO.GetName], is quickly becoming one of the richest individuals in the [root.GetName]. [dpe_CEO.GetSheHeCap] has asked for a patent to this product to secure [dpe_CEO.GetHisHer] new position."
 
@@ -89,8 +108,8 @@ dpe_smallpos_events.14.A:0 "Hire [dpe_talent_leader.GetHimHer]."
 dpe_smallpos_events.14.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 admiral, is added to the leader pool."
 dpe_smallpos_events.14.B:0 "[dpe_talent_leader.GetSheHeCap] is of more use where [dpe_talent_leader.GetSheHe] is."
 
-dpe_planet_talented_admiral:0 "Talented Naval Officer"
-dpe_planet_talented_admiral_desc:0 "This starport benefits from the services of a highly capable naval officer."
+dpe_starbase_talented_admiral:0 "Talented Naval Officer"
+dpe_starbase_talented_admiral_desc:0 "This starport benefits from the services of a highly capable naval officer."
 
 
 #GetDPETalentFlavour:

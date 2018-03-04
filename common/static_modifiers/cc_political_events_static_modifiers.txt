@@ -564,3 +564,72 @@ dpe_unpersuasive_leader = {
 	pop_government_ethic_attraction = -0.25
 	country_resource_influence_mult = -0.25
 }
+
+
+
+
+dpe_planet_talented_physicist = {
+	tile_resource_physics_research_mult = 0.2
+	tile_resource_energy_mult = 0.1
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_particle_physics.dds"
+}
+
+dpe_planet_talented_engineer = {
+	tile_resource_engineering_research_mult = 0.2
+	planet_building_cost_mult = -0.1
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_luddite.dds"
+}
+
+dpe_planet_talented_biologist = {
+	tile_resource_physics_research_mult = 0.2
+	pop_growth_speed = 0.15
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_genetics.dds"
+}
+
+dpe_planet_talented_compscientist = {
+	tile_resource_society_research_mult = 0.2
+	pop_robot_build_speed_mult = 0.1
+	pop_robot_production_output = 0.1
+	
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_computer_science.dds"
+}
+
+dpe_planet_talented_socscientist = {
+	tile_resource_society_research_mult = 0.2
+	mod_distance_to_capital_static_modifier_efficiency_mult = -0.15
+	planet_migration_all_pull = 0.15
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_judge.dds"
+}
+
+dpe_planet_talented_general = {
+	planet_army_build_cost_mult = -0.15
+	planet_army_build_speed_mult = 0.33
+	planet_orbital_bombardment_damage = -0.2
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_legate.dds"
+}
+
+dpe_planet_talented_governor = {
+	planet_building_cost_mult = -0.1
+	pop_citizen_happiness = 0.1
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_judge.dds"
+}
+
+dpe_starbase_talented_admiral = {
+	ship_hull_mult = 0.1
+	ship_shield_mult = 0.1
+	ship_weapon_damage = 0.1
+	ship_fire_rate_mult = 0.1
+}

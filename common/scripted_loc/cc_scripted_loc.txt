@@ -159,60 +159,61 @@ defined_text = {
 #"the [Particles] Professor"
 defined_text = {
 	name = GetDPETalentField
+	
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_materials }
+		trigger = { dpe_talent_scientist_materials = yes }
 		localization_key = materials
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_propulsion }
+		trigger = { dpe_talent_scientist_propulsion = yes }
 		localization_key = propulsion
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_voidcraft }
+		trigger = { dpe_talent_scientist_voidcraft = yes }
 		localization_key = voidcraft
 	}
+#	text = {
+#		trigger = { dpe_talent_scientist_robotics = yes }
+#		localization_key = robotics
+#	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_robotics }
-		localization_key = robotics
-	}
-	text = {
-		trigger = { has_country_flag = dpe_talent_professor_industry }
+		trigger = { dpe_talent_scientist_industry = yes }
 		localization_key = industry
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_field_manipulation }
+		trigger = { dpe_talent_scientist_field_manipulation = yes }
 		localization_key = field_manipulation
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_particles }
+		trigger = { dpe_talent_scientist_particles = yes }
 		localization_key = particles
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_computing }
+		trigger = { dpe_talent_scientist_computing = yes }
 		localization_key = computing
 	}
+#	text = {
+#		trigger = { dpe_talent_scientist_metaphysics = yes }
+#		localization_key = metaphysics
+#	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_metaphysics }
-		localization_key = metaphysics
-	}
-	text = {
-		trigger = { has_country_flag = dpe_talent_professor_statecraft }
+		trigger = { dpe_talent_scientist_statecraft = yes }
 		localization_key = statecraft
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_biology }
+		trigger = { dpe_talent_scientist_biology = yes }
 		localization_key = biology
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_military_theory }
+		trigger = { dpe_talent_scientist_military_theory = yes }
 		localization_key = military_theory
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_new_worlds }
+		trigger = { dpe_talent_scientist_new_worlds = yes }
 		localization_key = new_worlds
 	}
 	text = {
-		trigger = { has_country_flag = dpe_talent_professor_psionics }
+		trigger = { dpe_talent_scientist_psionics = yes }
 		localization_key = psionics
 	}
 }
