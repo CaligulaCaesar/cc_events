@@ -252,3 +252,37 @@ defined_text = {
 		localization_key = dpe_talent_flavour_governor_default
 	}
 }
+
+#Used for the 'local talent discovered' events
+defined_text = {
+	name = GetDPETalentFlavour1
+
+	text = {
+		trigger = { dpe_talent_flavour_scientist_university = yes }
+		localization_key = dpe_talent_flavour_scientist_university1
+	}
+	text = {
+		trigger = { dpe_talent_flavour_scientist_default = yes }
+		localization_key = dpe_talent_flavour_blank
+	}
+	text = {
+		trigger = { dpe_talent_flavour_general_academy = yes }
+		localization_key = dpe_talent_flavour_general_academy1
+	}
+	text = {
+		trigger = { dpe_talent_flavour_general_default = yes }
+		localization_key = dpe_talent_flavour_blank
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_royal = yes }
+		localization_key = dpe_talent_flavour_governor_royal1
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_democracy = yes }
+		localization_key = dpe_talent_flavour_governor_democracy1
+	}
+	text = {
+		trigger = { dpe_talent_flavour_governor_default = yes }
+		localization_key = dpe_talent_flavour_blank
+	}
+}
