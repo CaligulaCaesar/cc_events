@@ -1204,8 +1204,8 @@ country_event = {
 			}
 		}
 		create_leader = {
-			type = general
-			species = admiral
+			type = admiral
+			species = event_target:dpe_talent_leader_pop.species
 			name = random
 			skill = 3
 		}
