@@ -118,7 +118,7 @@ cc_events_blackmail.206.B:0 "Renvoyer les scientifiques."
 
 cc_events_blackmail.207.name:0 "Donnés sur les discriminations interespèces révélées !"
 cc_events_blackmail.207.desc:0 "Les hackeurs ont révélé des données détaillants comment les administrations à travers la [root.GetName] ont systématiquement discriminés contre des citoyens d'autres espèces que ce soit pour des emplois ou des allocations. les citoyens non-[root.GetSpeciesName] ont toujours affirmés qu'ils n'était pas considérés comme des égaux, mais leurs plaints ont toujours été ignorées. Ils se sentent maintenant justifiés dans leur méfiance envers le supposé empire multiculturel, et réclament de grandes réformes."
-cc_events_blackmail.207.tooltip:0 "Chaque £pop Pop qui n'est pas de votre espèce principale va gagner le modificateur §R$cc_outrage_at_discrimination$§!, donnant -15% de bonheur et +50% d'attraction à l'éthique xénophobe."
+cc_events_blackmail.207.tooltip:0 "Chaque £pop  Pop qui n'est pas de votre espèce principale va gagner le modificateur §R$cc_outrage_at_discrimination$§!, donnant -15% de bonheur et +50% d'attraction à l'éthique xénophobe."
 
 cc_events_blackmail.208.name:0 "Codes de sécurité des prisons fuités !"
 cc_events_blackmail.208.desc:0 "Il semblerait que les données volées par les hackeurs étaient les codes de sécurité et les plans des prisons haute-sécurité de la [root.GetName]. Plusieurs d'entre-elles ont été attackées simultanément de manière organisée. Un grand nombre d'agitateurs réputés ainsi que plusieurs criminels tristement célèbres ont été libérés."
@@ -154,8 +154,8 @@ cc_emancipation.6.D.tooltip:0 "Tous les partisans du mouvement d'émancipation v
 cc_emancipation.20.name:0 "Inquiétudes à propos de l'éthique de l'esclavage"
 cc_emancipation.20.desc.breakaways:0 "La rébellion des [breakaway_slaves.GetName] a suscité de nombreuses inquiétudes chez certains [root.GetSpeciesAdj] à propos de la about the pérennité de l'esclavage, surtout après les représailles violentes subis par les anciens propriétaires des esclaves des mondes [breakaway_slaves.GetSpeciesAdj]. De plus, d'autres ont été attirés par la propagande [breakaway_slaves.GetSpeciesAdj] sur les méfaits de l'esclavage et les crimes perpétrés par les propriétaires. Un manifeste clandestin appelant à la fin de l'esclavage et autres pratiques oppressives a largement circulé, malgré les efforts des autorités pour l'interdire et retrouver la source de sa publication, et une portion grandissante du peuple est de plus en plus réceptive à ces idées."
 cc_emancipation.20.desc.neighbour:0 "Le contact prolongé avec les [egalitarian_neighbour.GetName] et leur propagande hostile a conduit des portions de la population du [root.GetName] à repenser leur rapport à l'esclavage. Malgré le fait que l'esclavage constitue un pilier majeur de l'économie [root.GetSpeciesAdj], un nombre croissant de citoyens ont dorénavant des préoccupations d'ordre moral concernant la subjugation totale d'un individu doué de conscience à la volonté d'un autre. Un manifeste clandestin appelant à la fin de l'esclavage et autres pratiques oppressives a largement circulé, malgré les efforts des autorités pour l'interdire et retrouver la source de sa publication, et une portion grandissante du peuple est de plus en plus réceptive à ces idées."
-cc_emancipation.20.tooltip.A:0 "Un tiers des £pop Pops non-serviles vont obtenir le modificateur §R$cc_worried_about_slaves$§! pour 15 ans, leur donnant §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
-cc_emancipation.20.tooltip.B:0 "Un quart des £pop Pops non-serviles vont obtenir le modificateur §R$cc_worried_about_slaves$§! pour 15 ans, leur donnant §R+100%§! $pop_ethic_egalitarian_attraction_mult$."
+cc_emancipation.20.tooltip.A:0 "Un tiers des £pop  Pops non-serviles vont obtenir le modificateur §R$cc_worried_about_slaves$§! pour 15 ans, leur donnant §R+200% $pop_ethic_egalitarian_attraction_mult$§!."
+cc_emancipation.20.tooltip.B:0 "Un quart des £pop  Pops non-serviles vont obtenir le modificateur §R$cc_worried_about_slaves$§! pour 15 ans, leur donnant §R+200% $pop_ethic_egalitarian_attraction_mult$§!."
 
 
 
@@ -166,7 +166,7 @@ cc_luddite.1.desc:0 "Des groupes de personnes que l'on ne peut qualifier que de 
 cc_luddite.2.name:0 "Des luddites détruisent des robots sur [root.GetName]"
 cc_luddite.2.desc:0 "Malgré leurs demandes ridicules, les "luddites" semblent avoir attiré du soutien, et il y a un risque que des attaques similaires se déroulent sur d'autres planètes. Nous devons agir !\n\nQue devons-nous faire d'eux ?"
 cc_luddite.2.A:0 "Nous pouvons nous passer de robots sur [root.GetName]."
-cc_luddite.2.A.tooltip:0 "Toutes les £pop Pops robotiques seront purgées. Si nous en reconstruisons, cela mécontentera [root.GetName]. De plus, il y a de grandes chances que le Ludditisme se répande à d'autres planètes."
+cc_luddite.2.A.tooltip:0 "Toutes les £pop  Pops robotiques seront purgées. Si nous en reconstruisons, cela mécontentera [root.GetName]. De plus, il y a de grandes chances que le Ludditisme se répande à d'autres planètes."
 cc_luddite.2.B:0 "Ignorez-les - ils finiront par se plier au progrès."
 cc_luddite.2.B.tooltip:0 "Ignorez-les - ils finiront par se plier au progrès."
 cc_luddite.2.C.tooltip:0 "Il y a moins de chances que cette planète ou d'autres subissent de nouvelles attaques."
@@ -188,7 +188,7 @@ cc_luddite.11.desc:0 "Inspirés par les évènements sur [first_luddite_planet.G
 cc_luddite.12.name:0 "Le Luddisme se répand sur [root.GetName]"
 cc_luddite.12.desc:0 "Que pouvons-nous faire pour stopper cette vague de Luddisme ?"
 cc_luddite.12.A:0 "Nous pouvons nous débrouiller aussi sans robots sur [root.GetName]."
-cc_luddite.12.A.tooltip:0 "Toute les £pop Pops robotiques seront purgées. Si nous en reconstruisons, cela mécontentera [root.GetName]."
+cc_luddite.12.A.tooltip:0 "Toute les £pop  Pops robotiques seront purgées. Si nous en reconstruisons, cela mécontentera [root.GetName]."
 cc_luddite.12.B:0 "Ignorez-les - ils finiront par se plier au progrès."
 cc_luddite.12.B.tooltip:0 "Ignorez-les - ils finiront par se plier au progrès."
 cc_luddite.12.C.tooltip:0 "Il y a moins de chances que cette planètes ou d'autres subissent de nouvelles attaques."
@@ -199,16 +199,16 @@ cc_luddite.13.A:0 "Nous devons écouter le peuple."
 cc_luddite.13.B:0 "Nous devons garder le cap."
 cc_luddite.13.B.tooltip:0 "Le Luddisme va probablement continuer à se répandre."
 cc_luddite.13.C.tooltip:0 "All future manifestations of Luddism during this crisis will be met with oppression."
-cc_luddite.13.D.tooltip:0 "Toutes £pop Pop qui a pris parti pour le mouvement Luddite sera tuée. Le mouvement Luddite sera interdit."
+cc_luddite.13.D.tooltip:0 "Toutes £pop  Pop qui a pris parti pour le mouvement Luddite sera tuée. Le mouvement Luddite sera interdit."
 
 cc_luddite.15.name:0 "Les "Luddites" sur [root.GetName] se sentent trahis"
-cc_luddite.15.desc:0 "Malgré nos promesses de ne plus utiliser de robots sur [root.GetName], les autorités ont construits de nouvelles £pop Pops robotiques. Le peuple est furieux que nous ayons renié nos promesses."
+cc_luddite.15.desc:0 "Malgré nos promesses de ne plus utiliser de robots sur [root.GetName], les autorités ont construits de nouvelles £pop  Pops robotiques. Le peuple est furieux que nous ayons renié nos promesses."
 cc_luddite.15.option:0 "Tant pis."
 
 cc_luddite.20.name:0 "Inquiétudes à propos des travailleurs robotiques"
-cc_luddite.20.desc.uprising:0 "A la suite de la "Révolte des Machines" dans le [machine_uprising_victims.GetName], de nombreux citoyens sont maintenant inquiets à propos de nos simples travailleurs robotiques. Bien que nos autorités ont rapidement démontré que la révolte sur [machine_uprising_victims.GetName] était un cas particulier et que leurs machines étaient totalement différentes des nôtres, de nombreux citoyens ont l'impressions qu'ils sont, en fait, tout aussi vulnérable que les [machine_uprising_victims.GetSpeciesNamePlural]. Une partie de la £pop Population qui n'a jamais été à l'aise avec le concept de travailleurs robotiques, prétendant qu'ils marginalisent la £pop Population organique et menacent de la rendre inutile, se sont rendu compte que leur opinions résonnaient de plus en plus avec celles du reste de la £pop Population."
-cc_luddite.20.desc.exterminators:0 "Après plusieurs confrontations avec les [machine_exterminators.GetName], de nombreux citoyens sont maintenant inquiets à propos de nos simples travailleurs robotiques. Bien que nos autorités ont rapidement démontré que les "robots tueurs" étaientt un cas spécial et en aucun cas similaire à nos robots, de nombreux citoyens pensent dorénavant que dépendre de travailleurs robotiques est un risque majeur pour toute espèce organique. Une partie de la £pop Population qui n'a jamais été à l'aise avec le concept de travailleurs robotiques, prétendant qu'ils marginalisent la £pop Population organique et menacent de la rendre inutile, se sont rendu compte que leurs opinions résonnaient de plus en plus avec celles du reste de la £pop Population."
-cc_luddite.20.tooltip:0 "Un tiers des £pops Populations non-serviles vont obtenir le modificateur §R$cc_worried_about_machines$§! pour 15 ans, leur donnant §R+100%§! $pop_ethic_spiritualist_attraction_mult$."
+cc_luddite.20.desc.uprising:0 "A la suite de la "Révolte des Machines" dans le [machine_uprising_victims.GetName], de nombreux citoyens sont maintenant inquiets à propos de nos simples travailleurs robotiques. Bien que nos autorités ont rapidement démontré que la révolte sur [machine_uprising_victims.GetName] était un cas particulier et que leurs machines étaient totalement différentes des nôtres, de nombreux citoyens ont l'impressions qu'ils sont, en fait, tout aussi vulnérable que les [machine_uprising_victims.GetSpeciesNamePlural]. Une partie de la £pop  Population qui n'a jamais été à l'aise avec le concept de travailleurs robotiques, prétendant qu'ils marginalisent la £pop  Population organique et menacent de la rendre inutile, se sont rendu compte que leur opinions résonnaient de plus en plus avec celles du reste de la £pop  Population."
+cc_luddite.20.desc.exterminators:0 "Après plusieurs confrontations avec les [machine_exterminators.GetName], de nombreux citoyens sont maintenant inquiets à propos de nos simples travailleurs robotiques. Bien que nos autorités ont rapidement démontré que les "robots tueurs" étaientt un cas spécial et en aucun cas similaire à nos robots, de nombreux citoyens pensent dorénavant que dépendre de travailleurs robotiques est un risque majeur pour toute espèce organique. Une partie de la £pop  Population qui n'a jamais été à l'aise avec le concept de travailleurs robotiques, prétendant qu'ils marginalisent la £pop  Population organique et menacent de la rendre inutile, se sont rendu compte que leurs opinions résonnaient de plus en plus avec celles du reste de la £pop  Population."
+cc_luddite.20.tooltip:0 "Un tiers des £pops  Populations non-serviles vont obtenir le modificateur §R$cc_worried_about_machines$§! pour 15 ans, leur donnant §R+200% $pop_ethic_spiritualist_attraction_mult$§!."
 
 
 #Peace Protests
@@ -217,8 +217,8 @@ cc_peace.1.desc:0 "Le peuple est mécontent de ce qu'ils appellent une guerre d'
 cc_peace.1.A:0 "Promettre la paix."
 cc_peace.1.A.tooltip:0 "Le mouvement pacifiste accepte de suspendre ses actions pendant un an à condition que nous cessons les hostilités durant cette période."
 cc_peace.1.B:0 "Ignorez-les."
-cc_peace.1.oppress.tooltip:0 "Toutes les £pop Populations pacifistes manifestant sur nos planètes seront soumises à l'oppression. Leur production sera réduite de 50%."
-cc_peace.1.D.tooltip:0 "Toutes les £pop Populations pacifistes manifestant sur nos planètes seront parquées puis tuées."
+cc_peace.1.oppress.tooltip:0 "Toutes les £pop  Populations pacifistes manifestant sur nos planètes seront soumises à l'oppression. Leur production sera réduite de 50%."
+cc_peace.1.D.tooltip:0 "Toutes les £pop  Populations pacifistes manifestant sur nos planètes seront parquées puis tuées."
 		
 cc_peace.2.name:0 "Mouvement pacifiste trahis"
 cc_peace.2.desc:0 "Le gouvernement a renié ses promesses de rapidement faire la paix. Le mouvement pacifiste se sent trahis et manifeste en redoublant de vigueur."
@@ -284,7 +284,7 @@ cc_species_insulted_1:0 "Insulté"
 cc_species_insulted_2:0 "Insulté"
 cc_ruler_cult_offended:0 "Offensé par la poursuite du Culte du Dirigeant"
 cc_ruler_revered:0 "Le dirigeant est révéré"
-cc_ruler_revered_desc:0 "Le dirigeant de cet empire est actuellement extrêmement £pop Populaire."
+cc_ruler_revered_desc:0 "Le dirigeant de cet empire est actuellement extrêmement £pop  Populaire."
 cc_ruler_cult:0 "Culte du dirigeant"
 cc_ruler_cult_desc:0 "Le dirigeant de cet empire est célébré comme un dieu."
 
@@ -293,11 +293,11 @@ cc_literally_xenophile_country:0 "Large majorité de pratiques xénophiles"
 cc_literally_xenophile_country_desc:0 "Au moins 15% de la population de cet empire pratique la xénophilie, c'est à dire qui ont des partenaires d'une espèce différente."
 
 cc_practising_xenophile:0 "Pratique la Xénophilie"
-cc_practising_xenophile_desc:0 "Cette £pop Pop a des partenaires d'une espèce différente, et est heureuse de vivre dans un pays éclairé où ces pratiques sont autorisées."
+cc_practising_xenophile_desc:0 "Cette £pop  Pop a des partenaires d'une espèce différente, et est heureuse de vivre dans un pays éclairé où ces pratiques sont autorisées."
 cc_secretly_practising_xenophile:0 "Pratique la Xénophilie en secret"
-cc_secretly_practising_xenophile:0 "Cette £pop Pop a des partenaires d'une espèce différente, mais les voit en secret, car les lois de ce pays interdit ce genre de relations."
+cc_secretly_practising_xenophile:0 "Cette £pop  Pop a des partenaires d'une espèce différente, mais les voit en secret, car les lois de ce pays interdit ce genre de relations."
 cc_secret_xenophile:0 "Secrètement Xénophile"
-cc_secret_xenophile_desc:0 "Cette £pop Pop aimerait avoir des partenaires d'une espèce différente, mais les lois de son empire l'en empêche. Elle risque de tenter de s'échapper vers un empire plus ouvert."
+cc_secret_xenophile_desc:0 "Cette £pop  Pop aimerait avoir des partenaires d'une espèce différente, mais les lois de son empire l'en empêche. Elle risque de tenter de s'échapper vers un empire plus ouvert."
 
 cc_xeno_marriage_allowed_xenoist:0 "Mariages interespèces autorisés"
 cc_xeno_marriage_allowed_supremacist:0 "Mariages contre-nature autorisés"
@@ -379,7 +379,7 @@ policy_cc_interspecies_marriage:0 "Couples interespèces"
 policy_cc_interspecies_marriage_desc:0 "Nous pouvons décider si oui ou non nos populations de différentes espèce sont autorisés ou pas à se marier ou même à se mettre en couple."
 
 allow_im:0 "Autoriser le mariage interespèces"
-allow_im_desc:0 "Légalise le mariage de couples amoureux d'espèces différentes.\n\nNote: Les £pop Pops Xénophiles seront heureuses et la xénophilie va probablement se répandre en conséquence, mais si elle est prévalente, cela pourrait affecter le taux de natalité."
+allow_im_desc:0 "Légalise le mariage de couples amoureux d'espèces différentes.\n\nNote: Les £pop  Pops Xénophiles seront heureuses et la xénophilie va probablement se répandre en conséquence, mais si elle est prévalente, cela pourrait affecter le taux de natalité."
 allows_im_name:0 "Autoriser le mariage interespèces"
 
 do_not_allow_im:0 "Ne pas autoriser le mariage interespèces"
@@ -387,7 +387,7 @@ do_not_allow_im_desc:0 "Rend illégal le mariage interespèces, mais sans concer
 does_not_allow_im_name:0 "Ne pas autoriser le mariage interespèces"
 
 ban_im_completely:0 "Interdire les relations interespèces"
-ban_im_completely_desc:0 "Rend illégal les rapports entre espèces différentes.\n\nNote: Les £pop Pops Xénophiles vont se considérer opprimée, et risquent de fuir vers des empires où la xénophilie est légale."
+ban_im_completely_desc:0 "Rend illégal les rapports entre espèces différentes.\n\nNote: Les £pop  Pops Xénophiles vont se considérer opprimée, et risquent de fuir vers des empires où la xénophilie est légale."
 bans_im_completely_name:0 "Interdire les relations interespèces"
 
 cc_events_mod.18.B.tooltip:0 "[cc_scandal_leader.GetTitle] [cc_scandal_leader.GetName] est retiré du jeu."

@@ -79,12 +79,35 @@ country_event = {
 					OR = {
 						has_defensive_pact = prev
 						is_in_federation_with = prev
+						is_guaranteeing = prev
 					}
 					relative_power = {
 						who = prevprev
 						category = fleet
 						value = overwhelming
 					}
+				}
+			}
+			NOT = {
+				count_potential_war_participants = {
+					attacker = prev
+					defender = this
+					side = this
+					limit = {
+						OR = {
+							relative_power = {
+								who = prev
+								category = fleet
+								value = equivalent
+							}
+							relative_power = {
+								who = prev
+								category = fleet
+								value = superior
+							}
+						}
+					}
+					count > 2
 				}
 			}
 		}
@@ -127,12 +150,35 @@ country_event = {
 						OR = {
 							has_defensive_pact = prev
 							is_in_federation_with = prev
+							is_guaranteeing = prev
 						}
 						relative_power = {
 							who = prevprev
 							category = fleet
 							value = overwhelming
 						}
+					}
+				}
+				NOT = {
+					count_potential_war_participants = {
+						attacker = prev
+						defender = this
+						side = this
+						limit = {
+							OR = {
+								relative_power = {
+									who = prev
+									category = fleet
+									value = equivalent
+								}
+								relative_power = {
+									who = prev
+									category = fleet
+									value = superior
+								}
+							}
+						}
+						count > 2
 					}
 				}
 			}
@@ -151,36 +197,27 @@ country_event = {
 	option = { #declare war immediately
 		name = dpe_diplo.1.A
 
-		declare_war = {
-			who = event_target:enemy
-		}
-		custom_tooltip = dpe_diplo.1.A.tooltip
-		tooltip = {
-			event_target:enemy = {
-				every_owned_planet = {
-					limit = { has_planet_flag = dpe_will_cede_in_war }
-					set_owner = root
+		event_target:enemy = {
+			every_system_within_border = {
+				limit = {
+					is_neighbor_of = root
+					NOT = { root = { has_claim = prev } }
+				}
+				add_claims = {
+					who = root
+					num_of_claims = 1
+					show_notification = no
 				}
 			}
 		}
+		declare_war = {
+			target = event_target:enemy
+			attacker_war_goal = wg_conquest
+		}
+		
 		
 		hidden_effect = {
-			add_war_demand = {
-				type = "humiliate"
-				parameter:country = event_target:enemy
-				warscore_cost = 10
-				target = this
-				enemy = event_target:enemy
-			}
-			add_war_demand = {
-				type = "dpe_cede_borders"
-				parameter:country = event_target:enemy
-				warscore_cost = 90
-				target = this
-				enemy = event_target:enemy
-			}
-			
-			country_event = { id = dpe_diplo.100 scopes = { from = root } }
+			country_event = { id = dpe_diplo.100 }
 			event_target:enemy = { country_event = { id = dpe_diplo.101 } }
 		}
 		ai_chance = {
@@ -193,6 +230,7 @@ country_event = {
 						OR = {
 							has_defensive_pact = prev
 							is_in_federation_with = prev
+							is_guaranteeing = prev
 						}
 						relative_power = {
 							who = prevprev
@@ -441,38 +479,28 @@ planet_event = {
 		name = dpe_diplo.4.A
 		
 		owner = {
-			declare_war = {
-				who = event_target:enemy
-			}
-		}
-		custom_tooltip = dpe_diplo.1.A.tooltip
-		tooltip = {
 			event_target:enemy = {
-				every_owned_planet = {
-					limit = { has_planet_flag = dpe_will_cede_in_war }
-					set_owner = root
+				every_system_within_border = {
+					limit = {
+						is_neighbor_of = root.owner
+						NOT = { root.owner = { has_claim = prev } }
+					}
+					add_claims = {
+						who = root.owner
+						num_of_claims = 1
+						show_notification = no
+					}
 				}
+			}
+			declare_war = {
+				target = event_target:enemy
+				attacker_war_goal = wg_conquest
 			}
 		}
 		
 		hidden_effect = {
 			owner = {
-				add_war_demand = {
-					type = "humiliate"
-					parameter:country = event_target:enemy
-					warscore_cost = 10
-					target = this
-					enemy = event_target:enemy
-				}
-				add_war_demand = {
-					type = "dpe_cede_borders"
-					parameter:country = event_target:enemy
-					warscore_cost = 90
-					target = this
-					enemy = event_target:enemy
-				}
-			
-				country_event = { id = dpe_diplo.100 scopes = { from = root } }
+				country_event = { id = dpe_diplo.10000 }
 			}
 		}
 	}
@@ -514,6 +542,14 @@ planet_event = {
 			}
 		}
 	}
+}
+
+country_event = {
+	id = dpe_diplo.10000
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = { country_event = { id = dpe_diplo.100 } }
 }
 
 #also triggered separately via perf, because I wanted a bit of a higher chance of it happening
@@ -590,16 +626,7 @@ country_event = {
 	option = { #demand justice
 		name = dpe_diplo.5.A
 		
-		custom_tooltip = dpe_diplo.5.A.tooltip
-		tooltip = {
-			from = {
-				every_owned_planet = {
-					limit = { has_planet_flag = dpe_will_cede_in_war }
-					set_owner = root
-				}
-			}
-		}
-		
+		custom_tooltip = dpe_diplo.5.A.tooltip		
 			
 		hidden_effect = { from = { country_event = { id = dpe_diplo.6 } } }
 	}
@@ -691,6 +718,7 @@ country_event = { #AI-only event
 							OR = {
 								has_defensive_pact = prev
 								is_in_federation_with = prev
+								is_guaranteeing = prev
 							}
 							OR = {
 								relative_power = {
@@ -730,23 +758,21 @@ country_event = { #AI-only event
 	option = { #accept war
 		name = OK
 		
+		every_system_within_border = {
+			limit = {
+				is_neighbor_of = from
+				NOT = { from = { has_claim = prev } }
+			}
+			add_claims = {
+				who = from
+				num_of_claims = 1
+				show_notification = no
+			}
+		}
 		from = {
 			declare_war = {
-				who = root
-			}
-			add_war_demand = {
-				type = "humiliate"
-				parameter:country = root
-				warscore_cost = 10
-				target = this
-				enemy = root
-			}
-			add_war_demand = {
-				type = "dpe_cede_borders"
-				parameter:country = root
-				warscore_cost = 90
-				target = this
-				enemy = root
+				target = root
+				attacker_war_goal = wg_conquest
 			}
 		}
 			
@@ -773,6 +799,7 @@ country_event = { #AI-only event
 							OR = {
 								has_defensive_pact = prev
 								is_in_federation_with = prev
+								is_guaranteeing = prev
 							}
 							OR = {
 								relative_power = {
@@ -921,7 +948,7 @@ country_event = {
 	
 	immediate = {
 		from = { save_event_target_as = enemy }
-		country_event = { id = dpe_diplo.100 scopes = { from = root } }
+		country_event = { id = dpe_diplo.10000 }
 	}
 }
 

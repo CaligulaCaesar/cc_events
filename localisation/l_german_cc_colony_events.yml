@@ -21,8 +21,7 @@
 
  cc_colony_events.22.name:0 "Große Proteste auf [root.GetName]"
  cc_colony_events.22.desc:0 "Die Verhaftung von [cc_colony_leader.GetName] hat große Proteste auf [Root.GetName] ausgelöst. Es wird verlangt, dass [cc_colony_leader.GetSheHe] freigesetzt wird. Teilweise ist sogar Gewalt ausgebrochen, und unsere lokalen Beamten haben Schwierigkeiten, die Bevölkerung unter Kontrolle zu behalten. Sie haben uns nach Beratung gefragt, wie sie die Situation bewältigen sollen."
- cc_colony_events.22.A:0 "Bringt [cc_colony_leader.GetIhnSieDE] nach [Root.Owner.Capital.GetName]. [cc_colony_leader.GetSheHeCap] wird nie wieder nach [Root.GetName] zurückkehren."
- cc_colony_events.22.A.tooltip:0 "Dies könnte dauerhafte Konsequenzen für die Einstellung der Bevölkerung gegenüber der [Root.Owner.GetName] haben."
+ cc_colony_events.22.A:0 "Bringt [c[cc_colony_leader.GetSheHeCap] wird nie wieder nach [Root.GetName] zurückkehren.\nDies könnte dauerhafte Konsequenzen für die Einstellung der Bevölkerung gegenüber der [Root.Owner.GetName] haben."
  cc_colony_events.22.B:0 "Befreit [cc_colony_leader.GetIhnSieDE] und lass [cc_colony_leader.GetIhnSieDE] Legat sein." 
 
 
@@ -58,9 +57,9 @@
  cc_colony_events.25.B: "Es ist zu teuer."
  cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
  cc_colony_events.251.name:0 "Militärakademie auf [root.GetName] eröffnet"
- cc_colony_events.251.desc:0 "Die Militärakademie zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
+ cc_colony_events.251.desc:0 "Die Militärakademie zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
- cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
  cc_founder_militarist:0 "Planetares Legat"
  cc_founder_militarist_desc:0 "Diese Kolonie ist von einem pensionierten Marineoffizier, der sich den Titel 'Legat' genommen hat, geleitet."
@@ -653,7 +652,7 @@
  cc_colony_events.75.B.tooltip:0 "$cc_colony_events.35.C.tooltip$"
 
  cc_colony_events.751.name:0 "Universität auf [root.GetName] eröffnet"
- cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an dem technologischen Fortschritt."
+ cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an dem technologischen Fortschritt."
 
  cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
@@ -860,7 +859,7 @@
  cc_cleanup_events.15.desc:0 "Die alten Herrscher von [root.GetName] hatten die materialistische Bevölkerung verärgert, indem sie sich verweigert haben, eine Universität zur Ehre eines angesehenen Intellektuellen, der auf dem Planeten zuhause war, zu errichten. Sollten wir eine errichten?"
 
  cc_cleanup_events.151.name:0 "Universität auf [root.GetName] eröffnet"
- cc_cleanup_events.151.desc:0 "Die Universität auf [root.GetName] ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an dem technologischen Fortschritt."
+ cc_cleanup_events.151.desc:0 "Die Universität auf [root.GetName] ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an dem technologischen Fortschritt."
 
 
  cc_cleanup_events.16.name:0 "Fürstentum auf [root.GetName]"
@@ -890,11 +889,11 @@
  cc_cleanup_events.22.desc:0 "Die alten Herrscher von [root.GetName] hatten die militaristische Bevölkerung verärgert, indem sie sich verweigert haben, eine Militärakademie zur Ehre eines angesehenen Marineoffiziers, der auf dem Planeten zuhause war, zu errichten. Sollten wir eine errichten?"
 
  cc_cleanup_events.23.name:0 "Militärakademie auf [root.GetName] eröffnet" 
- cc_cleanup_events.23.desc:0 "Die Militärakademie auf [root.GetName] ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GerRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
+ cc_cleanup_events.23.desc:0 "Die Militärakademie auf [root.GetName] ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
  cc_cleanup_events.24.name:0 "Militärakademie auf [root.GetName]"
  cc_cleanup_events.24.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine große Militärakademie auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Militaristen werden, das auf dem Planeten einflussreich ist. Sollten wir die Akademie weiterbauen?"
- cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.24.tooltip:0 "\nNach der Fertigstellung wird die Militärakademie den Modifikator §Y$cc_milacademy$§! hinzufügen:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 

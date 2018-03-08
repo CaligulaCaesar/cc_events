@@ -36,61 +36,60 @@
 
 namespace = ccfaction
 
-#test event
-
-country_event = {
-	id = ccfaction.111
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		every_pop_faction = {
-			add_modifier = {
-				modifier = cc_faction_test_modifier
-				days = -1
-			}
-		}
-		every_owned_planet = { set_planet_flag = recent_unrest_event }
-		country_event = { id = ccfaction.1 days = 15 }
-	}
-}
-country_event = {
-	id = ccfaction.112
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		every_pop_faction = {
-			add_modifier = {
-				modifier = cc_faction_test_modifier_1
-				days = -1
-			}
-		}
-	}
-}
-planet_event = {
-	id = ccfaction.113
-	title = OK
-	desc = OK
-	is_triggered_only = yes
-	
-	picture = GFX_evt_arguing_senate
-	
-	option = {
-		name = OK
-		add_modifier = {
-			modifier = cc_planet_test1
-			days = -1
-		}
-	}
-	option = {
-		name = OK
-		add_modifier = {
-			modifier = cc_planet_test2
-			days = -1
-		}
-	}
-}
+#test events
+#country_event = {
+#	id = ccfaction.111
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		every_pop_faction = {
+#			add_modifier = {
+#				modifier = cc_faction_test_modifier
+#				days = -1
+#			}
+#		}
+#		every_owned_planet = { set_planet_flag = recent_unrest_event }
+#		country_event = { id = ccfaction.1 days = 15 }
+#	}
+#}
+#country_event = {
+#	id = ccfaction.112
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		every_pop_faction = {
+#			add_modifier = {
+#				modifier = cc_faction_test_modifier_1
+#				days = -1
+#			}
+#		}
+#	}
+#}
+#planet_event = {
+#	id = ccfaction.113
+#	title = OK
+#	desc = OK
+#	is_triggered_only = yes
+#	
+#	picture = GFX_evt_arguing_senate
+#	
+#	option = {
+#		name = OK
+#		add_modifier = {
+#			modifier = cc_planet_test1
+#			days = -1
+#		}
+#	}
+#	option = {
+#		name = OK
+#		add_modifier = {
+#			modifier = cc_planet_test2
+#			days = -1
+#		}
+#	}
+#}
 
 #performance booster event
 country_event = {
@@ -137,6 +136,7 @@ country_event = {
 	
 	
 	trigger = {
+		NOT = { has_global_flag = irm_main_on } #disables for Imperial Routine mod as that messes with factions
 		NOT = { has_country_flag = cc_recent_factional_revolt }
 		is_country_type = default
 		num_owned_planets > 5
@@ -1775,7 +1775,6 @@ country_event = {
 						count > 2
 					}
 				}
-				
 				owner = {
 					any_owned_planet = {
 						count_pops = {
@@ -2409,6 +2408,7 @@ country_event = {
 			is_faction_stronghold = yes
 			unrest > 80
 			has_ground_combat = no
+			has_orbital_bombardment = no
 			exists = controller
 			controller = { is_same_value = root }
 			has_modifier = cc_faction_acute_unrest
@@ -2425,6 +2425,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 99
 					has_ground_combat = no
+					has_orbital_bombardment = no
 					exists = controller
 					controller = { is_same_value = root }
 					has_modifier = cc_faction_acute_unrest
@@ -2442,6 +2443,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 99
 					has_ground_combat = no
+					has_orbital_bombardment = no
 					exists = controller
 					controller = { is_same_value = root }
 					has_modifier = cc_faction_acute_unrest
@@ -2477,6 +2479,14 @@ country_event = {
 						set_owner = prev
 						
 						solar_system = {
+							starbase = {
+								set_owner = prevprevprev
+							}
+							add_claims = {
+								who = root
+								num_of_claims = 1
+								show_notification = no
+							}
 							every_fleet_in_system = {
 								limit = {
 									exists = owner
@@ -2486,90 +2496,152 @@ country_event = {
 								set_owner = prevprevprev
 							}
 						}
+						#Give them two nearby systems (without planets)
+						closest_system = {
+							max_steps = 2
+							limit = {
+								exists = owner
+								owner = { is_same_value = root }
+								has_owner = no
+							}
+							starbase = { set_owner = prevprev }
+						}
+						closest_system = {
+							max_steps = 2
+							limit = {
+								exists = owner
+								owner = { is_same_value = root }
+								has_owner = no
+							}
+							starbase = { set_owner = prevprev }
+						}
+
+	
+						#adding the chance to subsidise the rebels if you have Potent Rebellions
+						root = { save_event_target_as = old_owner }
+						
+						if = {
+							limit = {
+								any_country = {
+									NOT = { is_country_type = fallen_empire }
+									NOR = {
+										has_valid_civic = civic_fanatic_purifiers
+										has_valid_civic = civic_hive_devouring_swarm
+										has_valid_civic = civic_machine_terminator
+										has_valid_civic = civic_barbaric_despoilers
+									}
+									any_owned_planet = {
+										distance = {
+											source = prevprev
+											max_distance = 150
+										}
+									}
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								NOT = { is_country_type = fallen_empire }
+								NOR = {
+									has_valid_civic = civic_fanatic_purifiers
+									has_valid_civic = civic_hive_devouring_swarm
+									has_valid_civic = civic_machine_terminator
+									has_valid_civic = civic_barbaric_despoilers
+								}
+								any_owned_planet = {
+									distance = {
+										source = prevprev
+										max_distance = 150
+									}
+								}
+								
+								opinion = {
+									who = event_target:old_owner
+									value < -50
+								}
+								OR = {
+									is_hostile_to = event_target:old_owner
+									is_angry_to = event_target:old_owner
+									is_rival = event_target:old_owner
+									is_disloyal_to = event_target:old_owner
+									is_domineering_to = event_target:old_owner
+								}
+								AND = {
+									OR = {
+										has_country_resource = {
+											type = minerals
+											amount > 2000
+										}
+										has_monthly_income = {
+											resource = minerals
+											value > 100
+										}
+									}
+									OR = {
+										has_monthly_income = {
+											resource = energy
+											value > 100
+										}
+										energy > 2000
+									}
+								}
+							}
+							prevprev = {
+								set_timed_relation_flag = {
+									flag = ccrebel_may_support_rebels
+									who = prev
+									days = 15
+								}
+							}
+							country_event = { id = ccrebel_sow_unrest.4 days = 14 }
+						}
 					}
 				
 					remove_all_ethics = yes
 					#primary ethic
-					if = {
-						limit = { root = { has_country_flag = cc_imperialist_revolt_active } }
-						country_add_ethic = ethic_fanatic_militarist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_prosperity_revolt_active } }
-						country_add_ethic = ethic_fanatic_pacifist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_totalitarian_revolt_active } }
-						country_add_ethic = ethic_fanatic_authoritarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_progressive_revolt_active } }
-						country_add_ethic = ethic_fanatic_egalitarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_technologist_revolt_active } }
-						country_add_ethic = ethic_fanatic_materialist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_traditionalist_revolt_active } }
-						country_add_ethic = ethic_fanatic_spiritualist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_xenoist_revolt_active } }
-						country_add_ethic = ethic_fanatic_xenophile
-					}
-					if = {
-						limit = {
-							root = {
-								OR = {
-									has_country_flag = cc_supremacist_revolt_active
-									has_country_flag = cc_isolationist_revolt_active
-								}
-							}
+					root = {
+						switch = {
+							trigger = has_country_flag
+							cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
+							cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
+							cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
+							cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
+							cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
+							cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
+							cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
+							cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+							cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+							default = { }
 						}
-						country_add_ethic = ethic_fanatic_xenophobe
-					}
 					
-					#secondary ethic
-					if = {
-						limit = { root = { has_country_flag = cc_imperialist_secondary_revolt_active } }
-						country_add_ethic = ethic_militarist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_prosperity_secondary_revolt_active } }
-						country_add_ethic = ethic_pacifist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_totalitarian_secondary_revolt_active } }
-						country_add_ethic = ethic_authoritarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_progressive_secondary_revolt_active } }
-						country_add_ethic = ethic_egalitarian
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_technologist_secondary_revolt_active } }
-						country_add_ethic = ethic_materialist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_traditionalist_secondary_revolt_active } }
-						country_add_ethic = ethic_spiritualist
-					}
-					if = {
-						limit = { root = { has_country_flag = cc_xenoist_secondary_revolt_active } }
-						country_add_ethic = ethic_xenophile
-					}
-					if = {
-						limit = {
-							root = {
-								OR = {
-									has_country_flag = cc_supremacist_secondary_revolt_active
-									has_country_flag = cc_isolationist_secondary_revolt_active
+						#secondary ethic
+						switch = {
+							trigger = has_country_flag
+							cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
+							cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
+							cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
+							cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
+							cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
+							cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
+							cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
+							cc_supremacist_secondary_revolt_active = {
+								prev = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
+									}
 								}
 							}
-							NOT = { has_ethic = ethic_fanatic_xenophobe }
+							cc_isolationist_secondary_revolt_active = {
+								prev = {
+									if = {
+										limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+										country_add_ethic = ethic_xenophobe
+									}
+								}
+							}
+							default = { }
 						}
-						country_add_ethic = ethic_xenophobe
 					}
 					
 					if = {
@@ -2771,7 +2843,6 @@ country_event = {
 												set_owner = root
 												create_ship_design = {
 													design = "NAME_Prototype"
-													ftl = root
 												}
 												create_ship = {
 													name = "NAME_From_Beyond"
@@ -2801,7 +2872,7 @@ country_event = {
 								type = ruler
 								species = owner_main_species
 								name = random
-								skill = 200
+								skill = 2
 								traits = {}
 							}
 							assign_leader = last_created_leader
@@ -2835,7 +2906,6 @@ country_event = {
 												set_owner = root
 												create_ship_design = {
 													design = "NAME_Prototype"
-													ftl = root
 												}
 												create_ship = {
 													name = "NAME_From_Beyond"
@@ -2864,7 +2934,6 @@ country_event = {
 									set_owner = event_target:cc_breakaway_country
 									create_ship_design = {
 										design = "NAME_Prototype"
-										ftl = event_target:cc_breakaway_country
 									}
 									create_ship = {
 										name = "NAME_From_Beyond"
@@ -2919,6 +2988,11 @@ country_event = {
 				}
 				country_event = { id = ccfaction.602 days = 2 }
 			}
+
+			declare_war = {
+				target = event_target:cc_breakaway_country
+				attacker_war_goal = wg_conquest
+			}
 			
 			every_owned_planet = { #swap the firm planets
 				limit = {
@@ -2948,6 +3022,7 @@ country_event = {
 						is_faction_stronghold = yes
 						unrest > 80
 						has_ground_combat = no
+						has_orbital_bombardment = no
 						exists = controller
 						controller = { is_same_value = root }
 						has_modifier = cc_faction_acute_unrest
@@ -2983,86 +3058,49 @@ country_event = {
 							
 							
 							#primary ethic
-							if = {
-								limit = { root = { has_country_flag = cc_imperialist_revolt_active } }
-								country_add_ethic = ethic_fanatic_militarist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_prosperity_revolt_active } }
-								country_add_ethic = ethic_fanatic_pacifist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_totalitarian_revolt_active } }
-								country_add_ethic = ethic_fanatic_authoritarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_progressive_revolt_active } }
-								country_add_ethic = ethic_fanatic_egalitarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_technologist_revolt_active } }
-								country_add_ethic = ethic_fanatic_materialist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_traditionalist_revolt_active } }
-								country_add_ethic = ethic_fanatic_spiritualist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_xenoist_revolt_active } }
-								country_add_ethic = ethic_fanatic_xenophile
-							}
-							if = {
-								limit = {
-									root = {
-										OR = {
-											has_country_flag = cc_supremacist_revolt_active
-											has_country_flag = cc_isolationist_revolt_active
-										}
-									}
+							root = {
+								switch = {
+									trigger = has_country_flag
+									cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
+									cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
+									cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
+									cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
+									cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
+									cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
+									cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
+									cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+									cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+									default = { }
 								}
-								country_add_ethic = ethic_fanatic_xenophobe
-							}
 							
-							#secondary ethic
-							if = {
-								limit = { root = { has_country_flag = cc_imperialist_secondary_revolt_active } }
-								country_add_ethic = ethic_militarist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_prosperity_secondary_revolt_active } }
-								country_add_ethic = ethic_pacifist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_totalitarian_secondary_revolt_active } }
-								country_add_ethic = ethic_authoritarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_progressive_secondary_revolt_active } }
-								country_add_ethic = ethic_egalitarian
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_technologist_secondary_revolt_active } }
-								country_add_ethic = ethic_materialist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_traditionalist_secondary_revolt_active } }
-								country_add_ethic = ethic_spiritualist
-							}
-							if = {
-								limit = { root = { has_country_flag = cc_xenoist_secondary_revolt_active } }
-								country_add_ethic = ethic_xenophile
-							}
-							if = {
-								limit = {
-									root = {
-										OR = {
-											has_country_flag = cc_supremacist_secondary_revolt_active
-											has_country_flag = cc_isolationist_secondary_revolt_active
+								#secondary ethic
+								switch = {
+									trigger = has_country_flag
+									cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
+									cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
+									cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
+									cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
+									cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
+									cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
+									cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
+									cc_supremacist_secondary_revolt_active = {
+										prev = {
+											if = {
+												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+												country_add_ethic = ethic_xenophobe
+											}
 										}
 									}
-									NOT = { has_ethic = ethic_fanatic_xenophobe }
+									cc_isolationist_secondary_revolt_active = {
+										prev = {
+											if = {
+												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+												country_add_ethic = ethic_xenophobe
+											}
+										}
+									}
+									default = { }
 								}
-								country_add_ethic = ethic_xenophobe
 							}
 							
 							if = {
@@ -3264,7 +3302,6 @@ country_event = {
 														set_owner = root
 														create_ship_design = {
 															design = "NAME_Prototype"
-															ftl = root
 														}
 														create_ship = {
 															name = "NAME_From_Beyond"
@@ -3294,7 +3331,7 @@ country_event = {
 										type = ruler
 										species = owner_main_species
 										name = random
-										skill = 200
+										skill = 2
 										traits = {}
 									}
 									assign_leader = last_created_leader
@@ -3328,7 +3365,6 @@ country_event = {
 														set_owner = root
 														create_ship_design = {
 															design = "NAME_Prototype"
-															ftl = root
 														}
 														create_ship = {
 															name = "NAME_From_Beyond"
@@ -3357,7 +3393,6 @@ country_event = {
 											set_owner = event_target:cc_breakaway_country
 											create_ship_design = {
 												design = "NAME_Prototype"
-												ftl = event_target:cc_breakaway_country
 											}
 											create_ship = {
 												name = "NAME_From_Beyond"
@@ -3545,7 +3580,7 @@ country_event = {
 								create_army = {
 									owner = event_target:cc_breakaway_country
 									species = root.species
-									type = "defense_army"
+									type = "assault_army"
 								}
 							}
 						}
@@ -3637,7 +3672,7 @@ country_event = {
 			country_event = { id = rebellionscript.1 scopes = { from = capital_scope } }
 			create_fleet_from_naval_cap = 0.5
 			
-			else = { create_fleet_from_naval_cap = 2 }
+			else = { create_fleet_from_naval_cap = 1.5 }
 		}
 		
 
@@ -3709,11 +3744,20 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_ground_combat = no
+		has_orbital_bombardment = no
 	}
 	
 	immediate = {
 	
 		solar_system = {
+			starbase = {
+				set_owner = event_target:cc_breakaway_country
+			}
+			add_claims = {
+				who = root.owner
+				num_of_claims = 1
+				show_notification = no
+			}
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
@@ -3725,7 +3769,20 @@ planet_event = {
 		}
 	
 	
+		#Give them a nearby system (without planets)
+		closest_system = {
+			max_steps = 2
+			limit = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+				has_owner = no
+			}
+			starbase = { set_owner = event_target:cc_breakaway_country }
+		}
+
+
 		set_owner = event_target:cc_breakaway_country
+
 
 		if = {
 			limit = { has_modifier = cc_faction_acute_unrest }
@@ -3748,7 +3805,7 @@ planet_event = {
 				if = {
 					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 					
-					create_fleet_from_naval_cap = 0.16
+					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
 						set_location = root
 					}
@@ -3757,7 +3814,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.32
+							create_fleet_from_naval_cap = 0.24
 							last_created_fleet = {
 								set_location = root
 							}
@@ -3765,7 +3822,7 @@ planet_event = {
 							else = {
 								if = {
 									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.48
+									create_fleet_from_naval_cap = 0.36
 									last_created_fleet = {
 										set_location = root
 									}
@@ -3783,7 +3840,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.09
+							create_fleet_from_naval_cap = 0.0675
 							last_created_fleet = {
 								set_location = root
 							}
@@ -3792,7 +3849,7 @@ planet_event = {
 								if = {
 									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 									
-									create_fleet_from_naval_cap = 0.18
+									create_fleet_from_naval_cap = 0.135
 									last_created_fleet = {
 										set_location = root
 									}
@@ -3800,7 +3857,7 @@ planet_event = {
 									else = {
 										if = {
 											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.28
+											create_fleet_from_naval_cap = 0.21
 											last_created_fleet = {
 												set_location = root
 											}
@@ -3813,7 +3870,7 @@ planet_event = {
 							if = {
 								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 								
-								create_fleet_from_naval_cap = 0.04
+								create_fleet_from_naval_cap = 0.03
 								last_created_fleet = {
 									set_location = root
 								}
@@ -3822,7 +3879,7 @@ planet_event = {
 									if = {
 										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 										
-										create_fleet_from_naval_cap = 0.08
+										create_fleet_from_naval_cap = 0.06
 										last_created_fleet = {
 											set_location = root
 										}
@@ -3830,7 +3887,7 @@ planet_event = {
 										else = {
 											if = {
 												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.12
+												create_fleet_from_naval_cap = 0.09
 												last_created_fleet = {
 													set_location = root
 												}
@@ -3865,6 +3922,7 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_ground_combat = no
+		has_orbital_bombardment = no
 	}
 	
 	is_triggered_only = yes
@@ -4021,7 +4079,7 @@ planet_event = {
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country
-						type = "defense_army"
+						type = "assault_army"
 					}
 				}
 			}
@@ -4061,6 +4119,17 @@ country_event = {
 			remove_planet_flag = revolt_in_progress 
 			remove_planet_flag = cc_faction_revolt_capital
 			save_event_target_as = cc_rebel_faction_capital
+			
+			solar_system = {
+				starbase = {
+					set_owner = root
+				}
+				add_claims = {
+					who = from.owner
+					num_of_claims = 1
+					show_notification = no
+				}
+			}
 		}
 		from.owner = {
 			remove_country_flag = cc_factional_revolt_attempt
@@ -4110,11 +4179,30 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
-			create_fleet_from_naval_cap = 1
+			create_fleet_from_naval_cap = 1.25
+
+			from.owner = {
+				country_event = { id = ccfaction.631 days = 1 }
+			}
 		}
 	}
 }
-	
+
+
+country_event = {
+	id = ccfaction.631
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		declare_war = {
+			target = from
+			attacker_war_goal = wg_conquest
+		}
+	}
+}
+
+
 #Notify root.owner
 
 country_event = { # rebels have broken free notification
@@ -4156,7 +4244,7 @@ country_event = {
 			type = ruler
 			species = owner_main_species
 			name = random
-			skill = 200
+			skill = 2
 			traits = {}
 		}
 		assign_leader = last_created_leader
@@ -4191,6 +4279,17 @@ country_event = {
 			remove_planet_flag = revolt_in_progress 
 			remove_planet_flag = cc_faction_revolt_planet
 			save_event_target_as = cc_rebel_faction_capital
+
+			solar_system = {
+				starbase = {
+					set_owner = root
+				}
+				add_claims = {
+					who = from.owner
+					num_of_claims = 1
+					show_notification = no
+				}
+			}
 		}
 		from.owner = {
 			save_event_target_as = rebelled_against
@@ -4251,11 +4350,11 @@ country_event = {
 	id = ccfaction.68
 	title = ccfaction.68.name
 	desc = {
-		trigger = { has_planet_flag = cc_faction_revolt_capital }
+		trigger = { fromfrom = { has_planet_flag = cc_faction_revolt_capital } }
 		text = ccfaction.68.desc.first
 	}
 	desc = {
-		trigger = { has_planet_flag = cc_faction_revolt_planet }
+		trigger = { fromfrom = { has_planet_flag = cc_faction_revolt_planet } }
 		text = ccfaction.68.desc.second
 	}
 	
@@ -4350,19 +4449,20 @@ country_event = {
 	}
 	
 	immediate = {
-			
-		fromfrom = {
-			set_owner = root
-			hidden_effect = {
-				if = {
-					limit = { has_modifier = capital }
-					remove_modifier = capital
+		from = {
+			every_owned_starbase = {
+				set_owner = root
+			}
+			every_owned_planet = {
+				set_owner = root
+				hidden_effect = {
+					if = {
+						limit = { has_modifier = capital }
+						remove_modifier = capital
+					}
+					planet_event = { id = ccfaction.691 days = 2 }
 				}
 			}
-			planet_event = { id = ccfaction.691 days = 2 }
-		}
-			
-		from = {
 			set_country_flag = silence_destroy_event
 			destroy_country = yes
 		}
@@ -4393,7 +4493,7 @@ planet_event = {
 				if = {
 					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 					
-					create_fleet_from_naval_cap = 0.16
+					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
 						set_location = root
 					}
@@ -4402,7 +4502,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.32
+							create_fleet_from_naval_cap = 0.24
 							last_created_fleet = {
 								set_location = root
 							}
@@ -4410,7 +4510,7 @@ planet_event = {
 							else = {
 								if = {
 									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.48
+									create_fleet_from_naval_cap = 0.36
 									last_created_fleet = {
 										set_location = root
 									}
@@ -4428,7 +4528,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.09
+							create_fleet_from_naval_cap = 0.0675
 							last_created_fleet = {
 								set_location = root
 							}
@@ -4437,7 +4537,7 @@ planet_event = {
 								if = {
 									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 									
-									create_fleet_from_naval_cap = 0.18
+									create_fleet_from_naval_cap = 0.135
 									last_created_fleet = {
 										set_location = root
 									}
@@ -4445,7 +4545,7 @@ planet_event = {
 									else = {
 										if = {
 											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.28
+											create_fleet_from_naval_cap = 0.21
 											last_created_fleet = {
 												set_location = root
 											}
@@ -4458,7 +4558,7 @@ planet_event = {
 							if = {
 								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 								
-								create_fleet_from_naval_cap = 0.04
+								create_fleet_from_naval_cap = 0.03
 								last_created_fleet = {
 									set_location = root
 								}
@@ -4467,7 +4567,7 @@ planet_event = {
 									if = {
 										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 										
-										create_fleet_from_naval_cap = 0.08
+										create_fleet_from_naval_cap = 0.06
 										last_created_fleet = {
 											set_location = root
 										}
@@ -4475,7 +4575,7 @@ planet_event = {
 										else = {
 											if = {
 												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.12
+												create_fleet_from_naval_cap = 0.09
 												last_created_fleet = {
 													set_location = root
 												}
@@ -5270,6 +5370,7 @@ planet_event = {
 							exists = controller
 							controller = { is_same_value = root.owner }
 							has_ground_combat = no
+							has_orbital_bombardment = no
 							unrest > 80
 						}
 					}
@@ -5301,6 +5402,7 @@ planet_event = {
 		controller = { is_same_value = root.owner }
 		has_modifier = cc_breakaway_sympathy
 		has_ground_combat = no
+		has_orbital_bombardment = no
 		unrest > 80
 		
 		owner = {
@@ -5524,7 +5626,7 @@ planet_event = {
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country
-						type = "defense_army"
+						type = "assault_army"
 					}
 				}
 			}

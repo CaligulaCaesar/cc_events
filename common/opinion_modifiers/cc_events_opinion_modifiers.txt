@@ -132,3 +132,82 @@ dpe_spiritualist_mission_hive_listened1 = {
 		base = 3
 	}
 }
+
+dpe_spiritualist_mission_accepted_mission = {
+	opinion = {
+		base = 30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+
+dpe_dishonourable_in_war = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = yes
+	
+	min = -100
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_honourable_in_war = {
+	opinion = {
+		base = 30
+	}
+	
+	accumulative = yes
+	
+	max = 50
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spirmission_deceived = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spirmission_accused_us = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = no
+	
+	decay = {
+		base = 3
+	}
+}
+
+dpe_spirmission_sent_mission_home = {
+	opinion = {
+		base = -20
+	}
+	
+	accumulative = yes
+	
+	min = -50
+	
+	decay = {
+		base = 3
+	}
+}

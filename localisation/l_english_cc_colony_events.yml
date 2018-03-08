@@ -22,8 +22,8 @@ cc_colony_events.21.desc:0 "There were small protests on [Root.GetName] at [cc_c
 
 cc_colony_events.22.name:0 "Major Protests on [root.GetName]"
 cc_colony_events.22.desc:0 "[cc_colony_leader.GetName]'s arrest on [Root.GetName] has sparked major protests, with demands for [cc_colony_leader.GetHisHer] release widespread. Elements of the protests have turned violent, and our local authorities are having difficulties keeping the populace under control. They have requested guidance from the executive as to how to deal with the situation."
-cc_colony_events.22.A:0 "Take [cc_colony_leader.GetHimHer] to [Root.Owner.Capital.GetName]. [cc_colony_leader.GetSheHeCap] will never go back to [Root.GetName]."
-cc_colony_events.22.A.tooltip:0 "This may have lasting consequences for the populace's attitude to the [Root.Owner.GetName]."
+cc_colony_events.22.A:0 "Take [cc_colony_leader.GetHimHer] to [Root.Owner.Capital.GetName]."
+cc_colony_events.22.A.tooltip:0 "[cc_colony_leader.GetSheHeCap] will never go back to [Root.GetName].\nThis may have lasting consequences for the populace's attitude to the [Root.Owner.GetName]."
 cc_colony_events.22.B:0 "Release [cc_colony_leader.GetHimHer] and allow [cc_colony_leader.GetHimHer] to be Legate." 
 
 
@@ -57,9 +57,9 @@ cc_colony_events.25.A: "Certainly!"
 cc_colony_events.25.B: "It is too expensive."
 cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
 cc_colony_events.251.name:0 "Academy opens on [root.GetName]"
-cc_colony_events.251.desc:0 "The military academy in [cc_colony_leader.GetName]'s honour has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people who serve this great nation."
+cc_colony_events.251.desc:0 "The military academy in [cc_colony_leader.GetName]'s honour has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to the people who serve this great nation."
 
-cc_milacademy_will_be_built:0 "\nThe Military Academy will take 5 years to complete. It will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nThe Military Academy will take 5 years to complete. It will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 cc_founder_militarist:0 "Planetary Legate"
 cc_founder_militarist_desc:0 "This colony is governed by a retired naval officer who has been given the title of 'Legate'."
@@ -890,11 +890,11 @@ cc_cleanup_events.22.name:0 "The Memory of a famous Naval Officer on [root.GetNa
 cc_cleanup_events.22.desc:0 "The old owners of [root.GetName] had offended the militarist population on [root.GetName] by not building a military academy in honour of a prominent naval officer who had made the planet their home. Should we build one ourselves?"
 
 cc_cleanup_events.23.name:0 "Military Academy opens on [root.GetName]"
-cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GerRulerTitle]'s dedication to the people who serve this great nation."
+cc_cleanup_events.23.desc:0 "The academy on [root.GetName] has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to the people who serve this great nation."
 
 cc_cleanup_events.24.name:0 "Military Academy on [root.GetName]"
 cc_cleanup_events.24.desc:0 "The old owners of [root.GetName] had been building a major military academy on [root.GetName]. It is the centre of the planet's influential militarist network. Should we continue building the academy?"
-cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 

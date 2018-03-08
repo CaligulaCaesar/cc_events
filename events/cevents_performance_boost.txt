@@ -229,7 +229,7 @@ event = {
 				}
 				any_war = {
 					is_war_participant = { who = prev side = attackers }
-					attacker_war_score > 60
+					defender_war_exhaustion > 60
 
 					NOT = {
 						prev = {
@@ -612,7 +612,7 @@ event = {
 										distance = {
 											source = prevprev
 											min_distance = 0
-											max_distance = 150
+											max_distance = 120
 										}
 										has_modifier = cc_religious_centre
 									}
@@ -1601,6 +1601,7 @@ event = {
 		#Ruler is escaped slave
 		every_country = {
 			limit = {
+				years_passed > 10
 				is_country_type = default
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				allows_slavery = yes
@@ -1738,12 +1739,35 @@ event = {
 							OR = {
 								has_defensive_pact = prev
 								is_in_federation_with = prev
+								is_guaranteeing = prev
 							}
 							relative_power = {
 								who = prevprev
 								category = fleet
 								value = overwhelming
 							}
+						}
+					}
+					NOT = {
+						count_potential_war_participants = {
+							attacker = prev
+							defender = this
+							side = this
+							limit = {
+								OR = {
+									relative_power = {
+										who = prev
+										category = fleet
+										value = equivalent
+									}
+									relative_power = {
+										who = prev
+										category = fleet
+										value = superior
+									}
+								}
+							}
+							count > 2
 						}
 					}
 				}
@@ -1844,6 +1868,62 @@ event = {
 			set_timed_country_flag = {
 				flag = dpe_military_coup_possible
 				days = 31
+			}
+		}
+
+		#Unity Planets
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_country_flag = dpe_recent_unity_planet
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					unrest < 1
+					NOT = { has_planet_flag = dpe_unity_planet }
+					count_pops = {
+						limit = { has_a_happiness_gauge = yes }
+						count > 7
+					}
+					pop_percentage = {
+						limit = { happiness > 0.55 }
+						percentage > 0.75
+					}
+				}
+				set_timed_planet_flag = {
+					flag = dpe_potential_unity_planet
+				   days = 31
+				}
+			}
+		}
+
+		#Leader Debates
+		
+		every_country = {
+			limit = {
+				is_country_type = default
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+				}
+				NOT = { has_country_flag = dpe_recent_ruler_debate }
+				exists = ruler
+				count_pop_factions = {
+					limit = {
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count > 0
+				}
+			}
+			set_timed_country_flag = {
+			flag = dpe_can_have_ruler_debate
+			days = 31
 			}
 		}
 	}
@@ -2068,7 +2148,7 @@ country_event = {
 			factor = 0.5
 			any_war = {
 				is_war_participant = { who = root side = attackers }
-				attacker_war_score > 80
+				defender_war_exhaustion > 80
 			}
 		}
 	}
@@ -2090,7 +2170,7 @@ planet_event = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		
-		orbital_bombardment = no
+		has_orbital_bombardment = no
 	}
 	
 	mean_time_to_happen = {
