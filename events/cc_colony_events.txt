@@ -3950,7 +3950,7 @@ planet_event = {
 	}
 	option = {
 		name = cc_colony_events.54.C
-		tooltip = cc_colony_events.54.C.tooltip
+		custom_tooltip = cc_colony_events.54.C.tooltip
 		
 		owner = {
 			every_owned_planet = {
@@ -3992,9 +3992,11 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_fanatic_egalitarian
-					has_ethic = ethic_egalitarian
+				owner = {
+					OR = {
+						has_ethic = ethic_fanatic_egalitarian
+						has_ethic = ethic_egalitarian
+					}
 				}
 			}
 		}
