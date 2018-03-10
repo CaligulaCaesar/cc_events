@@ -48,14 +48,14 @@ dpe_militarist_unrest_desc:0 "The militarist populace on this planet is upset at
 
 dpe_eased_tensions:0 "Eased Tensions"
 
-war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
-war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
-war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
-war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
-war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
-war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
-war_demand_dpe_cede_borders_not_under_our_control:0 "Planets must be controlled by us or our allies to be ceded with this demand. No neighbouring planets currently meet this criterion."
-dpe_event_war_demand:0 "Special Event War Demand"
+#war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
+#war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
+#war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
+#war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
+#war_demand_dpe_cede_borders_not_under_our_control:0 "Planets must be controlled by us or our allies to be ceded with this demand. No neighbouring planets currently meet this criterion."
+#dpe_event_war_demand:0 "Special Event War Demand"
 
 dpe_diplo.100.name:0 "The [enemy.GetName]'s Response"
 #This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
@@ -142,7 +142,7 @@ dpe_spiritualist_mission.5.name:0 "Our Mission establishes itself successfully"
 dpe_spiritualist_mission.5.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. According to their first reports, the local [dpe_neighbour.GetSpeciesNamePlural] are open to our teaching, and many have converted already! The missionaries will continue their work, and are optimistic that they will be able to offer our salvation to further [dpe_neighbour.GetSpeciesNamePlural] and ensure that spiritualism holds an appropriate role in the [dpe_neighbour.GetSpeciesAdj] state."
 
 dpe_spiritualist_mission.51.name:0 "The [dpe_missionary_country.GetSpeciesAdj] Mission establishes itself successfully"
-dpe_spiritualist_mission.51.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, but they've also noticed something that may be concerning: A sizeable portion of the local population is actually partaking in the ceremonies and rituals that the missionaries put on. It seems like this religion of theirs may be catching on. Should we tolerate this?"
+dpe_spiritualist_mission.51.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, they've also noticed something that may be concerning: A sizeable portion of the local population is actually partaking in the ceremonies and rituals that the missionaries put on. It seems like this religion of theirs may be catching on. Should we tolerate this?"
 dpe_spiritualist_mission.51.desc.ally:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetSpeciesAdj] mission have reported no disturbances. The missionaries have established themselves fine, and in fact, they have found many [root.GetSpeciesNamePlural] to be receptive to their message. However, there are those within our population who worry that part of [root.GetSpeciesAdj] identity could be lost of the missionaries are allowed to continue to have free reign. How should we react?"
 dpe_spiritualist_mission.51.normal.A:0 "If we were afraid of their religion, we shouldn't have let them in in the first place."
 dpe_spiritualist_mission.51.normal.B:0 "Send them home - we never thought that anyone would actually fall for their ludicrous space cult!"
@@ -167,7 +167,7 @@ dpe_spiritualist_mission.6.A:0 "Recall the mission, the Will of the Divine has b
 dpe_spiritualist_mission.6.B:0 "We must persist and try to save the [dpe_neighbour.GetSpeciesNamePlural] from themselves!"
 
 dpe_spiritualist_mission.601.name:0 "The [from.GetSpeciesNamePlural] recall their Mission"
-dpe_spiritualist_mission.601.desc:0 "The [from.GetSpeciesAdj] mission has been recalled by their government due to tensions with the locals on [dpe_mission_host_planet.GetName]. Following a series of unfortunate occurences, it was deemed too dangerous to allow the mission to continue. The situation on [dpe_mission_host_planet.GetName] is quickly returning to normal, and the local officials are confident that order will be fully restored."
+dpe_spiritualist_mission.601.desc:0 "The [from.GetSpeciesAdj] mission has been recalled by their government due to tensions with the locals on [dpe_mission_host_planet.GetName]. Following a series of unfortunate occurrences, it was deemed too dangerous to allow the mission to continue. The situation on [dpe_mission_host_planet.GetName] is quickly returning to normal, and the local officials are confident that order will be fully restored."
 dpe_spiritualist_mission.601.option:0 "It is the probably for the best."
 
 
@@ -187,9 +187,7 @@ dpe_spiritualist_mission.631.desc:0 "Every news agency in both our empires, alon
 dpe_spiritualist_mission.631.A:0 "We should have recalled them earlier."
 dpe_spiritualist_mission.631.B:0 "The [dpe_neighbour.GetSpeciesNamePlural] are to blame for this tragedy!"
 
-#All our efforts to protect the [dpe_missionary_country.GetSpeciesNamePlural] were in vain. The locals near the mission staged a large riot and destroyed much of the area. The missionaries were cornered and killed during the chaos, along with most of their converts. The mission's building was burnt to the ground. Casualties were also high among law enforcement, military personnel and rioters. We don't currently have a final number on the death toll yet, but it is estimated at over 3,000 and still rising. This is truly a national disaster. 
-#They got what they came for. (Xenophobes gain happiness, spiritualists lose happiness, relations take a massive hit, other empires lose relations with the host empire)
- 
+
 dpe_spiritualist_mission.632.name:0 "Disaster strikes the [from.GetSpeciesAdj] Mission!"
 dpe_spiritualist_mission.632.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that has struck the [from.GetSpeciesAdj] mission on [dpe_mission_host_planet.GetName]. In spite of our best efforts to protect the missionaries, our security services were helpless to prevent the slaughter. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed parts of the city and killed most of the [from.GetSpeciesNamePlural] and their followers. We don't currently have a final number on the death toll yet, but it is estimated at over 3,000 and still rising. This is truly a national disaster.\n\nThe [from.GetSpeciesAdj] government has declared a period of mourning following these events, and have avoided directly blaming us for the events, accepting that they should have heeded our warnings that something might happen. Although many [from.GetSpeciesNamePlural] are now inevitably hostile towards us, hopefully, in time, we will be able to repair our relations with them."
 
@@ -221,8 +219,8 @@ dpe_spirmission_minor_mission_desc:0 "Foreign missionaries are attempting to spr
 dpe_spirmission_major_mission:0 "$dpe_spirmission_minor_mission$"
 dpe_spirmission_major_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. Their words are popular among the people, and many are pulled towards their views."
 
-dpe_spiritualist_mission_planet_success.tooltip:0 "Four £pops pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
-dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Two £pops pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
+dpe_spiritualist_mission_planet_success.tooltip:0 "Four £pops  Pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
+dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Two £pops  Pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
 
 dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
 dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries' message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
@@ -256,10 +254,55 @@ dpe_spiritualist_mission.75.desc:0 "Dear [root.GetSpeciesNamePlural], we regret 
 
 dpe_spirmission_sent_home_faction:0 "Sent home missionaries"
 
-dpe_spirmission_succeeded_country:0 "Succeessful Mission"
+dpe_spirmission_succeeded_country:0 "Successful Mission"
 dpe_spirmission_succeeded_country_desc:0 "The spiritualist movement within the state has been reinvigorated by its success in bringing spiritualist truth one of the state's neighbours. The population now views Spiritualism with renewed enthusiasm."
-dpe_spirmission_succeeded_faction:0 "Succeessful Mission"
+dpe_spirmission_succeeded_faction:0 "Successful Mission"
 
+
+#these events are 10 years later
+
+dpe_spiritualist_mission.10.name:0 "Our Mission to the [from.GetSpeciesNamePlural]"
+dpe_spiritualist_mission.10.desc.low:0 "Our mission to the [from.GetName] has achieved little over the past years: The majority of the [from.GetSpeciesNamePlural] have not heeded their words, and do not follow the True Way. There is some debate as to whether there is any point in continuing the mission at all."
+dpe_spiritualist_mission.10.desc.mid:0 "Our mission to the [from.GetName] has achieved some limited success over the past years: A sizeable minority of [from.GetSpeciesNamePlural] now follow the True Way. Should the mission continue?"
+dpe_spiritualist_mission.10.desc.high:0 "Our mission to the [from.GetName] has achieved considerable successes over the past years: Although the [from.GetSpeciesAdj] government has not yet adopted the True Way, many [from.GetSpeciesNamePlural] now do. Some have even embarked on pilgrimages to our worlds. Should the mission continue?"
+dpe_spiritualist_mission.10.desc.success:0 "Our mission to the [from.GetName] has been successful: Through their tireless efforts, spiritualism has become an integral part of the [from.GetSpeciesAdj] way of life, and many [from.GetSpeciesNamePlural] have embarked on pilgrimages to our worlds. Apart from a few who intend to remain on [dpe_mission_host_planet.GetName] and continue to guide the [from.GetSpeciesNamePlural], the missionaries are preparing to return home, their work completed. The [from.GetSpeciesNamePlural] have organised a large celebration to mark the departure of the missionaries, who have made many friends during their time in the [from.GetName]. This will hopefully inaugurate a new period of friendship between our nations."
+dpe_spiritualist_mission.10.option.continue:0 "Continue the Mission - they are doing valuable work."
+dpe_spiritualist_mission.10.option.cancel:0 "Bring the Mission - they have done enough."
+dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
+
+#this is every 15 years afterwards
+dpe_spiritualist_mission.11.name:0 "$dpe_spiritualist_mission.10.name$"
+dpe_spiritualist_mission.11.desc.low:0 "$dpe_spiritualist_mission.10.desc.low$"
+dpe_spiritualist_mission.11.desc.mid:0 "$dpe_spiritualist_mission.10.desc.mid$"
+dpe_spiritualist_mission.11.desc.high:0 "$dpe_spiritualist_mission.10.desc.high$"
+dpe_spiritualist_mission.11.desc.success:0 "$dpe_spiritualist_mission.10.desc.success$"
+
+dpe_spiritualist_mission.101.name:0 "The [from.GetSpeciesAdj] Mission"
+dpe_spiritualist_mission.101.desc.low:0 "Despite their lack of success in converting our population to their ways, the [from.GetSpeciesAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.desc.mid:0 "The [from.GetSpeciesAdj] missionaries have had some limited success in converting our population to their ways: Their followers now represent a considerable minority within the [root.GetName]. The [from.GetSpeciesAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.desc.high:0 "The [from.GetSpeciesAdj] missionaries have been relatively successful in converting our population to their ways, and their followers now represent a considerable minority within the [root.GetName]. The [from.GetSpeciesAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.option.continue:0 "They may stay, if they wish."
+dpe_spiritualist_mission.101.option.cancel:0 "Send them home."
+ 
+dpe_spiritualist_mission.102.name:0 "The [from.GetSpeciesAdj] Missionaries leave"
+dpe_spiritualist_mission.102.desc.uninterested:0 "Dear [root.GetSpeciesNamePlural], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We are simply not interested in spreading our beliefs to other Empires anymore. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.low:0 "Dear [root.GetSpeciesNamePlural], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. Given the lack of progress in converting [root.GetSpeciesNamePlural] to the True Way, we have come to the conclusion that Salvation is not for all. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.mid:0 "Dear [root.GetSpeciesNamePlural], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.high:0 "Dear [root.GetSpeciesNamePlural], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We are satisfied that they have done enough to ensure that the Truth is followed in the [root.GetName]. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.A:0 "We are sorry to see them go."
+dpe_spiritualist_mission.102.B:0 "Good riddance."
+ 
+dpe_spiritualist_mission.1011.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
+dpe_spiritualist_mission.1011.desc:0 "Dear [root.GetSpeciesNamePlural], we have hosted your missionaries for some years now. However, it is now time for them to return home. We would like to thank them for their tireless efforts at promoting spiritualism in the [root.GetName]."
+dpe_spiritualist_mission.1011.option:0 "Enlightenment is not for all."
+ 
+dpe_spiritualist_mission.1099.name:0 "Mission Accomplished"
+dpe_spiritualist_mission.1099.desc:0 "The [from.GetSpeciesAdj] mission is preparing to return home, their mission complete: Through their tireless work, spiritualism is now an integral part of our way of life. A large ceremony has been organised to celebrate the departure of the missionaries, who have made many friends during the years they have spent in the [root.GetName]. Some [from.GetSpeciesNamePlural] have requested permission to remain on [dpe_mission_host_planet.GetName] and continue to guide the [root.GetSpeciesNamePlural]. Should we grant them this?"
+dpe_spiritualist_mission.1099.A:0 "Of course - they are most welcome here."
+dpe_spiritualist_mission.1099.B:0 "There is no space for them in our state."
+
+
+#contingencies
 
 dpe_spiritualist_mission.9611.name:0 "The Contingency strikes [dpe_mission_host_planet.GetName]!"
 dpe_spiritualist_mission.9611.desc:0 "The Contingency has struck [dpe_mission_host_planet.GetName] and slaughtered our missionaries, along with all the other inhabitants of the planet!"
@@ -319,46 +362,6 @@ dpe_missionary_planet:0 "Settled Missionaries"
 dpe_missionary_planet_desc:0 "Former missionaries from a neighbour have made this planet their home."
 
 
-
-
-
-dpe_spiritualist_mission.10.name:0 "Our Mission to the [from.GetSpeciesNamePlural]"
- dpe_spiritualist_mission.10.desc.low:0 "REPLACE_ME"
- dpe_spiritualist_mission.10.desc.mid:0 "REPLACE_ME"
- dpe_spiritualist_mission.10.desc.high:0 "REPLACE_ME"
-dpe_spiritualist_mission.10.desc.success:0 "Our mission to the [from.GetName] has been successful: Through their tireless efforts, spiritualism has become an integral part of the [from.GetSpeciesAdj] way of life. Apart from a few who intend to remain on [dpe_mission_host_planet.GetName] and continue to guide the [from.GetSpeciesNamePlural], the missionaries are preparing to return home, their work completed. The [from.GetSpeciesNamePlural] have organised a large celebration to mark the departure of the missionaries, who have made many friends during their time in the [from.GetName]. This will hopefully inaugurate a new period of friendship between our nations."
-dpe_spiritualist_mission.10.option.continue:0 "Continue the Mission - they are doing valuable work."
-dpe_spiritualist_mission.10.option.cancel:0 "Bring the Mission - they have done enough."
-dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
-
-dpe_spiritualist_mission.11.name:0 "Our Mission to the [from.GetSpeciesNamePlural]"
- dpe_spiritualist_mission.11.desc.low:0 "REPLACE_ME"
- dpe_spiritualist_mission.11.desc.mid:0 "REPLACE_ME"
- dpe_spiritualist_mission.11.desc.high:0 "REPLACE_ME"
-dpe_spiritualist_mission.11.desc.success:0 "$dpe_spiritualist_mission.10.desc.success$"
-
- dpe_spiritualist_mission.101.name:0 "REPLACE_ME"
- dpe_spiritualist_mission.101.desc.low:0 "REPLACE_ME"
- dpe_spiritualist_mission.101.desc.mid:0 "REPLACE_ME"
- dpe_spiritualist_mission.101.desc.high:0 "REPLACE_ME"
- dpe_spiritualist_mission.101.option.continue:0 "REPLACE_ME"
- dpe_spiritualist_mission.101.option.cancel:0 "REPLACE_ME"
- 
- dpe_spiritualist_mission.102.name:0 "The [from.GetSpeciesAdj] Missionaries leave"
- dpe_spiritualist_mission.102.desc.low:0 "REPLACE_ME"
- dpe_spiritualist_mission.102.desc.mid:0 "REPLACE_ME"
- dpe_spiritualist_mission.102.desc.high:0 "REPLACE_ME"
-dpe_spiritualist_mission.102.A:0 "We are sorry to see them go."
-dpe_spiritualist_mission.102.B:0 "Good riddance."
- 
-dpe_spiritualist_mission.1011.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
-dpe_spiritualist_mission.1011.desc:0 "Dear [root.GetSpeciesNamePlural], we have hosted your missionaries for some years now. However, it is now time for them to return home. We would like to thank them for their tireless efforts at promoting spiritualism in the [root.GetName]."
-dpe_spiritualist_mission.1011.option:0 "Enlightenment is not for all."
- 
-dpe_spiritualist_mission.1099.name:0 "Mission Accomplished"
-dpe_spiritualist_mission.1099.desc:0 "The [from.GetSpeciesAdj] mission is preparing to return home, their mission complete: Through their tireless work, spiritualism is now an integral part of our way of life. A large ceremony has been organised to celebrate the departure of the missionaries, who have made many friends during the years they have spent in the [root.GetName]. Some [from.GetSpeciesNamePlural] have requested permission to remain on [dpe_mission_host_planet.GetName] and continue to guide the [root.GetSpeciesNamePlural]. Should we grant them this?"
-dpe_spiritualist_mission.1099.A:0 "Of course - they are most welcome here."
-dpe_spiritualist_mission.1099.B:0 "There is no space for them in our state."
 
 
 #Xenophile Mission

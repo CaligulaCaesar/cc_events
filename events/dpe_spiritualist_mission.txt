@@ -2933,13 +2933,13 @@ country_event = {
 						limit = { is_pop_faction_type = traditionalist }
 						count = 0
 					}
-				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.08
+						}
+						count = 1
 					}
-					count = 1
 				}
 			}
 		}
@@ -3096,6 +3096,31 @@ country_event = {
 					value < -50
 				}
 			}
+			modifier = {
+				factor = 2
+				from = {
+					OR = {
+						count_pop_factions = {
+							limit = { is_pop_faction_type = traditionalist }
+							count = 0
+						}
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = traditionalist
+								support < 0.08
+							}
+							count = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
 		}
 	}
 
@@ -3180,13 +3205,13 @@ country_event = {
 						limit = { is_pop_faction_type = traditionalist }
 						count = 0
 					}
-				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.08
+						}
+						count = 1
 					}
-					count = 1
 				}
 			}
 		}
@@ -3347,6 +3372,31 @@ country_event = {
 					value < -50
 				}
 			}
+			modifier = {
+				factor = 2
+				from = {
+					OR = {
+						count_pop_factions = {
+							limit = { is_pop_faction_type = traditionalist }
+							count = 0
+						}
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = traditionalist
+								support < 0.08
+							}
+							count = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
 		}
 	}
 
@@ -3423,35 +3473,27 @@ country_event = {
 country_event = {
 	id = dpe_spiritualist_mission.101
 	title = dpe_spiritualist_mission.101.name
-	
+
 	desc = {
 		trigger = {
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
 			OR = {
 				count_pop_factions = {
 					limit = { is_pop_faction_type = traditionalist }
 					count = 0
 				}
-			}
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = traditionalist
-					support < 0.08
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
 				}
-				count = 1
 			}
 		}
 		text = dpe_spiritualist_mission.101.desc.low
 	}
 	desc = {
 		trigger = {
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
 			NOT = {
 				count_pop_factions = {
 					limit = {
@@ -3508,7 +3550,7 @@ country_event = {
 
 		hidden_effect = {
 			from = {
-				country_event = { id = dpe_spiritualist_mission.11 days = 3600 }
+				country_event = { id = dpe_spiritualist_mission.11 days = 4800 }
 			}
 		}
 
@@ -3700,32 +3742,36 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
+		}
+		text = dpe_spiritualist_mission.102.desc.uninterested
+	}
+
+	desc = {
+		trigger = {
 			OR = {
 				count_pop_factions = {
 					limit = { is_pop_faction_type = traditionalist }
 					count = 0
 				}
-			}
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = traditionalist
-					support < 0.08
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
 				}
-				count = 1
 			}
 		}
 		text = dpe_spiritualist_mission.102.desc.low
 	}
 	desc = {
 		trigger = {
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
 			NOT = {
 				count_pop_factions = {
 					limit = {
