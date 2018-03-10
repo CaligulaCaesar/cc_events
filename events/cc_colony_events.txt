@@ -3633,18 +3633,22 @@ planet_event = {
 	title = cc_colony_events.54.name
 	desc = {
 		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}		
 		text = cc_colony_events.54.desc.pos
 	}
 	desc = {
 		trigger = {
-			NOR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+			owner = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		text = cc_colony_events.54.desc.pos

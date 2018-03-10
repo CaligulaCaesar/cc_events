@@ -1153,7 +1153,7 @@ pop_event = {
 			}
 			random_list = {
 				1 = { set_pop_flag = cc_literally_xenophile }
-				20 = { set_pop_flag = cc_not_literally_xenophile_1 }
+				19 = { set_pop_flag = cc_not_literally_xenophile_1 }
 			}
 		}
 		if = {
@@ -1175,10 +1175,10 @@ pop_event = {
 										}
 										has_a_happiness_gauge = yes
 										OR = {
-											has_citizenship_type = { country = root type = citizenship_full }
-											has_citizenship_type = { country = root type = citizenship_limited }
-											has_citizenship_type = { country = root type = citizenship_caste_system }
-											has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+											has_citizenship_type = { type = citizenship_full }
+											has_citizenship_type = { type = citizenship_limited }
+											has_citizenship_type = { type = citizenship_caste_system }
+											has_citizenship_type = { type = citizenship_caste_system_limited }
 										}
 									}
 								}
@@ -1212,10 +1212,10 @@ pop_event = {
 								}
 								has_a_happiness_gauge = yes
 								OR = {
-									has_citizenship_type = { country = root type = citizenship_full }
-									has_citizenship_type = { country = root type = citizenship_limited }
-									has_citizenship_type = { country = root type = citizenship_caste_system }
-									has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+									has_citizenship_type = { type = citizenship_full }
+									has_citizenship_type = { type = citizenship_limited }
+									has_citizenship_type = { type = citizenship_caste_system }
+									has_citizenship_type = { type = citizenship_caste_system_limited }
 								}
 							}
 						}
@@ -1249,10 +1249,10 @@ pop_event = {
 								}
 								has_a_happiness_gauge = yes
 								OR = {
-									has_citizenship_type = { country = root type = citizenship_full }
-									has_citizenship_type = { country = root type = citizenship_limited }
-									has_citizenship_type = { country = root type = citizenship_caste_system }
-									has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+									has_citizenship_type = { type = citizenship_full }
+									has_citizenship_type = { type = citizenship_limited }
+									has_citizenship_type = { type = citizenship_caste_system }
+									has_citizenship_type = { type = citizenship_caste_system_limited }
 								}
 							}
 						}
@@ -1292,10 +1292,10 @@ pop_event = {
 					}
 					has_a_happiness_gauge = yes
 					OR = {
-						has_citizenship_type = { country = root type = citizenship_full }
-						has_citizenship_type = { country = root type = citizenship_limited }
-						has_citizenship_type = { country = root type = citizenship_caste_system }
-						has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
 					}
 				}
 			}
@@ -1358,10 +1358,10 @@ pop_event = {
 						}
 						has_a_happiness_gauge = yes
 						OR = {
-							has_citizenship_type = { country = root type = citizenship_full }
-							has_citizenship_type = { country = root type = citizenship_limited }
-							has_citizenship_type = { country = root type = citizenship_caste_system }
-							has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
 						}
 					}
 				}
