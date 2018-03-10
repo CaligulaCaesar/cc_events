@@ -598,6 +598,9 @@ country_event = {
 				species = root
 				name = random
 				skill = 3
+				traits = {
+					trait = leader_trait_dpe_talented
+				}
 			}
 			else = {
 				event_target:dpe_talent_planet = {
@@ -626,6 +629,9 @@ country_event = {
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
 					skill = 3
+					traits = {
+						trait = leader_trait_dpe_talented
+					}
 				}
 			}
 		}
@@ -845,6 +851,10 @@ country_event = {
 				species = root
 				name = random
 				skill = 3
+				traits = {
+					trait = leader_trait_dpe_talented
+					trait = leader_trait_charismatic
+				}
 			}
 			else = {
 				event_target:dpe_talent_planet = {
@@ -873,6 +883,10 @@ country_event = {
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
 					skill = 3
+					traits = {
+						trait = leader_trait_dpe_talented
+						trait = leader_trait_charismatic
+					}
 				}
 			}
 		}
@@ -1022,6 +1036,10 @@ country_event = {
 				species = root
 				name = random
 				skill = 3
+				traits = {
+					trait = leader_trait_dpe_talented
+					trait = leader_trait_intellectual
+				}
 			}
 			else = {
 				event_target:dpe_talent_planet = {
@@ -1050,6 +1068,10 @@ country_event = {
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
 					skill = 3
+					traits = {
+						trait = leader_trait_dpe_talented
+						trait = leader_trait_intellectual
+					}
 				}
 			}
 		}
@@ -1208,6 +1230,10 @@ country_event = {
 			species = event_target:dpe_talent_leader_pop.species
 			name = random
 			skill = 3
+			traits = {
+				trait = leader_trait_dpe_talented
+				trait = leader_trait_aggressive
+			}
 		}
 		last_created_leader = { save_event_target_as = dpe_talent_leader }
 	}
