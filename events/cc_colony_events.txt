@@ -3764,6 +3764,10 @@ planet_event = {
 					modifier = cc_ignored_ally
 					who = prev
 				}
+				add_opinion_modifier = {
+					modifier = cc_ignored_ally
+					who = prev
+				}
 			}
 			shift_ethic = ethic_xenophobe
 			
@@ -3809,7 +3813,7 @@ planet_event = {
 			event_target:ally = {
 				if = {
 					limit = { is_ai = no }
-					country_event = { id = cc_colony_events.542 days = 30 }
+					country_event = { id = cc_colony_events.542 days = 5 }
 				}
 			}
 		}
@@ -3872,7 +3876,7 @@ planet_event = {
 			event_target:ally = {
 				if = {
 					limit = { is_ai = no }
-					country_event = { id = cc_colony_events.543 }
+					country_event = { id = cc_colony_events.543 days = 5 }
 				}
 			}
 			random_list = {
@@ -3918,6 +3922,57 @@ planet_event = {
 							count > 1
 						}
 					}
+				}
+			}
+		}
+	}
+	option = {
+		name = cc_colony_events.54.C
+		tooltip = cc_colony_events.54.C.tooltip
+		
+		owner = {
+			every_owned_planet = {
+				limit = {
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = {
+						has_ethic = ethic_xenophobe
+						is_same_species = root.owner
+					}
+				}
+				add_modifier = {
+					modifier = cc_xenophobe_hero
+					days = 5400
+				}
+			}
+			event_target:ally = {
+				add_opinion_modifier = {
+					modifier = cc_ignored_ally
+					who = prev
+				}
+			}
+		}
+		
+		hidden_effect = {
+			event_target:ally = {
+				if = {
+					limit = { is_ai = no }
+					country_event = { id = cc_colony_events.5421 days = 5 }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_egalitarian
 				}
 			}
 		}
@@ -4135,6 +4190,42 @@ country_event = {
 		tooltip = {
 			from.owner = {
 				shift_ethic = ethic_xenophobe
+				event_target:ally = {
+					add_opinion_modifier = {
+						modifier = cc_ignored_ally
+						who = prev
+					}
+					add_opinion_modifier = {
+						modifier = cc_ignored_ally
+						who = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cc_colony_events.5421
+	title = cc_colony_events.5421.name
+	desc = cc_colony_events.5421.desc
+
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from.owner
+		planet_background = from.owner
+		graphical_culture = from.owner
+		city_level = from.owner
+		room = from.owner.ruler
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = cc_colony_events.5421.option
+		
+		tooltip = {
+			from.owner = {
 				event_target:ally = {
 					add_opinion_modifier = {
 						modifier = cc_ignored_ally

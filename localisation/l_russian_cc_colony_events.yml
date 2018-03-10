@@ -274,6 +274,8 @@ cc_colony_events.534.name:0 "$cc_colony_events.234.name$"
 cc_colony_events.534.desc:0 "$cc_colony_events.234.desc$"
 cc_colony_events.54.name:0 "Слава [cc_colony_leader.GetName] распространилась"
 cc_colony_events.54.desc.pos:0 "За последние 15 лет [cc_colony_leader.GetName] был ведущей фигурой на [Root.GetName]. [cc_colony_leader.GetSheHeCap] зарядил энергией население [root.owner.GetSpeciesAdj] и смог поднять их на новую ступень единства. Репутация [cc_colony_leader.GetHisHerCap] так распространилась, что даже появились слухи о по меньшей мере одном заговоре с целью убить [cc_colony_leader.GetHimHer]. Однако, чтобы добиться желаемого, им сперва придётся пробиться через множество лояльных [cc_colony_leader.GetHisHer] граждан, которых можно найти на многих мирах в этой части [root.owner.GetName]."
+cc_colony_events.54.C:0 "We must respect our laws, no matter our opinion of [cc_colony_leader.GetHimHer]."
+cc_colony_events.54.C.tooltip:0 "No action will be taken against [cc_colony_leader.GetName]."
 
 #Excellent!
 
@@ -296,6 +298,13 @@ cc_colony_events.541.B:0 "Всё равно мы их никогда не люб
 cc_colony_events.542.name:0 "[from.owner.GetName] становятся Враждебными"
 cc_colony_events.542.desc:0 "Вы ставите нас в трудное положение, [root.GetSpeciesNamePlural] - мы должны сделать выбор между нашими друзьями и нашими гражданами. После тщательного рассмотрения вашего предлоежния, мы пришли к согласию в том, что первоочередная обязанность государства [from.GetName] - это служить благу наших граждан. По этой причине, мы с сожалением сообщаем вам, что не станем поддерживать или смотреть сквозь пальцы на любую попытку устранения [cc_colony_leader.GetName]."
 cc_colony_events.542.option:0 "Нам придётся переоценить наше мнение о них."
+
+
+cc_colony_events.5421.name:0 "The [from.owner.GetName] refuses to take action"
+cc_colony_events.5421.desc:0 "You put us in a difficult position, [root.GetSpeciesNamePlural]: We must choose between our friends and our citizens. After careful consideration, we have decided that we cannot contemplate taking actions against our citizens that are illegal according to our laws, no matter how much we might abhor their views. For that reason, we regret to inform you that we will neither support nor tolerate any moves to forcibly eliminate [cc_colony_leader.GetName]. We apologise for this."
+cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
+
+
 cc_colony_events.543.name:0 "Устраните этого Разбойника"
 cc_colony_events.543.desc:0 "Мы с радостью будем сотрудничать с вами, чтобы устранить смутьяна, "Гегемон" [cc_colony_leader.GetName]! Мы дали поручение нашим разведывательным службам проработать совместно с вами план. Уже очень скоро угроза в лице [cc_colony_leader.GetSheHe] будет устранена."
 cc_colony_events.544.name:0 "[cc_colony_leader.GetName] Успешно Ликвидирован"

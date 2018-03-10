@@ -355,6 +355,8 @@
  cc_colony_events.54.desc.neg:0 "Während den letzten 15 Jahren ist [cc_colony_leader.GetName] eine führende Figur auf [Root.GetName] gewesen. [cc_colony_leader.GetSheHeCap] ist sehr beliebt unter der [root.owner.GetSpeciesAdj]en Bevölkerung. Jedoch ist [cc_colony_leader.GetSheHe] eine sehr kontroverse Figur, beispielsweise bei den Xenorechtsorganisationen. In letzter Zeit ist [cc_colony_leader.GetHisHer] anti-Xeno Hetzerei für unserem Bündnispartner, die [ally.GetName], zu viel geworden. Ihr Botschafter hat [root.owner.GetRulerTitle] [root.owner.GetRulerName] unter vier Augen mitgeteilt, dass [ally.leader.GetDerDieDE] [ally.GetSpeciesAdj]e [ally.GetRulerTitle] bereit war, uns zu helfen, dies[cc_colony_leader.GetEnEDE] Volksverhetzer[cc_colony_leader.GetXInDE] zu "eliminieren"... aber auch, dass falls wir diesen Angebot ablehnen, [ally.leader.GetSheHe] weitere Ehrenkränkungen gegen der [ally.GetName] nicht mehr dulden wird.\n\nWas sollen wir machen?"
  cc_colony_events.54.A:0 "[cc_colony_leader.GetName] ist ein[cc_colony_leader.GetXEDE] treu[cc_colony_leader.GetErEDE] [root.owner.GetSpeciesAdj][cc_colony_leader.GetErEDE] Bürger[cc_colony_leader.GetXInDE]."
  cc_colony_events.54.B:0 "Sehr gut. Lass uns [cc_colony_leader.GetIhnSieDE] eliminieren."
+cc_colony_events.54.C:0 "We must respect our laws, no matter our opinion of [cc_colony_leader.GetHimHer]."
+cc_colony_events.54.C.tooltip:0 "No action will be taken against [cc_colony_leader.GetName]."
 
  cc_colony_events.541.name:0 "Ermordung erfolgreich"
  cc_colony_events.541.desc:0 "Die Ermordung [cc_colony_leader.GetName]s ist erfolgreich ausgegangen. Dennoch, obwohl eure Geheimagenten darauf bestehen, dass die Operation problemlos erfolgte, und dass keine belastenden Hinweise hinterlassen wurden, haben [cc_colony_leader.GetName]s anscheinend geraten, dass [ally.GetName] hinter der Ermordung steht. Proteste auf vielen Welten fordern, dass sämtliche Beziehungen zur [ally.GetName] beendet werden und eine xenophobischere Außenpolitik aufgenommen wird."
@@ -366,6 +368,10 @@
  cc_colony_events.542.desc:0 "Ihr bringt uns in eine schwierige Lage, [root.GetSpeciesNamePlural]: Wir müssen uns zwischen unseren Freunden und unseren Bürgern entscheiden. Nach sorgfältiger Überlegung haben wir uns darauf geeinigt, dass der Hauptzweck der Regierung der [from.GetName] darin besteht, dem Wohl der Bürger zu dienen. Aus diesem Grund bedauern wir, euch darüber zu informieren, dass wir keine Schritte zur erzwungenen Beseitigung von [cc_colony_leader.GetName] unterstützen oder dulden werden."
 
  cc_colony_events.542.option:0 "Wir werden unsere Meinung von ihnen neu bewerten müssen."
+
+cc_colony_events.5421.name:0 "The [from.owner.GetName] refuses to take action"
+cc_colony_events.5421.desc:0 "You put us in a difficult position, [root.GetSpeciesNamePlural]: We must choose between our friends and our citizens. After careful consideration, we have decided that we cannot contemplate taking actions against our citizens that are illegal according to our laws, no matter how much we might abhor their views. For that reason, we regret to inform you that we will neither support nor tolerate any moves to forcibly eliminate [cc_colony_leader.GetName]. We apologise for this."
+cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_colony_events.543.name:0 "Unterstützung zur Eliminierung [cc_colony_leader.GetName]s"
  cc_colony_events.543.desc:0 "Wir werden gerne mit euch zusammenarbeiten, um den Unruhestifter, "Hegemon" [cc_colony_leader.GetName], zu eliminieren! Wir haben unseren Geheimdienst angewiesen, mit eurem zusammenzuarbeiten, um einen Plan zu entwickeln, sodass die Drohung, die [cc_colony_leader.GetName] uns darstellt, sehr bald neutralisiert werden kann."
