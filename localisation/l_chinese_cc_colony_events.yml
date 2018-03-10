@@ -51,7 +51,7 @@ cc_colony_events.234.desc:0 "追踪并猎杀[cc_colony_leader.GetName]及其追�
 cc_colony_events.235.name:0 "在[Root.GetName]上对[cc_colony_leader.GetName]的逮捕遭遇灾难性失败。"
 cc_colony_events.235.desc:0 "对[cc_colony_leader.GetName]的逮捕失败了。无法确定是[cc_colony_leader.GetSheHeCap]在交火中身亡，还是死于自己之手。不幸的是，[cc_colony_leader.GetSheHe]因此被视为烈士，[cc_colony_leader.GetHisHer]声望在死后达到顶峰。[cc_colony_leader.GetHisHerCap]最信任的追随者已经聚集起来，开展了旨在谋求独立的地下抵抗活动。未来一段时间恐怕会麻烦不断。"
 
-cc_colony_events.25.name:0 "一位[cc_colony_leader.GetSpeciesName]伟人的离世"
+cc_colony_events.25.name:0 "一位[cc_colony_leader.Species.GetName]伟人的离世"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName],[root.GetName]使节,在短暂的与疾病抗争后，于今日逝世。[root.GetName]人民因此陷入悲伤。[cc_colony_leader.GetHisHerCap]生前最后的愿望是在[root.GetName]上建立一座伟大的军事学院，以期自己辛勤耕耘的下一代军官们能够完全释放自己的潜能。[root.GetName]上的地方官员已经向我们呈交了实现这一愿望的计划。\n\n我们应该为这所学院投资吗?"
 cc_colony_events.25.A: "当然!"
 cc_colony_events.25.B: "花费太高了。"
@@ -146,7 +146,7 @@ cc_colony_events.34.desc:0 "在过去的15年间，[cc_colony_leader.GetName]已
 "
 
 cc_colony_events.341.name:0 "[cc_colony_leader.GetName]的星际旅程圆满结束"
-cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]已经完成了对自己所在星区的跨星球访问。[cc_colony_leader.GetHisHerCap]追随者们为亲身看到、聆听[cc_colony_leader.GetSpeciesName]伟大思想家的机会而激动不已,并深受其光辉事迹的激励。[cc_colony_leader.GetName]的声望达到新高度。"
+cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]已经完成了对自己所在星区的跨星球访问。[cc_colony_leader.GetHisHerCap]追随者们为亲身看到、聆听[cc_colony_leader.Species.GetName]伟大思想家的机会而激动不已,并深受其光辉事迹的激励。[cc_colony_leader.GetName]的声望达到新高度。"
 
 
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]的星际旅程以悲剧告终"
@@ -394,14 +394,14 @@ cc_colony_events.548.desc:0 "我们的盟友和他们无能的特工不仅没能
 cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
 
 cc_colony_events.55.name:0 "伟人离世"
-cc_colony_events.55.desc:0 "[cc_colony_leader.GetName],[root.GetName]中的“霸权家”,于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]民众陷入悲伤，并要求我们以[cc_colony_leader.GetHisHer]的名义建立一所特殊的学院--不仅为纪念[cc_colony_leader.GetHisHer]的成就，更为展现[cc_colony_leader.GetSpeciesAdj]族民的荣光。"
+cc_colony_events.55.desc:0 "[cc_colony_leader.GetName],[root.GetName]中的“霸权家”,于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]民众陷入悲伤，并要求我们以[cc_colony_leader.GetHisHer]的名义建立一所特殊的学院--不仅为纪念[cc_colony_leader.GetHisHer]的成就，更为展现[cc_colony_leader.Species.GetAdj]族民的荣光。"
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
 cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
 cc_colony_events.55.C.tooltip:0 "[cc_colony_leader.GetName]的影响将会在30年消退"
 
 cc_colony_events.551.name:0 "正统学院在[root.GetName]上成立"
-cc_colony_events.551.desc.A:0 "为纪念[cc_colony_leader.GetName]而建的学院已经完工。其揭幕仪式吸引了众多参与者，[cc_colony_leader.GetHisHer]的支持者从各个星球赶来共襄盛事。我们相信这里将会成为[cc_colony_leader.GetSpeciesAdj]民族主义者们的重要思想中心。"
+cc_colony_events.551.desc.A:0 "为纪念[cc_colony_leader.GetName]而建的学院已经完工。其揭幕仪式吸引了众多参与者，[cc_colony_leader.GetHisHer]的支持者从各个星球赶来共襄盛事。我们相信这里将会成为[cc_colony_leader.Species.GetAdj]民族主义者们的重要思想中心。"
 cc_colony_events.551.desc.B:0 "为纪念[cc_colony_leader.GetName]而建的学院已经完工。[root.GetName]上的民众现在有了缅怀其教导与成就的地方。"
 
 cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"

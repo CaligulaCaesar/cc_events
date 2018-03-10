@@ -51,7 +51,7 @@ cc_colony_events.234.desc:0 "As tentativas de rastrear e matar [cc_colony_leader
 cc_colony_events.235.name:0 "Prisão de [cc_colony_leader.GetName] em [Root.GetName] falhou catastroficamente"
 cc_colony_events.235.desc:0 "Tentativas de prender [cc_colony_leader.GetName] falharam. [cc_colony_leader.GetSheHeCap] foi morto no fogo cruzado ou pelas próprias mãos [cc_colony_leader.GetHisHer]. Infelizmente, [cc_colony_leader.GetSheHe] foi tido como mártir por tudo isso, e sua popularidade atingiu novos patamares postumamente. Os mais confiáveis seguidores [cc_colony_leader.GetHisHerCap] fundaram um movimento interno de resistência que busca a independência de [Root.Owner.GetName]. Devemos esperar por tumultos durante algum tempo."
 
-cc_colony_events.25.name:0 "Morte de um[cc_colony_leader.GetXALead] grande [cc_colony_leader.GetSpeciesName]"
+cc_colony_events.25.name:0 "Morte de um[cc_colony_leader.GetXALead] grande [cc_colony_leader.Species.GetName]"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], o 'Enviado[cc_colony_leader.GetXALead]' de [root.GetName], morreu hoje após uma grave doença. A população de [root.GetName] está de luto pela perda [cc_colony_leader.GetHisHer]. O último desejo [cc_colony_leader.GetHisHerCap] foi que uma grande academia militar fosse construído em [root.GetName] para garantir que a próxima geração de oficiais, em quem [cc_colony_leader.GetSheHe] plantou seus ideais, possam atingir seu potencial máximo. Oficiais em [root.GetName] tem se aproximado de nós para tornar este sonho uma realidade.\n\nDevemos investir na academia?"
 cc_colony_events.25.A: "Certamente!"
 cc_colony_events.25.B: "Isso é muito caro."
@@ -145,7 +145,7 @@ cc_colony_events.34.name:0 "A fama de [cc_colony_leader.GetName] cresce"
 cc_colony_events.34.desc:0 "15 anos atrás, [cc_colony_leader.GetName] assumiu uma figura de liderança em [Root.GetName]. [cc_colony_leader.GetSheHeCap] é muito popular entre os habitantes, tanto que a reputação [cc_colony_leader.GetHisHer] cresceu. [cc_colony_leader.GetSheHeCap] é agora visto como uma inspiração por todas as mentes pacifistas em [root.owner.GetName]. Na verdade, [cc_colony_leader.GetSheHe] está planejando visitar todos os mundos para ver os admiradores [cc_colony_leader.GetHisHer]!"
 
 cc_colony_events.341.name:0 "A visita de [cc_colony_leader.GetName] aos mundos terminou"
-cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] terminou de visitar os mundos no setor [cc_colony_leader.GetHisHer] do [root.owner.GetName]. Os seguidores [cc_colony_leader.GetHisHerCap] ficaram muito feliz por ter a chance de ver e ouvir o grande [cc_colony_leader.GetSpeciesName] pensador, e estão inspirados no exemplo [cc_colony_leader.GetHisHer]. A fama [cc_colony_leader.GetHisHerCap] chegou a um novo nível."
+cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] terminou de visitar os mundos no setor [cc_colony_leader.GetHisHer] do [root.owner.GetName]. Os seguidores [cc_colony_leader.GetHisHerCap] ficaram muito feliz por ter a chance de ver e ouvir o grande [cc_colony_leader.Species.GetName] pensador, e estão inspirados no exemplo [cc_colony_leader.GetHisHer]. A fama [cc_colony_leader.GetHisHerCap] chegou a um novo nível."
 
 
 cc_colony_events.342.name:0 "A visita de [cc_colony_leader.GetName] pelos mundos terminou em tragédia"
@@ -395,15 +395,15 @@ cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
 
 
 
-cc_colony_events.55.name:0 "Morte de um[cc_colony_leader.GetXALead] grande [cc_colony_leader.GetSpeciesName]"
-cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], [cc_colony_leader.GetOALead] 'Hegemon' de [root.GetName], morreu esta manhã. [cc_colony_leader.GetSheHeCap] estava lutando contra uma grave doença há algum tempo, até que uma febre finalmente matou a [cc_colony_leader.GetHimHer]. A população em [root.GetName] está em luto, e estão exigindo a construção de um Instituto especial em honra [cc_colony_leader.GetHisHer] onde conquistas [cc_colony_leader.GetHisHer] - e, mais importante, a glória do povo [cc_colony_leader.GetSpeciesAdj] - poderá ser devidamente celebrada."
+cc_colony_events.55.name:0 "Morte de um[cc_colony_leader.GetXALead] grande [cc_colony_leader.Species.GetName]"
+cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], [cc_colony_leader.GetOALead] 'Hegemon' de [root.GetName], morreu esta manhã. [cc_colony_leader.GetSheHeCap] estava lutando contra uma grave doença há algum tempo, até que uma febre finalmente matou a [cc_colony_leader.GetHimHer]. A população em [root.GetName] está em luto, e estão exigindo a construção de um Instituto especial em honra [cc_colony_leader.GetHisHer] onde conquistas [cc_colony_leader.GetHisHer] - e, mais importante, a glória do povo [cc_colony_leader.Species.GetAdj] - poderá ser devidamente celebrada."
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
 cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
 cc_colony_events.55.C.tooltip:0 "A influência de [cc_colony_leader.GetName] vai acabar em 30 anos."
 
 cc_colony_events.551.name:0 "Instituto da Purificação [root.GetName]"
-cc_colony_events.551.desc.A:0 "O Instituto em Honra a [cc_colony_leader.GetName] está pronto. Sua abertura atraiu inúmeros visitantes, com os seguidores [cc_colony_leader.GetHisHer] vindo de outros mundos para a ocasião. Acreditamos que o Instituto se tornará um importante centro de reflexão para [cc_colony_leader.GetSpeciesAdj] nacionalistas."
+cc_colony_events.551.desc.A:0 "O Instituto em Honra a [cc_colony_leader.GetName] está pronto. Sua abertura atraiu inúmeros visitantes, com os seguidores [cc_colony_leader.GetHisHer] vindo de outros mundos para a ocasião. Acreditamos que o Instituto se tornará um importante centro de reflexão para [cc_colony_leader.Species.GetAdj] nacionalistas."
 cc_colony_events.551.desc.B:0 "O Instituto em Honra de [cc_colony_leader.GetName] está pronto. A população em [root.GetName] agora tem um lugar para lembrar dos ensinamentos e conquistas [cc_colony_leader.GetHisHer]."
 
 cc_xenophobe_martyr:0 "Memória de um[cc_colony_leader.GetXALead] Mártir"
@@ -625,7 +625,7 @@ cc_colony_events.72.A:0 "$cc_colony_events.22.A$"
 cc_colony_events.72.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
 cc_colony_events.72.B:0 "Liberte a [cc_colony_leader.GetHimHer]."
 
-cc_colony_events.721.name:0 "Ligeira desconfiança em [Root.Owner.GetName]"
+cc_colony_events.721.name:0 "Ligeira desconfiança em [Root.GetName]"
 cc_colony_events.721.desc:0 "$cc_colony_events.221.desc$"
 
 #(15%)

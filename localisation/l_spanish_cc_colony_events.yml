@@ -51,7 +51,7 @@ cc_colony_events.234.desc:0 "Attempts to track down and kill [cc_colony_leader.G
 cc_colony_events.235.name:0 "Arrest of [cc_colony_leader.GetName] on [Root.GetName] fails catastrophically"
 cc_colony_events.235.desc:0 "Attempts to arrest [cc_colony_leader.GetName] have failed. [cc_colony_leader.GetSheHeCap] was killed either in the crossfire or by [cc_colony_leader.GetHisHer] own hand. Unfortunately, [cc_colony_leader.GetSheHe] has been elevated to martyrdom through this, and [cc_colony_leader.GetHisHer] popularity has posthumously soared to new heights. [cc_colony_leader.GetHisHerCap] most trusted followers have founded an underground resistance movement that seeks independence from the [Root.Owner.GetName]. We can expect turmoil for some time."
 
-cc_colony_events.25.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
+cc_colony_events.25.name:0 "Death of a Great [cc_colony_leader.Species.GetName]"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], the 'Legate' of [root.GetName], died today after a brief illness. The populace of [root.GetName] are in mourning at [cc_colony_leader.GetHisHer] loss. [cc_colony_leader.GetHisHerCap] last wish was that a great military academy be built on [root.GetName] to ensure that the next generation of officers, for whom [cc_colony_leader.GetSheHe] has sown the seeds, can reach their full potential. Officials on [root.GetName] have approached us with a plan to see this become a reality.\n\nShould we invest in the academy?"
 cc_colony_events.25.A: "Certainly!"
 cc_colony_events.25.B: "It is too expensive."
@@ -145,7 +145,7 @@ cc_colony_events.34.name:0 "[cc_colony_leader.GetName]'s Fame spreads"
 cc_colony_events.34.desc:0 "Over the past 15 years, [cc_colony_leader.GetName] has been a leading figure on [Root.GetName]. [cc_colony_leader.GetSheHeCap] is very popular with the inhabitants, so much so that [cc_colony_leader.GetHisHer] reputation has spread. [cc_colony_leader.GetSheHeCap] is now seen as an inspiration by all peaceful-minded people in this part of the [root.owner.GetName]. In fact, [cc_colony_leader.GetSheHe] is planning a tour of worlds to visit [cc_colony_leader.GetHisHer] admirers!"
 
 cc_colony_events.341.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds complete"
-cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the worlds in [cc_colony_leader.GetHisHer] sector of the [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] followers were overjoyed to have the chance to see and hear from the great [cc_colony_leader.GetSpeciesName] thinker, and are inspired by [cc_colony_leader.GetHisHer] example. [cc_colony_leader.GetHisHerCap] fame has reached new heights."
+cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the worlds in [cc_colony_leader.GetHisHer] sector of the [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] followers were overjoyed to have the chance to see and hear from the great [cc_colony_leader.Species.GetName] thinker, and are inspired by [cc_colony_leader.GetHisHer] example. [cc_colony_leader.GetHisHerCap] fame has reached new heights."
 
 
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds ends in Tragedy"
@@ -391,15 +391,15 @@ cc_colony_events.548.name:0 "Treachery!"
 cc_colony_events.548.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName]. Spooked by the popular tumult, the [from.owner.GetSpeciesAdj] government has sought to shift the blame to us, denouncing the [root.GetName] in terms that mirror [cc_colony_leader.GetName]'s rhetoric. When our ambassador demanded an explanation, he was instructed that he had ten days to leave the planet. It appears our relations with them have taken a sharp turn for the worse!"
 cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
 
-cc_colony_events.55.name:0 "Death of a Great [cc_colony_leader.GetSpeciesName]"
-cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], the 'Hegemon' of [root.GetName], died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special Institute in [cc_colony_leader.GetHisHer] honour, where [cc_colony_leader.GetHisHer] achievements - and, more importantly, the glory of the [cc_colony_leader.GetSpeciesAdj] people - can be properly celebrated."
+cc_colony_events.55.name:0 "Death of a Great [cc_colony_leader.Species.GetName]"
+cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], the 'Hegemon' of [root.GetName], died this morning. [cc_colony_leader.GetSheHeCap] had been struggling with poor health for some time, and a fever finally finished [cc_colony_leader.GetHimHer] off. The population on [root.GetName] are in mourning, and have requested that we set up a special Institute in [cc_colony_leader.GetHisHer] honour, where [cc_colony_leader.GetHisHer] achievements - and, more importantly, the glory of the [cc_colony_leader.Species.GetAdj] people - can be properly celebrated."
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
 cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
 cc_colony_events.55.C.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
 
 cc_colony_events.551.name:0 "Institute of Purity opens on [root.GetName]"
-cc_colony_events.551.desc.A:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into an important centre of thought for [cc_colony_leader.GetSpeciesAdj] nationalists."
+cc_colony_events.551.desc.A:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. Its opening attracted a high attendance, with [cc_colony_leader.GetHisHer] followers coming from other worlds for the occasion. We believe that this will develop into an important centre of thought for [cc_colony_leader.Species.GetAdj] nationalists."
 cc_colony_events.551.desc.B:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
 cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
@@ -620,7 +620,7 @@ cc_colony_events.72.A:0 "$cc_colony_events.22.A$"
 cc_colony_events.72.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
 cc_colony_events.72.B:0 "Release [cc_colony_leader.GetHimHer]."
 
-cc_colony_events.721.name:0 "Lingering Distrust on [Root.Owner.GetName]"
+cc_colony_events.721.name:0 "Lingering Distrust on [Root.GetName]"
 cc_colony_events.721.desc:0 "$cc_colony_events.221.desc$"
 
 #(15%)

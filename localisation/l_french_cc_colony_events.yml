@@ -51,7 +51,7 @@ cc_colony_events.234.desc:0 "Nos tentatives pour abattre [cc_colony_leader.GetNa
 cc_colony_events.235.name:0 "L'arrestation de [cc_colony_leader.GetName] sur [Root.GetName] a échoué de manière catastrophique"
 cc_colony_events.235.desc:0 "Nos tentatives pour arrêter [cc_colony_leader.GetName] ont échoué. [cc_colony_leader.GetSheHeCap] a été tué durant un échange de feu ou bien de sa propre main. Malheureusement, [cc_colony_leader.GetSheHe] a été au rang de martyr, et sa popularité a atteint de nouveaux sommets de manière posthume. Ses plus fidèles partisans et a créé un mouvement de résistance clandestin ayant pour but d'obtenir l'indépendance. Nous pouvons nous attendre à des problèmes pendant un moment."
 
-cc_colony_events.25.name:0 "Mort [cc_colony_leader.GetDuDelaLead] grand[cc_colony_leader.GetXELead] [cc_colony_leader.GetSpeciesName][cc_colony_leader.GetXELead]"
+cc_colony_events.25.name:0 "Mort [cc_colony_leader.GetDuDelaLead] grand[cc_colony_leader.GetXELead] [cc_colony_leader.Species.GetName][cc_colony_leader.GetXELead]"
 cc_colony_events.25.desc:0 "[cc_colony_leader.GetName], le 'Légat' sur [root.GetName], est mort aujourd'hui après une courte maladie. La population de [root.GetName] est en deuil. Son dernier souhait était qu'une grande académie soit construite sur [root.GetName] pour assurer que la prochaine génération d'officier puisse atteindre son plein potentiel. Les responsables sur [root.GetName] nous ont contacté pour transformer ce rêve en réalité.\n\nDevons-nous investir dans cette académie ?"
 cc_colony_events.25.A: "Certainement !"
 cc_colony_events.25.B: "C'est beaucoup trop cher."
@@ -145,7 +145,7 @@ cc_colony_events.34.name:0 "La popularité de [cc_colony_leader.GetName] grandit
 cc_colony_events.34.desc:0 "Ces 15 dernières années, [cc_colony_leader.GetName] a été une figure emblématique du [Root.GetName]. [cc_colony_leader.GetSheHeCap] est très populaire chez ses concitoyens, à tel point que sa réputation [cc_colony_leader.GetLeLaLead] précède dans un nombre croissant de planètes de l'empire. [cc_colony_leader.GetSheHeCap] est dorénavant vu[cc_colony_leader.GetXELead] comme une inspiration pour tous les citoyens pacifiques du [root.owner.GetName]. En fait, [cc_colony_leader.GetSheHe] prévoit un tour des mondes pour rencontrer ses admirateurs !"
 
 cc_colony_events.341.name:0 "Le Tour des Mondes de [cc_colony_leader.GetName] est terminé"
-cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] a fini son tour des mondes de son secteur du [root.owner.GetName]. Ses partisans étaient ravis d'avoir une chance d'entendre et voir en chair et en os [cc_colony_leader.GetLeLaLead] grand[cc_colony_leader.GetXELead] penseu[cc_colony_leader.GetRSeLead] [cc_colony_leader.GetSpeciesName], et sont inspirés par son exemple. Sa popularité a atteint de nouveaux sommets."
+cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] a fini son tour des mondes de son secteur du [root.owner.GetName]. Ses partisans étaient ravis d'avoir une chance d'entendre et voir en chair et en os [cc_colony_leader.GetLeLaLead] grand[cc_colony_leader.GetXELead] penseu[cc_colony_leader.GetRSeLead] [cc_colony_leader.Species.GetName], et sont inspirés par son exemple. Sa popularité a atteint de nouveaux sommets."
 
 
 cc_colony_events.342.name:0 "Le Tour des Mondes de [cc_colony_leader.GetName] se termine en tragédie"
@@ -399,16 +399,16 @@ cc_colony_events.548.name:0 "Treachery!"
 cc_colony_events.548.desc:0 "Our allies and their incompetent assassins have not only failed to kill "Hegemon" [cc_colony_leader.GetName], but also managed to get captured in the process. They have since spilt the beans on our involvement, something which has caused considerable internal tumult within the [from.owner.GetName]. Spooked by the popular tumult, the [from.owner.GetSpeciesAdj] government has sought to shift the blame to us, denouncing the [root.GetName] in terms that mirror [cc_colony_leader.GetName]'s rhetoric. When our ambassador demanded an explanation, he was instructed that he had ten days to leave the planet. It appears our relations with them have taken a sharp turn for the worse!"
 cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
 
-cc_colony_events.55.name:0 "Mort d'un grand [cc_colony_leader.GetSpeciesName]"
+cc_colony_events.55.name:0 "Mort d'un grand [cc_colony_leader.Species.GetName]"
 
-cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], l'"Hégémon" de [root.GetName], est mort ce matin. [cc_colony_leader.GetSheHeCap] se battait contre la maladie depuis un moment, et une fièvre l'a finalement achevé. La population de [root.GetName] est en deuil, et demande que l'on construise un Institut spécial en son honneur où ses accomplissements - et plus important, la gloire du peuple [cc_colony_leader.GetSpeciesAdj] - pourrait être célébrés dignement."
+cc_colony_events.55.desc:0 "[cc_colony_leader.GetName], l'"Hégémon" de [root.GetName], est mort ce matin. [cc_colony_leader.GetSheHeCap] se battait contre la maladie depuis un moment, et une fièvre l'a finalement achevé. La population de [root.GetName] est en deuil, et demande que l'on construise un Institut spécial en son honneur où ses accomplissements - et plus important, la gloire du peuple [cc_colony_leader.Species.GetAdj] - pourrait être célébrés dignement."
 
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
 cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
 cc_colony_events.55.C.tooltip:0 "L'influence de [cc_colony_leader.GetName] s'estompera dans 30 ans."
 cc_colony_events.551.name:0 "L'Institut de la Pureté ouvre sur [root.GetName]"
-cc_colony_events.551.desc.A:0 "La construction de l'Institut en l'honneur de [cc_colony_leader.GetName] est terminée. Son ouverture a attiré un public nombreux, avec ses partisans arrivant d'autres mondes pour l'occasion. Nous pensons que ce site se développera en un centre intellectuel pour les nationalistes [cc_colony_leader.GetSpeciesAdj]."
+cc_colony_events.551.desc.A:0 "La construction de l'Institut en l'honneur de [cc_colony_leader.GetName] est terminée. Son ouverture a attiré un public nombreux, avec ses partisans arrivant d'autres mondes pour l'occasion. Nous pensons que ce site se développera en un centre intellectuel pour les nationalistes [cc_colony_leader.Species.GetAdj]."
 cc_colony_events.551.desc.B:0 "La construction de l'Institut en l'honneur de [cc_colony_leader.GetName] est terminée. Le peuple de [root.GetName] a dorénavant un endroit où se recueillir et se rappeler ses enseignements et accomplissements."
 
 cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
@@ -629,7 +629,7 @@ cc_colony_events.72.A:0 "$cc_colony_events.22.A$"
 cc_colony_events.72.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
 cc_colony_events.72.B:0 "Relâchez-[cc_colony_leader.GetLeLaLead]."
 
-cc_colony_events.721.name:0 "Méfiance persistante sur [Root.Owner.GetName]"
+cc_colony_events.721.name:0 "Méfiance persistante sur [Root.GetName]"
 cc_colony_events.721.desc:0 "$cc_colony_events.221.desc$"
 
 #(15%)
