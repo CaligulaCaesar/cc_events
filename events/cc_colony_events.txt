@@ -34,16 +34,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_militarist } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = imperialist } }
+					owner = {
+						NOT = { has_faction = imperialist }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_militarist_story }
 				}
 				modifier = {
@@ -62,16 +65,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_pacifist } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = prosperity } }
+					owner = {
+						NOT = { has_faction = prosperity }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_pacifist_story }
 				}
 				modifier = {
@@ -114,16 +120,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_xenophile } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = xenoist } }
+					owner = {
+						NOT = { has_faction = xenoist }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_xenophile_story }
 				}
 				modifier = {
@@ -142,7 +151,7 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_xenophobe } }
 				}
 				modifier = {
@@ -152,6 +161,7 @@ planet_event = {
 							has_faction = supremacist
 							has_faction = isolationist
 						}
+						count_pop_factions = { count > 2 }
 					}
 				}
 				modifier = {
@@ -171,7 +181,7 @@ planet_event = {
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_xenophobe_story }
 				}
 				modifier = {
@@ -190,16 +200,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_spiritualist } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = traditionalist } }
+					owner = {
+						NOT = { has_faction = traditionalist }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_spiritualist_story }
 				}
 				modifier = {
@@ -218,16 +231,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_materialist } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = technologist } }
+					owner = {
+						NOT = { has_faction = technologist }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_materialist_story }
 				}
 				modifier = {
@@ -246,16 +262,19 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = { any_owned_pop = { has_ethic = ethic_authoritarian } }
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = totalitarian } }
+					owner = {
+						NOT = { has_faction = totalitarian }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_authoritarian_story }
 				}
 				modifier = {
@@ -274,7 +293,7 @@ planet_event = {
 					}
 				}
 				modifier = {
-					factor = 0.35
+					factor = 0.5
 					NOT = {
 						any_owned_pop = {
 							has_ethic = ethic_egalitarian
@@ -283,11 +302,14 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					owner = { NOT = { has_faction = progressive } }
+					owner = {
+						NOT = { has_faction = progressive }
+						count_pop_factions = { count > 2 }
+					}
 				}
 				
 				modifier = {
-					factor = 0.75
+					factor = 0.65
 					owner = { has_country_flag = cc_has_had_egalitarian_story }
 				}
 				modifier = {
@@ -297,7 +319,7 @@ planet_event = {
 				
 				planet_event = { id = cc_colony_events.9 }
 			}
-			1 = { }
+			10 = { }
 		}
 	}
 }
