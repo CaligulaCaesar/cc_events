@@ -81,3 +81,22 @@ dpe_spirmission_killed_xenophobia = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	planet_unrest_mult = 0.5
 }
+
+dpe_spirmission_killed_faction1 = { faction_happiness = -0.1 }
+
+dpe_spirmission_planet_xenos_unwelcome = {
+	pop_ethic_xenophobe_attraction_mult = 2
+	planet_migration_xeno_pull = -0.5
+
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
+}
+
+dpe_spirmission_succeeded_country = { 
+	country_resource_unity_mult = 0.3
+	pop_ethic_spiritualist_attraction_mult = 0.5
+}
+
+dpe_spirmission_succeeded_faction = { faction_happiness = 0.15 }
+
+dpe_spirmission_sent_home_faction = { faction_happiness = -0.1 }

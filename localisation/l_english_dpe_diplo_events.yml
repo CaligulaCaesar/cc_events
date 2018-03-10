@@ -182,9 +182,18 @@ dpe_spiritualist_mission.62.option.A:0 "A shame - all we wanted was your Salvati
 dpe_spiritualist_mission.62.option.B:0 "How dare you."
 
 
+dpe_spiritualist_mission.631.name:0 "Disaster strikes our Mission!"
 dpe_spiritualist_mission.631.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that took place recently at our mission on [dpe_mission_host_planet.GetName]. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed parts of the city and killed even more of our faithful. The [dpe_neighbour.GetName] has officially sent our mission home, even though no members of the mission survived the attack, and they request that we refrain from sending any non-essential personnel to their empire in the foreseeable future."
 dpe_spiritualist_mission.631.A:0 "We should have recalled them earlier."
 dpe_spiritualist_mission.631.B:0 "The [dpe_neighbour.GetSpeciesNamePlural] are to blame for this tragedy!"
+
+#All our efforts to protect the [dpe_missionary_country.GetSpeciesNamePlural] were in vain. The locals near the mission staged a large riot and destroyed much of the area. The missionaries were cornered and killed during the chaos, along with most of their converts. The mission’s building was burnt to the ground. Casualties were also high among law enforcement, military personnel and rioters. We don’t currently have a final number on the death toll, but it is estimated at over 3,000 and still rising. This is truly a national disaster. 
+#They got what they came for. (Xenophobes gain happiness, spiritualists lose happiness, relations take a massive hit, other empires lose relations with the host empire)
+ 
+
+dpe_spirmission_killed_faction1:0 "Missionaries Slaughtered"
+dpe_spirmission_planet_xenos_unwelcome:0 "Xenos Unwelcome"
+dpe_spirmission_planet_xenos_unwelcome_desc:0 "The population has taken matters into its own hands and slaughtered the meddling foreign missionaries that had sought to convert them."
 
 dpe_spirmission_killed_faction:0 "Angry at failure to recall Missionaries"
 dpe_spirmission_killed_opinion:0 "Missionaries Massacred"
@@ -237,6 +246,13 @@ dpe_spiritualist_mission.74.B:0 "We should send them home anyway, just in case."
 
 dpe_spiritualist_mission.75.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
 dpe_spiritualist_mission.75.desc:0 "Dear [root.GetSpeciesNamePlural], we regret to inform you that the [from.GetName] has come to the decision that your missionaries are a disruptive influence. We have therefore ordered them to cease their activities and return home. We hope that you will not take this personally."
+
+
+dpe_spirmission_sent_home_faction:0 "Sent home missionaries"
+
+dpe_spirmission_succeeded_country:0 "Succeessful Mission"
+dpe_spirmission_succeeded_country_desc:0 "The spiritualist movement within the state has been reinvigorated by its success in bringing spiritualist truth one of the state's neighbours. The population now views Spiritualism with renewed enthusiasm."
+dpe_spirmission_succeeded_faction:0 "Succeessful Mission"
 
 
 dpe_spiritualist_mission.9611.name:0 "The Contingency strikes [dpe_mission_host_planet.GetName]!"
@@ -294,7 +310,44 @@ dpe_spiritualist_mission.991.B:0 "They will make good slaves."
 dpe_spiritualist_mission.991.C:0 "They will have to find their new home elsewhere." 
 
 dpe_missionary_planet:0 "Settled Missionaries"
-dpe_missionary_planet_desc:0 "Former missionaries from a fallen neighbour have made this planet their home."
+dpe_missionary_planet_desc:0 "Former missionaries from a neighbour have made this planet their home."
+
+
+
+
+
+ dpe_spiritualist_mission.632.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.633.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.7.B.tooltip:0 "REPLACE_ME"
+ dpe_spiritualist_mission.10.desc.low:0 "REPLACE_ME"
+ dpe_spiritualist_mission.10.desc.mid:0 "REPLACE_ME"
+ dpe_spiritualist_mission.10.desc.high:0 "REPLACE_ME"
+ dpe_spiritualist_mission.10.desc.success:0 "REPLACE_ME"
+ dpe_spiritualist_mission.10.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.11.desc.low:0 "REPLACE_ME"
+ dpe_spiritualist_mission.11.desc.mid:0 "REPLACE_ME"
+ dpe_spiritualist_mission.11.desc.high:0 "REPLACE_ME"
+ dpe_spiritualist_mission.11.desc.success:0 "REPLACE_ME        must end with: apart from a few who intend to remain on [dpe_mission_host_planet.GetName] and continue to guide the [from.GetSpeciesNamePlural], the missionaries are preparing to return home, their work completed."
+ dpe_spiritualist_mission.10.option.continue:0 "Continue the Mission - they are doing valuable work."
+ dpe_spiritualist_mission.10.option.cancel:0 "Bring the Mission - they have done enough."
+ dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
+ dpe_spiritualist_mission.11.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.desc.low:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.desc.mid:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.desc.high:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.option.continue:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.option.cancel:0 "REPLACE_ME"
+ dpe_spiritualist_mission.101.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.desc.low:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.desc.mid:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.desc.high:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.A:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.B:0 "REPLACE_ME"
+ dpe_spiritualist_mission.102.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.1011.name:0 "REPLACE_ME"
+ dpe_spiritualist_mission.1099.A:0 "REPLACE_ME"
+ dpe_spiritualist_mission.1099.B:0 "REPLACE_ME"
+ dpe_spiritualist_mission.1099.name:0 "REPLACE_ME"
 
 
 #Xenophile Mission

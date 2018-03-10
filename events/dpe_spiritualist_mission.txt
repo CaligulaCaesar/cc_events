@@ -2302,7 +2302,7 @@ country_event = {
 	
 	picture = GFX_evt_cc_execution
 	
-	is_triggered_only
+	is_triggered_only = yes
 	
 	immediate = {
 		event_target:dpe_neighbour = {
@@ -2393,6 +2393,103 @@ country_event = {
 						}
 					}
 					count > 0
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_spiritualist_mission.632
+	title = dpe_spiritualist_mission.632.name
+	desc = dpe_spiritualist_mission.632.desc
+	
+	picture = GFX_evt_cc_execution
+	
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = event_target:dpe_neighbour
+					modifier = dpe_spirmission_killed_opinion
+				}
+			}
+		}
+		event_target:dpe_mission_host_planet = {
+			if = {
+				limit = { num_pops > 1 }
+				random_pop = { kill_pop = yes }
+			}
+			remove_modifier = dpe_hosting_spirmission_planet_turbulence
+			add_modifier = {
+				modifier = dpe_spirmission_planet_xenos_unwelcome
+				days = 5400
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					limit = { is_pop_faction_type = traditionalist }
+					count = 1
+				}
+			}
+			random_pop_faction = {
+				limit = { is_pop_faction_type = traditionalist }
+				add_modifier = {
+					modifier = dpe_spirmission_killed_faction1
+					days = 3600
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.633
+	title = dpe_spiritualist_mission.633.name
+	desc = dpe_spiritualist_mission.633.desc
+	
+	picture = GFX_evt_cc_execution
+	
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = event_target:dpe_neighbour
+					modifier = dpe_spirmission_killed_opinion2
+				}
+			}
+		}
+		event_target:dpe_mission_host_planet = {
+			if = {
+				limit = { num_pops > 1 }
+				random_pop = { kill_pop = yes }
+			}
+			remove_modifier = dpe_hosting_spirmission_planet_turbulence
+			add_modifier = {
+				modifier = dpe_spirmission_planet_xenos_unwelcome
+				days = 5400
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					limit = { is_pop_faction_type = traditionalist }
+					count = 1
+				}
+			}
+			random_pop_faction = {
+				limit = { is_pop_faction_type = traditionalist }
+				add_modifier = {
+					modifier = dpe_spirmission_killed_faction1
+					days = 3600
 				}
 			}
 		}
@@ -2827,6 +2924,1042 @@ country_event = {
 }
 
 
+#10 years later events
+
+country_event = {
+	id = dpe_spiritualist_mission.10
+	title = dpe_spiritualist_mission.10.name
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				OR = {
+					count_pop_factions = {
+						limit = { is_pop_faction_type = traditionalist }
+						count = 0
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.10.desc.low
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.08
+						}
+						count = 1
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.18
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.10.desc.mid
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.18
+						}
+						count = 1
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.10.desc.high
+	}
+	desc = {
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.10.desc.success
+	}
+	picture = GFX_evt_cc_priesthood
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_spiritualist_mission.10.option.continue
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+
+		hidden_effect = { country_event = { id = dpe_spiritualist_mission.101 } }
+	}
+
+	option = {
+		name = dpe_spiritualist_mission.10.option.cancel
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				remove_relation_flag = {
+					flag = dpe_spiritualist_mission_received
+					who = root
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_spirmission_obstructing
+						}
+					}
+					remove_relation_flag = {
+						who = root
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_minor_mission }
+					remove_modifier = dpe_spirmission_minor_mission
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_major_mission }
+					remove_modifier = dpe_spirmission_major_mission
+				}
+				country_event = { id = dpe_spiritualist_mission.102 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2.5
+				opinion = {
+					who = from
+					value < -25
+				}
+			}
+			modifier = {
+				factor = 2.5
+				opinion = {
+					who = from
+					value < -50
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_spiritualist_mission.10.option.success
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		add_opinion_modifier = {
+			who = from
+			modifier = dpe_spirmission_succeeded
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_spirmission_succeeded
+			}
+		}
+
+		add_modifier = {
+			modifier = dpe_spirmission_succeeded_country
+			days = 3600
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = {
+				modifier = dpe_spirmission_succeeded_faction
+				days = 3600
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				remove_relation_flag = {
+					flag = dpe_spiritualist_mission_received
+					who = root
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_spirmission_obstructing
+						}
+					}
+					remove_relation_flag = {
+						who = root
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_minor_mission }
+					remove_modifier = dpe_spirmission_minor_mission
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_major_mission }
+					remove_modifier = dpe_spirmission_major_mission
+				}
+				country_event = { id = dpe_spiritualist_mission.1099 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.11
+	title = dpe_spiritualist_mission.11.name
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				OR = {
+					count_pop_factions = {
+						limit = { is_pop_faction_type = traditionalist }
+						count = 0
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.11.desc.low
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.08
+						}
+						count = 1
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.18
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.11.desc.mid
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.18
+						}
+						count = 1
+					}
+				}
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+					}
+					count = 1
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.11.desc.high
+	}
+	desc = {
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		text = dpe_spiritualist_mission.11.desc.success
+	}
+	picture = GFX_evt_cc_priesthood
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = root
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_spiritualist_mission.10.option.continue
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+
+		hidden_effect = { country_event = { id = dpe_spiritualist_mission.101 } }
+	}
+
+	option = {
+		name = dpe_spiritualist_mission.10.option.cancel
+		trigger = {
+			from = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				remove_relation_flag = {
+					flag = dpe_spiritualist_mission_received
+					who = root
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_spirmission_obstructing
+						}
+					}
+					remove_relation_flag = {
+						who = root
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_minor_mission }
+					remove_modifier = dpe_spirmission_minor_mission
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_major_mission }
+					remove_modifier = dpe_spirmission_major_mission
+				}
+				event_target:dpe_mission_host_planet = {
+					remove_modifier = dpe_hosting_spiritualist_mission_planet
+					remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+				}
+				country_event = { id = dpe_spiritualist_mission.102 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2.5
+				opinion = {
+					who = from
+					value < -25
+				}
+			}
+			modifier = {
+				factor = 2.5
+				opinion = {
+					who = from
+					value < -50
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_spiritualist_mission.10.option.success
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		add_opinion_modifier = {
+			who = from
+			modifier = dpe_spirmission_succeeded
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_spirmission_succeeded
+			}
+		}
+
+		add_modifier = {
+			modifier = dpe_spirmission_succeeded_country
+			days = 3600
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = {
+				modifier = dpe_spirmission_succeeded_faction
+				days = 3600
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				remove_relation_flag = {
+					flag = dpe_spiritualist_mission_received
+					who = root
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_spirmission_obstructing
+						}
+					}
+					remove_relation_flag = {
+						who = root
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_minor_mission }
+					remove_modifier = dpe_spirmission_minor_mission
+				}
+				if = {
+					limit = { has_modifier = dpe_spirmission_major_mission }
+					remove_modifier = dpe_spirmission_major_mission
+				}
+				event_target:dpe_mission_host_planet = {
+					remove_modifier = dpe_hosting_spiritualist_mission_planet
+					remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+				}
+				country_event = { id = dpe_spiritualist_mission.1099 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.101
+	title = dpe_spiritualist_mission.101.name
+	
+	desc = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				count_pop_factions = {
+					limit = { is_pop_faction_type = traditionalist }
+					count = 0
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.101.desc.low
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOT = {
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+					support < 0.18
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.101.desc.mid
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.18
+					}
+					count = 1
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.101.desc.high
+	}
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_spiritualist_mission.101.option.continue
+
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_spiritualist_mission.11 days = 3600 }
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_spiritualist_mission.101.option.cancel
+
+		hidden_effect = {
+			remove_relation_flag = {
+				flag = dpe_spiritualist_mission_received
+				who = from
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_spirmission_obstructing
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = dpe_spirmission_obstructing
+				}
+			}
+			from = {
+				country_event = { id = dpe_spiritualist_mission.1011 days = 5 }
+			}
+			
+			event_target:dpe_mission_host_planet = {
+				remove_planet_flag = dpe_hosting_spiritualist_mission_planet@from
+			}
+		}
+		if = {
+			limit = { has_modifier = dpe_spirmission_minor_mission }
+			remove_modifier = dpe_spirmission_minor_mission
+		}
+		if = {
+			limit = { has_modifier = dpe_spirmission_major_mission }
+			remove_modifier = dpe_spirmission_major_mission
+		}
+		event_target:dpe_mission_host_planet = {
+			remove_modifier = dpe_hosting_spiritualist_mission_planet
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_spirmission_sent_mission_home
+				who = root
+			}
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = {
+				modifier = dpe_spirmission_sent_home_faction
+				days = 1800
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				opinion = {
+					who = from
+					value > 20
+				}
+			}
+			modifier = {
+				factor = 0.75
+				opinion = {
+					who = from
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = from
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = from
+					value < -20
+				}
+			}
+			modifier = {
+				factor = 0.5
+				from = {
+					relative_power = {
+						who = root
+						value = superior
+					}
+				}
+			}
+			modifier = {
+				factor = 0.25
+				from = {
+					relative_power = {
+						who = root
+						value = overwhelming
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						pop_percentage = {
+							limit = { happiness > 0.55 }
+							percentage > 0.75
+						}
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						pop_percentage = {
+							limit = { happiness > 0.6 }
+							percentage > 0.75
+						}
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.15
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = cc_traditionalist_revolt_active
+					has_country_flag = cc_traditionalist_secondary_revolt_active
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.102
+	title = dpe_spiritualist_mission.102.name
+	
+	desc = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				count_pop_factions = {
+					limit = { is_pop_faction_type = traditionalist }
+					count = 0
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.102.desc.low
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOT = {
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
+					}
+					count = 1
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+					support < 0.18
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.102.desc.mid
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support < 0.18
+					}
+					count = 1
+				}
+			}
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = traditionalist
+				}
+				count = 1
+			}
+		}
+		text = dpe_spiritualist_mission.102.desc.high
+	}
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_spiritualist_mission.102.A
+
+		tooltip = {
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			event_target:dpe_mission_host_planet = {
+				remove_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+		}
+	}
+	option = {
+		name = dpe_spiritualist_mission.102.B
+
+		tooltip = {
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			event_target:dpe_mission_host_planet = {
+				remove_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_spiritualist_mission.1011
+	title = dpe_spiritualist_mission.1011.name
+	desc = dpe_spiritualist_mission.1011.desc
+
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = dpe_spiritualist_mission.1099
+	title = dpe_spiritualist_mission.1099.name
+	desc = dpe_spiritualist_mission.1099.desc
+	picture = GFX_evt_cc_priesthood
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_spiritualist_mission.1099.A
+
+		tooltip = {
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			event_target:dpe_mission_host_planet = {
+				remove_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+		}
+
+		event_target:dpe_mission_host_planet = {
+			if = {
+				limit = { free_pop_tiles = 0 }
+				hidden_effect = {
+					if = {
+						limit = {
+							any_pop = {
+								prev = {
+									any_owned_pop = {
+										is_same_species = prevprev
+									}
+								}
+							}
+						}
+						random_pop = {
+							limit = {
+								prev = {
+									any_owned_pop = {
+										is_same_species = prevprev
+									}
+								}
+							}
+							kill_pop = yes
+						}
+						else = {
+							random_pop = {
+								limit = {
+									root = {
+										any_owned_pop = {
+											is_same_species = prevprev
+										}
+									}
+								}
+								kill_pop = yes
+							}
+						}
+					}
+				}
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_spiritualist"			
+				}
+			}
+			add_modifier = {
+				modifier = dpe_missionary_planet
+				days = -1
+			}
+		}
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_ai_personality_behaviour = multispecies }
+			}
+		}
+	}
+	option = {
+		name = dpe_spiritualist_mission.1099.B
+
+		tooltip = {
+			if = {
+				limit = { has_modifier = dpe_spirmission_minor_mission }
+				remove_modifier = dpe_spirmission_minor_mission
+			}
+			if = {
+				limit = { has_modifier = dpe_spirmission_major_mission }
+				remove_modifier = dpe_spirmission_major_mission
+			}
+			event_target:dpe_mission_host_planet = {
+				remove_modifier = dpe_hosting_spiritualist_mission_planet
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+}
+
 #Contingency
 planet_event = {
 	id = dpe_spiritualist_mission.961
@@ -2838,7 +3971,6 @@ planet_event = {
 			limit = { root = { has_planet_flag = dpe_hosting_spiritualist_mission_planet@prev } }
 			
 			country_event = { id = dpe_spiritualist_mission.9611 }
-			
 		}	
 	}
 }
@@ -2877,12 +4009,12 @@ country_event = {
 			if = {
 				limit = {
 					has_relation_flag = {
-						who = from
+						who = root
 						flag = dpe_spirmission_obstructing
 					}
 				}
 				remove_relation_flag = {
-					who = from
+					who = root
 					flag = dpe_spirmission_obstructing
 				}
 			}
@@ -2964,12 +4096,12 @@ country_event = {
 			if = {
 				limit = {
 					has_relation_flag = {
-						who = from
+						who = root
 						flag = dpe_spirmission_obstructing
 					}
 				}
 				remove_relation_flag = {
-					who = from
+					who = root
 					flag = dpe_spirmission_obstructing
 				}
 			}
@@ -3050,12 +4182,12 @@ country_event = {
 			if = {
 				limit = {
 					has_relation_flag = {
-						who = from
+						who = root
 						flag = dpe_spirmission_obstructing
 					}
 				}
 				remove_relation_flag = {
-					who = from
+					who = root
 					flag = dpe_spirmission_obstructing
 				}
 			}
@@ -3142,12 +4274,12 @@ country_event = {
 			if = {
 				limit = {
 					has_relation_flag = {
-						who = from
+						who = root
 						flag = dpe_spirmission_obstructing
 					}
 				}
 				remove_relation_flag = {
-					who = from
+					who = root
 					flag = dpe_spirmission_obstructing
 				}
 			}
@@ -3249,12 +4381,12 @@ country_event = {
 		if = {
 			limit = {
 				has_relation_flag = {
-					who = from
+					who = event_target:dpe_missionary_country
 					flag = dpe_spirmission_obstructing
 				}
 			}
 			remove_relation_flag = {
-				who = from
+				who = event_target:dpe_missionary_country
 				flag = dpe_spirmission_obstructing
 			}
 		}
