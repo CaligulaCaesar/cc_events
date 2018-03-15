@@ -2520,6 +2520,17 @@ planet_event = {
 	}
 	option = {
 		name = cc_cleanup_events.34.A
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}			
+		}
 	}
 }
 
