@@ -5,50 +5,97 @@ namespace = cctest
 country_event = {
 	id = cctest.1
 	
-	hide_window = yes
+	title = OK
+	desc = OK
+	
 	is_triggered_only = yes
 	
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				distance = {
-					min_distance = 0
-					max_distance = 120
-					source = root.capital_scope
-				}
-			}
-			add_modifier = {
-				modifier = cc_religious_centre
-				days = -1
-			}
-		}
-	}
+
 }
 
 
 country_event = {
 	id = cctest.2
 	
+	title = OK
+	desc = OK
+	
+	is_triggered_only = yes
+	
+
+}
+
+
+
+
+#monthly
+country_event = {
+	id = cctest.3
 	hide_window = yes
 	is_triggered_only = yes
 	
-	immediate = {
-		set_variable = { which = cc_test_variable value = 10 }
-		change_variable = { which = cc_test_variable value = 10 }
-		subtract_variable = { which = cc_test_variable value = 5 }
-		change_variable = { which = cc_test_variable value = -7 }
+	trigger = {
+		has_technology = tech_ccrebel_unrest_1
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}				
+		any_neighbor_country = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			NOR = {
+				has_defensive_pact = prev
+				is_in_federation_with = prev
+				opinion = {
+					who = prev
+					value > -50
+				}
+			}
+			their_opinion = {
+				who = prev
+				value < -30
+			}
+		
+			prev = {
+				if = {
+					limit = { exists = overlord }
+					OR = {
+						is_hostile_to = overlord
+						is_disloyal_to = overlord
+						overlord = {
+							NOR = {
+								is_in_federation_with = prevprev
+								has_defensive_pact = prevprev
+							}
+						}
+					}
+				}
+				any_owned_planet = {
+					NOT = { has_planet_flag = cc_su_perf_planet_sowing_unrest }							prevprev = {
+						any_owned_planet = {
+							if = {
+								limit = { prevprevprev = { has_technology = tech_ccrebel_unrest_2 } }
+								distance = {
+									source = prevprev
+									max_distance = 150
+								}
+								else = {
+									distance = {
+										source = prevprev
+										max_distance = 100
+									}
+								}
+							}
+#							is_being_stirred_up = no
+#							any_owned_pop = { has_a_happiness_gauge = yes }
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
-country_event = {
-	id = cctest.3
-	
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		multiply_variable = { which = cc_test_variable value = 10 }
-		divide_variable = { which = cc_test_variable value = 5 }
-	}
-}
 

@@ -269,6 +269,7 @@ country_event = {
 
 	trigger = {
 		is_country_type = default
+		free_leader_slots > 0
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = { has_country_flag = dpe_recent_talent_leader }
 
@@ -277,19 +278,8 @@ country_event = {
 			controller = { is_same_value = root }
 			any_owned_pop = {
 				has_a_happiness_gauge = yes
-				OR = {
-					has_citizenship_type = {
-						type = citizenship_full
-						country = root
-					}
-					AND = {
-						has_citizenship_type = {
-							type = citizenship_caste_system
-							country = root
-						}
-						is_enslaved = no
-					}
-				}
+				has_citizenship_rights = yes
+				is_enslaved = no
 			}
 		}
 	}
@@ -432,6 +422,12 @@ country_event = {
 			}
 			5 = { #Admiral
 				country_event = { id = dpe_smallpos_events.14 }
+				
+				#temporarily disabled until I work out how to make it work
+				modifier = {
+					factor = 0
+					always = yes
+				}
 				modifier = {
 					factor = 1.25
 					has_ethic = ethic_militarist
@@ -497,6 +493,8 @@ country_event = {
 		picture = GFX_evt_physics_research
 		trigger = { has_country_flag = dpe_temp_phy_research }
 	}
+
+	location = event_target:dpe_talent_planet
 
 	is_triggered_only = yes
 
@@ -650,10 +648,10 @@ country_event = {
 		name = dpe_smallpos_events.11.A
 
 		allow = {
-			energy > 200
+			energy > 150
 		}
 		
-		add_energy = -200
+		add_energy = -150
 
 		custom_tooltip = dpe_smallpos_events.11.A.tooltip
 
@@ -750,6 +748,8 @@ country_event = {
 	title = dpe_smallpos_events.12.name
 	desc = dpe_smallpos_events.12.desc
 	picture = GFX_evt_cc_military_ceremony
+
+	location = event_target:dpe_talent_planet
 
 	is_triggered_only = yes
 
@@ -897,10 +897,10 @@ country_event = {
 		name = dpe_smallpos_events.12.A
 
 		allow = {
-			energy > 200
+			energy > 150
 		}
 		
-		add_energy = -200
+		add_energy = -150
 
 		custom_tooltip = dpe_smallpos_events.12.A.tooltip
 
@@ -929,6 +929,8 @@ country_event = {
 	title = dpe_smallpos_events.13.name
 	desc = dpe_smallpos_events.13.desc
 	picture = GFX_evt_cc_throne_room
+
+	location = event_target:dpe_talent_planet
 
 	is_triggered_only = yes
 
@@ -1082,10 +1084,10 @@ country_event = {
 		name = dpe_smallpos_events.13.A
 
 		allow = {
-			energy > 200
+			energy > 150
 		}
 		
-		add_energy = -200
+		add_energy = -150
 
 		custom_tooltip = dpe_smallpos_events.13.A.tooltip
 
@@ -1114,6 +1116,8 @@ country_event = {
 	title = dpe_smallpos_events.14.name
 	desc = dpe_smallpos_events.14.desc
 	picture = GFX_evt_cc_military_ceremony
+
+	location = event_target:dpe_talent_starport
 
 	is_triggered_only = yes
 
@@ -1242,10 +1246,10 @@ country_event = {
 		name = dpe_smallpos_events.14.A
 
 		allow = {
-			energy > 200
+			energy > 150
 		}
 		
-		add_energy = -200
+		add_energy = -150
 
 		custom_tooltip = dpe_smallpos_events.14.A.tooltip
 
