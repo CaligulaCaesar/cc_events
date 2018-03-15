@@ -2502,7 +2502,7 @@ planet_event = {
 	}
 	
 	option = {
-		name = cc_cleanup_events.34.A
+		name = cc_cleanup_events.34.B
 		
 		if = {
 			limit = { has_modifier = cc_xenophobe_institute }
@@ -2517,6 +2517,9 @@ planet_event = {
 			modifier = cc_xenophobes_offended
 			years = 20
 		}
+	}
+	option = {
+		name = cc_cleanup_events.34.A
 	}
 }
 
