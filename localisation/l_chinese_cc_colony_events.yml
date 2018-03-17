@@ -22,8 +22,8 @@ cc_colony_events.21.desc:0 "由于[cc_colony_leader.GetName]被捕，[Root.GetNa
 
 cc_colony_events.22.name:0 "[root.GetName]上的大规模抗议"
 cc_colony_events.22.desc:0 "[cc_colony_leader.GetName]在[Root.GetName]被捕激起了广泛抗议，释放[cc_colony_leader.GetName]的呼声日渐高涨。示威活动开始逐渐掺入了暴力成分，我们的当地官员对控制民众感到力不从心。他们向执政官请求指导处理这一事件。"
-cc_colony_events.22.A:0 "把[cc_colony_leader.GetHimHer]带到[Root.Owner.Capital.GetName]。[cc_colony_leader.GetSheHeCap]将再也不会回到[Root.GetName]。"
-cc_colony_events.22.A.tooltip:0 "这将可能会使民众对[Root.Owner.GetName]的态度产生长久的影响。"
+cc_colony_events.22.A:0 "把[cc_colony_leader.GetHimHer]带到[Root.Owner.Capital.GetName]。"
+cc_colony_events.22.A.tooltip:0 "[cc_colony_leader.GetSheHeCap]将再也不会回到[Root.GetName]。这将可能会使民众对[Root.Owner.GetName]的态度产生长久的影响。"
 cc_colony_events.22.B:0 "释放[cc_colony_leader.GetHimHer]承认[cc_colony_leader.GetHimHer]使节身份。" 
 
 
@@ -59,7 +59,7 @@ cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]的影响会在30年�
 cc_colony_events.251.name:0 "[root.GetName]上的军事学院正式成立"
 cc_colony_events.251.desc:0 "为纪念[cc_colony_leader.GetName]而建的军事学院已经完工了，已故领袖的巨大雕像矗立其中。殖民地民众为此而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]的重要军事中心而声名远播。不仅如此，[root.owner.GetName]境内各地的服役人员和他们的支持者们也感到欢欣鼓舞，将之视为[root.owner.GerRulerTitle]向所有为国效力的将士们进行的致意。"
 
-cc_milacademy_will_be_built:0 "\n军事学院将会在5年后完工。这将会添加以下调整值：§Y$cc_milacademy$§!，granting:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\n军事学院将会在5年后完工。这将会添加以下调整值：§Y$cc_milacademy$§!，granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 cc_founder_militarist:0 "行星使节"
 cc_founder_militarist_desc:0 "这块殖民地由一名退役舰队军官治理，他拥有'使节'的称号。"
@@ -142,8 +142,7 @@ cc_colony_events.334.desc:0 "追踪并猎杀[cc_colony_leader.GetName]的行动�
 
 
 cc_colony_events.34.name:0 "[cc_colony_leader.GetName]声名远播"
-cc_colony_events.34.desc:0 "在过去的15年间，[cc_colony_leader.GetName]已经成为了[Root.GetName]上的领袖人物。[cc_colony_leader.GetSheHe]在民众间深受爱戴，其声望广为传播。[cc_colony_leader.GetSheHe]被[root.owner.GetName]这一地区的所有心向和平的民众视为导师。 事实上,[cc_colony_leader.GetSheHe]正在准备一次星际旅程来拜访自己所有的追随者!
-"
+cc_colony_events.34.desc:0 "在过去的15年间，[cc_colony_leader.GetName]已经成为了[Root.GetName]上的领袖人物。[cc_colony_leader.GetSheHe]在民众间深受爱戴，其声望广为传播。[cc_colony_leader.GetSheHe]被[root.owner.GetName]这一地区的所有心向和平的民众视为导师。 事实上,[cc_colony_leader.GetSheHe]正在准备一次星际旅程来拜访自己所有的追随者!"
 
 cc_colony_events.341.name:0 "[cc_colony_leader.GetName]的星际旅程圆满结束"
 cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]已经完成了对自己所在星区的跨星球访问。[cc_colony_leader.GetHisHerCap]追随者们为亲身看到、聆听[cc_colony_leader.GetSpeciesName]伟大思想家的机会而激动不已,并深受其光辉事迹的激励。[cc_colony_leader.GetName]的声望达到新高度。"
@@ -159,8 +158,7 @@ cc_colony_events.343.name:0 "[root.GetName]上的纪念碑揭幕"
 cc_colony_events.343.desc:0 "为纪念[cc_colony_leader.GetName]而建的纪念碑已经完工。其揭幕仪式吸引了大批观众，[cc_colony_leader.GetHisHer]追随者们从各个星球赶来躬逢盛事。 我们相信它会成为[root.owner.GetName]及其他星球上和平主义者的公众地标。"
 
 cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
-cc_colony_events.35.desc:0 "[cc_colony_leader.GetName]于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]上的民众陷入悲伤，并要求我们为[cc_colony_leader.GetHisHer]设立一座纪念碑，以缅怀[cc_colony_leader.GetSheHe]的一生及其教导。
-"
+cc_colony_events.35.desc:0 "[cc_colony_leader.GetName]于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]上的民众陷入悲伤，并要求我们为[cc_colony_leader.GetHisHer]设立一座纪念碑，以缅怀[cc_colony_leader.GetSheHe]的一生及其教导。"
 cc_colony_events.35.A:0 "为这位模范公民建立一座纪念碑。"
 cc_colony_events.35.B:0 "花费太高了。"
 cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap]只是个麻烦人物。希望[cc_colony_leader.GetHisHer]的影响尽快消散。"
@@ -467,10 +465,8 @@ cc_hostile_towards_xenos:0 "敌视外星人"
 #Spiritualists
 
 cc_colony_events.6.name:0 "Spiritualist Guru influential on[root.GetName]"
-cc_colony_events.6.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为“长老” ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。幸运的是,[cc_colony_leader.GetSheHe]十分注重使自己的活动不被视为企图颠覆当地政府，总是在作重要决定前寻求地方官员的意见。作为回报，他们对[cc_colony_leader.GetHisHer]教导及倡议赞赏有加，并建议将[cc_colony_leader.GetHimHer]纳入当地核心决策层。
-"
-cc_colony_events.6.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为“长老” ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。到目前为止，[cc_colony_leader.GetSheHe]还没有将其权威用于反对[root.owner.GetName]--的确,[cc_colony_leader.GetSheHe]一直与我们的当地政府合作良好– 但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导人颇有不同。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?
-"
+cc_colony_events.6.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为“长老” ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。幸运的是,[cc_colony_leader.GetSheHe]十分注重使自己的活动不被视为企图颠覆当地政府，总是在作重要决定前寻求地方官员的意见。作为回报，他们对[cc_colony_leader.GetHisHer]教导及倡议赞赏有加，并建议将[cc_colony_leader.GetHimHer]纳入当地核心决策层。"
+cc_colony_events.6.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为“长老” ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。到目前为止，[cc_colony_leader.GetSheHe]还没有将其权威用于反对[root.owner.GetName]--的确,[cc_colony_leader.GetSheHe]一直与我们的当地政府合作良好– 但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导人颇有不同。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?"
 cc_colony_events.6.desc.neg:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为“长老” ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。[cc_colony_leader.GetSheHe]将自己新获的权威用于实践其与[root.owner.GetName]主流相去甚远的理念，被我们的当地官员称为“麻烦人物”。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?"
 
 cc_colony_events.6.B:0 "$cc_colony_events.3.B$"
@@ -898,7 +894,7 @@ cc_cleanup_events.23.desc:0 "[root.GetName]上的军事学院已经完工，已�
 
 cc_cleanup_events.24.name:0 "[root.GetName]上的军事学院"
 cc_cleanup_events.24.desc:0 "[root.GetName]的前任政权之前正在当地建设一座宏伟的军事学院。此地的军国主义组织影响广泛，如果学院完工，就将成为其中心。我们应该继续其建造吗？"
-cc_cleanup_events.24.tooltip:0 "\n完工后，军事学院会添加调整值§Y$cc_milacademy$§!，给予:\n$MOD_PLANET_FORTIFICATION_STRENGTH$: §G+75%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\n完工后，军事学院会添加调整值§Y$cc_milacademy$§!，给予:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 
