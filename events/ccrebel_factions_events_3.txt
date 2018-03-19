@@ -2467,6 +2467,8 @@ country_event = {
 				flag = random
 				effect = {
 
+					save_event_target_as = cc_breakaway_country
+
 					event_target:cc_rebel_faction_capital = {
 						if = {
 							limit = { has_modifier = cc_faction_acute_unrest }
@@ -2480,7 +2482,7 @@ country_event = {
 						
 						solar_system = {
 							starbase = {
-								set_owner = prevprevprev
+								set_owner = event_target:cc_breakaway_country
 							}
 							add_claims = {
 								who = root
@@ -2493,27 +2495,42 @@ country_event = {
 									owner = { is_same_value = root }
 									any_owned_ship = { is_ship_class = shipclass_military_station }
 								}
-								set_owner = prevprevprev
+								set_owner = event_target:cc_breakaway_country
 							}
-						}
-						#Give them two nearby systems (without planets)
-						closest_system = {
-							max_steps = 1
-							limit = {
-								exists = owner
-								owner = { is_same_value = root }
-								has_owner = no
+							
+							#Give them two nearby systems (without planets)
+							closest_system = {
+								min_steps = 1
+								max_steps = 1
+								limit = {
+									is_within_borders_of = root
+									starbase = { has_starbase_size = starbase_outpost }
+									NOT = { any_planet = { is_colony = yes } }
+								}
+								starbase = { set_owner = event_target:cc_breakaway_country }
+								
+								add_claims = {
+									who = root
+									num_of_claims = 1
+									show_notification = no
+								}
 							}
-							starbase = { set_owner = prevprev }
-						}
-						closest_system = {
-							max_steps = 1
-							limit = {
-								exists = owner
-								owner = { is_same_value = root }
-								has_owner = no
+							closest_system = {
+								min_steps = 1
+								max_steps = 1
+								limit = {
+									is_within_borders_of = root
+									starbase = { has_starbase_size = starbase_outpost }
+									NOT = { any_planet = { is_colony = yes } }
+								}
+								starbase = { set_owner = event_target:cc_breakaway_country }
+								
+								add_claims = {
+									who = root
+									num_of_claims = 1
+									show_notification = no
+								}
 							}
-							starbase = { set_owner = prevprev }
 						}
 
 	
@@ -2794,7 +2811,6 @@ country_event = {
 					set_name = random
 						
 				
-					save_event_target_as = cc_breakaway_country
 							
 					set_timed_relation_flag = {
 						who = root
@@ -3748,20 +3764,20 @@ planet_event = {
 	}
 	
 	immediate = {
-	
+		owner = { save_event_target_as = dpe_former_owner }
 		solar_system = {
 			starbase = {
 				set_owner = event_target:cc_breakaway_country
 			}
 			add_claims = {
-				who = root.owner
+				who = event_target:dpe_former_owner
 				num_of_claims = 1
 				show_notification = no
 			}
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
-					owner = { is_same_value = root.owner }
+					owner = { is_same_value = event_target:dpe_former_owner }
 					any_owned_ship = { is_ship_class = shipclass_military_station }
 				}
 				set_owner = event_target:cc_breakaway_country
@@ -3770,14 +3786,23 @@ planet_event = {
 	
 	
 		#Give them a nearby system (without planets)
-		closest_system = {
-			max_steps = 1
-			limit = {
-				exists = owner
-				owner = { is_same_value = root.owner }
-				has_owner = no
+		solar_system = {
+			closest_system = {
+				min_steps = 1
+				max_steps = 1
+				limit = {
+					is_within_borders_of = event_target:dpe_former_owner
+					starbase = { has_starbase_size = starbase_outpost }
+					NOT = { any_planet = { is_colony = yes } }
+				}
+				starbase = { set_owner = event_target:cc_breakaway_country }
+				
+				add_claims = {
+					who = event_target:dpe_former_owner
+					num_of_claims = 1
+					show_notification = no
+				}
 			}
-			starbase = { set_owner = event_target:cc_breakaway_country }
 		}
 
 
@@ -4184,23 +4209,42 @@ country_event = {
 			from.owner = {
 				country_event = { id = ccfaction.631 days = 1 }
 			}
-			closest_system = {
-				max_steps = 1
-				limit = {
-					exists = owner
-					owner = { is_same_value = from.owner }
-					has_owner = no
+			from = {
+				solar_system = {
+					closest_system = {
+						min_steps = 1
+						max_steps = 1
+						limit = {
+							is_within_borders_of = root.owner
+							starbase = { has_starbase_size = starbase_outpost }
+							NOT = { any_planet = { is_colony = yes } }
+						}
+						starbase = { set_owner = root }
+						
+						add_claims = {
+							who = from.owner
+							num_of_claims = 1
+							show_notification = no
+						}
+					}
+
+					closest_system = {
+						min_steps = 1
+						max_steps = 1
+						limit = {
+							is_within_borders_of = from.owner
+							starbase = { has_starbase_size = starbase_outpost }
+							NOT = { any_planet = { is_colony = yes } }
+						}
+						starbase = { set_owner = root }
+					
+						add_claims = {
+							who = from.owner
+							num_of_claims = 1
+							show_notification = no
+						}
+					}
 				}
-				starbase = { set_owner = root }
-			}
-			closest_system = {
-				max_steps = 1
-				limit = {
-					exists = owner
-					owner = { is_same_value = from.owner }
-					has_owner = no
-				}
-				starbase = { set_owner = root }
 			}
 		}
 	}
@@ -4336,14 +4380,26 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
-			closest_system = {
-				max_steps = 1
-				limit = {
-					exists = owner
-					owner = { is_same_value = from.owner }
-					has_owner = no
+
+			from = {
+				solar_system = {
+					closest_system = {
+						min_steps = 1
+						max_steps = 1
+						limit = {
+							is_within_borders_of = root.owner
+							starbase = { has_starbase_size = starbase_outpost }
+							NOT = { any_planet = { is_colony = yes } }
+						}
+						starbase = { set_owner = root }
+						
+						add_claims = {
+							who = from.owner
+							num_of_claims = 1
+							show_notification = no
+						}
+					}
 				}
-				starbase = { set_owner = root }
 			}
 		}
 	}

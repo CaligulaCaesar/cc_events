@@ -427,7 +427,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { has_ai_personality_behavior = multispecies }
+				NOT = { has_ai_personality_behaviour = multispecies }
 			}
 			modifier = {
 				factor = 0.33
@@ -580,9 +580,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOR = {
-					has_ai_personality_behavior = conqueror
-					has_ai_personality_behavior = slaver
-					has_ai_personality_behavior = purger
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = slaver
+					has_ai_personality_behaviour = purger
 				}
 			}
 			modifier = {
