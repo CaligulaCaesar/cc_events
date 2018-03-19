@@ -21,8 +21,8 @@ leader_trait_dpe_talented = {
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_medal.dds"
 	self_modifier = {
-		species_leader_exp_gain = 0.1
-		leader_skill_levels = 2
+		species_leader_exp_gain = 0.25
+#		leader_skill_levels = 2
 	}
 	leader_potential_add = {
 		NOT = { leader_class = ruler}
@@ -30,9 +30,12 @@ leader_trait_dpe_talented = {
 		
 	}
 	leader_class = { admiral scientist general governor }
-	opposites = { "leader_trait_stubborn" "leader_trait_arrested_development" }
+	opposites = { "leader_trait_stubborn" "leader_trait_adaptable" "leader_trait_arrested_development" }
 	leader_trait = yes
 	
+	initial = no
+	randomized = no
+
 	ai_categories = {
 		engineering
 		physics

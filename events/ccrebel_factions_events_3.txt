@@ -2498,7 +2498,7 @@ country_event = {
 						}
 						#Give them two nearby systems (without planets)
 						closest_system = {
-							max_steps = 2
+							max_steps = 1
 							limit = {
 								exists = owner
 								owner = { is_same_value = root }
@@ -2507,7 +2507,7 @@ country_event = {
 							starbase = { set_owner = prevprev }
 						}
 						closest_system = {
-							max_steps = 2
+							max_steps = 1
 							limit = {
 								exists = owner
 								owner = { is_same_value = root }
@@ -3771,7 +3771,7 @@ planet_event = {
 	
 		#Give them a nearby system (without planets)
 		closest_system = {
-			max_steps = 2
+			max_steps = 1
 			limit = {
 				exists = owner
 				owner = { is_same_value = root.owner }
@@ -4184,6 +4184,24 @@ country_event = {
 			from.owner = {
 				country_event = { id = ccfaction.631 days = 1 }
 			}
+			closest_system = {
+				max_steps = 1
+				limit = {
+					exists = owner
+					owner = { is_same_value = from.owner }
+					has_owner = no
+				}
+				starbase = { set_owner = root }
+			}
+			closest_system = {
+				max_steps = 1
+				limit = {
+					exists = owner
+					owner = { is_same_value = from.owner }
+					has_owner = no
+				}
+				starbase = { set_owner = root }
+			}
 		}
 	}
 }
@@ -4315,7 +4333,19 @@ country_event = {
 			event_target:cc_breakaway_country = {
 				country_event = { id = ccfaction.69 days = 5 }
 			}
-		}	
+		}
+		if = {
+			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
+			closest_system = {
+				max_steps = 1
+				limit = {
+					exists = owner
+					owner = { is_same_value = from.owner }
+					has_owner = no
+				}
+				starbase = { set_owner = root }
+			}
+		}
 	}
 }
 

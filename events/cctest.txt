@@ -4,98 +4,33 @@ namespace = cctest
 
 country_event = {
 	id = cctest.1
-	
-	title = OK
-	desc = OK
-	
+	hide_window = yes
 	is_triggered_only = yes
 	
-
+	immediate = {
+	}
 }
 
 
-country_event = {
-	id = cctest.2
-	
-	title = OK
-	desc = OK
-	
-	is_triggered_only = yes
-	
-
-}
-
-
-
-
-#monthly
 country_event = {
 	id = cctest.3
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = {
-		has_technology = tech_ccrebel_unrest_1
-		OR = {
-			is_country_type = default
-			is_country_type = awakened_fallen_empire
-		}				
-		any_neighbor_country = {
-			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-			}
-			NOR = {
-				has_defensive_pact = prev
-				is_in_federation_with = prev
-				opinion = {
-					who = prev
-					value > -50
-				}
-			}
-			their_opinion = {
-				who = prev
-				value < -30
-			}
-		
-			prev = {
-				if = {
-					limit = { exists = overlord }
-					OR = {
-						is_hostile_to = overlord
-						is_disloyal_to = overlord
-						overlord = {
-							NOR = {
-								is_in_federation_with = prevprev
-								has_defensive_pact = prevprev
-							}
-						}
+	immediate = {
+		random_system_within_border = {
+			random_fleet_in_system = {
+				limit = {
+					any_owned_ship = {
+						is_ship_class = shipclass_starbase
 					}
 				}
-				any_owned_planet = {
-					NOT = { has_planet_flag = cc_su_perf_planet_sowing_unrest }							prevprev = {
-						any_owned_planet = {
-							if = {
-								limit = { prevprevprev = { has_technology = tech_ccrebel_unrest_2 } }
-								distance = {
-									source = prevprev
-									max_distance = 150
-								}
-								else = {
-									distance = {
-										source = prevprev
-										max_distance = 100
-									}
-								}
-							}
-#							is_being_stirred_up = no
-#							any_owned_pop = { has_a_happiness_gauge = yes }
-						}
-					}
+				add_modifier = {
+					modifier = dpe_starbase_talented_admiral
+					days = 10800
 				}
 			}
 		}
 	}
 }
-
 

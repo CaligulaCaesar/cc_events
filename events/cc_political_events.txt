@@ -142,10 +142,6 @@ country_event = {
 		name = cc_events_mod.1.A
 		custom_tooltip = cc_events_mod.1.A.tooltip
 		default_hide_option = yes
-		trigger = {
-			has_authority = auth_democratic
-			has_authority = auth_oligarchic
-		}
 		hidden_effect = {
 			kill_leader = { type = ruler show_notification = no }
 		}
@@ -164,6 +160,7 @@ country_event = {
 				OR = {
 					has_ethic = ethic_fanatic_xenophobe
 					has_ethic = ethic_xenophobe
+					has_authority = auth_dictatorial
 				}
 			}
 		}

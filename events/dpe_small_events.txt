@@ -423,11 +423,6 @@ country_event = {
 			5 = { #Admiral
 				country_event = { id = dpe_smallpos_events.14 }
 				
-				#temporarily disabled until I work out how to make it work
-				modifier = {
-					factor = 0
-					always = yes
-				}
 				modifier = {
 					factor = 1.25
 					has_ethic = ethic_militarist
@@ -595,7 +590,7 @@ country_event = {
 				type = scientist
 				species = root
 				name = random
-				skill = 3
+				skill = 2
 				traits = {
 					trait = leader_trait_dpe_talented
 				}
@@ -626,7 +621,7 @@ country_event = {
 					type = scientist
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
-					skill = 3
+					skill = 2
 					traits = {
 						trait = leader_trait_dpe_talented
 					}
@@ -850,7 +845,7 @@ country_event = {
 				type = general
 				species = root
 				name = random
-				skill = 3
+				skill = 2
 				traits = {
 					trait = leader_trait_dpe_talented
 					trait = leader_trait_charismatic
@@ -882,7 +877,7 @@ country_event = {
 					type = general
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
-					skill = 3
+					skill = 2
 					traits = {
 						trait = leader_trait_dpe_talented
 						trait = leader_trait_charismatic
@@ -1037,7 +1032,7 @@ country_event = {
 				type = governor
 				species = root
 				name = random
-				skill = 3
+				skill = 2
 				traits = {
 					trait = leader_trait_dpe_talented
 					trait = leader_trait_intellectual
@@ -1069,7 +1064,7 @@ country_event = {
 					type = governor
 					species = event_target:dpe_talent_leader_pop.species
 					name = random
-					skill = 3
+					skill = 2
 					traits = {
 						trait = leader_trait_dpe_talented
 						trait = leader_trait_intellectual
@@ -1117,7 +1112,7 @@ country_event = {
 	desc = dpe_smallpos_events.14.desc
 	picture = GFX_evt_cc_military_ceremony
 
-	location = event_target:dpe_talent_starport
+	location = event_target:dpe_talent_starport_system
 
 	is_triggered_only = yes
 
@@ -1173,7 +1168,7 @@ country_event = {
 						}
 					}
 				}
-				starbase = { save_event_target_as = dpe_talent_starport }
+				save_event_target_as = dpe_talent_starport_system
 				set_timed_star_flag = {
 					flag = dpe_recent_talent_starbase
 					years = 50
@@ -1205,7 +1200,7 @@ country_event = {
 							
 							NOT = { has_star_flag = dpe_recent_talent_starbase }
 						}
-						starbase = { save_event_target_as = dpe_talent_starport }
+						save_event_target_as = dpe_talent_starport_system
 						set_timed_star_flag = {
 							flag = dpe_recent_talent_starbase
 							years = 50
@@ -1219,7 +1214,7 @@ country_event = {
 								}
 								NOT = { has_star_flag = dpe_recent_talent_starbase }
 							}
-							starbase = { save_event_target_as = dpe_talent_starport }
+							save_event_target_as = dpe_talent_starport_system
 							set_timed_star_flag = {
 								flag = dpe_recent_talent_starbase
 								years = 50
@@ -1233,7 +1228,7 @@ country_event = {
 			type = admiral
 			species = event_target:dpe_talent_leader_pop.species
 			name = random
-			skill = 3
+			skill = 2
 			traits = {
 				trait = leader_trait_dpe_talented
 				trait = leader_trait_aggressive
@@ -1265,7 +1260,7 @@ country_event = {
 
 		random_system_within_border = {
 			limit = {
-				starbase = { is_same_value = event_target:dpe_talent_starport }
+				is_same_value = event_target:dpe_talent_starport_system
 			}
 			random_fleet_in_system = {
 				limit = {
@@ -1273,11 +1268,9 @@ country_event = {
 						is_ship_class = shipclass_starbase
 					}
 				}
-				random_owned_ship = {
-					add_modifier = {
-						modifier = dpe_starbase_talented_admiral
-						days = 10800
-					}
+				add_modifier = {
+					modifier = dpe_starbase_talented_admiral
+					days = 10800
 				}
 			}
 		}

@@ -3,24 +3,24 @@
 cc_opinion_outrage_at_plans_to_conquer = {
 	opinion = {
 		base = -125
-	}
-	modifier = {
-		add = -50
-		OR = {
-			is_rival = from
-			is_hostile_to = from
+		modifier = {
+			add = -50
+			OR = {
+				is_rival = from
+				is_hostile_to = from
+			}
 		}
-	}
-	modifier = {
-		add = 75
-		OR = {
-			has_defensive_pact = from
-			is_in_federation_with = from
+		modifier = {
+			add = 75
+			OR = {
+				has_defensive_pact = from
+				is_in_federation_with = from
+			}
 		}
-	}
-	modifier = {
-		add = 50
-		has_non_aggression_pact = from
+		modifier = {
+			add = 50
+			has_non_aggression_pact = from
+		}
 	}
 	decay = {
 		base = 5
@@ -135,7 +135,7 @@ dpe_spiritualist_mission_hive_listened = {
 	accumulative = no
 	
 	decay = {
-		base = 3
+		base = 2
 	}
 }
 
@@ -147,7 +147,7 @@ dpe_spiritualist_mission_hive_listened1 = {
 	accumulative = no
 	
 	decay = {
-		base = 3
+		base = 2
 	}
 }
 
@@ -159,7 +159,7 @@ dpe_spiritualist_mission_accepted_mission = {
 	accumulative = no
 	
 	decay = {
-		base = 3
+		base = 2
 	}
 }
 
@@ -200,7 +200,7 @@ dpe_spirmission_deceived = {
 	accumulative = no
 	
 	decay = {
-		base = 3
+		base = 2
 	}
 }
 
@@ -235,4 +235,22 @@ dpe_spirmission_succeeded = {
 		base = 20
 	}
 	unique = yes
+}
+
+dpe_xenophile_mission_opinion = {
+	opinion = {
+		base = 20
+	}
+	decay = {
+		base = 1
+	}
+}
+
+dpe_rejected_xenophile_mission_opinion = {
+	opinion = {
+		base = -20
+	}
+	decay = {
+		base = 1
+	}
 }

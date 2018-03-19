@@ -103,7 +103,7 @@ dpe_planet_talented_governor_desc:0 "This planet benefits from the services of a
 
 
 dpe_smallpos_events.14.name:0 "Talented Naval Officer Uncovered"
-dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], the naval officer in charge of [dpe_talent_starport.GetName], has impressed visiting [root.GetSpeciesAdj] Navy Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made an Admiral of the Fleet."
+dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], the naval officer in charge of [dpe_talent_starport_system.GetName] Starbase, has impressed visiting [root.GetSpeciesAdj] Navy Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made an Admiral of the Fleet."
 dpe_smallpos_events.14.A:0 "Hire [dpe_talent_leader.GetHimHer]."
 dpe_smallpos_events.14.A.tooltip:0 "[dpe_talent_leader.GetName], a level 3 admiral with the traits $leader_trait_dpe_talented$ and $leader_trait_aggressive$, is added to the leader pool."
 dpe_smallpos_events.14.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] of more use where [dpe_talent_leader.GetSheHe] [dpe_talent_leader.GetIsAre]."
@@ -161,3 +161,14 @@ cc_militarist_influence1_desc:0 "This planet is influenced by the memory of a re
 
 leader_trait_dpe_talented:0 "Talented"
 leader_trait_dpe_talented_desc:0 "This leader has the natural ability to become a true master of their field."
+
+
+
+
+dpe_leader.1.desc:0 "In the recent battle that took place in the [system.GetName] system, [officer.GetName], the Captain of the [ship.GetName], impressed Admiral [dpe_admiral.GetName] so much that [dpe_admiral.GetSheHe] [dpe_admiral.GetIsAre] officially requesting [officer.GetSheHe] get a promotion. If you believe that we have a use for an additional admiral, we will promote Captain [officer.GetHimHer] immediately. What are your orders?"
+dpe_leader.2.desc:0 "In the recent battle, the lack of a high command presence allowed lower commanders to distinguish themselves: The Captain of the [ship.GetName], [officer.GetName], took up the responsibility and successfully led us in battle. Recognising [officer.GetHisHer] obvious qualities, many within the upper ranks of our military are calling for Captain [officer.GetName]'s promotion. Should we promote [officer.GetHimHer]?"
+dpe_leader.1.A:0 "Excellent, promote [officer.GetHimHer]."
+dpe_leader.1.A.tooltip:0 "A level 2 admiral is added to the leader pool."
+dpe_leader.1.B:0 "We have enough commanders already."
+dpe_talented_captain:0 "Skilled Captain"
+

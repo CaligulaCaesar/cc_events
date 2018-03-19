@@ -2525,9 +2525,11 @@ planet_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
+				owner = {
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}			
 		}
