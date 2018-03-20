@@ -44,9 +44,9 @@ cc_events_mod.4.A:0 "愿[root.Leader.GetHisHer]统治长青!"
 cc_events_mod.4.B:0 "[root.GetRulerTitle] [root.GetRulerName]即是神祗!"
 
 cc_events_mod.6.name:0 "是否应该允许统治者崇拜延续？ "
-cc_events_mod.6.desc:0 "[root.GetRulerTitle] [cc_ruler_culted_ruler.GetName]备受爱戴，因其伟大功绩而被尊奉为神。[cc_ruler_culted_ruler.GetHisHer]继承人[root.GetRulerName]还未赢得如此威望，任何自我神化的举动都可能会冒犯精神主义民众。然而有一些声音认为，位列神明应被视作[root.Leader.GetHisHer]与生俱来的权利，因此应被永久承认。我们应采取何种立场?"
+cc_events_mod.6.desc:0 "[root.GetRulerTitle] [cc_ruler_culted_ruler.GetName]备受爱戴，因其伟大功绩而被尊奉为神。[cc_ruler_culted_ruler.GetHisHer]继承人[root.GetRulerName]还未赢得如此威望，任何自我神化的举动都可能会冒犯唯心主义民众。然而有一些声音认为，位列神明应被视作[root.Leader.GetHisHer]与生俱来的权利，因此应被永久承认。我们应采取何种立场?"
 cc_events_mod.6.A:0 "神位是[root.GetRulerName]的血统权利!"
-cc_events_mod.6.A.desc:0 "只要我们采取§YImperial§! 政体，统治者崇拜就将永存。\n\n精神主义派系遭受 §R-15%§! 幸福度，持续5年"
+cc_events_mod.6.A.desc:0 "只要我们采取§YImperial§! 政体，统治者崇拜就将永存。\n\n唯心主义派系遭受 §R-15%§! 幸福度，持续5年"
 cc_events_mod.6.B:0 "统治者崇拜必须被终结！ "
 
 
@@ -103,7 +103,7 @@ cc_events_blackmail.202.desc:0 "[root.GetName]上的民众对执法机关下手�
 cc_events_blackmail.202.option:0 "我们必须采取改善措施！ "
 
 cc_events_blackmail.203.name:0 "神职人员腐败丑闻！"
-cc_events_blackmail.203.desc:0 "黑客泄露了大量数据，将[root.GetSpeciesAdj]神职阶层的严重腐败丑闻曝光。看来许多重要神职人员一直以来都在滥用职权，中饱私囊，还向自己本应忠心服务的民众索取好处（包括要求肉身侍奉的事例）。不论是否信奉精神主义，各地民众都对此义愤填膺。"
+cc_events_blackmail.203.desc:0 "黑客泄露了大量数据，将[root.GetSpeciesAdj]神职阶层的严重腐败丑闻曝光。看来许多重要神职人员一直以来都在滥用职权，中饱私囊，还向自己本应忠心服务的民众索取好处（包括要求肉身侍奉的事例）。不论是否信奉唯心主义，各地民众都对此义愤填膺。"
 
 cc_events_blackmail.204.name:0 "银河制霸计划泄露！ "
 cc_events_blackmail.204.desc:0 "黑客曝光了政府与数个邻邦开战的秘密计划，目标直指征服别国星球，成为银河武力主宰。数家此前与我们并无过节的友邦也被列为目标。被涉及的国家戒惧震愤，多名大使纷纷要求我们立刻作出解释。未来很多年内我们都将难以与它们建立积极的外交关系。"
@@ -154,8 +154,8 @@ cc_emancipation.6.D.tooltip:0 "所有奴隶解放运动支持者都将被清洗�
 cc_emancipation.20.name:0 "奴隶制遭受道德质疑"
 cc_emancipation.20.desc.breakaways:0 "[breakaway_slaves.GetName]上的反叛在[root.GetSpeciesAdj]部分民众间激起了担忧，各个[breakaway_slaves.GetSpeciesAdj]星球上的前奴隶主们遭遇的可怕报复尤为令人心惊，使人怀疑奴隶制是否还能延续。与此同时， [breakaway_slaves.GetSpeciesAdj]的宣传攻势则大肆渲染奴隶制的邪恶和奴隶主们惨无人道的暴行，俘获了相当一部分民众的心。一份呼吁废止奴隶制和其他压迫性体制的地下宣言广为流传。尽管当局政府努力阻止其流传并积极追寻源头，还是有越来越多的人开始拥抱这样的理念。"
 cc_emancipation.20.desc.neighbour:0 "由于长期以来与[egalitarian_neighbour.GetName]接触交流，暴露在他们邪恶的宣传攻势之中， [root.GetName]中的部分民众开始重新思考奴隶制的问题。尽管奴隶制无疑是 [root.GetSpeciesAdj]经济体系的重要支柱，越来越多的人开始对此产生道德质疑。完全征服一个智慧生命个体，使之彻底臣服于另一个个体的意志，这种做法究竟是否可以接受？一份呼吁废止奴隶制和其他压迫性体制的地下宣言广为流传。尽管当局政府努力阻止其流传并积极追寻源头，还是有越来越多的人开始拥抱这样的理念。"
-cc_emancipation.20.tooltip.A:0 "三分之一的非奴隶人口£pops 将获得调整值 §R$cc_worried_about_slaves$§! 持续15年时间，给予§R+200%§! $pop_ethic_egalitarian_attraction_mult$。"
-cc_emancipation.20.tooltip.B:0 "四分之一的非奴隶人口£pops 将获得调整值 §R$cc_worried_about_slaves$§! 持续15年时间，给予§R+200%§! $pop_ethic_egalitarian_attraction_mult$。"
+cc_emancipation.20.tooltip.A:0 "三分之一的非奴隶人口£pops 将获得调整值 §R$cc_worried_about_slaves$§! 持续15年时间，效果：§R+200%§! $pop_ethic_egalitarian_attraction_mult$。"
+cc_emancipation.20.tooltip.B:0 "四分之一的非奴隶人口£pops 将获得调整值 §R$cc_worried_about_slaves$§! 持续15年时间，效果：§R+200%§! $pop_ethic_egalitarian_attraction_mult$。"
 
 
 
@@ -206,9 +206,15 @@ cc_luddite.15.desc:0 "尽管我们先前承诺在[root.GetName]上不再使用�
 cc_luddite.15.option:0 "好吧。"
 
 cc_luddite.20.name:0 "机械劳工引起担忧戒惧"
+<<<<<<< HEAD
+cc_luddite.20.desc.uprising:0 "在[machine_uprising_victims.GetName]发生”机械起义”后，许多公民开始对[root.GetName]中的非智慧机械劳工心怀疑虑。尽管我们的政府已经迅速采取行动，向大家证明[machine_uprising_victims.GetName]上的起义是一次孤例，与[root.GetName]上的情形毫无相似之处，许多人仍然觉得自己的家园就像[machine_uprising_victims.GetSpeciesNamePlural]一样危机四伏。有小部分民众一直以来都对机械劳工心怀芥蒂，称它们将有机人口推向边缘化，将会让大家都变得冗余无用。现在他们抓住了这一舆论风潮，其观点得到了越来越多的大众共鸣。"
+cc_luddite.20.desc.exterminators:0 "与[machine_exterminators.GetName]建立接触后,许多公民开始对[root.GetName]中的非智慧机械劳工心怀疑虑。尽管我们的政府已经迅速采取行动，向大家证明”石心灭绝者帝国”是一个孤例，[root.GetName]上的机器人与之毫无任何相似性，许多人仍然开始认为依赖机械劳工的做法对所有有机物种来说都潜藏着灭顶之灾的危险。有小部分民众一直以来都对机械劳工心怀芥蒂，称它们将有机人口推向边缘化，将会让大家都变得冗余无用。现在他们抓住了这一舆论风潮，其观点得到了越来越多的大众共鸣。"
+cc_luddite.20.tooltip:0 "三分之一非奴隶人口£pops 将获得调整值§R$cc_worried_about_machines$§! 持续15年时间，效果： §R+200% $pop_ethic_spiritualist_attraction_mult$§!."
+=======
 cc_luddite.20.desc.uprising:0 "在[machine_uprising_victims.GetName]发生"机械起义"后，许多公民开始对[root.GetName]中的非智慧机械劳工心怀疑虑。尽管我们的政府已经迅速采取行动，向大家证明[machine_uprising_victims.GetName]上的起义是一次孤例，与[root.GetName]上的情形毫无相似之处，许多人仍然觉得自己的家园就像[machine_uprising_victims.GetSpeciesNamePlural]一样危机四伏。有小部分民众一直以来都对机械劳工心怀芥蒂，称它们将有机人口推向边缘化，将会让大家都变得冗余无用。现在他们抓住了这一舆论风潮，其观点得到了越来越多的大众共鸣。"
 cc_luddite.20.desc.exterminators:0 "与[machine_exterminators.GetName]建立接触后,许多公民开始对[root.GetName]中的非智慧机械劳工心怀疑虑。尽管我们的政府已经迅速采取行动，向大家证明"石心灭绝者帝国"是一个孤例，[root.GetName]上的机器人与之毫无任何相似性，许多人仍然开始认为依赖机械劳工的做法对所有有机物种来说都潜藏着灭顶之灾的危险。有小部分民众一直以来都对机械劳工心怀芥蒂，称它们将有机人口推向边缘化，将会让大家都变得冗余无用。现在他们抓住了这一舆论风潮，其观点得到了越来越多的大众共鸣。"
 cc_luddite.20.tooltip:0 "三分之一非奴隶人口£pops 将获得调整值§R$cc_worried_about_machines$§! 持续15年时间，给予 §R+200% $pop_ethic_spiritualist_attraction_mult$§!."
+>>>>>>> d40ae0e5e9db6c07cd0f701fd6bac40b8476bf05
 
 
 #Peace Protests
