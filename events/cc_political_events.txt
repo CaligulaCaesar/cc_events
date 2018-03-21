@@ -676,6 +676,7 @@ country_event = {
 		
 		NOT = { has_modifier = cc_ruler_cult }
 		NOT = { leader = { has_leader_flag = cc_leader_revered_event } }
+		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 	}
 	
 	immediate = {

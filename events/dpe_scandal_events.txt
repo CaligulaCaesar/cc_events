@@ -299,6 +299,8 @@ country_event = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+
+		NOT = { has_modifier = cc_ruler_cult }
 		
 		exists = ruler
 		ruler = { NOT = { leader_of_faction = traditionalist } }
