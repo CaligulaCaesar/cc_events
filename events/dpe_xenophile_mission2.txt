@@ -753,3 +753,225 @@ country_event = {
 		}
 	}
 }
+
+
+#Mission Established non-originator
+country_event = {
+	id = dpe_xenophile_mission.7
+	title = dpe_xenophile_mission.7.name
+	desc = dpe_xenophile_mission.7.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.71 } }
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.7.A
+		
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_betraying
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.B
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.C
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+}
+#Mission Established originator country
+country_event = {
+	id = dpe_xenophile_mission.71
+	title = dpe_xenophile_mission.7.name
+	desc = dpe_xenophile_mission.7.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		#continuation of main event chain
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_betraying
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_betraying
+						}
+					}
+				}
+			}
+			from = { country_event = { id = dpe_xenophile_mission.72 days = 481 } }
+		}
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.7.A
+		
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_betraying
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.B
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.C
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+}
+
+
+#Gatekeeper: Build rapport or skip that event in the chain. Scope is non-originator
+country_event = {
+	id = dpe_xenophile_mission.72
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = from
+		from = {
+			NOT = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_xenophile_mission_ended
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_tensions
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_tensions
+						}
+					}
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_caught_spying
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_caught_spying
+						}
+					}
+				}
+			}
+			#Rapport built event
+			from = {
+				country_event = { id = dpe_xenophile_mission.73 }
+			}
+		}
+		
+		#End of Chain events
+		from = { country_event = { id = dpe_xenophile_mission.100 days = 3060 } }
+	}
+}
+
+
+#Rapport Built originator
+country_event = {
+	id = dpe_xenophile_mission.73
+	title = dpe_xenophile_mission.73.name
+	desc = dpe_xenophile_mission.73.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.74 } }
+	}
+	
+	option = { name = EXCELLENT }
+}
+
+
+#Rapport Built originator
+country_event = {
+	id = dpe_xenophile_mission.74
+	title = dpe_xenophile_mission.73.name
+	desc = {
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+			}
+		}
+		text = dpe_xenophile_mission.73.desc
+	}
+	
+	desc = { #they still have no idea that we are spying on them
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+		text = dpe_xenophile_mission.74.desc.spying
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.74 } }
+	}
+	
+	option = { name = EXCELLENT }
+}
