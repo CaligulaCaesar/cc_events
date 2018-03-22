@@ -218,52 +218,51 @@ dpe_spirmission_minor_mission_desc:0 "Иностранные миссионер�
 dpe_spirmission_major_mission:0 "$dpe_spirmission_minor_mission$"
 dpe_spirmission_major_mission_desc:0 "Иностранные миссионеры пытаются распространить свою религию в нашем государстве. Их слова очень популярны среди населения, и многие тянутся к их взглядам и учению." 
 
-dpe_spiritualist_mission_planet_success.tooltip:0 "Четыре £pops  Поселения на [dpe_mission_host_planet.GetName] перейдет в $ethic_spiritualist$."
-dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Два £pops  Поселения на [dpe_mission_host_planet.GetName] перейдет в $ethic_spiritualist$."
+dpe_spiritualist_mission_planet_success.tooltip:0 "Четыре £pops  Поселения на [dpe_mission_host_planet.GetName] перейдут в $ethic_spiritualist$."
+dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Два £pops  Поселения на [dpe_mission_host_planet.GetName] перейдут в $ethic_spiritualist$."
 
-dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
-dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetSpeciesAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries' message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
-dpe_spiritualist_mission.7.A:0 "The mission has done its job, recall it."
-dpe_spiritualist_mission.7.B:0 "Publicly accuse the [dpe_neighbour.GetSpeciesNamePlural]."
-dpe_spiritualist_mission.7.B.tooltip:0 "The [dpe_neighbour.GetSpeciesNamePlural] are unlikely to take kindly to this."
-dpe_spiritualist_mission.7.C:0 "The mission will continue, even in the face of adversity."
+dpe_spiritualist_mission.7.name:0 "[dpe_neighbour.GetName] препятствуют нашей Миссии"
+dpe_spiritualist_mission.7.desc:0 "Члены нашей миссии недавно пожаловались, что правительство [dpe_neighbour.GetSpeciesAdj] открыто препятствует их деятельности. Уже в течение долгого времени были подозрения, что их недоброжелательное отношение является частью преднамеренной попытки остановить распространение послания наших миссионеров, но с растущим успехом миссии усилия по противодействию нам от правительства увеличились. Складывается впечатление, что дальнейшего прогресса будет очень трудно добиться. Что нам следует предпринять?"
+dpe_spiritualist_mission.7.A:0 "Миссия выполнила свою задачу. Отзовите их."
+dpe_spiritualist_mission.7.B:0 "Публично обвинить [dpe_neighbour.GetSpeciesNamePlural]."
+dpe_spiritualist_mission.7.B.tooltip:0 "[dpe_neighbour.GetSpeciesNamePlural] вряд ли оценят наш шаг."
+dpe_spiritualist_mission.7.C:0 "Миссия будет продолжена даже с учетом всех невзгод."
 
-dpe_spirmission_accused_us:0 "Accused us of Deceitfulness"
-dpe_spirmission_deceived:0 "Obstructing Mission"
+dpe_spirmission_accused_us:0 "Обвинили нас в обмане"
+dpe_spirmission_deceived:0 "Затруднительная Миссия"
 
-dpe_spiritualist_mission.71.name:0 "The [from.GetName] accuses us!"
-dpe_spiritualist_mission.71.desc:0 "Dear [root.GetSpeciesNamePlural], it has come to our attention that you have been obstructing the activities of our mission to provide your people with salvation. Kindly cease doing so, for your own good! It is not to late for your souls to be saved."
-dpe_spiritualist_mission.71.option:0 "How dare you! The activities of the mission cease today."
+dpe_spiritualist_mission.71.name:0 "[from.GetName] обвинили нас!"
+dpe_spiritualist_mission.71.desc:0 "Дорогие [root.GetSpeciesNamePlural], до нашего внимания дошел тот факт, что вы препятствуете деятельности нашей миссии, которая должна подарить вашему народу спасение. Пожалуйста, прекратите это делать, во имя вашего же блага! Вашим душам ещё не поздно спастись."
+dpe_spiritualist_mission.71.option:0 "Да как вы смеете! Деятельность миссии прекратится сегодня же."
 
-dpe_spiritualist_mission.72.name:0 "The [from.GetName] responds"
+dpe_spiritualist_mission.72.name:0 "[from.GetName] отвечают"
 dpe_spiritualist_mission.72.desc:0 "$dpe_spiritualist_mission.71.desc$"
-dpe_spiritualist_mission.72.option:0 "Poor fools, to reject our enlightenment."
+dpe_spiritualist_mission.72.option:0 "Вы бедные дурни, раз решили отринуть наше просветление."
 
-dpe_spiritualist_mission.73.name:0 "The [from.GetSpeciesAdj] Mission leaves!"
-dpe_spiritualist_mission.73.desc:0 "After some limited successes, the [from.GetSpeciesAdj] mission to provide us with their "salvation" has departed, claiming to have achieved its aims. We believe that the [from.GetSpeciesNamePlural] had realised that we were obstructing them and decided that the easiest course of action was to leave. Although the [from.GetSpeciesAdj] ambassador has expressed a certain coolness towards us that he hadn't previously, this is a price worth paying for having contained the spread of their "religion"."
+dpe_spiritualist_mission.73.name:0 "Миссия [from.GetSpeciesAdj] уходит!"
+dpe_spiritualist_mission.73.desc:0 "После некоторых ограниченных успехов в предоставлении нам "спасения", миссия [from.GetSpeciesAdj] ушла, заявив, что она достигла поставленных целей. Мы полагаем, что [from.GetSpeciesNamePlural] догадались, что мы всячески мешаем их миссии, а потому они решили, что самым простым решением будет уйти.  Хотя посол [from.GetSpeciesAdj] выразил определенную прохладу к нам, чего раньше за ним не наблюдалось, это стало ценой сдерживания их "религии"."
 
-dpe_spiritualist_mission.74.name:0 "Our Obstruction uncovered"
-dpe_spiritualist_mission.74.desc:0 "The recent activities of the [from.GetSpeciesAdj] mission leave no room for doubt: They somehow got wind of our obstruction efforts, and are now attempting to counteract them. However, although they have had some limited success in their mission, our intelligence services assure us that they will be able to keep the situation in hand."
-dpe_spiritualist_mission.74.A:0 "I see."
-dpe_spiritualist_mission.74.B:0 "We should send them home anyway, just in case."
+dpe_spiritualist_mission.74.name:0 "Наше вмешательство раскрыто"
+dpe_spiritualist_mission.74.desc:0 "Недавняя деятельность миссии [from.GetSpeciesAdj] не оставила никаких сомнений: они каким-то образом догадались о том, что мы предпринимаем попытки им помешать, а потому они начали активно препятствовать нам. Несмотря на определенные успехи их миссии, наша служба разведки уверена, что сможет удержать ситуацию в своих руках."
+dpe_spiritualist_mission.74.A:0 "Ясно."
+dpe_spiritualist_mission.74.B:0 "Мы все равно должны отправить их домой. На всякий случай.
 
-dpe_spiritualist_mission.75.name:0 "The [from.GetSpeciesNamePlural] send our Mission home"
-dpe_spiritualist_mission.75.desc:0 "Dear [root.GetSpeciesNamePlural], we regret to inform you that the [from.GetName] has come to the decision that your missionaries are a disruptive influence. We have therefore ordered them to cease their activities and return home. We hope that you will not take this personally."
+dpe_spiritualist_mission.75.name:0 "[from.GetSpeciesNamePlural] высылают нашу Миссию домой"
+dpe_spiritualist_mission.75.desc:0 "Дорогие [root.GetSpeciesNamePlural], мы с сожалением извещаем вас, что [from.GetName] пришёл к решению, что ваши миссионеры оказывают пагубное влияние. Поэтому мы приказали им свернуть свою деятельность и отправиться домой. Мы надеемся, что вы не примите это близко к сердцу." 
 
+dpe_spirmission_sent_home_faction:0 "Отправить домой миссионеров"
 
-dpe_spirmission_sent_home_faction:0 "Sent home missionaries"
-
-dpe_spirmission_succeeded_country:0 "Successful Mission"
-dpe_spirmission_succeeded_country_desc:0 "The spiritualist movement within the state has been reinvigorated by its success in bringing spiritualist truth one of the state's neighbours. The population now views Spiritualism with renewed enthusiasm."
-dpe_spirmission_succeeded_faction:0 "Successful Mission"
+dpe_spirmission_succeeded_country:0 "Успешная Миссия"
+dpe_spirmission_succeeded_country_desc:0 "Движение спиритуалистов внутри государства возродилось благодаря их успехам в распространении религиозной правды на соседнее государство. Население теперь рассматривает спиритуализм с обновлённым энтузиазмом."
+dpe_spirmission_succeeded_faction:0 "Успешная Миссия"
 
 
 #these events are 10 years later
 
-dpe_spiritualist_mission.10.name:0 "Our Mission to the [from.GetSpeciesNamePlural]"
-dpe_spiritualist_mission.10.desc.low:0 "Our mission to the [from.GetName] has achieved little over the past years: The majority of the [from.GetSpeciesNamePlural] have not heeded their words, and do not follow the True Way. There is some debate as to whether there is any point in continuing the mission at all."
-dpe_spiritualist_mission.10.desc.mid:0 "Our mission to the [from.GetName] has achieved some limited success over the past years: A sizeable minority of [from.GetSpeciesNamePlural] now follow the True Way. Should the mission continue?"
-dpe_spiritualist_mission.10.desc.high:0 "Our mission to the [from.GetName] has achieved considerable successes over the past years: Although the [from.GetSpeciesAdj] government has not yet adopted the True Way, many [from.GetSpeciesNamePlural] now do. Some have even embarked on pilgrimages to our worlds. Should the mission continue?"
+dpe_spiritualist_mission.10.name:0 "Наша Миссия к [from.GetSpeciesNamePlural]"
+dpe_spiritualist_mission.10.desc.low:0 "Наша миссия к [from.GetName] практически ничего не достигла за последние годы: большинство [from.GetSpeciesNamePlural] не услышали наших слов и не последовали Истинному Пути. Присутствуют некоторые разговоры о том, стоит ли вовсе продолжать миссию."
+dpe_spiritualist_mission.10.desc.mid:0 "Наша миссия к [from.GetName] достигла некоторого ограниченного успеха за последние годы: ощутимое меньшинство [from.GetSpeciesNamePlural] отныне следует Истинному Пути. Следует ли продолжить миссию?"
+dpe_spiritualist_mission.10.desc.high:0 "Наша миссия к [from.GetName] достигла значительных успехов за последние годы: хотя правительство [from.GetSpeciesAdj] ещё не следует Истинному Пути, многие простые [from.GetSpeciesNamePlural] следуют ему. Некоторые из них даже отправились в паломничество к нашим мирам. Следует ли продолжить миссию?"
 dpe_spiritualist_mission.10.desc.success:0 "Our mission to the [from.GetName] has been successful: Through their tireless efforts, spiritualism has become an integral part of the [from.GetSpeciesAdj] way of life, and many [from.GetSpeciesNamePlural] have embarked on pilgrimages to our worlds. Apart from a few who intend to remain on [dpe_mission_host_planet.GetName] and continue to guide the [from.GetSpeciesNamePlural], the missionaries are preparing to return home, their work completed. The [from.GetSpeciesNamePlural] have organised a large celebration to mark the departure of the missionaries, who have made many friends during their time in the [from.GetName]. This will hopefully inaugurate a new period of friendship between our nations."
 dpe_spiritualist_mission.10.option.continue:0 "Continue the Mission - they are doing valuable work."
 dpe_spiritualist_mission.10.option.cancel:0 "Bring the Mission - they have done enough."
