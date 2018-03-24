@@ -3002,13 +3002,15 @@ country_event = {
 						establish_communications_no_message = prevprev
 					}
 				}
+				
+				declare_war = {
+					target = root
+					attacker_war_goal = wg_dpe_faction_revolt
+				}
+
 				country_event = { id = ccfaction.602 days = 2 }
 			}
 
-			declare_war = {
-				target = event_target:cc_breakaway_country
-				attacker_war_goal = wg_conquest
-			}
 			
 			every_owned_planet = { #swap the firm planets
 				limit = {
@@ -4139,7 +4141,11 @@ country_event = {
 
 	immediate = {
 		save_event_target_as = cc_breakaway_country
-		
+		set_timed_country_flag = { #this is to stop the PRE war dec
+			flag = ccrebel_dont_declare_war
+			days = 5
+		}
+
 		From = { 
 			remove_planet_flag = revolt_in_progress 
 			remove_planet_flag = cc_faction_revolt_capital
@@ -4157,6 +4163,11 @@ country_event = {
 			}
 		}
 		from.owner = {
+			set_timed_relation_flag = {
+				flag = ccrebel_declare_war_on
+				who = root
+				days = 5
+			}
 			remove_country_flag = cc_factional_revolt_attempt
 			set_timed_country_flag = {
 				flag = cc_factional_revolt_succeeded
@@ -4206,9 +4217,6 @@ country_event = {
 			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
 			create_fleet_from_naval_cap = 1.25
 
-			from.owner = {
-				country_event = { id = ccfaction.631 days = 1 }
-			}
 			from = {
 				solar_system = {
 					closest_system = {
@@ -4251,18 +4259,35 @@ country_event = {
 }
 
 
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
 country_event = {
 	id = ccfaction.631
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = { has_country_flag = cc_faction_rebels }
+
 	immediate = {
-		declare_war = {
-			target = from
-			attacker_war_goal = wg_conquest
+		random_country = {
+			limit = {
+				has_relation_flag = {
+					who = ROOT
+					flag = ccrebel_declare_war_on
+				}
+			}
+			root = {
+				declare_war = {
+					target = prev
+					attacker_war_goal = wg_dpe_faction_revolt
+				}
+			}
 		}
 	}
 }
+
 
 
 #Notify root.owner
@@ -4302,6 +4327,10 @@ country_event = {
 	trigger = { has_country_flag = cc_faction_rebels_second_wave }
 	
 	immediate = {
+		set_country_flag = { #this is to stop the PRE war dec
+			flag = ccrebel_dont_declare_war
+			days = 5
+		}
 		create_leader = {
 			type = ruler
 			species = owner_main_species
