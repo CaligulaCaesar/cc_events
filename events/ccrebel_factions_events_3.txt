@@ -2404,6 +2404,7 @@ country_event = {
 			has_country_flag = cc_factional_revolt_attempt
 			has_country_flag = cc_factional_revolt_succeeded
 		}
+		num_owned_planets > 1
 		any_owned_planet = {
 			is_faction_stronghold = yes
 			unrest > 80
@@ -4397,7 +4398,7 @@ country_event = {
 
 			from.owner = { save_event_target_as = cc_old_owner }
 			
-			from = { planet_event = { id = ccfaction.661 days = 1 } }
+			from = { planet_event = { id = ccfaction.661 } }
 		}
 	}
 }
