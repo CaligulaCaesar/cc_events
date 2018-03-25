@@ -3001,6 +3001,15 @@ country_event = {
 					every_relation = {
 						establish_communications_no_message = prevprev
 					}
+					
+					every_system_within_border = {
+						limit = { NOT = { prevprev = { has_claim = prev } } }
+						add_claims = {
+							who = prevprev
+							num_of_claims = 1
+							show_notification = no
+						}
+					}
 				}
 				
 				declare_war = {
@@ -3031,6 +3040,7 @@ country_event = {
 			}
 			
 			country_event = { id = ccfaction.7 days = 45 }
+			
 			
 			else = {
 				set_country_flag = cc_factional_revolt_attempt
@@ -4217,43 +4227,10 @@ country_event = {
 			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
 			create_fleet_from_naval_cap = 1.25
 
-			from = {
-				solar_system = {
-					closest_system = {
-						min_steps = 1
-						max_steps = 1
-						limit = {
-							is_within_borders_of = root.owner
-							starbase = { has_starbase_size = starbase_outpost }
-							NOT = { any_planet = { is_colony = yes } }
-						}
-						starbase = { set_owner = root }
-						
-						add_claims = {
-							who = from.owner
-							num_of_claims = 1
-							show_notification = no
-						}
-					}
+			from.owner = { save_event_target_as = cc_old_owner }
 
-					closest_system = {
-						min_steps = 1
-						max_steps = 1
-						limit = {
-							is_within_borders_of = from.owner
-							starbase = { has_starbase_size = starbase_outpost }
-							NOT = { any_planet = { is_colony = yes } }
-						}
-						starbase = { set_owner = root }
-					
-						add_claims = {
-							who = from.owner
-							num_of_claims = 1
-							show_notification = no
-						}
-					}
-				}
-			}
+			from = { planet_event = { id = ccfaction.661 days = 1 } }
+			from = { planet_event = { id = ccfaction.661 days = 2 } }
 		}
 	}
 }
@@ -4276,6 +4253,14 @@ country_event = {
 				has_relation_flag = {
 					who = ROOT
 					flag = ccrebel_declare_war_on
+				}
+			}
+			every_system_within_border = {
+				limit = { NOT = { root = { has_claim = prev } } }
+				add_claims = {
+					who = root
+					num_of_claims = 1
+					show_notification = no
 				}
 			}
 			root = {
@@ -4327,7 +4312,7 @@ country_event = {
 	trigger = { has_country_flag = cc_faction_rebels_second_wave }
 	
 	immediate = {
-		set_country_flag = { #this is to stop the PRE war dec
+		set_timed_country_flag = { #this is to stop the PRE war dec
 			flag = ccrebel_dont_declare_war
 			days = 5
 		}
@@ -4410,24 +4395,36 @@ country_event = {
 		if = {
 			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
 
-			from = {
-				solar_system = {
-					closest_system = {
-						min_steps = 1
-						max_steps = 1
-						limit = {
-							is_within_borders_of = root.owner
-							starbase = { has_starbase_size = starbase_outpost }
-							NOT = { any_planet = { is_colony = yes } }
-						}
-						starbase = { set_owner = root }
-						
-						add_claims = {
-							who = from.owner
-							num_of_claims = 1
-							show_notification = no
-						}
-					}
+			from.owner = { save_event_target_as = cc_old_owner }
+			
+			from = { planet_event = { id = ccfaction.661 days = 1 } }
+		}
+	}
+}
+
+planet_event = {
+	id = ccfaction.661
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = { exists = event_target:cc_old_owner }
+	
+	immediate = {
+		solar_system = {
+			closest_system = {
+				min_steps = 1
+				max_steps = 1
+				limit = {
+					is_within_borders_of = event_target:cc_old_owner
+					starbase = { has_starbase_size = starbase_outpost }
+					NOT = { any_planet = { is_colony = yes } }
+				}
+				starbase = { set_owner = root.owner }
+				
+				add_claims = {
+					who = event_target:cc_old_owner
+					num_of_claims = 1
+					show_notification = no
 				}
 			}
 		}

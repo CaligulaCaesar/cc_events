@@ -11,1087 +11,68 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = { from = { NOT = { has_planet_flag = cc_revolution } } }
+	
 	immediate = {
-		if = {
-			limit = {
-				from = { NOT = { has_planet_flag = cc_revolution } }
-			}
 			
-				save_event_target_as = cc_rebels
-				random_owned_pop = {
-					save_event_target_as = cc_rebels_pop
-				}
-				
-				#Unity
+		save_event_target_as = cc_rebels
+		random_owned_pop = {
+			save_event_target_as = cc_rebels_pop
+		}
+		
+		#Unity
+		add_100_unity_per_year_passed = yes
+		
+		
+		
+		#Booster Modifier
+		add_modifier = {
+			modifier = "revolutionary_mobilisation"
+			days = 5400
+		}
+		country_event = { id = rebellionscript.1999 days = 5401 }
+			
+			
+		#Spawn the fleet
+		if = {
+			limit = { from = { num_pops < 12 } }
+			create_fleet_from_naval_cap = 0.375
+			last_created_fleet = {
+				set_location = from
+			}
+			else = {
 				if = {
-					limit = {
-						NOT = { years_passed < 10 }
-						years_passed < 20
-					}
-					add_unity = 300
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 100
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 20 }
-						years_passed < 30	
-					}
-					add_unity = 750		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 250	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 30 }
-						years_passed < 40	
-					}
-					add_unity = 1400		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 467	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 40 }
-						years_passed < 50	
-					}
-					add_unity = 2200		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 733	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 50 }
-						years_passed < 60	
-					}
-					add_unity = 3000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 1000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 60 }
-						years_passed < 70	
-					}
-					add_unity = 4000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 1333	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 70 }
-						years_passed < 80	
-					}
-					add_unity = 5200		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 1733	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 80 }
-						years_passed < 90	
-					}
-					add_unity = 6500		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 2167	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 90 }
-						years_passed < 100	
-					}
-					add_unity = 8000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 2667	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 100 }
-						years_passed < 110	
-					}
-					add_unity = 9700		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 3233	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 110 }
-						years_passed < 120	
-					}
-					add_unity = 11600		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 3867	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 120 }
-						years_passed < 130	
-					}
-					add_unity = 13400		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 4467	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 130 }
-						years_passed < 140	
-					}
-					add_unity = 15300		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 5100	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 140 }
-						years_passed < 150	
-					}
-					add_unity = 17200		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 5733	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 150 }
-						years_passed < 160	
-					}
-					add_unity = 19600		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 6533	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 160 }
-						years_passed < 170	
-					}
-					add_unity = 22100		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 7367	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 170 }
-						years_passed < 180	
-					}
-					add_unity = 24700		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 8233	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 180 }
-						years_passed < 190	
-					}
-					add_unity = 27400		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 9133	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 190 }
-						years_passed < 200	
-					}
-					add_unity = 30200		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 10067	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 200 }
-						years_passed < 210	
-					}
-					add_unity = 33000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 11000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 210 }
-						years_passed < 220	
-					}
-					add_unity = 36000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 12000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 220 }
-						years_passed < 230	
-					}
-					add_unity = 39000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 13000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 230 }
-						years_passed < 240	
-					}
-					add_unity = 42000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 14000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 240 }
-						years_passed < 250	
-					}
-					add_unity = 45000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 15000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 250 }
-						years_passed < 260	
-					}
-					add_unity = 48000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 16000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 260 }
-						years_passed < 270	
-					}
-					add_unity = 51000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 17000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 270 }
-						years_passed < 280	
-					}
-					add_unity = 54000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 18000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 280 }
-						years_passed < 290	
-					}
-					add_unity = 57000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 19000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 290 }
-						years_passed < 300	
-					}
-					add_unity = 60000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 20000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 300 }
-						years_passed < 310	
-					}
-					add_unity = 63000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 21000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 310 }
-						years_passed < 320	
-					}
-					add_unity = 66000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 22000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 320 }
-						years_passed < 330	
-					}
-					add_unity = 69000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 23000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 330 }
-						years_passed < 340	
-					}
-					add_unity = 72000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 24000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 340 }
-						years_passed < 350	
-					}
-					add_unity = 75000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 25000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 350 }
-						years_passed < 360	
-					}
-					add_unity = 78000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 26000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 360 }
-						years_passed < 370	
-					}
-					add_unity = 81000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 27000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 370 }
-						years_passed < 380	
-					}
-					add_unity = 84000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 28000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 380 }
-						years_passed < 390	
-					}
-					add_unity = 87000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 29000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 390 }
-						years_passed < 400	
-					}
-					add_unity = 90000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 30000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 400 }
-						years_passed < 410	
-					}
-					add_unity = 93000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 31000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 410 }
-						years_passed < 420	
-					}
-					add_unity = 96000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 32000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 420 }
-						years_passed < 430	
-					}
-					add_unity = 99000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 33000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 430 }
-						years_passed < 440	
-					}
-					add_unity = 102000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 34000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 440 }
-						years_passed < 450	
-					}
-					add_unity = 105000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 35000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 450 }
-						years_passed < 460	
-					}
-					add_unity = 108000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 36000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 460 }
-						years_passed < 470	
-					}
-					add_unity = 111000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 37000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 470 }
-						years_passed < 480	
-					}
-					add_unity = 114000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 38000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 480 }
-						years_passed < 490	
-					}
-					add_unity = 117000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 39000	
-					}
-				}
-				if = {
-					limit = {
-						NOT = { years_passed < 490 }
-						years_passed < 500	
-					}
-					add_unity = 120000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 40000	
-					}
-				}
-				#That's quite enough years for me!
-				if = {
-					limit = {
-						NOT = { years_passed < 500 }
-					}
-					add_unity = 150000		
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						add_unity = 50000	
-					}
-				}
-				
-				
-				#Attack Army
-				every_owned_pop = {
-					planet = {
-						create_army = {
-							owner = event_target:cc_rebels
-							species = event_target:cc_rebels_pop.species
-							type = "assault_army"
-						}
-					}
-				}
-				
-				
-				
-				#Booster Modifiers
-				if = {
-					limit = { years_passed < 15 }
-					add_modifier = {
-						modifier = "revolutionary_boost_05"
-						days = -1
-					}
-					add_minerals = 200
-					add_energy = 600
-					
-					else = {
-				if = {
-					limit = { years_passed < 30 }
-					if = {
-						limit = { from.owner = { num_owned_planets < 10 } }
-						
-						add_modifier = {
-							modifier = "revolutionary_boost_1"
-							days = -1
-						}
-						add_minerals = 300
-						add_energy = 800
-						
-						else = {
-							if = {
-								limit = { from.owner = { num_owned_planets < 25 } }
-								
-								add_modifier = {
-									modifier = "revolutionary_boost_2"
-									days = -1
-								}
-								add_minerals = 400
-								add_energy = 900
-								
-								else = {
-									if = {
-										limit = { from.owner = { num_owned_planets < 40 } }
-												
-										else = {
-											if = {
-												limit = { NOT = { from.owner = { num_owned_planets < 40 } } }
-												
-												add_modifier = {
-													modifier = "revolutionary_boost_3"
-													days = -1
-												}
-												add_minerals = 500
-												add_energy = 1050
-												
-											}
-										}
-									}
-								}
-							}
-						}
+					limit = { from = { num_pops < 19 } }
+					create_fleet_from_naval_cap = 0.625
+					last_created_fleet = {
+						set_location = from
 					}
 					else = {
-				if = {
-					limit = { years_passed < 75 }
-					if = {
-						limit = { from.owner = { num_owned_planets < 10 } }
-						
-						add_modifier = {
-							modifier = "revolutionary_boost_2"
-							days = -1
-						}
-						add_minerals = 400
-						add_energy = 900
-						
-						else = {
-							if = {
-								limit = { from.owner = { num_owned_planets < 25 } }
-								
-								add_modifier = {
-									modifier = "revolutionary_boost_3"
-									days = -1
-								}
-								add_minerals = 600
-								add_energy = 1050
-						
-								else = {
-									if = {
-										limit = { from.owner = { num_owned_planets < 40 } }
-											
-										add_modifier = {
-											modifier = "revolutionary_boost_4"
-											days = -1
-										}
-										add_minerals = 800
-										add_energy = 1300
-							
-										else = {
-											if = {
-												limit = { NOT = { from.owner = { num_owned_planets < 40 } } }
-											
-												add_modifier = {
-													modifier = "revolutionary_boost_5"
-													days = -1
-												}
-												add_minerals = 1000
-												add_energy = 1500
-						
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					else = {
-				if = {
-					limit = { years_passed < 120 }
-					if = {
-						limit = { from.owner = { num_owned_planets < 10 } }
-						
-						add_modifier = {
-							modifier = "revolutionary_boost_3"
-							days = -1
-						}
-						add_minerals = 600
-						add_energy = 1100
-						
-						else = {
-							if = {
-								limit = { from.owner = { num_owned_planets < 25 } }
-								
-								add_modifier = {
-									modifier = "revolutionary_boost_4"
-									days = -1
-								}
-								add_minerals = 900
-								add_energy = 1400
-						
-								else = {
-									if = {
-										limit = { from.owner = { num_owned_planets < 40 } }
-										
-										add_modifier = {
-											modifier = "revolutionary_boost_5"
-											days = -1
-										}
-										add_minerals = 1200
-										add_energy = 1700
-								
-										else = {
-											if = {
-												limit = { NOT = { from.owner = { num_owned_planets < 40 } } }
-															
-												add_modifier = {
-													modifier = "revolutionary_boost_6"
-													days = -1
-												}
-												add_minerals = 1500
-												add_energy = 2000
-										
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					else = {
-				if = {
-					limit = { NOT = { years_passed < 120 } }
-					if = {
-						limit = { from.owner = { num_owned_planets < 10 } }
-						
-						add_modifier = {
-							modifier = "revolutionary_boost_4"
-							days = -1
-						}
-						add_minerals = 800
-						add_energy = 1300
-						
-						else = {
-							if = {
-								limit = { from.owner = { num_owned_planets < 25 } }
-								
-								add_modifier = {
-									modifier = "revolutionary_boost_5"
-									days = -1
-								}
-								add_minerals = 1150
-								add_energy = 1800
-						
-								else = {
-									if = {
-										limit = { from.owner = { num_owned_planets < 40 } }
-															
-										add_modifier = {
-											modifier = "revolutionary_boost_6"
-											days = -1
-										}
-										add_minerals = 1500
-										add_energy = 2300
-									
-										else = {
-											if = {
-												limit = { NOT = { from.owner = { num_owned_planets < 40 } } }
-															
-												add_modifier = {
-													modifier = "revolutionary_boost_6"
-													days = -1
-												}
-												add_minerals = 1850
-												add_energy = 2800
-										
-											}
-										}
-									}
-								}
-							}
-						}
-					}	
-				}
-					}
-				}
-					}
-				}
-					}
-				}
-					}
-				}
-				
-				
-				
-				if = {
-					limit = { from = { num_pops < 12 } }
-						create_fleet_from_naval_cap = 0.5
+						create_fleet_from_naval_cap = 0.75
 						last_created_fleet = {
 							set_location = from
 						}
-						else = {
-							if = {
-								limit = { from = { num_pops < 19 } }
-								create_fleet_from_naval_cap = 0.75
-								last_created_fleet = {
-									set_location = from
-								}
-								else = {
-									create_fleet_from_naval_cap = 1
-									last_created_fleet = {
-										set_location = from
-									}
-								}
-							}
-						}
 					}
 				}
+			}
+		}
 	}
 }
 
+country_event = {
+	id = rebellionscript.1999
+	hide_window = yes
+	is_triggered_only = yes 
 
+	trigger = { is_subject = no }
+
+	immediate = {
+		add_modifier = {
+			modifier = "revolutionary_mobilisation_0_5"
+			days = 3600
+		}
+	}
+}
 
 
 
@@ -1117,7 +98,7 @@ country_event = {
 		
 		From = { #this one is needed to stop the annoying 'country destroyed' notifications
 			set_timed_country_flag = {
-				flag = cc_temporary_rebellion_marker
+				flag = cc_temporary_rebellion_marker@fromfrom
 				days = 13
 			}
 			save_event_target_as = ccrebel_lost_a_planet
@@ -1143,7 +124,7 @@ planet_event = {
 	trigger = {
 		exists = owner
 		has_planet_flag = cc_recent_rebellion
-		NOT = { owner = { has_country_flag = cc_temporary_rebellion_marker } }
+		NOT = { owner = { has_country_flag = cc_temporary_rebellion_marker@root } }
 		owner = { has_country_flag = cc_rebellion }
 	}
 
@@ -1160,7 +141,7 @@ planet_event = {
 				if = {
 					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 					
-					create_fleet_from_naval_cap = 0.16
+					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
 						set_location = root
 					}
@@ -1169,7 +150,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.32
+							create_fleet_from_naval_cap = 0.24
 							last_created_fleet = {
 								set_location = root
 							}
@@ -1177,7 +158,7 @@ planet_event = {
 							else = {
 								if = {
 									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.48
+									create_fleet_from_naval_cap = 0.36
 									last_created_fleet = {
 										set_location = root
 									}
@@ -1186,7 +167,7 @@ planet_event = {
 						}
 					}
 				}
-						
+							
 				else = {
 					if = {
 						limit = {
@@ -1195,7 +176,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.09
+							create_fleet_from_naval_cap = 0.0675
 							last_created_fleet = {
 								set_location = root
 							}
@@ -1204,7 +185,7 @@ planet_event = {
 								if = {
 									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 									
-									create_fleet_from_naval_cap = 0.18
+									create_fleet_from_naval_cap = 0.135
 									last_created_fleet = {
 										set_location = root
 									}
@@ -1212,7 +193,7 @@ planet_event = {
 									else = {
 										if = {
 											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.28
+											create_fleet_from_naval_cap = 0.21
 											last_created_fleet = {
 												set_location = root
 											}
@@ -1225,7 +206,7 @@ planet_event = {
 							if = {
 								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 								
-								create_fleet_from_naval_cap = 0.04
+								create_fleet_from_naval_cap = 0.03
 								last_created_fleet = {
 									set_location = root
 								}
@@ -1234,7 +215,7 @@ planet_event = {
 									if = {
 										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 										
-										create_fleet_from_naval_cap = 0.08
+										create_fleet_from_naval_cap = 0.06
 										last_created_fleet = {
 											set_location = root
 										}
@@ -1242,7 +223,7 @@ planet_event = {
 										else = {
 											if = {
 												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.12
+												create_fleet_from_naval_cap = 0.09
 												last_created_fleet = {
 													set_location = root
 												}
