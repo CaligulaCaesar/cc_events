@@ -14,7 +14,7 @@ planet_event = {
 		}
 		NOT = { has_planet_flag = cc_colony_story }
 		any_owned_pop = {
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 			is_enslaved = no
 			has_citizenship_rights = yes
 		}
@@ -98,11 +98,11 @@ planet_event = {
 				modifier = {
 					factor = 1.35
 					any_owned_pop = {
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						root = {
 							any_owned_pop = {
 								NOT = { is_same_species = prevprev }
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 							}
 						}
 					}
@@ -113,7 +113,7 @@ planet_event = {
 						pop_percentage = {
 							limit = {
 								NOT = { is_same_species = root.owner }
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 							}
 							percentage < 0.1
 						}
@@ -174,7 +174,7 @@ planet_event = {
 						any_owned_pop = {
 							NOT = {
 								is_same_species = root.owner
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 							}
 						}
 					}
@@ -398,7 +398,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -1195,7 +1195,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -2217,7 +2217,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -4964,7 +4964,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -5982,7 +5982,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -6718,7 +6718,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {
@@ -7954,7 +7954,7 @@ planet_event = {
 			}
 			else = {
 				random_owned_pop = {
-					limit = { has_a_happiness_gauge = yes }
+					limit = { species = { pops_have_happiness = yes } }
 					save_event_target_as = cc_leader_pop
 				}
 				owner = {

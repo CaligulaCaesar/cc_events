@@ -74,7 +74,7 @@ event = {
 				every_owned_pop = {
 					limit = {
 						has_pop_flag = cc_literally_xenophile
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 					}
 					pop_event = { id = cc_events_performance.6 }
 				}
@@ -82,7 +82,7 @@ event = {
 					every_owned_pop = {
 						limit = {
 							has_pop_flag = cc_literally_xenophile_manifested
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 						}
 						pop_event = { id = cc_events_performance.7 }
 					}
@@ -199,7 +199,7 @@ event = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
 							has_citizenship_type = { type = citizenship_limited }
@@ -243,7 +243,7 @@ event = {
 								is_subspecies = prev
 								is_same_species = prev
 							}
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = { type = citizenship_full }
 								has_citizenship_type = { type = citizenship_limited }
@@ -273,7 +273,7 @@ event = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
 							has_citizenship_type = { type = citizenship_limited }
@@ -299,7 +299,7 @@ event = {
 								is_subspecies = prev
 								is_same_species = prev
 							}
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = { type = citizenship_full }
 								has_citizenship_type = { type = citizenship_limited }
@@ -699,7 +699,7 @@ event = {
 						num_pops > 5
 						
 						any_owned_pop = {
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							is_enslaved = no
 							is_being_purged = no
 							planet = {
@@ -712,7 +712,7 @@ event = {
 										is_same_species = prevprev
 										is_subspecies = prevprev
 									}
-									has_a_happiness_gauge = yes
+									species = { pops_have_happiness = yes }
 									is_enslaved = no
 									is_being_purged = no
 									
@@ -731,7 +731,7 @@ event = {
 							any_owned_pop = { has_ethic = ethic_xenophobe }
 							
 							any_owned_pop = {
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								is_robot_pop = no
 								is_enslaved = no
 								is_being_purged = no
@@ -745,7 +745,7 @@ event = {
 											is_same_species = prevprev
 											is_subspecies = prevprev
 										}
-										has_a_happiness_gauge = yes
+										species = { pops_have_happiness = yes }
 										is_robot_pop = no
 										is_enslaved = no
 										is_being_purged = no
@@ -768,7 +768,7 @@ event = {
 						if = {
 							limit = {
 								any_owned_pop = {
-									has_a_happiness_gauge = yes
+									species = { pops_have_happiness = yes }
 									is_robot_pop = no
 									is_enslaved = no
 									is_being_purged = no
@@ -782,7 +782,7 @@ event = {
 												is_same_species = prevprev
 												is_subspecies = prevprev
 											}
-											has_a_happiness_gauge = yes
+											species = { pops_have_happiness = yes }
 											is_robot_pop = no
 											is_enslaved = no
 											is_being_purged = no
@@ -806,7 +806,7 @@ event = {
 						if = {
 							limit = {
 								any_owned_pop = {
-									has_a_happiness_gauge = yes
+									species = { pops_have_happiness = yes }
 									is_robot_pop = no
 									is_enslaved = no
 									is_being_purged = no
@@ -820,7 +820,7 @@ event = {
 												is_same_species = prevprev
 												is_subspecies = prevprev
 											}
-											has_a_happiness_gauge = yes
+											species = { pops_have_happiness = yes }
 											is_robot_pop = no
 											is_same_species = owner_species
 											is_enslaved = no
@@ -848,7 +848,7 @@ event = {
 							any_owned_pop = { has_ethic = ethic_spiritualist }
 							
 							any_owned_pop = {
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								is_robot_pop = yes
 								is_enslaved = no
 								is_being_purged = no
@@ -862,7 +862,7 @@ event = {
 											is_same_species = prevprev
 											is_subspecies = prevprev
 										}
-										has_a_happiness_gauge = yes
+										species = { pops_have_happiness = yes }
 										is_robot_pop = no
 										is_enslaved = no
 										is_being_purged = no
@@ -974,7 +974,7 @@ event = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
 							has_citizenship_type = { type = citizenship_limited }
@@ -1018,7 +1018,7 @@ event = {
 							is_same_species = prev
 							is_robot_pop = no
 						}
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 					}
 				}
 				set_timed_country_flag = {
@@ -1340,7 +1340,7 @@ event = {
 						NOT = { has_planet_flag = cc_emancipation_movement }
 						any_owned_pop = {
 							is_enslaved = yes
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							happiness < 0.4
 						}
 						any_owned_pop = {
@@ -1359,7 +1359,7 @@ event = {
 						NOT = { has_planet_flag = cc_emancipation_movement }
 						any_owned_pop = {
 							is_enslaved = yes
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							happiness < 0.4
 						}
 						any_owned_pop = {
@@ -1883,7 +1883,7 @@ event = {
 						unrest < 1
 						NOT = { has_planet_flag = dpe_unity_planet }
 						count_pops = {
-							limit = { has_a_happiness_gauge = yes }
+							limit = { species = { pops_have_happiness = yes } }
 							count > 7
 						}
 						pop_percentage = {
@@ -2137,7 +2137,7 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_a_happiness_gauge = yes
+		species = { pops_have_happiness = yes }
 		has_pop_flag = cc_literally_xenophile_manifested
 		exists = owner
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minorities } }
@@ -2584,7 +2584,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 					NOT = { has_planet_flag = cc_emancipation_movement }
 					any_owned_pop = {
 						is_enslaved = yes
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -2600,7 +2600,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 					NOT = { has_planet_flag = cc_emancipation_movement }
 					any_owned_pop = {
 						is_enslaved = yes
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -2619,7 +2619,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 							NOT = { has_planet_flag = cc_emancipation_movement }
 							any_owned_pop = {
 								is_enslaved = yes
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								happiness < 0.4
 							}
 							any_owned_pop = {
@@ -2634,7 +2634,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 							NOT = { has_planet_flag = cc_emancipation_movement }
 							any_owned_pop = {
 								is_enslaved = yes
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								happiness < 0.4
 							}
 							any_owned_pop = {

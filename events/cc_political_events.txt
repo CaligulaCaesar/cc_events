@@ -53,7 +53,7 @@ country_event = {
 				is_subspecies = root
 				is_same_species = root
 			}
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
@@ -98,7 +98,7 @@ country_event = {
 					is_subspecies = root
 					is_same_species = root
 				}
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
@@ -375,7 +375,7 @@ country_event = {
 				is_subspecies = root
 				is_same_species = root
 			}
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
@@ -423,7 +423,7 @@ country_event = {
 					is_subspecies = root
 					is_same_species = root
 				}
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
@@ -1126,7 +1126,7 @@ event = {
 	immediate = {
 		every_country = {
 			every_owned_pop = {
-				limit = { has_a_happiness_gauge = yes }
+				limit = { species = { pops_have_happiness = yes } }
 				pop_event = { id = cc_events_mod.9 }
 			}
 		}
@@ -1171,7 +1171,7 @@ pop_event = {
 											is_subspecies = root
 											is_same_species = root
 										}
-										has_a_happiness_gauge = yes
+										species = { pops_have_happiness = yes }
 										OR = {
 											has_citizenship_type = { type = citizenship_full }
 											has_citizenship_type = { type = citizenship_limited }
@@ -1208,7 +1208,7 @@ pop_event = {
 									is_subspecies = root
 									is_same_species = root
 								}
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								OR = {
 									has_citizenship_type = { type = citizenship_full }
 									has_citizenship_type = { type = citizenship_limited }
@@ -1245,7 +1245,7 @@ pop_event = {
 									is_subspecies = root
 									is_same_species = root
 								}
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								OR = {
 									has_citizenship_type = { type = citizenship_full }
 									has_citizenship_type = { type = citizenship_limited }
@@ -1277,7 +1277,7 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_a_happiness_gauge = yes
+		species = { pops_have_happiness = yes }
 		has_pop_flag = cc_literally_xenophile
 		exists = owner
 		owner = {
@@ -1288,7 +1288,7 @@ pop_event = {
 						is_subspecies = root
 						is_same_species = root
 					}
-					has_a_happiness_gauge = yes
+					species = { pops_have_happiness = yes }
 					OR = {
 						has_citizenship_type = { type = citizenship_full }
 						has_citizenship_type = { type = citizenship_limited }
@@ -1342,7 +1342,7 @@ pop_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_a_happiness_gauge = yes
+		species = { pops_have_happiness = yes }
 		has_pop_flag = cc_literally_xenophile_manifested
 		exists = owner
 		owner = {
@@ -1354,7 +1354,7 @@ pop_event = {
 							is_subspecies = root
 							is_same_species = root
 						}
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
 							has_citizenship_type = { type = citizenship_limited }
@@ -1850,7 +1850,7 @@ country_event = {
 				is_subspecies = root
 				is_same_species = root
 			}
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 			OR = {
 				has_citizenship_type = { type = citizenship_full }
 				has_citizenship_type = { type = citizenship_limited }
@@ -1890,7 +1890,7 @@ country_event = {
 					is_subspecies = root
 					is_same_species = root
 				}
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
@@ -1976,7 +1976,7 @@ country_event = {
 				is_same_species = root
 				is_robot_pop = no
 			}
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 		}
 	}
 	
@@ -1998,7 +1998,7 @@ country_event = {
 					is_same_species = root
 					is_robot_pop = no
 				}
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 			}
 			save_event_target_as = xeno
 		}
@@ -2265,7 +2265,7 @@ country_event = {
 				is_same_species = root
 				is_robot_pop = no
 			}
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 		}
 	}
 	
@@ -2282,7 +2282,7 @@ country_event = {
 					is_same_species = root
 					is_robot_pop = no
 				}
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 			}
 			save_event_target_as = xeno
 		}

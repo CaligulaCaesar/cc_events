@@ -128,14 +128,14 @@ has_factional_revolt_stage3 = {
 valid_factional_revolt_target = {
 	any_owned_pop = {
 		AND = {
-			has_a_happiness_gauge = yes
+			species = { pops_have_happiness = yes }
 			member_of_faction = yes
 		}
 	}
 }
 
 any_pop_has_happiness_gauge = {
-	any_owned_pop = { has_a_happiness_gauge = yes }
+	any_owned_pop = { species = { pops_have_happiness = yes } }
 }
 
 

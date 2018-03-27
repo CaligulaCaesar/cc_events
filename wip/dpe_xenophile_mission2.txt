@@ -94,14 +94,14 @@ event = {
 				limit = {
 					any_owned_pop = {
 						NOT = { is_same_species = prev }
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 					}
 				}
 				random_owned_pop = {
 					limit = {
 						NOT = { is_same_species = prev }
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 					}
 					species = {
@@ -113,14 +113,14 @@ event = {
 					limit = {
 						any_owned_pop = {
 							NOT = { is_same_species = prev }
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 						}
 					}
 					random_owned_pop = {
 						limit = {
 							NOT = { is_same_species = prev }
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 						}
 						species = {
@@ -132,14 +132,14 @@ event = {
 						limit = {
 							any_owned_pop = {
 								NOT = { is_same_species = prev }
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 							}
 						}
 						random_owned_pop = {
 							limit = {
 								NOT = { is_same_species = prev }
-								has_a_happiness_gauge = yes
+								species = { pops_have_happiness = yes }
 								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 							}
 							species = {
@@ -297,6 +297,7 @@ country_event = {
 			flag = dpe_recent_xenophile_mission
 			days = 5400
 		}
+		save_event_target_as = dpe_xenophile_country
 	}
 
 	option = {
@@ -392,21 +393,221 @@ country_event = {
 		}
 		
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 5
+				has_ai_personality = federation_builders
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_ai_personality_behaviour = multispecies }
+			}
+			modifier = {
+				factor = 0.33
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
 	}
 	option = {
 		name = dpe_xenophile_mission.4.B
+
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_rejected_xenophile_mission_opinion
+			}
+		}
 		
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.5 days = 10 } } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 3
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 100
+				has_civic = civic_fanatic_purifiers
+			}
+			modifier = {
+				factor = 2.5
+				has_closed_borders = from
+			}
+		}
 	}
 	option = {
 		name = dpe_xenophile_mission.4.C
 		custom_tooltip = dpe_xenophile_mission.4.C.tooltip
-		
-		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
+
+		add_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+		}
+
+		set_timed_relation_flag = {
+			who = from
+			flag = dpe_xenophile_mission_spying
+			days = 4000
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 0.5
+				has_ai_personality = federation_builders
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = ruthless_capitalists
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			modifier = {
+				factor = 0.33
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+
+		hidden_effect = {
+			from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } }
+
+			#First espionage event
+			country_event = { id = dpe_xenophile_mission.11 days = 360 random = 45 }
+		}
 	}
 	option = {
 		name = dpe_xenophile_mission.4.D
 		custom_tooltip = dpe_xenophile_mission.4.D.tooltip
+
+		add_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+		}
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+
+		set_timed_relation_flag = {
+			who = from
+			flag = dpe_xenophile_mission_betraying
+			days = 4000
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				opinion = {
+					who = from
+					value > 10
+				}
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = slaver
+					has_ai_personality_behaviour = purger
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 2
+				opinion = {
+					who = from
+					value < -25
+				}
+			}
+		}
 		
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
 	}
@@ -446,6 +647,330 @@ country_event = {
 		graphical_culture = from
 		city_level = from
 		room = from.ruler
+	}
+	
+	option = {
+		name = EXCELLENT
+
+		tooltip = {
+			add_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = from
+			}
+			from = {
+				add_opinion_modifier = {
+					modifier = dpe_xenophile_mission_opinion
+					who = root
+				}
+			}
+		}
+
+		hidden_effect = {
+			#Mission Established event (triggers the same event for this country too)
+			from = {
+				country_event = { id = dpe_xenophile_mission.7 days = 60 }
+			}
+
+			#Death event
+			if = {
+				limit = {
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_betraying
+						}
+					}
+				}
+				from = { country_event = { id = dpe_xenophile_mission.20 days = 120 random = 10 } }
+			}
+
+			#Techs event
+			if = {
+				limit = {
+					from = {
+						OR = {
+							relative_power = {
+								who = root
+								category = technology
+								value = superior
+							}
+							relative_power = {
+								who = root
+								category = technology
+								value = overwhelming
+							}
+						}
+					}
+				}
+				country_event = { id = dpe_xenophile_mission.1499 days = 1800 random = 360 }
+				
+				else = {
+					if = {
+						limit = {
+							OR = {
+								relative_power = {
+									who = from
+									category = technology
+									value = superior
+								}
+								relative_power = {
+									who = from
+									category = technology
+									value = overwhelming
+								}
+							}
+							from = {
+								NOT = {
+									has_relation_flag = {
+										who = root
+										flag = dpe_xenophile_mission_spying
+									}
+								}
+							}
+						}
+						from = { country_event = { id = dpe_xenophile_mission.15 days = 1800 random = 360 } }
+					}
+				}
+			}
+
+			#Tensions event
+			if = {
+				limit = {
+					from = {
+						count_pop_factions = {
+							limit = {
+								OR = {
+									is_pop_faction_type = isolationist
+									is_pop_faction_type = supremacist
+								}
+								support > 0.05
+							}
+						}
+					}
+				}
+				country_event = { id = dpe_xenophile_mission.8 days = 480 random = 60 }
+			}
+		}
+	}
+}
+
+
+#Mission Established non-originator
+country_event = {
+	id = dpe_xenophile_mission.7
+	title = dpe_xenophile_mission.7.name
+	desc = dpe_xenophile_mission.7.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.71 } }
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.7.A
+		
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_betraying
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.B
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.C
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+}
+#Mission Established originator country
+country_event = {
+	id = dpe_xenophile_mission.71
+	title = dpe_xenophile_mission.7.name
+	desc = dpe_xenophile_mission.7.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		#continuation of main event chain
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_betraying
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_betraying
+						}
+					}
+				}
+			}
+			from = { country_event = { id = dpe_xenophile_mission.72 days = 481 } }
+		}
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.7.A
+		
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_betraying
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.B
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.7.C
+		
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+	}
+}
+
+
+#Gatekeeper: Build rapport or skip that event in the chain. Scope is non-originator
+country_event = {
+	id = dpe_xenophile_mission.72
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = from
+		from = {
+			NOT = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_xenophile_mission_ended
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_tensions
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_tensions
+						}
+					}
+					has_relation_flag = {
+						who = from
+						flag = dpe_xenophile_mission_caught_spying
+					}
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = dpe_xenophile_mission_caught_spying
+						}
+					}
+				}
+			}
+			#Rapport built event
+			from = {
+				country_event = { id = dpe_xenophile_mission.73 }
+			}
+		}
+		
+		#End of Chain events
+		from = { country_event = { id = dpe_xenophile_mission.100 days = 3060 } }
+	}
+}
+
+
+#Rapport Built originator
+country_event = {
+	id = dpe_xenophile_mission.73
+	title = dpe_xenophile_mission.73.name
+	desc = dpe_xenophile_mission.73.desc
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.74 } }
+	}
+	
+	option = { name = EXCELLENT }
+}
+
+
+#Rapport Built originator
+country_event = {
+	id = dpe_xenophile_mission.74
+	title = dpe_xenophile_mission.73.name
+	desc = {
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_spying
+				}
+			}
+		}
+		text = dpe_xenophile_mission.73.desc
+	}
+	
+	desc = { #they still have no idea that we are spying on them
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+			}
+		}
+		text = dpe_xenophile_mission.74.desc.spying
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.74 } }
 	}
 	
 	option = { name = EXCELLENT }

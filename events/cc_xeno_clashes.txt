@@ -90,7 +90,7 @@ planet_event = {
 			else = {
 				random_owned_pop = {
 					limit = {
-						has_a_happiness_gauge = yes
+						species = { pops_have_happiness = yes }
 						is_robot_pop = no
 						is_enslaved = no
 						is_being_purged = no
@@ -111,7 +111,7 @@ planet_event = {
 		random_owned_pop = {
 			limit = {
 				species = { NOT = { is_same_value = event_target:species1 } }
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 				is_robot_pop = no
 				is_enslaved = no
 				is_being_purged = no

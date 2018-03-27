@@ -34,7 +34,7 @@ planet_event = {
 		NOT = { has_planet_flag = dpe_unity_planet }
 		unrest < 1
 		count_pops = {
-			limit = { has_a_happiness_gauge = yes }
+			limit = { species = { pops_have_happiness = yes } }
 			count > 7
 		}
 		pop_percentage = {
@@ -277,7 +277,7 @@ country_event = {
 			NOT = { has_planet_flag = dpe_recent_talent_planet }
 			controller = { is_same_value = root }
 			any_owned_pop = {
-				has_a_happiness_gauge = yes
+				species = { pops_have_happiness = yes }
 				has_citizenship_rights = yes
 				is_enslaved = no
 			}
@@ -599,7 +599,7 @@ country_event = {
 				event_target:dpe_talent_planet = {
 					random_owned_pop = {
 						limit = {
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = {
 									type = citizenship_full
@@ -855,7 +855,7 @@ country_event = {
 				event_target:dpe_talent_planet = {
 					random_owned_pop = {
 						limit = {
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = {
 									type = citizenship_full
@@ -1042,7 +1042,7 @@ country_event = {
 				event_target:dpe_talent_planet = {
 					random_owned_pop = {
 						limit = {
-							has_a_happiness_gauge = yes
+							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = {
 									type = citizenship_full
