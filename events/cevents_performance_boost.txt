@@ -266,13 +266,12 @@ event = {
 			}
 			if = {
 				limit = {
-
-
 					any_owned_pop = {
 						NOR = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
+						is_robot_pop = no
 						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
@@ -299,6 +298,7 @@ event = {
 								is_subspecies = prev
 								is_same_species = prev
 							}
+							is_robot_pop = no
 							species = { pops_have_happiness = yes }
 							OR = {
 								has_citizenship_type = { type = citizenship_full }
@@ -1593,12 +1593,12 @@ event = {
 			#Disbelief scandal
 			if = {
 				limit = {
-
-
 					OR = {
 						has_ethic = ethic_spiritualist
 						has_ethic = ethic_fanatic_spiritualist
 					}
+					NOT = { has_ascension_perk = ap_transcendence }
+
 					NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 					
 					exists = ruler
