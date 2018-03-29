@@ -34,3 +34,125 @@ country_event = {
 	}
 }
 
+
+
+country_event = {
+	id = cctest.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				has_federation = yes
+				is_country_type = default
+			}
+			join_war = root
+		}
+	}
+}
+
+country_event = {
+	id = cctest.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { 
+				is_country_type = default
+			}
+			join_alliance = {
+				who = root
+				name = NAME_League_of_Non-Aligned_Powers
+				override_requirements = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cctest.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { 
+				is_country_type = default
+				is_at_war = yes
+			}
+			root = { join_war = prev }
+		}
+	}
+}
+
+
+
+country_event = {
+	id = cctest.65
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				opinion = {
+					who = root
+					value < 100
+				}
+			}
+			root = { country_event = { id = cctest.10 } }
+		}
+	}
+}
+
+country_event = {
+	id = cctest.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				opinion = {
+					who = root
+					value < -1
+				}
+			}
+			root = { country_event = { id = cctest.10 } }
+		}
+	}
+}
+
+country_event = {
+	id = cctest.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				opinion = {
+					who = root
+					value < -50
+				}
+			}
+			root = { country_event = { id = cctest.10 } }
+		}
+	}
+}
+
+country_event = {
+	id = cctest.10
+	title = OK
+	desc = OK
+	
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+	
+	option = { name = OK }
+}
+
+

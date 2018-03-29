@@ -54,6 +54,7 @@ country_event = {
 				is_same_species = root
 			}
 			species = { pops_have_happiness = yes }
+			is_robot_pop = no
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
@@ -98,6 +99,7 @@ country_event = {
 					is_subspecies = root
 					is_same_species = root
 				}
+				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
@@ -375,6 +377,7 @@ country_event = {
 				is_subspecies = root
 				is_same_species = root
 			}
+			is_robot_pop = no
 			species = { pops_have_happiness = yes }
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
@@ -423,6 +426,7 @@ country_event = {
 					is_subspecies = root
 					is_same_species = root
 				}
+				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
@@ -706,6 +710,8 @@ country_event = {
 			has_ethic = ethic_fanatic_materialist
 		}
 		has_faction	= traditionalist
+
+		NOT = { has_ascension_perk = ap_transcendence }
 		
 		exists = ruler
 		leader = { has_leader_flag = cc_leader_revered_event }

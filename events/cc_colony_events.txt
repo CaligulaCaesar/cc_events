@@ -4538,7 +4538,7 @@ planet_event = {
 	}
 	option = {
 		name = cc_colony_events.546.C
-		trigger = { exists = ruler }
+		trigger = { owner = { exists = ruler } }
 			
 		hidden_effect = {
 			owner = { kill_leader = { type = ruler show_notification = no } }
@@ -4591,19 +4591,19 @@ planet_event = {
 			factor = 2.5
 			modifier = {
 				factor = 0.5
-				ruler = { has_skill > 4 }
+				owner = { ruler = { has_skill > 4 } }
 			}
 			modifier = {
 				factor = 0.67
-				ruler = { has_skill > 5 }
+				owner = { ruler = { has_skill > 5 } }
 			}
 			modifier = {
 				factor = 0.67
-				ruler = { has_skill > 6 }
+				owner = { ruler = { has_skill > 6 } }
 			}
 			modifier = {
 				factor = 0.67
-				ruler = { has_skill > 7 }
+				owner = { ruler = { has_skill > 7 } }
 			}
 		}
 	}

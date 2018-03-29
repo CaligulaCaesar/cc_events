@@ -294,10 +294,6 @@ ethic_authoritarian = {
 #			}
 #		}
 		modifier = {
-			factor = 0.33
-			is_enslaved = yes
-		}
-		modifier = {
 			factor = 1.25
 			has_trait = "trait_decadent"
 		}
@@ -828,19 +824,20 @@ ethic_egalitarian = {
 			has_citizenship_rights = no	
 		}		
 		modifier = {
-			factor = 4.0
+			factor = 1.5
 			is_enslaved = yes
 		}
-#		modifier = {
-#			factor = 1.5
-#			is_enslaved = no
-#			from = {
-#				any_owned_pop = {
-#					is_robot_pop = no
-#					is_enslaved = yes
-#				}
-#			}
-#		}	
+		modifier = {
+			factor = 1.25
+			is_enslaved = no
+			NOT = { has_ethic = ethic_authoritarian }
+			from = {
+				any_owned_pop = {
+					is_robot_pop = no
+					is_enslaved = yes
+				}
+			}
+		}	
 		modifier = {
 			factor = 1.25
 			OR = {
@@ -1999,7 +1996,7 @@ ethic_fanatic_militarist = {
 	}	
 	
 	country_modifier = {
-		army_damage_mult = 0.20
+		country_war_exhaustion_mult = -0.2
 		ship_fire_rate_mult = 0.20
 	}
 	
@@ -2021,7 +2018,7 @@ ethic_militarist = {
 	}		
 	
 	country_modifier = {
-		army_damage_mult = 0.10
+		country_war_exhaustion_mult = -0.1
 		ship_fire_rate_mult = 0.10
 	}
 	
@@ -3957,6 +3954,8 @@ ethic_gestalt_consciousness = {
 	use_for_pops = no
 	
 	country_modifier = {
+		country_war_exhaustion_mult = -0.2
+		country_piracy_risk_mult = -0.33
 		country_resource_influence_add = 1
 		country_core_sector_system_cap = 2
 	}
