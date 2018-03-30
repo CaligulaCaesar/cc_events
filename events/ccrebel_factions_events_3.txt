@@ -3620,7 +3620,7 @@ country_event = {
 						days = 720
 					}
 					set_timed_planet_flag = {
-						flag = cc_faction_revolt_capital
+						flag = cc_faction_revolt_cappital
 						days = 720
 					}
 				}
@@ -3696,14 +3696,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		if = {
-			limit = { has_global_flag = potent_rebellions_expanded_active }
-			country_event = { id = rebellionscript.1 scopes = { from = capital_scope } }
-			create_fleet_from_naval_cap = 0.5
-			
-			else = { create_fleet_from_naval_cap = 1.5 }
-		}
-		
+		country_event = { id = ccfaction.607 }
 
 		if = {
 			limit = { exists = event_target:cc_new_reb_faction_leader }
@@ -3752,6 +3745,85 @@ country_event = {
 			}
 		} 
 		
+	}
+}
+
+#I set the "don't declare war" flag, so this is necessary even with PR2 now
+country_event = {
+	id = ccfaction.607
+	hide_window = yes 
+	is_triggered_only = yes 
+
+	immediate = {
+		save_event_target_as = cc_rebels
+		random_owned_pop = {
+			save_event_target_as = cc_rebels_pop
+		}
+		
+		#Unity
+		add_100_unity_per_year_passed = yes
+		
+		capital_scope = { save_event_target_as = cc_rebels_capital }
+		
+		#Booster Modifier
+		add_modifier = {
+			modifier = "revolutionary_mobilisation"
+			days = 5400
+		}
+		country_event = { id = rebellionscript.1999 days = 5401 }
+			
+			
+		#Spawn the fleet
+		if = {
+			limit = { has_country_flag = ccrebel_cut_rebellion_fleet_spawn }
+			if = {
+				limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+				create_fleet_from_naval_cap = 0.1
+				last_created_fleet = {
+					set_location = event_target:cc_rebels_capital
+				}
+				else = {
+					if = {
+						limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+						create_fleet_from_naval_cap = 0.2
+						last_created_fleet = {
+							set_location = event_target:cc_rebels_capital
+						}
+						else = {
+							create_fleet_from_naval_cap = 0.3
+							last_created_fleet = {
+								set_location = event_target:cc_rebels_capital
+							}
+						}
+					}
+				}
+			}
+
+			else = {
+				if = {
+					limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+					create_fleet_from_naval_cap = 0.2
+					last_created_fleet = {
+						set_location = event_target:cc_rebels_capital
+					}
+					else = {
+						if = {
+							limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+							create_fleet_from_naval_cap = 0.4
+							last_created_fleet = {
+								set_location = event_target:cc_rebels_capital
+							}
+							else = {
+								create_fleet_from_naval_cap = 0.6
+								last_created_fleet = {
+									set_location = event_target:cc_rebels_capital
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -4224,15 +4296,13 @@ country_event = {
 				remove_all_faction_seditions = yes
 			}
 		}
-		if = {
-			limit = { NOT = { has_global_flag = potent_rebellions_expanded_active } }
-			create_fleet_from_naval_cap = 1.25
 
-			from.owner = { save_event_target_as = cc_old_owner }
+		from.owner = { save_event_target_as = cc_old_owner }
 
-			from = { planet_event = { id = ccfaction.661 days = 1 } }
-			from = { planet_event = { id = ccfaction.661 days = 2 } }
-		}
+		country_event = { id = ccfaction.607 }
+
+		from = { planet_event = { id = ccfaction.661 days = 1 } }
+		from = { planet_event = { id = ccfaction.661 days = 2 } }
 	}
 }
 
@@ -4606,7 +4676,7 @@ planet_event = {
 				if = {
 					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 					
-					create_fleet_from_naval_cap = 0.12
+					create_fleet_from_naval_cap = 0.1
 					last_created_fleet = {
 						set_location = root
 					}
@@ -4615,7 +4685,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.24
+							create_fleet_from_naval_cap = 0.2
 							last_created_fleet = {
 								set_location = root
 							}
@@ -4623,7 +4693,7 @@ planet_event = {
 							else = {
 								if = {
 									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.36
+									create_fleet_from_naval_cap = 0.3
 									last_created_fleet = {
 										set_location = root
 									}
@@ -4632,7 +4702,7 @@ planet_event = {
 						}
 					}
 				}
-			
+							
 				else = {
 					if = {
 						limit = {
@@ -4641,7 +4711,7 @@ planet_event = {
 						if = {
 							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 							
-							create_fleet_from_naval_cap = 0.0675
+							create_fleet_from_naval_cap = 0.06
 							last_created_fleet = {
 								set_location = root
 							}
@@ -4650,7 +4720,7 @@ planet_event = {
 								if = {
 									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 									
-									create_fleet_from_naval_cap = 0.135
+									create_fleet_from_naval_cap = 0.12
 									last_created_fleet = {
 										set_location = root
 									}
@@ -4658,7 +4728,7 @@ planet_event = {
 									else = {
 										if = {
 											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.21
+											create_fleet_from_naval_cap = 0.18
 											last_created_fleet = {
 												set_location = root
 											}
@@ -4671,24 +4741,24 @@ planet_event = {
 							if = {
 								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 								
-								create_fleet_from_naval_cap = 0.03
+								create_fleet_from_naval_cap = 0.025
 								last_created_fleet = {
 									set_location = root
 								}
-									
+								
 								else = {
 									if = {
 										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 										
-										create_fleet_from_naval_cap = 0.06
+										create_fleet_from_naval_cap = 0.05
 										last_created_fleet = {
 											set_location = root
 										}
-							
+								
 										else = {
 											if = {
 												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.09
+												create_fleet_from_naval_cap = 0.075
 												last_created_fleet = {
 													set_location = root
 												}

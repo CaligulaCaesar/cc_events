@@ -11,7 +11,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = { from = { NOT = { has_planet_flag = cc_revolution } } }
+	trigger = { NOT = { has_country_flag = ccrebel_dont_declare_war } }
 	
 	immediate = {
 			
@@ -35,22 +35,50 @@ country_event = {
 			
 		#Spawn the fleet
 		if = {
-			limit = { from = { num_pops < 12 } }
-			create_fleet_from_naval_cap = 0.375
-			last_created_fleet = {
-				set_location = from
+			limit = { has_country_flag = ccrebel_cut_rebellion_fleet_spawn }
+			if = {
+				limit = { from = { num_pops < 12 } }
+				create_fleet_from_naval_cap = 0.1
+				last_created_fleet = {
+					set_location = from
+				}
+				else = {
+					if = {
+						limit = { from = { num_pops < 19 } }
+						create_fleet_from_naval_cap = 0.2
+						last_created_fleet = {
+							set_location = from
+						}
+						else = {
+							create_fleet_from_naval_cap = 0.3
+							last_created_fleet = {
+								set_location = from
+							}
+						}
+					}
+				}
 			}
+
 			else = {
 				if = {
-					limit = { from = { num_pops < 19 } }
-					create_fleet_from_naval_cap = 0.625
+					limit = { from = { num_pops < 12 } }
+					create_fleet_from_naval_cap = 0.2
 					last_created_fleet = {
 						set_location = from
 					}
 					else = {
-						create_fleet_from_naval_cap = 0.75
-						last_created_fleet = {
-							set_location = from
+						if = {
+							limit = { from = { num_pops < 19 } }
+							create_fleet_from_naval_cap = 0.4
+							last_created_fleet = {
+								set_location = from
+							}
+							else = {
+								create_fleet_from_naval_cap = 0.6
+								last_created_fleet = {
+									set_location = from
+								}
+							}
 						}
 					}
 				}
@@ -96,16 +124,14 @@ country_event = {
 
 	immediate = {
 		
-		From = { #this one is needed to stop the annoying 'country destroyed' notifications
+		From = {
 			set_timed_country_flag = {
 				flag = cc_temporary_rebellion_marker@fromfrom
 				days = 13
 			}
-			save_event_target_as = ccrebel_lost_a_planet
 		}
 		
 		FromFrom = {
-
 			set_timed_planet_flag = {
 				flag = cc_recent_rebellion
 				days = 13
@@ -125,84 +151,52 @@ planet_event = {
 		exists = owner
 		has_planet_flag = cc_recent_rebellion
 		NOT = { owner = { has_country_flag = cc_temporary_rebellion_marker@root } }
-		owner = { has_country_flag = cc_rebellion }
+		owner = { NOT = { has_country_flag = ccrebel_has_existed_5_years } }
 	}
 
 	immediate = {
-		
-		save_event_target_as = fatherland_cc_planet
-		
 		owner = {
-			save_event_target_as = fatherland_cc
-				
 			if = {
-				limit = { num_owned_planets < 4 }
-			
+				limit = { has_country_flag = ccrebel_cut_rebellion_fleet_spawn }
+
 				if = {
-					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-					
-					create_fleet_from_naval_cap = 0.12
-					last_created_fleet = {
-						set_location = root
-					}
-					
-					else = {
-						if = {
-							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.24
-							last_created_fleet = {
-								set_location = root
-							}
-					
-							else = {
-								if = {
-									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.36
-									last_created_fleet = {
-										set_location = root
-									}
-								}
-							}
-						}
-					}
-				}
-							
-				else = {
+					limit = { num_owned_planets < 4 }
+				
 					if = {
-						limit = {
-							num_owned_planets < 6
+						limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+						
+						create_fleet_from_naval_cap = 0.05
+						last_created_fleet = {
+							set_location = root
 						}
-						if = {
-							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.0675
-							last_created_fleet = {
-								set_location = root
-							}
-							
-							else = {
-								if = {
-									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-									
-									create_fleet_from_naval_cap = 0.135
-									last_created_fleet = {
-										set_location = root
-									}
-							
-									else = {
-										if = {
-											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.21
-											last_created_fleet = {
-												set_location = root
-											}
+						
+						else = {
+							if = {
+								limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+								
+								create_fleet_from_naval_cap = 0.1
+								last_created_fleet = {
+									set_location = root
+								}
+						
+								else = {
+									if = {
+										limit = { NOT = { num_pops < 7 } }
+										create_fleet_from_naval_cap = 0.15
+										last_created_fleet = {
+											set_location = root
 										}
 									}
 								}
 							}
 						}
-						else = {
+					}
+								
+					else = {
+						if = {
+							limit = {
+								num_owned_planets < 6
+							}
 							if = {
 								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
 								
@@ -226,6 +220,141 @@ planet_event = {
 												create_fleet_from_naval_cap = 0.09
 												last_created_fleet = {
 													set_location = root
+												}
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = {
+									limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+									
+									create_fleet_from_naval_cap = 0.013
+									last_created_fleet = {
+										set_location = root
+									}
+									
+									else = {
+										if = {
+											limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+											
+											create_fleet_from_naval_cap = 0.027
+											last_created_fleet = {
+												set_location = root
+											}
+									
+											else = {
+												if = {
+													limit = { NOT = { num_pops < 7 } }
+													create_fleet_from_naval_cap = 0.04
+													last_created_fleet = {
+														set_location = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				else = {
+					if = {
+						limit = { num_owned_planets < 4 }
+					
+						if = {
+							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+							
+							create_fleet_from_naval_cap = 0.1
+							last_created_fleet = {
+								set_location = root
+							}
+							
+							else = {
+								if = {
+									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+									
+									create_fleet_from_naval_cap = 0.2
+									last_created_fleet = {
+										set_location = root
+									}
+							
+									else = {
+										if = {
+											limit = { NOT = { num_pops < 7 } }
+											create_fleet_from_naval_cap = 0.3
+											last_created_fleet = {
+												set_location = root
+											}
+										}
+									}
+								}
+							}
+						}
+									
+						else = {
+							if = {
+								limit = {
+									num_owned_planets < 6
+								}
+								if = {
+									limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+									
+									create_fleet_from_naval_cap = 0.06
+									last_created_fleet = {
+										set_location = root
+									}
+									
+									else = {
+										if = {
+											limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+											
+											create_fleet_from_naval_cap = 0.12
+											last_created_fleet = {
+												set_location = root
+											}
+									
+											else = {
+												if = {
+													limit = { NOT = { num_pops < 7 } }
+													create_fleet_from_naval_cap = 0.18
+													last_created_fleet = {
+														set_location = root
+													}
+												}
+											}
+										}
+									}
+								}
+								else = {
+									if = {
+										limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+										
+										create_fleet_from_naval_cap = 0.025
+										last_created_fleet = {
+											set_location = root
+										}
+										
+										else = {
+											if = {
+												limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+												
+												create_fleet_from_naval_cap = 0.05
+												last_created_fleet = {
+													set_location = root
+												}
+										
+												else = {
+													if = {
+														limit = { NOT = { num_pops < 7 } }
+														create_fleet_from_naval_cap = 0.075
+														last_created_fleet = {
+															set_location = root
+														}
+													}
 												}
 											}
 										}
