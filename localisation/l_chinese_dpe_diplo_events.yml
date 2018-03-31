@@ -1,0 +1,401 @@
+﻿l_english:
+
+dpe_diplo.1.name:0 "民众渴望战争"
+dpe_diplo.1.desc:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName],该国领导人最近公开嘲讽了[root.GetSpeciesNamePlural]，称我们胆小怕事，毫无荣誉可言。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.desc.machine:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来传出消息，这个机械文明在向下属单元发出的指示中称 [root.GetSpeciesNamePlural]“易受惊吓，战力低弱，基本无害”。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.desc.hive:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来我们发现这个蜂群意识对[root.GetSpeciesNamePlural]的统一评价是“胆小怕事，缺乏荣誉，基本无害”。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.A:0 "宣战"
+#dpe_diplo.1.A.tooltip:0 "战争诉求将被定为$war_demand_humiliate_header$ 及 $war_demand_dpe_cede_borders_header$. 将会要求割让以下行星："
+dpe_diplo.1.B: "耐心。很快我们就会按照自己的步调进行宣战"
+dpe_diplo.1.B.tooltip:0 "此选项将允许你自行选择战争目标。如果你在一年内没有宣战，[root.GetName]的军国主义人口将会不满"
+dpe_diplo.1.C:0 "现阶段开战，风险太大了"
+
+#B + No war declaration in a year
+dpe_diplo.2.name:0 "承诺破裂"
+dpe_diplo.2.desc:0 "你未能在一年内对[enemy.GetName]宣战，民族主义者对此非常不满。 他们感觉[root.GetName]被羞辱了，作为[root.GetSpeciesNamePlural]的一员，他们无法再昂首傲立于其他种族之间。许多民众为此转而反对现政府。"
+
+#C or follow-up to .2:
+dpe_diplo.4.name:0 "边境摩擦"
+dpe_diplo.4.desc:0 "由于对[root.owner.GetName]拒绝向[enemy.GetName]开战深感不满，[root.GetName]上的一些死硬沙文主义者劫持了停泊在当地的一艘老旧巡洋舰，驶入 [enemy.GetName]境内，在被驱离前击毁了数艘商船和一处矿站。[enemy.GetSpeciesAdj]政府对此大为震怒，要求我们移交肇事者，并支付赔偿。而另一方面，[root.owner.GetSpeciesAdj]民众们纷纷为劫船者摇旗呐喊，称他们为民族英雄，并要求政府对[enemy.GetName]采取进一步行动。\n\n我们应该如何回应?"
+dpe_diplo.4.A:0 "顺应民意，开动战争机器"
+dpe_diplo.4.B:0 "移交劫船者，支付赔偿"
+
+dpe_ruler_looks_weak:0 "政府显露软弱"
+dpe_ruler_looks_weak_desc:0 "政府不愿重塑民族荣誉，拒绝向敌人宣战，软弱本质显露无疑。"
+dpe_ruler_looks_weak_faction:0 "虚弱怯懦的政府"
+dpe_ruler_looks_weak_and_breaks_promises_faction:0 "虚弱怯懦、欺外瞒内的政府"
+
+dpe_diplo.5.name:0 "Border Incident"
+dpe_diplo.5.desc:0 "[from.GetName]一伙民族主义分子对[attacked_planet.GetName]及附近星系发动了一次无端挑衅袭击。他们劫持了一艘老旧的巡洋舰，驾驶它骚扰我们的平民船队，攻击并摧毁了一处矿站。我们已成功将他们驱离，但他们逃脱了追捕，返回了[from.GetName]。民众们激愤异常，要求[from.GetName]交出罪犯，并赔偿损失。"
+dpe_diplo.5.desc.machine:0 "[from.GetName]一伙动乱分子对[attacked_planet.GetName]及附近星系发动了一次无端挑衅袭击。他们劫持了一艘老旧的巡洋舰，驾驶它骚扰我们的子程序单元，并攻击了矿站。我们已成功将他们驱离，但他们逃脱了追捕，返回了[from.GetName]。[root.GetName]对此应如何回应？"
+dpe_diplo.5.desc.hive:0 "[from.GetName]一伙动乱分子对[attacked_planet.GetName]及附近星系发动了一次无端挑衅袭击。他们劫持了一艘老旧的巡洋舰，驾驶它攻击我们的矿站，扰乱蜂群运作。我们已成功将他们驱离，但他们逃脱了追捕，返回了[from.GetName]。[root.GetName]对此应如何回应？"
+dpe_diplo.5.A:0 "要求正义"
+dpe_diplo.5.A.tooltip:0 "如果[from.GetName]接受，[root.GetName]将会得到持续一年的100月矿作为赔偿。如果他们拒绝，[from.GetName]将获得对我们边境星系的宣称，以$wg_conquest$为战争目标向我们宣战。"
+dpe_diplo.5.B:0 "设法缓解紧张局势"
+
+
+dpe_diplo.7.name:0 "支付赔偿"
+dpe_diplo.7.desc:0 "我们会移交肇事者，给你们赔偿的。小心不要被我们的赏赐噎死! "
+dpe_diplo.7.desc.machine:0 "我们会移交肇事者，给你们赔偿的。愿这些赏赐让你们的处理器过载烧毁！"
+
+dpe_indemnity_paid:0 "正在支付赔偿"
+dpe_indemnity_paid_desc:0 "这个国家正向另一个国家支付赔偿金，以暂熄其怒火。"
+dpe_indemnity_receive:0 "正接收赔偿"
+dpe_indemnity_receive_desc:0 "这个国家正在接收另一个国家为暂熄其怒火而支付的赔偿金。"
+
+dpe_militarist_unrest:0 "军国主义者深感不满"
+dpe_militarist_unrest_desc:0 "这颗星球上的军国主义人口深感不满，因为政府未能支持他们对抗帝国的敌人。"
+
+dpe_eased_tensions:0 "紧张局势已缓解"
+
+#war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
+#war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
+#war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName]将会向[GetCountry.GetName]割让边境附近的所有星球"
+#war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
+#war_demand_dpe_cede_borders_not_under_our_control:0 "行星必须由我们或盟友控制方能因此战争目标而被割让。目前无边境行星满足此标准。"
+#dpe_event_war_demand:0 "特殊事件战争目标"
+
+dpe_diplo.100.name:0 "[enemy.GetName]的回应"
+#This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
+HM_DOW_ACCEPT_DPE:0 "意欲消灭我族一员即是妄图挑战蜂群整体。现在[From.GetName]已被[enemy.GetName]视作敌人。"
+dpe_diplo.100.option:0 "悉听尊便"
+
+dpe_diplo.101.name:0 "[from.GetName]向我们宣战！"
+dpe_diplo.101.option:0 "严阵以待！"
+
+
+#Spiritualist Mission
+
+dpe_spiritualist_mission.2.name:0 "向[dpe_neighbour.GetName]派出布道使团?"
+dpe_spiritualist_mission.2.desc:0 "我们的许多邻国似乎不相信任何宗教。有些国家甚至只知崇拜自己的机器与发明。一些神职人员正在讨论派出布道使团，拯救这些不幸误入歧途的异族灵魂。现在讨论的焦点集中在[dpe_neighbour.GetName]。我们应该批准教团向 [dpe_neighbour.GetSpeciesNamePlural]传播福音吗?"
+dpe_spiritualist_mission.2.A:0 "是的，我们必须赐予他们启蒙。"
+dpe_spiritualist_mission.2.B:0 "不，他们不配蒙受我们神圣宗教的恩泽。"
+dpe_spiritualist_mission.2.C:0 "不，这群教士需要认清自己的位置。权力皆归于我！"
+
+dpe_spiritualist_mission.2.D:0 "也许[dpe_ally.GetName]是更好的传教对象？ "
+dpe_spiritualist_mission.2.E:0 "让我们把神恩照进最幽深的角落——将教团派往 [dpe_hive.GetName]"
+dpe_spiritualist_mission.2.E.tooltip:0 "此举可能徒劳无功。谁知道蜂群会作何反应呢？"
+dpe_spiritualist_mission.2.F:0 "让我们把神恩照进最幽深的角落——将教团派往[dpe_machines.GetName]"
+dpe_spiritualist_mission.2.F.tooltip:0 "此举很可能徒劳无功。"
+
+dpe_missionary_faction:0 "接纳外国教团"
+dpe_missionary_faction_rejected:0 "拒绝外国教团"
+dpe_missionary_faction_rejected1:0 "$dpe_missionary_faction_rejected$"
+dpe_missionary_country:0 "正在传教"
+dpe_missionary_country_desc:0 "这个国家向别国传播信仰的努力使国内唯心主义运动也重燃活力。"
+dpe_missionary_country_rejected:0 "唯心主义势力认清现实"
+dpe_missionary_country_rejected_desc:0 "唯心主义团体曾试图越界，插手自己无权涉足的领域。政府已经让他们认清了自己的位置。"
+
+dpe_spiritualist_mission.3.name:0 "[from.GetSpeciesAdj]传教士"
+dpe_spiritualist_mission.3.desc.machine:0 "亲爱的……机器们，我们[from.GetSpeciesNamePlural]一直坚信，所有存在都能在真神面前寻得救赎，即使是最为堕落的灵魂。因此，即使面对你们，一群从来不该存在于这宇宙的、怪物般的构造体，传播这无上的救赎依旧是我们无可推辞的义务。你们愿意蒙受这一救赎，聆听我们传教士的福音吗？"
+dpe_spiritualist_mission.3.desc.hive:0 "亲爱的[root.GetSpeciesNamePlural],我们[from.GetSpeciesNamePlural]一直坚信，只要遵循正确的道路，所有生命都能在真神面前寻得救赎。以全宇宙所有美好事物之名，我们希望将启蒙带给你们。诚然贵我两族存在颇多差异，但只要认真倾听，你们一定会发现，我们的福音蕴含真意。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？"
+dpe_spiritualist_mission.3.option.hive.A:0 "干嘛拿这套疯话来烦我们？ "
+dpe_spiritualist_mission.3.option.hive.B:0 "你们的理念奇异陌生，但别有旨趣。或许我们会考虑更进一步的合作。"
+dpe_spiritualist_mission.3.option.devourers:0 "食物们怎么开始胡言乱语了？ "
+dpe_spiritualist_mission.3.option.machine:0 "你的笑话并不好笑。请不要打扰我们。"
+dpe_spiritualist_mission.3.option.exterminator:0 "灭绝必将降临你族"
+
+dpe_spiritualist_mission_insult:0 "侮辱布道使团"
+dpe_spiritualist_mission_ignored:0 "无视我们的神圣福音"
+dpe_spiritualist_mission_hive_listened:0 "有趣的理念"
+dpe_spiritualist_mission_hive_listened1:0 "聆听了我们的福音"
+
+dpe_spiritualist_mission.300.name:0 "[from.GetName]的回应"
+dpe_spiritualist_mission.300.A:0 "我们竭力将你们引向救赎"
+
+
+dpe_spiritualist_mission.4.name:0 "你们愿意接待我们的布道使团吗"
+dpe_spiritualist_mission.4.desc.normal:0 "亲爱的[root.GetSpeciesNamePlural],我们[from.GetSpeciesNamePlural]一直坚信，只要遵循正确的道路，所有生命都能在真神面前寻得救赎。以全宇宙所有美好事物之名，我们希望将启蒙带给你们。诚然贵我两族存在颇多差异，但只要认真倾听，你们一定会发现，我们的福音蕴含真意。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？"
+dpe_spiritualist_mission.4.desc.ally:0 "亲爱的朋友，我们[from.GetSpeciesNamePlural]向来与贵国民众亲密无间，但为你们谋求救赎的夙愿使我们担忧焦虑——你们的习俗在某些至关重要的层面与我们相去甚远。我们希望将启蒙带给你们，使你们在面对造物主时无需为永堕地狱而忧惧。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？ "
+dpe_spiritualist_mission.4.A:0 "我们的人民不会听凭外星人指手画脚"
+dpe_spiritualist_mission.4.B:0 "我们会让他们入境，但不要企图耍任何花招——我们会盯着你们的！ "
+dpe_spiritualist_mission.4.C:0 "我们很高兴接待你们的使团，朋友。"
+dpe_spiritualist_mission.4.D:0 "（欺骗）我们十分乐意接待你们的使团"
+dpe_spiritualist_mission.4.D.tooltip:0 "\n我们将采取秘密措施，阻止他们散播自己的理念。如果被发现，[from.GetName]将会大为恼火。"
+
+dpe_spiritualist_mission_accepted_mission:0 "接待了我们的布道使团"
+#dpe_hosting_spiritualist_mission:0 "接待布道使团"
+dpe_hosting_spiritualist_mission_planet:0 "接待布道使团"
+dpe_hosting_spiritualist_mission_planet_desc:0 "这颗星球正在接待邻国的布道使团"
+
+dpe_spiritualist_mission.41.name:0 "[from.GetName]表示拒绝"
+dpe_spiritualist_mission.41.desc:0 "我们的人民不会听凭外星人指手画脚。你的传教士们不会被接纳。"
+dpe_spiritualist_mission.41.option:0 "那么你们就亲手铺就了自己通向地狱的道路。"
+
+dpe_spiritualist_mission.411.name:0 "[fromfrom.GetName]拒绝了我们的布道使团"
+dpe_spiritualist_mission.411.desc:0 "[dpe_neighbour.GetName]拒绝让我们的布道使团入境。许多神职人员大为恼火，认为他们自绝于神恩，选择了地狱。其他更为温和的成员则认为这只是表明眼下真神对值得拯救的种族另有看法。我们应该把使团派往别处吗？"
+dpe_spiritualist_mission.411.option:0 "还是算了"
+
+dpe_spiritualist_mission.42.name:0 "[from.GetName]愿意接纳使团"
+dpe_spiritualist_mission.42.desc:0 "感谢你们的提议。我们很高兴接待你们的使团。"
+dpe_spiritualist_mission.42.option:0 "不客气"
+
+dpe_spiritualist_mission.421.name:0 "我们的使团出发前往[fromfrom.GetName]"
+dpe_spiritualist_mission.421.desc:0 "为[dpe_neighbour.GetSpeciesNamePlural]带去救赎的使团今日出发。我们热切期盼他们成功的消息。"
+
+dpe_spiritualist_mission.4.accept:0 "使团将在[dpe_mission_host_planet.GetName] 及[dpe_neighbour.GetName]其他地区努力争取皈依者"
+
+
+dpe_spiritualist_mission.5.name:0 "我们的使团已成功立足"
+dpe_spiritualist_mission.5.desc:0 "前往[dpe_neighbour.GetName]的使团已经成功在[dpe_mission_host_planet.GetName]立足。根据他们的第一批报告，当地的[dpe_neighbour.GetSpeciesNamePlural]对我们的教导虚心接受，许多人已经皈依！使团将继续其善业，他们对把救赎带给更多[dpe_neighbour.GetSpeciesNamePlural]十分乐观，并相信在[dpe_neighbour.GetSpeciesAdj]的国度为唯心主义赢得应有地位已经指日可待。"
+
+dpe_spiritualist_mission.51.name:0 "[dpe_missionary_country.GetSpeciesAdj]布道使团已成功立足"
+dpe_spiritualist_mission.51.desc.normal:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱或可疑举动。我们的情报人员对这些外星人保持着密切监视，看来他们确实表里如一。然而，一些进展值得关注：越来越多的当地民众开始参与传教士们组织的典礼与祭仪。他们的宗教似乎正在逐渐流行开来。我们应该容忍这种趋势吗？"
+dpe_spiritualist_mission.51.desc.ally:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱。传教士们顺利在当地立足。事实上，他们发现许多[root.GetSpeciesNamePlural]都对其布道乐于接受。然而，部分民众担忧，如果使团继续自由行事，我们可能会失去部分身为[root.GetSpeciesNamePlural]的自我认同。应该如何回应？"
+dpe_spiritualist_mission.51.normal.A:0 "如果我们惧怕他们的宗教，当初就不会允许他们入境了。"
+dpe_spiritualist_mission.51.normal.B:0 "送他们回去——原以为没人会真的被他们那套太空邪教洗脑的！"
+dpe_spiritualist_mission.51.ally.A:0 "使团当然可以继续活动"
+dpe_spiritualist_mission.51.ally.B:0 "我们应该找个借口送他们回去。"
+
+dpe_spiritualist_mission.52.name:0 "[from.GetSpeciesNamePlural]将我们的布道使团送回"
+dpe_spiritualist_mission.52.desc:0 "亲爱的[root.GetSpeciesNamePlural]……我们很遗憾地通知您，贵方派来的使团将被送回。尽管他们与我们分享了许多有趣的理念，但不巧这些行为违反了[from.GetSpeciesAdj]一项关于外星意识形态宣传的古老法律。请不要因此而对我们心生不满。"
+dpe_spiritualist_mission.52.option:0 "所以你们不想接受我们的救赎了？ "
+
+dpe_spiritualist_mission.59.name:0 "我们的布道使团已经立足"
+dpe_spiritualist_mission.59.desc:0 "前往[dpe_neighbour.GetName]的使团已在[dpe_mission_host_planet.GetName]立足。然而他们报告说，将自己的理念传达给当地民众的过程充满了层层困难，目前还没能吸引到多少追随者。我们只能希望随着时间推移，他们能够逐渐将福音传播开来。"
+
+dpe_spiritualist_mission.591.name:0 "来自[from.GetSpeciesAdj]的布道使团已经立足"
+dpe_spiritualist_mission.591.desc.normal:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱或可疑举动。我们的情报人员对这些外星人保持着密切监视，看来他们确实表里如一。然而眼下他们向当地民众的传教十分不顺，还没有吸引到多少信徒。"
+dpe_spiritualist_mission.591.desc.ally:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱。传教士们顺利在当地立足。然而眼下他们向当地民众的传教颇为不顺，还没有吸引到多少信徒。"
+
+
+dpe_spiritualist_mission.6.name:0 "我们的布道使团遭遇袭扰"
+dpe_spiritualist_mission.6.desc:0 "前往[dpe_neighbour.GetName]的使团已经开展了活动，我们刚刚收到了第一批报告。不幸的是，当地人对我们的教导心怀抗拒。传教士们被骚扰、威胁，甚至受到袭击。当地政府努力维持局面，但只有一支完备的安保团队才能确保使团的安全。我们应该让他们坚守使命还是将他们召回？ " 
+dpe_spiritualist_mission.6.A:0 "召回使团。神意已经自显。"
+dpe_spiritualist_mission.6.B:0 "我们必须坚守，将[dpe_neighbour.GetSpeciesNamePlural]从自我毁灭的命运中拯救！"
+
+dpe_spiritualist_mission.601.name:0 "[from.GetSpeciesNamePlural]召回其布道使团"
+dpe_spiritualist_mission.601.desc:0 "鉴于[dpe_mission_host_planet.GetName]居民的敌对情绪，[from.GetSpeciesAdj]政府已将其使团召回。在一系列不幸的冲突后，允许使团继续传教显然太过危险。现在[dpe_mission_host_planet.GetName]上的局势正在迅速回归正常，当地官员相信秩序很快就会完全恢复。"
+dpe_spiritualist_mission.601.option:0 "或许这样最好"
+
+
+dpe_spiritualist_mission.61.name:0 "对[dpe_missionary_country.GetSpeciesAdj]使团的抗拒愈演愈烈"
+dpe_spiritualist_mission.61.desc:0 "[dpe_mission_host_planet.GetName]上负责[dpe_missionary_country.GetSpeciesAdj]使团的官员汇报了一系列因其而生的问题。他们在当地步履维艰，面临着挑衅涂鸦、骚扰、威胁、财产被毁等等各种敌意行为。目前为止当地执法部门一直在竭力保持局势平稳，等待着我们作出官方指示。然而，许多顾问担心事态可能会迅速失控，因为许多当地治安官员自己也面临着捍卫信念还是维持法律与秩序的两难抉择。另一方面，[dpe_missionary_country.GetSpeciesNamePlural]已经表达了坚持传教使命的决心。"
+dpe_spiritualist_mission.61.A:0 "送他们回去，避免局势升级"
+dpe_spiritualist_mission.61.B:0 "尽力保护使团，但他们要自己承担继续传教的风险"
+
+dpe_spiritualist_mission.62.name:0 "[from.GetSpeciesNamePlural]将我们的布道使团送回"
+dpe_spiritualist_mission.62.desc:0 "[dpe_mission_host_planet.GetName]上的局势迅速恶化，超出了我们的控制。你们的使团必须被送回，以免整颗行星陷入动荡。"
+dpe_spiritualist_mission.62.option.A:0 "真是遗憾——我们只是想把救赎带给你们。"
+dpe_spiritualist_mission.62.option.B:0 "你们怎敢自绝于神恩！"
+
+
+dpe_spiritualist_mission.631.name:0 "布道使团遭遇惨剧！"
+dpe_spiritualist_mission.631.desc:0 "突发消息占据了两国所有新闻机构的头条：我们的使团在[dpe_mission_host_planet.GetName]上遭遇灭顶之灾！情报机构对此也已加以证实。惨剧发生时，信徒们正为一天中的第一次礼拜而聚集起来。一颗炸弹被突然引爆，爆炸直接摧毁了一半礼拜堂。少量幸存者也几乎都被随之而来的大火夺去了生命。到这一天夜间时，暴徒们已经摧毁了整个城市的大部分区域，杀死了更多的信徒。[dpe_neighbour.GetName]政府正式宣布将我们的使团遣回，尽管传教士们已经全数牺牲。他们还要求未来除非必要，不要再向他们的帝国派遣任何人员。"
+dpe_spiritualist_mission.631.A:0 "我们应该早点把他们召回"
+dpe_spiritualist_mission.631.B:0 "[dpe_neighbour.GetSpeciesNamePlural]是这起惨剧的罪魁祸首！"
+
+
+dpe_spiritualist_mission.632.name:0 "[from.GetSpeciesAdj]布道使团遭遇惨剧！"
+dpe_spiritualist_mission.632.desc:0 "突发消息占据了两国所有新闻机构的头条：[from.GetSpeciesAdj]使团在[dpe_mission_host_planet.GetName]上遭遇灭顶之灾！情报机构对此也已加以证实。尽管我们竭力保护传教士们的安全，但安保人员仍未能阻止此次屠杀。惨剧发生时，信徒们正为一天中的第一次礼拜而聚集起来。一颗炸弹被突然引爆，爆炸直接摧毁了一半礼拜堂。少量幸存者也几乎都被随之而来的大火夺去了生命。到这一天夜间时，暴徒们已经摧毁了整个城市的好几个区域，杀死了大部分[from.GetSpeciesNamePlural]及其追随者。目前我们还没有最终的统计数据，但据估死伤者超过3000，且这一数字还在不断攀升。这实在是一场民族悲剧。\n\n [from.GetSpeciesAdj]政府宣布将举行哀悼，没有将事件直接归责于我们。他们承认应该听取我们早先的警告。尽管眼下许多[from.GetSpeciesNamePlural]不可避免地对我们仇视憎恨，但随着时间推移，我们或许还是能够修复与他们的关系。"
+
+dpe_spiritualist_mission.633.name:0 "[from.GetSpeciesAdj]布道使团遭遇惨剧！"
+dpe_spiritualist_mission.633.desc:0 "突发消息占据了两国所有新闻机构的头条：[from.GetSpeciesAdj]使团在[dpe_mission_host_planet.GetName]上遭遇灭顶之灾！情报机构对此也已加以证实。尽管我们竭力保护传教士们的安全，但安保人员仍未能阻止此次屠杀。惨剧发生时，信徒们正为一天中的第一次礼拜而聚集起来。一颗炸弹被突然引爆，爆炸直接摧毁了一半礼拜堂。少量幸存者也几乎都被随之而来的大火夺去了生命。到这一天夜间时，暴徒们已经摧毁了整个城市的好几个区域，杀死了大部分[from.GetSpeciesNamePlural]及其追随者。目前我们还没有最终的统计数据，但据估死伤者超过3000，且这一数字还在不断攀升。这实在是一场民族悲剧。\n\n尽管我们早已警告[from.GetSpeciesNamePlural]局势可能恶化，他们还是公开将袭击归咎于我们。此次事件很可能在未来很长一段时间内为双方关系蒙上阴影。"
+
+dpe_spirmission_killed_faction1:0 "传教士被杀害"
+dpe_spirmission_planet_xenos_unwelcome:0 "外星人不受欢迎"
+dpe_spirmission_planet_xenos_unwelcome_desc:0 "民众们自行其是，杀死了企图转化他们的外星传教士"
+
+dpe_spirmission_killed_faction:0 "因未能及时召回使团而愤怒"
+dpe_spirmission_killed_opinion:0 "传教士被屠杀"
+dpe_spirmission_killed_xenophobia:0 "传教士被异族屠杀"
+dpe_spirmission_killed_xenophobia_desc:0 "一个志在向外星文明传播信仰的使团被异族屠杀。对外星人的信任遭受沉重打击。"
+dpe_spirmission_killed_opinion2:0 "传教士被屠杀"
+
+dpe_spiritualist_mission.64.name:0 "[dpe_mission_host_planet.GetName]上的局势已经稳定"
+dpe_spiritualist_mission.64.desc:0 "幸运的是，我们的教团在[dpe_mission_host_planet.GetName]所面临的局势已逐渐平静下来。当地人逐渐开始缓慢接受我们的存在，传教士们也学会了尊重他们的界限。双方似乎达到了一个微妙的平衡。"
+dpe_spiritualist_mission.65.name:0 "$dpe_spiritualist_mission.64.name$"
+dpe_spiritualist_mission.65.desc:0 "幸运的是，[dpe_missionary_country.GetSpeciesAdj]教团在[dpe_mission_host_planet.GetName] 所面临的局势已逐渐平静下来。那里的居民逐渐开始缓慢接受他们的存在，传教士们也学会了尊重当地人的界限。双方似乎达到了一个微妙的平衡。"
+
+dpe_hosting_spirmission_planet_turbulence:0 "外星使团引起骚乱"
+dpe_hosting_spirmission_planet_turbulence_desc:0 "当地部分民众对外星使团的到来采取敌视态度"
+
+dpe_spirmission_sent_mission_home:0 "将布道使团送回去"
+
+dpe_spirmission_minor_mission:0 "唯心主义传教士"
+dpe_spirmission_minor_mission_desc:0 "外星传教士们努力在我们的国土内传播他们的宗教，然而信者寥寥。因此他们的影响有限。"
+dpe_spirmission_major_mission:0 "$dpe_spirmission_minor_mission$"
+dpe_spirmission_major_mission_desc:0 "外星传教士们努力在我们的国土内传播其宗教。他们的布道很受民众欢迎，许多人开始拥抱其理念。"
+
+dpe_spiritualist_mission_planet_success.tooltip:0 "[dpe_mission_host_planet.GetName]上的四个人口£pops 转向$ethic_spiritualist$"
+dpe_spiritualist_mission_planet_mid_success.tooltip:0 "[dpe_mission_host_planet.GetName]上的两个人口£pops 转向$ethic_spiritualist$"
+
+dpe_spiritualist_mission.7.name:0 "[dpe_neighbour.GetName]妨害我们的布道使团"
+dpe_spiritualist_mission.7.desc:0 "使团部分成员近来抱怨[dpe_neighbour.GetSpeciesAdj]政府正在公开阻挠其活动。一直以来都有怀疑的声音称他们冷淡怠慢的合作态度就是为了阻止教士们的福音传播开来，而随着布道越来越成功，阻挠行动的力度大大加强。我们似乎很难取得更大的进展了。应该采取何种措施？"
+dpe_spiritualist_mission.7.A:0 "使团已经达成使命。将他们召回。"
+dpe_spiritualist_mission.7.B:0 "公开谴责[dpe_neighbour.GetSpeciesNamePlural]"
+dpe_spiritualist_mission.7.B.tooltip:0 "[dpe_neighbour.GetSpeciesNamePlural]不太可能淡然接受指责"
+dpe_spiritualist_mission.7.C:0 "使团将继续前行，哪怕局势不利"
+
+dpe_spirmission_accused_us:0 "被斥欺诈"
+dpe_spirmission_deceived:0 "阻挠使团布道"
+
+dpe_spiritualist_mission.71.name:0 "[from.GetName]指责我们！"
+dpe_spiritualist_mission.71.desc:0 "亲爱的[root.GetSpeciesNamePlural],我们注意到贵方一直采取行动阻挠我们的使团向你们的人民传播救赎。恳请贵方停止此类行为，切勿再拒斥神恩。拯救自己的灵魂，为时不晚！ "
+dpe_spiritualist_mission.71.option:0 "多么无理的指控！使团的一切活动自今日起停止。"
+
+dpe_spiritualist_mission.72.name:0 "[from.GetName]进行回应"
+dpe_spiritualist_mission.72.desc:0 "$dpe_spiritualist_mission.71.desc$"
+dpe_spiritualist_mission.72.option:0 "可怜的愚者们，竟回绝我们施予的启蒙"
+
+dpe_spiritualist_mission.73.name:0 "[from.GetSpeciesAdj]使团离境！"
+dpe_spiritualist_mission.73.desc:0 "在取得有限的成功后，向我们施以“救赎”的[from.GetSpeciesAdj]教团已经离开，宣称使命达成。[from.GetSpeciesNamePlural]似乎已经发觉我们对传教的暗中阻挠，决定最简单的做法就是一走了之。尽管[from.GetSpeciesAdj]大使对我们的态度带上了未曾有过的冷淡，但为阻止他们的“福音”传播开来而付出这点代价无疑是值得的。"
+
+dpe_spiritualist_mission.74.name:0 "我们的暗中阻挠被发觉"
+dpe_spiritualist_mission.74.desc:0 "[from.GetSpeciesAdj]使团最近的行动明白无误地证明了一件事：他们不知如何已经发觉了我们在暗中阻挠传教，并开始设法采取对策。不过尽管他们的布道取得了有限的成功，我们的情报官员作出保证，称局势尽在掌握。"
+dpe_spiritualist_mission.74.A:0 "知道了"
+dpe_spiritualist_mission.74.B:0 "我们应该把他们送回去，以防万一"
+
+dpe_spiritualist_mission.75.name:0 "[from.GetSpeciesNamePlural]将我们的布道使团遣回"
+dpe_spiritualist_mission.75.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们很遗憾的通知贵方，[from.GetName]已经认定，贵方的使团对我国来说是一个动乱因素。为此我们已经命令他们停止活动，返回祖国。诚盼贵方不要因此而感到冒犯。"
+
+
+dpe_spirmission_sent_home_faction:0 "将使团遣回"
+
+dpe_spirmission_succeeded_country:0 "布道成功"
+dpe_spirmission_succeeded_country_desc:0 "由于成功将唯心主义真理传授给邻国，国内的唯心主义运动活力焕发。民众们现在对唯心主义热情重燃。"
+dpe_spirmission_succeeded_faction:0 "布道成功"
+
+
+#these events are 10 years later
+
+dpe_spiritualist_mission.10.name:0 "派往[from.GetName]的布道使团"
+dpe_spiritualist_mission.10.desc.low:0 "我们派往[from.GetName]的使团在过去这些年间收效甚微：大部分[from.GetSpeciesNamePlural]对他们的福音听而不闻，根本不愿遵循正途。已经有争论的声音对继续布道是否还有任何意义表示怀疑。"
+dpe_spiritualist_mission.10.desc.mid:0 "我们派往[from.GetName]的使团在过去这些年间取得了有限的成功：一个略具规模的[from.GetSpeciesNamePlural]团体现在已被引领踏上正途。布道活动应该继续吗？ "
+dpe_spiritualist_mission.10.desc.high:0 "我们派往[from.GetName]的使团在过去这些年间大获成功：尽管[from.GetSpeciesAdj]政府还没有完全踏上正途，许多[from.GetSpeciesNamePlural]却已经先行一步。有些虔信者甚至开启了前往我们星球的朝圣之旅。布道活动应该继续吗？"
+dpe_spiritualist_mission.10.desc.success:0 "我们派往[from.GetName]的使团大获成功：由于他们的不懈努力，唯心主义已经完全融入[from.GetSpeciesNamePlural]的生活方式，许多当地民众甚至踏上了前往我们星球的朝圣之旅。除了少数几人决定留在[dpe_mission_host_planet.GetName]，继续引导[from.GetSpeciesNamePlural]大众之外，大部分传教士已经开始准备荣归故里。他们在[from.GetName]布道的岁月中已与许多当地人成为了朋友，[from.GetSpeciesNamePlural]为欢送使团组织了一次大型庆典。此次盛事标志着两族之间一段全新友谊的开端。"
+dpe_spiritualist_mission.10.option.continue:0 "继续传教——他们的工作意义非凡"
+dpe_spiritualist_mission.10.option.cancel:0 "迎回使团——他们已经奉献了太多"
+dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
+
+#this is every 15 years afterwards
+dpe_spiritualist_mission.11.name:0 "$dpe_spiritualist_mission.10.name$"
+dpe_spiritualist_mission.11.desc.low:0 "$dpe_spiritualist_mission.10.desc.low$"
+dpe_spiritualist_mission.11.desc.mid:0 "$dpe_spiritualist_mission.10.desc.mid$"
+dpe_spiritualist_mission.11.desc.high:0 "$dpe_spiritualist_mission.10.desc.high$"
+dpe_spiritualist_mission.11.desc.success:0 "$dpe_spiritualist_mission.10.desc.success$"
+
+dpe_spiritualist_mission.101.name:0 "[from.GetSpeciesAdj]布道使团"
+dpe_spiritualist_mission.101.desc.low:0 "尽管未能吸引多少信徒，[from.GetSpeciesAdj]使团还是表达了留在我国继续他们布道事业的愿望。要答应他们的请求吗？"
+dpe_spiritualist_mission.101.desc.mid:0 "[from.GetSpeciesAdj]使团的布道事业取得了有限的成功：他们在[root.GetName]吸引了一支略具规模的追随者团体。使团已经表达了留在我国继续他们布道事业的愿望。要答应他们的请求吗？"
+dpe_spiritualist_mission.101.desc.high:0 "[from.GetSpeciesAdj]使团的布道事业颇为成功：他们在[root.GetName]吸引了一支规模可观的追随者团体。使团已经表达了留在我国继续他们布道事业的愿望。要答应他们的请求吗？"
+dpe_spiritualist_mission.101.option.continue:0 "如果愿意的话他们可以继续"
+dpe_spiritualist_mission.101.option.cancel:0 "送他们回去"
+ 
+dpe_spiritualist_mission.102.name:0 "[from.GetSpeciesAdj]布道使团离开"
+dpe_spiritualist_mission.102.desc.uninterested:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经决定召回派往[dpe_mission_host_planet.GetName]的使团。我们对向其他帝国传播信仰已经失去兴趣。感谢贵国过去这些年间对使团的款待。"
+dpe_spiritualist_mission.102.desc.low:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经决定召回派往[dpe_mission_host_planet.GetName]的使团。由于将[root.GetSpeciesNamePlural]民众引向正途的努力收效甚微，我们不得不遗憾地承认，并非所有种族都能得到救赎。感谢贵国过去这些年间对使团的款待。"
+dpe_spiritualist_mission.102.desc.mid:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经决定召回派往[dpe_mission_host_planet.GetName]的使团。感谢贵国过去这些年间对使团的款待。"
+dpe_spiritualist_mission.102.desc.high:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经决定召回派往[dpe_mission_host_planet.GetName]的使团。他们的奉献已经确保[root.GetName]踏上了追寻真理的正途。感谢贵国过去这些年间对使团的款待。"
+dpe_spiritualist_mission.102.A:0 "很遗憾他们将要离去"
+dpe_spiritualist_mission.102.B:0 "终于摆脱他们了"
+ 
+dpe_spiritualist_mission.1011.name:0 "[from.GetSpeciesNamePlural]将我们的布道使团送回"
+dpe_spiritualist_mission.1011.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们已与你们的传教士们共度了数年时光。然而，送他们返回故土的时刻已经到来。感谢他们为在[root.GetName]传播唯心主义所作出的不懈努力。"
+dpe_spiritualist_mission.1011.option:0 "并非所有物种都能得到启蒙。"
+ 
+dpe_spiritualist_mission.1099.name:0 "使命达成"
+dpe_spiritualist_mission.1099.desc:0 "[from.GetSpeciesAdj]使团正在准备返回故土，他们的布道已大获成功：由于他们的不懈努力，唯心主义已经完全融入了我们的生活方式。传教士们在[dpe_mission_host_planet.GetName]布道的岁月中已与当地许多人成为了朋友，民众为欢送使团组织了一次大型庆典。几名[from.GetSpeciesNamePlural]请求留在[dpe_mission_host_planet.GetName]，继续指引[root.GetSpeciesNamePlural]。我们应该答应这一请求吗？"
+dpe_spiritualist_mission.1099.A:0 "当然——他们是最为尊贵的客人"
+dpe_spiritualist_mission.1099.B:0 "他们没什么理由继续留在我们境内了。"
+
+
+#contingencies
+
+dpe_spiritualist_mission.9611.name:0 "肃正协议袭击[dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9611.desc:0 "肃正协议袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括我们的传教士！"
+
+dpe_spiritualist_mission.9612.name:0 "异次元入侵者袭击[dpe_mission_host_planet.GetName]！"
+dpe_spiritualist_mission.9612.desc:0 "异次元入侵者袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括[from.GetSpeciesAdj]的传教士！"
+
+dpe_spiritualist_mission.9621.name:0 "虫群袭击[dpe_mission_host_planet.GetName]！"
+dpe_spiritualist_mission.9621.desc:0 "虫群袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括我们的传教士！"
+
+dpe_spiritualist_mission.9622.name:0 "虫群袭击[dpe_mission_host_planet.GetName]！"
+dpe_spiritualist_mission.9622.desc:0 "虫群袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括[from.GetSpeciesAdj]的传教士！"
+
+dpe_spiritualist_mission.9631.name:0 "异次元入侵者袭击[dpe_mission_host_planet.GetName]！"
+dpe_spiritualist_mission.9631.desc:0 "异次元入侵者袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括我们的传教士！"
+
+dpe_spiritualist_mission.9632.name:0 "异次元入侵者袭击[dpe_mission_host_planet.GetName]！"
+dpe_spiritualist_mission.9632.desc:0 "异次元入侵者袭击了[dpe_mission_host_planet.GetName]，杀害了那里所有的居民，包括[from.GetSpeciesAdj]的传教士！"
+
+dpe_spiritualist_mission.971.name:0 "我们的传教士已返回"
+dpe_spiritualist_mission.971.desc:0 "[dpe_neighbour.GetName]已经失去了对[dpe_mission_host_planet.GetName]的控制。幸运的是，我们派驻那里的布道使团在一片混乱中成功出逃，毫发无损，顺利返回我国。"
+
+dpe_spiritualist_mission.972.name:0 "[from.GetSpeciesAdj]传教士已经返回"
+dpe_spiritualist_mission.972.desc:0 "在[dpe_mission_host_planet.GetName]沦陷于[fromfromfrom.GetName]后，[from.GetSpeciesAdj]的布道使团已经返回了他们的祖国。"
+
+dpe_spiritualist_mission.98.name:0 "与传教士母国交战！"
+dpe_spiritualist_mission.98.desc:0 "与[dpe_missionary_country.GetName]的战争将我们置于了尴尬的地位。他们之前向[dpe_mission_host_planet.GetName]派驻了一个布道使团，现在我们不得不决定如何处置这些传教士。一些人主张只需把他们驱逐出境，令他们自行返回母国，而另一些则要求全部处死，以壮声威。应采取何种措施？" 
+dpe_spiritualist_mission.98.A:0 "全部杀掉。让他们知道轻视我们的后果！"
+dpe_spiritualist_mission.98.A.tooltip:0 "与所有非结盟国家的关系：§R-30§!\n与[dpe_missionary_country.GetName]关系： §R-100§!"
+dpe_spiritualist_mission.98.B:0 "让他们回去。我们不是野蛮人，两军交战，不斩来使。"
+dpe_spiritualist_mission.98.B.tooltip:0 "与所有非结盟国家的关系： §G+30§!\n与[dpe_missionary_country.GetName]关系： §R+50§!"
+dpe_spiritualist_mission.98.C:0 "把他们投入监狱。他们知道的太多，放回去无异于资敌。"
+
+dpe_dishonourable_in_war:0 "战争中施暴"
+dpe_killed_missionaries_faction:0 "传教士被杀"
+dpe_killed_missionaries_faction1:0 "处死了敌方人员"
+dpe_honourable_in_war:0 "战争中恪守荣誉"
+dpe_not_killed_missionaries_faction:0 "允许敌方人员返回"
+
+dpe_spiritualist_mission.981.name:0 "我们的传教士被杀害！"
+dpe_spiritualist_mission.981.desc:0 "我们接到消息，战争爆发后，我们曾努力启蒙的残暴蛮族[dpe_neighbour.GetSpeciesNamePlural]杀害了我们的传教士。民众们面对这一无耻暴行全都义愤填膺！ "
+dpe_spiritualist_mission.981.option:0 "这群野蛮人必将血债血偿！ "
+dpe_spiritualist_mission.982.name:0 "我们的传教士返回祖国！"
+dpe_spiritualist_mission.982.desc:0 "由于眼下与[dpe_neighbour.GetName]的冲突，我们之前派出的布道使团已被送回。传教士们说他们得到了礼貌对待，但大部分财物和资料都被强制没收了。
+"
+dpe_spiritualist_mission.983.name:0 "我们的传教士被捕入狱！"
+dpe_spiritualist_mission.983.desc:0 "国家最近与[dpe_neighbour.GetName]之间爆发的冲突带来了意料之外的后果。我们试图给他们带去启蒙的善举导致之前派去的布道使团身陷险境。他们目前被关押在[dpe_mission_host_planet.GetName]，所有要求释放他们的努力都遭到了无视。"
+dpe_spiritualist_mission.983.option:0 "至少他们还活着"
+
+dpe_spiritualist_mission.991.name:0 "[LastKilledCountryName]崩塌！"
+dpe_spiritualist_mission.991.desc:0 "[LastKilledCountryName]的百般抵抗终告徒劳，这个国家已经不复存在。他们的传教士现在已失去祖国，无处可归。应该如何对待他们？"
+dpe_spiritualist_mission.991.A:0 "给予他们公民身份，这是我们起码的善意"
+dpe_spiritualist_mission.991.B:0 "他们当了奴隶肯定很能干"
+dpe_spiritualist_mission.991.C:0 "他们得去别处另寻家园了" 
+
+dpe_missionary_planet:0 "定居的传教士们"
+dpe_missionary_planet_desc:0 "来自邻国的前传教士们现在已将这颗星球当作了新的家园。"
+
+
+
+
+#Xenophile Mission
+
+dpe_xenophile_mission.3.name:0 "发现[dpe_new_contact.GetName]"
+dpe_xenophile_mission.3.desc:0 "许多[root.GetSpeciesNamePlural]对新近发现的[dpe_new_contact.GetName]及其高度发达的异星社会着了迷。新闻版面上充斥着对[dpe_new_contact.GetSpeciesNamePlural]的推测，民众们迫不及待地想要了解更多。受到这股公众热情的鼓舞，[xenophile_faction.GetName]派系向政府官员提交了一个雄心勃勃的计划，准备主动接触[dpe_new_contact.GetSpeciesNamePlural]，向他们提议举行文化交流活动，以期两族能够更好的互相理解。如果[dpe_new_contact.GetName]同意，双方将派一队代表，到对方社会中亲身生活数月。我们应该提出这一倡议吗？ "
+dpe_xenophile_mission.3.A:0 "当然"
+dpe_xenophile_mission.3.B:0 "不，我们会按适当的步调逐渐了解他们"
+
+dpe_rejected_xenophile_mission_faction:0 "拒绝文化交流之旅"
+
+dpe_xenophile_mission.4.name:0 "[from.GetSpeciesNamePlural]希望了解我们"
+dpe_xenophile_mission.4.desc:0 "尊贵的[root.GetSpeciesNamePluralCompliment]，为加深双方人民的友谊，我们在此谨向贵方倡议举行一次文化交流活动。如果贵方首肯，一队[from.GetSpeciesNamePlural]将前往[root.GetName]，在当地[root.GetSpeciesNamePlural]间亲身生活数月时间。同样，我们也会款待贵方派来的体验代表。我们热盼通过此次活动能够更好的理解贵族人民，开启双方友谊的全新篇章。"
+dpe_xenophile_mission.4.A:0 "很荣幸能够有机会深入了解[from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.4.B:0 "我们对文化交流不感兴趣"
+dpe_xenophile_mission.4.C:0 "（欺骗）很高兴有机会深入了解[from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.4.C.tooltip:0 "我们的代表团会尽可能搜集[from.GetName]体制、科技及军事方面的情报。如果间谍活动被发现，[from.GetName]将会十分愤怒"
+dpe_xenophile_mission.4.D:0 "(欺骗)我们热烈期盼款待你们的代表"
+dpe_xenophile_mission.4.D.tooltip:0 "我们将把他们的代表团绑为人质，迫使[from.GetName]付出代价以换取他们安全返回。[from.GetSpeciesNamePlural]是个威胁，我们必须先下手为强！ "
+
+dpe_xenophile_mission_opinion:0 "文化交流代表团"
+dpe_rejected_xenophile_mission_opinion:0 "拒绝了文化交流代表团"
+
+dpe_xenophile_mission.5.name:0 "[dpe_new_contact.GetName]的回应"
+dpe_xenophile_mission.5.desc:0 "很荣幸能够深入了解[root.GetSpeciesNamePlural]"
+dpe_xenophile_mission.6.name:0 "[dpe_new_contact.GetName]的回应"
+dpe_xenophile_mission.6.desc:0 "我们对文化交流不感兴趣"
+
+dpe_xenophile_mission.7.name:0 "[from.GetSpeciesAdj]代表团到达"
+dpe_xenophile_mission.7.desc:0 "[from.GetSpeciesAdj]代表团今日在一片欢呼与掌声中抵达：成队的[root.GetSpeciesNamePlural]民众走上街头欢迎外星友人，更有亿万观众通过新闻频道观看了这一盛况。我们自己的代表团报告说同样受到了热烈欢迎。对文化交流将取得圆满成功的乐观情绪空前高涨。"
+dpe_xenophile_mission.7.A:0 "希望好消息接连不断！"
+dpe_xenophile_mission.7.B:0 "可怜的[from.GetSpeciesNamePlural]，他们还不知道将要遭遇什么。"
+dpe_xenophile_mission.7.C:0 "很好。了解他们所有的秘密应该不难。"
+
+dpe_xenophile_mission.73.name:0 "文化交流团进展报告"
+dpe_xenophile_mission.73.desc:0 "我们与[from.GetSpeciesNamePlural]各自的代表团都已与东道主建立起了友谊。两族之间最初的文化冲击已经逐渐消融，每一天我们都能学到关于[from.GetSpeciesNamePlural]新的奇闻异识，与他们的情谊也与日俱增。"
+dpe_xenophile_mission.74.desc.spying:0 "我们与[from.GetSpeciesNamePlural]各自的代表团都已与东道主建立起了友谊。两族之间最初的文化冲击已经逐渐消融。[from.GetSpeciesNamePlural]对我们以文化交流为掩护开展的间谍行动毫无察觉，越发信任我们。这种局面使我们能够更加轻易地了解他们的秘密……"
