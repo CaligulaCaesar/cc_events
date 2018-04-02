@@ -3605,7 +3605,7 @@ country_event = {
 						}
 						planet = {
 							while = {
-								count = 3
+								count = 2
 								create_army = {
 									owner = event_target:cc_breakaway_country
 									species = root.species
@@ -4185,7 +4185,7 @@ planet_event = {
 			}
 			planet = {
 				while = {
-					count = 3
+					count = 2
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country
@@ -5805,7 +5805,7 @@ planet_event = {
 			}
 			planet = {
 				while = {
-					count = 3
+					count = 2
 					create_army = {
 						owner = event_target:cc_faction_rebels
 						species = event_target:cc_breakaway_country

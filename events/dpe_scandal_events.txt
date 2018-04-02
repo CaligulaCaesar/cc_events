@@ -512,6 +512,8 @@ country_event = {
 		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
 		
 		NOT = { has_authority = auth_imperial }
+		NOT = { has_ascension_perk = ap_transcendence }
+
 		exists = ruler
 		
 		any_owned_pop = {
