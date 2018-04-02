@@ -156,3 +156,36 @@ country_event = {
 }
 
 
+
+country_event = {
+	id = cctest.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+		create_leader = {
+			type = scientist
+			species = owner_main_species
+			name = random
+			skill = 5
+			traits = {
+				trait = leader_trait_maniacal
+				trait = dpe_leader_trait_ancient_knowledge
+			}
+		}
+		last_created_leader = {
+			save_event_target_as = dpe_escaped_scientist
+			if = {
+				limit = {
+					species = { NOT = { has_trait = trait_erudite } }
+				}
+				modify_species = {
+					add_trait = trait_erudite
+				}
+				add_trait = leader_trait_scientist_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+			}
+		}
+	}
+}
