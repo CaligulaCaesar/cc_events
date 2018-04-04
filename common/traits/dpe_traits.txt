@@ -77,3 +77,35 @@ dpe_leader_trait_ancient_knowledge = {
 		weight = 50
 	}
 }
+
+
+dpe_leader_trait_reinvigorated = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_resilient.dds"
+	self_modifier = {
+		leader_age = 30
+	}
+	leader_potential_add = {
+		NOT = { leader_class = ruler}
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+		
+	}
+	leader_class = { admiral scientist general governor ruler }
+	opposites = { "leader_trait_stubborn" "leader_trait_adaptable" "leader_trait_arrested_development" }
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
