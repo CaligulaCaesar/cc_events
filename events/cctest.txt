@@ -152,7 +152,28 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { name = OK }
+	option = {
+		name = OK
+		
+		trigger = { is_ai = no }
+		allow = { is_ai = no }
+	}
+	option = {
+		name = GOOD
+		
+		trigger = { is_ai = yes }
+		allow = { is_ai = yes }
+	}
+	option = {
+		name = UNFORTUNATE
+		
+		allow = { is_ai = no }
+	}
+	option = {
+		name = EXCELLENT
+		
+		allow = { is_ai = yes }
+	}
 }
 
 
@@ -187,5 +208,36 @@ country_event = {
 				add_ruler_trait = leader_trait_ruler_erudite
 			}
 		}
+	}
+}
+
+
+country_event = {
+	id = cctest.21
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = { id = cctest.22 days = 10 }
+	}
+}
+country_event = {
+	id = cctest.22
+	title = OK
+	desc = OK
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		allow = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
+		
+		ai_chance = { factor = 100 }
+		
+		country_event = { id = cctest.10 days = 10 }
+	}
+	option = {
+		name = OK
+		
+		ai_chance = { factor = 1 }
 	}
 }

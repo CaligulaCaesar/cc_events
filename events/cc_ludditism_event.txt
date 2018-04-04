@@ -146,6 +146,11 @@ planet_event = {
 				NOT = { has_ethic = ethic_fanatic_materialist }
 			}
 		}
+		allow = {
+			owner = {
+				NOT = { has_ethic = ethic_fanatic_materialist }
+			}
+		}
 		
 		ai_chance = {
 			modifier = {
@@ -214,6 +219,16 @@ planet_event = {
 		name = CCOPPRESS
 		
 		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_egalitarian
@@ -1336,6 +1351,11 @@ planet_event = {
 				NOT = { has_ethic = ethic_fanatic_materialist }
 			}
 		}
+		allow = {
+			owner = {
+				NOT = { has_ethic = ethic_fanatic_materialist }
+			}
+		}
 		
 		ai_chance = {
 			modifier = {
@@ -1382,6 +1402,16 @@ planet_event = {
 		name = CCOPPRESS
 		
 		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_egalitarian
@@ -1668,6 +1698,9 @@ country_event = {
 		trigger = {
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
+		allow = {
+			NOT = { has_ethic = ethic_fanatic_materialist }
+		}
 		
 		ai_chance = {
 			modifier = {
@@ -1715,6 +1748,14 @@ country_event = {
 		name = CCOPPRESS
 		
 		trigger = {
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		allow = {
 			NOR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
