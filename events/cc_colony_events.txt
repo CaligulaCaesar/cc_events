@@ -1889,6 +1889,21 @@ planet_event = {
 			modifier = cc_pacifist_influence1
 			years = 30
 		}
+
+		owner = {
+			random_owned_planet = {
+				limit = {
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = { has_ethic = ethic_pacifist }
+				}
+				save_event_target_as = random_visit_planet
+			}
+		}
 	}
 	
 	option = {
@@ -5700,6 +5715,21 @@ planet_event = {
 		add_modifier = {
 			modifier = cc_spiritualist_influence1
 			years = 30
+		}
+		
+		owner = {
+			random_owned_planet = {
+				limit = { 
+					NOT = { is_same_value = root }
+					distance = {
+						source = root
+						min_distance = 0
+						max_distance = 75
+					}
+					any_owned_pop = { has_ethic = ethic_spiritualist }
+				}
+				save_event_target_as = random_visit_planet
+			}
 		}
 	}
 	
