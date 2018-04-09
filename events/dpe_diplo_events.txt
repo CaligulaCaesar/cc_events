@@ -960,7 +960,7 @@ country_event = {
 		trigger = {
 			event_target:enemy = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
-				NOT = { 
+				NOR = { 
 					is_same_species = FROM
 					OR = {
 						has_ethic = ethic_pacifist
@@ -980,7 +980,7 @@ country_event = {
 		trigger = {
 			event_target:enemy = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
-				NOT = { 
+				NOR = { 
 					is_same_species = FROM
 					OR = {
 						has_ethic = ethic_pacifist
@@ -999,7 +999,7 @@ country_event = {
 		trigger = {
 			event_target:enemy = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
-				NOT = { 
+				NOR = { 
 					is_same_species = FROM
 					OR = {
 						has_ethic = ethic_pacifist
@@ -1086,7 +1086,7 @@ country_event = {
 			event_target:enemy = {
 				has_ai_personality = devouring_swarm
 				FROM = { 
-					NOT = {
+					NOR = {
 						is_species_class = ROBOT
 						has_authority = auth_machine_intelligence
 					}
@@ -1214,7 +1214,7 @@ country_event = {
 						}
 					}
 					ROOT = {
-						NOT = {
+						NOR = {
 							is_species_class = ROBOT
 							has_authority = auth_machine_intelligence
 						}
@@ -1241,7 +1241,7 @@ country_event = {
 						is_fallen_machine_empire = no
 					}
 					ROOT = {
-						NOT = {
+						NOR = {
 							is_species_class = ROBOT
 							has_authority = auth_machine_intelligence
 						}
@@ -1280,7 +1280,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1318,7 +1318,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1332,7 +1332,7 @@ country_event = {
 				has_ai_personality = fanatic_purifiers
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1352,7 +1352,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1372,7 +1372,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1392,7 +1392,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1406,7 +1406,7 @@ country_event = {
 			FROM = {
 				has_ai_personality = hive_mind
 			}
-			NOT = {
+			NOR = {
 				has_authority = auth_machine_intelligence
 				is_species_class = ROBOT
 			}
@@ -1418,7 +1418,7 @@ country_event = {
 			FROM = {
 				has_ai_personality = devouring_swarm
 			}
-			NOT = {
+			NOR = {
 				has_authority = auth_machine_intelligence
 				is_species_class = ROBOT
 			}
@@ -1429,7 +1429,7 @@ country_event = {
 		trigger = {
 			FROM = { has_ai_personality = exterminators }
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1441,7 +1441,7 @@ country_event = {
 		trigger = {
 			FROM = { has_ai_personality = servitors }
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1453,7 +1453,7 @@ country_event = {
 		trigger = {
 			FROM = { has_ai_personality = assimilators }
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}
@@ -1473,7 +1473,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				NOT = {
+				NOR = {
 					is_species_class = ROBOT
 					has_authority = auth_machine_intelligence
 				}

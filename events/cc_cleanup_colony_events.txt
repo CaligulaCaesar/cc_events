@@ -297,12 +297,10 @@ planet_event = {
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = {
-										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-										pop_percentage = {
-											limit = { is_same_species = prev }
-											percentage > 0.45
-										}
+									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									pop_percentage = {
+										limit = { is_same_species = prev }
+										percentage > 0.45
 									}
 								}
 							}
@@ -324,12 +322,10 @@ planet_event = {
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = {
-										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-										pop_percentage = {
-											limit = { is_same_species = prev }
-											percentage > 0.45
-										}
+									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									pop_percentage = {
+										limit = { is_same_species = prev }
+										percentage > 0.45
 									}
 								}
 							}
@@ -356,12 +352,10 @@ planet_event = {
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = {
-										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-										pop_percentage = {
-											limit = { is_same_species = prev }
-											percentage > 0.45
-										}
+									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									pop_percentage = {
+										limit = { is_same_species = prev }
+										percentage > 0.45
 									}
 								}
 							}
@@ -387,12 +381,10 @@ planet_event = {
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = {
-										any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-										pop_percentage = {
-											limit = { is_same_species = prev }
-											percentage > 0.45
-										}
+									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									pop_percentage = {
+										limit = { is_same_species = prev }
+										percentage > 0.45
 									}
 								}
 							}

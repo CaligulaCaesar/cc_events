@@ -230,16 +230,14 @@ country_event = {
 	
 	option = {
 		name = OK
-		allow = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
 		
-		ai_chance = { factor = 100 }
-		
-		country_event = { id = cctest.10 days = 10 }
 	}
 	option = {
 		name = OK
+		allow = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
 		
-		ai_chance = { factor = 1 }
+		
+		country_event = { id = cctest.10 days = 10 }
 	}
 }
 

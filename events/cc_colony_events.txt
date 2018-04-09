@@ -805,20 +805,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -1572,20 +1558,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}					
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -2613,20 +2585,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}					
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -3405,20 +3363,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}					
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -4610,7 +4554,6 @@ planet_event = {
 	option = {
 		name = cc_colony_events.546.C
 		trigger = { owner = { exists = ruler } }
-		allow = { owner = { exists = ruler } }
 			
 		hidden_effect = {
 			owner = { kill_leader = { type = ruler show_notification = no } }
@@ -5399,20 +5342,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}					
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -6430,20 +6359,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					NOR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -7268,16 +7183,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				NOR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
-			}
-		}
 		allow = {
 			owner = {
 				NOR = {
@@ -7756,14 +7661,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -8528,14 +8425,6 @@ planet_event = {
 		
 		custom_tooltip = CCUNPREDICTABLE.tooltip
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {
@@ -8947,14 +8836,6 @@ planet_event = {
 	option = {
 		name = cc_colony_events.65.C
 		
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
-			}
-		}
 		allow = {
 			owner = {
 				OR = {

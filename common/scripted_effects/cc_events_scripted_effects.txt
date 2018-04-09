@@ -889,12 +889,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 					is_same_species = root.owner
 				}
 				AND = {
-					NOT = {
-						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-						pop_percentage = {
-							limit = { is_same_species = root.owner }
-							percentage > 0.45
-						}
+					NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+					pop_percentage = {
+						limit = { is_same_species = root.owner }
+						percentage > 0.45
 					}
 				}
 			}
@@ -910,12 +908,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 					is_same_species = root.owner
 				}
 				AND = {
-					NOT = {
-						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-						pop_percentage = {
-							limit = { is_same_species = root.owner }
-							percentage > 0.45
-						}
+					NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+					pop_percentage = {
+						limit = { is_same_species = root.owner }
+						percentage > 0.45
 					}
 				}
 			}
@@ -931,12 +927,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 					is_same_species = root.owner
 				}
 				AND = {
-					NOT = {
-						any_owned_pop = { has_pop_flag = cc_xenophobe_species }
-						pop_percentage = {
-							limit = { is_same_species = root.owner }
-							percentage > 0.45
-						}
+					NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+					pop_percentage = {
+						limit = { is_same_species = root.owner }
+						percentage > 0.45
 					}
 				}
 			}
