@@ -128,36 +128,37 @@ country_event = {
 			}
 		}
 
-        if = {
-            limit = { has_ethic = ethic_gestalt_consciousness }
+		if = {
+			limit = { has_ethic = ethic_gestalt_consciousness }
 
-            random_list = {
-                1 = {
-                    country_event = { id = leader.91 }
-                    modifier = {
-                        factor = 3
-                        NOT = { exists = fromfrom.leader }
-                    }
-                }
-                7 = { }
-            }
-            else = {
-                if = {
-                    limit = { NOT = { exists = fromfrom.leader } }
-                    country_event = { id = leader.92 }
+			random_list = {
+				1 = {
+					country_event = { id = leader.91 }
+					modifier = {
+						factor = 3
+						NOT = { exists = fromfrom.leader }
+					}
+				}
+				7 = { last_created_leader = { kill_leader = { show_notification = no } } }
+			}
+			else = {
+				if = {
+					limit = { NOT = { exists = fromfrom.leader } }
+					country_event = { id = leader.92 }
 
-                    else = {
-                        random = {
-							chance = 33
-							
-							fromfrom.leader = { save_event_target_as = dpe_admiral }
-                            country_event = { id = leader.92 }
-                        }
-                    }
-                }
-            }
-        }
-    }
+					else = {
+						random_list = {
+							1 = {
+								fromfrom.leader = { save_event_target_as = dpe_admiral }
+								country_event = { id = leader.92 }
+							}
+							2 = { last_created_leader = { kill_leader = { show_notification = no } } }
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -224,6 +225,8 @@ country_event = {
 	option = {
 		name = dpe_leader.1.B
 		
+		hidden_effect = { event_target:dpe_admiral = { kill_leader = { show_notification = no } } }
+
 		event_target:ship = {
 			add_modifier = {
 				modifier = dpe_talented_captain
