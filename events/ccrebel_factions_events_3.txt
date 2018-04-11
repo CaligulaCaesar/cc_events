@@ -1152,6 +1152,12 @@ country_event = {
 				}
 				if = {
 					limit = {
+						event_target:cc_rebellious_faction = { is_pop_faction_type = totalitarian }
+					}
+					NOT = { is_pop_faction_type = progressive }
+				}
+				if = {
+					limit = {
 						event_target:cc_rebellious_faction = { is_pop_faction_type = technologist }
 					}
 					NOT = { is_pop_faction_type = traditionalist }
