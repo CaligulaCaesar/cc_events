@@ -31,7 +31,7 @@ cc_colony_events.221.name:0 "信任危机在[Root.GetName]上持续"
 cc_colony_events.221.desc:0 "数年之后,针对[cc_colony_leader.GetName]被捕的抗议已经消散。然而[cc_colony_leader.GetHisHer]的记忆——以及对[cc_colony_leader.GetSheHe]是如何被与[root.GetName]粗暴分离的记忆已经深深刻入了[root.GetName]的民众心中，仍然隐隐作痛。这里的殖民者不太可能再次毫无保留地信任母星系了。"
 
 cc_colony_events.23.name:0 "抗议者解救[cc_colony_leader.GetName]"
-cc_colony_events.23.desc:0 "[cc_colony_leader.GetName]被捕在[Root.GetName]激起了全面抗议。当地官员未能控制事态，在一片混乱中，一群抗议者冲破了行星监狱，释放了[cc_colony_leader. GetName]。我们的代表向执政官请求指导处理这一事件。"
+cc_colony_events.23.desc:0 "[cc_colony_leader.GetName]被捕在[Root.GetName]激起了全面抗议。当地官员未能控制事态，在一片混乱中，一群抗议者冲破了行星监狱，释放了[cc_colony_leader.GetName]。我们的代表向执政官请求指导处理这一事件。"
 cc_colony_events.23.A:0 "顺从他们的要求。我们无法承受一场叛乱。"
 cc_colony_events.23.B:0 "再次逮捕[cc_colony_leader.GetHimHer]，把[cc_colony_leader.GetHimHer]押送到[Root.Owner.Capital.GetName]。"
 cc_colony_events.23.C:0 "把这个叛乱分子和[cc_colony_leader.GetHisHer]追随者解决掉。我们绝不容忍暴动!"
@@ -57,7 +57,7 @@ cc_colony_events.25.A: "当然!"
 cc_colony_events.25.B: "花费太高了。"
 cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]的影响会在30年内消退。"
 cc_colony_events.251.name:0 "[root.GetName]上的军事学院正式成立"
-cc_colony_events.251.desc:0 "为纪念[cc_colony_leader.GetName]而建的军事学院已经完工了，已故领袖的巨大雕像矗立其中。殖民地民众为此而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]的重要军事中心而声名远播。不仅如此，[root.owner.GetName]境内各地的服役人员和他们的支持者们也感到欢欣鼓舞，将之视为[root.owner.GerRulerTitle]向所有为国效力的将士们进行的致意。"
+cc_colony_events.251.desc:0 "为纪念[cc_colony_leader.GetName]而建的军事学院已经完工了，已故领袖的巨大雕像矗立其中。殖民地民众为此而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]的重要军事中心而声名远播。不仅如此，[root.owner.GetName]境内各地的服役人员和他们的支持者们也感到欢欣鼓舞，将之视为[root.owner.GetRulerTitle]向所有为国效力的将士们进行的致意。"
 
 cc_milacademy_will_be_built:0 "\n军事学院将会在5年后完工。这将会添加以下调整值：§Y$cc_milacademy$§!, 效果：\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
@@ -896,7 +896,7 @@ cc_cleanup_events.22.name:0 "[root.GetName]缅怀退役舰队军官"
 cc_cleanup_events.22.desc:0 "[root.GetName]的前任政权拒绝以当地一位著名退役舰队军官之名建造一所军事学院，因而冒犯了[root.GetName]的军国主义民众。我们应该接手其建造吗？"
 
 cc_cleanup_events.23.name:0 "[root.GetName]上的军事学院揭幕"
-cc_cleanup_events.23.desc:0 "[root.GetName]上的军事学院已经完工，已故领袖的巨大雕像矗立其中。殖民地民众为此而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]的重要军事中心而声名远播。不仅如此，[root.owner.GetName]境内各地的服役人员和他们的支持者们也感到欢欣鼓舞，将之视为[root.owner.GerRulerTitle]向所有为国效力的将士们进行的致意。"
+cc_cleanup_events.23.desc:0 "[root.GetName]上的军事学院已经完工，已故领袖的巨大雕像矗立其中。殖民地民众为此而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]的重要军事中心而声名远播。不仅如此，[root.owner.GetName]境内各地的服役人员和他们的支持者们也感到欢欣鼓舞，将之视为[root.owner.GetRulerTitle]向所有为国效力的将士们进行的致意。"
 
 cc_cleanup_events.24.name:0 "[root.GetName]上的军事学院"
 cc_cleanup_events.24.desc:0 "[root.GetName]的前任政权之前正在当地建设一座宏伟的军事学院。此地的军国主义组织影响广泛，如果学院完工，就将成为其中心。我们应该继续其建造吗？"
