@@ -128,13 +128,16 @@ country_event = {
 			}
 		}
 		
-		trigger = {
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = totalitarian
-					support > 0.15
+		allow = {
+			custom_tooltip = {
+				fail_text = dpe_tot_faction_15
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = totalitarian
+						support > 0.15
+					}
+					count = 1
 				}
-				count = 1
 			}
 		}
 		ai_chance = {
@@ -898,13 +901,16 @@ country_event = {
 			}
 		}
 		
-		trigger = {
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = imperialist
-					support > 0.07
+		allow = {
+			custom_tooltip = {
+				fail_text = dpe_imp_fac_7
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = imperialist
+						support > 0.07
+					}
+					count = 1
 				}
-				count = 1
 			}
 		}
 	}

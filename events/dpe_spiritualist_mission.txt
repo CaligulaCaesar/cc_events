@@ -530,16 +530,14 @@ country_event = {
 		}
 		
 		trigger = {
+			has_authority = auth_hive_mind
+			NOT = { has_civic = civic_hive_devouring_swarm }
+		}
+		allow = {
 			NOR = {
 				is_hostile_to = from
 				is_rival = from
 			}
-			opinion = {
-				who = from
-				value > -40
-			}
-			has_authority = auth_hive_mind
-			NOT = { has_civic = civic_hive_devouring_swarm }
 		}
 	}
 	option = {
@@ -3964,7 +3962,7 @@ country_event = {
 			}
 		}
 
-		trigger = {
+		allow = {
 			NOR = {
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
@@ -4835,8 +4833,8 @@ country_event = {
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
 			}
-			any_owned_planet = { free_pop_tiles > 1 }
 		}
+		allow = { any_owned_planet = { free_pop_tiles > 1 } }
 		ai_chance = { factor = 10 }
 	}
 	option = {
@@ -4880,8 +4878,8 @@ country_event = {
 				has_ethic = ethic_fanatic_xenophobe
 			}
 			NOT = { allows_purge = yes }
-			any_owned_planet = { free_pop_tiles > 1 }
 		}
+		allow = { any_owned_planet = { free_pop_tiles > 1 } }
 		ai_chance = { factor = 10 }
 	}
 	option = {

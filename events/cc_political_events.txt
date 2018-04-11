@@ -2013,7 +2013,7 @@ country_event = {
 	option = {
 		name = cc_events_mod.17.A
 		
-		trigger = { has_faction = xenoist }
+		allow = { has_faction = xenoist }
 		
 		shift_ethic = ethic_xenophile
 
@@ -2113,7 +2113,7 @@ country_event = {
 	option = {
 		name = cc_events_mod.17.C
 						
-		trigger = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
+		allow = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
 		
 		add_modifier = {
 			modifier = cc_defiance_of_law
@@ -2217,7 +2217,7 @@ country_event = {
 			}
 		}
 		
-		trigger = {
+		allow = {
 			OR = {
 				has_ethic = ethic_authoritarian
 				has_ethic = ethic_fanatic_authoritarian
@@ -2312,7 +2312,7 @@ country_event = {
 	option = {
 		name = cc_events_mod.18.A
 		
-		trigger = { has_faction = xenoist }
+		allow = { has_faction = xenoist }
 		
 		shift_ethic = ethic_xenophile
 
@@ -2393,7 +2393,7 @@ country_event = {
 	option = {
 		name = cc_events_mod.18.C
 						
-		trigger = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
+		allow = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
 		
 			add_modifier = {
 				modifier = cc_defiance_of_law1
@@ -2537,7 +2537,7 @@ country_event = {
 	option = {
 		name = cc_events_mod.57.B
 		
-		trigger = { has_faction = totalitarian }
+		allow = { has_faction = totalitarian }
 		
 		add_monthly_resource_mult = {
 			resource = physics_research

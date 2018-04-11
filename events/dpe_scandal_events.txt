@@ -116,7 +116,7 @@ country_event = {
 			}
 		}
 		
-		trigger = { has_faction = progressive }
+		allow = { has_faction = progressive }
 	}
 
 	option = {
@@ -337,7 +337,7 @@ country_event = {
 	option = {
 		name = dpe_scandal.3.A
 		
-		trigger = { has_faction = technologist }
+		allow = { has_faction = technologist }
 		
 		shift_ethic = ethic_materialist
 

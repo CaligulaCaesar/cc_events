@@ -208,6 +208,8 @@ planet_event = {
 		
 		trigger = {
 			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+		}
+		allow = {
 			owner = {
 				OR = {
 					has_ethic = ethic_xenophile
@@ -227,6 +229,8 @@ planet_event = {
 		
 		trigger = {
 			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+		}
+		allow = {
 			owner = {
 					OR = {
 					has_ethic = ethic_xenophobe
@@ -246,6 +250,8 @@ planet_event = {
 		
 		trigger = {
 			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+		}
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_xenophobe
@@ -267,6 +273,8 @@ planet_event = {
 		
 		trigger = {
 			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+		}
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_xenophobe
@@ -286,6 +294,8 @@ planet_event = {
 		
 		trigger = {
 			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+		}
+		allow = {
 			owner = {
 				OR = {
 					has_ethic = ethic_xenophobe
@@ -332,7 +342,7 @@ planet_event = {
 		name = cc_xeno_clashes.3.A
 		custom_tooltip = cc_xeno_clashes.3.A.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_xenophile
@@ -476,7 +486,7 @@ planet_event = {
 		name = cc_xeno_clashes.3.B
 		custom_tooltip = cc_xeno_clashes.3.B.tooltip
 		
-		trigger = {
+		allow = {
 			owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 		}
 		
@@ -535,7 +545,7 @@ planet_event = {
 		name = cc_xeno_clashes.3.C
 		custom_tooltip = cc_xeno_clashes.3.C.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_xenophobe
@@ -1986,7 +1996,7 @@ planet_event = {
 		name = cc_xeno_clashes.4.A
 		custom_tooltip = cc_xeno_clashes.4.A.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOT = { has_ethic = ethic_fanatic_xenophobe }
 			}
@@ -2042,7 +2052,7 @@ planet_event = {
 		name = cc_xeno_clashes.4.B
 		custom_tooltip = cc_xeno_clashes.4.B.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOT = { has_ethic = ethic_fanatic_xenophobe }
 			}
@@ -2098,7 +2108,7 @@ planet_event = {
 	option = {
 		name = cc_xeno_clashes.4.C
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOT = { has_ethic = ethic_fanatic_egalitarian }
 			}
@@ -2130,7 +2140,7 @@ planet_event = {
 		name = cc_xeno_clashes.4.D
 		custom_tooltip = cc_xeno_clashes.4.D.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOT = { has_ethic = ethic_fanatic_xenophobe }
 			}
@@ -2168,7 +2178,7 @@ planet_event = {
 		name = cc_xeno_clashes.4.E
 		custom_tooltip = cc_xeno_clashes.4.E.tooltip
 		
-		trigger = {
+		allow = {
 			owner = {
 				NOR = {
 					has_ethic = ethic_xenophile
