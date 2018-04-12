@@ -26,6 +26,7 @@ planet_event = {
 				has_country_flag = cc_luddite_movement
 				has_country_flag = cc_recent_luddite_movement
 				has_country_flag = cc_first_luddite_strike
+				has_country_flag = cc_recent_antiluddite_event
 			}
 		}
 		unrest > 0
@@ -2089,9 +2090,10 @@ country_event = {
 			has_ethic = ethic_gestalt_consciousness
 			
 			has_country_flag = machine_uprising_originator
-			has_country_flag = cc_recent_preluddite_event
+			has_country_flag = cc_preluddite_event
 			has_country_flag = cc_luddite_movement
 			has_country_flag = cc_recent_luddite_movement
+			has_country_flag = cc_antiluddite_event
 		}
 		OR = {
 			any_neighbor_country = { has_valid_civic = civic_machine_terminator }
@@ -2129,10 +2131,7 @@ country_event = {
 	}
 	
 	immediate = {
-		set_timed_country_flag = {
-			flag = cc_recent_preluddite_event
-			years = 50
-		}
+		set_country_flag = cc_preluddite_event
 		every_owned_pop = {
 			limit = {
 				is_enslaved = no
@@ -2178,5 +2177,60 @@ pop_event = {
 	}
 }
 
+
+
+
+
+#Anti-Luddite event
+country_event = {
+	id = cc_luddite.30
+	title = cc_luddite.30.name
+	desc = cc_luddite.30.desc
+	picture = GFX_evt_robot_assembly_plant
+	
+	trigger = {
+		is_country_type = default
+		has_policy_flag = robots_allowed
+		NOR = {
+			is_synthetic_empire = yes
+			is_mechanical_empire = yes
+			has_ethic = ethic_gestalt_consciousness
+			
+			has_country_flag = machine_uprising_originator
+			has_country_flag = cc_preluddite_event
+			has_country_flag = cc_luddite_movement
+			has_country_flag = cc_recent_luddite_movement
+			has_country_flag = cc_antiluddite_event
+		}
+		has_faction = technologist
+		
+		any_owned_pop = { is_non_sapient_robot = yes }
+		NOT = {
+			any_owned_pop = {
+				is_robot_pop = yes
+				is_non_sapient_robot = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = { years = 15 }
+	
+	immediate = {
+		set_country_flag = cc_antiluddite_event
+		set_timed_country_flag = {
+			flag = cc_recent_antiluddite_event
+			years = 30
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_modifier = {
+			modifier = cc_antiluddite
+			years = 15
+		}
+	}
+}
 
 
