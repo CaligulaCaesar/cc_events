@@ -547,6 +547,12 @@ country_event = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
+				root = {
+					set_timed_country_flag = {
+						flag = dpe_talent_cc_university
+						days = 5
+					}
+				}
 			}
 			else = {
 				random_owned_planet = {
@@ -573,6 +579,12 @@ country_event = {
 					set_timed_planet_flag = {
 						flag = dpe_recent_talent_planet
 						years = 50
+					}
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_scientist_default
+							days = 5
+						}
 					}
 				}
 			}
@@ -635,6 +647,117 @@ country_event = {
 					dpe_talent_scientist_has_speciality = no
 				}
 				dpe_talent_scientist_give_speciality = yes
+
+				else = {
+					if = {
+						limit = { has_trait = leader_trait_expertise_materials }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_materials
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_propulsion }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_propulsion
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_voidcraft }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_voidcraft
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_industry }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_industry
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_field_manipulation }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_field_manipulation
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_particles }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_particles
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_computing }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_computing
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_psionics }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_psionics
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_new_worlds }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_new_worlds
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_statecraft }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_statecraft
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_biology }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_biology
+								days = 5
+							}
+						}
+					}
+					if = {
+						limit = { has_trait = leader_trait_expertise_military_theory }
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_expertise_military_theory
+								days = 5
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -802,6 +925,12 @@ country_event = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
+				root = {
+					set_timed_country_flag = {
+						flag = dpe_talent_cc_milacademy
+						days = 5
+					}
+				}
 			}
 			else = {
 				random_owned_planet = {
@@ -828,6 +957,12 @@ country_event = {
 					set_timed_planet_flag = {
 						flag = dpe_recent_talent_planet
 						years = 50
+					}
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_general_default
+							days = 5
+						}
 					}
 				}
 			}
@@ -989,7 +1124,25 @@ country_event = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
+				if = {
+					limit = { has_modifier = cc_colony_monarchy }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_cc_colony_monarchy
+							days = 5
+						}
+					}
+					else = {
+						root = {
+							set_timed_country_flag = {
+								flag = dpe_talent_cc_colony_direct_democracy
+								days = 5
+							}
+						}
+					}
+				}
 			}
+			
 			else = {
 				random_owned_planet = {
 					limit = {				
@@ -1015,6 +1168,12 @@ country_event = {
 					set_timed_planet_flag = {
 						flag = dpe_recent_talent_planet
 						years = 50
+					}
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_governor_default
+							days = 5
+						}
 					}
 				}
 			}
