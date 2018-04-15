@@ -225,7 +225,7 @@ country_event = {
 	option = {
 		name = dpe_leader.1.B
 		
-		hidden_effect = { event_target:dpe_admiral = { kill_leader = { show_notification = no } } }
+		hidden_effect = { event_target:officer = { kill_leader = { show_notification = no } } }
 
 		event_target:ship = {
 			add_modifier = {
