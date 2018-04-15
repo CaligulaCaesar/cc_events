@@ -150,6 +150,10 @@ country_event = {
 						random_list = {
 							1 = {
 								fromfrom.leader = { save_event_target_as = dpe_admiral }
+								set_timed_country_flag = {
+									flag = dpe_admiral
+									days = 5
+								}
 								country_event = { id = leader.92 }
 							}
 							2 = { last_created_leader = { kill_leader = { show_notification = no } } }
@@ -190,11 +194,11 @@ country_event = {
 	id = leader.92
 	title = leader.1.name
 	desc = {
-		trigger = { exists = event_target:dpe_admiral }
+		trigger = { has_country_flag = dpe_admiral }
 		text = dpe_leader.1.desc
 	}
 	desc = {
-		trigger = { NOT = { exists = event_target:dpe_admiral } }
+		trigger = { NOT = { has_country_flag = dpe_admiral } }
 		text = dpe_leader.2.desc
 	}
 	picture = GFX_evt_federation_fleet
