@@ -163,36 +163,31 @@ is_evil_empire = {
 
 
 dpe_talent_flavour_scientist_university = {
-	event_target:dpe_talent_planet = { has_modifier = cc_university }
+	has_country_flag = dpe_talent_cc_university
 }
 
 dpe_talent_flavour_scientist_default = {
-	NOT = { event_target:dpe_talent_planet = { has_modifier = cc_university } }
+	has_country_flag = dpe_talent_scientist_default
 }
 
 dpe_talent_flavour_general_academy = {
-	event_target:dpe_talent_planet = { has_modifier = cc_milacademy }
+	has_country_flag = dpe_talent_cc_milacademy
 }
 
 dpe_talent_flavour_general_default = {
-	NOT = { event_target:dpe_talent_planet = { has_modifier = cc_milacademy } }
+	has_country_flag = dpe_talent_general_default
 }
 
 dpe_talent_flavour_governor_royal = {
-	event_target:dpe_talent_planet = { has_modifier = cc_colony_monarchy }
+	has_country_flag = dpe_talent_cc_colony_monarchy
 }
 
 dpe_talent_flavour_governor_democracy = {
-	event_target:dpe_talent_planet = { has_modifier = cc_colony_direct_democracy }
+	has_country_flag = dpe_talent_cc_colony_direct_democracy
 }
 
 dpe_talent_flavour_governor_default = {
-	event_target:dpe_talent_planet = {
-		NOR = {
-			has_modifier = cc_colony_monarchy
-			has_modifier = cc_colony_direct_democracy
-		}
-	}
+	has_country_flag = dpe_talent_governor_default
 }
 
 dpe_talent_scientist_has_speciality = {
@@ -213,38 +208,38 @@ dpe_talent_scientist_has_speciality = {
 }
 
 dpe_talent_scientist_materials = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_materials }
+	has_country_flag = dpe_talent_expertise_materials
 }
 dpe_talent_scientist_propulsion = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_propulsion }
+	has_country_flag = dpe_talent_expertise_propulsion
 }
 dpe_talent_scientist_voidcraft = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_voidcraft }
+	has_country_flag = dpe_talent_expertise_voidcraft
 }
 dpe_talent_scientist_industry = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_industry }
+	has_country_flag = dpe_talent_expertise_industry
 }
 dpe_talent_scientist_field_manipulation = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_field_manipulation }
+	has_country_flag = dpe_talent_expertise_field_manipulation
 }
 dpe_talent_scientist_particles = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_particles }
+	has_country_flag = dpe_talent_expertise_particles
 }
 dpe_talent_scientist_computing = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_computing }
+	has_country_flag = dpe_talent_expertise_computing
 }
 dpe_talent_scientist_psionics = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_psionics }
+	has_country_flag = dpe_talent_expertise_psionics
 }
 dpe_talent_scientist_new_worlds = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_new_worlds }
+	has_country_flag = dpe_talent_expertise_new_worlds
 }
 dpe_talent_scientist_statecraft = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_statecraft }
+	has_country_flag = dpe_talent_expertise_statecraft
 }
 dpe_talent_scientist_biology = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_biology }
+	has_country_flag = dpe_talent_expertise_biology
 }
 dpe_talent_scientist_military_theory = {
-	event_target:dpe_talent_leader = { has_trait = leader_trait_expertise_military_theory }
+	has_country_flag = dpe_talent_expertise_military_theory
 }

@@ -89,17 +89,105 @@ xenophilia_refugee_pop_effect = {
 
 dpe_talent_scientist_give_speciality = {
 	random_list = {
-		2 = { add_trait = leader_trait_expertise_materials }
-		2 = { add_trait = leader_trait_expertise_propulsion }
-		2 = { add_trait = leader_trait_expertise_voidcraft }
-		2 = { add_trait = leader_trait_expertise_industry }
-		2 = { add_trait = leader_trait_expertise_field_manipulation }
-		2 = { add_trait = leader_trait_expertise_particles }
-		2 = { add_trait = leader_trait_expertise_computing }
-		2 = { add_trait = leader_trait_expertise_new_worlds }
-		2 = { add_trait = leader_trait_expertise_statecraft }
-		2 = { add_trait = leader_trait_expertise_biology }
-		2 = { add_trait = leader_trait_expertise_military_theory }
+		2 = { 
+			add_trait = leader_trait_expertise_materials
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_materials
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_propulsion
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_propulsion
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_voidcraft
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_voidcraft
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_industry
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_industry
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_field_manipulation
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_field_manipulation
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_particles
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_particles
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_computing
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_computing
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_new_worlds
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_new_worlds
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_statecraft
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_statecraft
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_biology
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_biology
+					days = 5
+				}
+			}
+		}
+		2 = {
+			add_trait = leader_trait_expertise_military_theory
+			root = {
+				set_timed_country_flag = {
+					flag = dpe_talent_expertise_military_theory
+					days = 5
+				}
+			}
+		}
 	}
 }
 
