@@ -2,11 +2,11 @@
 
  dpe_fe.1.name:0 "Auf der Suche nach der Hilfe der Alten?"
  dpe_fe.1.desc:0 "Trotz der massiven Fortschritte, der in den letzten Jahrhunderten gemacht wurden, gibt es einige Krankheiten, die die besten [root.GetSpeciesAdj] Ärzte nicht heilen können. Es ist [root.GetRulerTitle] [root.GetRulerName] Pech, mit einer solchen Krankheit diagnostiziert worden zu sein. Die Ärzte sind von dem plötzlichen Auftreten von [root.leader.GetHisHer] rarem degenerativen Gehirnzustand überrumpelt, der [root.leader.GetHimHer] nur noch wenige Monate Zeit zum leben lässt. Es gibt jedoch Gesellschaften, die so fortgeschritten sind, dass das, was für unser Volk ein Wunder wäre, eine alltägliche Tatsache des Lebens dort ist - Gesellschaften, in denen selbst Krankheiten wie diese ausgestorben sind. Sich auf sich selbst aufmerksam zu machen, kann jedoch riskant sein, denn ihre Stimmung ist unberechenbar und ihr Zorn schrecklich. Trotzdem wären die Alten vielleicht bereit, [root.GetRulerName] zu retten, wenn ihnen der richtige Preis geboten wird?"
- dpe_fe.1.materialist:0 "Approach the [dpe_materialist_fe.GetSpeciesNamePlural]."
- dpe_fe.1.spiritualist:0 "Approach the [dpe_spiritualist_fe.GetSpeciesNamePlural]."
- dpe_fe.1.xenophile:0 "Approach the [dpe_xenophile_fe.GetSpeciesNamePlural]."
- dpe_fe.1.xenophobe:0 "Approach the [dpe_xenophobe_fe.GetSpeciesNamePlural]."
- dpe_fe.1.machine:0 "Approach the [dpe_machine_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.materialist:0 "Kontaktiert die [dpe_materialist_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.spiritualist:0 "Kontaktiert die [dpe_spiritualist_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.xenophile:0 "Kontaktiert die [dpe_xenophile_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.xenophobe:0 "Kontaktiert die [dpe_xenophobe_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.machine:0 "Kontaktiert die [dpe_machine_fe.GetSpeciesNamePlural]."
  dpe_fe.1.no:0 "Es ist besser einen natürlichen Tod zu sterben"
  dpe_fe.1.no.tooltip:0 "Manche Preise sind es nicht wert bezahlt zu werden"
  
@@ -33,7 +33,7 @@
  dpe_fe.2.friendly:0 "$dpe_fe.2.pay$"
  dpe_fe.2.nopay:0 "Der Preis ist zu hoch - ich werde einen würdigen Tod erliegen."
 
-dpe_paying_spirFE:0 "Paying Fallen Empire"
+dpe_paying_spirFE:0 "gefallenes Reich bezahlt"
 dpe_paying_friendly_spirFE:0 "$dpe_paying_spirFE$"
 dpe_paying_xenoFE:0 "$dpe_paying_spirFE$"
 dpe_paying_friendly_xenoFE:0 "$dpe_paying_spirFE$"
@@ -47,9 +47,9 @@ dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
  dpe_fe.3.option.materialist:0 "Die Eigenschaft $leader_trait_ruler_cyborg$ wurde [root.leader.GetName] zugefügt."
  dpe_fe.3.option:0 "Vielen Dank für eure Hilfe, wir stehen für immer in eurer Schuld."
  
-dpe_fe_disturbed_us:0 "Disturbed us"
-dpe_spurned_our_help:0 "Spurned our help"
-dpe_sought_our_help:0 "Sought our help"
+dpe_fe_disturbed_us:0 "Hat uns gestört"
+dpe_spurned_our_help:0 "Verschmähte unsere Hilfe"
+dpe_sought_our_help:0 "Hat unsere Hilfe gesucht"
 
 dpe_fe.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] stirbt"
 dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative Zustand des Gehirns verschlechterte sich plötzlich, bevor die [dpe_fe.GetName] Heiler [root.Leader.GetHimHer] betrachten konnten."
@@ -58,7 +58,7 @@ dpe_leader_trait_reinvigorated:0 "Wiederbelebt"
 dpe_leader_trait_reinvigorated_desc:0 "Dieser Anführer fühlt sich wieder jung und frisch, nachdem er von den Alten geheilt wurde."
  
 #Second chain
- dpe_fe.20.name:0 "Escapee of a Fallen Empire"
+ dpe_fe.20.name:0 "Flucht vor einem gefallenden Reich"
  dpe_fe.20.desc:0 "Hallo, mein [root.GetRulerTitle]. Ich bin ... [dpe_escaped_scientist.GetName] ... dein loyales Subjekt. \ N \ n * Gackerndes Gelächter * \ n \ n Ich bin kürzlich aus dem [FallenEmpireTaskOrigin.GetName] entkommen, wo ich ihre Technologie genau studiert habe. Ich habe es geschafft, die meisten meiner Materialien mitzubringen, und ich glaube, dass ich einige ihrer Technologien replizieren kann. \ N \ n Außerdem hat [FallenEmpireTaskOrigin.GetName] einige ... Verbesserungen ... an mir angestellt. Ich bin jetzt zu Denkprozessen fähig, die weit über das größte [root.GetSpeciesAdj] -Genie hinausgehen. Es mag mich leicht verrückt gemacht haben, aber macht nichts. \ N \ n * Gackerndes Gelächter * \ n \ n Ehmmm, ich sollte erwähnen, dass [FallenEmpireTaskOrigin.GetSpeciesNamePlural] ein bisschen genervt von mir sein könnte ... nichts, womit du nicht klar kommen könntest. Ich bin mir sicher. \ n \ n * Gackerndes Lachen *"
  dpe_fe.20.option:0 "Ausgezeichnet ....  glaube ich?"
  dpe_fe.20.tooltip:0 "[dpe_escaped_scientist.GetName], ein Stufe 5 Wissenschaftler mit den Eigenschaften $leader_trait_scientist_erudite$, $leader_trait_maniacal$ and $dpe_leader_trait_ancient_knowledge$ wird dem Anführer-Pool zugefügt."
