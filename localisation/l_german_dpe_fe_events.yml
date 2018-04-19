@@ -1,7 +1,7 @@
 ﻿l_german:
 
  dpe_fe.1.name:0 "Auf der Suche nach der Hilfe der Alten?"
- dpe_fe.1.desc:0 "Trotz der massiven Fortschritte, der in den letzten Jahrhunderten gemacht wurden, gibt es einige Krankheiten, die die besten [root.GetSpeciesAdj] Ärzte nicht heilen können. Es ist [root.GetRulerTitle] [root.GetRulerName] Pech, mit einer solchen Krankheit diagnostiziert worden zu sein. Die Ärzte sind von dem plötzlichen Auftreten von [root.leader.GetHisHer] rarem degenerativen Gehirnzustand überrumpelt, der [root.leader.GetHimHer] nur noch wenige Monate Zeit zum leben lässt. Es gibt jedoch Gesellschaften, die so fortgeschritten sind, dass das, was für unser Volk ein Wunder wäre, eine alltägliche Tatsache des Lebens dort ist - Gesellschaften, in denen selbst Krankheiten wie diese ausgestorben sind. Sich auf sich selbst aufmerksam zu machen, kann jedoch riskant sein, denn ihre Stimmung ist unberechenbar und ihr Zorn schrecklich. Trotzdem wären die Alten vielleicht bereit, [root.GetRulerName] zu retten, wenn ihnen der richtige Preis geboten wird?"
+ dpe_fe.1.desc:0 "Trotz der massiven Fortschritte, der in den letzten Jahrhunderten gemacht wurden, gibt es einige Krankheiten, die die besten [root.GetSpeciesAdj] Ärzte nicht heilen können. Es ist [root.GetRulerTitle] [root.GetRulerName]s Pech, mit einer solchen Krankheit diagnostiziert worden zu sein. Die Ärzte sind von dem plötzlichen Auftreten von [root.leader.GetHisHer]em rarem degenerativen Gehirnzustand überrumpelt, der [root.leader.GetIhmIhrDE] nur noch wenige Monate Zeit zum leben lässt. Es gibt jedoch Gesellschaften, die so fortgeschritten sind, dass das, was für unser Volk ein Wunder wäre, eine alltägliche Tatsache des Lebens dort ist - Gesellschaften, in denen selbst Krankheiten wie diese ausgestorben sind. Sich auf sich selbst aufmerksam zu machen, kann jedoch riskant sein, denn ihre Stimmung ist unberechenbar und ihr Zorn schrecklich. Trotzdem wären die Alten vielleicht bereit, [root.GetRulerName] zu retten, wenn ihnen der richtige Preis geboten wird?"
  dpe_fe.1.materialist:0 "Kontaktiert die [dpe_materialist_fe.GetSpeciesNamePlural]."
  dpe_fe.1.spiritualist:0 "Kontaktiert die [dpe_spiritualist_fe.GetSpeciesNamePlural]."
  dpe_fe.1.xenophile:0 "Kontaktiert die [dpe_xenophile_fe.GetSpeciesNamePlural]."
@@ -14,13 +14,13 @@
  dpe_fe.12.name:0 "Die [dpe_xenophobe_fe.GetSpeciesNamePlural] haben unseren Boten abgeschossen"
  dpe_fe.12.desc:0 "Die [dpe_xenophobe_fe.GetSpeciesNamePlural] haben unseren Boten abgeschossen, ohne sich überhaupt zu rühmen, ihre Botschaft zu hören. Wir können davon ausgehen, dass ihre Antwort "Nein" ist."
  
- dpe_fe.15.name:0 "Die [dpe_fe.GetName] antworten"
+ dpe_fe.15.name:0 "Die [dpe_fe.GetName] antwortet"
  dpe_fe.15.desc:0 "Organischer Antrag auf Hilfe erhalten. Depot-Protokoll 317-2 aktiviert. Die Botschaft folgt: Allen Organischen soll von uns geholfen werden. Senden Sie den Patienten zu unseren Welten, und wir werden §R << FEHLER: DATENBLOCK KORRUPTIERT >> << FEHLER: DATENBLOCK KORRUPTIERT >> § !. Bitten um Antwort."
  dpe_fe.15.A:0 "Danke, wir werden Ihre Hilfe gerne annehmen."
  dpe_fe.15.B:0 "Eigentlich möchten wir lieber nicht ..."
  
  dpe_fe.16.name:0 "[root.GetRulerTitle] [root.GetRulerName] "geheilt""
- dpe_fe.16.desc:0 "Informationslog: Ihr Herrscher ist von [root.leader.GetHisHer] Krankheiten befreit. [root.leader.GetSheHeCap] wird frei sein, um den Rest von [root.leader.GetHisHer] Leben in unserem Heiligtum auszuleben."
+ dpe_fe.16.desc:0 "Informationslog: Ihr Herrscher ist von [root.leader.GetHisHer]em Krankheiten befreit. [root.leader.GetSheHeCap] wird frei sein, um den Rest von [root.leader.GetHisHer]em Leben in unserem Heiligtum auszuleben."
  
  
  dpe_fe.2.name:0 "Die [dpe_fe.GetName] antworten"
@@ -41,7 +41,7 @@ dpe_paying_matFE:0 "$dpe_paying_spirFE$"
 dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
 
  dpe_fe.3.name:0 "[root.GetRulerTitle] [root.GetRulerName] ist geheilt"
- dpe_fe.3.desc:0 "Wir haben euren Anführer geheilt. Als Zeichen unserer Gunst haben wir den Fähigkeiten von [root.leader.GetHisHer] einen kleinen Zusatz hinzugefügt. Möge [root.leader.GetSheHe] sie gut gebrauchen!"
+ dpe_fe.3.desc:0 "Wir haben euren Anführer geheilt. Als Zeichen unserer Gunst haben wir [root.leader.GetHisHer]e Fähigkeiten einen kleinen Zusatz hinzugefügt. Möge [root.leader.GetSheHe] sie gut gebrauchen!"
  dpe_fe.3.option.spiritualist:0 "Die Eigenschaft $leader_trait_ruler_psionic$ wurde [root.leader.GetName] zugefügt."
  dpe_fe.3.option.xenophile:0 "Die Eigenschaft $leader_trait_ruler_erudite$ wurde [root.leader.GetName] zugefügt."
  dpe_fe.3.option.materialist:0 "Die Eigenschaft $leader_trait_ruler_cyborg$ wurde [root.leader.GetName] zugefügt."
@@ -52,25 +52,25 @@ dpe_spurned_our_help:0 "Verschmähte unsere Hilfe"
 dpe_sought_our_help:0 "Hat unsere Hilfe gesucht"
 
 dpe_fe.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] stirbt"
-dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative Zustand des Gehirns verschlechterte sich plötzlich, bevor die [dpe_fe.GetName] Heiler [root.Leader.GetHimHer] betrachten konnten."
+dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative Zustand des Gehirns verschlechterte sich plötzlich, bevor die [dpe_fe.GetName] Heiler [root.Leader.GetIhnSieDE] betrachten konnten."
  
 dpe_leader_trait_reinvigorated:0 "Wiederbelebt"
 dpe_leader_trait_reinvigorated_desc:0 "Dieser Anführer fühlt sich wieder jung und frisch, nachdem er von den Alten geheilt wurde."
  
 #Second chain
  dpe_fe.20.name:0 "Flucht vor einem gefallenden Reich"
- dpe_fe.20.desc:0 "Hallo, mein [root.GetRulerTitle]. Ich bin ... [dpe_escaped_scientist.GetName] ... dein loyales Subjekt. \ N \ n * Gackerndes Gelächter * \ n \ n Ich bin kürzlich aus dem [FallenEmpireTaskOrigin.GetName] entkommen, wo ich ihre Technologie genau studiert habe. Ich habe es geschafft, die meisten meiner Materialien mitzubringen, und ich glaube, dass ich einige ihrer Technologien replizieren kann. \ N \ n Außerdem hat [FallenEmpireTaskOrigin.GetName] einige ... Verbesserungen ... an mir angestellt. Ich bin jetzt zu Denkprozessen fähig, die weit über das größte [root.GetSpeciesAdj] -Genie hinausgehen. Es mag mich leicht verrückt gemacht haben, aber macht nichts. \ N \ n * Gackerndes Gelächter * \ n \ n Ehmmm, ich sollte erwähnen, dass [FallenEmpireTaskOrigin.GetSpeciesNamePlural] ein bisschen genervt von mir sein könnte ... nichts, womit du nicht klar kommen könntest. Ich bin mir sicher. \ n \ n * Gackerndes Lachen *"
+ dpe_fe.20.desc:0 "Hallo, mein [root.GetRulerTitle]. Ich bin ... [dpe_escaped_scientist.GetName] ... dein loyales Subjekt. \ N \ n * Gackerndes Gelächter * \ n \ n Ich bin kürzlich aus dem [FallenEmpireTaskOrigin.GetName] entkommen, wo ich ihre Technologie genau studiert habe. Ich habe es geschafft, die meisten meiner Materialien mitzubringen, und ich glaube, dass ich einige ihrer Technologien replizieren kann. \ N \ n Außerdem haben die [FallenEmpireTaskOrigin.GetSpeciesNamePlural] einige ... Verbesserungen ... an mir angestellt. Ich bin jetzt zu Denkprozessen fähig, die weit über das größte [root.GetSpeciesAdj]e Genie hinausgehen. Es mag mich leicht verrückt gemacht haben, aber macht nichts. \ N \ n * Gackerndes Gelächter * \ n \ n Ehmmm, ich sollte erwähnen, dass [FallenEmpireTaskOrigin.GetSpeciesNamePlural] ein bisschen genervt von mir sein könnte ... nichts, womit du nicht klar kommen könntest. Ich bin mir sicher. \ n \ n * Gackerndes Lachen *"
  dpe_fe.20.option:0 "Ausgezeichnet ....  glaube ich?"
  dpe_fe.20.tooltip:0 "[dpe_escaped_scientist.GetName], ein Stufe 5 Wissenschaftler mit den Eigenschaften $leader_trait_scientist_erudite$, $leader_trait_maniacal$ and $dpe_leader_trait_ancient_knowledge$ wird dem Anführer-Pool zugefügt."
  
  dpe_fe.22.name:0 "[dpe_escaped_scientist.GetName] wird gesucht"
- dpe_fe.22.desc:0 "Liebe [root.GetSpeciesName]. Es ist uns aufgefallen, dass ihr den geistesgestörten Kriminellen beherbergt, [dpe_escaped_scientist.GetName]. [dpe_escaped_scientist.GetSheHeCap] beging  unaussprechliche Grausamkeiten, während der Flucht vor unseren Behörden mit einer beachtlichen Menge Technologie im Gepäck. Es ist zwingend erforderlich, dass [dpe_escaped_scientist.GetSheHe] an uns zurückgesendet wird, damit [dpe_escaped_scientist.GetSheHe] für [dpe_escaped_scientist.GetHisHer] Verbrechen vor Gericht gestellt werden kann und dass Sie [dpe_escaped_scientist.GetHisHer] Cache an uns übergeben - zu Ihrer eigenen Sicherheit. Es kann nicht in den Händen einer unreifen Rasse bleiben."
- dpe_fe.22.A:0 "[dpe_escaped_scientist.GetSheHeCap]wird eine Zuflucht bei uns finden."
+ dpe_fe.22.desc:0 "Liebe [root.GetSpeciesName]. Es ist uns aufgefallen, dass ihr den geistesgestörten Kriminellen beherbergt, [dpe_escaped_scientist.GetName]. [dpe_escaped_scientist.GetSheHeCap] beging  unaussprechliche Grausamkeiten, während der Flucht vor unseren Behörden mit einer beachtlichen Menge Technologie im Gepäck. Es ist zwingend erforderlich, dass [dpe_escaped_scientist.GetSheHe] an uns zurückgesendet wird, damit [dpe_escaped_scientist.GetSheHe] für [dpe_escaped_scientist.GetHisHer] Verbrechen vor Gericht gestellt werden kann und dass Sie [dpe_escaped_scientist.GetHisHer]en Cache an uns übergeben - zu Ihrer eigenen Sicherheit. Es kann nicht in den Händen einer unreifen Rasse bleiben."
+ dpe_fe.22.A:0 "[dpe_escaped_scientist.GetSheHeCap] wird eine Zuflucht bei uns finden."
  dpe_fe.22.A.response:0 Ihr werdet dies bereuen, [root.GetSpeciesName]."
- dpe_fe.22.B:0 "Wir werden [dpe_escaped_scientist.GetHimHer] und [dpe_escaped_scientist.GetHisHer] Cache an euch übergeben."
+ dpe_fe.22.B:0 "Wir werden [dpe_escaped_scientist.GetIhmIhrDE] und [dpe_escaped_scientist.GetHisHer]en Cache an euch übergeben."
  dpe_fe.22.B.tooltip:0 "[dpe_escaped_scientist.GetName] wird aus dem Anführer-Pool entfernt"
  dpe_fe.22.B.response:0 "Ihr habt die richtige Wahl getroffen, [root.GetSpeciesName]."
- dpe_fe.22.C:0 "(Lügen) Wir werden euch [dpe_escaped_scientist.GetHimHer] übergeben, aber was für ein Cache?"
+ dpe_fe.22.C:0 "(Lügen) Wir werden euch [dpe_escaped_scientist.GetIhmIhrDE] übergeben, aber was für ein Cache?"
  dpe_fe.22.C.tooltip:0 "$dpe_fe.22.B.tooltip$ Die [root.GetName] beschlagnahmen heimlich [dpe_escaped_scientist.GetName]'s Cache voller technologischer Daten"
  dpe_fe.22.C.response:0 "Seid gewarnt, [root.GetSpeciesName]. Ihr spielt mit dem Feuer."
  
