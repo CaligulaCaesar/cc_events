@@ -4007,6 +4007,14 @@ planet_event = {
 			}
 		}
 		
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 		ai_chance = {
 			factor = 1
 			modifier = {
