@@ -1,0 +1,180 @@
+﻿l_braz_por:
+
+#Political Events is too long and unwieldy. Hopefully I will add more things here.
+
+#Rebellion Modifiers
+revolutionary_boost_05:0 "Bônus para Início de Rebelião"
+revolutionary_boost_05_desc:0 "Bônus para ajudar rebeliões escalarem.\n\n"
+revolutionary_boost_1:0 "$revolutionary_boost_05$"
+revolutionary_boost_1_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_2:0 "$revolutionary_boost_05$"
+revolutionary_boost_2_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_3:0 "$revolutionary_boost_05$"
+revolutionary_boost_3_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_4:0 "$revolutionary_boost_05$"
+revolutionary_boost_4_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_5:0 "$revolutionary_boost_05$"
+revolutionary_boost_5_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_boost_6:0 "$revolutionary_boost_05$"
+revolutionary_boost_6_desc:0 "$revolutionary_boost_05_desc$"
+revolutionary_mobilisation:0 "Mobilização Revolucionária"
+revolutionary_mobilisation_desc:0 "Toda a sociedade está mobilizada para tornar a revolução um sucesso.\n\n"
+revolutionary_mobilisation_0_5:0 "$revolutionary_mobilisation$"
+revolutionary_mobilisation_0_5_desc:0 "$revolutionary_mobilisation_desc$"
+
+
+cc_events_mod.57.name:0 "Impulso em Ascenção"
+cc_events_mod.57.desc:0 "Uma poderosa Corporação Mercantil de propriedade privada em [dpe_merchant_planet.GetName] vem ganhando popularidade entre seu povo. Os cientistas da empresa desenvolveram vários recursos originais da tecnologia de computação moderna que fazem feitos que até agora estavam além dos sonhos mais loucos da população em geral! [dpe_CEO.GetOALead] CEO da companhia, [dpe_CEO.GetName], está rapidamente se tornando um dos indivíduos mais ricos no [root.GetName]. [dpe_CEO.GetSheHeCap] solicitou uma patente para este produto para garantir sua nova posição."
+
+cc_events_mod.57.A:0 "[dpe_CEO.GetSheHeCap] terá sua patente."
+cc_events_mod.57.B:0 "Aproveite a pesquisa – ela é crucial ao interesse nacional."
+cc_events_mod.57.C:0 "Negar a patente e encorajar a concorrência."
+
+dpe_encouraged_competition:0 "Competição Encorajada"
+dpe_disgruntled_CEO:0 "CEO Desapontado"
+dpe_disgruntled_CEO_desc:0 "Um importante empresário local teve seu pedido de patentes recusado pelo governo."
+dpe_patents_national_interest:0 "Interesse Nacional Protegido"
+dpe_patents_denied_faction:0 "Patente Negada"
+dpe_innovative_CEO:0 "CEO Inovador"
+dpe_innovative_CEO_desc:0 "Um CEO inovador colocou o planeta no mapa em termos de oportunidades de negócios."
+dpe_innovative_CEO_faction:0 "$dpe_innovative_CEO$"
+
+
+#Unity Planet
+dpe_smallpos_events.2.name:0 "[root.GetName] saúda [root.owner.GetRulerTitle] [root.owner.GetRulerName]"
+dpe_smallpos_events.2.desc:0 "[root.GetName] tem sido um dos mais fortes defensores do estado [root.owner.GetName]. Hoje, seu líder planetário revelou uma estátua para [root.owner.GetRulerTitle] [root.owner.GetRulerName] em honra dos serviços ao planeta e ao estado e para provar a dedicação do planeta ao [root.owner.GetName]."
+
+dpe_unity_planet:0 "Apoiadores do Governo"
+dpe_unity_planet_desc:0 "Os cidadãos deste planeta contam como alguns dos mais fortes defensores do governo."
+
+
+#Leader Debate
+dpe_smallpos_events.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] é persuasivo!"
+dpe_smallpos_events.4.desc:0 "Os [dpe_dissident_faction.GetName], liderados por [dpe_dissident_faction_leader.GetName] tem sido por algum tempo um crítico ferrenho da política do governo, criando desunião dentro da nação. Hoje, em um debate transmitido a todo o povo [root.GetSpeciesAdj], [root.GetRulerTitle] [root.GetRulerName] encarou [dpe_dissident_faction_leader.GetName] em um debate e foi capaz de rechaçar de forma convincente todas as críticas deste último no processo articulando uma visão positiva de futuro por trás da qual todos [root.GetSpeciesNamePlural] poderão se unir."
+dpe_smallpos_events.4.option:0 "Todos podemos avançar com otimismo renovado!"
+
+dpe_smallpos_events.5.name:0 "[root.GetRulerTitle] [root.GetRulerName] falha em persuadir!"
+dpe_smallpos_events.5.desc:0 "Os [dpe_dissident_faction.GetName], liderados por [dpe_dissident_faction_leader.GetName] já há algum tempo tem sido um ferrenho crítico da política do governo, criando desunião dentro da nação. Hoje, em um debate transmitido a toda a população [root.GetSpeciesAdj], [root.GetRulerTitle] [root.GetRulerName] encarou [dpe_dissident_faction_leader.GetName] em um debate em uma tentativa de refutar as críticas deste último. No entanto, a tentativa saiu pela culatra, e [dpe_dissident_faction_leader.GetName] foi capaz de parecer o mais convincente. Isso enfraqueceu ainda mais o poder da facção dominante."
+
+dpe_persuasive_leader:0 "Governante Persuasivo"
+dpe_unpersuasive_leader:0 "Governante Dissuasivo"
+
+
+
+
+
+#Coding: Not too high mtth but big chance of 0. Governor will be more likely on planets with monarchies and democracies (extra flavour text there), admiral and general with military academies, and scientist with universities. Also via ethics and absolute number of planets (boost when >12 and >25)
+
+dpe_smallpos_events.11.name:0 "Cientista talentosa descoberta"
+dpe_smallpos_events.11.desc:0 "[dpe_talent_leader.GetName], [dpe_talent_leader.GetUmUmaLead] professor[dpe_talent_leader.GetXALead] local [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1] especialista em [root.GetDPETalentField], vem fazendo progressos inovadores no campo [dpe_talent_leader.GetHisHer]. Alguns dos seus conselheiros sugeriram contrata-l[dpe_talent_leader.GetOALead] para levar adiante sua pesquisa em prol do estado, embora a comunidade acadêmica do planeta esteja bastante interessada em manter a pesquisa na universidade!"
+dpe_smallpos_events.11.A:0 "Contratar Cientista."
+#Spend normal leader costs
+dpe_smallpos_events.11.A.tooltip:0 "[dpe_talent_leader.GetName], um cientista nível 2 especializado em [root.GetDPETalentField] e com o traço $leader_trait_dpe_talented$, será adicionado aos seu líderes."
+dpe_smallpos_events.11.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] mais importante em [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_physicist:0 "Físico Talentoso"
+dpe_planet_talented_physicist_desc:0 "Este planeta se beneficia dos serviços de um físico talentoso."
+dpe_planet_talented_engineer:0 "Engenheiro Talentoso"
+dpe_planet_talented_engineer_desc:0 "Este planeta se beneficia dos serviços de um engenheiro talentoso."
+dpe_planet_talented_biologist:0 "Biólogo Talentoso"
+dpe_planet_talented_biologist_desc:0 "Este planeta se beneficia dos serviços de um biólogo talentoso."
+dpe_planet_talented_compscientist:0 "Talentoso Cientista da Computação"
+dpe_planet_talented_compscientist_desc:0 "Este planeta se beneficia dos serviços de um cientista da computação talentoso."
+dpe_planet_talented_socscientist:0 "Talentoso Sociólogo"
+dpe_planet_talented_socscientist_desc:0 "Este planeta se beneficia dos serviços de um sociólogo talentoso."
+
+
+dpe_smallpos_events.12.name:0 "General Talentoso Descoberto"
+dpe_smallpos_events.12.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], impressionou as Forças Armadas [root.GetSpeciesAdj] com suas habilidades de liderança - tanto que eles sugeriram que [dpe_talent_leader.GetSheHe] seja promovido a General do Exército. No entanto, [dpe_talent_planet.GetName] está interessado igualmente em manter [dpe_talent_leader.GetSheHe] e colocar [dpe_talent_leader.GetSheHe] no comando da defesa do planeta."
+dpe_smallpos_events.12.A:0 "Contratar [dpe_talent_leader.GetSheHe]."
+dpe_smallpos_events.12.A.tooltip:0 "[dpe_talent_leader.GetName], um general nível 2 com o traço $leader_trait_dpe_talented$ e $leader_trait_charismatic$, será adicionado aos seus líderes."
+dpe_smallpos_events.12.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] de maior ajuda em [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_general:0 "General Talentoso"
+dpe_planet_talented_general_desc:0 "Este planeta se beneficia dos serviços de um general talentoso."
+
+
+dpe_smallpos_events.13.name:0 "Oficial Talentoso Descoberto"
+dpe_smallpos_events.13.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], impressionou Oficiais [root.GetSpeciesAdj] com suas habilidades de liderança e bom registo de comando. Eles sugeriram seu nome para receber maiores responsabilidades dentro da estrutura do governo [root.GetName]. No entanto, [dpe_talent_leader.GetSheHe] é amado pela população de [dpe_talent_planet.GetName], que ficaria triste em ver [dpe_talent_leader.GetHimHer] partir."
+dpe_smallpos_events.13.A:0 "Contrate [dpe_talent_leader.GetSheHe]."
+dpe_smallpos_events.13.A.tooltip:0 "[dpe_talent_leader.GetName], um governador nível 2 com o traço $leader_trait_dpe_talented$ e $leader_trait_intellectual$, será adicionado aos seus líderes."
+dpe_smallpos_events.13.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] de maior uso em [dpe_talent_planet.GetName]."
+
+dpe_planet_talented_governor:0 "Oficial Competente"
+dpe_planet_talented_governor_desc:0 "Este mundo se beneficia dos serviços de um governador altamente competente."
+
+
+dpe_smallpos_events.14.name:0 "Talentoso Oficial Naval Encontrado"
+dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], o oficial naval da marinha encarregado da Base Estelar de [dpe_talent_starport_system.GetName], impressionou a Marinha [root.GetSpeciesAdj] com suas habilidades de liderança – tanto que eles sugeriram que [dpe_talent_leader.GetSheHe] seja promovido a Almirante da Frota."
+dpe_smallpos_events.14.A:0 "Contrate [dpe_talent_leader.GetSheHe]."
+dpe_smallpos_events.14.A.tooltip:0 "[dpe_talent_leader.GetName], um Almirante nível 2 com o seguinte traço $leader_trait_dpe_talented$ e $leader_trait_aggressive$, é adicionado aos seus líderes."
+dpe_smallpos_events.14.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] mais útil onde [dpe_talent_leader.GetSheHe] [dpe_talent_leader.GetIsAre]."
+
+dpe_starbase_talented_admiral:0 "Oficial Naval Talentoso"
+dpe_starbase_talented_admiral_desc:0 "Esta Base Estelar se beneficia dos serviços de um talentoso oficial naval."
+
+#GetDPETalentFlavour + [dpe_talent_planet.GetName] + GetDPETalentFlavour1
+dpe_talent_flavour_scientist_university:0 "a"
+dpe_talent_flavour_scientist_university1:0 ": Universidade"
+dpe_talent_flavour_scientist_default:0 "de"
+dpe_talent_flavour_blank:0 ""
+
+dpe_talent_flavour_general_academy:0 "um graduado de"
+dpe_talent_flavour_general_academy1:0 ": Academia Militar"
+dpe_talent_flavour_general_default:0 "um general local"
+
+dpe_talent_flavour_governor_royal:0 "um membro do"
+dpe_talent_flavour_governor_royal1:0 "da família real"
+dpe_talent_flavour_governor_democracy:0 "um funcionário que ajudou a governar"
+dpe_talent_flavour_governor_democracy1:0 "da democracia local"
+dpe_talent_flavour_governor_default:0 "um servidor local de"
+
+#GetDPETalentField: Uses Vanilla "materials" etc localisations
+
+
+
+
+
+#These are actually for colony events, but that file is bloated
+#+2/3 or 3/4 of normal attraction
+cc_authoritarian_influence1:0 "Influência Monarquista"
+cc_authoritarian_influence1_desc:0 "Este planeta é influenciado pela memória de um monarca local que governava o planeta."
+
+cc_egalitarian_influence1:0 "Influência Democrática"
+cc_egalitarian_influence1_desc:0 "Este planeta é influenciado pela memória de seu antigo sistema de autogovernança de democracia direta."
+
+cc_xenophile_influence1:0 "Influência Xenófila"
+cc_xenophile_influence1_desc:0 "Este planeta é influenciado pela memória de um distinto ativista xenófilo que era amado pela população do planeta."
+
+cc_xenophobe_influence1:0 "Influência Xenófoba"
+cc_xenophobe_influence1_desc:0 "Este planeta é influenciado pela memória do "Hegemon", um indivíduo carismático que procurava proteger o planeta das influências externas."
+
+cc_materialist_influence1:0 "Influência Materialista"
+cc_materialist_influence1_desc:0 "Este planeta é influenciado pela memória de um intelectual local que era amado pela população do planeta."
+
+cc_spiritualist_influence1:0 "Influência Espiritualista"
+cc_spiritualist_influence1_desc:0 "Este planeta é influenciado pela memória de um guru local que era amado pela população do planeta."
+
+cc_pacifist_influence1:0 "Influência pacifista"
+cc_pacifist_influence1_desc:0 "Este planeta é influenciado pela memória de um distinto ativista pacifista que era amado pela população do planeta."
+
+cc_militarist_influence1:0 "$cc_militarist_influence$"
+cc_militarist_influence1_desc:0 "Este planeta é influenciado pela memória de um oficial da marinha aposentado que costumava ser o 'Enviado' deste planeta."
+
+leader_trait_dpe_talented:0 "Talentoso"
+leader_trait_dpe_talented_desc:0 "Este líder tem a capacidade natural de se tornar um verdadeiro mestre de sua área."
+
+
+
+
+dpe_leader.1.desc:0 "Na recente batalha que aconteceu no sistema [system.GetName], [officer.GetName], o capitão de [ship.GetName], impressionou tanto o Almirante [dpe_admiral.GetName] que agora [dpe_admiral.GetSheHe] [dpe_admiral.GetIsAre] oficialmente requisitando que [officer.GetSheHe] receba uma promoção. Se você acredita que temos um uso para um almirante adicional, vamos promover o Capitão [officer.GetName] imediatamente. Quais são suas ordens?"
+dpe_leader.2.desc:0 "Na recente batalha, a falta de uma presença de alto comando permitiu que os comandantes inferiores se distinguissem: O Capitão dos [ship.GetName], [officer.GetName], assumiu a responsabilidade e nos liderou com sucesso na batalha. Reconhecendo suas óbvias qualidades, muitos dentro das fileiras superiores de nossas forças armadas estão clamando pela promoção do Capitão [officer.GetName]. Deveríamos promover?"
+dpe_leader.1.A:0 "Excelente, promova [officer.GetHimHer]."
+dpe_leader.1.A.tooltip:0 "Um almirante nível 2 foi adicionado aos seus líderes."
+dpe_leader.1.B:0 "Já temos comandantes suficientes."
+dpe_talented_captain:0 "Capitão Habilidoso"
+
+
+cc_luddite.30.name:0 "Celebrando Trabalhadores Robóticos"
+cc_luddite.30.desc:0 "Após a introdução de trabalhadores robóticos em [root.GetName], uma onda de entusiasmo sobre IA e robótica se espalhou através da população [root.GetSpeciesAdj]. Os pessimistas que se preocupam com o impacto e os riscos potenciais do uso em larga escala de robôs estão sendo marginalizados, e suas dúvidas foram varridas pela melhoria significativa no padrão de vida dos robôs. Os robôs agora são extremamente procurados pela população em geral, e dezenas de startups relacionadas à robótica são lançadas todos os dias."
+cc_antiluddite:0 "Celebrando Trabalhadores Robóticos"
