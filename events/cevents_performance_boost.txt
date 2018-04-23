@@ -984,7 +984,7 @@ event = {
 					}
 					any_owned_leader = {
 						NOR = {
-							leader_class = ruler
+							is_same_value = prev.ruler
 							leader_of_faction = supremacist
 							leader_of_faction = isolationist
 							has_leader_flag = cc_married
@@ -1671,7 +1671,7 @@ event = {
 					is_at_war = no
 					has_faction = totalitarian
 					any_owned_leader = {
-						NOT = { leader_class = ruler }
+						NOT = { is_same_value = prev.ruler }
 						leader_of_faction = totalitarian
 					}
 				}
@@ -1859,7 +1859,7 @@ event = {
 						else = { used_naval_capacity_percent > 1.2 }
 					}
 					any_owned_leader = {
-						NOT = { leader_class = ruler }
+						NOT = { is_same_value = prev.ruler }
 						leader_of_faction = imperialist
 					}
 					exists = ruler
@@ -2422,7 +2422,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					any_owned_leader = {
-						NOT = { leader_class = ruler }
+						NOT = { is_same_value = prev.ruler }
 						leader_of_faction = xenoist
 					}
 				}

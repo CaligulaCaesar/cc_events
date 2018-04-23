@@ -187,13 +187,13 @@ country_event = {
 			years = 50
 		}
 		random_owned_leader = {
-			limit = { NOT = { leader_class = ruler } }
+			limit = { NOT = { is_same_value = root.ruler } }
 			save_event_target_as = cc_first_corrupt
 		}
 		random_owned_leader = {
 			limit = {
 				NOR = {
-					leader_class = ruler
+					is_same_value = root.ruler
 					is_same_value = event_target:cc_first_corrupt
 				}
 			}
@@ -755,7 +755,7 @@ country_event = {
 	
 	immediate = {
 		random_owned_leader = {
-			limit = { NOT = { leader_class = ruler } }
+			limit = { NOT = { is_same_value = root.ruler } }
 			save_event_target_as = random_guy
 		}
 	}

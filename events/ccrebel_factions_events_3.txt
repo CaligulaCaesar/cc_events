@@ -2831,11 +2831,11 @@ country_event = {
 								OR = {
 									AND = {
 										exists = event_target:cc_rebellious_faction_leader
-										event_target:cc_rebellious_faction_leader = { NOT = { leader_class = ruler } }
+										event_target:cc_rebellious_faction_leader = { NOT = { is_same_value = root.ruler } }
 									}
 									AND = {
 										exists = event_target:cc_new_reb_faction_leader
-										event_target:cc_new_reb_faction_leader = { NOT = { leader_class = ruler } }
+										event_target:cc_new_reb_faction_leader = { NOT = { is_same_value = root.ruler } }
 									}
 								}
 							}
@@ -3302,11 +3302,11 @@ country_event = {
 										OR = {
 											AND = {
 												exists = event_target:cc_rebellious_faction_leader
-												event_target:cc_rebellious_faction_leader = { NOT = { leader_class = ruler } }
+												event_target:cc_rebellious_faction_leader = { NOT = { is_same_value = root.ruler } }
 											}
 											AND = {
 												exists = event_target:cc_new_reb_faction_leader
-												event_target:cc_new_reb_faction_leader = { NOT = { leader_class = ruler } }
+												event_target:cc_new_reb_faction_leader = { NOT = { is_same_value = root.ruler } }
 											}
 										}
 									}

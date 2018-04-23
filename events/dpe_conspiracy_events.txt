@@ -30,7 +30,7 @@ country_event = {
 		is_at_war = no
 		has_faction = totalitarian
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = totalitarian
 		}
 	}
@@ -839,7 +839,7 @@ country_event = {
 			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
 		}
 		exists = ruler
@@ -1053,7 +1053,7 @@ country_event = {
 			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
 		}
 	}
@@ -1106,7 +1106,7 @@ country_event = {
 			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
 		}
 	}
@@ -1141,7 +1141,7 @@ country_event = {
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
 		}
 	}
@@ -1275,7 +1275,7 @@ country_event = {
 							}
 						}
 						any_owned_leader = {
-							NOT = { leader_class = ruler }
+							NOT = { is_same_value = root.ruler }
 							leader_of_faction = imperialist
 						}
 						exists = ruler
@@ -1339,7 +1339,7 @@ country_event = {
 			else = { used_naval_capacity_percent > 1.2 }
 		}
 		any_owned_leader = {
-			NOT = { leader_class = ruler }
+			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
 		}
 	}

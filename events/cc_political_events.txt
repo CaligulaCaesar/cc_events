@@ -1866,7 +1866,7 @@ country_event = {
 		}
 		any_owned_leader = {
 			NOR = {
-				leader_class = ruler
+				is_same_value = root.ruler
 				leader_of_faction = supremacist
 				leader_of_faction = isolationist
 				has_leader_flag = cc_married
