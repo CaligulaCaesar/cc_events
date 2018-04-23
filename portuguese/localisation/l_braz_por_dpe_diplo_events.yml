@@ -2,8 +2,8 @@
 
 dpe_diplo.1.name:0 "A População Clama Pela Guerra"
 dpe_diplo.1.desc:0 "O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], cujos líderes tem abertamente desprezado os [root.GetSpeciesNamePlural], dizendo que somos covardes e não temos honra. Nossa população, ultrajada, exige a guerra."
-dpe_diplo.1.desc.machine:0 "O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], que recentemente sua Inteligência Maquinária emitiu uma diretriz para suas sub-unidades que afirma que os [root.GetSpeciesNamePlural] estão oficialmente considerados "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige guerra."
-dpe_diplo.1.desc.hive:0 "O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], já que foi descoberto recentemente que os pensamentos oficiais da Colmeia sobre [root.GetSpeciesNamePlural] é que somos "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige a guerra."
+dpe_diplo.1.desc.machine:0 " O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], que recentemente sua Inteligência Maquinária emitiu uma diretriz para suas sub-unidades que afirma que os [root.GetSpeciesNamePlural] estão oficialmente considerados "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige guerra."
+dpe_diplo.1.desc.hive:0 " O sentimento nacionalista entre os [root.GetSpeciesNamePlural] aumentou, com demonstrações em todo o império que pedem a restauração da honra nacional - os cidadãos estão preocupados porque o [root.GetName] entrou em um longo período de paz, e temem que nossos inimigos achem que nos tornamos covardes. O alvo da ira de nosso cidadãos é [enemy.GetName], já que foi descoberto recentemente que os pensamentos oficiais da Colmeia sobre [root.GetSpeciesNamePlural] é que somos "covardes", "sem honra" e "muito inofensivos". A população ultrajada exige a guerra."
 dpe_diplo.1.A:0 "Declare guerra."
 dpe_diplo.1.A.tooltip:0 "As exigências de guerra serão $war_demand_humiliate_header$ e $war_demand_dpe_cede_borders_header$. Nossas exigências são eles cederem estes planetas:"
 dpe_diplo.1.B:0 "Paciência. Vamos declarar guerra logo em nossos próprios termos."
@@ -12,7 +12,7 @@ dpe_diplo.1.C:0 "A guerra é muito arriscada agora."
 
 #B + No war declaration in a year
 dpe_diplo.2.name:0 "Promessa Quebrada"
-dpe_diplo.2.desc:0 "Os nacionalistas estão desapontados por não ter cumprido suas promessas de declarar a guerra em [enemy.GetName]. Eles acham que [root.GetName] foi humilhado e que eles, como [root.GetSpeciesNamePlural], não podem mais manter suas cabeças erguidas entre seus pares. Como resultado, um número significativo de cidadãos se voltou contra o atual governo."
+dpe_diplo.2.desc:0 " Os nacionalistas estão desapontados por não ter cumprido suas promessas de declarar a guerra em [enemy.GetName]. Eles acham que [root.GetName] foi humilhado e que eles, como [root.GetSpeciesNamePlural], não podem mais manter suas cabeças erguidas entre seus pares. Como resultado, um número significativo de cidadãos se voltou contra o atual governo."
 
 #C or follow-up to .2:
 dpe_diplo.4.name:0 "Incidente fronteiriço"
@@ -28,7 +28,7 @@ dpe_ruler_looks_weak_and_breaks_promises_faction:0 "Governo fraco, covarde e ino
 dpe_diplo.5.name:0 "Incidente Fronteiriço"
 dpe_diplo.5.desc:0 "Um grupo de nacionalistas de [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. A população está ultrajada, e exige que [from.GetName] entregue os sequestradores e pague pelos danos causados."
 dpe_diplo.5.desc.machine:0 "Alguns indivíduos rebeldes em [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. O que [root.GetName] deve fazer contra essa ação?"
-dpe_diplo.5.desc.hive:0 "Um grupo de nacionalistas de [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. O que [root.GetName] deve fazer contra essa ação?"
+dpe_diplo.5.desc.hive:0 " Um grupo de nacionalistas de [from.GetName] lançaram um ataque injustificado em [attacked_planet.GetName] e outros sistemas próximos. Eles sequestraram um velho cruzador e o usaram para perseguir nossos comerciantes civis e atacar nossas estações, destruindo uma delas. Nós fomos capazes de persegui-los, mas eles fugiram da captura e voltaram para o [from.GetName]. O que [root.GetName] deve fazer contra essa ação?"
 dpe_diplo.5.A:0 "Exigência justa"
 dpe_diplo.5.A.tooltip:0 "Se [from.GetName] aceitar, o [root.GetName] receberão indenização de 100 minerais por um ano. Se o rejeitarem, a guerra será declarada com as demandas de guerra $war_goal_wg_conquest$."
 dpe_diplo.5.B:0 "Procure Aliviar as Tensões"
@@ -145,9 +145,9 @@ dpe_spiritualist_mission.5.desc:0 "A missão a [dpe_neighbour.GetName] teve avan
 
 dpe_spiritualist_mission.51.name:0 "A Missão [dpe_missionary_country.GetSpeciesAdj] se estabeleceu com sucesso"
 dpe_spiritualist_mission.51.desc.normal:0 "Até agora, as autoridades locais em [dpe_mission_host_planet.GetName] responsáveis por supervisionar a missão [dpe_missionary_country.GetSpeciesAdj] não relataram nenhum distúrbio ou fraude. Nossa equipe de inteligência tem monitorado esses xenos, e parece que eles são o que eles afirmam. No entanto, eles também notaram algo que pode ser preocupante: uma porção considerável da população local está realmente participando das cerimônias e rituais que os missionários fazem. Parece que essa religião deles pode estar pegando. Devemos tolerar isso?"
-dpe_spiritualist_mission.51.desc.ally:0 "Até agora, as autoridades locais em [dpe_mission_host_planet.GetName] responsáveis por supervisionar a missão [dpe_missionary_country.GetSpeciesAdj] não relataram nenhum distúrbio ou fraude. Os missionários se estabeleceram bem e, de fato, encontraram muitos [root.GetSpeciesNamePlural] para serem receptivos à sua mensagem. No entanto, existem pessoas dentro da nossa população que se preocupam com o fato de que parte da identidade [root.GetSpeciesAdj] possa ser perdida com os missionários que estão autorizados a continuar a ter acesso livre. Como devemos reagir?"
-dpe_spiritualist_mission.51.normal.A:0 "Se tivéssemos medo de sua religião, não deveríamos deixá-los entrar em primeiro lugar."
-dpe_spiritualist_mission.51.normal.B:0 "Envie-os para casa - nós nunca pensamos que alguém iria realmente se apaixonar por seu culto espacial espúrio!"
+dpe_spiritualist_mission.51.desc.ally:0 " Até agora, as autoridades locais em [dpe_mission_host_planet.GetName] responsáveis por supervisionar a missão [dpe_missionary_country.GetSpeciesAdj] não relataram nenhum distúrbio ou fraude. Os missionários se estabeleceram bem e, de fato, encontraram muitos [root.GetSpeciesNamePlural] para serem receptivos à sua mensagem. No entanto, existem pessoas dentro da nossa população que se preocupam com o fato de que parte da identidade [root.GetSpeciesAdj] possa ser perdida com os missionários que estão autorizados a continuar a ter acesso livre. Como devemos reagir?"
+dpe_spiritualist_mission.51.normal.A:0 " Se tivéssemos medo de sua religião, não deveríamos deixá-los entrar em primeiro lugar."
+dpe_spiritualist_mission.51.normal.B:0 " Envie-os para casa - nós nunca pensamos que alguém iria realmente se apaixonar por seu culto espacial espúrio!"
 dpe_spiritualist_mission.51.ally.A:0 "Claro que eles podem ficar."
 dpe_spiritualist_mission.51.ally.B:0 "Devemos encontrar uma desculpa para mandá-los para casa."
 
@@ -164,7 +164,7 @@ dpe_spiritualist_mission.591.desc.ally:0 "Até agora, as autoridades locais em [
 
 
 dpe_spiritualist_mission.6.name:0 "Nossa Missão Encara Resistência"
-dpe_spiritualist_mission.6.desc:0 "A missão [dpe_neighbour.GetName] foi criado e acabamos de receber o primeiro conjunto de relatórios. Infelizmente, os moradores locais não estão muito felizes com nossos ensinamentos. Os missionários mencionam serem assediados, ameaçados e até mesmo agredidos por civis locais chateados com a nossa presença. As autoridades locais estão tentando manter a paz, mas uma equipe de segurança completa será necessária para garantir a segurança de nossa missão. Devemos persistir em nossos esforços ou retirar a missão?"
+dpe_spiritualist_mission.6.desc:0 "A missão [dpe_neighbour.GetName] foi criado e acabamos de receber o primeiro conjunto de relatórios. Infelizmente, os moradores locais não estão muito felizes com nossos ensinamentos. Os missionários mencionam serem assediados, ameaçados e até mesmo agredidos por civis locais chateados com a nossa presença. As autoridades locais estão tentando manter a paz, mas uma equipe de segurança completa será necessária para garantir a segurança de nossa missão. Devemos persistir em nossos esforços ou retirar a missão?" 
 dpe_spiritualist_mission.6.A:0 "Retire a missão, a Vontade do Divino é Clara."
 dpe_spiritualist_mission.6.B:0 "Precisamos persistir e salvar os [dpe_neighbour.GetSpeciesNamePlural] de si mesmos!"
 
@@ -174,7 +174,7 @@ dpe_spiritualist_mission.601.option:0 "It is the probably for the best."
 
 
 dpe_spiritualist_mission.61.name:0 "Resistência a missão [dpe_missionary_country.GetSpeciesAdj]"
-dpe_spiritualist_mission.61.desc:0 "As autoridades locais próximas da missão em [dpe_mission_host_planet.GetName] relataram uma infinidade de problemas decorrentes da presença da missão [dpe_missionary_country.GetSpeciesAdj] que não foi bem recebida. Assédio, intimidação, destruição de propriedade e grafites são apenas o começo de uma longa lista de problemas que surgiram recentemente. Até agora, o aparato judiciário-legal local fez o melhor que pôde para manter as coisas calmas enquanto esperavam que tomássemos uma decisão oficial sobre o assunto. No entanto, muitos consultores levantam preocupações de que a situação pode piorar rapidamente, pois os agentes de segurança locais enfrentam o dilema de proteger suas próprias crenças ou manter a lei e a ordem. Por sua vez, o [dpe_missionary_country.GetSpeciesNamePlural] expressou fortemente sua intenção em persistir em sua missão."
+dpe_spiritualist_mission.61.desc:0 " As autoridades locais próximas da missão em [dpe_mission_host_planet.GetName] relataram uma infinidade de problemas decorrentes da presença da missão [dpe_missionary_country.GetSpeciesAdj] que não foi bem recebida. Assédio, intimidação, destruição de propriedade e grafites são apenas o começo de uma longa lista de problemas que surgiram recentemente. Até agora, o aparato judiciário-legal local fez o melhor que pôde para manter as coisas calmas enquanto esperavam que tomássemos uma decisão oficial sobre o assunto. No entanto, muitos consultores levantam preocupações de que a situação pode piorar rapidamente, pois os agentes de segurança locais enfrentam o dilema de proteger suas próprias crenças ou manter a lei e a ordem. Por sua vez, o [dpe_missionary_country.GetSpeciesNamePlural] expressou fortemente sua intenção em persistir em sua missão."
 dpe_spiritualist_mission.61.A:0 "Envie-os para casa para impedir a escalada da situação."
 dpe_spiritualist_mission.61.B:0 "Vamos tentar proteger os missionários, mas eles aceitaram ir para lá por sua conta e risco."
 
@@ -185,13 +185,13 @@ dpe_spiritualist_mission.62.option.B:0 "Como você ousa..."
 
 
 dpe_spiritualist_mission.631.name:0 "Desastre Atinge Nossa Missão!"
-dpe_spiritualist_mission.631.desc:0 "Todas as agências de notícias em nossos impérios, junto com nossas próprias agências de inteligência, estão relatando a tragédia que atingiu nossa missão em [dpe_mission_host_planet.GetName]. Enquanto os fiéis se reuniam para a primeira adoração do dia, uma bomba explodiu. A explosão destruiu quase metade do prédio, e o incêndio que se seguiu matou a maioria dos sobreviventes. No final daquele dia, os manifestantes destruíram grandes partes da cidade e mataram ainda mais nossos fiéis. O [dpe_neighbour.GetName] enviou oficialmente nossa missão de volta para casa, apesar de nenhum membro da missão ter sobrevivido ao ataque, e eles pediram que nos abstenhamos de enviar qualquer pessoa não essencial ao seu império no futuro próximo..."
+dpe_spiritualist_mission.631.desc:0 " Todas as agências de notícias em nossos impérios, junto com nossas próprias agências de inteligência, estão relatando a tragédia que atingiu nossa missão em [dpe_mission_host_planet.GetName]. Enquanto os fiéis se reuniam para a primeira adoração do dia, uma bomba explodiu. A explosão destruiu quase metade do prédio, e o incêndio que se seguiu matou a maioria dos sobreviventes. No final daquele dia, os manifestantes destruíram grandes partes da cidade e mataram ainda mais nossos fiéis. O [dpe_neighbour.GetName] enviou oficialmente nossa missão de volta para casa, apesar de nenhum membro da missão ter sobrevivido ao ataque, e eles pediram que nos abstenhamos de enviar qualquer pessoa não essencial ao seu império no futuro próximo..."
 dpe_spiritualist_mission.631.A:0 "Deveríamos tê-los retirado mais cedo."
 dpe_spiritualist_mission.631.B:0 "[dpe_neighbour.GetSpeciesNamePlural] é o culpado por esta tragédia!"
 
 
 dpe_spiritualist_mission.632.name:0 "Desastre atinge a Missão [from.GetSpeciesAdj]!"
-dpe_spiritualist_mission.632.desc:0 "Todas as agências de notícias em nossos impérios, junto com nossas próprias agências de inteligência, estão relatando a tragédia que atingiu a missão [from.GetSpeciesAdj] em [dpe_mission_host_planet.GetName]. Apesar de nossos melhores esforços para proteger os missionários, nossos serviços de segurança foram incapazes de impedir o abate. Enquanto os fiéis se reuniam para a primeira adoração do dia, uma bomba explodiu. A explosão destruiu quase metade do prédio, e o incêndio que se seguiu matou a maioria dos sobreviventes. No final daquele dia, os desordeiros haviam destruído partes da cidade e matado a maior parte do [from.GetSpeciesNamePlural] e de seus seguidores. No momento, ainda não temos um número final de mortos, mas estima-se em mais de 3.000 e continua aumentando. Esta é verdadeiramente uma tragédia nacional.\n\nO Governo [from.GetSpeciesAdj] declarou um período de luto após esses eventos e evitou nos culpar diretamente pelos eventos, aceitando que eles deveriam ter atendido nossos avisos de que algo poderia acontecer. Embora muitos [from.GetSpeciesNamePlural] sejam inevitavelmente hostis em relação a nós, esperamos que, com o tempo, consigamos reparar nossas relações com eles."
+dpe_spiritualist_mission.632.desc:0 " Todas as agências de notícias em nossos impérios, junto com nossas próprias agências de inteligência, estão relatando a tragédia que atingiu a missão [from.GetSpeciesAdj] em [dpe_mission_host_planet.GetName]. Apesar de nossos melhores esforços para proteger os missionários, nossos serviços de segurança foram incapazes de impedir o abate. Enquanto os fiéis se reuniam para a primeira adoração do dia, uma bomba explodiu. A explosão destruiu quase metade do prédio, e o incêndio que se seguiu matou a maioria dos sobreviventes. No final daquele dia, os desordeiros haviam destruído partes da cidade e matado a maior parte do [from.GetSpeciesNamePlural] e de seus seguidores. No momento, ainda não temos um número final de mortos, mas estima-se em mais de 3.000 e continua aumentando. Esta é verdadeiramente uma tragédia nacional.\n\nO Governo [from.GetSpeciesAdj] declarou um período de luto após esses eventos e evitou nos culpar diretamente pelos eventos, aceitando que eles deveriam ter atendido nossos avisos de que algo poderia acontecer. Embora muitos [from.GetSpeciesNamePlural] sejam inevitavelmente hostis em relação a nós, esperamos que, com o tempo, consigamos reparar nossas relações com eles."
 
 dpe_spiritualist_mission.633.name:0 "Desastre Atinge a Missão [from.GetSpeciesAdj]!"
 dpe_spiritualist_mission.633.desc:0 "Todas as agências de notícias em nossos impérios, junto com nossas próprias agências de inteligência, estão relatando a tragédia que atingiu a missão [from.GetSpeciesAdj] em [dpe_mission_host_planet.GetName]. Apesar dos nossos melhores esforços para proteger os missionários, nossos serviços de segurança foram incapazes de impedir o abate. Enquanto os fiéis se reuniam para a primeira adoração do dia, uma bomba explodiu. A explosão destruiu quase metade do prédio, e o incêndio que se seguiu matou a maioria dos sobreviventes. No final daquele dia, manifestantes destruíram partes da cidade e mataram a maior parte do [from.GetSpeciesNamePlural] e seus seguidores. No momento, ainda não temos um número final de mortos, mas estima-se em mais de 3.000 e continua aumentando. Esta é verdadeiramente uma tragédia nacional.\n\nApesar de termos avisado os [from.GetSpeciesNamePlural] que algo possa acontecer, eles estão publicamente nos culpando pelo desastre. Este evento provavelmente abalará nossas relações com eles nos próximos anos."
@@ -209,7 +209,7 @@ dpe_spirmission_killed_opinion2:0 "Missionários Massacrados"
 dpe_spiritualist_mission.64.name:0 "A situação em [dpe_mission_host_planet.GetName] estabilizou-se"
 dpe_spiritualist_mission.64.desc:0 "Felizmente, a situação em torno da nossa missão em [dpe_mission_host_planet.GetName] se acalmou. Os habitantes locais aceitaram um pouco mais nossa presença e os missionários aprenderam seus limites. Parece que alcançamos um equilíbrio delicado."
 dpe_spiritualist_mission.65.name:0 "$dpe_spiritualist_mission.64.name$"
-dpe_spiritualist_mission.65.desc:0 "Felizmente, a situação em torno da missão [dpe_missionary_country.GetSpeciesAdj] em [dpe_mission_host_planet.GetName] tem se acalmado. Os habitantes locais aceitaram ligeiramente os xenos, e os xenos aprenderam seus limites. Parece que alcançamos um equilíbrio delicado."
+dpe_spiritualist_mission.65.desc:0 " Felizmente, a situação em torno da missão [dpe_missionary_country.GetSpeciesAdj] em [dpe_mission_host_planet.GetName] tem se acalmado. Os habitantes locais aceitaram ligeiramente os xenos, e os xenos aprenderam seus limites. Parece que alcançamos um equilíbrio delicado."
 
 dpe_hosting_spirmission_planet_turbulence:0 "Turbulência em torno dos missionários estrangeiros"
 dpe_hosting_spirmission_planet_turbulence_desc:0 "A presença de missionários estrangeiros provocou uma resposta hostil de elementos da população local."
@@ -282,7 +282,7 @@ dpe_spiritualist_mission.11.desc.high:0 "$dpe_spiritualist_mission.10.desc.high$
 dpe_spiritualist_mission.11.desc.success:0 "$dpe_spiritualist_mission.10.desc.success$"
 
 dpe_spiritualist_mission.101.name:0 "A Missão [from.GetSpeciesAdj]"
-dpe_spiritualist_mission.101.desc.low:0 "Apesar de sua falta de sucesso em converter nossa população a seus caminhos,  os missionários [from.GetSpeciesAdj] manifestaram a intenção de permanecer e continuar seu trabalho. Devemos permitir?"
+dpe_spiritualist_mission.101.desc.low:0 " Apesar de sua falta de sucesso em converter nossa população a seus caminhos,  os missionários [from.GetSpeciesAdj] manifestaram a intenção de permanecer e continuar seu trabalho. Devemos permitir?"
 dpe_spiritualist_mission.101.desc.mid:0 "Os Missionários [from.GetSpeciesAdj] tiveram algum sucesso limitado em converter nossa população a seus caminhos: Seus seguidores agora representam uma minoria considerável dentro do [root.GetName]. Os missionários [from.GetSpeciesAdj] expressaram a intenção de permanecer e continuar seu trabalho. Devemos permitir que eles o façam?"
 dpe_spiritualist_mission.101.desc.high:0 "Os missionários [from.GetSpeciesAdj] têm sido relativamente bem sucedidos em converter nossa população a seus caminhos, e seus seguidores agora representam uma minoria considerável dentro do [root.GetName]. Os missionários [from.GetSpeciesAdj] expressaram a intenção de permanecer e continuar seu trabalho. Devemos permitir que eles o façam?"
 dpe_spiritualist_mission.101.option.continue:0 "Eles podem ficar, se quiserem."
@@ -292,7 +292,7 @@ dpe_spiritualist_mission.102.name:0 "Os Missionários [from.GetSpeciesAdj] se fo
 dpe_spiritualist_mission.102.desc.uninterested:0 "Caros [root.GetSpeciesNamePlural], nós escolhemos retirar nossos missionários de [dpe_mission_host_planet.GetName]. Nós simplesmente não estamos interessados em espalhar nossas crenças para outros impérios mais. Agradecemos por hospedá-los nos últimos anos."
 dpe_spiritualist_mission.102.desc.low:0 "Caros [root.GetSpeciesNamePlural], escolhemos retirar nossos missionários de [dpe_mission_host_planet.GetName]. Dada a falta de progresso na conversão de [root.GetSpeciesNamePlural] ao Caminho da Verdade, chegamos à conclusão de que a salvação não é para todos. Agradecemos por hospedá-los nos últimos anos."
 dpe_spiritualist_mission.102.desc.mid:0 "Caros [root.GetSpeciesNamePlural], escolhemos retirar nossos missionários de [dpe_mission_host_planet.GetName]. Agradecemos por hospedá-los nos últimos anos."
-dpe_spiritualist_mission.102.desc.high:0 "Caros [root.GetSpeciesNamePlural], escolhemos retirar nossos missionários de [dpe_mission_host_planet.GetName]. Estamos satisfeitos que eles fizeram o suficiente para garantir que a Verdade seja seguida no [root.GetName]. Agradecemos por hospedá-los nos últimos anos."
+dpe_spiritualist_mission.102.desc.high:0 "Caros [root.GetSpeciesNamePlural], escolhemos retirar nossos missionários de [dpe_mission_host_planet.GetNameEstamos satisfeitos que eles fizeram o suficiente para garantir que a Verdade seja seguida no [root.GetName]. Agradecemos por hospedá-los nos últimos anos."
 dpe_spiritualist_mission.102.A:0 "Lamentamos vê-los partir."
 dpe_spiritualist_mission.102.B:0 "Boa Viagem."
  
@@ -324,7 +324,7 @@ dpe_spiritualist_mission.9631.name:0 "Extradimensionais atingem [dpe_mission_hos
 dpe_spiritualist_mission.9631.desc:0 "Invasores extradimensionais atingem [dpe_mission_host_planet.GetName] e abatem nossos missionários, juntamente com os outros habitantes do planeta!"
 
 dpe_spiritualist_mission.9632.name:0 "Extradimensionais atingem [dpe_mission_host_planet.GetName]!"
-dpe_spiritualist_mission.9632.desc:0 "Invasores extradimensionais atingem [dpe_mission_host_planet.GetName], onde missionários [from.GetSpeciesAdj] estavam baseados! Os missionários foram abatidos, e também os outros habitantes do planeta."
+dpe_spiritualist_mission.9632.desc:0 " Invasores extradimensionais atingem [dpe_mission_host_planet.GetName], onde missionários [from.GetSpeciesAdj] estavam baseados! Os missionários foram abatidos, e também os outros habitantes do planeta."
 
 dpe_spiritualist_mission.971.name:0 "Nossos missionários retornaram para casa"
 dpe_spiritualist_mission.971.desc:0 "Os [dpe_neighbour.GetName] perderam o controle sobre [dpe_mission_host_planet.GetName], o planeta aonde nossos missionários estavam ativos. Felizmente, nossos missionários foram capazes de escapar do caos ilesos, e retornaram para casa."
@@ -333,11 +333,11 @@ dpe_spiritualist_mission.972.name:0 "Missionários [from.GetSpeciesAdj] Retornar
 dpe_spiritualist_mission.972.desc:0 "Com a perda de [dpe_mission_host_planet.GetName] para [fromfromfrom.GetName], os missionários [from.GetSpeciesAdj] retornaram para sua terra natal."
 
 dpe_spiritualist_mission.98.name:0 "Guerra Contra os Missionários!"
-dpe_spiritualist_mission.98.desc:0 "A guerra entre nós e os [dpe_missionary_country.GetName] nos colocou em uma posição desconfortável. Eles montaram uma missão em [dpe_mission_host_planet.GetName], que agora temos que decidir o que fazer. Alguns defenderam simplesmente deportá-los de volta à sua terra natal, outros querem mandar uma mensagem de força matando-os. O que deveria ser feito?"
+dpe_spiritualist_mission.98.desc:0 " A guerra entre nós e os [dpe_missionary_country.GetName] nos colocou em uma posição desconfortável. Eles montaram uma missão em [dpe_mission_host_planet.GetName], que agora temos que decidir o que fazer. Alguns defenderam simplesmente deportá-los de volta à sua terra natal, outros querem mandar uma mensagem de força matando-os. O que deveria ser feito?" 
 dpe_spiritualist_mission.98.A:0 "Mate todos eles, vamos mostrar a eles o que acontece quando eles brincam conosco!"
 dpe_spiritualist_mission.98.A.tooltip:0 "Relações com todos os impérios não aliados nesta guerra: §R-30§!\nRelações com [dpe_missionary_country.GetName]: §R-100§!"
 dpe_spiritualist_mission.98.B:0 "Envie-os para casa. Podemos ser inimigos, mas não somos selvagens."
-dpe_spiritualist_mission.98.B.tooltip:0 "Relações com todos os impérios não aliados nesta guerra: §G+30§!\nRelações com [dpe_missionary_country.GetName]: §R+50§!"
+dpe_spiritualist_mission.98.B.tooltip:0 " Relações com todos os impérios não aliados nesta guerra: §G+30§!\nRelações com [dpe_missionary_country.GetName]: §R+50§!"
 dpe_spiritualist_mission.98.C:0 "Aprisioná-los. Eles viram demais e podem ajudar nosso inimigo."
 
 dpe_dishonourable_in_war:0 "Desonrado na Guerra"
@@ -347,20 +347,20 @@ dpe_honourable_in_war:0 "Honrado na Guerra"
 dpe_not_killed_missionaries_faction:0 "Deixe os agentes inimigos irem"
 
 dpe_spiritualist_mission.981.name:0 "Nossos missionários foram abatidos!"
-dpe_spiritualist_mission.981.desc:0 "Nós recebemos a notícia de que, no início da guerra, os pagãos [dpe_neighbour.GetSpeciesNamePlural] que estávamos tentando esclarecer abateu nossos missionários. O povo está ultrajado com tal atrocidade!"
+dpe_spiritualist_mission.981.desc:0 " Nós recebemos a notícia de que, no início da guerra, os pagãos [dpe_neighbour.GetSpeciesNamePlural] que estávamos tentando esclarecer abateu nossos missionários. O povo está ultrajado com tal atrocidade!"
 dpe_spiritualist_mission.981.option:0 "Os selvagens vão pagar por isto!"
 dpe_spiritualist_mission.982.name:0 "Nossos missionários retornaram para nós!"
 dpe_spiritualist_mission.982.desc:0 "Devido ao nosso conflito atual com o  [dpe_neighbour.GetName], nossos missionários foram devolvidos para nós. Eles dizem que foram tratados com decência, mas a maioria de seus pertences e materiais foram confiscados."
 dpe_spiritualist_mission.982.option:0 "Poderia ter sido pior, se considerarmos a situação."
 dpe_spiritualist_mission.983.name:0 "Nossos Missionários Aprisionados!"
-dpe_spiritualist_mission.983.desc:0 "O recente surto de hostilidades entre nós e os [dpe_neighbour.GetName] levou a algumas conseqüências não intencionais. Nossas tentativas de esclarecê-las colocaram nossos cidadãos em perigo. Eles estão atualmente detidos sob custódia [dpe_mission_host_planet.GetName], e todos os pedidos para serem libertados foram ignorados."
+dpe_spiritualist_mission.983.desc:0 " O recente surto de hostilidades entre nós e os [dpe_neighbour.GetName] levou a algumas conseqüências não intencionais. Nossas tentativas de esclarecê-las colocaram nossos cidadãos em perigo. Eles estão atualmente detidos sob custódia [dpe_mission_host_planet.GetName], e todos os pedidos para serem libertados foram ignorados."
 dpe_spiritualist_mission.983.option:0 "Pelo menos eles ainda estão vivos."
 
 dpe_spiritualist_mission.991.name:0 "O [LastKilledCountryName] colapsou!"
 dpe_spiritualist_mission.991.desc:0 "O [LastKilledCountryName] entrou em colapso em face de todas as suas lutas. Seus missionários agora não têm para onde ir. O que devemos fazer sobre eles?"
 dpe_spiritualist_mission.991.A:0 "Conceda-lhes cidadania, é o mínimo que podemos fazer."
 dpe_spiritualist_mission.991.B:0 "Eles serão bons escravos."
-dpe_spiritualist_mission.991.C:0 "Eles terão que encontrar sua nova casa em outro lugar."
+dpe_spiritualist_mission.991.C:0 "Eles terão que encontrar sua nova casa em outro lugar." 
 
 dpe_missionary_planet:0 "Missionários estabelecidos "
 dpe_missionary_planet_desc:0 "Ex-missionários de um vizinho fizeram deste planeta sua casa."
@@ -383,7 +383,7 @@ dpe_xenophile_mission.4.B:0 "Não estamos interessados em uma troca cultural."
 dpe_xenophile_mission.4.C:0 "(Mentira) teremos o prazer de aproveitar esta oportunidade para aprender mais sobre o [from.GetSpeciesNamePlural]."
 dpe_xenophile_mission.4.C.tooltip:0 "Nossa missão tentará aprender o máximo possível sobre o sistema [from.GetName], a tecnologia e a organização militar. O [from.GetName] ficará irritado se a nossa espionagem for descoberta."
 dpe_xenophile_mission.4.D:0 "(Mentir) Nós não podemos esperar para hospedar seus cidadãos."
-dpe_xenophile_mission.4.D.tooltip:0 "Vamos tentar levar sua missão como refém e extorquir termos favoráveis para seu retorno seguro. O [from.GetSpeciesNamePlural] são uma ameaça e devemos ter alguma forma de nos garantirmos!"
+dpe_xenophile_mission.4.D.tooltip:0 " Vamos tentar levar sua missão como refém e extorquir termos favoráveis para seu retorno seguro. O [from.GetSpeciesNamePlural] são uma ameaça e devemos ter alguma forma de nos garantirmos!"
 
 dpe_xenophile_mission_opinion:0 "Missão de Descoberta"
 dpe_rejected_xenophile_mission_opinion:0 "Missão de Descoberta Rejeitada"
@@ -400,5 +400,5 @@ dpe_xenophile_mission.7.B:0 "Pobres [from.GetSpeciesNamePlural], eles não sabem
 dpe_xenophile_mission.7.C:0 "Ótimo. Será fácil descobrir todos os seus segredoss."
 
 dpe_xenophile_mission.73.name:0 "Atualização de Progresso da Missão de Descoberta "
-dpe_xenophile_mission.73.desc:0 "Nossas respectivas delegações passaram algum tempo construindo relacionamento com seus anfitriões. Diferenças iniciais entre [root.GetSpeciesNamePlural] e [from.GetSpeciesNamePlural] foram suavizados, e estamos aprendendo fascinantes novidades sobre - e construindo uma relação mais próxima com - [from.GetSpeciesNamePlural] diariamente."
-dpe_xenophile_mission.74.desc.spying:0 "Nossas respectivas delegações passaram algum tempo construindo relacionamento com seus anfitriões. As diferenças iniciais entre nossas espécies foram suavizadas. o [from.GetSpeciesNamePlural] não têm idéia de que estamos usando a missão como um pano de fundo para espioná-los e estão confiando em nós. Isso só tornará mais fácil para nós aprendermos seus segredos..."
+dpe_xenophile_mission.73.desc:0 " Nossas respectivas delegações passaram algum tempo construindo relacionamento com seus anfitriões. Diferenças iniciais entre [root.GetSpeciesNamePlural] e [from.GetSpeciesNamePlural] foram suavizados, e estamos aprendendo fascinantes novidades sobre - e construindo uma relação mais próxima com - [from.GetSpeciesNamePlural] diariamente."
+dpe_xenophile_mission.74.desc.spying:0 " Nossas respectivas delegações passaram algum tempo construindo relacionamento com seus anfitriões. As diferenças iniciais entre nossas espécies foram suavizadas. o [from.GetSpeciesNamePlural] não têm idéia de que estamos usando a missão como um pano de fundo para espioná-los e estão confiando em nós. Isso só tornará mais fácil para nós aprendermos seus segredos..."

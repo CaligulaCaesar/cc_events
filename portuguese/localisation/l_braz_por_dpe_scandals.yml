@@ -27,7 +27,7 @@ cc_outrage_at_corruption_1_desc:0 "$cc_outrage_at_corruption_desc$"
 
 
 dpe_scandal.3.name:0 "[root.GetRulerTitle] [root.GetRulerName] não acredita!"
-dpe_scandal.3.desc:0 "A crença na religião e no mundo espiritual sempre esteve no coração da sociedade [root.GetSpeciesAdj]... É por isso que a sociedade está profundamente chocada com a revelação de que [root.GetRulerTitle] [root.GetRulerName] não compartilha dessas crenças. Na verdade, [root.leader.GetSheHe] foi peg[root.leader.GetOALead] em ponto de derrubar princípios básicos da religião [root.GetSpeciesAdj] e se orgulhar de como foi fácil manipular "tolos que acreditam em mágica". Os líderes religiosos moveram-se rapidamente para denunciar [root.GetRulerName], e exigem que [root.leader.GetSheHe] seja considerado incapaz de liderar [root.GetName]. Muitos cidadãos reagiram atrás dessas chamadas. No entanto, os apoiadores de [root.GetRulerTitle] tem defendido [root.leader.GetHimHer], apontando que [root.leader.GetSheHe] foi um dos governantes de [root.GetName] mais capazes de todos os tempos, e é bem respeitado entre os colegas [root.leader.GetHisHer] no âmbito galáctico.\n\nO que devemos fazer diante dessa situação?"
+dpe_scandal.3.desc:0 " A crença na religião e no mundo espiritual sempre esteve no coração da sociedade [root.GetSpeciesAdj]... É por isso que a sociedade está profundamente chocada com a revelação de que [root.GetRulerTitle] [root.GetRulerName] não compartilha dessas crenças. Na verdade, [root.leader.GetSheHe] foi peg[root.leader.GetOALead] em ponto de derrubar princípios básicos da religião [root.GetSpeciesAdj] e se orgulhar de como foi fácil manipular "tolos que acreditam em mágica". Os líderes religiosos moveram-se rapidamente para denunciar [root.GetRulerName], e exigem que [root.leader.GetSheHe] seja considerado incapaz de liderar [root.GetName]. Muitos cidadãos reagiram atrás dessas chamadas. No entanto, os apoiadores de [root.GetRulerTitle] tem defendido [root.leader.GetHimHer], apontando que [root.leader.GetSheHe] foi um dos governantes de [root.GetName] mais capazes de todos os tempos, e é bem respeitado entre os colegas [root.leader.GetHisHer] no âmbito galáctico.\n\nO que devemos fazer diante dessa situação?"
 dpe_scandal.3.A:0 "A religião é para tolos. Devemos abandonar a superstição."
 dpe_scandal.3.A.tooltip:0 "Os espiritualistas ficarão muito chateados."
 dpe_scandal.3.B:0 "Talvez possamos elaborar um cessar-fogo."
@@ -70,7 +70,7 @@ dpe_scandal.14.name:0 "Exigências dos Conspiradores"
 dpe_scandal.14.desc.generic:0 "Uma grande quantia em dinheiro pode comprar nosso silêncio."
 #cc_paid_blackmail modifier
 dpe_scandal.14.desc.egal:0 "Abdique e permita que as eleições aconteçam e nós pouparemos você."
-dpe_scandal.14.desc.spir:0 "Preste o devido respeito aos deuses, e manteremos o nosso silêncio."
+dpe_scandal.14.desc.spir:0 " Preste o devido respeito aos deuses, e manteremos o nosso silêncio."
 dpe_scandal.14.desc.mil:0 "Nós ficaremos em silêncio se o Estado tomar uma posição hostil contra seus inimigos."
 dpe_scandal.14.desc.pac:0 "Acabe com todas as guerras, ou vazaremos as evidências."
 dpe_scandal.14.desc.mat:0 "Abra o mercado, e nós vamos perdoar suas falhas."
@@ -81,15 +81,3 @@ dpe_scandal.14.A:0 "Muito bem. Será feito."
 dpe_scandal.14.B:0 "Inaceitável! Prenda o conspirador e esconda as evidências."
 dpe_scandal.14.B.tooltip: "$dpe_scandal.10.A.tooltip$"
 
-
-
-dpe_scandal.16.name:0 "[root.GetRulerName], [root.GetRulerTitle] or the Cultists' Puppet?"
-dpe_scandal.16.desc:0 "Belief in science and progress has always been at the heart of [root.GetSpeciesAdj] society... Which is why society is shocked to the core by the revelation a notorious (and extremely secretive) cult leader carries considerable clout over [root.GetRulerTitle] [root.GetRulerName]. It all started when this so-called "guru", [dpe_cultist.GetName], fell victim to a hacking attack. The hackers were able to leak dozens of highly confidential government documents, including a draft of a major political speech the [root.GetRulerTitle] was about to make. The press leapt at the story, and further investigation into why exactly [dpe_cultist.GetName] had access to these documents produced unexpected revelations: The [root.GetRulerTitle] has been following [dpe_cultist.GetName]'s advice for years, relying heavily on her for [root.GetHisHer] domestic policies. Almost all of [root.GetRulerName]'s speeches would go through [dpe_cultist.GetHisHer] "spiritual compass" - something that has caused widespread dismay, since the cult is rumoured to engage in various unsavoury practices. Protests demanding that [root.Ruler.GetSheHe] step down and face trial have spread throughout the [root.GetName], the [dpe_matfaction.GetName]'s voice being the loudest. However, the [dpe_spirfaction.GetName] has rallied in [root.Ruler.GetHisHer] support, praising [root.Ruler.GetHimHer] for taking spiritualist views into account.\n\nWhat should be done about the situation?" 
-dpe_scandal.16.A:0 "Spiritualism is the truth. It is time to embrace God."
-dpe_scandal.16.B:0 "[dpe_cultist.GetName] is just a close friend, nothing more."
-dpe_scandal.16.C:0 "Resign from office."
-
-dpe_cultist_embraced:0 "Embraced the Cult"
-dpe_cultist_faction:0 "Cultist Scandal"
-dpe_cultist_scandal_empire:0 "Cultist Influence"
-dpe_unbelief_empire_desc:0 "It has emerged that the Ruler is influenced by a shadowy cult that is feared and distrusted by much of the population."

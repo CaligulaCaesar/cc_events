@@ -1602,6 +1602,7 @@ event = {
 
 					NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 					
+					NOT = { has_civic = civic_imperial_cult }
 					exists = ruler
 					ruler = { NOT = { leader_of_faction = traditionalist } }
 					

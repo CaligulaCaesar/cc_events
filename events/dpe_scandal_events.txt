@@ -292,7 +292,7 @@ country_event = {
 	picture = GFX_evt_cc_priesthood
 	
 	trigger = {
-		has_country_flag = dpe_can_have_corruption_scandal
+		has_country_flag = dpe_can_have_disbelief_scandal
 
 		OR = {
 			has_ethic = ethic_spiritualist
@@ -300,6 +300,7 @@ country_event = {
 		}
 		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 
+		NOT = { has_civic = civic_imperial_cult }
 		NOT = { has_modifier = cc_ruler_cult }
 		
 		exists = ruler
@@ -976,6 +977,206 @@ country_event = {
 			random_list = {
 				1 = { country_event = { id = dpe_scandal.11 days = 5 } }
 				3 = { country_event = { id = dpe_scandal.12 days = 1 } }
+			}
+		}
+	}
+}
+
+
+
+
+#Ruler is a Cultist
+country_event = {
+	id = dpe_scandal.16
+	title = dpe_scandal.16.name
+	desc = dpe_scandal.16.desc
+	picture = GFX_evt_psionics
+	
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
+		has_faction = traditionalist
+		NOT = { has_country_flag = dpe_recent_cultist_scandal }
+
+		NOT = { has_modifier = cc_ruler_cult }
+		
+		exists = ruler
+		ruler = { NOT = { leader_of_faction = technologist } }
+	}
+		
+		
+	mean_time_to_happen = {
+		years = 100
+	}
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_cultist_scandal
+			years = 50
+		}
+		create_leader = {
+			type = admiral
+			name = random
+			species = owner_main_species
+			skill = 1
+		}
+		last_created_leader = {
+			save_event_target_as = dpe_cultist
+			exile_leader_as = dpe_cultist
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = technologist }
+			save_event_target_as = dpe_matfaction
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			save_event_target_as = dpe_spirfaction
+		}
+	}
+			
+	
+	option = {
+		name = dpe_scandal.16.A
+		
+		shift_ethic = ethic_spiritualist
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = technologist }
+			add_modifier = { modifier = dpe_cultist_embraced days = 3600 }
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = traditionalist }
+			add_modifier = { modifier = embraced_faction days = 3600 }
+			hidden_effect = { 
+				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				owner = {
+					every_pop_faction = {
+						limit = {
+							NOR = { is_same_value = prevprev }
+							is_pop_faction_type = technologist
+						}
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support > 0.5
+						}
+						count = 1
+					}
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.12
+						}
+						count = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.18
+					}
+					count = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_scandal.16.B
+		
+		add_modifier = {
+			modifier = dpe_cultist_scandal_empire
+			days = 3600
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = technologist }
+			add_modifier = { modifier = dpe_cultist_faction days = 3600 }
+		}
+		
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				OR = {
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support > 0.5
+						}
+						count = 1
+					}
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = traditionalist
+							support < 0.12
+						}
+						count = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ruler = { has_skill < 4 }
+			}
+			modifier = {
+				factor = 2
+				ruler = { has_skill > 4 }
+			}
+			modifier = {
+				factor = 2
+				ruler = { has_skill > 6 }
+			}
+		}
+	}
+	option = {
+		name = dpe_scandal.16.C
+		custom_tooltip = CCREMOVERULER.tooltip
+		hidden_effect = {
+			kill_leader = { type = ruler show_notification = no }
+		}
+		
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = technologist
+						support > 0.5
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				ruler = { has_skill < 4 }
+			}
+			modifier = {
+				factor = 0.5
+				ruler = { has_skill > 4 }
+			}
+			modifier = {
+				factor = 0.5
+				ruler = { has_skill > 6 }
 			}
 		}
 	}

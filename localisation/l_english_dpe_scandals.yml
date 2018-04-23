@@ -82,3 +82,14 @@ dpe_scandal.14.B:0 "Unacceptable! Arrest the conspirator and suppress the eviden
 dpe_scandal.14.B.tooltip: "$dpe_scandal.10.A.tooltip$"
 
 
+
+dpe_scandal.16.name:0 "[root.GetRulerName], [root.GetRulerTitle] or the Cultists' Puppet?"
+dpe_scandal.16.desc:0 "Belief in science and progress has always been at the heart of [root.GetSpeciesAdj] society... Which is why society is shocked to the core by the revelation a notorious (and extremely secretive) cult leader carries considerable clout over [root.GetRulerTitle] [root.GetRulerName]. It all started when this so-called "guru", [dpe_cultist.GetName], fell victim to a hacking attack. The hackers were able to leak dozens of highly confidential government documents, including a draft of a major political speech the [root.GetRulerTitle] was about to make. The press leapt at the story, and further investigation into why exactly [dpe_cultist.GetName] had access to these documents produced unexpected revelations: The [root.GetRulerTitle] has been following [dpe_cultist.GetName]'s advice for years, relying heavily on her for [root.GetHisHer] domestic policies. Almost all of [root.GetRulerName]'s speeches would go through [dpe_cultist.GetHisHer] "spiritual compass" - something that has caused widespread dismay, since the cult is rumoured to engage in various unsavoury practices. Protests demanding that [root.Ruler.GetSheHe] step down and face trial have spread throughout the [root.GetName], the [dpe_matfaction.GetName]'s voice being the loudest. However, the [dpe_spirfaction.GetName] has rallied in [root.Ruler.GetHisHer] support, praising [root.Ruler.GetHimHer] for taking spiritualist views into account.\n\nWhat should be done about the situation?" 
+dpe_scandal.16.A:0 "Spiritualism is the truth. It is time to embrace God."
+dpe_scandal.16.B:0 "[dpe_cultist.GetName] is just a close friend, nothing more."
+dpe_scandal.16.C:0 "Resign from office."
+
+dpe_cultist_embraced:0 "Embraced the Cult"
+dpe_cultist_faction:0 "Cultist Scandal"
+dpe_cultist_scandal_empire:0 "Cultist Influence"
+dpe_unbelief_empire_desc:0 "It has emerged that the Ruler is influenced by a shadowy cult that is feared and distrusted by much of the population."
