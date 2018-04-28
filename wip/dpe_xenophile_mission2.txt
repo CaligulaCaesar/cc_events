@@ -968,10 +968,28 @@ country_event = {
 	}
 	
 	is_triggered_only = yes
-	
-	immediate = {
-		from = { country_event = { id = dpe_xenophile_mission.74 } }
-	}
-	
+
 	option = { name = EXCELLENT }
+}
+
+
+
+#gatekeeper for xenophile event and end of chain
+country_event = {
+	id = dpe_xenophile_mission.100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		NOT = {
+			has_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_ended
+			}
+		}
+	}
+
+	immediate = {
+		stuff
+	}
 }

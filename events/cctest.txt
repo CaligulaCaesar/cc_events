@@ -241,3 +241,155 @@ country_event = {
 	}
 }
 
+
+
+
+
+country_event = {
+	id = cctest.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			set_variable = {
+				which = cc_opinion_test
+				value = 0
+			}
+			set_variable = {
+				which = cc_opinion_bug_test
+				value = 0
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value < 100
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value < 50
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value < 0
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value < -50
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value < -100
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						NOT = {
+							opinion = {
+								who = root
+								value > -50
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value > -50
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_bug_test
+					value = 10
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_country_type = default
+						NOT = { is_same_value = root }
+						opinion = {
+							who = root
+							value > 100
+						}
+					}
+				}
+				change_variable = {
+					which = cc_opinion_bug_test
+					value = 10
+				}
+			}
+		}
+	}
+}
