@@ -2086,6 +2086,25 @@ country_event = {
 }
 
 
+#Xenophile Partnerships happen
+country_event = {
+	id = dpe_xenophile_mission.154
+	title = dpe_xenophile_mission.154.title
+	desc = dpe_xenophile_mission.154.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_xenophile_mission.154.option
+
+		add_modifier = {
+			modifier = dpe_xenomission_xenophilia_torn
+			days = 4800
+		}
+	}
+}
+
 
 
 #Ask originator about xenophile marriages if bans IM
