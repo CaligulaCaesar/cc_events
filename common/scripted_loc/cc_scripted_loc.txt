@@ -286,3 +286,19 @@ defined_text = {
 		localization_key = dpe_talent_flavour_blank
 	}
 }
+
+
+
+#Used for xenophile spying result
+defined_text = {
+	name = GetDPEDeceitSuccess
+	
+	text = {
+		trigger = { root = { NOT = { has_country_flag = dpe_xenomission_caught_spying} } }
+		localization_key = dpe_xenophile_spying_positive
+	}
+	text = {
+		trigger = { root = { has_country_flag = dpe_xenomission_caught_spying } }
+		localization_key = dpe_xenophile_spying_caught
+	}
+}

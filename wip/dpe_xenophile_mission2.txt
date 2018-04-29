@@ -974,7 +974,7 @@ country_event = {
 
 
 
-#gatekeeper for xenophile event and end of chain
+#gatekeeper for xenophile event and end of chain. Scope is originator
 country_event = {
 	id = dpe_xenophile_mission.100
 	hide_window = yes
@@ -990,6 +990,1453 @@ country_event = {
 	}
 
 	immediate = {
-		stuff
+		random_list = {
+			2 = { #excellent result
+				from = {
+					country_event = { id = dpe_xenophile_mission.101 days = 15 }
+
+					if = {
+						limit = { has_policy_flag = allows_im }
+						country_event = { id = dpe_xenophile_mission.150 }
+					}
+					if = {
+						limit = { has_policy_flag = does_not_allow_im }
+						country_event = { id = dpe_xenophile_mission.151 }
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = cc_has_had_interspecies_marriage }
+							has_faction = xenoist
+						}
+						country_event = { id = dpe_xenophile_mission.152 }
+					}
+				}
+				modifier = {
+					factor = 0
+					from = {
+						OR = {
+							has_relation_flag = {
+								who = ROOT
+								flag = dpe_xenophile_mission_spying
+							}
+							has_relation_flag = {
+								who = ROOT
+								flag = dpe_xenophile_mission_xenophobia
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					from = {
+						OR = {
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+				}
+			}
+			3 = { #soso result
+				from = {
+					country_event = { id = dpe_xenophile_mission.102 days = 15 }
+
+					if = {
+						limit = { has_policy_flag = allows_im }
+						country_event = { id = dpe_xenophile_mission.150 }
+					}
+					if = {
+						limit = { has_policy_flag = does_not_allow_im }
+						country_event = { id = dpe_xenophile_mission.151 }
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = cc_has_had_interspecies_marriage }
+							has_faction = xenoist
+						}
+						country_event = { id = dpe_xenophile_mission.152 }
+					}
+					if = {
+						limit = { has_policy_flag = bans_im_completely }
+						country_event = { id = dpe_xenophile_mission.153 }
+					}
+				}
+				modifier = {
+					factor = 0.5
+					from = {
+						OR = {
+							has_relation_flag = {
+								who = ROOT
+								flag = dpe_xenophile_mission_spying
+							}
+							has_relation_flag = {
+								who = ROOT
+								flag = dpe_xenophile_mission_xenophobia
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					from = { has_country_flag = dpe_xenomission_caught_spying }
+				}
+			}
+			1 = { #bad result
+				from = {
+					country_event = { id = dpe_xenophile_mission.103 days = 15 }
+				}
+				modifier = {
+					factor = 0
+					from = {
+						has_relation_flag = {
+							who = ROOT
+							flag = dpe_xenophile_mission_spying
+						}
+					}
+				}
+				modifier = {
+					factor = 5
+					from = {
+						has_relation_flag = {
+							who = ROOT
+							flag = dpe_xenophile_mission_xenophobia
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					from = {
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						is_hostile_to = from
+						is_rival = from
+						from = {
+							OR = {
+								is_hostile_to = root
+								is_rival = root
+							}
+						}
+					}
+				}
+			}
+			3 = { #spying result
+				from = {
+					country_event = { id = dpe_xenophile_mission.104 days = 15 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						from = {
+							has_relation_flag = {
+								who = ROOT
+								flag = dpe_xenophile_mission_spying
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
+
+
+#Xenophile Marriages happen
+country_event = {
+	id = dpe_xenophile_mission.150
+	title = dpe_xenophile_mission.150.title
+	desc = dpe_xenophile_mission.150.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = allows_im }
+				country_event = { id = dpe_xenophile_mission.1501 }
+			}
+			if = {
+				limit = { has_policy_flag = does_not_allow_im }
+				country_event = { id = dpe_xenophile_mission.1511 }
+			}
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_interspecies_marriage } }
+				country_event = { id = dpe_xenophile_mission.1521 }
+			}
+		}
+	}
+	option = {
+		name = OK
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#Originator Version
+country_event = {
+	id = dpe_xenophile_mission.1501
+	title = dpe_xenophile_mission.1501.title
+	desc = dpe_xenophile_mission.1501.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = bans_im_completely }
+				country_event = { id = dpe_xenophile_mission.154 }
+			}
+		}
+	}
+	option = {
+		name = OK
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#Xenophile Partnerships happen
+country_event = {
+	id = dpe_xenophile_mission.151
+	title = dpe_xenophile_mission.151.title
+	desc = dpe_xenophile_mission.151.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = allows_im }
+				country_event = { id = dpe_xenophile_mission.1501 }
+			}
+			if = {
+				limit = { has_policy_flag = does_not_allow_im }
+				country_event = { id = dpe_xenophile_mission.1511 }
+			}
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_interspecies_marriage } }
+				country_event = { id = dpe_xenophile_mission.1521 }
+			}
+		}
+	}
+	option = {
+		name = OK
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#Xenophile Partnerships happen
+country_event = {
+	id = dpe_xenophile_mission.1511
+	title = dpe_xenophile_mission.1511.title
+	desc = dpe_xenophile_mission.1511.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = bans_im_completely }
+				country_event = { id = dpe_xenophile_mission.154 }
+			}
+		}
+	}
+	option = {
+		name = OK
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+#Xenophilia Question
+country_event = {
+	id = dpe_xenophile_mission.152
+	title = dpe_xenophile_mission.152.title
+	desc = dpe_xenophile_mission.152.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = allows_im }
+				country_event = { id = dpe_xenophile_mission.1501 }
+			}
+			if = {
+				limit = { has_policy_flag = does_not_allow_im }
+				country_event = { id = dpe_xenophile_mission.1511 }
+			}
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_interspecies_marriage } }
+				country_event = { id = dpe_xenophile_mission.1521 }
+			}
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			save_event_target_as = xenophile_faction
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				save_event_target_as = xenophobe_faction
+			}
+			set_country_flag = cc_im_supremacists
+		}
+		
+		set_country_flag = cc_has_had_interspecies_marriage
+		
+		set_timed_country_flag = {
+			flag = recent_im_first_decision
+			days = 360
+		}
+	}
+
+	option = {	#legalise it
+		name = cc_events_mod.7.A
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = allow_im
+			cooldown = yes
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_allowed_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_allowed_supremacist
+					days = -1
+				}
+			}
+		}
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_practising_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_practising_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secretly_practising_xenophile }
+				remove_modifier = cc_secretly_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secret_xenophile }
+				remove_modifier = cc_secret_xenophile
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					NOT = { has_faction = xenoist }
+				}
+			}
+		}
+	}
+	option = {	#do not legalise it
+		name = dpe_xenophile_mission.152.B
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = do_not_allow_im
+			cooldown = yes
+		}
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_secretly_practising_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_secretly_practising_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_practising_xenophile }
+				remove_modifier = cc_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secret_xenophile }
+				remove_modifier = cc_secret_xenophile
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_not_allowed_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_not_allowed_supremacist
+					days = -1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {	#illegalise intercourse
+		name = cc_events_mod.7.C
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = ban_im_completely
+			cooldown = yes
+		}
+		
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_secret_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_secret_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secretly_practising_xenophile }
+				remove_modifier = cc_secretly_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_practising_xenophile }
+				remove_modifier = cc_practising_xenophile
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_banned_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_banned_supremacist
+					days = -1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+					NOR = {
+						has_faction = supremacist
+						has_faction = isolationist
+					}
+				}
+			}
+		}
+	}
+}
+
+#Orinator Version
+country_event = {
+	id = dpe_xenophile_mission.1521
+	title = dpe_xenophile_mission.152.title
+	desc = dpe_xenophile_mission.152.desc
+	picture = GFX_cc_alien_union
+
+	is_triggered_only = yes
+	immediate = {
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			save_event_target_as = xenophile_faction
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				save_event_target_as = xenophobe_faction
+			}
+			set_country_flag = cc_im_supremacists
+		}
+		
+		set_country_flag = cc_has_had_interspecies_marriage
+		
+		set_timed_country_flag = {
+			flag = recent_im_first_decision
+			days = 360
+		}
+	}
+
+	option = {	#legalise it
+		name = cc_events_mod.7.A
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = allow_im
+			cooldown = yes
+		}
+		
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_allowed_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_allowed_supremacist
+					days = -1
+				}
+			}
+		}
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { has_policy_flag = bans_im_completely }
+					country_event = { id = dpe_xenophile_mission.154 }
+				}
+			}
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_practising_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_practising_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secretly_practising_xenophile }
+				remove_modifier = cc_secretly_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secret_xenophile }
+				remove_modifier = cc_secret_xenophile
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					NOT = { has_faction = xenoist }
+				}
+			}
+		}
+	}
+	option = {	#do not legalise it
+		name = dpe_xenophile_mission.152.B
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = do_not_allow_im
+			cooldown = yes
+		}
+
+		random_owned_planet = {
+			limit = {
+				any_pop = { is_same_species = root }
+				free_pop_tiles > 0
+			}
+			create_pop = {
+				species = from
+				ethos = {
+					ethic = "ethic_xenophile"			
+				}
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+				random_pop = {
+					limit = { is_same_species = root }
+					set_pop_flag = cc_literally_xenophile_manifested
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { has_policy_flag = bans_im_completely }
+					country_event = { id = dpe_xenophile_mission.154 }
+				}
+			}
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_secretly_practising_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_secretly_practising_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_practising_xenophile }
+				remove_modifier = cc_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secret_xenophile }
+				remove_modifier = cc_secret_xenophile
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_not_allowed_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_not_allowed_supremacist
+					days = -1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {	#illegalise intercourse
+		name = cc_events_mod.7.C
+		
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = ban_im_completely
+			cooldown = yes
+		}
+		
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = cc_literally_xenophile_manifested
+					NOT = { has_modifier = cc_secret_xenophile }
+				}
+				add_modifier = {
+					modifier = cc_secret_xenophile
+					days = -1
+				}
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_secretly_practising_xenophile }
+				remove_modifier = cc_secretly_practising_xenophile
+			}
+			every_owned_pop = {
+				limit = { has_modifier = cc_practising_xenophile }
+				remove_modifier = cc_practising_xenophile
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = cc_xeno_marriage_banned_xenoist
+				days = -1
+			}
+		}
+		
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_banned_supremacist
+					days = -1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+					NOR = {
+						has_faction = supremacist
+						has_faction = isolationist
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#Ask originator about xenophile marriages if bans IM
+country_event = {
+	id = dpe_xenophile_mission.153
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = { has_policy_flag = allows_im }
+				country_event = { id = dpe_xenophile_mission.1501 }
+			}
+			if = {
+				limit = { has_policy_flag = does_not_allow_im }
+				country_event = { id = dpe_xenophile_mission.1511 }
+			}
+			if = {
+				limit = { NOT = { has_country_flag = cc_has_had_interspecies_marriage } }
+				country_event = { id = dpe_xenophile_mission.1521 }
+			}
+		}
+	}
+}
+
+
+
+
+
+
+######Results of chain
+
+#Good result
+country_event = {
+	id = dpe_xenophile_mission.101
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.101.name
+	desc = dpe_xenophile_mission.101.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	immediate = {
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+			country_event = { id = dpe_xenophile_mission.1011 }
+		}
+	}
+	option = {
+		name = EXCELLENT
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_love
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_love
+				who = root
+			}
+		}
+		add_modifier = {
+			modifier = dpe_successful_xenomission
+			days = 4800
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.1011
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.101.name
+	desc = dpe_xenophile_mission.101.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	option = {
+		name = EXCELLENT
+		tooltip = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_love
+				who = from
+			}
+			from = {
+				add_opinion_modifier = {
+					modifier = dpe_xenomission_love
+					who = root
+				}
+			}
+		}
+		add_modifier = {
+			modifier = dpe_successful_xenomission
+			days = 4800
+		}
+	}
+}
+
+#Decent
+country_event = {
+	id = dpe_xenophile_mission.102
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.102.name
+	desc = {
+		text = dpe_xenophile_mission.102.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					flag = dpe_xenophile_mission_spying
+					who = from
+				}
+			}
+		}
+	}
+	desc = {
+		text = dpe_xenophile_mission.102.desc.spying
+		trigger = {
+			has_relation_flag = {
+				flag = dpe_xenophile_mission_spying
+				who = from
+			}
+		}
+	}
+
+	picture = GFX_evt_cc_alien_union
+
+	immediate = {
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+			country_event = { id = dpe_xenophile_mission.1021 }
+		}
+	}
+	option = {
+		name = CCGOODGOOD
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_like
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_like
+				who = root
+			}
+		}
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					flag = dpe_xenophile_mission_spying
+					who = from
+				}
+			}
+		}
+	}
+	option = {
+		name = EXCELLENT
+		hidden_effect = {
+			remove_relation_flag = {
+				flag = dpe_xenophile_mission_spying
+				who = from
+			}
+		}
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_like
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_like
+				who = root
+			}
+		}
+		trigger = {
+			has_relation_flag = {
+				flag = dpe_xenophile_mission_spying
+				who = from
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.1021
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.102.name
+	desc = dpe_xenophile_mission.102.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	option = {
+		name = CCGOODGOOD
+		tooltip = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_like
+				who = from
+			}
+			from = {
+				add_opinion_modifier = {
+					modifier = dpe_xenomission_like
+					who = root
+				}
+			}
+		}
+	}
+}
+
+#Less good
+country_event = {
+	id = dpe_xenophile_mission.103
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.103.name
+	desc = dpe_xenophile_mission.103.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	immediate = {
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+			country_event = { id = dpe_xenophile_mission.1031 }
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_not_like
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_not_like
+				who = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.1031
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.103.name
+	desc = dpe_xenophile_mission.103.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	option = {
+		name = UNFORTUNATE
+		tooltip = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_not_like
+				who = from
+			}
+			from = {
+				add_opinion_modifier = {
+					modifier = dpe_xenomission_not_like
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
+#Deceit
+country_event = {
+	id = dpe_xenophile_mission.104
+	is_triggered_only = yes
+
+	title = dpe_xenophile_mission.104.name
+	desc = dpe_xenophile_mission.104.desc
+
+	picture = GFX_evt_cc_alien_union
+
+	immediate = {
+		remove_relation_flag = {
+			flag = dpe_xenophile_mission_spying
+			who = from
+		}
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+			country_event = { id = dpe_xenophile_mission.1031 }
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = { NOT = { has_country_flag = dpe_xenomission_caught_spying } }
+
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_not_like
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_not_like
+				who = root
+			}
+		}
+	}
+	option = {
+		name = CCGOODGOOD
+		trigger = { has_country_flag = dpe_xenomission_caught_spying }
+
+		add_opinion_modifier = {
+			modifier = dpe_xenomission_not_like
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_not_like
+				who = root
+			}
+		}
+	}
+}
+
+
+
+
+
+
+#dpe_xenomission_caught_spying
