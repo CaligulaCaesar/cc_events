@@ -1239,8 +1239,8 @@ country_event = {
 #Originator Version
 country_event = {
 	id = dpe_xenophile_mission.1501
-	title = dpe_xenophile_mission.1501.title
-	desc = dpe_xenophile_mission.1501.desc
+	title = dpe_xenophile_mission.150.title
+	desc = dpe_xenophile_mission.150.desc
 	picture = GFX_cc_alien_union
 
 	is_triggered_only = yes
@@ -1381,8 +1381,8 @@ country_event = {
 #Xenophile Partnerships happen
 country_event = {
 	id = dpe_xenophile_mission.1511
-	title = dpe_xenophile_mission.1511.title
-	desc = dpe_xenophile_mission.1511.desc
+	title = dpe_xenophile_mission.151.title
+	desc = dpe_xenophile_mission.151.desc
 	picture = GFX_cc_alien_union
 
 	is_triggered_only = yes
@@ -1479,7 +1479,7 @@ country_event = {
 	}
 
 	option = {	#legalise it
-		name = cc_events_mod.7.A
+		name = dpe_xenophile_mission.152.A
 		
 		set_policy = {
 			policy = cc_interspecies_marriage
@@ -1688,7 +1688,7 @@ country_event = {
 		}
 	}
 	option = {	#illegalise intercourse
-		name = cc_events_mod.7.C
+		name = dpe_xenophile_mission.152.C
 		
 		set_policy = {
 			policy = cc_interspecies_marriage
@@ -1792,7 +1792,7 @@ country_event = {
 	}
 
 	option = {	#legalise it
-		name = cc_events_mod.7.A
+		name = dpe_xenophile_mission.152.A
 		
 		set_policy = {
 			policy = cc_interspecies_marriage
@@ -2013,7 +2013,7 @@ country_event = {
 		}
 	}
 	option = {	#illegalise intercourse
-		name = cc_events_mod.7.C
+		name = dpe_xenophile_mission.152.C
 		
 		set_policy = {
 			policy = cc_interspecies_marriage
@@ -2178,6 +2178,7 @@ country_event = {
 			modifier = dpe_successful_xenomission
 			days = 4800
 		}
+		from = { add_trust = { amount = 50 who = root } }
 	}
 }
 
@@ -2208,6 +2209,7 @@ country_event = {
 			modifier = dpe_successful_xenomission
 			days = 4800
 		}
+		from = { add_trust = { amount = 50 who = root } }
 	}
 }
 
@@ -2265,6 +2267,7 @@ country_event = {
 				who = root
 			}
 		}
+		from = { add_trust = { amount = 25 who = root } }
 		trigger = {
 			NOT = {
 				has_relation_flag = {
@@ -2292,6 +2295,7 @@ country_event = {
 				who = root
 			}
 		}
+		from = { add_trust = { amount = 25 who = root } }
 		trigger = {
 			has_relation_flag = {
 				flag = dpe_xenophile_mission_spying
@@ -2325,6 +2329,7 @@ country_event = {
 				}
 			}
 		}
+		from = { add_trust = { amount = 25 who = root } }
 	}
 }
 
@@ -2363,6 +2368,7 @@ country_event = {
 				who = root
 			}
 		}
+		from = { add_trust = { amount = -25 who = root } }
 	}
 }
 
@@ -2389,6 +2395,7 @@ country_event = {
 				}
 			}
 		}
+		from = { add_trust = { amount = -25 who = root } }
 	}
 }
 
@@ -2435,6 +2442,7 @@ country_event = {
 				who = root
 			}
 		}
+		from = { add_trust = { amount = -25 who = root } }
 	}
 	option = {
 		name = CCGOODGOOD
@@ -2450,6 +2458,7 @@ country_event = {
 				who = root
 			}
 		}
+		from = { add_trust = { amount = -25 who = root } }
 	}
 }
 

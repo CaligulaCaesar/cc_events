@@ -219,6 +219,47 @@ country_event = {
 						factor = 2
 						has_ethic = ethic_fanatic_materialist
 					}
+					modifier = {
+						factor = 0
+						NOT = {
+							any_country = {
+								NOT = { is_same_value = root }
+								is_country_type = default
+								has_communications = ROOT
+								relative_power = {
+									category = technology
+									who = ROOT
+									value > inferior
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_country = {
+							NOT = { is_same_value = root }
+							is_country_type = default
+							has_communications = ROOT
+							relative_power = {
+								category = technology
+								who = ROOT
+								value > equivalent
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_country = {
+							NOT = { is_same_value = root }
+							is_country_type = default
+							has_communications = ROOT
+							relative_power = {
+								category = technology
+								who = ROOT
+								value = overwhelming
+							}
+						}
+					}
 				}
 
 				1 = {

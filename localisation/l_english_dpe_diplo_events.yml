@@ -402,6 +402,25 @@ dpe_xenophile_mission.73.desc:0 "Our respective delegations have spent some time
 dpe_xenophile_mission.74.desc.spying:0 "Our respective delegations have spent some time building rapport with their hosts. Initial differences between our species have been smoothed over. The [from.GetSpeciesNamePlural] have no idea that we have been using the mission as a screen to spy on them, and are coming to trust us. This will only make it easier for us to learn their secrets..."
 
 
+dpe_xenophile_mission.150.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.150.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to marry their [root.GetSpeciesAdj] partners and remain in the [root.GetName] instead."
+
+dpe_xenophile_mission.151.title:0 "[root.GetSpeciesNamePlural] living with [from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.151.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to remain with their [root.GetSpeciesAdj] partners in the [root.GetName], even though such partnerships are not given full rights in [root.GetSpeciesAdj] law."
+
+dpe_xenophile_mission.152.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]?"
+dpe_xenophile_mission.152.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, the situation of the [from.GetSpeciesName]-[root.GetSpeciesName] couples that have formed has taken on a new importance. [root.GetSpeciesAdj] law does not currently present a clear ruling on the legality of such partnerships, creating considerable uncertainty for the individuals involved. The [xenophile_faction.GetName] has agreed to represent their cause, and is pushing for such unions to be recognised within the [root.GetName] - though more conservative elements in society abhor the very idea of them. Should we allow interspecies marriage?"
+dpe_xenophile_mission.152.A:0 "Allow interspecies marriage, they may remain."
+dpe_xenophile_mission.152.B:0 "Tolerate them, but do not permit interspecies marriages."
+dpe_xenophile_mission.152.C:0 "Ban interspecies intercourse and send them on their way."
+
+dpe_xenophile_mission.154.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]!"
+dpe_xenophile_mission.154.desc:0 "As our delegates to the [from.GetName] return home, we have become aware that many [root.GetSpeciesNamePlural] have elected to remain with their [from.GetSpeciesAdj] partners in the [from.GetName], despite such practices being against our laws. Although there is little we can do to stop them from doing this, public opinion is split as to whether these individuals deserve our condemnation or our sympathy."
+dpe_xenophile_mission.154.option:0 "So long as they don't bring these practices home..."
+
+dpe_xenomission_xenophilia_torn:0 "Debate over Xenophile Marriages"
+dpe_xenomission_xenophilia_torn_desc:0 "The country is split by the debate as to the justice of allowing or banning marriages between individuals of different species."
+
 dpe_xenophile_mission.101.name:0 "A Parting of Friends"
 dpe_xenophile_mission.101.desc:0 "It is with a touch of sadness that our delegation to the [from.GetName] and the [from.GetSpeciesAdj] delegation to our state return home today. The initiative has been a great success! Over the past ten years, both our peoples have come to understand each other well, and many new friendships have been born. We are hopeful that we are entering an era of lasting peace and cooperation between [root.GetSpeciesNamePlural] and [from.GetSpeciesNamePlural]."
 
@@ -418,3 +437,10 @@ dpe_xenophile_mission.104.desc:0 "Our delegation to the [from.GetName] and the [
 #GetDPEDeceitSuccess
 dpe_xenophile_spying_positive:0 "unbeknownst to the [from.GetSpeciesNamePlural], we have managed to glean a considerable amount of knowledge from them, making the initiative well worth our while!"
 dpe_xenophile_spying_caught:0 "even though the [from.GetSpeciesNamePlural] eventually cottoned on to our espionage activities and forced us to cease them, we were able to glean much useful knowledge from them."
+
+
+
+dpe_successful_xenomission:0 "Successful Discovery Mission"
+dpe_xenomission_not_like:0 "Dislike between Species"
+dpe_xenomission_love:0 "Friendship between Species"
+dpe_xenomission_like:0 "$dpe_xenomission_love$"
