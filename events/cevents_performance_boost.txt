@@ -891,6 +891,7 @@ event = {
 				}
 				every_owned_pop = {
 					limit = {
+						is_enslaved = no
 						happiness < 0.4
 						if = {
 							limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
@@ -911,7 +912,7 @@ event = {
 						if = {
 							limit = {
 								owner = {
-									NOR = {
+									OR = {
 										has_ethic = ethic_militarist
 										has_ethic = ethic_fanatic_militarist
 									}
@@ -926,7 +927,7 @@ event = {
 						if = {
 							limit = {
 								owner = {
-									NOR = {
+									OR = {
 										has_ethic = ethic_xenophobe
 										has_ethic = ethic_fanatic_xenophobe
 									}
