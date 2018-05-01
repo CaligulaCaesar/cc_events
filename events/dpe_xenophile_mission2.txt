@@ -633,6 +633,8 @@ country_event = {
 	option = { name = UNFORTUNATE }
 }
 
+
+#scope is originator
 country_event = {
 	id = dpe_xenophile_mission.6
 	title = dpe_xenophile_mission.6.name
@@ -745,6 +747,7 @@ country_event = {
 								}
 								support > 0.05
 							}
+							count > 0
 						}
 					}
 				}
@@ -761,6 +764,8 @@ country_event = {
 	title = dpe_xenophile_mission.7.name
 	desc = dpe_xenophile_mission.7.desc
 	is_triggered_only = yes
+
+	picture = GFX_evt_cc_alien_union
 	
 	immediate = {
 		from = { country_event = { id = dpe_xenophile_mission.71 } }
@@ -810,6 +815,8 @@ country_event = {
 	desc = dpe_xenophile_mission.7.desc
 	is_triggered_only = yes
 	
+	picture = GFX_evt_cc_alien_union
+
 	immediate = {
 		#continuation of main event chain
 		if = {
@@ -933,6 +940,8 @@ country_event = {
 	desc = dpe_xenophile_mission.73.desc
 	is_triggered_only = yes
 	
+	picture = GFX_evt_cc_alien_union
+
 	immediate = {
 		from = { country_event = { id = dpe_xenophile_mission.74 } }
 	}
@@ -967,12 +976,274 @@ country_event = {
 		text = dpe_xenophile_mission.74.desc.spying
 	}
 	
+	picture = GFX_evt_cc_alien_union
+
 	is_triggered_only = yes
 
 	option = { name = EXCELLENT }
 }
 
 
+#Tensions gatekeeper. Scope is non-originator
+country_event = {
+	id = dpe_xenophile_mission.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			from = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_xenophile_mission_ended
+				}
+			}
+		}
+		count_pop_factions = {
+			limit = {
+				OR = {
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = supremacist
+				}
+				support > 0.05
+			}
+			count > 0
+		}
+	}
+	immediate = {
+		random_list = {
+			1 = {
+				from = { country_event = { id = dpe_xenophile_mission.81 } }
+
+				set_timed_relation_flag = {
+					who = from
+					flag = dpe_xenophile_mission_tensions
+					days = 3600
+				}
+			}
+
+			1 = { #nothing
+				modifier = {
+					factor = 0.5
+					count_pop_factions = {
+						limit = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
+							}
+							support > 0.1
+						}
+						count > 0
+					}
+				}
+				modifier = {
+					factor = 0.5
+					count_pop_factions = {
+						limit = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
+							}
+							support > 0.15
+						}
+						count > 0
+					}
+				}
+				modifier = {
+					factor = 0
+					count_pop_factions = {
+						limit = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
+							}
+							support > 0.2
+						}
+						count > 0
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.81
+	title = dpe_xenophile_mission.81.name
+	desc = dpe_xenophile_mission.81.desc
+	picture = GFX_evt_alien_segregation
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_xenophile_mission.81.A
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.82 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				from = {
+					count_pop_factions = {
+						limit = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
+							}
+							support > 0.15
+						}
+						count > 0
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.81.B
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_sent_home
+				who = root
+			}
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_ended
+			}
+			from = { country_event = { id = dpe_xenophile_mission.83 } }
+		}
+	}
+}
+
+#scope is non-originator
+country_event = {
+	id = dpe_xenophile_mission.82
+	title = dpe_xenophile_mission.82.name
+	desc = dpe_xenophile_mission.82.desc
+	picture = GFX_evt_alien_segregation
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_xenophile_mission.82.A
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_sent_home
+				who = root
+			}
+			hidden_effect = {
+				set_relation_flag = {
+					who = root
+					flag = dpe_xenophile_mission_ended
+				}
+			}
+		}
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.84 } } }
+	}
+
+	option = {
+		name = dpe_xenophile_mission.82.B
+		
+		add_modifier = {
+			modifier = dpe_xenomission_xenophobia
+			days = 720
+		}
+
+		hidden_effect = {
+			from = { country_event = { id = dpe_xenophile_mission.9 days = 60 } }
+			from = { country_event = { id = dpe_xenophile_mission.95 days = 720 } }
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
+						}
+						support > 0.15
+					}
+					count > 0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
+						}
+						support > 0.1
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.83
+	title = dpe_xenophile_mission.83.name
+	desc = dpe_xenophile_mission.83.desc
+	picture = GFX_evt_alien_segregation
+
+	is_triggered_only = yes
+
+	option = { name = UNFORTUNATE }
+}
+
+country_event = {
+	id = dpe_xenophile_mission.84
+	title = dpe_xenophile_mission.84.name
+	desc = dpe_xenophile_mission.84.desc
+
+	is_triggered_only = yes
+
+	is_diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { name = dpe_xenophile_mission.84.option }
+}
+
+#gatekeeper for tensions explode (originator)
+country_event = {
+	id = dpe_xenophile_mission.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_relation_flag = {
+				who = event_target:dpe_new_contact
+				flag = dpe_xenophile_mission_ended
+			}
+			has_country_flag = dpe_xenomission_tensions_over
+		}
+	}
+
+
+#tensions over (originator)
+#set flag dpe_xenomission_tensions_over
 
 #gatekeeper for xenophile event and end of chain. Scope is originator
 country_event = {
@@ -1021,7 +1292,7 @@ country_event = {
 							}
 							has_relation_flag = {
 								who = ROOT
-								flag = dpe_xenophile_mission_xenophobia
+								flag = dpe_xenophile_mission_tensions
 							}
 						}
 					}
@@ -1070,7 +1341,7 @@ country_event = {
 							}
 							has_relation_flag = {
 								who = ROOT
-								flag = dpe_xenophile_mission_xenophobia
+								flag = dpe_xenophile_mission_tensions
 							}
 						}
 					}
@@ -1098,7 +1369,7 @@ country_event = {
 					from = {
 						has_relation_flag = {
 							who = ROOT
-							flag = dpe_xenophile_mission_xenophobia
+							flag = dpe_xenophile_mission_tensions
 						}
 					}
 				}
@@ -2468,3 +2739,5 @@ country_event = {
 
 
 #dpe_xenomission_caught_spying
+
+#dpe_xenomission_xenophobia

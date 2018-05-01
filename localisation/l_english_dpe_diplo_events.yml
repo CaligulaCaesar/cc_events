@@ -402,6 +402,30 @@ dpe_xenophile_mission.73.desc:0 "Our respective delegations have spent some time
 dpe_xenophile_mission.74.desc.spying:0 "Our respective delegations have spent some time building rapport with their hosts. Initial differences between our species have been smoothed over. The [from.GetSpeciesNamePlural] have no idea that we have been using the mission as a screen to spy on them, and are coming to trust us. This will only make it easier for us to learn their secrets..."
 
 
+dpe_xenomission_sent_home:0 "Xenophile Mission Sent Home"
+dpe_xenomission_xenophobia:0 "Xenophobic Wave"
+dpe_xenomission_xenophobia_desc:0 "The arrival of a group of xenos seeking to learn more about our culture has created a hostile and xenophobic reaction."
+dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
+
+#Tensions event chain
+ dpe_xenophile_mission.81.name:0 "Tensions over our Delegation"
+ dpe_xenophile_mission.81.desc:0 "There have been a number of unfortunate incidents surrounding our delegation to the [from.GetName]. These were first triggered by a number of cultural misunderstandings by our people, the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, xenophobic elements within [from.GetSpeciesAdj] society have seized upon these incidents to provoke a backlash: Our people are increasingly met by protests wherever they go, and the [from.GetSpeciesAdj] government has informed us that their security services have foiled several attempts of violence against them, and that they cannot guarantee their continued safety. Some of our delegates were sufficiently spooked by this news that they demanded to be allowed to return home immediately, a wish their leader granted; however, most of them are intent on braving it out in the hope that these difficulties can be surmounted. Should we summon them home?"
+ dpe_xenophile_mission.81.A:0 "Keep at it - nobody expected this to be easy."
+ dpe_xenophile_mission.81.B:0 "Bring them home, before anything worse happens!"
+
+ dpe_xenophile_mission.82.name:0 "Tensions over the [from.GetSpeciesAdj] Delegation"
+ dpe_xenophile_mission.82.desc:0 "There have been a number of unfortunate incidents surrounding the [from.GetSpeciesAdj] delegation to our country. These were first triggered by a number of cultural misunderstandings by the [from.GetSpeciesNamePlural], the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, those within our society who would seek to distance our species from outside influences have seized upon these incidents to provoke a backlash: The [from.GetSpeciesNamePlural] are increasingly met by protests wherever they go, and our security services have foiled several attempts of violence against them. Their leader has tried to put a brave face on things, and has expressed the desire to keep on in spite of these incidents - something the [from.GetSpeciesAdj] government supports them in - though part of their delegation has left to return home. What action should be taken?"
+ dpe_xenophile_mission.82.A:0 "Keep at it - nobody expected this to be easy."
+ dpe_xenophile_mission.82.B:0 "Send them home, before anything worse happens!"
+ 
+ dpe_xenophile_mission.83.name:0 "The [from.GetSpeciesNamePlural] pull out of the Discovery Mission"
+ dpe_xenophile_mission.83.desc:0 "Following a number of unfortunate incidents, the [from.GetName] has summoned its delegation home. The incidents were first triggered by a number of cultural misunderstandings by the [from.GetSpeciesNamePlural], the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, those within our society who would seek to distance our species from outside influences have seized upon these incidents to provoke a backlash: The [from.GetSpeciesNamePlural] are increasingly met by protests wherever they go, and our security services have foiled several attempts of violence against them. Faced with an uncertain situation, the [from.GetSpeciesAdj] government elected to recall its delegation rather than risk their safety. They have also advised us that it would be best for our delegation to their planets to withdraw, as tensions are running too high for their presence to be of any use to either state."
+ 
+ dpe_xenophile_mission.84.name:0 "The [from.GetSpeciesNamePlural] send our Delegation home"
+ dpe_xenophile_mission.84.desc:0 "We cannot guarantee the safety of your delegation. We must therefore send them home."
+ dpe_xenophile_mission.84.option:0 "A shame. It's best if yours returns home then too."
+
+
 dpe_xenophile_mission.150.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]"
 dpe_xenophile_mission.150.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to marry their [root.GetSpeciesAdj] partners and remain in the [root.GetName] instead."
 
