@@ -425,6 +425,32 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenophile_mission.84.desc:0 "We cannot guarantee the safety of your delegation. We must therefore send them home."
  dpe_xenophile_mission.84.option:0 "A shame. It's best if yours returns home then too."
 
+ dpe_xenomission_unrest_blame:0 "Blamed for Failure of Xenophile Mission"
+ 
+ dpe_xenophile_mission.91.name:0 "Devastating Terror Attack on our Delegates!"
+ dpe_xenophile_mission.91.desc:0 "This morning, a group of [dpe_new_contact.GetSpeciesNamePlural] opened fire on our delegates before detonating a bomb in their midst. A large number of them were killed, and many others were wounded. The survivors have been evacuated with immediate effect. For their own safety, we have also sent the [dpe_new_contact.GetSpeciesNamePlural] home."
+ dpe_xenophile_mission.91.A:0 "We should have recalled them earlier."
+ dpe_xenophile_mission.91.B:0 "The [dpe_new_contact.GetSpeciesNamePlural] are to blame for this!"
+
+ dpe_xenophile_mission.92.name:0 "Devastating Terror Attack on the [from.GetSpeciesAdj] Delegates!"
+ dpe_xenophile_mission.92.desc:0 "There has been a major security breach! This morning, a group of [root.GetSpeciesNamePlural] opened fire on the [from.GetSpeciesAdj] delegates before detonating a bomb in their midst. Our security services were powerless to prevent the tragedy. A large number of [from.GetSpeciesNamePlural] were killed, and many others were wounded. The survivors have been evacuated with immediate effect, and the [from.GetName] has instructed our own delegation to return home immediately, citing security fears. Their government officials have so far avoided blaming the [root.GetSpeciesAdj] people for the tragedy, stressing that it was the action of a few "bad apples", but it is unclear how our relations with the [from.GetSpeciesNamePlural] will develop from here."
+ dpe_xenophile_mission.92.A:0 "The [from.GetSpeciesNamePlural] got what they deserved."
+ dpe_xenophile_mission.92.B:0 "Condemn the attack and pursue the terrorists with full force."
+ 
+ dpe_xenophile_mission.93.name:0 "$dpe_xenophile_mission.92.name$"
+ dpe_xenophile_mission.93.desc:0 "There has been a major security breach! This morning, a group of [root.GetSpeciesNamePlural] opened fire on the [from.GetSpeciesAdj] delegates before detonating a bomb in their midst. Our security services were powerless to prevent the tragedy. A large number of [from.GetSpeciesNamePlural] were killed, and many others were wounded. The survivors have been evacuated with immediate effect, and the [from.GetName] has instructed our own delegation to return home immediately, citing security fears. Their government officials have been quick to cast the blame on our people, claiming that the "deceitful", "intolerant" and "warlike" [root.GetSpeciesNamePlural] had abused their trust. It is unclear how our relations with the [from.GetSpeciesNamePlural] will develop from here."
+ 
+ dpe_xenophile_mission.94.name:0 "The [from.GetSpeciesNamePlural] blame us for the Tragedy!"
+ dpe_xenophile_mission.94.desc:0 "Your delegation got what it deserved, xeno scum."
+ dpe_xenophile_mission.94.option:0 "You have made an enemy of us, [root.GetSpeciesName]."
+ 
+ dpe_xenophile_mission.95.name:0 "The Situation of our Delegates stabilises"
+ dpe_xenophile_mission.95.desc:0 "The situation surrounding our delegation to the [from.GetName] has stabilised. Through admirable hard work, the delegates have managed to better bridge the gap to the [from.GetSpeciesNamePlural], and the animosity they had faced has subsided."
+ dpe_xenophile_mission.951.name:0 "The Situation of the [from.GetSpeciesAdj] Delegates stabilises"
+ dpe_xenophile_mission.951.desc:0 "The situation surrounding the [from.GetSpeciesAdj] delegation has stabilised. Through admirable hard work on both sides, we have managed to better bridge the gap between the two species, and the animosity the [from.GetSpeciesNamePlural] previously provoked has subsided."
+ 
+ dpe_xenomission_disaster_upset:0 "Xenophobic Sentiment"
+ dpe_xenomission_disaster_upset:0 "A xenophobic wave has swept across the population as a result of the manner in which another country treated this country's delegation."
 
 dpe_xenophile_mission.150.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]"
 dpe_xenophile_mission.150.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to marry their [root.GetSpeciesAdj] partners and remain in the [root.GetName] instead."
