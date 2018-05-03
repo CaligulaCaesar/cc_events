@@ -119,3 +119,42 @@ dpe_xenomission_disaster_upset = {
 	pop_ethic_xenophobe_attraction_mult = 1
 	pop_ethic_xenophile_attraction_mult = -0.33
 }
+
+
+
+
+
+
+
+#Contraband 
+
+dpe_drug_cartels_crackdown = {
+	tile_resource_energy_mult = -0.1
+	tile_resource_minerals_mult = -0.1
+}
+
+dpe_taxing_drugs = {
+	tile_resource_energy_mult = 0.05
+	tile_resource_minerals_mult = -0.05
+}
+
+dpe_taxing_drugs_faction = {
+	faction_happiness = -0.15
+}
+
+dpe_contraband_crisis = {
+	pop_citizen_happiness = -0.1
+	tile_resource_minerals_mult = -0.05
+}
+
+dpe_taking_action_drugs_faction = {
+	faction_happiness = 0.15
+}
+
+dpe_drug_cartels_tolerate = {
+	tile_resource_energy_mult = 0.05
+}
+
+dpe_drug_cartels_extort = {
+	tile_resource_energy_mult = 0.1
+}

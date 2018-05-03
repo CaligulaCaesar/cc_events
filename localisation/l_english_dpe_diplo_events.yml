@@ -494,3 +494,36 @@ dpe_successful_xenomission:0 "Successful Discovery Mission"
 dpe_xenomission_not_like:0 "Dislike between Species"
 dpe_xenomission_love:0 "Friendship between Species"
 dpe_xenomission_like:0 "$dpe_xenomission_love$"
+
+
+
+
+
+#Contraband Chain 
+ dpe_contraband_event.1.name:0 "Smuggling Rings"
+ dpe_contraband_event.1.desc:0 "Our intelligence services have discovered that a collection of our citizens have been smuggling goods into the [dpe_neighbour.GetName]. The goods they are smuggling are perfectly legal within our own realm, but their effect on [dpe_neighbor.GetSpeciesAdj] biology is that of a moderately effective hallucinatory drug - the [dpe_neighbour.GetSpeciesAdj] government has therefore placed very harsh restrictions on them.\n\nSome of the smugglers are average citizens running rings with individuals they know on the other side, others are large corporations that sell legitimate goods along with contraband. Combined, these groups earn quite a bit of money and contribute to the economy. How should we deal with them?"
+ dpe_contraband_event.1.A:0 "Crack down on them. We can’t jeopardize our foreign relations."
+ dpe_contraband_event.1.B:0 "Turn a blind eye and allow the economy to reap the benefits."
+ dpe_contraband_event.1.B.tooltip:0 "The [dpe_neighbor.GetName] will be displeased if this is discovered."
+ dpe_contraband_event.1.C:0 "Extort money from these rackets."
+ dpe_contraband_event.1.C.tooltip:0 "The [dpe_neighbor.GetName] will be furious if our involvement is uncovered."
+ 
+ dpe_contraband_event.90.name:0 "Smuggler Rings Stopped"
+ dpe_contraband_event.90.desc:0 "The [from.GetSpeciesAdj] ambassador has approached our minister of foreign affairs with an interesting story: Apparently, their government recently uncovered several smuggler rings operating on the edge of their space, which had been sneaking considerable quantities of hallucinatory drugs into our territory. Once discovered, the [from.GetSpeciesNamePlural] cracked down on these bands of rogues, preventing a potential contraband crisis in our empire."
+ dpe_contraband_event.90.option:0 "You have our thanks!"
+
+ dpe_contraband_event.2.name:0 "Smuggling Crisis"
+ dpe_contraband_event.2.desc:0 "Local authorities across our planets are reporting a massive spike in the usage of a certain hallucinatory drug, the trade and usage of which is illegal under [root.GetSpeciesAdj] law. The scale of the problem is so serious that it has become obvious that this needs to be dealt with on a national level. How should we respond?"
+ dpe_contraband_event.2.A:0 "Legalise the drug and tax it."
+ dpe_contraband_event.2.B:0 "Begin cracking down! We will not tolerate this flagrant disregard for the law."
+ 
+ dpe_cracked_down_on_drugs_opinion:0 "Cracked Down on Smugglers for us"
+ dpe_drug_cartels_crackdown:0 "Cracking down on Smugglers"
+ dpe_taxing_drugs:0 "Taxing Legalised Drugs"
+ dpe_taxing_drugs_desc:0 "By taxing the drugs, the state is able to make some money. However, easy access to drugs is hitting productivity."
+ 
+ dpe_taxing_drugs_faction:0 "Legalised Drugs"
+ dpe_contraband_crisis:0 "Smuggling Crisis"
+ dpe_taking_action_drugs_faction:0 "Cracking Down on Drugs"
+ dpe_drug_cartels_tolerate:0 "Tolerating Smuggling Rings"
+ dpe_drug_cartels_tolerate_desc:0 "The government is happy to allow citizens to enrich themselves by trading drugs to foreigners."
