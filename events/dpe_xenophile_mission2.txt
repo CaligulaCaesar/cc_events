@@ -685,7 +685,7 @@ country_event = {
 						}
 					}
 				}
-				from = { country_event = { id = dpe_xenophile_mission.20 days = 120 random = 10 } }
+				from = { country_event = { id = dpe_xenophile_mission.20 days = 180 random = 10 } }
 			}
 
 			#Techs event
@@ -1763,6 +1763,503 @@ country_event = {
 
 	option = { name = CCGOODGOOD }
 }
+
+
+
+
+
+
+#Death Chain 
+country_event = {
+	id = dpe_xenophile_mission.20
+	title = dpe_xenophile_mission.20.name 
+	desc = dpe_xenophile_mission.20.desc 
+
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		from = {
+			NOT = {
+				has_relation_flag = {
+					flag = dpe_xenophile_mission_ended
+					who = root
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			set_relation_flag = {
+				flag = dpe_xenophile_mission_ended
+				who = root
+			}
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.20.A
+		custom_tooltip = dpe_xenophile_mission.20.A.tooltip
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_death
+				who = root
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				OR = {
+					is_in_federation_with = FROM
+					has_defensive_pact = FROM
+					has_non_aggression_pact = from
+				}
+			}
+			add_opinion_modifier = {
+				modifier = dpe_deceitful
+				who = root
+			}
+		}
+		hidden_effect = {
+			from = {
+				remove_opinion_modifier = {
+					modifier = dpe_xenophile_mission_opinion
+					who = root
+				}
+			}
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = from
+			}
+			from = {
+				random_list = {
+					4 = { country_event = { id = dpe_xenophile_mission.22 } }
+					1 = { country_event = { id = dpe_xenophile_mission.29 } }
+				}
+			}
+		}
+		ai_chance = { factor = 1.0 }
+	}
+	option = {
+		name = dpe_xenophile_mission.20.B
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_sent_home
+				who = root
+			}
+		}
+
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+		}
+		hidden_effect = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = from
+			}
+			from = { country_event = { id = dpe_xenophile_mission.21 } }
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#aborted
+country_event = {
+	id = dpe_xenophile_mission.21
+	title = dpe_xenophile_mission.21.name 
+	desc = dpe_xenophile_mission.21.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { name = dpe_xenophile_mission.21.option }
+}
+
+#enacted
+country_event = {
+	id = dpe_xenophile_mission.22
+	title = dpe_xenophile_mission.22.name 
+	desc = dpe_xenophile_mission.22.desc 
+
+	picture = GFX_evt_interior_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_xenophile_mission.22.option
+
+		add_modifier = {
+			modifier = dpe_xenomission_disaster_upset
+			days = 5400
+		}
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.23 } } }
+	}
+}
+
+#Destroyer country sets demands
+country_event = {
+	id = dpe_xenophile_mission.23
+	title = dpe_xenophile_mission.23.name 
+	desc = dpe_xenophile_mission.23.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.23.A
+		custom_tooltip = dpe_xenophile_mission.23.A.tooltip
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.24 days = 5 } } }
+	}
+	option = {
+		name = dpe_xenophile_mission.23.B
+		custom_tooltip = dpe_xenophile_mission.23.B.tooltip
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.25 days = 5 } } }
+	}
+}
+
+#Set as tributary
+country_event = {
+	id = dpe_xenophile_mission.24
+	title = dpe_xenophile_mission.24.name 
+	desc = dpe_xenophile_mission.24.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.24.A
+		
+		set_subject_of = { who = from subject_type = tributary }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				from = {
+					relative_power = {
+						who = ROOT
+						category = fleet
+						value < equivalent
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.24.B
+		
+		add_modifier = {
+			modifier = dpe_xenomission_abandoned_hostages
+			days = 3600
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				from = {
+					relative_power = {
+						who = ROOT
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
+		}
+	}
+}
+
+#Disband fleet
+country_event = {
+	id = dpe_xenophile_mission.25
+	title = dpe_xenophile_mission.25.name 
+	desc = dpe_xenophile_mission.25.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.25.A
+		
+		custom_tooltip = dpe_xenophile_mission.25.A.tooltip
+		hidden_effect = {
+			every_owned_ship = { ship_event = { id = dpe_xenophile_mission.26 } }
+		}
+		add_modifier = {
+			modifier = dpe_xenomission_disbanding_fleet
+			days = 5400
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				from = {
+					relative_power = {
+						who = ROOT
+						category = fleet
+						value < equivalent
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.25.B
+		
+		add_modifier = {
+			modifier = dpe_xenomission_abandoned_hostages
+			days = 3600
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				from = {
+					relative_power = {
+						who = ROOT
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = dpe_xenophile_mission.26
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random = {
+			chance = 33
+			delete_ship = this
+		}
+	}
+}
+
+#failed
+country_event = {
+	id = dpe_xenophile_mission.29
+	title = dpe_xenophile_mission.29.name 
+	desc = dpe_xenophile_mission.29.desc 
+
+	picture = GFX_evt_nuclear_explosion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = dpe_xenophile_mission.29.option 
+
+		add_modifier = {
+			modifier = dpe_xenomission_disaster_upset
+			days = 5400
+		}
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.291 days = 10 } } }
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.291
+	title = dpe_xenophile_mission.291.name 
+	desc = dpe_xenophile_mission.291.desc 
+
+	picture = GFX_evt_nuclear_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_planet = {
+					num_pops > 5
+					any_owned_pop = { is_same_species = root }
+					is_neighbor_of = from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					num_pops > 5
+					any_owned_pop = { is_same_species = root }
+					is_neighbor_of = from
+				}
+				save_event_target_as = random_planet
+			}
+			else = {
+				random_owned_planet = {
+					limit = {
+						num_pops > 5
+						any_owned_pop = { is_same_species = root }
+					}
+					save_event_target_as = random_planet
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.291.A
+
+		declare_war = {
+			target = from
+			attacker_war_goal = wg_subjugation
+		}
+
+		event_target:random_planet = {
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+		}
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.292 } } }
+
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					from = {
+						relative_power = {
+							who = root
+							category = fleet
+							value > equivalent
+						}
+					}
+					count_potential_war_participants = {
+						attacker = root
+						defender = from
+						side = from
+						limit = {
+							relative_power = {
+								who = root
+								category = fleet
+								value > equivalent
+							}
+						}
+						count > 0
+					}
+				}
+			}
+		}
+
+		allow = { has_federation = no }
+	}
+	option = {
+		name = dpe_xenophile_mission.291.B
+
+		if = {
+			limit = { NOT = { has_closed_borders = from } }
+			set_closed_borders = {
+				who = from
+				status = yes
+			}
+		}
+		event_target:random_planet = {
+			random_pop = { kill_pop = yes }
+			random_pop = { kill_pop = yes }
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.292
+	title = dpe_xenophile_mission.292.name 
+	desc = dpe_xenophile_mission.292.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	immediate = {
+		from = { country_event = { id = dpe_xenophile_mission.293 days = 1 } }
+	}
+
+	option = { name = dpe_xenophile_mission.292.option }
+}
+
+country_event = {
+	id = dpe_xenophile_mission.293
+	title = dpe_xenophile_mission.293.name 
+	desc = dpe_xenophile_mission.293.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { name = dpe_xenophile_mission.293.option }
+}
+
+
+
+
 
 #gatekeeper for xenophile event and end of chain. Scope is originator
 country_event = {

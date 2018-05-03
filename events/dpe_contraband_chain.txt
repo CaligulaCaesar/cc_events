@@ -217,6 +217,8 @@ country_event = {
 	
 	picture = GFX_evt_smugglers_in_bar
 
+	is_triggered_only = yes
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_has_had_contraband_crisis

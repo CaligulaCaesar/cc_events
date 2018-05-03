@@ -407,6 +407,33 @@ dpe_xenomission_xenophobia:0 "Xenophobic Wave"
 dpe_xenomission_xenophobia_desc:0 "The arrival of a group of xenos seeking to learn more about our culture has created a hostile and xenophobic reaction."
 dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
 
+#Death Chain
+ dpe_xenophile_mission.20.name:0 "Time to Strike"
+ dpe_xenophile_mission.20.desc:0 "The time has come to strike. Our intelligence agencies have drawn up a cunning plan: Now that the [from.GetSpeciesNamePlural] have lowered their guards, our special forces will be able to overwhelm their protection teams and take as many of them hostage as possible. To ensure that they cannot escape us, we have installed malware on their starships’ automation systems that will make it impossible to fly them; as a backup, we have also installed antimatter explosives. In the meantime, our delegates, who are strategically positioned near the [from.GetSpeciesAdj] frontier, will have left without warning and disappeared from [from.GetSpeciesAdj] space. We will then be able to extort favourable terms from the [from.GetSpeciesNamePlural]."
+ dpe_xenophile_mission.20.A:0 "Excellent, proceed."
+ dpe_xenophile_mission.20.A.tooltip:0 "Our agents will attempt to take the [from.GetSpeciesNamePlural] hostage."
+ dpe_xenophile_mission.20.B:0 "It is too risky, let's just send them home."
+ 
+ dpe_xenophile_mission.21.name:0 "The [from.GetSpeciesNamePlural] send our Delegates home"
+ dpe_xenophile_mission.21.desc:0 "We do not believe this arrangement is working out. For reasons of national security, we must end the discovery mission."
+ dpe_xenophile_mission.21.option:0 "Disappointing."
+ 
+ dpe_xenophile_mission.22.name:0 "The [from.GetSpeciesNamePlural] Betray Us"
+ dpe_xenophile_mission.22.desc:0 "The first sign of treachery was the sudden departure of the [from.GetSpeciesNamePlural] from our planets, and then, before we could react, our space. Then, horrifying stories filtered through from the [from.GetName]: The [from.GetSpeciesNamePlural] had turned on our delegates in a well-planned move, and after a brief but hopeless firefight taken them hostage.\n\nWe have opened diplomatic channels to demand an explanation for this action. In the meantime, our populace's positive outlook towards xenos has been severely shaken."
+ dpe_xenophile_mission.22.option:0 "How dare they?"
+
+ dpe_xenophile_mission.23.name:0 "Setting our Demands"
+ dpe_xenophile_mission.23.desc:0 "Explain yourselves and your treacherous behaviour, [root.GetSpeciesName]."
+ dpe_xenophile_mission.23.A:0 "Give us money, or the hostages die."
+ dpe_xenophile_mission.23.A.tooltip:0 "If the [from.GetName] accepts, they will become a tributary of the [root.GetName]."
+ dpe_xenophile_mission.23.B:0 "Disband your fleet, or the hostages die."
+ dpe_xenophile_mission.23.B.tooltip:0 "If the [from.GetName] accepts, a third of their fleet will disband and their naval capacity will be cut by 33% for 15 years."
+ 
+ dpe_xenophile_mission.29.name:0 "The [from.GetSpeciesNamePlural] Betray Us"
+ dpe_xenophile_mission.29.desc:0 "The first sign of treachery was the sudden departure of the [from.GetSpeciesNamePlural] from our planets, and then, before we could react, our space. Then, horrifying stories filtered through from the [from.GetName]: The [from.GetSpeciesNamePlural] turned on our delegates in a well-planned move and attempted to take them hostage. However, a heroic [root.GetSpeciesAdj] technician somehow got hold of an antimatter explosive and detonated it so that the [from.GetSpeciesNamePlural] could not use our delegates against us, in the process doing considerable damage to [random_planet.GetName]. Our population is in mourning at the deaths of our delegates, who are now seen as heroes. Their positive outlook towards xenos has been severely shaken."
+ dpe_xenophile_mission.29.option:0 "How dare they?"
+ 
+ 
 #Tensions event chain
  dpe_xenophile_mission.81.name:0 "Tensions over our Delegation"
  dpe_xenophile_mission.81.desc:0 "There have been a number of unfortunate incidents surrounding our delegation to the [from.GetName]. These were first triggered by a number of cultural misunderstandings by our people, the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, xenophobic elements within [from.GetSpeciesAdj] society have seized upon these incidents to provoke a backlash: Our people are increasingly met by protests wherever they go, and the [from.GetSpeciesAdj] government has informed us that their security services have foiled several attempts of violence against them, and that they cannot guarantee their continued safety. Some of our delegates were sufficiently spooked by this news that they demanded to be allowed to return home immediately, a wish their leader granted; however, most of them are intent on braving it out in the hope that these difficulties can be surmounted. Should we summon them home?"
@@ -527,3 +554,5 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_taking_action_drugs_faction:0 "Cracking Down on Drugs"
  dpe_drug_cartels_tolerate:0 "Tolerating Smuggling Rings"
  dpe_drug_cartels_tolerate_desc:0 "The government is happy to allow citizens to enrich themselves by trading drugs to foreigners."
+ dpe_drug_cartels_extort:0 "Supporting Smuggling Rings"
+ dpe_drug_cartels_extort_desc:0 "The government is happy to support drug rings in return for money it extorts from them."
