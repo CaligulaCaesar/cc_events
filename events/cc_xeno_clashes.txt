@@ -467,7 +467,7 @@ planet_event = {
 						}
 					}
 				}
-				owner = { country_event = { id = cc_xeno_clashes.31 days = 15 random = 5 } }
+				owner = { country_event = { id = cc_xeno_clashes.31 days = 10 random = 10 } }
 				
 				else = {
 					every_owned_pop = {
@@ -1204,7 +1204,7 @@ planet_event = {
 							any_owned_pop = { species = { is_same_value = event_target:species2 } }
 						}
 					}
-					country_event = { id = cc_xeno_clashes.372 days = 15 random = 5 }
+					country_event = { id = cc_xeno_clashes.372 days = 10 random = 10 }
 				}
 			}
 		}
@@ -2306,7 +2306,7 @@ planet_event = {
 						}
 					}
 				}
-				owner = { country_event = { id = cc_xeno_clashes.41 days = 15 random = 5 } }
+				owner = { country_event = { id = cc_xeno_clashes.41 days = 10 random = 10 } }
 				
 				else = {
 					every_owned_pop = {

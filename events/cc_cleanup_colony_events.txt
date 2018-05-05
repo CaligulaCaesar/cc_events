@@ -61,7 +61,7 @@ planet_event = {
 				flag = cc_conquered_purge
 				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9992 days = 2400 random = 720 }
+			planet_event = { id = cc_cleanup_events.9992 days = 2000 random = 1000 }
 		}
 		
 		if = {
@@ -73,7 +73,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_spiritualist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.2 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.2 days = 5 random = 20 }
 		}	
 		if = {
 			limit = {
@@ -84,7 +84,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_spiritualist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.2 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.2 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -97,7 +97,7 @@ planet_event = {
 			limit = {
 				has_modifier = cc_minor_mausoleum
 			}
-			planet_event = { id = cc_cleanup_events.4 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.4 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -106,7 +106,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_spiritualist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.5 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.5 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -115,15 +115,15 @@ planet_event = {
 					has_modifier = cc_underground_spiritualist_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.6 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.6 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_spiritualist_protectorate }
-			planet_event = { id = cc_cleanup_events.7 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.7 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_colony_direct_democracy }
-			planet_event = { id = cc_cleanup_events.8 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.8 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -132,11 +132,11 @@ planet_event = {
 					has_modifier = cc_underground_egalitarian_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.9 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.9 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_colony_democracy_unhappy }
-			planet_event = { id = cc_cleanup_events.10 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.10 days = 5 random = 20 }
 		}
 		
 		
@@ -147,7 +147,7 @@ planet_event = {
 		}
 		if = {
 			limit = { has_modifier = cc_university }
-			planet_event = { id = cc_cleanup_events.12 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.12 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -157,7 +157,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_1_materialist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.13 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.13 days = 5 random = 20 }
 		}
 		if = {
 			limit = { 
@@ -166,18 +166,18 @@ planet_event = {
 					has_modifier = cc_underground_materialist_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.14 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.14 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_founders_memory_disrespected_1_materialist }
-			planet_event = { id = cc_cleanup_events.15 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.15 days = 5 random = 20 }
 		}
 		
 		
 
 		if = {
 			limit = { has_modifier = cc_colony_monarchy }
-			planet_event = { id = cc_cleanup_events.16 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.16 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -186,19 +186,19 @@ planet_event = {
 					has_modifier = cc_underground_authoritarian_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.17 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.17 days = 5 random = 20 }
 		}
 		
 		if = {
 			limit = { has_modifier = cc_colony_monarchy_unhappy }
-			planet_event = { id = cc_cleanup_events.18 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.18 days = 5 random = 20 }
 		}
 		
 		
 
 		if = {
 			limit = { has_modifier = cc_milacademy }
-			planet_event = { id = cc_cleanup_events.19 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.19 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -208,7 +208,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_1_militarist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.20 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.20 days = 5 random = 20 }
 		}
 		if = {
 			limit = { 
@@ -217,11 +217,11 @@ planet_event = {
 					has_modifier = cc_underground_militarist_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.21 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.21 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_founders_memory_disrespected_1_militarist }
-			planet_event = { id = cc_cleanup_events.22 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.22 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_building_milacademy }
@@ -239,7 +239,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_pacifist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.25 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.25 days = 5 random = 20 }
 		}	
 		if = {
 			limit = {
@@ -255,7 +255,7 @@ planet_event = {
 					has_modifier = cc_pacifist_centre
 				}
 			}
-			planet_event = { id = cc_cleanup_events.27 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.27 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -264,7 +264,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_pacifist
 				}
 			}
-			planet_event = { id = cc_cleanup_events.28 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.28 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -273,11 +273,11 @@ planet_event = {
 					has_modifier = cc_underground_pacifist_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.30 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.30 days = 5 random = 20 }
 		}
 		if = {
 			limit = { has_modifier = cc_pacifist_protectorate }
-			planet_event = { id = cc_cleanup_events.31 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.31 days = 5 random = 20 }
 		}
 
 		
@@ -308,7 +308,7 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_cleanup_events.32 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.32 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -363,7 +363,7 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_cleanup_events.34 days = 15 random = 10 }			
+			planet_event = { id = cc_cleanup_events.34 days = 5 random = 20 }			
 		}
 		
 		if = {
@@ -392,7 +392,7 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_cleanup_events.35 days = 15 random = 10 }			
+			planet_event = { id = cc_cleanup_events.35 days = 5 random = 20 }			
 		}
 		
 		
@@ -406,7 +406,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_xenophile
 				}
 			}
-			planet_event = { id = cc_cleanup_events.36 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.36 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -419,7 +419,7 @@ planet_event = {
 			limit = {
 				has_modifier = cc_xenophile_institute
 			}
-			planet_event = { id = cc_cleanup_events.38 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.38 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -428,7 +428,7 @@ planet_event = {
 					has_modifier = cc_founders_memory_disrespected_2_xenophile
 				}
 			}
-			planet_event = { id = cc_cleanup_events.39 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.39 days = 5 random = 20 }
 		}
 		if = {
 			limit = {
@@ -437,7 +437,7 @@ planet_event = {
 					has_modifier = cc_underground_xenophile_movement_2
 				}
 			}
-			planet_event = { id = cc_cleanup_events.40 days = 15 random = 10 }
+			planet_event = { id = cc_cleanup_events.40 days = 5 random = 20 }
 		}
 	}
 }
@@ -3070,7 +3070,7 @@ pop_event = {
 				flag = cc_conquered_purge
 				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9992 days = 2400 random = 720 }
+			planet_event = { id = cc_cleanup_events.9992 days = 2000 random = 1000 }
 		}
 	}
 }

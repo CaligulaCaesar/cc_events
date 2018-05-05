@@ -537,7 +537,7 @@ country_event = {
 			from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } }
 
 			#First espionage event
-			country_event = { id = dpe_xenophile_mission.11 days = 360 random = 45 }
+			country_event = { id = dpe_xenophile_mission.11 days = 330 random = 90 }
 		}
 	}
 	option = {
@@ -692,36 +692,22 @@ country_event = {
 			if = {
 				limit = {
 					from = {
-						OR = {
-							relative_power = {
-								who = root
-								category = technology
-								value = superior
-							}
-							relative_power = {
-								who = root
-								category = technology
-								value = overwhelming
-							}
+						relative_power = {
+							who = root
+							category = technology
+							value > equivalent
 						}
 					}
 				}
-				country_event = { id = dpe_xenophile_mission.1499 days = 1800 random = 360 }
+				from = { country_event = { id = dpe_xenophile_mission.15 days = 1500 random = 600 } }
 				
 				else = {
 					if = {
 						limit = {
-							OR = {
-								relative_power = {
-									who = from
-									category = technology
-									value = superior
-								}
-								relative_power = {
-									who = from
-									category = technology
-									value = overwhelming
-								}
+							relative_power = {
+								who = from
+								category = technology
+								value > equivalent
 							}
 							from = {
 								NOT = {
@@ -732,7 +718,7 @@ country_event = {
 								}
 							}
 						}
-						from = { country_event = { id = dpe_xenophile_mission.15 days = 1800 random = 360 } }
+						from = { country_event = { id = dpe_xenophile_mission.1499 days = 1500 random = 600 } }
 					}
 				}
 			}
@@ -753,11 +739,12 @@ country_event = {
 						}
 					}
 				}
-				country_event = { id = dpe_xenophile_mission.8 days = 480 random = 60 }
+				country_event = { id = dpe_xenophile_mission.8 days = 420 random = 120 }
 			}
 		}
 	}
 }
+
 
 
 #Mission Established non-originator
@@ -1763,6 +1750,127 @@ country_event = {
 
 	option = { name = CCGOODGOOD }
 }
+
+
+
+
+#Techs chain 
+
+country_event = {
+	id = dpe_xenophile_mission.1499
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		from = {
+			NOT = {
+				has_relation_flag = {
+					flag = dpe_xenophile_mission_ended
+					who = root
+				}
+			}
+		}
+	}
+	immediate = {
+		from = {
+			country_event = { id = dpe_xenophile_mission.15 }
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.15
+	title = dpe_xenophile_mission.15.name
+	desc = dpe_xenophile_mission.15.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_society_research
+
+	trigger = {
+		exists = from
+		from = {
+			NOT = {
+				has_relation_flag = {
+					flag = dpe_xenophile_mission_ended
+					who = root
+				}
+			}
+		}
+		NOT = {
+			has_relation_flag = {
+				flag = dpe_xenophile_mission_ended
+				who = from
+			}
+		}
+	}
+
+	option = { #	Give it as a gift.
+		name = dpe_xenophile_mission.15.A
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_granted_tech
+				who = root
+			}
+		}
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.151 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+		}
+	}
+
+	option = { #	Propose an exchange for some prototypes of their own tech.
+		name = dpe_xenophile_mission.15.B
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.152 } } }
+
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+
+	option = { #	They cannot have it.
+		name = dpe_xenophile_mission.15.C
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_denied_tech
+				who = root
+			}
+		}
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.153 } } }
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.33
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+		}
+	}
+}
+
+
+
+
 
 
 

@@ -426,7 +426,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -508,7 +508,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -685,7 +685,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -736,7 +736,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1225,9 +1225,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -1251,9 +1251,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -1432,9 +1432,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1487,9 +1487,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2260,7 +2260,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -2282,7 +2282,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -2465,7 +2465,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2516,7 +2516,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2970,9 +2970,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -3001,15 +3001,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			
 			every_owned_pop = {
@@ -3212,15 +3212,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -3278,15 +3278,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				else = {
 					random = {
 						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5400 random = 360 }
+						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 					}
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop = {
 				limit = { is_same_species = root.owner }
@@ -3921,8 +3921,8 @@ planet_event = {
 				}
 			}
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.541 days = 45 random = 20 } }
-				2 = { planet_event = { id = cc_colony_events.546 days = 45 random = 20 } }
+				3 = { planet_event = { id = cc_colony_events.541 days = 25 random = 40 } }
+				2 = { planet_event = { id = cc_colony_events.546 days = 25 random = 40 } }
 			}
 		}
 		
@@ -5017,9 +5017,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -5043,9 +5043,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -5224,9 +5224,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -5279,9 +5279,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5400 random = 360 }
+				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6048,7 +6048,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6070,7 +6070,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6247,7 +6247,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6298,7 +6298,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6784,7 +6784,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6807,7 +6807,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6868,7 +6868,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -7049,7 +7049,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -7071,7 +7071,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -7122,7 +7122,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 9000 random = 1800 }
+			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }

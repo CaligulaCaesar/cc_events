@@ -458,7 +458,7 @@ planet_event = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
 					15 = {
-						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
+						planet_event = { id = cc_luddite.8 days = 10 random = 15 }
 						modifier = {
 							factor = 0.33
 							OR = {
@@ -482,7 +482,7 @@ planet_event = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
 					15 = {
-						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
+						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
 						modifier = {
 							factor = 0.33
 							OR = {
@@ -510,7 +510,7 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						15 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						15 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 						85 = { }
 					}
 				}
@@ -679,7 +679,7 @@ planet_event = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
 					9 = {
-						planet_event = { id = cc_luddite.8 days = 15 random = 10 }
+						planet_event = { id = cc_luddite.8 days = 10 random = 15 }
 						modifier = {
 							factor = 0.5
 							OR = {
@@ -703,7 +703,7 @@ planet_event = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
 					9 = {
-						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
+						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
 						modifier = {
 							factor = 0.5
 							OR = {
@@ -731,7 +731,7 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						8 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						8 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 						92 = { }
 					}
 				}
@@ -899,7 +899,7 @@ planet_event = {
 			if = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
-					2 = { planet_event = { id = cc_luddite.8 days = 15 random = 10 }
+					2 = { planet_event = { id = cc_luddite.8 days = 10 random = 15 }
 						modifier = {
 							factor = 2
 							NOT = { has_modifier = cc_planet_oppression }
@@ -921,7 +921,7 @@ planet_event = {
 				limit = { any_pop = { is_non_sapient_robot = yes } }
 				random_list = {
 					2 = {
-						planet_event = { id = cc_luddite.9 days = 15 random = 10 }
+						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
 						modifier = {
 							factor = 2
 							owner = { has_country_flag = cc_ignoring_luddites }
@@ -946,7 +946,7 @@ planet_event = {
 				if = {
 					limit = { any_pop = { is_non_sapient_robot = yes } }
 					random_list = {
-						2 = { planet_event = { id = cc_luddite.10 days = 15 random = 10 } }
+						2 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 						98 = { }
 					}
 				}
@@ -1629,7 +1629,7 @@ country_event = {
 				}
 				while = {
 					count = 5
-					country_event = { id = syndaw.401 days = 90 random = 90 }
+					country_event = { id = syndaw.401 days = 30 random = 120 }
 				}
 			}
 		}

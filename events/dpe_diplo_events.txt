@@ -302,7 +302,7 @@ country_event = {
 						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
-					planet_event = { id = dpe_diplo.3 days = 45 random = 10 }
+					planet_event = { id = dpe_diplo.3 days = 35 random = 20 }
 				}
 			}
 			if = {
@@ -310,7 +310,7 @@ country_event = {
 					owner = { is_ai = yes }
 					event_target:enemy = { is_ai = no }
 				}
-				event_target:enemy = { country_event = { id = dpe_diplo.5 days = 270 random = 180 } }
+				event_target:enemy = { country_event = { id = dpe_diplo.5 days = 90 random = 360 } }
 			}
 		}
 		ai_chance = {
@@ -383,7 +383,7 @@ country_event = {
 						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
-					planet_event = { id = dpe_diplo.3 days = 45 random = 10 }
+					planet_event = { id = dpe_diplo.3 days = 35 random = 20 }
 				}
 			}
 		}
