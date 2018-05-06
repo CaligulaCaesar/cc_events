@@ -896,6 +896,7 @@ country_event = {
 					}
 					relative_power = {
 						who = ROOT
+						category = all
 						value > equivalent
 					}
 				}
@@ -910,6 +911,7 @@ country_event = {
 					}
 					relative_power = {
 						who = ROOT
+						category = all
 						value > equivalent
 					}
 				}
@@ -1000,6 +1002,7 @@ country_event = {
 					}
 					relative_power = {
 						who = ROOT
+						category = all
 						value > equivalent
 					}
 				}
@@ -1013,7 +1016,8 @@ country_event = {
 						is_hostile_to = ROOT
 					}
 					relative_power = {
-						who = ROOT
+						who = root
+						category = all
 						value > equivalent
 					}
 				}
@@ -1401,6 +1405,7 @@ country_event = {
 					relative_power = {
 						who = event_target:FallenEmpireTaskOrigin
 						value > inferior
+						category = all
 					}
 				}
 			}
@@ -1461,6 +1466,7 @@ country_event = {
 					relative_power = {
 						who = event_target:FallenEmpireTaskOrigin
 						value > inferior
+						category = all
 					}
 				}
 				event_target:FallenEmpireTaskOrigin = {

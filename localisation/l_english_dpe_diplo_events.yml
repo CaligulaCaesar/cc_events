@@ -510,6 +510,38 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenomission_disaster_upset:0 "Xenophobic Sentiment"
  dpe_xenomission_disaster_upset:0 "A xenophobic wave has swept across the population as a result of the manner in which another country treated this country's delegation."
 
+#Espionage sub-chain
+ dpe_xenophile_mission.11.name:0 "Espionage Update"
+ dpe_xenophile_mission.11.desc.first:0 "Our agents among our delegation to the [from.GetName] have managed to send home a large cache of [from.GetSpeciesAdj] technologies for our scientists to work on. The operation went without a hitch, and the [from.GetSpeciesNamePlural] are none the wiser."
+ dpe_xenophile_mission.11.desc.subsequent:0 "Our agents among our delegation to the [from.GetName] have managed to send home another cache of [from.GetSpeciesAdj] technologies for our scientists to work on. The [from.GetSpeciesNamePlural] still suspect nothing of our operations."
+ dpe_xenophile_mission.11.desc.spying:0 "Our agents among our delegation to the [from.GetName] have managed to send home another cache of [from.GetSpeciesAdj] technologies for our scientists to work on. The [from.GetSpeciesNamePlural] have not realised that we are still conducting these operations."
+ 
+ dpe_xenophile_mission.12.name:0 "The [from.GetSpeciesNamePlural] have been Spying on Us!"
+ dpe_xenophile_mission.12.desc:0 "Our intelligence services have discovered something disturbing: Members of the [from.GetSpeciesAdj] delegation were caught attempting to smuggle samples of our technologies to the [from.GetName]. We have arrested the guilty individuals. They are refusing to speak, but our intelligence services have reviewed their recent activities, and it seems likely that this was part of a broader effort by the [from.GetSpeciesNamePlural] to learn our secrets. We have a brief window to act before the [from.GetSpeciesAdj] leaders hear of the arrests; our intelligence officials suggest that we raid the main [from.GetSpeciesAdj] starship and search for further evidence. However, it will be hard to de-escalate the situation if we do this. How should we proceed?"
+ dpe_xenophile_mission.12.A:0 "Raid their ship."
+ dpe_xenophile_mission.12.B:0 "Address the matter discreetly."
+ dpe_xenophile_mission.12.B.tooltip:0 "Take it up with their leaders and warn them that further such transgressions will not be tolerated."
+ dpe_xenophile_mission.12.C:0 "Maybe we can set up a trade."
+ dpe_xenophile_mission.12.C.tooltip:0 "We can trade non-disclosure of their misdeeds - which would tarnish their name - for their own techs."
+
+ dpe_xenophile_mission.121.name:0 "The [from.GetSpeciesNamePlural] have Caught our Spies!"
+ dpe_xenophile_mission.121.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. Please ensure that this does not happen again - it would be most inconvenient if the public were to come to believe your delegation was spying on us, forcing to take further action..."
+ dpe_xenophile_mission.121.A:0 "Understood."
+ dpe_xenophile_mission.121.B:0 "(Lie) Of course we will stop spying on you."
+ dpe_xenophile_mission.continue_spying:0 "We will secretly continue espionage operations."
+ 
+ dpe_xenophile_mission.1211.name:0 "The [from.GetSpeciesAdj] Response"
+ dpe_xenophile_mission.1211.desc:0 "We apologise for this incident, it will not recur."
+ dpe_xenophile_mission.1211.option:0 "It had better not!"
+ 
+
+ dpe_xenophile_mission.14.name:0 "The [from.GetSpeciesNamePlural] Caught Spying Again!"
+ dpe_xenophile_mission.14.desc:0 "We have caught the [from.GetSpeciesNamePlural] attempting to steal our technologies - again! We have sent them packing, and informed them of our displeasure at their deceit."
+ dpe_xenophile_mission.14.option:0 "They are not to be trusted."
+ 
+ dpe_xenophile_mission.141.name:0 "Caught Spying Again!"
+ dpe_xenophile_mission.141.desc:0 "Deceitful [root.GetSpeciesNamePlural], to lie to us once is bad enough, but to be caught deceiving us twice... You make poor friends."
+ 
 #Techs sub-chain
  dpe_xenophile_mission.15.name:0 "[from.GetSpeciesAdj] Interest in our Techs"
  dpe_xenophile_mission.15.desc:0 "The [from.GetSpeciesAdj] delegation has been fascinated by a certain element of [root.GetSpeciesAdj] technology, which is apparently significantly more advanced than their own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [from.GetName]. She has requested our authorisation to send her work home for further study there."
