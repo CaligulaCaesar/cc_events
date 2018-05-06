@@ -360,7 +360,7 @@ dpe_xenomission_denied_tech = {
 		base = -20
 	}
 	decay = {
-		base = -2
+		base = 2
 	}
 }
 
@@ -369,6 +369,15 @@ dpe_xenomission_granted_tech = {
 		base = 20
 	}
 	decay = {
-		base = -2
+		base = 2
+	}
+}
+
+dpe_xenomission_caught_smuggling = {
+	opinion = {
+		base = -50
+	}
+	decay = {
+		base = 2
 	}
 }

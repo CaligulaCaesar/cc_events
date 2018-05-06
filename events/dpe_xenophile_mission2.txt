@@ -2,6 +2,11 @@
 namespace = dpe_xenophile_mission
 
 
+@tier3researchreward = 18
+@tier3researchmin = 120
+@tier3researchmax = 500
+
+
 #This event is necessary to ensure that only new contacts are taken into account.
 #yearly pulse
 event = {
@@ -1813,7 +1818,7 @@ country_event = {
 				who = root
 			}
 		}
-		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.151 } } }
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.16 } } }
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -1823,13 +1828,21 @@ country_event = {
 					is_friendly_to = from
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
 		}
 	}
 
 	option = { #	Propose an exchange for some prototypes of their own tech.
 		name = dpe_xenophile_mission.15.B
 
-		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.152 } } }
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.17 } } }
 
 		ai_chance = {
 			factor = 1.5
@@ -1840,6 +1853,14 @@ country_event = {
 			modifier = {
 				factor = 2
 				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
 			}
 		}
 	}
@@ -1853,7 +1874,7 @@ country_event = {
 			}
 		}
 
-		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.153 } } }
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.18 } } }
 
 		ai_chance = {
 			factor = 2
@@ -1864,24 +1885,578 @@ country_event = {
 					is_friendly_to = from
 				}
 			}
+			modifier = {
+				factor = 3
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.16
+	title = dpe_xenophile_mission.16.name
+	desc = dpe_xenophile_mission.16.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_society_research
+
+	option = {
+		name = EXCELLENT
+
+		random_list = {
+			1 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.17
+	title = dpe_xenophile_mission.17.name
+	desc = dpe_xenophile_mission.17.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_society_research
+
+	option = {
+		name = dpe_xenophile_mission.17.A
+
+		random_list = {
+			1 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+		tooltip = {
+			from = {
+				random_list = {
+					1 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.171 days = 10 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
+		}
+	}
+	option = {
+		name = dpe_xenophile_mission.17.B
+
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.172 days = 10 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.33
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.17.C
+
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_xenophile_mission.173 days = 25 random = 20 } }
+				1 = { from = { country_event = { id = dpe_xenophile_mission.174 days = 25 random = 20 } } }
+			}
+		}
+
+		tooltip = {
+			random_list = {
+				1 = { custom_tooltip = dpe_xenophile_mission.17.C.tooltip }
+				1 = {
+					random_list = {
+						1 = {
+							add_monthly_resource_mult = {
+								resource = physics_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+						1 = {
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+						1 = {
+							add_monthly_resource_mult = {
+								resource = engineering_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.33
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.18
+	title = dpe_xenophile_mission.18.name
+	desc = dpe_xenophile_mission.18.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_society_research
+
+	option = {
+		name = UNFORTUNATE
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.18.A
+
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_xenophile_mission.173 days = 25 random = 20 } }
+				1 = { from = { country_event = { id = dpe_xenophile_mission.174 days = 25 random = 20 } } }
+			}
+		}
+
+		tooltip = {
+			random_list = {
+				1 = { custom_tooltip = dpe_xenophile_mission.17.C.tooltip }
+				1 = {
+					random_list = {
+						1 = {
+							add_monthly_resource_mult = {
+								resource = physics_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+						1 = {
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+						1 = {
+							add_monthly_resource_mult = {
+								resource = engineering_research
+								value = @tier3researchreward
+								min = @tier3researchmin
+								max = @tier3researchmax
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.33
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					is_rival = from
+					is_unfriendly_to = from
+					is_hostile_to = from
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.171
+	title = dpe_xenophile_mission.171.name 
+	desc = dpe_xenophile_mission.171.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.171.option
+	
+		random_list = {
+			1 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.172
+	title = dpe_xenophile_mission.172.name 
+	desc = dpe_xenophile_mission.172.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { name = dpe_xenophile_mission.172.option }
+}
+
+#Smuggling succeeded. Here, fromfrom is the other country
+country_event = {
+	id = dpe_xenophile_mission.173
+	title = dpe_xenophile_mission.173.name
+	desc = dpe_xenophile_mission.173.desc
+
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	trigger = { exists = FROMFROM }
+
+	option = {
+		name = EXCELLENT
+		random_list = {
+			1 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+#smugglers caught
+country_event = {
+	id = dpe_xenophile_mission.174
+	title = dpe_xenophile_mission.174.name
+	desc = dpe_xenophile_mission.174.desc
+
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		NOR = {
+			has_relation_flag = {
+				who = FROM
+				flag = dpe_xenophile_mission_ended
+			}
+			from = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_xenophile_mission_ended
+				}
+			}
+		}
+	}
+
+	immediate = {
+		add_opinion_modifier = {
+			who = from
+			modifier = dpe_xenomission_caught_smuggling
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.174.A
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.175 } } }
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOR = {
+					is_cordial_to = from
+					is_friendly_to = from
+					has_defensive_pact = from
+					is_in_federation_with = from
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_defensive_pact = from
+					is_in_federation_with = from
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.174.B
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_sent_home
+				who = root
+			}
+		}
+		
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.176 } } }
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+					has_defensive_pact = from
+					is_in_federation_with = from
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.175
+	title = dpe_xenophile_mission.175.name 
+	desc = dpe_xenophile_mission.175.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.175.option
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.176
+	title = dpe_xenophile_mission.176.name 
+	desc = dpe_xenophile_mission.176.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+		custom_tooltip = dpe_xenophile_mission_ends
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
 		}
 	}
 }
 
 
 
-
-
-
-
-
-
-
 #Death Chain 
 country_event = {
 	id = dpe_xenophile_mission.20
-	title = dpe_xenophile_mission.20.name 
-	desc = dpe_xenophile_mission.20.desc 
+	title = dpe_xenophile_mission.20.name
+	desc = dpe_xenophile_mission.20.desc
 
 	picture = GFX_evt_smugglers_in_bar
 

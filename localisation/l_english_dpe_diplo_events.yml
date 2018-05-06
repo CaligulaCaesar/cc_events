@@ -409,7 +409,7 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
 
 #Death Chain
  dpe_xenophile_mission.20.name:0 "Time to Strike"
- dpe_xenophile_mission.20.desc:0 "The time has come to strike. Our intelligence agencies have drawn up a cunning plan: Now that the [from.GetSpeciesNamePlural] have lowered their guards, our special forces will be able to overwhelm their protection teams and take as many of them hostage as possible. To ensure that they cannot escape us, we have installed malware on their starships’ automation systems that will make it impossible to fly them; as a backup, we have also installed antimatter explosives. In the meantime, our delegates, who are strategically positioned near the [from.GetSpeciesAdj] frontier, will have left without warning and disappeared from [from.GetSpeciesAdj] space. We will then be able to extort favourable terms from the [from.GetSpeciesNamePlural]."
+ dpe_xenophile_mission.20.desc:0 "The time has come to strike. Our intelligence agencies have drawn up a cunning plan: Now that the [from.GetSpeciesNamePlural] have lowered their guards, our special forces will be able to overwhelm their protection teams and take as many of them hostage as possible. To ensure that they cannot escape us, we have installed malware on their starships' automation systems that will make it impossible to fly them; as a backup, we have also installed antimatter explosives. In the meantime, our delegates, who are strategically positioned near the [from.GetSpeciesAdj] frontier, will have left without warning and disappeared from [from.GetSpeciesAdj] space. We will then be able to extort favourable terms from the [from.GetSpeciesNamePlural]."
  dpe_xenophile_mission.20.A:0 "Excellent, proceed."
  dpe_xenophile_mission.20.A.tooltip:0 "Our agents will attempt to take the [from.GetSpeciesNamePlural] hostage."
  dpe_xenophile_mission.20.B:0 "It is too risky, let's just send them home."
@@ -510,6 +510,56 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenomission_disaster_upset:0 "Xenophobic Sentiment"
  dpe_xenomission_disaster_upset:0 "A xenophobic wave has swept across the population as a result of the manner in which another country treated this country's delegation."
 
+#Techs sub-chain
+ dpe_xenophile_mission.15.name:0 "[from.GetSpeciesAdj] Interest in our Techs"
+ dpe_xenophile_mission.15.desc:0 "The [from.GetSpeciesAdj] delegation has been fascinated by a certain element of [root.GetSpeciesAdj] technology, which is apparently significantly more advanced than their own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [from.GetName]. She has requested our authorisation to send her work home for further study there."
+ dpe_xenophile_mission.15.A:0 "Give it as a gift."
+ dpe_xenophile_mission.15.B:0 "Propose an exchange for some prototypes of their own tech."
+ dpe_xenophile_mission.15.C:0 "They cannot have it."
+
+ dpe_xenophile_mission.16.name:0 "A Gift of [from.GetSpeciesAdj] Technology"
+ dpe_xenophile_mission.16.desc:0 "Our delegation has been fascinated by a certain element of [from.GetSpeciesAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. With the permission of the [from.GetName], she has sent some samples with the latest dispatch."
+ 
+ dpe_xenophile_mission.17.name:0 "Tech Exchange?"
+ dpe_xenophile_mission.17.desc:0 "Our delegation has been fascinated by a certain element of [from.GetSpeciesAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. The [from.GetSpeciesNamePlural] have allowed her to send us her work on the condition that we send the them samples of our own latest techs in return."
+ dpe_xenophile_mission.17.A:0 "Sure, send them the samples."
+ dpe_xenophile_mission.17.B:0 "We can do without this tech."
+ dpe_xenophile_mission.17.C:0 "Attempt to smuggle her work out."
+ dpe_xenophile_mission.17.C.tooltip:0 "The [from.GetSpeciesNamePlural] will detect our smuggling attempt, and may be very angry."
+
+ dpe_xenophile_mission.18.name:0 "Technological Envy"
+ dpe_xenophile_mission.18.desc:0 "Our delegation has been fascinated by a certain element of [from.GetSpeciesAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. However, the [from.GetSpeciesNamePlural] have refused to allow her to send us her work, claiming that this was not part of the agreement."
+ dpe_xenophile_mission.18.A:0 "Attempt to smuggle her work out."
+
+ dpe_xenophile_mission.171.name:0 "The [from.GetSpeciesAdj] Response"
+ dpe_xenophile_mission.171.desc:0 "Here are our samples, [root.GetSpeciesName]."
+ dpe_xenophile_mission.171.option:0 "Thanks a lot!"
+ 
+ dpe_xenophile_mission.172.name:0 "$dpe_xenophile_mission.171.name$"
+ dpe_xenophile_mission.172.desc:0 "We can do without your techs, [from.GetSpeciesName]."
+ dpe_xenophile_mission.172.option:0 "A shame."
+ 
+ dpe_xenophile_mission.173.name:0 "Smuggling Operation Successful"
+ dpe_xenophile_mission.173.desc:0 "Our team has successfully managed to smuggle our scientist's work out of the [fromfrom.GetName]. The operation went without a hitch, and the [fromfrom.GetSpeciesNamePlural] are none the wiser."
+ 
+ dpe_xenophile_mission.174.name:0 "The [from.GetSpeciesNamePlural] attempted to smuggle our Techs!"
+ dpe_xenophile_mission.174.desc:0 "Our intelligence services have discovered something disturbing: Having failed to secure our permission to send samples of our technology to the [from.GetName], the treacherous [from.GetSpeciesNamePlural] are attempting to smuggle it home instead. The guilty individuals are now in our custody, but we have evidence that they were acting on state orders. How should we react?"
+ dpe_xenophile_mission.174.A:0 "We understand the temptation. Discreetly berate the [from.GetSpeciesNamePlural]."
+ dpe_xenophile_mission.174.B:0 "We cannot trust the [from.GetSpeciesNamePlural]. End the project and send them home."
+ 
+ dpe_xenophile_mission.175.name:0 "Upset at Smuggling"
+ dpe_xenophile_mission.175.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. Please ensure that this does not happen again - it would be most inconvenient if the public were to come to believe your delegation was spying on us, forcing to take further action..."
+ dpe_xenophile_mission.175.option:0 "Understood."
+ 
+ dpe_xenophile_mission.176.name:0 "Outrage at Smuggling"
+ dpe_xenophile_mission.176.desc:0 "Dear [root.GetSpeciesNamePlural], we must inform you that your cultural mission to our worlds is over. Likewise, we are withdrawing our mission from your worlds. We reached this decision after apprehending a number of [root.GetSpeciesNamePlural] as they were attempting to smuggle our technologies out of the [from.GetName] - apparently on your command. This has shaken our trust in you. We will think twice before cooperating with the [root.GetSpeciesNamePlural] again."
+
+ dpe_xenomission_denied_tech:0 "Denied Tech-Sharing"
+ dpe_xenomission_granted_tech:0 "Gifted Technology"
+ dpe_xenomission_caught_smuggling:0 "Caught Smuggling our Techs"
+ 
+ 
+#Xenophilia sub-chain
 dpe_xenophile_mission.150.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]"
 dpe_xenophile_mission.150.desc:0 "With the [from.GetSpeciesNamePlural] due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to marry their [root.GetSpeciesAdj] partners and remain in the [root.GetName] instead."
 
@@ -529,6 +579,7 @@ dpe_xenophile_mission.154.option:0 "So long as they don't bring these practices 
 dpe_xenomission_xenophilia_torn:0 "Debate over Xenophile Marriages"
 dpe_xenomission_xenophilia_torn_desc:0 "The country is split by the debate as to the justice of allowing or banning marriages between individuals of different species."
 
+#End of Chain
 dpe_xenophile_mission.101.name:0 "A Parting of Friends"
 dpe_xenophile_mission.101.desc:0 "It is with a touch of sadness that our delegation to the [from.GetName] and the [from.GetSpeciesAdj] delegation to our state return home today. The initiative has been a great success! Over the past ten years, both our peoples have come to understand each other well, and many new friendships have been born. We are hopeful that we are entering an era of lasting peace and cooperation between [root.GetSpeciesNamePlural] and [from.GetSpeciesNamePlural]."
 
@@ -560,7 +611,7 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
 #Contraband Chain 
  dpe_contraband_event.1.name:0 "Smuggling Rings"
  dpe_contraband_event.1.desc:0 "Our intelligence services have discovered that a collection of our citizens have been smuggling goods into the [dpe_neighbour.GetName]. The goods they are smuggling are perfectly legal within our own realm, but their effect on [dpe_neighbor.GetSpeciesAdj] biology is that of a moderately effective hallucinatory drug - the [dpe_neighbour.GetSpeciesAdj] government has therefore placed very harsh restrictions on them.\n\nSome of the smugglers are average citizens running rings with individuals they know on the other side, others are large corporations that sell legitimate goods along with contraband. Combined, these groups earn quite a bit of money and contribute to the economy. How should we deal with them?"
- dpe_contraband_event.1.A:0 "Crack down on them. We can’t jeopardize our foreign relations."
+ dpe_contraband_event.1.A:0 "Crack down on them. We can't jeopardize our foreign relations."
  dpe_contraband_event.1.B:0 "Turn a blind eye and allow the economy to reap the benefits."
  dpe_contraband_event.1.B.tooltip:0 "The [dpe_neighbor.GetName] will be displeased if this is discovered."
  dpe_contraband_event.1.C:0 "Extort money from these rackets."
