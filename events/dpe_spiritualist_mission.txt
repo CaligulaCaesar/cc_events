@@ -286,19 +286,22 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				event_target:dpe_neighbour = {
-					opinion = {
-						who = root
-						value < -50
+					OR = {
+						is_hostile_to = root
+						is_rival = root
+						is_domineering_to = root
+						is_unfriendly_to = root
 					}
 				}
 			}
 			modifier = {
 				factor = 2
 				event_target:dpe_neighbour = {
-					opinion = {
-						who = root
-						value > -20
-					}
+					OR = {
+						is_cordial_to = root
+						is_friendly_to = root
+						is_receptive_to = root
+					} 
 				}
 			}
 			modifier = {
@@ -898,16 +901,18 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				opinion = {
-					who = from
-					value > 25
-				}
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+				} 
 			}
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value < -25
+				OR = {
+					is_hostile_to = from
+					is_rival = from
+					is_domineering_to = from
+					is_unfriendly_to = from
 				}
 			}
 			modifier = {
@@ -1037,18 +1042,16 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 2
-				opinion = {
-					who = from
-					value > 25
-				}
+				factor = 0.5
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
-				factor = 0.5
-				opinion = {
-					who = from
-					value < -25
-				}
+				factor = 2
+				is_friendly_to = from
+				is_cordial_to = from
 			}
 			modifier = {
 				factor = 1.5
@@ -1557,17 +1560,15 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 0.5
-				opinion = {
-					who = from
-					value < 0
-				}
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value > 50
-				}
+				is_friendly_to = from
+				is_cordial_to = from
 			}
 			modifier = {
 				factor = 2
@@ -1698,17 +1699,15 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 0.5
-				opinion = {
-					who = from
-					value < 0
-				}
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value > 50
-				}
+				is_friendly_to = from
+				is_cordial_to = from
 			}
 			modifier = {
 				factor = 2
@@ -2158,10 +2157,8 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value > 40
-				}
+				is_friendly_to = from
+				is_cordial_to = from
 			}
 			modifier = {
 				factor = 1.5
@@ -2197,10 +2194,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value < 0
-				}
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 1.5
@@ -3089,17 +3086,16 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2.5
-				opinion = {
-					who = from
-					value < -25
-				}
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 2.5
-				opinion = {
-					who = from
-					value < -50
-				}
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 2
@@ -3365,16 +3361,19 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2.5
-				opinion = {
-					who = from
-					value < -25
+				OR = {
+					is_hostile_to = from
+					is_domineering_to = from
+					is_rival = from
 				}
 			}
 			modifier = {
 				factor = 2.5
-				opinion = {
-					who = from
-					value < -50
+				OR = {
+					is_unfriendly_to = from
+					is_hostile_to = from
+					is_domineering_to = from
+					is_rival = from
 				}
 			}
 			modifier = {
@@ -3632,32 +3631,26 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 0.75
-				opinion = {
-					who = from
-					value > 20
-				}
-			}
-			modifier = {
-				factor = 0.75
-				opinion = {
-					who = from
-					value > 30
-				}
+				factor = 1.5
+				is_unfriendly_to = from
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
 				factor = 1.5
-				opinion = {
-					who = from
-					value < 0
-				}
+				is_hostile_to = from
+				is_domineering_to = from
+				is_rival = from
 			}
 			modifier = {
-				factor = 1.5
-				opinion = {
-					who = from
-					value < -20
-				}
+				factor = 0.75
+				is_friendly_to = from
+				is_cordial_to = from
+			}
+			modifier = {
+				factor = 0.75
+				is_friendly_to = from
 			}
 			modifier = {
 				factor = 0.5
@@ -4561,9 +4554,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				event_target:dpe_missionary_country = {
-					opinion = {
-						who = root
-						value > -40
+					NOR = {
+						is_hostile_to = root
+						is_domineering_to = root
+						is_rival = root
 					}
 				}
 			}

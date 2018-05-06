@@ -1464,10 +1464,7 @@ country_event = {
 					}
 				}
 				event_target:FallenEmpireTaskOrigin = {
-					opinion = {
-						who = ROOT
-						value < -50
-					}
+					is_angry_to = root
 				}
 			}
 		}

@@ -579,10 +579,11 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				opinion = {
-					who = from
-					value > 10
-				}
+				OR = {
+					is_cordial_to = from
+					is_friendly_to = from
+					is_receptive_to = from
+				} 
 			}
 			modifier = {
 				factor = 0
@@ -609,10 +610,12 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				opinion = {
-					who = from
-					value < -25
-				}
+				OR = {
+					is_hostile_to = from
+					is_domineering_to = from
+					is_rival = from
+					is_unfriendly_to = from
+				} 
 			}
 		}
 		

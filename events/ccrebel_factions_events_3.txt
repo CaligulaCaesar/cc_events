@@ -2579,10 +2579,10 @@ country_event = {
 									}
 								}
 								
-								opinion = {
-									who = event_target:old_owner
-									value < -50
-								}
+#								opinion = {
+#									who = event_target:old_owner
+#									value < -50
+#								}
 								OR = {
 									is_hostile_to = event_target:old_owner
 									is_angry_to = event_target:old_owner
@@ -3034,7 +3034,7 @@ country_event = {
 					is_faction_stronghold = yes
 					unrest > 80
 				}
-				planet_event = { id = ccfaction.61 days = 10 random = 20 }days = 10 random = 20 }
+				planet_event = { id = ccfaction.61 days = 10 random = 20 }
 			}
 			
 			every_owned_planet = { #revolts in the others
