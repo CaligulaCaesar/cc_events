@@ -326,7 +326,7 @@ dpe_xenomission_unrest_blame = {
 
 dpe_xenomission_death = {
 	opinion = {
-		base = 100
+		base = -250
 	}
 	decay = {
 		base = 1
@@ -336,23 +336,14 @@ dpe_xenomission_death = {
 
 dpe_deceitful = {
 	opinion = {
-		base = 20
+		base = -20
 	}
 	decay = {
 		base = 1
 	}
-}
-
-
-
-
-dpe_cracked_down_on_drugs_opinion = {
-	opinion = {
-		base = 25
-	}
-	decay = {
-		base = 2
-	}
+	accumulative = yes
+	
+	min = -100
 }
 
 dpe_xenomission_denied_tech = {
@@ -383,4 +374,26 @@ dpe_xenomission_caught_smuggling = {
 	accumulative = yes
 	
 	min = -500
+}
+
+
+dpe_xenomission_spying_deceit = {
+	opinion = {
+		base = -100
+	}
+	decay = {
+		base = 2
+	}
+}
+
+
+
+
+dpe_cracked_down_on_drugs_opinion = {
+	opinion = {
+		base = 25
+	}
+	decay = {
+		base = 2
+	}
 }

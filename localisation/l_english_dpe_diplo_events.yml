@@ -542,6 +542,38 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenophile_mission.141.name:0 "Caught Spying Again!"
  dpe_xenophile_mission.141.desc:0 "Deceitful [root.GetSpeciesNamePlural], to lie to us once is bad enough, but to be caught deceiving us twice... You make poor friends."
  
+ dpe_xenophile_mission.13.name:0 "The Raid on the [fromfrom.GetSpeciesAdj] Ship"
+ dpe_xenophile_mission.13.desc:0 "The raid has confirmed our fears: The [fromfrom.GetSpeciesAdj] delegation to promote friendship with our species is merely a screen to hide their true intention of stealing our knowledge. Since the mission began, they have been funnelling countless prototypes, samples, data collections and software programs back to the [fromfrom.GetName]. We have arrested the [fromfrom.GetSpeciesNamePlural]. What should we do about them?"
+ dpe_xenophile_mission.13.A:0 "Cancel the mission, but allow them to return home."
+ dpe_xenophile_mission.13.B:0 "Trial them by our laws."
+ 
+ dpe_xenophile_mission.131.name:0 "The [from.GetSpeciesNamePlural] Caught us Spying!"
+ dpe_xenophile_mission.131.desc:0 "Dear [root.GetSpeciesNamePlural], we must inform you that your cultural mission to our worlds is over. Likewise, we are withdrawing our mission from your worlds. We reached this decision after apprehending a number of [root.GetSpeciesNamePlural] as they were attempting to smuggle our technologies out of the [from.GetName]. Suspecting a plot, we raided your ship and uncovered evidence that your delegation was merely a screen to hide your true intention of stealing our knowledge. We do not wish to be your enemies, but this revelation has severely shaken our trust in you. We will think twice before cooperating with the [root.GetSpeciesNamePlural] again."
+ 
+ dpe_xenophile_mission.132.name:0 "$dpe_xenophile_mission.131.name$"
+ dpe_xenophile_mission.132.desc:0 "The [from.GetSpeciesNamePlural] have uncovered our espionage! It appears that they apprehended a group of our delegates as they were attempting to smuggle the latest cache out. Before we could react, they launched a raid on our main ship and quickly uncovered the truth. The [from.GetSpeciesAdj] government and public are furious. They are refusing to allow our delegates to return home, and have elected to trial them under their own laws. We may never see them again."
+ 
+ dpe_xenomission_spying_deceit:0 "Deceived Us"
+ dpe_xenomission_imprisoned_citizens:0 "Citizens Imprisoned by Foreign Power"
+ dpe_xenomission_imprisoned_citizens_desc:0 "Whether or not their imprisonment was just, the populace is furious that a foreign power dared to imprison their fellow citizens."
+ dpe_xenomission_imprisoned_citizens_auth_faction:0 "Imprisoned Foreign Criminals"
+ dpe_xenomission_imprisoned_citizens_phobe_faction:0 "$dpe_xenomission_imprisoned_citizens_phobe_faction$"
+ 
+ dpe_xenophile_mission.125.name:0 "The [from.GetSpeciesNamePlural] have Caught our Spies!"
+ dpe_xenophile_mission.125.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. We realise that this would rather harm your reputation if it were to become generally known. We therefore propose a trade, in which you give us access to some of your technologies and promise to cease your espionage in return for us keeping our silence."
+ dpe_xenophile_mission.125.A:0 "It is a deal."
+ dpe_xenophile_mission.125.B:0 "(Lie) It is a deal. Of course we will stop spying."
+ dpe_xenophile_mission.125.C:0 "How dare you accuse us? We are pulling out of the mission."
+ 
+ dpe_xenophile_mission.1251.name:0 "$dpe_xenophile_mission.1211.name$"
+ dpe_xenophile_mission.1251.desc:0 "Here are the requested techs, [root.GetSpeciesName]. We apologise again - this incident will not recur."
+ dpe_xenophile_mission.1251.option:0 "$dpe_xenophile_mission.1211.option$"
+ 
+ dpe_xenophile_mission.1252.name:0 "$dpe_xenophile_mission.1211.name$"
+ dpe_xenophile_mission.1252.desc:0 "How dare you accuse us? We are pulling out of the mission."
+ dpe_xenophile_mission.1252.option:0 "As you wish."
+
+
 #Techs sub-chain
  dpe_xenophile_mission.15.name:0 "[from.GetSpeciesAdj] Interest in our Techs"
  dpe_xenophile_mission.15.desc:0 "The [from.GetSpeciesAdj] delegation has been fascinated by a certain element of [root.GetSpeciesAdj] technology, which is apparently significantly more advanced than their own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [from.GetName]. She has requested our authorisation to send her work home for further study there."
@@ -629,16 +661,21 @@ dpe_xenophile_mission.104.desc:0 "Our delegation to the [from.GetName] and the [
 dpe_xenophile_spying_positive:0 "unbeknownst to the [from.GetSpeciesNamePlural], we have managed to glean a considerable amount of knowledge from them, making the initiative well worth our while!"
 dpe_xenophile_spying_caught:0 "even though the [from.GetSpeciesNamePlural] eventually cottoned on to our espionage activities and forced us to cease them, we were able to glean much useful knowledge from them."
 
-
-
 dpe_successful_xenomission:0 "Successful Discovery Mission"
 dpe_xenomission_not_like:0 "Dislike between Species"
 dpe_xenomission_love:0 "Friendship between Species"
 dpe_xenomission_like:0 "$dpe_xenomission_love$"
 
+#Contingencies
+ dpe_xenophile_mission.990.name:0 "Our Delegation to the [dpe_xenophile_opponent.GetName] Returns"
+ dpe_xenophile_mission.990.desc:0 "As a result of our war with the [dpe_xenophile_opponent.GetName], our delegates to their country and their delegates to ours have returned home."
+ dpe_xenophile_mission.999.name:0 "Our Delegation to the [LastKilledCountryName] Returns"
+ dpe_xenophile_mission.999.desc:0 "The [LastKilledCountryName] is no more - it has fallen to political instability and conflict. As a result, our delegates to their country and their delegates to ours have returned home."
 
+ 
+ 
 
-
+#-------------------------------------------
 
 #Contraband Chain 
  dpe_contraband_event.1.name:0 "Smuggling Rings"

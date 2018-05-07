@@ -1313,6 +1313,16 @@ country_event = {
 					who = event_target:dpe_new_contact
 					flag = dpe_xenophile_mission_ended
 				}
+				remove_opinion_modifier = {
+					modifier = dpe_xenophile_mission_opinion
+					who = from
+				}
+				from = {
+					remove_opinion_modifier = {
+						modifier = dpe_xenophile_mission_opinion
+						who = root
+					}
+				}
 				set_country_flag = dpe_xenomission_disaster
 				modifier = {
 					factor = 1.5
@@ -2179,6 +2189,218 @@ country_event = {
 	}
 }
 
+#Raid the ship (other side is fromfrom)
+country_event = {
+	id = dpe_xenophile_mission.13
+	title = dpe_xenophile_mission.13.name
+	desc = dpe_xenophile_mission.13.desc
+	picture = GFX_evt_ship_in_orbit
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_relation_flag = {
+			who = fromfrom
+			flag = dpe_xenophile_mission_ended
+		}
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = fromfrom
+		}
+		fromfrom = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = fromfrom }
+				NOT = { is_same_value = root }
+				has_communications = root
+				has_communications = fromfrom
+			}
+			add_opinion_modifier = {
+				modifier = dpe_deceitful
+				who = fromfrom
+			}
+		}
+		set_country_flag = dpe_xenomission_disaster
+		if = {
+			limit = {
+				has_opinion_modifier = {
+					who = fromfrom
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
+			remove_opinion_modifier = {
+				who = fromfrom
+				modifier = dpe_xenomission_caught_smuggling
+			}
+		}
+		add_opinion_modifier = {
+			who = fromfrom
+			modifier = dpe_xenomission_spying_deceit
+		}
+	}
+
+	option = {
+		name = dpe_xenophile_mission.13.A
+		custom_tooltip = dpe_xenophile_mission_ends
+		fromfrom = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_sent_home
+				who = root
+			}
+		}
+		hidden_effect = { fromfrom = { country_event = { id = dpe_xenophile_mission.131 } } }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = dpe_xenophile_mission.13.B
+		custom_tooltip = dpe_xenophile_mission_ends
+		fromfrom = {
+			add_opinion_modifier = {
+				modifier = dpe_xenomission_imprisoned_citizens
+				who = root
+			}
+			add_modifier = {
+				modifier = dpe_xenomission_imprisoned_citizens
+				days = 3600
+			}
+		}
+		if = {
+			limit = { has_faction = totalitarian }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = totalitarian }
+				add_modifier = {
+					modifier = dpe_xenomission_imprisoned_citizens_auth_faction
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = {
+					modifier = dpe_xenomission_imprisoned_citizens_phobe_faction
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = { has_faction = isolationist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = isolationist }
+				add_modifier = {
+					modifier = dpe_xenomission_imprisoned_citizens_phobe_faction
+					days = 3600
+				}
+			}
+		}
+		hidden_effect = { fromfrom = { country_event = { id = dpe_xenophile_mission.132 } } }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {
+					has_faction = totalitarian
+					has_faction = isolationist
+					has_faction = supremacist
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.131
+	title = dpe_xenophile_mission.131.name
+	desc = dpe_xenophile_mission.131.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_spying_deceit
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = { is_same_value = from }
+					NOT = { is_same_value = root }
+					has_communications = root
+					has_communications = from
+				}
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.132
+	title = dpe_xenophile_mission.132.name
+	desc = dpe_xenophile_mission.132.desc
+	picture = GFX_evt_ship_in_orbit
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+		custom_tooltip = dpe_xenophile_mission_ends
+
+		tooltip = {
+			add_modifier = {
+				modifier = dpe_xenomission_imprisoned_citizens
+				days = 3600
+			}
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_spying_deceit
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = { is_same_value = from }
+					NOT = { is_same_value = root }
+					has_communications = root
+					has_communications = from
+				}
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
 
 #Quietly berate them for spying
 country_event = {
@@ -2255,6 +2477,222 @@ country_event = {
 }
 
 
+#Materialist option
+country_event = {
+	id = dpe_xenophile_mission.125
+	title = dpe_xenophile_mission.125.name
+	desc = dpe_xenophile_mission.125.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.125.A
+		tooltip = {
+			from = {
+				random_list = {
+					1 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
+		}
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.1251 days = 5 } } }
+
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = dpe_xenophile_mission.125.B
+		custom_tooltip = dpe_xenophile_mission.continue_spying
+		tooltip = {
+			from = {
+				random_list = {
+					1 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = dpe_xenophile_mission.11 days = 540 random = 360 } }
+				1 = { from = { country_event = { id = dpe_xenophile_mission.14 days = 540 random = 360 } } }
+			}
+			from = { country_event = { id = dpe_xenophile_mission.1251 days = 5 } }
+		}
+
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = dpe_xenophile_mission.125.C
+		custom_tooltip = dpe_xenophile_mission_ends
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_xenomission_caught_smuggling
+				}
+			}
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_xenomission_sent_home
+			}
+			hidden_effect = {
+				set_relation_flag = {
+					flag = dpe_xenophile_mission_ended
+					who = root
+				}
+				remove_opinion_modifier = {
+					modifier = dpe_xenophile_mission_opinion
+					who = root
+				}
+				root = {
+					remove_opinion_modifier = {
+						modifier = dpe_xenophile_mission_opinion
+						who = from
+					}
+				}
+				country_event = { id = dpe_xenophile_mission.1252 days = 5 }
+			}
+		}
+
+		ai_chance = { factor = 1 }
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.1251
+	title = dpe_xenophile_mission.1251.name
+	desc = dpe_xenophile_mission.1251.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.1251.option
+
+		random_list = {
+			1 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+			1 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.1252
+	title = dpe_xenophile_mission.1252.name
+	desc = dpe_xenophile_mission.1252.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.1252.option
+		custom_tooltip = dpe_xenophile_mission_ends
+	}
+}
 
 #Espionage Caught Again 
 country_event = {
@@ -2314,6 +2752,16 @@ country_event = {
 					set_relation_flag = {
 						flag = dpe_xenophile_mission_ended
 						who = from
+					}
+					remove_opinion_modifier = {
+						modifier = dpe_xenophile_mission_opinion
+						who = from
+					}
+					from = {
+						remove_opinion_modifier = {
+							modifier = dpe_xenophile_mission_opinion
+							who = root
+						}
 					}
 				}
 			}
@@ -2992,6 +3440,16 @@ country_event = {
 				flag = dpe_xenophile_mission_ended
 				who = from
 			}
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = from
+			}
+			from = {
+				remove_opinion_modifier = {
+					modifier = dpe_xenophile_mission_opinion
+					who = root
+				}
+			}
 		}
 		
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.176 } } }
@@ -3100,6 +3558,17 @@ country_event = {
 		from = {
 			set_relation_flag = {
 				flag = dpe_xenophile_mission_ended
+				who = root
+			}
+			set_country_flag = dpe_xenomission_disaster
+		}
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = from
+		}
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
 				who = root
 			}
 		}
@@ -3450,6 +3919,8 @@ country_event = {
 	desc = dpe_xenophile_mission.291.desc 
 
 	picture = GFX_evt_nuclear_explosion
+
+	location = event_target:random_planet
 
 	is_triggered_only = yes
 
@@ -5111,8 +5582,108 @@ country_event = {
 
 
 
+#Contingencies
 
+#on_war_beginning
+country_event = {
+	id = dpe_xenophile_mission.990
+	title = dpe_xenophile_mission.990.name
+	desc = dpe_xenophile_mission.990.desc
+	picture = GFX_evt_federation_fleet
 
-#dpe_xenomission_caught_spying
+	is_triggered_only = yes
 
-#dpe_xenomission_xenophobia
+	trigger = {
+		any_country = {
+			has_opinion_modifier = {
+				who = root
+				modifier = dpe_xenophile_mission_opinion
+			}
+			from = {
+				is_war_participant = { who = prev }
+				NOT = { is_war_participant = { who = prev side = root } }
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = dpe_xenophile_mission_opinion
+				}
+				from = {
+					is_war_participant = { who = prev }
+					NOT = { is_war_participant = { who = prev side = root } }
+				}
+			}
+			save_event_target_as = dpe_xenophile_opponent
+		}
+		remove_opinion_modifier = {
+			modifier = dpe_xenophile_mission_opinion
+			who = event_target:dpe_xenophile_opponent
+		}
+		set_relation_flag = {
+			flag = dpe_xenophile_mission_ended
+			who = event_target:dpe_xenophile_opponent
+		}
+		event_target:dpe_xenophile_opponent = {
+			remove_opinion_modifier = {
+				modifier = dpe_xenophile_mission_opinion
+				who = root
+			}
+			set_relation_flag = {
+				flag = dpe_xenophile_mission_ended
+				who = root
+			}
+		}
+	}
+
+	option = {
+		name = OK
+		custom_tooltip = dpe_xenophile_mission_ends
+	}
+}
+
+#on_country_destroyed
+country_event = {
+	id = dpe_xenophile_mission.998
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_opinion_modifier = {
+				who = root
+				modifier = dpe_xenophile_mission_opinion
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = dpe_xenophile_mission_opinion
+				}
+			}
+			country_event = { id = dpe_xenophile_mission.999 }
+		}
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.999
+	title = dpe_xenophile_mission.999.name
+	desc = dpe_xenophile_mission.999.desc
+	picture = GFX_evt_city_ruins
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+		custom_tooltip = dpe_xenophile_mission_ends
+	}
+}
