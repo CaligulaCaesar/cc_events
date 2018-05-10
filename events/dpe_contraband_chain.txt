@@ -31,7 +31,9 @@ country_event = {
 				has_ethic = ethic_fanatic_egalitarian
 				has_ethic = ethic_gestalt_consciousness
 				has_civic = civic_fanatic_purifiers
+				is_same_species = root
 			}
+			is_synthetic_empire = no
 			has_relation_flag = {
 				who = root
 				flag = dpe_comms_established
@@ -397,3 +399,30 @@ country_event = {
 	}
 }
 
+
+#Notification that drugs were legalised
+country_event = {
+	id = dpe_contraband_event.21
+	title = dpe_contraband_event.21.name
+	desc = dpe_contraband_event.21.desc
+	picture = GFX_evt_arguing_senate
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_contraband_event.21.option
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		add_modifier = {
+			modifier = dpe_drug_trade_legit
+			days = 4800
+		}
+	}
+}
