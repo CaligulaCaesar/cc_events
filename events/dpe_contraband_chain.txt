@@ -149,12 +149,14 @@ country_event = {
 		hidden_effect = {
 			save_event_target_as = dpe_drugs_country
 			
-			set_timed_relation_flag = {
-				flag = dpe_drug_cartels_ignore
-				who = event_target:dpe_neighbor
-				days = 4800
+			event_target:dpe_neighbor = {
+				set_timed_relation_flag = {
+					flag = dpe_drug_cartels_ignore
+					who = prev
+					days = 4800
+				}
+				country_event = { id = dpe_contraband_event.2 days = 180 }
 			}
-			event_target:dpe_neighbor = { country_event = { id = dpe_contraband_event.2 days = 180 } }
 		}
 		
 		ai_chance = { factor = 1.5 }
@@ -352,6 +354,12 @@ country_event = {
 		}
 		
 		hidden_effect = {
+			set_timed_relation_flag = {
+				flag = dpe_contraband_chain
+				who = from
+				days = 3600
+			}
+
 			if = {
 				limit = {
 					NOR = {
@@ -480,14 +488,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = { fromfrom = { has_modifier = dpe_drug_cartels_tolerate } }
-				country_event = { id = dpe_contraband_event.53 days = 270 random = 720 }
-
-				else = {
-					country_event = { id = dpe_contraband_event.51 days = 270 random = 720 }
-				}
-			}
+			country_event = { id = dpe_contraband_event.50 days = 270 random = 720 }
 		}
 
 		ai_chance = {
@@ -532,14 +533,7 @@ country_event = {
 		custom_tooltip = dpe_contraband_event.4.B.tooltip
 
 		hidden_effect = {
-			if = {
-				limit = { fromfrom = { has_modifier = dpe_drug_cartels_tolerate } }
-				country_event = { id = dpe_contraband_event.54 days = 480 random = 2160 }
-
-				else = {
-					country_event = { id = dpe_contraband_event.52 days = 480 random = 2160 }
-				}
-			}
+			country_event = { id = dpe_contraband_event.505 days = 480 random = 2160 }
 		}
 
 		ai_chance = {
@@ -600,14 +594,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			if = {
-				limit = { fromfrom = { has_modifier = dpe_drug_cartels_tolerate } }
-				country_event = { id = dpe_contraband_event.53 days = 270 random = 720 }
-
-				else = {
-					country_event = { id = dpe_contraband_event.51 days = 270 random = 720 }
-				}
-			}
+			country_event = { id = dpe_contraband_event.50 days = 270 random = 720 }
 		}
 	}
 }
@@ -630,6 +617,64 @@ pop_event = {
 	}
 }
 
+
+country_event = {
+	id = dpe_contraband_event.50
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:dpe_drugs_country
+	}
+
+	immediate = {
+		if = {
+			limit = { has_closed_borders = event_target:dpe_drugs_country }
+			country_event = { id = dpe_contraband_event.900 }
+			event_target:dpe_drugs_country = { country_event = { id = dpe_contraband_event.901 } }
+
+			else = {
+				if = {
+					limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
+					country_event = { id = dpe_contraband_event.54 days = 480 random = 2160 }
+				
+					else = {
+						country_event = { id = dpe_contraband_event.52 days = 480 random = 2160 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_contraband_event.505
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:dpe_drugs_country
+	}
+
+	immediate = {
+		if = {
+			limit = { has_closed_borders = event_target:dpe_drugs_country }
+			country_event = { id = dpe_contraband_event.900 }
+			event_target:dpe_drugs_country = { country_event = { id = dpe_contraband_event.901 } }
+
+			else = {
+				if = {
+					limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
+					country_event = { id = dpe_contraband_event.53 days = 270 random = 720 }
+				
+					else = {
+						country_event = { id = dpe_contraband_event.51 days = 270 random = 720 }
+					}
+				}
+			}
+		}
+	}
+}
 
 
 #Extort + search homes
@@ -663,7 +708,7 @@ country_event = {
 		if = {
 			limit = { NOT = { has_closed_borders = event_target:dpe_drugs_country } }
 			set_closed_borders = {
-				who = from
+				who = event_target:dpe_drugs_country
 				status = yes
 			}
 		}
@@ -799,7 +844,7 @@ country_event = {
 	option = {
 		name = dpe_contraband_event.52.A
 		custom_tooltip = dpe_contraband_event.52.A.tooltip
-		
+
 		remove_modifier = dpe_contraband_crisis
 
 		add_monthly_resource_mult = {
@@ -811,7 +856,7 @@ country_event = {
 		if = {
 			limit = { NOT = { has_closed_borders = event_target:dpe_drugs_country } }
 			set_closed_borders = {
-				who = from
+				who = event_target:dpe_drugs_country
 				status = yes
 			}
 		}
@@ -992,7 +1037,7 @@ country_event = {
 		if = {
 			limit = { NOT = { has_closed_borders = event_target:dpe_drugs_country } }
 			set_closed_borders = {
-				who = from
+				who = event_target:dpe_drugs_country
 				status = yes
 			}
 		}
@@ -1114,7 +1159,7 @@ country_event = {
 		if = {
 			limit = { NOT = { has_closed_borders = event_target:dpe_drugs_country } }
 			set_closed_borders = {
-				who = from
+				who = event_target:dpe_drugs_country
 				status = yes
 			}
 		}
@@ -1454,6 +1499,542 @@ country_event = {
 					who = from
 				}
 			}
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_contraband_event.63
+	title = dpe_contraband_event.63.name
+	desc = dpe_contraband_event.63.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.63.option
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		tooltip = {
+			from = {
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = dpe_contraband_event.64
+	title = dpe_contraband_event.64.name
+	desc = dpe_contraband_event.64.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.64.A
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = dpe_contraband_event.64.B
+		custom_tooltip = dpe_contraband_event.64.B.tooltip
+
+		hidden_effect = { from = { country_event = { id = dpe_contraband_event.641 days = 5 } } }
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = dpe_contraband_event.641
+	title = dpe_contraband_event.641.name
+	desc = dpe_contraband_event.641.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.641.A
+
+		remove_modifier = dpe_contraband_crisis
+
+		set_closed_borders = {
+			who = from
+			status = yes
+		}
+		add_opinion_modifier = {
+			modifier = dpe_contraband_source_of_drugs
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_contraband_closed_borders
+				who = from
+			}
+		}
+		hidden_effect = { from = { country_event = { id = dpe_contraband_event.642 } } }
+	}
+}
+
+
+country_event = {
+	id = dpe_contraband_event.642
+	title = dpe_contraband_event.642.name
+	desc = dpe_contraband_event.642.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+
+		tooltip = {
+			from = {
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_contraband_event.66
+	title = dpe_contraband_event.66.name
+	desc = dpe_contraband_event.66.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.66.option
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		tooltip = {
+			from = {
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = dpe_contraband_event.68
+	title = dpe_contraband_event.68.name
+	desc = dpe_contraband_event.68.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.68.A
+
+		hidden_effect = { from = { country_event = { id = dpe_contraband_event.621 days = 5 } } }
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = dpe_contraband_event.68.B
+		custom_tooltip = dpe_contraband_event.68.B.tooltip
+
+		hidden_effect = { from = { country_event = { id = dpe_contraband_event.682 days = 5 } } }
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		tooltip = {
+			from = {
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = root
+				}
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = dpe_contraband_event.682
+	title = dpe_contraband_event.682.name
+	desc = dpe_contraband_event.682.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.682.A
+
+		remove_modifier = dpe_contraband_crisis
+
+		set_closed_borders = {
+			who = from
+			status = yes
+		}
+		add_opinion_modifier = {
+			modifier = dpe_contraband_source_of_drugs
+			who = from
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_contraband_closed_borders
+				who = from
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_contraband_event.69
+	title = dpe_contraband_event.69.name
+	desc = dpe_contraband_event.69.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_contraband_event.69.option
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+		tooltip = {
+			from = {
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = root
+				}
+			}
+		}
+	}
+}
+
+
+#Borders closed for importer
+country_event = {
+	id = dpe_contraband_event.900
+	title = dpe_contraband_event.900.title
+	desc = dpe_contraband_event.900.desc
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_opinion_modifier = {
+			modifier = dpe_contraband_source_of_drugs
+			who = event_target:dpe_drugs_country
+		}
+	}
+
+	option = {
+		name = dpe_contraband_event.900.option
+
+		remove_modifier = dpe_contraband_crisis
+	}
+}
+
+#Borders closed for exporter
+country_event = {
+	id = dpe_contraband_event.901
+	title = dpe_contraband_event.901.title
+	desc = dpe_contraband_event.901.desc
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
+		}
+
+		tooltip = {
+			from = {
+				add_opinion_modifier = {
+					modifier = dpe_contraband_source_of_drugs
+					who = event_target:dpe_drugs_country
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#on_country_destroyed
+country_event = {
+	id = dpe_contraband_event.998
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_modifier = dpe_contraband_crisis
+				any_country = {
+					root = {
+						has_relation_flag = {
+							who = prev
+							modifier = dpe_drug_cartels_ignore
+						}
+					}
+				}
+			}
+			any_country = {
+				has_modifier = dpe_contraband_crisis
+				has_relation_flag = {
+					who = root
+					modifier = dpe_drug_cartels_ignore
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					has_modifier = dpe_contraband_crisis
+					has_relation_flag = {
+						who = root
+						modifier = dpe_drug_cartels_ignore
+					}
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				has_modifier = dpe_contraband_crisis
+				has_relation_flag = {
+					who = root
+					modifier = dpe_drug_cartels_ignore
+				}
+			}
+			country_event = { id = dpe_contraband_event.999 }
+		}
+
+		else = {
+			random_country = {
+				limit = {
+					root = {
+						has_relation_flag = {
+							who = prev
+							modifier = dpe_drug_cartels_ignore
+						}
+					}
+				}
+				country_event = { id = dpe_contraband_event.9991 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_contraband_event.999
+	title = dpe_contraband_event.999.name
+	desc = dpe_contraband_event.999.desc
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_contraband_event.999.option
+		remove_modifier = dpe_contraband_crisis
+	}
+}
+
+
+country_event = {
+	id = dpe_contraband_event.9991
+	title = dpe_contraband_event.9991.name
+	desc = dpe_contraband_event.9991.desc
+	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = dpe_has_had_contraband_crisis
+		set_timed_country_flag = {
+			flag = dpe_has_had_contraband_crisis
+			days = 3600
+		}
+	}
+
+	option = {
+		name = dpe_contraband_event.9991.option
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_extort }
+			remove_modifier = dpe_drug_cartels_extort
+		}
+		if = {
+			limit = { has_modifier = dpe_drug_cartels_tolerate }
+			remove_modifier = dpe_drug_cartels_tolerate
 		}
 	}
 }

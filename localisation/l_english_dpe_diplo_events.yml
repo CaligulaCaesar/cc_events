@@ -734,24 +734,24 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.51.desc:0 "Our agents have been interrogating suspects thought to be involved in the contraband smuggling, and have uncovered a very important piece of evidence. The agents managed to get a lead on a group of smugglers operating near one of our border worlds. After setting up an ambush, they managed to disable one of the smuggler vessels. As they boarded the ship, they were met with a brief firefight, but quickly overtook the bandits. To their shock, half of those involved were [dpe_drugs_country.GetSpeciesAdj] citizens! These rogues were brought to a detention center for questioning, where they admitted that the [dpe_drugs_country.GetName] was allowing these smuggler rings to operate as long as they gave a percentage to the government. How shall we respond?"
  dpe_contraband_event.51.A:0 "Unacceptable! Summon their ambassador, we are going to have words."
  dpe_contraband_event.51.B:0 "Show restraint - we do not want a diplomatic incident."
- dpe_contraband_event.51.B.tooltip:0 "Avoid discussing the politics of the event, and quietly contact the [dpe_drugs_country.GetSpeciesAdj] ambassador to offer their citizens’ deportation in return for action."
+ dpe_contraband_event.51.B.tooltip:0 "Avoid discussing the politics of the event, and quietly contact the [dpe_drugs_country.GetSpeciesAdj] ambassador to offer their citizens' deportation in return for action."
 
  dpe_contraband_event.52.name:0 "$dpe_contraband_event.51.name$"
  dpe_contraband_event.52.desc:0 "The investigation into the source of the contraband products has been making slow progress, but a breakthrough has finally been made: Our customs officials have discovered a large quantity of hallucinatory drugs hidden in falsely marked crates amidst a massive shipment of goods coming from the [dpe_drugs_country.GetName], which a major transnational [dpe_drugs_country.GetSpeciesAdj] corporation had been importing into our country. Further investigation has shown that the drug has a considerably lower impact on [dpe_drugs_country.GetSpeciesNamePlural], and is consequently commonplace in their country. Our intelligence and border security departments therefore suspect that this is not an isolated incident, and have begun a thorough audit of everything crossing the border from them. How should we respond? "
  dpe_contraband_event.52.A:0 "They will rue the day that they decided to profit on the suffering of our citizens!"
- dpe_contraband_event.52.A.tooltip:0 "Seize the corporation’s assets and implement harsh border controls."
+ dpe_contraband_event.52.A.tooltip:0 "Seize the corporation's assets and implement harsh border controls."
  dpe_contraband_event.52.B:0 "Show restraint - we do not want an incident."
  dpe_contraband_event.52.B.tooltip:0 "Begin trialling those involved in the drugs trade, but do not make accusations of the [dpe_drugs_country.GetSpeciesAdj] government."
  dpe_contraband_event.52.C:0 "Contact their ambassador and seek a diplomatic solution."
 
  dpe_contraband_event.53.name:0 "$dpe_contraband_event.51.name$"
- dpe_contraband_event.53.desc:0 "Our law enforcement agencies have found a lead on the source of the drugs that have flooded into our country. They began sectioning off areas where reports of drug use had been concentrated, and systematically interrogated anyone deemed suspect. By doing this, they caught a rather cowardly dealer who was willing to spill the beans in exchange for a lighter punishment. Fortuitous carelessness on the part of the drug cartel meant that his information allowed us to trace the identities of the smugglers. To our surprise, most of them are [dpe_drugs_country.GetSpeciesNamePlural] - in fact, they have been smuggling the drugs from the [dpe_drugs_country.GetName], where they are legal.\n\nOur subsequent investigations have uncovered no evidence that the [dpe_drugs_country.GetSpeciesAdj] government is complicit in the smuggling rings, but our intelligence agency believes they probably knew of their citizens’ activities but failed to act. What is our next step? "
+ dpe_contraband_event.53.desc:0 "Our law enforcement agencies have found a lead on the source of the drugs that have flooded into our country. They began sectioning off areas where reports of drug use had been concentrated, and systematically interrogated anyone deemed suspect. By doing this, they caught a rather cowardly dealer who was willing to spill the beans in exchange for a lighter punishment. Fortuitous carelessness on the part of the drug cartel meant that his information allowed us to trace the identities of the smugglers. To our surprise, most of them are [dpe_drugs_country.GetSpeciesNamePlural] - in fact, they have been smuggling the drugs from the [dpe_drugs_country.GetName], where they are legal.\n\nOur subsequent investigations have uncovered no evidence that the [dpe_drugs_country.GetSpeciesAdj] government is complicit in the smuggling rings, but our intelligence agency believes they probably knew of their citizens' activities but failed to act. What is our next step? "
  dpe_contraband_event.53.A:0 "Take immediate action and close the border."
  dpe_contraband_event.53.B:0 "Request [from.GetSpeciesAdj] help in confronting the drug problem together."
- dpe_contraband_event.53.B.tooltip:0 "Tacitly ignore our intelligence agency’s belief that the [dpe_drugs_country.GetSpeciesAdj] government had known about this, and seek a diplomatic solution."
+ dpe_contraband_event.53.B.tooltip:0 "Tacitly ignore our intelligence agency's belief that the [dpe_drugs_country.GetSpeciesAdj] government had known about this, and seek a diplomatic solution."
 
  dpe_contraband_event.54.name:0 "$dpe_contraband_event.51.name$"
- dpe_contraband_event.54.desc:0 "Although the investigation has been slow, it has made some progress. We’ve been rounding up people caught selling or buying the drugs, and through their interrogations we have started to piece together a picture of what’s going on. It seems like regular citizens in a neighboring empire, the [dpe_drugs_country.GetName], have started selling the goods to rogue elements of our society. These goods are legal in their misguided empire, so they have easy access to the goods. So far, we have no hard evidence that the government is complicit in this, but many of our advisors suspect that they can’t have been totally ignorant of their citizens’ activities. How should we proceed?"
+ dpe_contraband_event.54.desc:0 "Although the investigation has been slow, it has made some progress. We've been rounding up people caught selling or buying the drugs, and through their interrogations we have started to piece together a picture of what's going on. It seems like regular citizens in a neighboring empire, the [dpe_drugs_country.GetName], have started selling the goods to rogue elements of our society. These goods are legal in their misguided empire, so they have easy access to the goods. So far, we have no hard evidence that the government is complicit in this, but many of our advisors suspect that they can't have been totally ignorant of their citizens' activities. How should we proceed?"
  dpe_contraband_event.54.A:0 "Introduce more stringent border controls."
  dpe_contraband_event.54.B:0 "Extend an offer to fight these smugglers together!"
 
@@ -773,4 +773,53 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.622.desc:0 "We will not help you, [root.GetSpeciesName]."
  dpe_contraband_event.622.A:0 "Then you leave us with no choice."
  
+ dpe_contraband_event.63.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.63.desc:0 "We have seen through the vicious scheme pursued by your citizens, [root.GetSpeciesName]. No more will you flood our country with illegal drugs! We have seized the assets of those responsible, and taken measures to ensure that other unscrupulous [root.GetSpeciesNamePlural] will have a harder time abusing our trust in future."
+ dpe_contraband_event.63.option:0 "We deplore your actions."
  
+ dpe_contraband_event.64.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.64.desc:0 "[root.GetSpeciesAdj] friend, we have caught a [root.GetSpeciesAdj] corporation smuggling illegal drugs into the [from.GetName]. We very much hope that your government has nothing to do with this scheme... in fact, we have instructed our investigators to act with these hopes in mind so long as the flow of drugs slows, if you get our drift..."
+ dpe_contraband_event.64.A:0 "I guess the game is up."
+ dpe_contraband_event.64.B:0 "What drugs?"
+ dpe_contraband_event.64.B.tooltip:0 "The [from.GetSpeciesNamePlural] will be very upset."
+ 
+ dpe_contraband_event.641.name:0 "$dpe_title_response$"
+ dpe_contraband_event.641.desc:0 "We don't know what you are talking about. How dare you make this accusation!"
+ dpe_contraband_event.641.A:0 "Maybe we should investigate your role a bit closer..."
+ 
+ dpe_contraband_event.642.name:0 "The [from.GetSpeciesNamePlural] Proclaim our Guilt!"
+ dpe_contraband_event.642.desc:0 "Further investigation has revealed the complicity of your government in the smuggling, [root.GetSpeciesName]. We regret that this has forced us to take more drastic action."
+ 
+ dpe_contraband_event.66.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.66.desc:0 "We have caught your citizens smuggling drugs into our country, [root.GetSpeciesName]. In the absence of any steps by your government to enforce the law, we have decided to close our border with you."
+ dpe_contraband_event.66.option:0 "We deplore your actions."
+ 
+ dpe_contraband_event.68.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.68.desc:0 "Esteemed [root.GetSpeciesName], we have caught a certain number of your citizens smuggling drugs into our country. This is creating a significant drugs crisis in the [from.GetName]. Would you care to help us snuff out this drugs problem?"
+ dpe_contraband_event.68.A:0 "Of course we will help you."
+ dpe_contraband_event.68.B:0 "We will not help you, [from.GetSpeciesName]."
+ dpe_contraband_event.68.B.tooltip:0 "The [from.GetSpeciesNamePlural] will be displeased:"
+ 
+ dpe_contraband_event.682.name:0 "$dpe_title_response$"
+ dpe_contraband_event.682.desc:0 "We cannot help you, [root.GetSpeciesName]."
+ dpe_contraband_event.682.A:0 "Then we will have to implement border controls."
+ 
+ dpe_contraband_event.69.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.69.desc:0 "Esteemed [root.GetSpeciesName], we have caught a certain number of your citizens smuggling drugs into our country. This is creating a significant drugs crisis in the [from.GetName]. For this reason, we have elected to introduce more stringent border controls, severely limiting [root.GetSpeciesAdj] access to our space. We thank you for your understanding."
+ dpe_contraband_event.69.option:0 "We deplore your actions."
+ 
+
+ dpe_contraband_event.900.title:0 "The Drugs Trade Collapses"
+ dpe_contraband_event.900.desc:0 "The closure of our border to the [dpe_drugs_country.GetName] has brought about an end to the contraband crisis. It seems that the drugs were entering our country from there."
+ dpe_contraband_event.900.option:0 "I see."
+ 
+ dpe_contraband_event.901.title:0 "The Drugs Trade Collapses"
+ dpe_contraband_event.901.desc:0 "The [from.GetName] has closed its border with us. This move has made it far harder for our smugglers to deliver drugs into their country. Unfortunately, the [from.GetSpeciesNamePlural] have noticed the correlation and (correctly) decided that we must have been the guilty party. This has somewhat cooled our relations."
+ 
+ dpe_contraband_event.999.name:0 "Source of Drugs Located"
+ dpe_contraband_event.999.desc:0 "The chaos that has brought down the [dpe_drugs_country.GetName] appears to have disrupted the drugs trade, which apparently originated from there. Now that we know the drugs' source, we will be better able to combat the problem."
+ dpe_contraband_event.999.option:0 "Good to know."
+ 
+ dpe_contraband_event.9991.name:0 "New Consumers for our Drugs Needed"
+ dpe_contraband_event.9991.desc:0 "With the fall of the [LastKilledCountryName], our smugglers will have to find a new target."
+ dpe_contraband_event.9991.option:0 "A shame."

@@ -10,142 +10,6 @@ event = {
 	immediate = {
 		
 		every_country = {
-			every_owned_planet = {
-				limit = {
-					count_pops = {
-						count > 2
-						limit = {
-							NOT = { is_same_species = prev }
-							is_enslaved = no
-							has_citizenship_rights = yes
-							is_robot_pop = no
-						}
-					}
-				}
-				set_timed_planet_flag = {
-					flag = cc_eventperf_planet_xenos_with_rights
-					days = 31
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					owner = { 
-						any_neighbor_country = {
-							OR = {
-								is_hostile_to = prev
-								is_domineering_to = prev
-								is_rival = prev			
-							}		
-							prevprev = { is_neighbor_of = prev }
-						}
-					}
-				}
-				set_timed_planet_flag = {
-					flag = cc_eventperf_planet_hostile_border
-					days = 31
-				}
-			}
-			if = {
-				limit = {
-					any_owned_planet = { has_modifier = cc_religious_centre }
-				}
-				every_owned_planet = {
-					limit = {
-						owner = {
-							any_owned_planet = {
-								has_modifier = cc_religious_centre
-								distance = {
-									source = prevprev
-									max_distance = 75
-									min_distance = 0
-								}
-							}
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_near_religious_centre
-						days = 31
-					}
-				}
-			}
-			#More xenophile pop events
-			if = {
-				limit = { has_country_flag = cc_eventperf_has_minorities }
-				every_owned_pop = {
-					limit = {
-						has_pop_flag = cc_literally_xenophile
-						species = { pops_have_happiness = yes }
-					}
-					pop_event = { id = cc_events_performance.6 }
-				}
-				else = {
-					every_owned_pop = {
-						limit = {
-							has_pop_flag = cc_literally_xenophile_manifested
-							species = { pops_have_happiness = yes }
-						}
-						pop_event = { id = cc_events_performance.7 }
-					}
-				}
-			}
-			every_owned_planet = {
-				limit = { has_building = building_capital_3 }
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								has_building = building_physics_lab_3
-								has_building = building_engineering_facility_3
-								has_building = building_biolab_4
-							}
-							AND = {
-								has_building = building_physics_lab_3
-								has_building = building_engineering_facility_4
-								has_building = building_biolab_3
-							}
-							AND = {
-								has_building = building_physics_lab_4
-								has_building = building_engineering_facility_3
-								has_building = building_biolab_3
-							}
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_developed_planet
-						days = 31
-					}
-					if = {
-						limit = {
-							OR = {
-								AND = {
-									has_building = building_power_plant_4
-									has_building = building_hydroponics_farm_3
-									has_building = building_mining_network_3
-								}
-								AND = {
-									has_building = building_power_plant_3
-									has_building = building_hydroponics_farm_4
-									has_building = building_mining_network_3
-								}
-								AND = {
-									has_building = building_power_plant_3
-									has_building = building_hydroponics_farm_3
-									has_building = building_mining_network_4
-								}
-							}
-							OR = {
-								has_building = building_mineral_processing_plant_2
-								has_building = building_power_hub_2
-							}
-						}
-						set_timed_planet_flag = {
-							flag = cc_eventperf_highly_developed_planet
-							days = 31
-						}
-					}
-				}
-			}
-			
 			if = {
 				limit = {
 					any_country = {
@@ -188,9 +52,1464 @@ event = {
 			}
 		}
 
-		every_country = {
-			limit = { is_country_type = default }
+		every_playable_country = {
+			country_event = { id = cc_events_performance.11111 days = 10 }
+		}
+	}
+}
+
+country_event = {
+	id = cc_events_performance.11111
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Pacifist Protests
+		if = {
+			limit = {
+
+				NOT = { has_country_flag = cc_recent_pacifist_protests }
+				is_at_war = yes
+				is_war_leader = yes
+				has_faction = prosperity
+				any_owned_planet = {
+					count_pops = {
+						limit = {
+							has_ethic = ethic_pacifist
+							has_citizenship_rights = yes
+						}
+						count > 2
+					}
+				}
+				any_war = {
+					is_war_participant = { who = prev side = attackers }
+					defender_war_exhaustion > 60
+
+					NOT = {
+						prev = {
+							any_war = {
+								OR = {
+									is_war_participant = { who = prev side = attackers }
+									is_war_participant = { who = prev side = defenders }
+								}
+								NOT = { is_same_value = prevprev }
+							}
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_pacifist_planet_war_events_possible
+				days = 31
+			}
+		}
+		if = {
+			limit = {
+
+				allows_slavery = yes
+				has_faction = progressive
+				NOR = {
+					has_country_flag = cc_emancipation_movement
+					has_country_flag = cc_recent_emancipation_movement
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							is_enslaved = no
+							has_ethic = ethic_egalitarian
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_lots_of_egalitarians
+					days = 31
+				}
+			}
+		}
+		if = {
+			limit = {
+
+				has_policy_flag = robots_allowed
+				NOR = {
+					has_country_flag = cc_luddite_movement
+					has_country_flag = cc_recent_luddite_movement
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_spiritualist
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_lots_of_spiritualists
+					days = 31
+				}
+			}
+		}
+
+		if = {
+			limit = {
+
+				num_owned_planets > 5
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_a_factional_revolt_active = no
+				count_pop_factions = {
+					limit = {
+						is_a_vanilla_faction = yes
+						support > 0.15
+						pop_percentage = {
+							percentage > 0.74
+							limit = { happiness < 0.4 }
+						}
+					}
+					count > 0
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_potential_faction_revolt
+				days = 31
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.15
+							pop_percentage = {
+								percentage > 0.6
+								limit = { happiness < 0.3 }
+							}
+						}
+						count > 0
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_angry_faction_revolt
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.2
+							pop_percentage = {
+								percentage > 0.75
+								limit = { happiness < 0.4 }
+							}
+						}
+						count > 0
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_large_faction_revolt
+					days = 31
+				}
+			}
+		}
+		if = {
+			limit = {
+
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			every_owned_planet = {
+				limit = {
+					num_pops > 5
+					
+					any_owned_pop = {
+						species = { pops_have_happiness = yes }
+						is_enslaved = no
+						is_being_purged = no
+						planet = {
+							count_pops = {
+								limit = { is_same_species = prev }
+								count > 1
+							}
+							any_owned_pop = {
+								NOR = {
+									is_same_species = prevprev
+									is_subspecies = prevprev
+								}
+								species = { pops_have_happiness = yes }
+								is_enslaved = no
+								is_being_purged = no
+								
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_pop = { has_ethic = ethic_xenophobe }
+						
+						any_owned_pop = {
+							species = { pops_have_happiness = yes }
+							is_robot_pop = no
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOR = {
+										is_same_species = prevprev
+										is_subspecies = prevprev
+									}
+									species = { pops_have_happiness = yes }
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_xeno_clashes_planet
+						days = 31
+					}
+					
+					if = {
+						limit = {
+							any_owned_pop = {
+								species = { pops_have_happiness = yes }
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 2
+									}
+									any_owned_pop = {
+										NOR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
+										species = { pops_have_happiness = yes }
+										is_robot_pop = no
+										is_enslaved = no
+										is_being_purged = no
+										
+										planet = {
+											count_pops = {
+												limit = { is_same_species = prev }
+												count > 2
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_xeno_clashes_planet_likely
+							days = 31
+						}
+					}
+					
+					if = {
+						limit = {
+							any_owned_pop = {
+								species = { pops_have_happiness = yes }
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 1
+									}
+									any_owned_pop = {
+										NOR = {
+											is_same_species = prevprev
+											is_subspecies = prevprev
+										}
+										species = { pops_have_happiness = yes }
+										is_robot_pop = no
+										is_same_species = owner_species
+										is_enslaved = no
+										is_being_purged = no
+										
+										planet = {
+											count_pops = {
+												limit = { is_same_species = prev }
+												count > 1
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_xeno_clashes_own_species_planet
+							days = 31
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_policy_flag = ai_full_rights }
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+						
+						any_owned_pop = {
+							species = { pops_have_happiness = yes }
+							is_robot_pop = yes
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOR = {
+										is_same_species = prevprev
+										is_subspecies = prevprev
+									}
+									species = { pops_have_happiness = yes }
+									is_robot_pop = no
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_synth_clashes
+						days = 31
+					}
+				}
+			}
+		}
+		#Prominent IM
+		if = {
+			limit = {
+
+				
+				NOT = { has_country_flag = cc_recent_prominent_IM }
+				has_policy_flag = allows_im
+				
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+					}
+					species = { pops_have_happiness = yes }
+					OR = {
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
+					}
+				}
+				any_owned_leader = {
+					NOR = {
+						is_same_value = prev.ruler
+						leader_of_faction = supremacist
+						leader_of_faction = isolationist
+						has_leader_flag = cc_married
+					}
+					is_same_species = prev
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_PIM_possible
+				days = 31
+			}
+		}
+		
+		
+		#Xeno Sex Scandal
+		if = {
+			limit = {
+
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_country_flag = cc_recent_sex_scandal }
+		
+				OR = {
+					has_policy_flag = bans_im_completely
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+		
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+						is_robot_pop = no
+					}
+					species = { pops_have_happiness = yes }
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_xeno_sex_scandal_possible
+				days = 31
+			}
+			every_owned_leader = {
+				limit = { leader_of_faction = xenoist }
+				set_timed_leader_flag = {
+					flag = cc_xenoist_leader
+					days = 31
+				}
+			}
+		}
+		#Factional Revolt Breakout
+		if = {
+			limit = {
+				has_factional_revolt_stage3 = yes
+				NOR = {
+					has_country_flag = cc_factional_revolt_attempt
+					has_country_flag = cc_factional_revolt_succeeded
+				}
+				any_owned_planet = {
+					is_faction_stronghold = yes
+					unrest > 80
+					has_ground_combat = no
+					exists = controller
+					controller = { is_same_value = prev.owner }
+					has_modifier = cc_faction_acute_unrest
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_factional_revolt_can_attempt
+				days = 31
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						is_faction_stronghold = yes
+						unrest > 99
+						has_ground_combat = no
+						exists = controller
+						controller = { is_same_value = prev.owner }
+						has_modifier = cc_faction_acute_unrest
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_factional_revolt_attempt_will_succeed
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						is_faction_stronghold = yes
+						unrest > 80
+						has_ground_combat = no
+						exists = controller
+						controller = { is_same_value = prev.owner }
+						has_modifier = cc_faction_acute_unrest
+						
+						owner = {
+							any_owned_planet = {
+								NOT = { is_same_value = prevprev }
+								is_faction_stronghold = yes
+								unrest > 80
+								has_ground_combat = no
+								exists = controller
+								controller = { is_same_value = prev.owner }
+								has_modifier = cc_faction_acute_unrest
+								
+								owner = {
+									any_owned_planet = {
+										NOR = {
+											is_same_value = prevprev
+											is_same_value = prevprevprevprev
+										}
+										is_faction_stronghold = yes
+										unrest > 80
+										has_ground_combat = no
+										exists = controller
+										controller = { is_same_value = prev.owner }
+										has_modifier = cc_faction_acute_unrest
+									}
+								}
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_factional_revolt_attempt_3planets
+					days = 31
+				}
+				if = {
+					limit = {
+
+						any_owned_planet = {
+							is_faction_stronghold = yes
+							unrest > 80
+							has_ground_combat = no
+							exists = controller
+							controller = { is_same_value = prev.owner }
+							has_modifier = cc_faction_acute_unrest
+							
+							owner = {
+								any_owned_planet = {
+									NOT = { is_same_value = prevprev }
+									is_faction_stronghold = yes
+									unrest > 80
+									has_ground_combat = no
+									exists = controller
+									controller = { is_same_value = prev.owner }
+									has_modifier = cc_faction_acute_unrest
+									
+									owner = {
+										any_owned_planet = {
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
+											}
+											is_faction_stronghold = yes
+											unrest > 80
+											has_ground_combat = no
+											exists = controller
+											controller = { is_same_value = prev.owner }
+											has_modifier = cc_faction_acute_unrest
+											owner = {
+												any_owned_planet = {
+													NOR = {
+														is_same_value = prevprev
+														is_same_value = prevprevprevprev
+														is_same_value = prevprevprevprev.prevprev
+													}
+													is_faction_stronghold = yes
+													unrest > 80
+													has_ground_combat = no
+													exists = controller
+													controller = { is_same_value = prev.owner }
+													has_modifier = cc_faction_acute_unrest
+													owner = {
+														any_owned_planet = {
+															NOR = {
+																is_same_value = prevprev
+																is_same_value = prevprevprevprev
+																is_same_value = prevprevprevprev.prevprev
+																is_same_value = prevprevprevprev.prevprevprev
+															}
+															is_faction_stronghold = yes
+															unrest > 80
+															has_ground_combat = no
+															exists = controller
+															controller = { is_same_value = prev.owner }
+															has_modifier = cc_faction_acute_unrest
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = cc_factional_revolt_attempt_5planets
+						days = 31
+					}
+				}
+			}
+		}
+		
+		#Ludditism mini-crisis
+		if = {
+			limit = {
+
+				has_policy_flag = robots_allowed
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					is_synthetic_empire = yes
+					is_mechanical_empire = yes
+					has_country_flag = cc_luddite_movement
+					has_country_flag = cc_recent_luddite_movement
+					has_country_flag = cc_first_luddite_strike
+					has_country_flag = cc_recent_antiluddite_event
+				}
+				any_owned_planet = {
+					unrest > 0
+					NOT = { has_planet_flag = cc_luddite_strike }
+					any_owned_pop = { is_non_sapient_robot = yes }
+					any_owned_pop = {
+						has_ethic = ethic_spiritualist
+						has_citizenship_rights = yes
+						happiness < 0.4
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_ludditism_possible
+				days = 31
+			}
+			every_owned_planet = {
+				limit = {
+					unrest > 0
+					NOT = { has_planet_flag = cc_luddite_strike }
+					any_owned_pop = { is_non_sapient_robot = yes }
+					any_owned_pop = {
+						has_ethic = ethic_spiritualist
+						has_citizenship_rights = yes
+						happiness < 0.4
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_potential_ludditism_planet
+					days = 32
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						has_planet_flag = cc_eventperf_potential_ludditism_planet
+						has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_ludditism_likely
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						has_planet_flag = cc_eventperf_potential_ludditism_planet
+						owner = {
+							any_owned_planet = {
+								has_planet_flag = cc_eventperf_potential_ludditism_planet
+								NOT = { is_same_value = prevprev }
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_ludditism_2planets
+					days = 31
+				}
+				if = {
+					limit = {
+						any_owned_planet = {
+							has_planet_flag = cc_eventperf_potential_ludditism_planet
+							owner = {
+								any_owned_planet = {
+									has_planet_flag = cc_eventperf_potential_ludditism_planet
+									NOT = { is_same_value = prevprev }
+									owner = {
+										any_owned_planet = {
+											has_planet_flag = cc_eventperf_potential_ludditism_planet
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = cc_eventperf_ludditism_3planets
+						days = 31
+					}
+					random_owned_planet = {
+						limit = { has_planet_flag = cc_eventperf_potential_ludditism_planet }
+						save_event_target_as = cc_eventperf_luddite_planet1
+					}
+					if = {
+						limit = {
+							any_owned_planet = {
+								NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
+								has_planet_flag = cc_eventperf_potential_ludditism_planet
+								owner = {
+									any_owned_planet = {
+										has_planet_flag = cc_eventperf_potential_ludditism_planet
+										NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
+										NOT = { is_same_value = prevprev }
+										owner = {
+											any_owned_planet = {
+												has_planet_flag = cc_eventperf_potential_ludditism_planet
+												NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
+												NOR = {
+													is_same_value = prevprev
+													is_same_value = prevprevprevprev
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_country_flag = {
+							flag = cc_eventperf_ludditism_4planets
+							days = 31
+						}
+					}
+				}						
+			}
+		}
+		
+		#Emancipation mini-crisis
+		if = {
+			limit = {
+
+				allows_slavery = yes
+				has_faction = progressive
+				NOR = {
+					has_country_flag = cc_emancipation_movement
+					has_country_flag = cc_recent_emancipation_movement
+					has_country_flag = cc_emancipation_first_strike
+				}
+				any_owned_planet = {
+					unrest > 0
+					NOT = { has_planet_flag = cc_emancipation_movement }
+					any_owned_pop = {
+						is_enslaved = yes
+						species = { pops_have_happiness = yes }
+						happiness < 0.4
+					}
+					any_owned_pop = {
+						has_ethic = ethic_egalitarian
+						is_enslaved = no
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_emancipation_possible
+				days = 31
+			}
+			every_owned_planet = {
+				limit = {
+					unrest > 0
+					NOT = { has_planet_flag = cc_emancipation_movement }
+					any_owned_pop = {
+						is_enslaved = yes
+						species = { pops_have_happiness = yes }
+						happiness < 0.4
+					}
+					any_owned_pop = {
+						has_ethic = ethic_egalitarian
+						is_enslaved = no
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_potential_emancipation_planet
+					days = 32
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						has_planet_flag = cc_eventperf_potential_emancipation_planet
+						has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_emancipation_likely
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					any_neighbor_country = {
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_emancipation_likely_neighbour
+					days = 31
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						has_planet_flag = cc_eventperf_potential_emancipation_planet
+						owner = {
+							any_owned_planet = {
+								has_planet_flag = cc_eventperf_potential_emancipation_planet
+								NOT = { is_same_value = prevprev }
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_eventperf_emancipation_2planets
+					days = 31
+				}
+				if = {
+					limit = {
+						any_owned_planet = {
+							has_planet_flag = cc_eventperf_potential_emancipation_planet
+							owner = {
+								any_owned_planet = {
+									has_planet_flag = cc_eventperf_potential_emancipation_planet
+									NOT = { is_same_value = prevprev }
+									owner = {
+										any_owned_planet = {
+											has_planet_flag = cc_eventperf_potential_emancipation_planet
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = cc_eventperf_emancipation_3planets
+						days = 31
+					}
+					random_owned_planet = {
+						limit = { has_planet_flag = cc_eventperf_potential_emancipation_planet }
+						save_event_target_as = cc_eventperf_emancipation_planet1
+					}
+					if = {
+						limit = {
+							any_owned_planet = {
+								NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
+								has_planet_flag = cc_eventperf_potential_emancipation_planet
+								owner = {
+									any_owned_planet = {
+										has_planet_flag = cc_eventperf_potential_emancipation_planet
+										NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
+										NOT = { is_same_value = prevprev }
+										owner = {
+											any_owned_planet = {
+												has_planet_flag = cc_eventperf_potential_emancipation_planet
+												NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
+												NOR = {
+													is_same_value = prevprev
+													is_same_value = prevprevprevprev
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_country_flag = {
+							flag = cc_eventperf_emancipation_4planets
+							days = 31
+						}
+					}
+				}						
+			}
+		}
+		
+		#corruption_scandal
+		if = {
+			limit = {
+
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				
+				OR = {
+					has_monthly_income = {
+						resource = minerals
+						value > 250
+					}
+					has_monthly_income = {
+						resource = energy
+						value > 250
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_corruption_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 500
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 500
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_corruption_scandal_more_likely
+					days = 31
+				}
+				if = {
+					limit = {
+						OR = {
+							has_monthly_income = {
+								resource = minerals
+								value > 750
+							}
+							has_monthly_income = {
+								resource = energy
+								value > 750
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = dpe_corruption_scandal_likely
+						days = 31
+					}
+					if = {
+						limit = {
+							OR = {
+								has_monthly_income = {
+									resource = minerals
+									value > 1000
+								}
+								has_monthly_income = {
+									resource = energy
+									value > 1000
+								}
+							}
+						}
+						set_timed_country_flag = {
+							flag = dpe_corruption_scandal_very_likely
+							days = 31
+						}
+					}
+				}
+			}
+		}
+		#Disbelief scandal
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				NOT = { has_ascension_perk = ap_transcendence }
+
+				NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+				
+				NOT = { has_civic = civic_imperial_cult }
+				exists = ruler
+				ruler = { NOT = { leader_of_faction = traditionalist } }
+				
+				has_faction = traditionalist
+				
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = traditionalist
+						support > 0.3
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_can_have_disbelief_scandal
+				days = 31
+			}
+			if = {
+				limit = {
+					has_faction = technologist
+					
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support > 0.1
+						}
+						count = 1
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_disbelief_scandal_more_likely
+					days = 31
+				}
+			}
+		}
+
+		#Authoritarian Conspiracy
+		if = {
+			limit = {
+
+				has_authority = auth_democratic
+				NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
+				has_country_flag = cc_eventperf_has_overwhelming_rival
+				is_at_war = no
+				has_faction = totalitarian
+				any_owned_leader = {
+					NOT = { is_same_value = prev.ruler }
+					leader_of_faction = totalitarian
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_can_have_authoritarian_conspiracy
+				days = 31
+			}
+		}
+		
+		#Militarist Protests
+		if = {
+			limit = {
+
+				NOT = { has_country_flag = dpe_recent_militarists_want_war }
+				is_at_war = no
+				is_subject = no
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+					AND = {
+						has_faction = imperialist
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = imperialist
+								support > 0.22
+							}
+							count = 1
+						}
+					}
+				}
+				years_of_peace = {
+					value > 15
+					delay = 20
+				}
+				has_federation = no
+				any_relation = {
+
+					prev = {
+						OR = {
+							is_rival = prev
+							is_hostile_to = prev
+							is_domineering_to = prev
+						}
+						NOT = { has_truce = prev }
+					}
+					any_owned_planet = {
+						is_neighbor_of = prevprev
+					}
+					NOR = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value = superior
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = overwhelming
+						}
+					}
+					NOT = {
+						any_relation = {
+							has_communications = prevprev
+							OR = {
+								has_defensive_pact = prev
+								is_in_federation_with = prev
+								is_guaranteeing = prev
+							}
+							relative_power = {
+								who = prevprev
+								category = fleet
+								value = overwhelming
+							}
+						}
+					}
+					NOT = {
+						count_potential_war_participants = {
+							attacker = prev
+							defender = this
+							side = this
+							limit = {
+								OR = {
+									relative_power = {
+										who = prev
+										category = fleet
+										value = equivalent
+									}
+									relative_power = {
+										who = prev
+										category = fleet
+										value = superior
+									}
+								}
+							}
+							count > 2
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_militarist_protests_incident_possible
+				days = 31
+			}
 			
+			if = {
+				limit = {
+					is_ai = yes
+					any_relation = {
+						is_ai = no
+						NOT = { has_country_flag = dpe_recent_militarists_incident }
+						has_federation = no
+						has_policy_flag = unrestricted_wars
+						prev = {
+							OR = {
+								is_rival = prev
+								is_hostile_to = prev
+								is_domineering_to = prev
+							}
+							NOT = { has_truce = prev }
+						}
+						any_owned_planet = {
+							is_neighbor_of = prevprev
+						}
+						NOT = {
+							relative_power = {
+								who = prev
+								category = fleet
+								value = overwhelming
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_militarists_incident_secondary_possible
+					days = 31
+				}
+			}			
+		}
+		#Military Coup
+		if = {
+			limit = {
+
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_egalitarian
+				}
+				is_at_war = no
+				is_subject = no
+				has_faction = imperialist
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = imperialist
+						
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+				}
+				NOT = {
+					any_country = {
+						OR = {
+							is_hostile_to = prev
+							is_rival = prev
+							is_domineering_to = prev
+						}
+						relative_power = {
+							who = prev
+							category = fleet
+							value = overwhelming
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					used_naval_capacity_percent > 1
+						
+					else = { used_naval_capacity_percent > 1.2 }
+				}
+				any_owned_leader = {
+					NOT = { is_same_value = prev.ruler }
+					leader_of_faction = imperialist
+				}
+				exists = ruler
+			}
+			set_timed_country_flag = {
+				flag = dpe_military_coup_possible
+				days = 31
+			}
+		}
+
+		#Unity Planets
+		if = {
+			limit = {
+
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_country_flag = dpe_recent_unity_planet
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					unrest < 1
+					NOT = { has_planet_flag = dpe_unity_planet }
+					count_pops = {
+						limit = { species = { pops_have_happiness = yes } }
+						count > 7
+					}
+					pop_percentage = {
+						limit = { happiness > 0.55 }
+						percentage > 0.75
+					}
+				}
+				set_timed_planet_flag = {
+					flag = dpe_potential_unity_planet
+				days = 31
+				}
+			}
+		}
+
+		#Leader Debates
+		
+		if = {
+			limit = {
+
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+				}
+				NOT = { has_country_flag = dpe_recent_ruler_debate }
+				exists = ruler
+				count_pop_factions = {
+					limit = {
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+					}
+					count > 0
+				}
+			}
+			set_timed_country_flag = {
+			flag = dpe_can_have_ruler_debate
+			days = 31
+			}
+		}
+
+		#Spiritualist Mission
+		if = {
+			limit = {
+
+				years_passed > 20
+				
+				NOT = { has_country_flag = dpe_recent_spiritualist_mission }
+				
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+		#			count_pop_factions = {
+		#				limit = {
+		#					is_pop_faction_type = traditionalist
+		#					support > 0.15
+		#					pop_percentage = {
+		#						limit = { happiness > 0.55 }
+		#						percentage > 0.75
+		#					}
+		#				}
+		#				count = 1
+		#			}
+				}
+				NOR = { #just in case
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_civic = civic_fanatic_purifiers
+				}
+				
+				any_neighbor_country = {
+					is_country_type = default
+					has_communications = prev
+					NOR = {
+						is_same_species = prev
+						is_at_war_with = prev
+
+						has_civic = civic_fanatic_purifiers
+
+						has_defensive_pact = prev
+						is_in_federation_with = prev
+						
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = traditionalist
+								support > 0.2
+							}
+							count = 1
+						}
+						
+						is_hostile_to = prev
+						is_rival = prev
+						
+						has_country_flag = dpe_recent_spiritualist_mission_received
+						has_relation_flag = {
+							flag = dpe_spiritualist_mission_received
+							who = prev
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = dpe_spiritualist_mission_possible
+				days = 31
+			}
+		}
+	}
+}
+
+#yearly
+event = {
+	id = cc_events_performance.1999
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		every_country = {
+			every_owned_planet = {
+				limit = { has_building = building_capital_3 }
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								has_building = building_physics_lab_3
+								has_building = building_engineering_facility_3
+								has_building = building_biolab_4
+							}
+							AND = {
+								has_building = building_physics_lab_3
+								has_building = building_engineering_facility_4
+								has_building = building_biolab_3
+							}
+							AND = {
+								has_building = building_physics_lab_4
+								has_building = building_engineering_facility_3
+								has_building = building_biolab_3
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_developed_planet
+						days = 365
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									has_building = building_power_plant_4
+									has_building = building_hydroponics_farm_3
+									has_building = building_mining_network_3
+								}
+								AND = {
+									has_building = building_power_plant_3
+									has_building = building_hydroponics_farm_4
+									has_building = building_mining_network_3
+								}
+								AND = {
+									has_building = building_power_plant_3
+									has_building = building_hydroponics_farm_3
+									has_building = building_mining_network_4
+								}
+							}
+							OR = {
+								has_building = building_mineral_processing_plant_2
+								has_building = building_power_hub_2
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_eventperf_highly_developed_planet
+							days = 365
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = { has_modifier = cc_religious_centre }
+				}
+				every_owned_planet = {
+					limit = {
+						owner = {
+							any_owned_planet = {
+								has_modifier = cc_religious_centre
+								distance = {
+									source = prevprev
+									max_distance = 75
+									min_distance = 0
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_near_religious_centre
+						days = 365
+					}
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						count > 2
+						limit = {
+							NOT = { is_same_species = prev }
+							is_enslaved = no
+							has_citizenship_rights = yes
+							is_robot_pop = no
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_xenos_with_rights
+					days = 365
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					owner = { 
+						any_neighbor_country = {
+							OR = {
+								is_hostile_to = prev
+								is_domineering_to = prev
+								is_rival = prev			
+							}		
+							prevprev = { is_neighbor_of = prev }
+						}
+					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_planet_hostile_border
+					days = 365
+				}
+			}
+		}
+		every_playable_country = {
 			if = {
 				limit = {
 
@@ -234,7 +1553,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_has_minority
-					days = 31
+					days = 365
 				}
 				if = {
 					limit = {
@@ -260,7 +1579,7 @@ event = {
 					}
 					set_timed_country_flag = {
 						flag = cc_eventperf_has_large_minority
-						days = 31
+						days = 365
 					}
 				}
 			}
@@ -289,7 +1608,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_a_small_minority
-					days = 31
+					days = 365
 				}
 				if = {
 					limit = {
@@ -316,7 +1635,7 @@ event = {
 					}
 					set_timed_country_flag = {
 						flag = cc_eventperf_has_minority
-						days = 31
+						days = 365
 					}
 					if = {
 						limit = {
@@ -327,7 +1646,7 @@ event = {
 						}
 						set_timed_country_flag = {
 							flag = cc_eventperf_founder_is_minority
-							days = 31
+							days = 365
 						}
 					}
 				}
@@ -347,7 +1666,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_has_lots_of_xenophobes_min
-					days = 31
+					days = 365
 				}
 			}
 			if = {
@@ -369,7 +1688,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_literally_xenophiles
-					days = 31
+					days = 365
 				}
 				if = {
 					limit = {
@@ -388,101 +1707,11 @@ event = {
 					}
 					set_timed_country_flag = {
 						flag = cc_eventperf_lots_literally_xenophiles
-						days = 31
+						days = 365
 					}
 				}
 			}
 			
-			#Pacifist Protests
-			if = {
-				limit = {
-
-					NOT = { has_country_flag = cc_recent_pacifist_protests }
-					is_at_war = yes
-					is_war_leader = yes
-					has_faction = prosperity
-					any_owned_planet = {
-						count_pops = {
-							limit = {
-								has_ethic = ethic_pacifist
-								has_citizenship_rights = yes
-							}
-							count > 2
-						}
-					}
-					any_war = {
-						is_war_participant = { who = prev side = attackers }
-						defender_war_exhaustion > 60
-
-						NOT = {
-							prev = {
-								any_war = {
-									OR = {
-										is_war_participant = { who = prev side = attackers }
-										is_war_participant = { who = prev side = defenders }
-									}
-									NOT = { is_same_value = prevprev }
-								}
-							}
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_pacifist_planet_war_events_possible
-					days = 31
-				}
-			}
-			if = {
-				limit = {
-
-					allows_slavery = yes
-					has_faction = progressive
-					NOR = {
-						has_country_flag = cc_emancipation_movement
-						has_country_flag = cc_recent_emancipation_movement
-					}
-				}
-				every_owned_planet = {
-					limit = {
-						count_pops = {
-							count > 2
-							limit = {
-								is_enslaved = no
-								has_ethic = ethic_egalitarian
-							}
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_planet_lots_of_egalitarians
-						days = 31
-					}
-				}
-			}
-			if = {
-				limit = {
-
-					has_policy_flag = robots_allowed
-					NOR = {
-						has_country_flag = cc_luddite_movement
-						has_country_flag = cc_recent_luddite_movement
-					}
-				}
-				every_owned_planet = {
-					limit = {
-						count_pops = {
-							count > 2
-							limit = {
-								has_citizenship_rights = yes
-								has_ethic = ethic_spiritualist
-							}
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_planet_lots_of_spiritualists
-						days = 31
-					}
-				}
-			}
 			if = {
 				limit = {
 
@@ -496,7 +1725,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_enough_spiritualists
-					days = 31
+					days = 365
 				}
 			}
 			if = {
@@ -512,7 +1741,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_many_materialists
-					days = 31
+					days = 365
 				}
 				if = {
 					limit = {
@@ -526,7 +1755,7 @@ event = {
 					}
 					set_timed_country_flag = {
 						flag = cc_lots_materialists
-						days = 31
+						days = 365
 					}
 				}
 			}
@@ -543,7 +1772,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_enough_egalitarians
-					days = 31
+					days = 365
 				}
 			}
 			if = {
@@ -559,1447 +1788,12 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_many2_authoritarians
-					days = 31
-				}
-			}
-
-
-			if = {
-				limit = {
-
-					num_owned_planets > 5
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-					has_a_factional_revolt_active = no
-					count_pop_factions = {
-						limit = {
-							is_a_vanilla_faction = yes
-							support > 0.15
-							pop_percentage = {
-								percentage > 0.74
-								limit = { happiness < 0.4 }
-							}
-						}
-						count > 0
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_potential_faction_revolt
-					days = 31
-				}
-				if = {
-					limit = {
-						count_pop_factions = {
-							limit = {
-								is_a_vanilla_faction = yes
-								support > 0.15
-								pop_percentage = {
-									percentage > 0.6
-									limit = { happiness < 0.3 }
-								}
-							}
-							count > 0
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_angry_faction_revolt
-						days = 31
-					}
-				}
-				if = {
-					limit = {
-						count_pop_factions = {
-							limit = {
-								is_a_vanilla_faction = yes
-								support > 0.2
-								pop_percentage = {
-									percentage > 0.75
-									limit = { happiness < 0.4 }
-								}
-							}
-							count > 0
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_large_faction_revolt
-						days = 31
-					}
-				}
-			}
-			if = {
-				limit = {
-
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-					has_faction = traditionalist
-				}
-				if = {
-					limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
-					every_owned_planet = {
-						limit = {
-							has_planet_flag = ccrebel_perf_spiritualists_2
-							NOT = { has_planet_flag = cc_colony_story }
-							owner = {
-								any_owned_planet = {
-									NOT = { is_same_value = prevprev }
-									distance = {
-										source = prevprev
-										min_distance = 0
-										max_distance = 75
-									}
-									any_owned_pop = { has_ethic = ethic_spiritualist }
-								}
-							}
-						}
-						set_timed_planet_flag = {
-							flag = cc_eventperf_pilgrimage_candidate
-							days = 31
-						}
-					}
-					else = {
-						every_owned_planet = {
-							limit = {
-								has_planet_flag = ccrebel_perf_spiritualists_2
-								NOT = { has_planet_flag = cc_colony_story }
-								owner = {
-									any_owned_planet = {
-										NOT = { is_same_value = prevprev }
-										distance = {
-											source = prevprev
-											min_distance = 0
-											max_distance = 75
-										}
-										any_owned_pop = { has_ethic = ethic_spiritualist }
-									}	
-									NOT = {
-										any_owned_planet = {
-											distance = {
-												source = prevprev
-												min_distance = 0
-												max_distance = 120
-											}
-											has_modifier = cc_religious_centre
-										}
-									}
-								}
-							}
-							set_timed_planet_flag = {
-								flag = cc_eventperf_pilgrimage_candidate
-								days = 31
-							}
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-				}
-				every_owned_planet = {
-					limit = {
-						num_pops > 5
-						
-						any_owned_pop = {
-							species = { pops_have_happiness = yes }
-							is_enslaved = no
-							is_being_purged = no
-							planet = {
-								count_pops = {
-									limit = { is_same_species = prev }
-									count > 1
-								}
-								any_owned_pop = {
-									NOR = {
-										is_same_species = prevprev
-										is_subspecies = prevprev
-									}
-									species = { pops_have_happiness = yes }
-									is_enslaved = no
-									is_being_purged = no
-									
-									planet = {
-										count_pops = {
-											limit = { is_same_species = prev }
-											count > 1
-										}
-									}
-								}
-							}
-						}
-					}
-					if = {
-						limit = {
-							any_owned_pop = { has_ethic = ethic_xenophobe }
-							
-							any_owned_pop = {
-								species = { pops_have_happiness = yes }
-								is_robot_pop = no
-								is_enslaved = no
-								is_being_purged = no
-								planet = {
-									count_pops = {
-										limit = { is_same_species = prev }
-										count > 1
-									}
-									any_owned_pop = {
-										NOR = {
-											is_same_species = prevprev
-											is_subspecies = prevprev
-										}
-										species = { pops_have_happiness = yes }
-										is_robot_pop = no
-										is_enslaved = no
-										is_being_purged = no
-										
-										planet = {
-											count_pops = {
-												limit = { is_same_species = prev }
-												count > 1
-											}
-										}
-									}
-								}
-							}
-						}
-						set_timed_planet_flag = {
-							flag = cc_eventperf_xeno_clashes_planet
-							days = 31
-						}
-						
-						if = {
-							limit = {
-								any_owned_pop = {
-									species = { pops_have_happiness = yes }
-									is_robot_pop = no
-									is_enslaved = no
-									is_being_purged = no
-									planet = {
-										count_pops = {
-											limit = { is_same_species = prev }
-											count > 2
-										}
-										any_owned_pop = {
-											NOR = {
-												is_same_species = prevprev
-												is_subspecies = prevprev
-											}
-											species = { pops_have_happiness = yes }
-											is_robot_pop = no
-											is_enslaved = no
-											is_being_purged = no
-											
-											planet = {
-												count_pops = {
-													limit = { is_same_species = prev }
-													count > 2
-												}
-											}
-										}
-									}
-								}
-							}
-							set_timed_planet_flag = {
-								flag = cc_eventperf_xeno_clashes_planet_likely
-								days = 31
-							}
-						}
-						
-						if = {
-							limit = {
-								any_owned_pop = {
-									species = { pops_have_happiness = yes }
-									is_robot_pop = no
-									is_enslaved = no
-									is_being_purged = no
-									planet = {
-										count_pops = {
-											limit = { is_same_species = prev }
-											count > 1
-										}
-										any_owned_pop = {
-											NOR = {
-												is_same_species = prevprev
-												is_subspecies = prevprev
-											}
-											species = { pops_have_happiness = yes }
-											is_robot_pop = no
-											is_same_species = owner_species
-											is_enslaved = no
-											is_being_purged = no
-											
-											planet = {
-												count_pops = {
-													limit = { is_same_species = prev }
-													count > 1
-												}
-											}
-										}
-									}
-								}
-							}
-							set_timed_planet_flag = {
-								flag = cc_eventperf_xeno_clashes_own_species_planet
-								days = 31
-							}
-						}
-					}
-					if = {
-						limit = {
-							owner = { has_policy_flag = ai_full_rights }
-							any_owned_pop = { has_ethic = ethic_spiritualist }
-							
-							any_owned_pop = {
-								species = { pops_have_happiness = yes }
-								is_robot_pop = yes
-								is_enslaved = no
-								is_being_purged = no
-								planet = {
-									count_pops = {
-										limit = { is_same_species = prev }
-										count > 1
-									}
-									any_owned_pop = {
-										NOR = {
-											is_same_species = prevprev
-											is_subspecies = prevprev
-										}
-										species = { pops_have_happiness = yes }
-										is_robot_pop = no
-										is_enslaved = no
-										is_being_purged = no
-										
-										planet = {
-											count_pops = {
-												limit = { is_same_species = prev }
-												count > 1
-											}
-										}
-									}
-								}
-							}
-						}
-						set_timed_planet_flag = {
-							flag = cc_eventperf_synth_clashes
-							days = 31
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-
-					has_edict = cc_thought_police
-				}
-				every_owned_pop = {
-					limit = {
-						is_enslaved = no
-						happiness < 0.4
-						if = {
-							limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
-							NOT = { has_ethic = ethic_authoritarian }
-						}
-						if = {
-							limit = { owner = { has_ethic = ethic_spiritualist } }
-							NOT = { has_ethic = ethic_spiritualist }
-						}
-						if = {
-							limit = { owner = { has_ethic = ethic_materialist } }
-							NOT = { has_ethic = ethic_materialist }
-						}
-						if = {
-							limit = { owner = { has_ethic = ethic_pacifist } }
-							NOT = { has_ethic = ethic_pacifist }
-						}
-						if = {
-							limit = {
-								owner = {
-									OR = {
-										has_ethic = ethic_militarist
-										has_ethic = ethic_fanatic_militarist
-									}
-								}
-							}
-							NOT = { has_ethic = ethic_militarist }
-						}
-						if = {
-							limit = { owner = { has_ethic = ethic_xenophile } }
-							NOT = { has_ethic = ethic_xenophile }
-						}
-						if = {
-							limit = {
-								owner = {
-									OR = {
-										has_ethic = ethic_xenophobe
-										has_ethic = ethic_fanatic_xenophobe
-									}
-								}
-							}
-							NOT = { has_ethic = ethic_xenophobe }
-						}
-					}
-					pop_event = { id = cc_events_performance.22 }
-				}
-			}
-			#literally xenophile
-			if = {
-				limit = {
-
-					has_policy_flag = bans_im_completely
-				}
-				every_owned_pop = {
-					limit = { is_valid_xenophilia_refugee_pop = yes }
-					pop_event = { id = cc_events_performance.20 }
-				}
-				if = {
-					limit = {
-						OR = {
-							has_valid_civic = civic_fanatic_purifiers
-							has_policy_flag = purge_allowed
-						}
-					}
-					every_owned_pop = {
-						limit = { has_modifier = cc_secret_xenophile }
-						pop_event = { id = cc_events_performance.21 }
-					}
-				}
-			}
-			#Prominent IM
-			if = {
-				limit = {
-
-					
-					NOT = { has_country_flag = cc_recent_prominent_IM }
-					has_policy_flag = allows_im
-					
-					any_owned_pop = {
-						NOR = {
-							is_subspecies = prev
-							is_same_species = prev
-						}
-						species = { pops_have_happiness = yes }
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
-						}
-					}
-					any_owned_leader = {
-						NOR = {
-							is_same_value = prev.ruler
-							leader_of_faction = supremacist
-							leader_of_faction = isolationist
-							has_leader_flag = cc_married
-						}
-						is_same_species = prev
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_PIM_possible
-					days = 31
-				}
-			}
-			
-			
-			#Xeno Sex Scandal
-			if = {
-				limit = {
-
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-					NOT = { has_country_flag = cc_recent_sex_scandal }
-			
-					OR = {
-						has_policy_flag = bans_im_completely
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-			
-					any_owned_pop = {
-						NOR = {
-							is_subspecies = prev
-							is_same_species = prev
-							is_robot_pop = no
-						}
-						species = { pops_have_happiness = yes }
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_xeno_sex_scandal_possible
-					days = 31
-				}
-				every_owned_leader = {
-					limit = { leader_of_faction = xenoist }
-					set_timed_leader_flag = {
-						flag = cc_xenoist_leader
-						days = 31
-					}
-				}
-			}
-			#Factional Revolt Breakout
-			if = {
-				limit = {
-					has_factional_revolt_stage3 = yes
-					NOR = {
-						has_country_flag = cc_factional_revolt_attempt
-						has_country_flag = cc_factional_revolt_succeeded
-					}
-					any_owned_planet = {
-						is_faction_stronghold = yes
-						unrest > 80
-						has_ground_combat = no
-						exists = controller
-						controller = { is_same_value = prev.owner }
-						has_modifier = cc_faction_acute_unrest
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_factional_revolt_can_attempt
-					days = 31
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							is_faction_stronghold = yes
-							unrest > 99
-							has_ground_combat = no
-							exists = controller
-							controller = { is_same_value = prev.owner }
-							has_modifier = cc_faction_acute_unrest
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_factional_revolt_attempt_will_succeed
-						days = 31
-					}
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							is_faction_stronghold = yes
-							unrest > 80
-							has_ground_combat = no
-							exists = controller
-							controller = { is_same_value = prev.owner }
-							has_modifier = cc_faction_acute_unrest
-							
-							owner = {
-								any_owned_planet = {
-									NOT = { is_same_value = prevprev }
-									is_faction_stronghold = yes
-									unrest > 80
-									has_ground_combat = no
-									exists = controller
-									controller = { is_same_value = prev.owner }
-									has_modifier = cc_faction_acute_unrest
-									
-									owner = {
-										any_owned_planet = {
-											NOR = {
-												is_same_value = prevprev
-												is_same_value = prevprevprevprev
-											}
-											is_faction_stronghold = yes
-											unrest > 80
-											has_ground_combat = no
-											exists = controller
-											controller = { is_same_value = prev.owner }
-											has_modifier = cc_faction_acute_unrest
-										}
-									}
-								}
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_factional_revolt_attempt_3planets
-						days = 31
-					}
-					if = {
-						limit = {
-
-							any_owned_planet = {
-								is_faction_stronghold = yes
-								unrest > 80
-								has_ground_combat = no
-								exists = controller
-								controller = { is_same_value = prev.owner }
-								has_modifier = cc_faction_acute_unrest
-								
-								owner = {
-									any_owned_planet = {
-										NOT = { is_same_value = prevprev }
-										is_faction_stronghold = yes
-										unrest > 80
-										has_ground_combat = no
-										exists = controller
-										controller = { is_same_value = prev.owner }
-										has_modifier = cc_faction_acute_unrest
-										
-										owner = {
-											any_owned_planet = {
-												NOR = {
-													is_same_value = prevprev
-													is_same_value = prevprevprevprev
-												}
-												is_faction_stronghold = yes
-												unrest > 80
-												has_ground_combat = no
-												exists = controller
-												controller = { is_same_value = prev.owner }
-												has_modifier = cc_faction_acute_unrest
-												owner = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-															is_same_value = prevprevprevprev.prevprev
-														}
-														is_faction_stronghold = yes
-														unrest > 80
-														has_ground_combat = no
-														exists = controller
-														controller = { is_same_value = prev.owner }
-														has_modifier = cc_faction_acute_unrest
-														owner = {
-															any_owned_planet = {
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																	is_same_value = prevprevprevprev.prevprev
-																	is_same_value = prevprevprevprev.prevprevprev
-																}
-																is_faction_stronghold = yes
-																unrest > 80
-																has_ground_combat = no
-																exists = controller
-																controller = { is_same_value = prev.owner }
-																has_modifier = cc_faction_acute_unrest
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						set_timed_country_flag = {
-							flag = cc_factional_revolt_attempt_5planets
-							days = 31
-						}
-					}
-				}
-			}
-			
-			#Ludditism mini-crisis
-			if = {
-				limit = {
-
-					has_policy_flag = robots_allowed
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						is_synthetic_empire = yes
-						is_mechanical_empire = yes
-						has_country_flag = cc_luddite_movement
-						has_country_flag = cc_recent_luddite_movement
-						has_country_flag = cc_first_luddite_strike
-						has_country_flag = cc_recent_antiluddite_event
-					}
-					any_owned_planet = {
-						unrest > 0
-						NOT = { has_planet_flag = cc_luddite_strike }
-						any_owned_pop = { is_non_sapient_robot = yes }
-						any_owned_pop = {
-							has_ethic = ethic_spiritualist
-							has_citizenship_rights = yes
-							happiness < 0.4
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_ludditism_possible
-					days = 31
-				}
-				every_owned_planet = {
-					limit = {
-						unrest > 0
-						NOT = { has_planet_flag = cc_luddite_strike }
-						any_owned_pop = { is_non_sapient_robot = yes }
-						any_owned_pop = {
-							has_ethic = ethic_spiritualist
-							has_citizenship_rights = yes
-							happiness < 0.4
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_potential_ludditism_planet
-						days = 32
-					}
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							has_planet_flag = cc_eventperf_potential_ludditism_planet
-							has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_ludditism_likely
-						days = 31
-					}
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							has_planet_flag = cc_eventperf_potential_ludditism_planet
-							owner = {
-								any_owned_planet = {
-									has_planet_flag = cc_eventperf_potential_ludditism_planet
-									NOT = { is_same_value = prevprev }
-								}
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_ludditism_2planets
-						days = 31
-					}
-					if = {
-						limit = {
-							any_owned_planet = {
-								has_planet_flag = cc_eventperf_potential_ludditism_planet
-								owner = {
-									any_owned_planet = {
-										has_planet_flag = cc_eventperf_potential_ludditism_planet
-										NOT = { is_same_value = prevprev }
-										owner = {
-											any_owned_planet = {
-												has_planet_flag = cc_eventperf_potential_ludditism_planet
-												NOR = {
-													is_same_value = prevprev
-													is_same_value = prevprevprevprev
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						set_timed_country_flag = {
-							flag = cc_eventperf_ludditism_3planets
-							days = 31
-						}
-						random_owned_planet = {
-							limit = { has_planet_flag = cc_eventperf_potential_ludditism_planet }
-							save_event_target_as = cc_eventperf_luddite_planet1
-						}
-						if = {
-							limit = {
-								any_owned_planet = {
-									NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
-									has_planet_flag = cc_eventperf_potential_ludditism_planet
-									owner = {
-										any_owned_planet = {
-											has_planet_flag = cc_eventperf_potential_ludditism_planet
-											NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
-											NOT = { is_same_value = prevprev }
-											owner = {
-												any_owned_planet = {
-													has_planet_flag = cc_eventperf_potential_ludditism_planet
-													NOT = { is_same_value = event_target:cc_eventperf_luddite_planet1 }
-													NOR = {
-														is_same_value = prevprev
-														is_same_value = prevprevprevprev
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-							set_timed_country_flag = {
-								flag = cc_eventperf_ludditism_4planets
-								days = 31
-							}
-						}
-					}						
-				}
-			}
-			
-			#Emancipation mini-crisis
-			if = {
-				limit = {
-
-					allows_slavery = yes
-					has_faction = progressive
-					NOR = {
-						has_country_flag = cc_emancipation_movement
-						has_country_flag = cc_recent_emancipation_movement
-						has_country_flag = cc_emancipation_first_strike
-					}
-					any_owned_planet = {
-						unrest > 0
-						NOT = { has_planet_flag = cc_emancipation_movement }
-						any_owned_pop = {
-							is_enslaved = yes
-							species = { pops_have_happiness = yes }
-							happiness < 0.4
-						}
-						any_owned_pop = {
-							has_ethic = ethic_egalitarian
-							is_enslaved = no
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_emancipation_possible
-					days = 31
-				}
-				every_owned_planet = {
-					limit = {
-						unrest > 0
-						NOT = { has_planet_flag = cc_emancipation_movement }
-						any_owned_pop = {
-							is_enslaved = yes
-							species = { pops_have_happiness = yes }
-							happiness < 0.4
-						}
-						any_owned_pop = {
-							has_ethic = ethic_egalitarian
-							is_enslaved = no
-						}
-					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_potential_emancipation_planet
-						days = 32
-					}
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							has_planet_flag = cc_eventperf_potential_emancipation_planet
-							has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_emancipation_likely
-						days = 31
-					}
-				}
-				if = {
-					limit = {
-						any_neighbor_country = {
-							has_ethic = ethic_fanatic_egalitarian
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_emancipation_likely_neighbour
-						days = 31
-					}
-				}
-				if = {
-					limit = {
-						any_owned_planet = {
-							has_planet_flag = cc_eventperf_potential_emancipation_planet
-							owner = {
-								any_owned_planet = {
-									has_planet_flag = cc_eventperf_potential_emancipation_planet
-									NOT = { is_same_value = prevprev }
-								}
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_emancipation_2planets
-						days = 31
-					}
-					if = {
-						limit = {
-							any_owned_planet = {
-								has_planet_flag = cc_eventperf_potential_emancipation_planet
-								owner = {
-									any_owned_planet = {
-										has_planet_flag = cc_eventperf_potential_emancipation_planet
-										NOT = { is_same_value = prevprev }
-										owner = {
-											any_owned_planet = {
-												has_planet_flag = cc_eventperf_potential_emancipation_planet
-												NOR = {
-													is_same_value = prevprev
-													is_same_value = prevprevprevprev
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						set_timed_country_flag = {
-							flag = cc_eventperf_emancipation_3planets
-							days = 31
-						}
-						random_owned_planet = {
-							limit = { has_planet_flag = cc_eventperf_potential_emancipation_planet }
-							save_event_target_as = cc_eventperf_emancipation_planet1
-						}
-						if = {
-							limit = {
-								any_owned_planet = {
-									NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
-									has_planet_flag = cc_eventperf_potential_emancipation_planet
-									owner = {
-										any_owned_planet = {
-											has_planet_flag = cc_eventperf_potential_emancipation_planet
-											NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
-											NOT = { is_same_value = prevprev }
-											owner = {
-												any_owned_planet = {
-													has_planet_flag = cc_eventperf_potential_emancipation_planet
-													NOT = { is_same_value = event_target:cc_eventperf_emancipation_planet1 }
-													NOR = {
-														is_same_value = prevprev
-														is_same_value = prevprevprevprev
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-							set_timed_country_flag = {
-								flag = cc_eventperf_emancipation_4planets
-								days = 31
-							}
-						}
-					}						
-				}
-			}
-			
-			#charity scandal
-			if = {
-				limit = {
-
-					NOT = { has_country_flag = dpe_recent_charity_scandal }
-					OR = {
-						AND = {
-							has_ethic = ethic_fanatic_materialist
-							NOT = { has_ethic = ethic_egalitarian }
-						}
-						has_ethic = ethic_fanatic_authoritarian
-						AND = {
-							has_ethic = ethic_materialist
-							has_ethic = ethic_authoritarian
-						}
-					}
-					NOT = {
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = progressive
-								support > 0.1
-								pop_percentage = {
-									limit = { happiness > 0.5 }
-									percentage > 0.74
-								}
-							}
-							count = 1
-						}
-					}
-				}
-				if = {
-					limit = {
-						exists = ruler
-						ruler = { NOT = { leader_of_faction = totalitarian } }
-					}
-					set_timed_country_flag = {
-						flag = dpe_can_have_charity_scandal
-						days = 31
-					}
-				}
-			}
-			#corruption_scandal
-			if = {
-				limit = {
-
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-					
-					OR = {
-						has_monthly_income = {
-							resource = minerals
-							value > 250
-						}
-						has_monthly_income = {
-							resource = energy
-							value > 250
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = dpe_can_have_corruption_scandal
-					days = 31
-				}
-				if = {
-					limit = {
-						OR = {
-							has_monthly_income = {
-								resource = minerals
-								value > 500
-							}
-							has_monthly_income = {
-								resource = energy
-								value > 500
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = dpe_corruption_scandal_more_likely
-						days = 31
-					}
-					if = {
-						limit = {
-							OR = {
-								has_monthly_income = {
-									resource = minerals
-									value > 750
-								}
-								has_monthly_income = {
-									resource = energy
-									value > 750
-								}
-							}
-						}
-						set_timed_country_flag = {
-							flag = dpe_corruption_scandal_likely
-							days = 31
-						}
-						if = {
-							limit = {
-								OR = {
-									has_monthly_income = {
-										resource = minerals
-										value > 1000
-									}
-									has_monthly_income = {
-										resource = energy
-										value > 1000
-									}
-								}
-							}
-							set_timed_country_flag = {
-								flag = dpe_corruption_scandal_very_likely
-								days = 31
-							}
-						}
-					}
-				}
-			}
-			#Disbelief scandal
-			if = {
-				limit = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
-					NOT = { has_ascension_perk = ap_transcendence }
-
-					NOT = { has_country_flag = dpe_recent_disbelief_scandal }
-					
-					NOT = { has_civic = civic_imperial_cult }
-					exists = ruler
-					ruler = { NOT = { leader_of_faction = traditionalist } }
-					
-					has_faction = traditionalist
-					
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.3
-						}
-						count = 1
-					}
-				}
-				set_timed_country_flag = {
-					flag = dpe_can_have_disbelief_scandal
-					days = 31
-				}
-				if = {
-					limit = {
-						has_faction = technologist
-						
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = technologist
-								support > 0.1
-							}
-							count = 1
-						}
-					}
-					set_timed_country_flag = {
-						flag = dpe_disbelief_scandal_more_likely
-						days = 31
-					}
-				}
-			}
-			#Ruler is escaped slave
-			if = {
-				limit = {
-					years_passed > 10
-
-					NOT = { has_ethic = ethic_gestalt_consciousness }
-					allows_slavery = yes
-					
-					NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
-					
-					NOT = { has_authority = auth_imperial }
-					exists = ruler
-					
-					any_owned_pop = {
-						is_same_species = prev.ruler
-						is_enslaved = yes
-					}
-				}
-				set_timed_country_flag = {
-					flag = dpe_escaped_slave_ruler_possible
-					days = 31
-				}
-			}
-			
-			#Authoritarian Conspiracy
-			if = {
-				limit = {
-
-					has_authority = auth_democratic
-					NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
-					has_country_flag = cc_eventperf_has_overwhelming_rival
-					is_at_war = no
-					has_faction = totalitarian
-					any_owned_leader = {
-						NOT = { is_same_value = prev.ruler }
-						leader_of_faction = totalitarian
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_can_have_authoritarian_conspiracy
-					days = 31
-				}
-			}
-			
-			#Militarist Protests
-			if = {
-				limit = {
-
-					NOT = { has_country_flag = dpe_recent_militarists_want_war }
-					is_at_war = no
-					is_subject = no
-					OR = {
-						has_ethic = ethic_fanatic_militarist
-						has_ethic = ethic_militarist
-						AND = {
-							has_faction = imperialist
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = imperialist
-									support > 0.22
-								}
-								count = 1
-							}
-						}
-					}
-					years_of_peace = {
-						value > 15
-						delay = 20
-					}
-					has_federation = no
-					any_relation = {
-	
-						prev = {
-							OR = {
-								is_rival = prev
-								is_hostile_to = prev
-								is_domineering_to = prev
-							}
-							NOT = { has_truce = prev }
-						}
-						any_owned_planet = {
-							is_neighbor_of = prevprev
-						}
-						NOR = {
-							relative_power = {
-								who = prev
-								category = fleet
-								value = superior
-							}
-							relative_power = {
-								who = prev
-								category = fleet
-								value = overwhelming
-							}
-						}
-						NOT = {
-							any_relation = {
-								has_communications = prevprev
-								OR = {
-									has_defensive_pact = prev
-									is_in_federation_with = prev
-									is_guaranteeing = prev
-								}
-								relative_power = {
-									who = prevprev
-									category = fleet
-									value = overwhelming
-								}
-							}
-						}
-						NOT = {
-							count_potential_war_participants = {
-								attacker = prev
-								defender = this
-								side = this
-								limit = {
-									OR = {
-										relative_power = {
-											who = prev
-											category = fleet
-											value = equivalent
-										}
-										relative_power = {
-											who = prev
-											category = fleet
-											value = superior
-										}
-									}
-								}
-								count > 2
-							}
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = dpe_militarist_protests_incident_possible
-					days = 31
-				}
-				
-				if = {
-					limit = {
-						is_ai = yes
-						any_relation = {
-							is_ai = no
-							NOT = { has_country_flag = dpe_recent_militarists_incident }
-							has_federation = no
-							has_policy_flag = unrestricted_wars
-							prev = {
-								OR = {
-									is_rival = prev
-									is_hostile_to = prev
-									is_domineering_to = prev
-								}
-								NOT = { has_truce = prev }
-							}
-							any_owned_planet = {
-								is_neighbor_of = prevprev
-							}
-							NOT = {
-								relative_power = {
-									who = prev
-									category = fleet
-									value = overwhelming
-								}
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = dpe_militarists_incident_secondary_possible
-						days = 31
-					}
-				}			
-			}
-			#Military Coup
-			if = {
-				limit = {
-
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-						has_ethic = ethic_fanatic_egalitarian
-					}
-					is_at_war = no
-					is_subject = no
-					has_faction = imperialist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-					}
-					NOT = {
-						any_country = {
-							OR = {
-								is_hostile_to = prev
-								is_rival = prev
-								is_domineering_to = prev
-							}
-							relative_power = {
-								who = prev
-								category = fleet
-								value = overwhelming
-							}
-						}
-					}
-					if = {
-						limit = {
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
-						}
-						used_naval_capacity_percent > 1
-							
-						else = { used_naval_capacity_percent > 1.2 }
-					}
-					any_owned_leader = {
-						NOT = { is_same_value = prev.ruler }
-						leader_of_faction = imperialist
-					}
-					exists = ruler
-				}
-				set_timed_country_flag = {
-					flag = dpe_military_coup_possible
-					days = 31
-				}
-			}
-
-			#Unity Planets
-			if = {
-				limit = {
-
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						has_country_flag = dpe_recent_unity_planet
-					}
-				}
-				every_owned_planet = {
-					limit = {
-						unrest < 1
-						NOT = { has_planet_flag = dpe_unity_planet }
-						count_pops = {
-							limit = { species = { pops_have_happiness = yes } }
-							count > 7
-						}
-						pop_percentage = {
-							limit = { happiness > 0.55 }
-							percentage > 0.75
-						}
-					}
-					set_timed_planet_flag = {
-						flag = dpe_potential_unity_planet
-					days = 31
-					}
-				}
-			}
-
-			#Leader Debates
-			
-			if = {
-				limit = {
-
-					OR = {
-						has_authority = auth_democratic
-						has_authority = auth_oligarchic
-					}
-					NOT = { has_country_flag = dpe_recent_ruler_debate }
-					exists = ruler
-					count_pop_factions = {
-						limit = {
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-						count > 0
-					}
-				}
-				set_timed_country_flag = {
-				flag = dpe_can_have_ruler_debate
-				days = 31
-				}
-			}
-
-			#Spiritualist Mission
-			if = {
-				limit = {
-
-					years_passed > 20
-					
-					NOT = { has_country_flag = dpe_recent_spiritualist_mission }
-					
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-			#			count_pop_factions = {
-			#				limit = {
-			#					is_pop_faction_type = traditionalist
-			#					support > 0.15
-			#					pop_percentage = {
-			#						limit = { happiness > 0.55 }
-			#						percentage > 0.75
-			#					}
-			#				}
-			#				count = 1
-			#			}
-					}
-					NOR = { #just in case
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-						has_civic = civic_fanatic_purifiers
-					}
-					
-					any_neighbor_country = {
-						is_country_type = default
-						has_communications = prev
-						NOR = {
-							is_same_species = prev
-							is_at_war_with = prev
-
-							has_civic = civic_fanatic_purifiers
-
-							has_defensive_pact = prev
-							is_in_federation_with = prev
-							
-							has_ethic = ethic_gestalt_consciousness
-							has_ethic = ethic_spiritualist
-							has_ethic = ethic_fanatic_spiritualist
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = traditionalist
-									support > 0.2
-								}
-								count = 1
-							}
-							
-							is_hostile_to = prev
-							is_rival = prev
-							
-							has_country_flag = dpe_recent_spiritualist_mission_received
-							has_relation_flag = {
-								flag = dpe_spiritualist_mission_received
-								who = prev
-							}
-						}
-					}
-				}
-				set_timed_country_flag = {
-					flag = dpe_spiritualist_mission_possible
-					days = 31
+					days = 365
 				}
 			}
 		}
 	}
 }
-
 
 
 
@@ -2104,34 +1898,41 @@ country_event = {
 
 
 
-#converted from a 50 mtth into a monthly pulse
+#converted from a 50 mtth into a monthly pulse (and back)
 pop_event = {
 	id = cc_events_performance.6
 	hide_window = yes
-	is_triggered_only = yes
+	
+	mean_time_to_happen = { years = 20 }
+
+	trigger = {
+		has_pop_flag = cc_literally_xenophile
+		exists = owner
+		owner = { has_country_flag = cc_eventperf_has_minorities }
+		species = { pops_have_happiness = yes }
+	}
 	
 	immediate = {
 		random_list = {
-			115 = {
-				pop_event = { id = cc_events_mod.10 }
+			100 = { pop_event = { id = cc_events_mod.10 } }
+			100 = {
 				modifier = {
-					factor = 1.25
+					factor = 0.75
 					owner = { has_country_flag = cc_has_had_interspecies_marriage }
 				}
 				modifier = {
-					factor = 0.5
+					factor = 2
 					has_ethic = ethic_xenophobe
 				}
 				modifier = {
-					factor = 2
+					factor = 0.5
 					has_ethic = ethic_xenophile
 				}
 				modifier = {
-					factor = 1.25
+					factor = 0.75
 					owner = { has_country_flag = cc_eventperf_founder_is_minority }
 				}
-			}			
-			99885 = { }
+			}
 		}
 	}
 }
@@ -2141,8 +1942,9 @@ pop_event = {
 pop_event = {
 	id = cc_events_performance.7
 	hide_window = yes
-	is_triggered_only = yes
 	
+	mean_time_to_happen = { years = 25 }
+
 	trigger = {
 		species = { pops_have_happiness = yes }
 		has_pop_flag = cc_literally_xenophile_manifested
@@ -2152,18 +1954,19 @@ pop_event = {
 	
 	immediate = {
 		random_list = {
-			115 = {
+			1 = {
 				pop_event = { id = cc_events_mod.11 }
+			}			
+			1 = {
 				modifier = {
-					factor = 0.5
+					factor = 2
 					owner = { has_policy_flag = allows_im }
 				}
 				modifier = {
-					factor = 2
+					factor = 0.25
 					owner = { NOT = { has_country_flag = cc_eventperf_a_small_minority } }
 				}
-			}			
-			99885 = { }
+			}
 		}
 	}
 }
@@ -2229,31 +2032,130 @@ country_event = {
 	
 
 	
-planet_event = {
+country_event = {
 	id = cc_events_performance.9
 	hide_window = yes
 
-	trigger = {
-		has_owner = yes
-		exists = root.owner
-		has_planet_flag = cc_eventperf_pilgrimage_candidate
-		
-		exists = controller
-		controller = { is_same_value = root.owner }
-		
-		has_orbital_bombardment = no
-	}
-	
 	mean_time_to_happen = {
 		years = 80
-		
-#		modifier = {
-#			factor = 0.8
-#			has_planet_flag = ccrebel_perf_spiritualists_3
-#		}
 	}
-	
-	immediate = { planet_event = { id = cc_colony_events.100 } }
+
+	trigger = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_faction = traditionalist
+
+		if = {
+			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
+			any_owned_planet = {
+				has_planet_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_planet_flag = cc_colony_story }
+				has_orbital_bombardment = no
+				exists = controller
+				controller = { is_same_value = root }
+				root = {
+					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
+						distance = {
+							source = prevprev
+							min_distance = 0
+							max_distance = 75
+						}
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+					}
+				}
+			}
+			else = {
+				any_owned_planet = {
+					has_planet_flag = ccrebel_perf_spiritualists_2
+					NOT = { has_planet_flag = cc_colony_story }
+					has_orbital_bombardment = no
+					exists = controller
+					controller = { is_same_value = root }
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							distance = {
+								source = prevprev
+								min_distance = 0
+								max_distance = 75
+							}
+							any_owned_pop = { has_ethic = ethic_spiritualist }
+						}	
+						NOT = {
+							any_owned_planet = {
+								distance = {
+									source = prevprev
+									min_distance = 0
+									max_distance = 120
+								}
+								has_modifier = cc_religious_centre
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = ccrebel_perf_spiritualists_2
+					NOT = { has_planet_flag = cc_colony_story }
+					has_orbital_bombardment = no
+					exists = controller
+					controller = { is_same_value = root }
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							distance = {
+								source = prevprev
+								min_distance = 0
+								max_distance = 75
+							}
+							any_owned_pop = { has_ethic = ethic_spiritualist }
+						}
+					}
+				}
+				planet_event = { id = cc_colony_events.100 }
+			}
+			else = {
+				random_owned_planet = {
+					limit = {
+						has_planet_flag = ccrebel_perf_spiritualists_2
+						NOT = { has_planet_flag = cc_colony_story }
+						has_orbital_bombardment = no
+						exists = controller
+						controller = { is_same_value = root }
+						root = {
+							any_owned_planet = {
+								NOT = { is_same_value = prevprev }
+								distance = {
+									source = prevprev
+									min_distance = 0
+									max_distance = 75
+								}
+								any_owned_pop = { has_ethic = ethic_spiritualist }
+							}	
+							NOT = {
+								any_owned_planet = {
+									distance = {
+										source = prevprev
+										min_distance = 0
+										max_distance = 120
+									}
+									has_modifier = cc_religious_centre
+								}
+							}
+						}
+					}
+					planet_event = { id = cc_colony_events.100 }
+				}
+			}
+		}
+	}
 }
 
 country_event = {
@@ -2264,6 +2166,36 @@ country_event = {
 		has_country_flag = dpe_can_have_charity_scandal
 	}
 
+	#charity scandal
+	if = {
+		limit = {
+			NOT = { has_country_flag = dpe_recent_charity_scandal }
+			OR = {
+				AND = {
+					has_ethic = ethic_fanatic_materialist
+					NOT = { has_ethic = ethic_egalitarian }
+				}
+				has_ethic = ethic_fanatic_authoritarian
+				AND = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_authoritarian
+				}
+			}
+			exists = ruler
+			ruler = { NOT = { leader_of_faction = totalitarian } }
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = progressive
+					support > 0.1
+					pop_percentage = {
+						limit = { happiness > 0.5 }
+						percentage > 0.74
+					}
+				}
+				count = 0
+			}
+		}
+	}
 	mean_time_to_happen = {
 		years = 80
 		
@@ -2294,9 +2226,22 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_country_flag = dpe_escaped_slave_ruler_possible
+		years_passed > 10
+
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		allows_slavery = yes
+		
+		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
+		
+		NOT = { has_authority = auth_imperial }
+		exists = ruler
+		
+		any_owned_pop = {
+			is_same_species = root.ruler
+			is_enslaved = yes
+		}
 	}
-	
+			
 	mean_time_to_happen = { years = 115 }
 	
 	immediate = {
@@ -2658,22 +2603,30 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 }
 
 
-#Literally xenophile - replacing mtth
+#Literally xenophile
 pop_event = {
 	id = cc_events_performance.20
 	hide_window = yes
-	is_triggered_only = yes
 	
+	trigger = {
+		exists = owner
+		owner = { has_policy_flag = bans_im_completely }
+		is_valid_xenophilia_refugee_pop = yes
+	}
+
+	mean_time_to_happen = { years = 30 }
+
 	immediate = {
 		random_list = {
-			165 = {
+			100 = {
 				pop_event = { id = cc_events_mod.13 }
+			}			
+			30 = {
 				modifier = {
-					factor = 1.33
+					factor = 0
 					NOT = { is_same_species = owner }
 				}
-			}			
-			99835 = { }
+			}
 		}
 	}
 }
@@ -2681,18 +2634,30 @@ pop_event = {
 pop_event = {
 	id = cc_events_performance.21
 	hide_window = yes
-	is_triggered_only = yes
+	mean_time_to_happen = { years = 38 }
+
+	trigger = {
+		has_modifier = cc_secret_xenophile
+
+		exists = owner
+		owner = {
+			has_policy_flag = bans_im_completely
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_policy_flag = purge_allowed
+			}
+		}
+	}
 	
 	immediate = {
 		random_list = {
-			115 = {
-				pop_event = { id = cc_events_mod.14 }
+			80 = { pop_event = { id = cc_events_mod.14 } }
+			20 = {
 				modifier = {
-					factor = 1.33
-					NOT = { is_same_species = owner }
+					factor = 0
+					is_same_species = owner
 				}
-			}			
-			99885 = { }
+			}
 		}
 	}
 }
@@ -2701,30 +2666,80 @@ pop_event = {
 pop_event = {
 	id = cc_events_performance.22
 	hide_window = yes
-	is_triggered_only = yes
+	mean_time_to_happen = { years = 25 }
+
+	trigger = {
+		exists = owner
+		owner = { has_edict = cc_thought_police }
+		
+		is_enslaved = no
+		happiness < 0.4
+		if = {
+			limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
+			NOT = { has_ethic = ethic_authoritarian }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_spiritualist } }
+			NOT = { has_ethic = ethic_spiritualist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_materialist } }
+			NOT = { has_ethic = ethic_materialist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_pacifist } }
+			NOT = { has_ethic = ethic_pacifist }
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+			}
+			NOT = { has_ethic = ethic_militarist }
+		}
+		if = {
+			limit = { owner = { has_ethic = ethic_xenophile } }
+			NOT = { has_ethic = ethic_xenophile }
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			NOT = { has_ethic = ethic_xenophobe }
+		}
+	}
 
 	immediate = {
 		random_list = {
-			115 = {
-				pop_event = { id = cc_thought_police.1 }
+			100 = { pop_event = { id = cc_thought_police.1 } }
+
+			100 = {
 				modifier = {
-					factor = 1.25
+					factor = 0.75
 					has_ethic = ethic_egalitarian
 				}
 				modifier = {
-					factor = 1.25
+					factor = 0.67
 					happiness < 0.3
 				}
 				modifier = {
-					factor = 1.25
+					factor = 0.67
 					happiness < 0.2
 				}
 				modifier = {
-					factor = 1.25
+					factor = 0
 					happiness < 0.1
 				}
-			}			
-			99885 = { }
+			}
 		}
 	}
 }
