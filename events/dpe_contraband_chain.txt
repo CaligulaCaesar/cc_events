@@ -1941,7 +1941,7 @@ country_event = {
 					root = {
 						has_relation_flag = {
 							who = prev
-							modifier = dpe_drug_cartels_ignore
+							flag = dpe_drug_cartels_ignore
 						}
 					}
 				}
@@ -1950,7 +1950,7 @@ country_event = {
 				has_modifier = dpe_contraband_crisis
 				has_relation_flag = {
 					who = root
-					modifier = dpe_drug_cartels_ignore
+					flag = dpe_drug_cartels_ignore
 				}
 			}
 		}
@@ -1963,33 +1963,33 @@ country_event = {
 					has_modifier = dpe_contraband_crisis
 					has_relation_flag = {
 						who = root
-						modifier = dpe_drug_cartels_ignore
+						flag = dpe_drug_cartels_ignore
 					}
 				}
 			}
-		}
-		random_country = {
-			limit = {
-				has_modifier = dpe_contraband_crisis
-				has_relation_flag = {
-					who = root
-					modifier = dpe_drug_cartels_ignore
-				}
-			}
-			country_event = { id = dpe_contraband_event.999 }
-		}
-
-		else = {
 			random_country = {
 				limit = {
-					root = {
-						has_relation_flag = {
-							who = prev
-							modifier = dpe_drug_cartels_ignore
-						}
+					has_modifier = dpe_contraband_crisis
+					has_relation_flag = {
+						who = root
+						flag = dpe_drug_cartels_ignore
 					}
 				}
-				country_event = { id = dpe_contraband_event.9991 }
+				country_event = { id = dpe_contraband_event.999 }
+			}
+
+			else = {
+				random_country = {
+					limit = {
+						root = {
+							has_relation_flag = {
+								who = prev
+								flag = dpe_drug_cartels_ignore
+							}
+						}
+					}
+					country_event = { id = dpe_contraband_event.9991 }
+				}
 			}
 		}
 	}
