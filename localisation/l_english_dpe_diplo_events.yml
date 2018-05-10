@@ -679,7 +679,7 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
 
 #Contraband Chain 
  dpe_contraband_event.1.name:0 "Smuggling Rings"
- dpe_contraband_event.1.desc:0 "Our intelligence services have discovered that a collection of our citizens have been smuggling goods into the [dpe_neighbour.GetName]. The goods they are smuggling are perfectly legal within our own realm, but their effect on [dpe_neighbor.GetSpeciesAdj] biology is that of a moderately effective hallucinatory drug - the [dpe_neighbour.GetSpeciesAdj] government has therefore placed very harsh restrictions on them.\n\nSome of the smugglers are average citizens running rings with individuals they know on the other side, others are large corporations that sell legitimate goods along with contraband. Combined, these groups earn quite a bit of money and contribute to the economy. How should we deal with them?"
+ dpe_contraband_event.1.desc:0 "Our law enforcement services have discovered that a collection of our citizens have been smuggling goods into the [dpe_neighbour.GetName]. The goods they are smuggling are perfectly legal within our own realm, but their effect on [dpe_neighbor.GetSpeciesAdj] biology is that of a moderately effective hallucinatory drug - the [dpe_neighbour.GetSpeciesAdj] government has therefore placed very harsh restrictions on them.\n\nSome of the smugglers are average citizens running rings with individuals they know on the other side, others are large corporations that sell legitimate goods along with contraband. Combined, these groups earn quite a bit of money and contribute to the economy. How should we deal with them?"
  dpe_contraband_event.1.A:0 "Crack down on them. We can't jeopardize our foreign relations."
  dpe_contraband_event.1.B:0 "Turn a blind eye and allow the economy to reap the benefits."
  dpe_contraband_event.1.B.tooltip:0 "The [dpe_neighbor.GetName] will be displeased if this is discovered."
@@ -695,6 +695,12 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.2.A:0 "Legalise the drug and tax it."
  dpe_contraband_event.2.B:0 "Begin cracking down! We will not tolerate this flagrant disregard for the law."
  
+ dpe_contraband_event.21.name:0 "The [from.GetSpeciesNamePlural] Legalise our Drugs"
+ dpe_contraband_event.21.desc.tolerate:0 "The [from.GetName] has legalised the contraband goods that our citizens were smuggling into their territory. Our stance of allowing it to continue has been vindicated."
+ dpe_contraband_event.21.desc.extort:0 "The [from.GetName] has legalised the contraband goods that our citizens were smuggling into their territory, a trade through which we had been extorting significant revenues. Now that the threat of getting on the wrong side of the law no longer exists, our traders are refusing to pay us the money agreed, and have let it be known that they will inform the [from.GetSpeciesNamePlural] of our transgressions if we insist."
+ dpe_contraband_event.21.option:0 "At least we have one more legitimate export option now."
+
+ dpe_drug_trade_legit:0 "Legitimate Drugs Trade"
  dpe_cracked_down_on_drugs_opinion:0 "Cracked Down on Smugglers for us"
  dpe_drug_cartels_crackdown:0 "Cracking down on Smugglers"
  dpe_taxing_drugs:0 "Taxing Legalised Drugs"
@@ -707,3 +713,16 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_drug_cartels_tolerate_desc:0 "The government is happy to allow citizens to enrich themselves by trading drugs to foreigners."
  dpe_drug_cartels_extort:0 "Supporting Smuggling Rings"
  dpe_drug_cartels_extort_desc:0 "The government is happy to support drug rings in return for money it extorts from them."
+ 
+ dpe_contraband_event.4.name:0 "Adopt a more Proactive Approach?"
+ dpe_contraband_event.4.desc:0 "Our law enforcement agencies have been working tirelessly trying to find out where all of these illegal goods are coming from. Thus far, we haven't had much success, so the head of our internal security agency has proposed that we take a more proactive approach: Instead of simply investigating the cases we uncover, they suggest that law enforcement agents detain anyone believed to be involved in the trade. This would include acquaintances, coworkers, family, and others who interact with suspects on a regular basis. This would be setting a very radical precedent for our law enforcement and intelligence agencies. Should they proceed?"
+ dpe_contraband_event.4.A:0 "Do it! We must stop these smugglers at all costs!"
+ dpe_contraband_event.4.B:0 "This would be a step too far. We will find the smugglers some other way."
+ dpe_contraband_event.4.B.tooltip:0 "It will be harder to track down the source of the drugs."
+ 
+ dpe_contraband_event.45.name:0 "Proactive Screening for Drugs"
+ dpe_contraband_event.45.desc:0 "After struggling for some time to uncover the origins of the illegal goods, our law enforcement agencies have begun detaining anyone believed to be involved in the trade - including acquaintances, coworkers, family, and others who interact with suspects on a regular basis. Our law enforcement agencies are confident that this will allow us to track down their source quickly, though some citizens are perturbed at the severity of this measure."
+ dpe_contraband_event.45.tooltip:0 "One in five non-authoritarian citizen £pops  gain the modifier $dpe_raids_worry$, giving §R+100%§! egalitarian attraction."
+
+ dpe_contraband_stop_and_search_faction:0 "Excesses of Security Services"
+ dpe_raids_worry:0 "Excesses of Security Services"
