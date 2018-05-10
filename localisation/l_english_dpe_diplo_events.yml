@@ -530,7 +530,7 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenophile_mission.121.B:0 "(Lie) Of course we will stop spying on you."
  dpe_xenophile_mission.continue_spying:0 "We will secretly continue espionage operations."
  
- dpe_xenophile_mission.1211.name:0 "The [from.GetSpeciesAdj] Response"
+ dpe_xenophile_mission.1211.name:0 "$dpe_title_response$"
  dpe_xenophile_mission.1211.desc:0 "We apologise for this incident, it will not recur."
  dpe_xenophile_mission.1211.option:0 "It had better not!"
  
@@ -595,7 +595,7 @@ dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
  dpe_xenophile_mission.18.desc:0 "Our delegation has been fascinated by a certain element of [from.GetSpeciesAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. However, the [from.GetSpeciesNamePlural] have refused to allow her to send us her work, claiming that this was not part of the agreement."
  dpe_xenophile_mission.18.A:0 "Attempt to smuggle her work out."
 
- dpe_xenophile_mission.171.name:0 "The [from.GetSpeciesAdj] Response"
+ dpe_xenophile_mission.171.name:0 "$dpe_title_response$"
  dpe_xenophile_mission.171.desc:0 "Here are our samples, [root.GetSpeciesName]."
  dpe_xenophile_mission.171.option:0 "Thanks a lot!"
  
@@ -726,3 +726,51 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
 
  dpe_contraband_stop_and_search_faction:0 "Excesses of Security Services"
  dpe_raids_worry:0 "Excesses of Security Services"
+ 
+ dpe_contraband_closed_borders:0 "Blamed us for Drugs Crisis"
+ dpe_contraband_source_of_drugs:0 "Drug Smuggling"
+ 
+ dpe_contraband_event.51.name:0 "Drug Source tracked to the [from.GetName]"
+ dpe_contraband_event.51.desc:0 "Our agents have been interrogating suspects thought to be involved in the contraband smuggling, and have uncovered a very important piece of evidence. The agents managed to get a lead on a group of smugglers operating near one of our border worlds. After setting up an ambush, they managed to disable one of the smuggler vessels. As they boarded the ship, they were met with a brief firefight, but quickly overtook the bandits. To their shock, half of those involved were [dpe_drugs_country.GetSpeciesAdj] citizens! These rogues were brought to a detention center for questioning, where they admitted that the [dpe_drugs_country.GetName] was allowing these smuggler rings to operate as long as they gave a percentage to the government. How shall we respond?"
+ dpe_contraband_event.51.A:0 "Unacceptable! Summon their ambassador, we are going to have words."
+ dpe_contraband_event.51.B:0 "Show restraint - we do not want a diplomatic incident."
+ dpe_contraband_event.51.B.tooltip:0 "Avoid discussing the politics of the event, and quietly contact the [dpe_drugs_country.GetSpeciesAdj] ambassador to offer their citizens’ deportation in return for action."
+
+ dpe_contraband_event.52.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.52.desc:0 "The investigation into the source of the contraband products has been making slow progress, but a breakthrough has finally been made: Our customs officials have discovered a large quantity of hallucinatory drugs hidden in falsely marked crates amidst a massive shipment of goods coming from the [dpe_drugs_country.GetName], which a major transnational [dpe_drugs_country.GetSpeciesAdj] corporation had been importing into our country. Further investigation has shown that the drug has a considerably lower impact on [dpe_drugs_country.GetSpeciesNamePlural], and is consequently commonplace in their country. Our intelligence and border security departments therefore suspect that this is not an isolated incident, and have begun a thorough audit of everything crossing the border from them. How should we respond? "
+ dpe_contraband_event.52.A:0 "They will rue the day that they decided to profit on the suffering of our citizens!"
+ dpe_contraband_event.52.A.tooltip:0 "Seize the corporation’s assets and implement harsh border controls."
+ dpe_contraband_event.52.B:0 "Show restraint - we do not want an incident."
+ dpe_contraband_event.52.B.tooltip:0 "Begin trialling those involved in the drugs trade, but do not make accusations of the [dpe_drugs_country.GetSpeciesAdj] government."
+ dpe_contraband_event.52.C:0 "Contact their ambassador and seek a diplomatic solution."
+
+ dpe_contraband_event.53.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.53.desc:0 "Our law enforcement agencies have found a lead on the source of the drugs that have flooded into our country. They began sectioning off areas where reports of drug use had been concentrated, and systematically interrogated anyone deemed suspect. By doing this, they caught a rather cowardly dealer who was willing to spill the beans in exchange for a lighter punishment. Fortuitous carelessness on the part of the drug cartel meant that his information allowed us to trace the identities of the smugglers. To our surprise, most of them are [dpe_drugs_country.GetSpeciesNamePlural] - in fact, they have been smuggling the drugs from the [dpe_drugs_country.GetName], where they are legal.\n\nOur subsequent investigations have uncovered no evidence that the [dpe_drugs_country.GetSpeciesAdj] government is complicit in the smuggling rings, but our intelligence agency believes they probably knew of their citizens’ activities but failed to act. What is our next step? "
+ dpe_contraband_event.53.A:0 "Take immediate action and close the border."
+ dpe_contraband_event.53.B:0 "Request [from.GetSpeciesAdj] help in confronting the drug problem together."
+ dpe_contraband_event.53.B.tooltip:0 "Tacitly ignore our intelligence agency’s belief that the [dpe_drugs_country.GetSpeciesAdj] government had known about this, and seek a diplomatic solution."
+
+ dpe_contraband_event.54.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.54.desc:0 "Although the investigation has been slow, it has made some progress. We’ve been rounding up people caught selling or buying the drugs, and through their interrogations we have started to piece together a picture of what’s going on. It seems like regular citizens in a neighboring empire, the [dpe_drugs_country.GetName], have started selling the goods to rogue elements of our society. These goods are legal in their misguided empire, so they have easy access to the goods. So far, we have no hard evidence that the government is complicit in this, but many of our advisors suspect that they can’t have been totally ignorant of their citizens’ activities. How should we proceed?"
+ dpe_contraband_event.54.A:0 "Introduce more stringent border controls."
+ dpe_contraband_event.54.B:0 "Extend an offer to fight these smugglers together!"
+
+ dpe_contraband_event.61.name:0 "The [from.GetSpeciesNamePlural] Track their Drugs to Us!"
+ dpe_contraband_event.61.desc:0 "We have seen through your scheme, [root.GetSpeciesName]. No more will you flood our country with illegal drugs! May your name be cursed by all who respect justice and the rule of law!"
+ dpe_contraband_event.61.option:0 "We are not sorry."
+ 
+ dpe_contraband_event.62.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.62.desc:0 "[root.GetSpeciesName], we have caught wind of a vicious scheme by your government to enrich itself by flooding our country with drugs. Now, we are loath to believe that those we would consider to be our friends would do such a thing! If you will help us tackle this problem, we will not pursue these allegations further - nor allow them to be leaked to others."
+ dpe_contraband_event.62.A:0 "Of course we will help you."
+ dpe_contraband_event.62.B:0 "We will not help you, [from.GetSpeciesName]."
+ dpe_contraband_event.62.B.tooltip:0 "The [from.GetSpeciesNamePlural] will be very displeased."
+
+ dpe_contraband_event.621.name:0 "$dpe_title_response$"
+ dpe_contraband_event.621.desc:0 "Of course we will help you, [root.GetSpeciesName]."
+ dpe_contraband_event.621.A:0 "You have our thanks."
+
+ dpe_contraband_event.622.name:0 "$dpe_title_response$"
+ dpe_contraband_event.622.desc:0 "We will not help you, [root.GetSpeciesName]."
+ dpe_contraband_event.622.A:0 "Then you leave us with no choice."
+ 
+ 

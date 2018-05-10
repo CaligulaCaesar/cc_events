@@ -397,3 +397,29 @@ dpe_cracked_down_on_drugs_opinion = {
 		base = 2
 	}
 }
+
+
+
+dpe_contraband_closed_borders = {
+	opinion = {
+		base = -25
+	}
+	decay = {
+		base = 2
+	}
+	accumulative = yes
+	
+	min = -100
+}
+
+dpe_contraband_source_of_drugs = {
+	opinion = {
+		base = -25
+	}
+	decay = {
+		base = 2
+	}
+	accumulative = yes
+	
+	min = -100
+}
