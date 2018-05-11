@@ -1509,15 +1509,78 @@ event = {
 				}
 			}
 		}
+		
 		every_playable_country = {
-			if = {
-				limit = {
+			country_event = { id = cc_events_performance.11112 days = 1 random = 3 }
+		}
+	}
+}
 
+
+country_event = {
+	id = cc_events_performance.1999
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						pop_percentage = {
+							percentage < 0.4
+							limit = { is_same_species = root }
+						}
+						any_owned_pop = {
+							NOR = {
+								is_subspecies = root
+								is_same_species = root
+							}
+							is_robot_pop = no
+							species = { pops_have_happiness = yes }
+							OR = {
+								has_citizenship_type = { type = citizenship_full }
+								has_citizenship_type = { type = citizenship_limited }
+								has_citizenship_type = { type = citizenship_caste_system }
+								has_citizenship_type = { type = citizenship_caste_system_limited }
+							}
+						}
+					}
+				
 					any_owned_pop = {
 						NOR = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
+						is_robot_pop = no
+						species = { pops_have_happiness = yes }
+						OR = {
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
+						}
+						root = {
+							pop_percentage = {
+								percentage > 0.1
+								limit = { is_same_species = prev }
+							}
+						}
+					}
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_minority
+				days = 365
+			}
+			if = {
+				limit = {
+					any_owned_pop = {
+						NOR = {
+							is_subspecies = prev
+							is_same_species = prev
+						}
+						is_robot_pop = no
 						species = { pops_have_happiness = yes }
 						OR = {
 							has_citizenship_type = { type = citizenship_full }
@@ -1526,62 +1589,45 @@ event = {
 							has_citizenship_type = { type = citizenship_caste_system_limited }
 						}
 						prev = {
-							OR = {
-								pop_percentage = {
-									percentage > 0.15
-									limit = { is_same_species = prev }
-								}
-								AND = {
-									num_owned_planets > 25
-									pop_percentage = {
-										percentage > 0.05
-										limit = { is_same_species = prev }
-									}
-									pop_percentage = {
-										percentage < 0.4
-										limit = {
-											OR = {
-												is_same_species = prevprev
-												is_subspecies = prevprev
-											}
-										}
-									}
-								}
+							pop_percentage = {
+								percentage > 0.2
+								limit = { is_same_species = prev }
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_eventperf_has_minority
+					flag = cc_eventperf_has_large_minority
 					days = 365
 				}
-				if = {
-					limit = {
-						any_owned_pop = {
-							NOR = {
-								is_subspecies = prev
-								is_same_species = prev
-							}
-							species = { pops_have_happiness = yes }
-							OR = {
-								has_citizenship_type = { type = citizenship_full }
-								has_citizenship_type = { type = citizenship_limited }
-								has_citizenship_type = { type = citizenship_caste_system }
-								has_citizenship_type = { type = citizenship_caste_system_limited }
-							}
-							prev = {
-								pop_percentage = {
-									percentage > 0.25
-									limit = { is_same_species = prev }
-								}
-							}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_pop = {
+					NOR = {
+						is_subspecies = prev
+						is_same_species = prev
+					}
+					is_robot_pop = no
+					species = { pops_have_happiness = yes }
+					OR = {
+						has_citizenship_type = { type = citizenship_full }
+						has_citizenship_type = { type = citizenship_limited }
+						has_citizenship_type = { type = citizenship_caste_system }
+						has_citizenship_type = { type = citizenship_caste_system_limited }
+					}
+					owner = {
+						pop_percentage = {
+							percentage > 0.05
+							limit = { is_same_species = prev }
 						}
 					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_has_large_minority
-						days = 365
-					}
 				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_a_small_minority
+				days = 365
 			}
 			if = {
 				limit = {
@@ -1600,81 +1646,73 @@ event = {
 						}
 						owner = {
 							pop_percentage = {
-								percentage > 0.05
+								percentage > 0.2
 								limit = { is_same_species = prev }
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_eventperf_a_small_minority
+					flag = cc_eventperf_has_minority
 					days = 365
 				}
 				if = {
 					limit = {
-						any_owned_pop = {
-							NOR = {
-								is_subspecies = prev
-								is_same_species = prev
-							}
-							is_robot_pop = no
-							species = { pops_have_happiness = yes }
-							OR = {
-								has_citizenship_type = { type = citizenship_full }
-								has_citizenship_type = { type = citizenship_limited }
-								has_citizenship_type = { type = citizenship_caste_system }
-								has_citizenship_type = { type = citizenship_caste_system_limited }
-							}
-							owner = {
-								pop_percentage = {
-									percentage > 0.2
-									limit = { is_same_species = prev }
-								}
-							}
+						pop_percentage = {
+							percentage < 0.4
+							limit = { is_same_species = owner_species }
 						}
 					}
 					set_timed_country_flag = {
-						flag = cc_eventperf_has_minority
+						flag = cc_eventperf_founder_is_minority
 						days = 365
 					}
-					if = {
-						limit = {
-							pop_percentage = {
-								percentage < 0.4
-								limit = { is_same_species = owner_species }
-							}
+				}
+			}
+		}
+		if = {
+			limit = {
+
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+
+				pop_percentage = {
+					percentage > 0.18
+					limit = { has_ethic = ethic_xenophobe }
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_eventperf_has_lots_of_xenophobes_min
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+
+
+				pop_percentage = {
+					percentage > 0.02
+					limit = {
+						OR = {
+							has_citizenship_type = { type = citizenship_full }
+							has_citizenship_type = { type = citizenship_limited }
+							has_citizenship_type = { type = citizenship_caste_system }
+							has_citizenship_type = { type = citizenship_caste_system_limited }
 						}
-						set_timed_country_flag = {
-							flag = cc_eventperf_founder_is_minority
-							days = 365
-						}
+						has_pop_flag = cc_literally_xenophile_manifested
 					}
 				}
 			}
-			if = {
-				limit = {
-
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-						
-					pop_percentage = {
-						percentage > 0.18
-						limit = { has_ethic = ethic_xenophobe }
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_eventperf_has_lots_of_xenophobes_min
-					days = 365
-				}
+			set_timed_country_flag = {
+				flag = cc_eventperf_literally_xenophiles
+				days = 365
 			}
 			if = {
 				limit = {
-
-					
 					pop_percentage = {
-						percentage > 0.02
+						percentage > 0.04
 						limit = {
 							OR = {
 								has_citizenship_type = { type = citizenship_full }
@@ -1687,109 +1725,89 @@ event = {
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_eventperf_literally_xenophiles
-					days = 365
-				}
-				if = {
-					limit = {
-						pop_percentage = {
-							percentage > 0.04
-							limit = {
-								OR = {
-									has_citizenship_type = { type = citizenship_full }
-									has_citizenship_type = { type = citizenship_limited }
-									has_citizenship_type = { type = citizenship_caste_system }
-									has_citizenship_type = { type = citizenship_caste_system_limited }
-								}
-								has_pop_flag = cc_literally_xenophile_manifested
-							}
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_lots_literally_xenophiles
-						days = 365
-					}
-				}
-			}
-			
-			if = {
-				limit = {
-
-					count_pop_factions = {
-						limit = {	
-							is_pop_faction_type = traditionalist
-							support > 0.1
-						}
-						count = 1
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_enough_spiritualists
+					flag = cc_eventperf_lots_literally_xenophiles
 					days = 365
 				}
 			}
+		}
+
+		if = {
+			limit = {
+
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = traditionalist
+						support > 0.1
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_enough_spiritualists
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = technologist
+						support > 0.33
+					}
+					count = 1
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_many_materialists
+				days = 365
+			}
 			if = {
 				limit = {
-
 					count_pop_factions = {
 						limit = {	
 							is_pop_faction_type = technologist
-							support > 0.33
+							support > 0.5
 						}
 						count = 1
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_many_materialists
-					days = 365
-				}
-				if = {
-					limit = {
-						count_pop_factions = {
-							limit = {	
-								is_pop_faction_type = technologist
-								support > 0.5
-							}
-							count = 1
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_lots_materialists
-						days = 365
-					}
-				}
-			}
-			if = {
-				limit = {
-
-					count_pop_factions = {
-						limit = {	
-							is_pop_faction_type = progressive
-							support > 0.1
-						}
-						count = 1
-					}
-				}
-				set_timed_country_flag = {
-					flag = cc_enough_egalitarians
+					flag = cc_lots_materialists
 					days = 365
 				}
 			}
-			if = {
-				limit = {
+		}
+		if = {
+			limit = {
 
-					count_pop_factions = {
-						limit = {	
-							is_pop_faction_type = totalitarian
-							support > 0.4
-						}
-						count = 1
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = progressive
+						support > 0.1
 					}
+					count = 1
 				}
-				set_timed_country_flag = {
-					flag = cc_many2_authoritarians
-					days = 365
+			}
+			set_timed_country_flag = {
+				flag = cc_enough_egalitarians
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+
+				count_pop_factions = {
+					limit = {	
+						is_pop_faction_type = totalitarian
+						support > 0.4
+					}
+					count = 1
 				}
+			}
+			set_timed_country_flag = {
+				flag = cc_many2_authoritarians
+				days = 365
 			}
 		}
 	}
