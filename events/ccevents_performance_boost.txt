@@ -1821,7 +1821,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 80
+		years = 60
 		
 		modifier = {
 			factor = 0.8
@@ -2037,7 +2037,7 @@ country_event = {
 	hide_window = yes
 
 	mean_time_to_happen = {
-		years = 80
+		years = 70
 	}
 
 	trigger = {
@@ -2194,7 +2194,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		years = 80
+		years = 70
 		
 #		modifier = {
 #			factor = 0.75
@@ -2239,7 +2239,7 @@ country_event = {
 		}
 	}
 			
-	mean_time_to_happen = { years = 115 }
+	mean_time_to_happen = { years = 100 }
 	
 	immediate = {
 		country_event = { id = dpe_scandal.10 }
@@ -2256,7 +2256,7 @@ country_event = {
 		has_country_flag = cc_eventperf_can_have_authoritarian_conspiracy
 	}
 	
-	mean_time_to_happen = { years = 90 }
+	mean_time_to_happen = { years = 75 }
 	
 	immediate = {
 		if = {
@@ -2286,15 +2286,15 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 40
+		years = 35
 		
-		modifier = {
-			factor = 0.8
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
+#		modifier = {
+#			factor = 0.8
+#			OR = {
+#				has_ethic = ethic_xenophile
+#				has_ethic = ethic_fanatic_xenophile
+#			}
+#		}
 	}
 	immediate = { country_event = { id = cc_events_mod.16 } }
 }
@@ -2310,7 +2310,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 40
+		years = 35
 		
 		modifier = {
 			factor = 0.8
@@ -2387,7 +2387,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 	}
 	
 	mean_time_to_happen = {
-		years = 75
+		years = 65
 		
 		modifier = {
 			factor = 0.67
@@ -2492,7 +2492,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 	}
 	
 	mean_time_to_happen = {
-		years = 75
+		years = 65
 		
 		modifier = {
 			factor = 0.75
@@ -2753,7 +2753,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 12
+		years = 10
 #		modifier = {
 #			factor = 3
 #			is_ai = yes
@@ -2785,7 +2785,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { #the conditions are fairly improbable, and it also has a small chance of happening via dpe_diplo.1
-		years = 40
+		years = 30
 	}
 	
 	immediate = {
@@ -2824,7 +2824,7 @@ country_event = {
 	
 	trigger = { has_country_flag = dpe_military_coup_possible }
 	
-	mean_time_to_happen = { years = 90 }
+	mean_time_to_happen = { years = 75 }
 
 	immediate = {
 		if = {
