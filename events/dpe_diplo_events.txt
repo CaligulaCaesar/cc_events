@@ -401,6 +401,7 @@ planet_event = {
 	
 	trigger = {
 		has_planet_flag = dpe_militarists_want_war_planet
+		exists = event_target:enemy
 		is_neighbor_of = event_target:enemy
 		owner = {
 			is_ai = no
@@ -408,7 +409,6 @@ planet_event = {
 			is_at_war = no
 			is_subject = no
 			has_federation = no
-			exists = event_target:enemy
 			event_target:enemy = {
 				prev = {
 					OR = {
@@ -429,6 +429,7 @@ planet_event = {
 	}
 	
 	immediate = {
+		event_target:enemy = { save_event_target_as = enemy }
 		random_list = {
 			4 = {
 				planet_event = { id = dpe_diplo.4 }

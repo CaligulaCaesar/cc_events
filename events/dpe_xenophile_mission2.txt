@@ -58,7 +58,7 @@ event = {
 				set_timed_relation_flag = {
 					who = prev
 					flag = dpe_new_relation
-					days = 735
+					days = 1800
 				}
 				save_event_target_as = dpe_new_contact
 				
@@ -267,8 +267,9 @@ country_event = {
 	}
 	
 	immediate = {
+		event_target:dpe_new_contact = { save_event_target_as = event_target:dpe_new_contact }
 		random_list = {
-			17 = {
+			12 = {
 				country_event = { id = dpe_xenophile_mission.3 }
 				modifier = {
 					factor = 0.65
@@ -307,19 +308,23 @@ country_event = {
 				#Make sure it doesn't happen at exaggerated distances
 				modifier = {
 					factor = 0
-					NOT = {
-						event_target:dpe_new_contact = {
+					event_target:dpe_new_contact = {
+						NOT = {
 							any_system_within_border = {
-								distance_to_empire = {
-									who = root
-									distance = 300
+								OR = {
+									has_hyperlane_to = root
+									distance = {
+										source = root.capital_scope
+										min_distance = 0
+										max_distance = 450
+									}
 								}
 							}
 						}
 					}
 				}
 			}
-			983 = { country_event = { id = dpe_xenophile_mission.2 days = 21 } }
+			988 = { country_event = { id = dpe_xenophile_mission.2 days = 21 } }
 		}
 	}
 }

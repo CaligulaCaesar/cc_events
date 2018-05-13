@@ -2243,6 +2243,9 @@ country_event = {
 	}
 	
 	immediate = {
+		event_target:dpe_mission_host_planet = { save_event_target_as = dpe_mission_host_planet }
+		event_target:dpe_neighbour = { save_event_target_as = dpe_neighbour }
+		event_target:dpe_missionary_country = { save_event_target_as = dpe_missionary_country }
 		random_list = {
 			3 = {
 				country_event = { id = dpe_spiritualist_mission.631 }  #don't use froms!
