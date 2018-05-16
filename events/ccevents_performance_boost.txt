@@ -1054,7 +1054,10 @@ country_event = {
 
 				has_authority = auth_democratic
 				NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
-				has_country_flag = cc_eventperf_has_overwhelming_rival
+				OR = {
+					has_country_flag = cc_eventperf_has_overwhelming_rival
+					has_country_flag = cc_eventperf_has_superior_rival
+				}
 				is_at_war = no
 				has_faction = totalitarian
 				any_owned_leader = {
@@ -1234,17 +1237,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = {
-						OR = {
-							has_ethic = ethic_pacifist
-							has_ethic = ethic_fanatic_pacifist
-						}
-					}
-					used_naval_capacity_percent > 1
-						
-					else = { used_naval_capacity_percent > 1.2 }
-				}
+				used_naval_capacity_percent > 1
+				
 				any_owned_leader = {
 					NOT = { is_same_value = prev.ruler }
 					leader_of_faction = imperialist
