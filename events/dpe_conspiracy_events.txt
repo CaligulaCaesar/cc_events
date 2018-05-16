@@ -24,7 +24,7 @@ country_event = {
 			relative_power = {
 				who = root
 				category = fleet
-				value = overwhelming
+				value > equivalent
 			}
 		}
 		is_at_war = no
@@ -493,7 +493,7 @@ country_event = {
 			relative_power = {
 				who = root
 				category = fleet
-				value = overwhelming
+				value > equivalent
 			}
 		}
 	}
@@ -550,7 +550,7 @@ country_event = {
 			relative_power = {
 				who = root
 				category = fleet
-				value = overwhelming
+				value > equivalent
 			}
 		}
 	}
@@ -827,17 +827,8 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			used_naval_capacity_percent > 1
-				
-			else = { used_naval_capacity_percent > 1.2 }
-		}
+		used_naval_capacity_percent > 1.2
+		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
@@ -1041,17 +1032,8 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			used_naval_capacity_percent > 1
-				
-			else = { used_naval_capacity_percent > 1.2 }
-		}
+		used_naval_capacity_percent > 1
+		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
@@ -1094,17 +1076,8 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			used_naval_capacity_percent > 1
-				
-			else = { used_naval_capacity_percent > 1.2 }
-		}
+		used_naval_capacity_percent > 1
+		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
@@ -1235,17 +1208,7 @@ country_event = {
 	trigger = {
 		has_country_flag = dpe_navy_might_demand_more
 		is_subject = no
-		if = {
-			limit = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			used_naval_capacity_percent > 1
-				
-			else = { used_naval_capacity_percent > 1.2 }
-		}
+		used_naval_capacity_percent > 1
 	}
 	
 	immediate = {
@@ -1327,17 +1290,8 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			used_naval_capacity_percent > 1
-				
-			else = { used_naval_capacity_percent > 1.2 }
-		}
+		used_naval_capacity_percent > 1
+		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
 			leader_of_faction = imperialist
@@ -1522,15 +1476,8 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOR = {
-					AND = {
-						OR = {
-							has_ethic = ethic_pacifist
-							has_ethic = ethic_fanatic_pacifist
-						}
-						used_naval_capacity_percent > 0.8
-					}
-					used_naval_capacity_percent > 1.0
+				NOT = {
+					used_naval_capacity_percent > 0.8
 				}
 			}
 		}
@@ -1591,35 +1538,15 @@ country_event = {
 		}
 		
 		if = {
-			limit = {
-				OR = {
-					AND = {
-						OR = {
-							has_ethic = ethic_pacifist
-							has_ethic = ethic_fanatic_pacifist
-						}
-						used_naval_capacity_percent > 1
-					}
-					used_naval_capacity_percent > 1.2
-				}
-			}
+			limit = { used_naval_capacity_percent > 1 }
+			
 			custom_tooltip = dpe_conspiracy.6.C.tooltip
 			hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
 			
 			else = {
 				if = {
-					limit = {
-						OR = {
-							AND = {
-								OR = {
-									has_ethic = ethic_pacifist
-									has_ethic = ethic_fanatic_pacifist
-								}
-								used_naval_capacity_percent > 0.8
-							}
-							used_naval_capacity_percent > 1.0
-						}
-					}
+					limit = { used_naval_capacity_percent > 0.8 }
+					
 					custom_tooltip = dpe_conspiracy.6.C.tooltip2
 					hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
 				}
@@ -1629,16 +1556,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						OR = {
-							has_ethic = ethic_pacifist
-							has_ethic = ethic_fanatic_pacifist
-						}
-						used_naval_capacity_percent > 0.8
-					}
-					used_naval_capacity_percent > 1.0
-				}
+				used_naval_capacity_percent > 0.8
 			}
 		}
 	}
