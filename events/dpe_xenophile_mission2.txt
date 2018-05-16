@@ -309,15 +309,13 @@ country_event = {
 				modifier = {
 					factor = 0
 					event_target:dpe_new_contact = {
-						NOT = {
-							OR = {
-								is_neighbor_of = root
-								any_system_within_border = {
-									distance = {
-										source = root.capital_scope
-										min_distance = 0
-										max_distance = 500
-									}
+						NOR = {
+							is_neighbor_of = root
+							any_system_within_border = {
+								distance = {
+									source = root.capital_scope
+									min_distance = 0
+									max_distance = 500
 								}
 							}
 						}
