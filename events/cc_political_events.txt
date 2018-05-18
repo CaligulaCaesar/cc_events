@@ -1133,6 +1133,7 @@ event = {
 	immediate = {
 		every_country = {
 			every_owned_planet = {
+				limit = { any_owned_pop = { species = { pops_have_happiness = yes } } }
 				planet_event = { id = cc_events_mod.81 days = 1 random = 15 }
 			}
 		}
@@ -1143,10 +1144,6 @@ planet_event = {
 	id = cc_events_mod.81
 	hide_window = yes
 	is_triggered_only = yes
-
-	trigger = {
-		any_owned_pop = { species = { pops_have_happiness = yes } }
-	}
 
 	immediate = {
 		every_owned_pop = {
@@ -1371,7 +1368,7 @@ pop_event = {
 		owner = {
 			NOT = {
 				pop_percentage = {
-					percentage > 0.2
+					percentage > 0.1
 					limit = {
 						NOR = {
 							is_subspecies = root
@@ -1446,7 +1443,16 @@ event = {
 		}
 		every_country = {
 			every_owned_pop = {
-				limit = { has_a_happiness_gauge = no }
+				limit = {
+					has_a_happiness_gauge = no
+					OR = {
+						has_pop_flag = cc_literally_xenophile
+						has_pop_flag = cc_literally_xenophile_manifested
+						has_modifier = cc_practising_xenophile
+						has_modifier = cc_secretly_practising_xenophile
+						has_modifier = cc_secret_xenophile
+					}
+				}
 				if = {
 					limit = { has_pop_flag = cc_literally_xenophile }
 					remove_pop_flag = cc_literally_xenophile
@@ -1472,58 +1478,79 @@ event = {
 		every_country = {
 			limit = { has_policy_flag = allows_im }
 			every_owned_pop = {
-				limit = { has_modifier = cc_secretly_practising_xenophile }
-				remove_modifier = cc_secretly_practising_xenophile
-				add_modifier = {
-					modifier = cc_practising_xenophile
-					days = -1
+				limit = {
+					OR = {
+						has_modifier = cc_secretly_practising_xenophile
+						has_modifier = cc_secret_xenophile
+					}
 				}
-			}
-			every_owned_pop = {
-				limit = { has_modifier = cc_secret_xenophile }
-				remove_modifier = cc_secret_xenophile
-				add_modifier = {
-					modifier = cc_practising_xenophile
-					days = -1
-				}
+				if = {
+					limit = { has_modifier = cc_secretly_practising_xenophile }
+					remove_modifier = cc_secretly_practising_xenophile
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+					else = {
+						remove_modifier = cc_secret_xenophile
+						add_modifier = {
+							modifier = cc_practising_xenophile
+							days = -1
+						}
+					}
+				}					
 			}
 		}
 		every_country = {
 			limit = { has_policy_flag = does_not_allow_im }
 			every_owned_pop = {
-				limit = { has_modifier = cc_practising_xenophile }
-				remove_modifier = cc_practising_xenophile
-				add_modifier = {
-					modifier = cc_secretly_practising_xenophile
-					days = -1
+				limit = {
+					OR = {
+						has_modifier = cc_practising_xenophile
+						has_modifier = cc_secret_xenophile
+					}
 				}
-			}
-			every_owned_pop = {
-				limit = { has_modifier = cc_secret_xenophile }
-				remove_modifier = cc_secret_xenophile
-				add_modifier = {
-					modifier = cc_secretly_practising_xenophile
-					days = -1
-				}
+				if = {
+					limit = { has_modifier = cc_practising_xenophile }
+					remove_modifier = cc_practising_xenophile
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
+					}
+					else = {
+						remove_modifier = cc_secret_xenophile
+						add_modifier = {
+							modifier = cc_secretly_practising_xenophile
+							days = -1
+						}
+					}
+				}					
 			}
 		}
 		every_country = {
 			limit = { has_policy_flag = bans_im_completely }
 			every_owned_pop = {
-				limit = { has_modifier = cc_practising_xenophile }
-				remove_modifier = cc_practising_xenophile
-				add_modifier = {
-					modifier = cc_secret_xenophile
-					days = -1
+				limit = {
+					OR = {
+						has_modifier = cc_practising_xenophile
+						has_modifier = cc_secretly_practising_xenophile
+					}
 				}
-			}
-			every_owned_pop = {
-				limit = { has_modifier = cc_secretly_practising_xenophile }
-				remove_modifier = cc_secretly_practising_xenophile
-				add_modifier = {
-					modifier = cc_secret_xenophile
-					days = -1
-				}
+				if = {
+					limit = { has_modifier = cc_practising_xenophile }
+					remove_modifier = cc_practising_xenophile
+					add_modifier = {
+						modifier = cc_secret_xenophile
+						days = -1
+					}
+					else = {
+						remove_modifier = cc_secretly_practising_xenophile
+						add_modifier = {
+							modifier = cc_secret_xenophile
+							days = -1
+						}
+					}
+				}					
 			}
 		}
 		
