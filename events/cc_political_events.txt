@@ -1131,9 +1131,19 @@ event = {
 	hide_window = yes
 	
 	immediate = {
-		every_country = {
+		every_playable_country = {
+			limit = {
+				any_owned_pop = {
+					NOT = { is_same_species = prev }
+					species = { pops_have_happiness = yes }
+				}
+			}
 			every_owned_planet = {
-				limit = { any_owned_pop = { species = { pops_have_happiness = yes } } }
+				limit = {
+					any_owned_pop = {
+						species = { pops_have_happiness = yes }
+					}
+				}
 				planet_event = { id = cc_events_mod.81 days = 1 random = 15 }
 			}
 		}
@@ -1158,7 +1168,117 @@ pop_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = { NOT = { has_ethic = ethic_xenophobe } }
+	
 	immediate = {
+		if = {
+			limit = {
+				has_pop_flag = cc_not_literally_xenophile_3
+				exists = owner
+				owner = { has_policy_flag = allows_im }
+			}
+			remove_pop_flag = cc_not_literally_xenophile_3
+			
+			random_list = {
+				1 = {
+					set_pop_flag = cc_literally_xenophile
+					modifier = {
+						factor = 1.5
+						has_ethic = ethic_xenophile
+					}
+					modifier = {
+						factor = 1.5
+						planet = {
+							any_owned_pop = {
+								NOT = { is_same_species = root }
+								species = { pops_have_happiness = yes }
+							}
+						}
+					}
+				}
+				15 = { set_pop_flag = cc_not_literally_xenophile_4 }
+			}
+		}
+		if = {
+			limit = {
+				has_pop_flag = cc_not_literally_xenophile_2
+				NOT = { has_ethic = ethic_xenophobe }
+				OR = {
+					owner = { has_policy_flag = allows_im }
+					planet = {
+						any_owned_pop = {
+							NOT = { is_same_species = root }
+							species = { pops_have_happiness = yes }
+						}
+					}
+				}
+			}
+			remove_pop_flag = cc_not_literally_xenophile_2
+			
+			random_list = {
+				1 = {
+					set_pop_flag = cc_literally_xenophile
+					modifier = {
+						factor = 1.5
+						has_ethic = ethic_xenophile
+					}
+					modifier = {
+						factor = 1.5
+						planet = {
+							any_owned_pop = {
+								NOT = { is_same_species = root }
+								species = { pops_have_happiness = yes }
+							}
+						}
+					}
+				}
+				15 = { set_pop_flag = cc_not_literally_xenophile_3 }
+			}
+		}
+		if = {
+			limit = {
+				has_pop_flag = cc_not_literally_xenophile_1
+				NOT = { has_ethic = ethic_xenophobe }
+				OR = {
+					has_ethic = ethic_xenophile
+					owner = {
+						OR = {
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
+							has_policy_flag = do_not_allow_im
+							has_policy_flag = allows_im
+						}
+					}
+					planet = {
+						any_owned_pop = {
+							NOT = { is_same_species = root }
+							species = { pops_have_happiness = yes }
+						}
+					}
+				}
+			}
+			remove_pop_flag = cc_not_literally_xenophile_1
+			
+			random_list = {
+				1 = {
+					set_pop_flag = cc_literally_xenophile
+					modifier = {
+						factor = 1.5
+						has_ethic = ethic_xenophile
+					}
+					modifier = {
+						factor = 1.5
+						planet = {
+							any_owned_pop = {
+								NOT = { is_same_species = root }
+								species = { pops_have_happiness = yes }
+							}
+						}
+					}
+				}
+				15 = { set_pop_flag = cc_not_literally_xenophile_2 }
+			}
+		}
 		if = {
 			limit = {
 				NOR = {
@@ -1170,121 +1290,23 @@ pop_event = {
 				}
 			}
 			random_list = {
-				1 = { set_pop_flag = cc_literally_xenophile }
+				1 = {
+					set_pop_flag = cc_literally_xenophile
+					modifier = {
+						factor = 1.5
+						has_ethic = ethic_xenophile
+					}
+					modifier = {
+						factor = 1.5
+						planet = {
+							any_owned_pop = {
+								NOT = { is_same_species = root }
+								species = { pops_have_happiness = yes }
+							}
+						}
+					}
+				}
 				15 = { set_pop_flag = cc_not_literally_xenophile_1 }
-			}
-		}
-		if = {
-			limit = {
-				has_pop_flag = cc_not_literally_xenophile_1
-				NOT = { has_ethic = ethic_xenophobe }
-				OR = {
-					has_ethic = ethic_xenophile
-					AND = {
-						exists = owner
-						owner = {
-							OR = {
-								pop_percentage = {
-									percentage > 0.4
-									limit = {
-										NOR = {
-											is_subspecies = root
-											is_same_species = root
-										}
-										species = { pops_have_happiness = yes }
-										OR = {
-											has_citizenship_type = { type = citizenship_full }
-											has_citizenship_type = { type = citizenship_limited }
-											has_citizenship_type = { type = citizenship_caste_system }
-											has_citizenship_type = { type = citizenship_caste_system_limited }
-										}
-									}
-								}
-								has_policy_flag = allows_im
-								has_ethic = ethic_xenophile
-								has_ethic = ethic_fanatic_xenophile
-							}
-						}
-					}
-				}
-			}
-			remove_pop_flag = cc_not_literally_xenophile_1
-			
-			random_list = {
-				1 = { set_pop_flag = cc_literally_xenophile }
-				15 = { set_pop_flag = cc_not_literally_xenophile_2 }
-			}
-		}
-		if = {
-			limit = {
-				has_pop_flag = cc_not_literally_xenophile_2
-				exists = owner
-				owner = {
-					AND = {
-						pop_percentage = {
-							percentage > 0.5
-							limit = {
-								NOR = {
-									is_subspecies = root
-									is_same_species = root
-								}
-								species = { pops_have_happiness = yes }
-								OR = {
-									has_citizenship_type = { type = citizenship_full }
-									has_citizenship_type = { type = citizenship_limited }
-									has_citizenship_type = { type = citizenship_caste_system }
-									has_citizenship_type = { type = citizenship_caste_system_limited }
-								}
-							}
-						}
-						OR = {
-							has_policy_flag = allows_im
-							has_ethic = ethic_fanatic_xenophile
-							root = { has_ethic = ethic_xenophile }
-						}
-					}
-				}
-			}
-			remove_pop_flag = cc_not_literally_xenophile_2
-			
-			random_list = {
-				1 = { set_pop_flag = cc_literally_xenophile }
-				15 = { set_pop_flag = cc_not_literally_xenophile_3 }
-			}
-		}
-		if = {
-			limit = {
-				has_pop_flag = cc_not_literally_xenophile_3
-				exists = owner
-				owner = {
-					AND = {
-						pop_percentage = {
-							percentage > 0.5
-							limit = {
-								NOR = {
-									is_subspecies = root
-									is_same_species = root
-								}
-								species = { pops_have_happiness = yes }
-								OR = {
-									has_citizenship_type = { type = citizenship_full }
-									has_citizenship_type = { type = citizenship_limited }
-									has_citizenship_type = { type = citizenship_caste_system }
-									has_citizenship_type = { type = citizenship_caste_system_limited }
-								}
-							}
-						}
-						has_policy_flag = allows_im
-						has_ethic = ethic_fanatic_xenophile
-						root = { has_ethic = ethic_xenophile }
-					}
-				}
-			}
-			remove_pop_flag = cc_not_literally_xenophile_3
-			
-			random_list = {
-				1 = { set_pop_flag = cc_literally_xenophile }
-				15 = { set_pop_flag = cc_not_literally_xenophile_4 }
 			}
 		}
 	}
