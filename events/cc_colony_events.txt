@@ -44,6 +44,10 @@ planet_event = {
 						count_pop_factions = { count > 2 }
 					}
 				}
+				modifier = {
+					factor = 2
+					years_passed < 30
+				}
 				
 				modifier = {
 					factor = 0.65
@@ -83,6 +87,10 @@ planet_event = {
 				modifier = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_pacifist_story }
+				}
+				modifier = {
+					factor = 2
+					years_passed < 30
 				}
 				
 				planet_event = { id = cc_colony_events.3 }
@@ -139,6 +147,10 @@ planet_event = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_xenophile_story }
 				}
+				modifier = {
+					factor = 2
+					years_passed < 30
+				}
 				
 				planet_event = { id = cc_colony_events.4 }
 			}
@@ -188,6 +200,10 @@ planet_event = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_xenophobe_story }
 				}
+				modifier = {
+					factor = 2
+					years_passed < 30
+				}
 				
 				planet_event = { id = cc_colony_events.5 }
 			}
@@ -218,6 +234,10 @@ planet_event = {
 				modifier = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_spiritualist_story }
+				}
+				modifier = {
+					factor = 2
+					years_passed < 30
 				}
 				
 				planet_event = { id = cc_colony_events.6 }
@@ -250,6 +270,10 @@ planet_event = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_materialist_story }
 				}
+				modifier = {
+					factor = 2
+					years_passed < 30
+				}
 				
 				planet_event = { id = cc_colony_events.7 }
 			}
@@ -280,6 +304,10 @@ planet_event = {
 				modifier = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_authoritarian_story }
+				}
+				modifier = {
+					factor = 2
+					years_passed < 30
 				}
 				
 				planet_event = { id = cc_colony_events.8 }
@@ -316,10 +344,14 @@ planet_event = {
 					factor = 0
 					owner = { has_country_flag = cc_recent_egalitarian_story }
 				}
+				modifier = {
+					factor = 2
+					years_passed < 30
+				}
 				
 				planet_event = { id = cc_colony_events.9 }
 			}
-			10 = { }
+			20 = { }
 		}
 	}
 }
