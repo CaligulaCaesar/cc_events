@@ -2414,70 +2414,12 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 		has_country_flag = cc_eventperf_ludditism_possible
 	}
 	
-	mean_time_to_happen = {
-		years = 65
-		
-		modifier = {
-			factor = 0.67
-			has_country_flag = cc_eventperf_ludditism_likely
-		}
-	
-		modifier = {
-			factor = 0.5
-			has_country_flag = cc_eventperf_ludditism_2planets
-		}
-		
-		modifier = {
-			factor = 0.67
-			has_country_flag = cc_eventperf_ludditism_3planets
-		}
-		
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_eventperf_ludditism_4planets
-		}
-		
-		modifier = {
-			factor = 0.85
-			has_faction = traditionalist
-		}
-		
-		modifier = {
-			factor = 2.5
-			has_country_flag = cc_has_had_luddite_crisis
-		}
-	}
+	mean_time_to_happen = { years = 35 }
 	
 	immediate = {
-		if = {
-			limit = {
-				any_owned_planet = {
-					unrest > 0
-					NOT = { has_planet_flag = cc_luddite_strike }
-					any_owned_pop = { is_non_sapient_robot = yes }
-					any_owned_pop = {
-						has_ethic = ethic_spiritualist
-						has_citizenship_rights = yes
-						happiness < 0.4
-					}
-					has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
-				}
-			}
-			random_owned_planet = {
-				limit = {
-					unrest > 0
-					NOT = { has_planet_flag = cc_luddite_strike }
-					any_owned_pop = { is_non_sapient_robot = yes }
-					any_owned_pop = {
-						has_ethic = ethic_spiritualist
-						has_citizenship_rights = yes
-						happiness < 0.4
-					}
-					has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
-				}
-				planet_event = { id = cc_luddite.1 }
-			}
-			else = {
+		random_list = {
+			10 = { }
+			10 = {
 				if = {
 					limit = {
 						any_owned_planet = {
@@ -2489,6 +2431,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 								has_citizenship_rights = yes
 								happiness < 0.4
 							}
+							has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
 						}
 					}
 					random_owned_planet = {
@@ -2501,9 +2444,69 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 								has_citizenship_rights = yes
 								happiness < 0.4
 							}
+							has_planet_flag = cc_eventperf_planet_lots_of_spiritualists
 						}
 						planet_event = { id = cc_luddite.1 }
 					}
+					else = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									unrest > 0
+									NOT = { has_planet_flag = cc_luddite_strike }
+									any_owned_pop = { is_non_sapient_robot = yes }
+									any_owned_pop = {
+										has_ethic = ethic_spiritualist
+										has_citizenship_rights = yes
+										happiness < 0.4
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									unrest > 0
+									NOT = { has_planet_flag = cc_luddite_strike }
+									any_owned_pop = { is_non_sapient_robot = yes }
+									any_owned_pop = {
+										has_ethic = ethic_spiritualist
+										has_citizenship_rights = yes
+										happiness < 0.4
+									}
+								}
+								planet_event = { id = cc_luddite.1 }
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 1.5
+					has_country_flag = cc_eventperf_ludditism_likely
+				}
+			
+				modifier = {
+					factor = 2
+					has_country_flag = cc_eventperf_ludditism_2planets
+				}
+				
+				modifier = {
+					factor = 1.5
+					has_country_flag = cc_eventperf_ludditism_3planets
+				}
+				
+				modifier = {
+					factor = 1.35
+					has_country_flag = cc_eventperf_ludditism_4planets
+				}
+				
+				modifier = {
+					factor = 1.2
+					has_faction = traditionalist
+				}
+				
+				modifier = {
+					factor = 0.4
+					has_country_flag = cc_has_had_luddite_crisis
 				}
 			}
 		}
@@ -2519,76 +2522,44 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 		has_country_flag = cc_eventperf_emancipation_possible
 	}
 	
-	mean_time_to_happen = {
-		years = 65
-		
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_eventperf_emancipation_likely
-		}
-	
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_eventperf_emancipation_likely_neighbour
-		}
+	mean_time_to_happen = { years = 35 }
 
-		modifier = {
-			factor = 0.5
-			has_country_flag = cc_eventperf_emancipation_2planets
-		}
-		
-		modifier = {
-			factor = 0.67
-			has_country_flag = cc_eventperf_emancipation_3planets
-		}
-		
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_eventperf_emancipation_4planets
-		}
-		
-		modifier = {
-			factor = 2
-			has_country_flag = cc_has_had_emancipation_crisis
-		}
-	}
 	
 	immediate = {
-		if = {
-			limit = {
-				any_owned_planet = {
-					unrest > 0
-					NOT = { has_planet_flag = cc_emancipation_movement }
-					any_owned_pop = {
-						is_enslaved = yes
-						species = { pops_have_happiness = yes }
-						happiness < 0.4
-					}
-					any_owned_pop = {
-						has_ethic = ethic_egalitarian
-						is_enslaved = no
-					}
-					has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
+		random_list = {
+			10 = { }
+			10 = {
+				modifier = {
+					factor = 1.35
+					has_country_flag = cc_eventperf_emancipation_likely
 				}
-			}
-			random_owned_planet = {
-				limit = {
-					unrest > 0
-					NOT = { has_planet_flag = cc_emancipation_movement }
-					any_owned_pop = {
-						is_enslaved = yes
-						species = { pops_have_happiness = yes }
-						happiness < 0.4
-					}
-					any_owned_pop = {
-						has_ethic = ethic_egalitarian
-						is_enslaved = no
-					}
-					has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
+			
+				modifier = {
+					factor = 1.35
+					has_country_flag = cc_eventperf_emancipation_likely_neighbour
 				}
-				planet_event = { id = cc_emancipation.1 }
-			}
-			else = {
+		
+				modifier = {
+					factor = 2
+					has_country_flag = cc_eventperf_emancipation_2planets
+				}
+				
+				modifier = {
+					factor = 1.5
+					has_country_flag = cc_eventperf_emancipation_3planets
+				}
+				
+				modifier = {
+					factor = 1.35
+					has_country_flag = cc_eventperf_emancipation_4planets
+				}
+				
+				modifier = {
+					factor = 0.5
+					has_country_flag = cc_has_had_emancipation_crisis
+				}
+
+
 				if = {
 					limit = {
 						any_owned_planet = {
@@ -2603,6 +2574,7 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 								has_ethic = ethic_egalitarian
 								is_enslaved = no
 							}
+							has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
 						}
 					}
 					random_owned_planet = {
@@ -2618,8 +2590,44 @@ country_event = { #shifted it to country as way better for performance, mtth mod
 								has_ethic = ethic_egalitarian
 								is_enslaved = no
 							}
+							has_planet_flag = cc_eventperf_planet_lots_of_egalitarians
 						}
 						planet_event = { id = cc_emancipation.1 }
+					}
+					else = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									unrest > 0
+									NOT = { has_planet_flag = cc_emancipation_movement }
+									any_owned_pop = {
+										is_enslaved = yes
+										species = { pops_have_happiness = yes }
+										happiness < 0.4
+									}
+									any_owned_pop = {
+										has_ethic = ethic_egalitarian
+										is_enslaved = no
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									unrest > 0
+									NOT = { has_planet_flag = cc_emancipation_movement }
+									any_owned_pop = {
+										is_enslaved = yes
+										species = { pops_have_happiness = yes }
+										happiness < 0.4
+									}
+									any_owned_pop = {
+										has_ethic = ethic_egalitarian
+										is_enslaved = no
+									}
+								}
+								planet_event = { id = cc_emancipation.1 }
+							}
+						}
 					}
 				}
 			}
