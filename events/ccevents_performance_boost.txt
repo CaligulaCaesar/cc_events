@@ -1833,48 +1833,52 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 60
-		
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_large_minority
-		}
-		modifier = {
-			factor = 0.5
-			ruler = { leader_of_faction = supremacist }
-		}
-		
-		modifier = {
-			factor = 1.5
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_eventperf_has_lots_of_xenophobes_min
-		}
+		years = 15
 	}
 	
 	immediate = {
-		if = {
-			limit = {
-				OR = {
-					has_authority = auth_democratic
-					has_authority = auth_oligarchic
-					has_authority = auth_dictatorial
+		random_list = {
+			2 = {
+				if = {
+					limit = {
+						OR = {
+							has_authority = auth_democratic
+							has_authority = auth_oligarchic
+							has_authority = auth_dictatorial
+						}
+					}
+					country_event = { id = cc_events_mod.1 }
+				}
+				if = {
+					limit = { has_authority = auth_imperial }
+					country_event = { id = cc_events_mod.2 }
+				}
+				modifier = {
+					factor = 2
+					ruler = { leader_of_faction = supremacist }
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
-			country_event = { id = cc_events_mod.1 }
-		}
-		if = {
-			limit = { has_authority = auth_imperial }
-			country_event = { id = cc_events_mod.2 }
+			2 = {
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_xenophile
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { has_country_flag = cc_eventperf_has_large_minority }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { has_country_flag = cc_eventperf_has_lots_of_xenophobes_min }
+				}
+			}
 		}
 	}
 }
@@ -1995,51 +1999,59 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 2
-		modifier = {
-			factor = 1.5
-			has_ethic = ethic_militarist
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 0.75
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			factor = 0.5
-			has_ethic = ethic_fanatic_pacifist
-		}
-		modifier = { #AI will struggle more to deal with this. Best to make it mainly a player challenge.
-			factor = 2
-			is_ai = yes
-		}
-		modifier = {
-			factor = 2
-			
-			any_war = {
-				is_war_participant = { who = root side = attackers }
-				any_defender = {
-					OR = {
-						has_valid_civic = civic_fanatic_purifiers
-						has_valid_civic = civic_hive_devouring_swarm
-						has_valid_civic = civic_machine_terminator
+		months = 18
+	}
+	
+	immediate = {
+		random_list = {
+			1 = {
+				country_event = { id = cc_peace.1 }
+			}
+			1 = {
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_militarist
+				}
+				modifier = {
+					factor = 2
+					has_ethic = ethic_fanatic_militarist
+				}
+				modifier = {
+					factor = 0.75
+					has_ethic = ethic_pacifist
+				}
+				modifier = {
+					factor = 0.5
+					has_ethic = ethic_fanatic_pacifist
+				}
+				modifier = { #AI will struggle more to deal with this. Best to make it mainly a player challenge.
+					factor = 2
+					is_ai = yes
+				}
+				modifier = {
+					factor = 2
+					
+					any_war = {
+						is_war_participant = { who = root side = attackers }
+						any_defender = {
+							OR = {
+								has_valid_civic = civic_fanatic_purifiers
+								has_valid_civic = civic_hive_devouring_swarm
+								has_valid_civic = civic_machine_terminator
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					any_war = {
+						is_war_participant = { who = root side = attackers }
+						defender_war_exhaustion > 80
 					}
 				}
 			}
 		}
-		modifier = {
-			factor = 0.5
-			any_war = {
-				is_war_participant = { who = root side = attackers }
-				defender_war_exhaustion > 80
-			}
-		}
 	}
-	
-	immediate = { country_event = { id = cc_peace.1 } }
 }
 	
 
@@ -2322,67 +2334,71 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 35
-		
-		modifier = {
-			factor = 0.8
-			has_country_flag = cc_eventperf_has_minority
-		}
-		modifier = {
-			factor = 0.9
-			has_policy_flag = bans_im_completely
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { has_faction = xenoist }
-		}
-		modifier = {
-			factor = 0.75
-			any_owned_leader = {
-				has_leader_flag = cc_xenoist_leader
-			}
-		}
-		modifier = {
-			factor = 0.5
-			exists = ruler
-			ruler = { has_leader_flag = cc_xenoist_leader }
-		}
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_fanatic_xenophobe
-		}
+		years = 20
 	}
 	
 	immediate = {
-	
 		random_list = {
-			3 = {
-				country_event = { id = cc_events_mod.17 }
-				modifier = {
-					factor = 0
-					NOT = { exists = ruler }
-				}
-				modifier = {
-					factor = 0.75
-					exists = ruler
-					ruler = { leader_of_faction = supremacist }
-				}
-				modifier = {
-					factor = 3
-					exists = ruler
-					ruler = { leader_of_faction = xenoist }
-				}
-			}
-			4 = {
-				country_event = { id = cc_events_mod.18 }
-				modifier = {
-					factor = 1.5
-					any_owned_leader = {
-						NOT = { is_same_value = prev.ruler }
-						leader_of_faction = xenoist
+			1 = {
+				random_list = {
+					3 = {
+						country_event = { id = cc_events_mod.17 }
+						modifier = {
+							factor = 0
+							NOT = { exists = ruler }
+						}
+						modifier = {
+							factor = 0.75
+							exists = ruler
+							ruler = { leader_of_faction = supremacist }
+						}
+						modifier = {
+							factor = 3
+							exists = ruler
+							ruler = { leader_of_faction = xenoist }
+						}
+					}
+					4 = {
+						country_event = { id = cc_events_mod.18 }
+						modifier = {
+							factor = 1.5
+							any_owned_leader = {
+								NOT = { is_same_value = prev.ruler }
+								leader_of_faction = xenoist
+							}
+						}
 					}
 				}
 			}
+			1 = {
+				modifier = {
+					factor = 0.8
+					has_country_flag = cc_eventperf_has_minority
+				}
+				modifier = {
+					factor = 0.9
+					has_policy_flag = bans_im_completely
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { has_faction = xenoist }
+				}
+				modifier = {
+					factor = 0.75
+					any_owned_leader = {
+						has_leader_flag = cc_xenoist_leader
+					}
+				}
+				modifier = {
+					factor = 0.5
+					exists = ruler
+					ruler = { has_leader_flag = cc_xenoist_leader }
+				}
+				modifier = {
+					factor = 1.25
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}			
 		}
 	}
 }
