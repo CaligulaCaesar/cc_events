@@ -2895,7 +2895,7 @@ Supported Scopes: galactic_object
 Supported Targets: none
 
 spawn_system - Spawns a new system at a position relative to the scoped system/planet/ship.
-spawn_system = { min_distance = <int 0-100> max_distance = <int 0-100> initializer = <key for pre-defined system> hyperlane=<yes/no> is_discovered=<yes/no>}
+spawn_system = { min_distance >= <int 0-100> max_distance <= <int 0-100> initializer = <key for pre-defined system> hyperlane=<yes/no> is_discovered=<yes/no>}
 Supported Scopes: planet ship galactic_object
 Supported Targets: none
 

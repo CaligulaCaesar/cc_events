@@ -1064,8 +1064,8 @@ country_event = {
 						}
 						distance = {
 							source = prevprev
-							min_distance = 0
-							max_distance = 65
+							min_distance >= 0
+							max_distance <= 65
 						}
 					}
 				}
@@ -1789,8 +1789,8 @@ country_event = {
 						}
 						distance = {
 							source = prevprev
-							min_distance = 0
-							max_distance = 65
+							min_distance >= 0
+							max_distance <= 65
 						}
 					}
 				}
@@ -2557,7 +2557,7 @@ country_event = {
 									any_owned_planet = {
 										distance = {
 											source = prevprev
-											max_distance = 150
+											max_distance <= 150
 										}
 									}
 								}
@@ -2575,7 +2575,7 @@ country_event = {
 								any_owned_planet = {
 									distance = {
 										source = prevprev
-										max_distance = 150
+										max_distance <= 150
 									}
 								}
 								
@@ -6027,8 +6027,8 @@ event = {
 											has_1st_faction_stronghold = yes
 											distance = {
 												source = prevprev
-												min_distance = 0
-												max_distance = 65
+												min_distance >= 0
+												max_distance <= 65
 											}
 										}
 									}
@@ -6103,8 +6103,8 @@ event = {
 										has_1st_faction_stronghold = yes
 										distance = {
 											source = prevprev
-											min_distance = 0
-											max_distance = 65
+											min_distance >= 0
+											max_distance <= 65
 										}
 									}
 								}
@@ -6169,8 +6169,8 @@ event = {
 												has_2nd_faction_stronghold = yes
 												distance = {
 													source = prevprev
-													min_distance = 0
-													max_distance = 65
+													min_distance >= 0
+													max_distance <= 65
 												}
 											}
 										}
@@ -6241,8 +6241,8 @@ event = {
 											has_2nd_faction_stronghold = yes
 											distance = {
 												source = prevprev
-												min_distance = 0
-												max_distance = 65
+												min_distance >= 0
+												max_distance <= 65
 											}
 										}
 									}

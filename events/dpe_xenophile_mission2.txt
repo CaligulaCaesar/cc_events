@@ -314,8 +314,8 @@ country_event = {
 							any_system_within_border = {
 								distance = {
 									source = root.capital_scope
-									min_distance = 0
-									max_distance = 500
+									min_distance >= 0
+									max_distance <= 500
 								}
 							}
 						}

@@ -1776,8 +1776,8 @@ planet_event = {
 				NOT = { is_same_value = root }
 				distance = {
 					source = root
-					min_distance = 0
-					max_distance = 75
+					min_distance >= 0
+					max_distance <= 75
 				}
 				any_owned_pop = { has_ethic = ethic_pacifist }
 			}
@@ -1860,8 +1860,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = { has_ethic = ethic_pacifist }
 				}
@@ -1900,8 +1900,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = { has_ethic = ethic_pacifist }
 				}
@@ -3577,8 +3577,8 @@ planet_event = {
 				NOT = { is_same_value = root }
 				distance = {
 					source = root
-					min_distance = 0
-					max_distance = 75
+					min_distance >= 0
+					max_distance <= 75
 				}
 				any_owned_pop = {
 					has_ethic = ethic_xenophobe
@@ -3718,8 +3718,8 @@ planet_event = {
 				NOT = { is_same_value = root }
 				distance = {
 					source = root
-					min_distance = 0
-					max_distance = 75
+					min_distance >= 0
+					max_distance <= 75
 				}
 				any_owned_pop = {
 					has_ethic = ethic_xenophobe
@@ -3787,8 +3787,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -3819,8 +3819,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -4009,8 +4009,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -4422,8 +4422,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -4528,8 +4528,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -4628,8 +4628,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = {
 						has_ethic = ethic_xenophobe
@@ -5568,8 +5568,8 @@ planet_event = {
 				NOT = { is_same_value = root }
 				distance = {
 					source = root
-					min_distance = 0
-					max_distance = 75
+					min_distance >= 0
+					max_distance <= 75
 				}
 				any_owned_pop = { has_ethic = ethic_spiritualist }
 			}
@@ -5652,8 +5652,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = { has_ethic = ethic_spiritualist }
 				}
@@ -5692,8 +5692,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = { has_ethic = ethic_spiritualist }
 				}
@@ -7974,8 +7974,8 @@ planet_event = {
 				NOT = { is_same_value = root }
 				distance = {
 					source = root
-					min_distance = 0
-					max_distance = 75
+					min_distance >= 0
+					max_distance <= 75
 				}
 				any_owned_pop = { has_ethic = ethic_spiritualist }
 			}
@@ -7983,8 +7983,8 @@ planet_event = {
 				any_owned_planet = {
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 150
+						min_distance >= 0
+						max_distance <= 150
 					}
 					has_modifier = cc_religious_centre
 				}
@@ -8648,8 +8648,8 @@ planet_event = {
 					NOT = { is_same_value = root }
 					distance = {
 						source = root
-						min_distance = 0
-						max_distance = 75
+						min_distance >= 0
+						max_distance <= 75
 					}
 					any_owned_pop = { has_ethic = ethic_spiritualist }
 				}
