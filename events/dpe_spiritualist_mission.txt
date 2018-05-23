@@ -188,29 +188,29 @@ country_event = {
 					}
 					save_event_target_as = dpe_hive
 				}
-				else = {
-					random_neighbor_country = {
-						limit = {
-							is_country_type = default
-							has_communications = prev
-							has_ethic = ethic_gestalt_consciousness
-							has_authority = auth_machine_intelligence
-							NOR = {
-								is_at_war_with = prev
+			}
+			else = {
+				random_neighbor_country = {
+					limit = {
+						is_country_type = default
+						has_communications = prev
+						has_ethic = ethic_gestalt_consciousness
+						has_authority = auth_machine_intelligence
+						NOR = {
+							is_at_war_with = prev
 #									is_hostile_to = prev
 #									is_rival = prev
-								
-								
-								has_civic = civic_machine_terminator
-								has_country_flag = dpe_recent_spiritualist_mission_received
-								has_relation_flag = {
-									flag = dpe_spiritualist_mission_received
-									who = prev
-								}
+							
+							
+							has_civic = civic_machine_terminator
+							has_country_flag = dpe_recent_spiritualist_mission_received
+							has_relation_flag = {
+								flag = dpe_spiritualist_mission_received
+								who = prev
 							}
 						}
-						save_event_target_as = dpe_machines
 					}
+					save_event_target_as = dpe_machines
 				}
 			}
 		}
@@ -831,8 +831,8 @@ country_event = {
 				}
 				save_event_target_as = dpe_mission_host_planet
 			}
-			else = { capital_scope = { save_event_target_as = dpe_mission_host_planet } }
 		}
+		else = { capital_scope = { save_event_target_as = dpe_mission_host_planet } }
 	}
 	
 	option = {
@@ -3915,6 +3915,7 @@ country_event = {
 							any_pop = {
 								prev = {
 									any_owned_pop = {
+										NOT = { is_same_value = prevprev }
 										is_same_species = prevprev
 									}
 								}
@@ -3924,23 +3925,25 @@ country_event = {
 							limit = {
 								prev = {
 									any_owned_pop = {
+										NOT = { is_same_value = prevprev }
 										is_same_species = prevprev
 									}
 								}
 							}
 							kill_pop = yes
 						}
-						else = {
-							random_pop = {
-								limit = {
-									root = {
-										any_owned_pop = {
-											is_same_species = prevprev
-										}
+					}
+					else = {
+						random_pop = {
+							limit = {
+								root = {
+									any_owned_pop = {
+										NOT = { is_same_value = prevprev }
+										is_same_species = prevprev
 									}
 								}
-								kill_pop = yes
 							}
+							kill_pop = yes
 						}
 					}
 				}
@@ -4804,22 +4807,22 @@ country_event = {
 					days = -1
 				}
 			}
-			else = {
-				random_owned_planet = {
-					limit = { free_pop_tiles > 1 }
-					while = {
-						count = 2
-						create_pop = {
-							species = from
-							ethos = {
-								ethic = "ethic_spiritualist"			
-							}
+		}
+		else = {
+			random_owned_planet = {
+				limit = { free_pop_tiles > 1 }
+				while = {
+					count = 2
+					create_pop = {
+						species = from
+						ethos = {
+							ethic = "ethic_spiritualist"			
 						}
 					}
-					add_modifier = {
-						modifier = dpe_missionary_planet
-						days = -1
-					}
+				}
+				add_modifier = {
+					modifier = dpe_missionary_planet
+					days = -1
 				}
 			}
 		}
@@ -4851,16 +4854,16 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				random_owned_planet = {
-					limit = { free_pop_tiles > 1 }
-					while = {
-						count = 2
-						create_pop = {
-							species = from
-							ethos = {
-								ethic = "ethic_spiritualist"			
-							}
+		}
+		else = {
+			random_owned_planet = {
+				limit = { free_pop_tiles > 1 }
+				while = {
+					count = 2
+					create_pop = {
+						species = from
+						ethos = {
+							ethic = "ethic_spiritualist"			
 						}
 					}
 				}

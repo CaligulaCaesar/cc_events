@@ -1217,13 +1217,12 @@ planet_event = {
 				owner = { NOT = { any_owned_planet = { has_planet_flag = cc_second_luddite_planet } } }
 			}
 			planet_event = { id = cc_luddite.11 }
-
-			else = {
-				owner = {
-					if = {
-						limit = { NOT = { has_country_flag = cc_luddite_movement } }
-						country_event = { id = cc_luddite.13 }
-					}
+		}
+		else = {
+			owner = {
+				if = {
+					limit = { NOT = { has_country_flag = cc_luddite_movement } }
+					country_event = { id = cc_luddite.13 }
 				}
 			}
 		}
@@ -2146,11 +2145,11 @@ country_event = {
 				limit = { has_country_flag = machine_uprising_originator }
 				save_event_target_as = machine_uprising_victims
 			}
-			else = {
-				random_neighbor_country = {
-					limit = { has_valid_civic = civic_machine_terminator }
-					save_event_target_as = machine_exterminators
-				}
+		}
+		else = {
+			random_neighbor_country = {
+				limit = { has_valid_civic = civic_machine_terminator }
+				save_event_target_as = machine_exterminators
 			}
 		}
 	}

@@ -2857,51 +2857,49 @@ country_event = {
 									}
 								}
 								exile_leader_as = cc_rebellious_faction_leader
-								
-								else = {
-									root = {
-										create_fleet = {
-											name = "NAME_Other_Science_Ship"
-											effect = {
-												set_owner = root
-												create_ship_design = {
-													design = "NAME_Prototype"
-												}
-												create_ship = {
-													name = "NAME_From_Beyond"
-													design = last_created_design
-													graphical_culture = "extra_dimensional_01"
-													prefix = no
-													upgradable = no
-												}
-												set_location = root.capital_scope
-												save_event_target_as = deleted_ship
+							}
+							else = {
+								root = {
+									create_fleet = {
+										name = "NAME_Other_Science_Ship"
+										effect = {
+											set_owner = root
+											create_ship_design = {
+												design = "NAME_Prototype"
 											}
+											create_ship = {
+												name = "NAME_From_Beyond"
+												design = last_created_design
+												graphical_culture = "extra_dimensional_01"
+												prefix = no
+												upgradable = no
+											}
+											set_location = root.capital_scope
+											save_event_target_as = deleted_ship
 										}
-										event_target:deleted_ship = {
-											set_leader = event_target:cc_rebellious_faction_leader
-											leader = { exile_leader_as = cc_rebellious_faction_leader }
-											delete_fleet = this
-										}
+									}
+									event_target:deleted_ship = {
+										set_leader = event_target:cc_rebellious_faction_leader
+										leader = { exile_leader_as = cc_rebellious_faction_leader }
+										delete_fleet = this
 									}
 								}
 							}
 						}
 						prev = { set_leader = cc_rebellious_faction_leader }
+					}
 						
-						
-						else = {
-							create_leader = {
-								type = ruler
-								species = owner_main_species
-								name = random
-								skill = 2
-								traits = {}
-							}
-							assign_leader = last_created_leader
-							ruler = {
-								add_random_leader_trait = yes
-							}
+					else = {
+						create_leader = {
+							type = ruler
+							species = owner_main_species
+							name = random
+							skill = 2
+							traits = {}
+						}
+						assign_leader = last_created_leader
+						ruler = {
+							add_random_leader_trait = yes
 						}
 					}
 					
@@ -2920,32 +2918,31 @@ country_event = {
 									}
 								}
 								exile_leader_as = cc_new_reb_faction_leader
-								
-								else = {
-									root = {
-										create_fleet = {
-											name = "NAME_Other_Science_Ship"
-											effect = {
-												set_owner = root
-												create_ship_design = {
-													design = "NAME_Prototype"
-												}
-												create_ship = {
-													name = "NAME_From_Beyond"
-													design = last_created_design
-													graphical_culture = "extra_dimensional_01"
-													prefix = no
-													upgradable = no
-												}
-												set_location = root.capital_scope
-												save_event_target_as = deleted_ship
+							}
+							else = {
+								root = {
+									create_fleet = {
+										name = "NAME_Other_Science_Ship"
+										effect = {
+											set_owner = root
+											create_ship_design = {
+												design = "NAME_Prototype"
 											}
+											create_ship = {
+												name = "NAME_From_Beyond"
+												design = last_created_design
+												graphical_culture = "extra_dimensional_01"
+												prefix = no
+												upgradable = no
+											}
+											set_location = root.capital_scope
+											save_event_target_as = deleted_ship
 										}
-										event_target:deleted_ship = {
-											set_leader = event_target:cc_new_reb_faction_leader
-											leader = { exile_leader_as = cc_new_reb_faction_leader }
-											delete_fleet = this
-										}
+									}
+									event_target:deleted_ship = {
+										set_leader = event_target:cc_new_reb_faction_leader
+										leader = { exile_leader_as = cc_new_reb_faction_leader }
+										delete_fleet = this
 									}
 								}
 							}
@@ -3048,587 +3045,583 @@ country_event = {
 			
 			country_event = { id = ccfaction.7 days = 45 }
 			
+		}
+		else = {
+			set_country_flag = cc_factional_revolt_attempt
+				
+			random_owned_planet = {
+				limit = {
+					is_faction_stronghold = yes
+					unrest > 80
+					has_ground_combat = no
+					has_orbital_bombardment = no
+					exists = controller
+					controller = { is_same_value = root }
+					has_modifier = cc_faction_acute_unrest
+				}
 			
-			else = {
-				set_country_flag = cc_factional_revolt_attempt
-					
-				random_owned_planet = {
-					limit = {
-						is_faction_stronghold = yes
-						unrest > 80
-						has_ground_combat = no
-						has_orbital_bombardment = no
-						exists = controller
-						controller = { is_same_value = root }
-						has_modifier = cc_faction_acute_unrest
-					}
+			
+				set_planet_flag = revolt_in_progress
 				
+				if = {
+					limit = { NOT = { any_owned_pop = { is_same_species = root } } }
+					random_pop = { change_species = root }
+				}
 				
-					set_planet_flag = revolt_in_progress
+				#create rebels
+				
+				create_rebels = {
+					species = root.species
+					ethos = random
+					authority = random
+					name = random
+					flag = random
+				
+					effect = {
+						remove_all_ethics = yes
 					
-					if = {
-						limit = { NOT = { any_owned_pop = { is_same_species = root } } }
-						random_pop = { change_species = root }
-					}
-					
-					#create rebels
-					
-					create_rebels = {
-						species = root.species
-						ethos = random
-						authority = random
-						name = random
-						flag = random
-					
-						effect = {
-							remove_all_ethics = yes
+						set_country_flag = cc_faction_rebels
+						establish_communications_no_message = root
+						root = {
+							every_relation = {
+								establish_communications_no_message = prevprev
+							}
+						}
 						
-							set_country_flag = cc_faction_rebels
-							establish_communications_no_message = root
-							root = {
-								every_relation = {
-									establish_communications_no_message = prevprev
-								}
-							}
-							
-							
-							#primary ethic
-							root = {
-								switch = {
-									trigger = has_country_flag
-									cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
-									cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
-									cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
-									cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
-									cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
-									cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
-									cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
-									cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
-									cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
-									default = { }
-								}
-							
-								#secondary ethic
-								switch = {
-									trigger = has_country_flag
-									cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
-									cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
-									cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
-									cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
-									cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
-									cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
-									cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
-									cc_supremacist_secondary_revolt_active = {
-										prev = {
-											if = {
-												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-												country_add_ethic = ethic_xenophobe
-											}
-										}
-									}
-									cc_isolationist_secondary_revolt_active = {
-										prev = {
-											if = {
-												limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
-												country_add_ethic = ethic_xenophobe
-											}
-										}
-									}
-									default = { }
-								}
-							}
-							
-							if = {
-								limit = { num_ethics = 1 }
-								random_list = {
-									1 = {
-										country_add_ethic = ethic_authoritarian
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_authoritarian
-												has_ethic = ethic_fanatic_egalitarian
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_authoritarian
-														has_ethic = ethic_authoritarian
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_egalitarian
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_authoritarian
-												has_ethic = ethic_fanatic_egalitarian
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_egalitarian
-														has_ethic = ethic_egalitarian
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_xenophile
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_xenophile
-												has_ethic = ethic_fanatic_xenophobe
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_xenophile
-														has_ethic = ethic_xenophile
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_xenophobe
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_xenophile
-												has_ethic = ethic_fanatic_xenophobe
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_xenophobe
-														has_ethic = ethic_xenophobe
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_spiritualist
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_spiritualist
-												has_ethic = ethic_fanatic_materialist
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_spiritualist
-														has_ethic = ethic_spiritualist
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_materialist
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_spiritualist
-												has_ethic = ethic_fanatic_materialist
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_materialist
-														has_ethic = ethic_materialist
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_militarist
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_pacifist
-												has_ethic = ethic_fanatic_militarist
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_militarist
-														has_ethic = ethic_militarist
-													}
-												}
-											}
-										}
-									}
-									1 = {
-										country_add_ethic = ethic_pacifist
-										
-										modifier = {
-											factor = 0
-											OR = {
-												has_ethic = ethic_fanatic_pacifist
-												has_ethic = ethic_fanatic_militarist
-												root = {
-													OR = {
-														has_ethic = ethic_fanatic_pacifist
-														has_ethic = ethic_pacifist
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-							
-							change_government = {
-								authority = random
-								civics = random
-							}
-							
-							set_name = random
-								
 						
-							save_event_target_as = cc_breakaway_country
+						#primary ethic
+						root = {
+							switch = {
+								trigger = has_country_flag
+								cc_imperialist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_militarist } }
+								cc_prosperity_revolt_active = { prev = { country_add_ethic = ethic_fanatic_pacifist } }
+								cc_totalitarian_revolt_active = { prev = { country_add_ethic = ethic_fanatic_authoritarian } }
+								cc_progressive_revolt_active = { prev = { country_add_ethic = ethic_fanatic_egalitarian } }
+								cc_technologist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_materialist } }
+								cc_traditionalist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_spiritualist } }
+								cc_xenoist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophile } }
+								cc_supremacist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+								cc_isolationist_revolt_active = { prev = { country_add_ethic = ethic_fanatic_xenophobe } }
+								default = { }
+							}
+						
+							#secondary ethic
+							switch = {
+								trigger = has_country_flag
+								cc_imperialist_secondary_revolt_active = { prev = { country_add_ethic = ethic_militarist } }
+								cc_prosperity_secondary_revolt_active = { prev = { country_add_ethic = ethic_pacifist } }
+								cc_totalitarian_secondary_revolt_active = { prev = { country_add_ethic = ethic_authoritarian } }
+								cc_progressive_secondary_revolt_active = { prev = { country_add_ethic = ethic_egalitarian } }
+								cc_technologist_secondary_revolt_active = { prev = { country_add_ethic = ethic_materialist } }
+								cc_traditionalist_secondary_revolt_active = { prev = { country_add_ethic = ethic_spiritualist } }
+								cc_xenoist_secondary_revolt_active = { prev = { country_add_ethic = ethic_xenophile } }
+								cc_supremacist_secondary_revolt_active = {
+									prev = {
+										if = {
+											limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+											country_add_ethic = ethic_xenophobe
+										}
+									}
+								}
+								cc_isolationist_secondary_revolt_active = {
+									prev = {
+										if = {
+											limit = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
+											country_add_ethic = ethic_xenophobe
+										}
+									}
+								}
+								default = { }
+							}
+						}
+						
+						if = {
+							limit = { num_ethics = 1 }
+							random_list = {
+								1 = {
+									country_add_ethic = ethic_authoritarian
 									
-							set_timed_relation_flag = {
-								who = root
-								flag = cc_breakaway_country
-								years = 10
-							}
-							
-							root = {
-								if = {
-									limit = {
+									modifier = {
+										factor = 0
 										OR = {
-											AND = {
-												exists = event_target:cc_rebellious_faction_leader
-												event_target:cc_rebellious_faction_leader = { NOT = { is_same_value = root.ruler } }
-											}
-											AND = {
-												exists = event_target:cc_new_reb_faction_leader
-												event_target:cc_new_reb_faction_leader = { NOT = { is_same_value = root.ruler } }
-											}
-										}
-									}
-									country_event = { id = ccfaction.601 }
-								}
-							}
-							if = {
-								limit = {
-									exists = event_target:cc_rebellious_faction_leader
-									root.ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
-								}
-								event_target:cc_rebellious_faction_leader = {
-									if = {
-										limit = {
-											OR = {
-												leader_class = general
-												leader_class = admiral
-												leader_class = scientist
-											}
-										}
-										exile_leader_as = cc_rebellious_faction_leader
-										
-										else = {
+											has_ethic = ethic_fanatic_authoritarian
+											has_ethic = ethic_fanatic_egalitarian
 											root = {
-												create_fleet = {
-													name = "NAME_Other_Science_Ship"
-													effect = {
-														set_owner = root
-														create_ship_design = {
-															design = "NAME_Prototype"
-														}
-														create_ship = {
-															name = "NAME_From_Beyond"
-															design = last_created_design
-															graphical_culture = "extra_dimensional_01"
-															prefix = no
-															upgradable = no
-														}
-														set_location = root.capital_scope
-														save_event_target_as = deleted_ship
-													}
-												}
-												event_target:deleted_ship = {
-													set_leader = event_target:cc_rebellious_faction_leader
-													leader = { exile_leader_as = cc_rebellious_faction_leader }
-													delete_fleet = this
+												OR = {
+													has_ethic = ethic_fanatic_authoritarian
+													has_ethic = ethic_authoritarian
 												}
 											}
 										}
 									}
 								}
-								prev = { set_leader = cc_rebellious_faction_leader }
-								
-								
-								else = {
-									create_leader = {
-										type = ruler
-										species = owner_main_species
-										name = random
-										skill = 2
-										traits = {}
-									}
-									assign_leader = last_created_leader
-									ruler = {
-										add_random_leader_trait = yes
-									}
-								}
-							}
-							
-							if = {
-								limit = {
-									exists = event_target:cc_new_reb_faction_leader
-									root.ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
-								}
-								event_target:cc_new_reb_faction_leader = {
-									if = {
-										limit = {
-											OR = {
-												leader_class = general
-												leader_class = admiral
-												leader_class = scientist
-											}
-										}
-										exile_leader_as = cc_new_reb_faction_leader
-										
-										else = {
+								1 = {
+									country_add_ethic = ethic_egalitarian
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_authoritarian
+											has_ethic = ethic_fanatic_egalitarian
 											root = {
-												create_fleet = {
-													name = "NAME_Other_Science_Ship"
-													effect = {
-														set_owner = root
-														create_ship_design = {
-															design = "NAME_Prototype"
-														}
-														create_ship = {
-															name = "NAME_From_Beyond"
-															design = last_created_design
-															graphical_culture = "extra_dimensional_01"
-															prefix = no
-															upgradable = no
-														}
-														set_location = root.capital_scope
-														save_event_target_as = deleted_ship
-													}
-												}
-												event_target:deleted_ship = {
-													set_leader = event_target:cc_new_reb_faction_leader
-													leader = { exile_leader_as = cc_new_reb_faction_leader }
-													delete_fleet = this
+												OR = {
+													has_ethic = ethic_fanatic_egalitarian
+													has_ethic = ethic_egalitarian
 												}
 											}
 										}
 									}
 								}
-								prev = {
-									create_fleet = {
-										name = "NAME_Other_Science_Ship"
-										effect = {
-											set_owner = event_target:cc_breakaway_country
-											create_ship_design = {
-												design = "NAME_Prototype"
+								1 = {
+									country_add_ethic = ethic_xenophile
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_xenophile
+											has_ethic = ethic_fanatic_xenophobe
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_xenophile
+													has_ethic = ethic_xenophile
+												}
 											}
-											create_ship = {
-												name = "NAME_From_Beyond"
-												design = last_created_design
-												graphical_culture = "extra_dimensional_01"
-												prefix = no
-												upgradable = no
-											}
-											set_location = root.capital_scope
-											save_event_target_as = deleted_ship
 										}
 									}
-									event_target:deleted_ship = {
-										set_leader = event_target:cc_new_reb_faction_leader
-										leader = { unassign_leader = this }
-										delete_fleet = this
+								}
+								1 = {
+									country_add_ethic = ethic_xenophobe
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_xenophile
+											has_ethic = ethic_fanatic_xenophobe
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_xenophobe
+													has_ethic = ethic_xenophobe
+												}
+											}
+										}
+									}
+								}
+								1 = {
+									country_add_ethic = ethic_spiritualist
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_spiritualist
+											has_ethic = ethic_fanatic_materialist
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_spiritualist
+													has_ethic = ethic_spiritualist
+												}
+											}
+										}
+									}
+								}
+								1 = {
+									country_add_ethic = ethic_materialist
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_spiritualist
+											has_ethic = ethic_fanatic_materialist
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_materialist
+													has_ethic = ethic_materialist
+												}
+											}
+										}
+									}
+								}
+								1 = {
+									country_add_ethic = ethic_militarist
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_pacifist
+											has_ethic = ethic_fanatic_militarist
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_militarist
+													has_ethic = ethic_militarist
+												}
+											}
+										}
+									}
+								}
+								1 = {
+									country_add_ethic = ethic_pacifist
+									
+									modifier = {
+										factor = 0
+										OR = {
+											has_ethic = ethic_fanatic_pacifist
+											has_ethic = ethic_fanatic_militarist
+											root = {
+												OR = {
+													has_ethic = ethic_fanatic_pacifist
+													has_ethic = ethic_pacifist
+												}
+											}
+										}
 									}
 								}
 							}
 						}
+						
+						change_government = {
+							authority = random
+							civics = random
+						}
+						
+						set_name = random
+							
+					
+						save_event_target_as = cc_breakaway_country
+								
+						set_timed_relation_flag = {
+							who = root
+							flag = cc_breakaway_country
+							years = 10
+						}
+						
+						root = {
+							if = {
+								limit = {
+									OR = {
+										AND = {
+											exists = event_target:cc_rebellious_faction_leader
+											event_target:cc_rebellious_faction_leader = { NOT = { is_same_value = root.ruler } }
+										}
+										AND = {
+											exists = event_target:cc_new_reb_faction_leader
+											event_target:cc_new_reb_faction_leader = { NOT = { is_same_value = root.ruler } }
+										}
+									}
+								}
+								country_event = { id = ccfaction.601 }
+							}
+						}
+						if = {
+							limit = {
+								exists = event_target:cc_rebellious_faction_leader
+								root.ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+							}
+							event_target:cc_rebellious_faction_leader = {
+								if = {
+									limit = {
+										OR = {
+											leader_class = general
+											leader_class = admiral
+											leader_class = scientist
+										}
+									}
+									exile_leader_as = cc_rebellious_faction_leader
+								}
+								else = {
+									root = {
+										create_fleet = {
+											name = "NAME_Other_Science_Ship"
+											effect = {
+												set_owner = root
+												create_ship_design = {
+													design = "NAME_Prototype"
+												}
+												create_ship = {
+													name = "NAME_From_Beyond"
+													design = last_created_design
+													graphical_culture = "extra_dimensional_01"
+													prefix = no
+													upgradable = no
+												}
+												set_location = root.capital_scope
+												save_event_target_as = deleted_ship
+											}
+										}
+										event_target:deleted_ship = {
+											set_leader = event_target:cc_rebellious_faction_leader
+											leader = { exile_leader_as = cc_rebellious_faction_leader }
+											delete_fleet = this
+										}
+									}
+								}
+							}
+							prev = { set_leader = cc_rebellious_faction_leader }
+							
+						}
+						else = {
+							create_leader = {
+								type = ruler
+								species = owner_main_species
+								name = random
+								skill = 2
+								traits = {}
+							}
+							assign_leader = last_created_leader
+							ruler = {
+								add_random_leader_trait = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								exists = event_target:cc_new_reb_faction_leader
+								root.ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
+							}
+							event_target:cc_new_reb_faction_leader = {
+								if = {
+									limit = {
+										OR = {
+											leader_class = general
+											leader_class = admiral
+											leader_class = scientist
+										}
+									}
+									exile_leader_as = cc_new_reb_faction_leader
+								}
+								else = {
+									root = {
+										create_fleet = {
+											name = "NAME_Other_Science_Ship"
+											effect = {
+												set_owner = root
+												create_ship_design = {
+													design = "NAME_Prototype"
+												}
+												create_ship = {
+													name = "NAME_From_Beyond"
+													design = last_created_design
+													graphical_culture = "extra_dimensional_01"
+													prefix = no
+													upgradable = no
+												}
+												set_location = root.capital_scope
+												save_event_target_as = deleted_ship
+											}
+										}
+										event_target:deleted_ship = {
+											set_leader = event_target:cc_new_reb_faction_leader
+											leader = { exile_leader_as = cc_new_reb_faction_leader }
+											delete_fleet = this
+										}
+									}
+								}
+							}
+							prev = {
+								create_fleet = {
+									name = "NAME_Other_Science_Ship"
+									effect = {
+										set_owner = event_target:cc_breakaway_country
+										create_ship_design = {
+											design = "NAME_Prototype"
+										}
+										create_ship = {
+											name = "NAME_From_Beyond"
+											design = last_created_design
+											graphical_culture = "extra_dimensional_01"
+											prefix = no
+											upgradable = no
+										}
+										set_location = root.capital_scope
+										save_event_target_as = deleted_ship
+									}
+								}
+								event_target:deleted_ship = {
+									set_leader = event_target:cc_new_reb_faction_leader
+									leader = { unassign_leader = this }
+									delete_fleet = this
+								}
+							}
+						}
 					}
-				
-				
-					every_owned_pop = {
-						limit = {
-							OR = {
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_imperialist_revolt_active
-												has_country_flag = cc_imperialist_secondary_revolt_active
-											}
+				}
+			
+			
+				every_owned_pop = {
+					limit = {
+						OR = {
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_imperialist_revolt_active
+											has_country_flag = cc_imperialist_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_militarist
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = imperialist
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_prosperity_revolt_active
-												has_country_flag = cc_prosperity_secondary_revolt_active
-											}
+								has_ethic = ethic_militarist
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = imperialist
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_prosperity_revolt_active
+											has_country_flag = cc_prosperity_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_pacifist
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = prosperity
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_totalitarian_revolt_active
-												has_country_flag = cc_totalitarian_secondary_revolt_active
-											}
+								has_ethic = ethic_pacifist
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = prosperity
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_totalitarian_revolt_active
+											has_country_flag = cc_totalitarian_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_authoritarian
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = totalitarian
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_progressive_revolt_active
-												has_country_flag = cc_progressive_secondary_revolt_active
-											}
+								has_ethic = ethic_authoritarian
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = totalitarian
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_progressive_revolt_active
+											has_country_flag = cc_progressive_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_egalitarian
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = progressive
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_technologist_revolt_active
-												has_country_flag = cc_technologist_secondary_revolt_active
-											}
+								has_ethic = ethic_egalitarian
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = progressive
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_technologist_revolt_active
+											has_country_flag = cc_technologist_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_materialist
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = technologist
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_traditionalist_revolt_active
-												has_country_flag = cc_traditionalist_secondary_revolt_active
-											}
+								has_ethic = ethic_materialist
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = technologist
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_traditionalist_revolt_active
+											has_country_flag = cc_traditionalist_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_spiritualist
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = traditionalist
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_xenoist_revolt_active
-												has_country_flag = cc_xenoist_secondary_revolt_active
-											}
+								has_ethic = ethic_spiritualist
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = traditionalist
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_xenoist_revolt_active
+											has_country_flag = cc_xenoist_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_xenophile
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									#member_of_faction = xenoist
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_supremacist_revolt_active
-												has_country_flag = cc_supremacist_secondary_revolt_active
-											}
+								has_ethic = ethic_xenophile
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								#member_of_faction = xenoist
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_supremacist_revolt_active
+											has_country_flag = cc_supremacist_secondary_revolt_active
 										}
 									}
-									has_ethic = ethic_xenophobe
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									
+								}
+								has_ethic = ethic_xenophobe
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								
+								owner = {
+									NOR = {
+										has_ethic = ethic_pacifist
+										has_ethic = ethic_fanatic_pacifist
+									}
+								}
+								is_same_species = owner_species
+								#member_of_faction = supremacist
+							}
+							if = {
+								limit = {
+									root = {
+										OR = {
+											has_country_flag = cc_isolationist_revolt_active
+											has_country_flag = cc_isolationist_secondary_revolt_active
+										}
+									}
+								}
+								has_ethic = ethic_xenophobe
+								is_enslaved = no
+								is_being_purged = no
+								has_culture_shock = no
+								
+								OR = {
+									NOT = { is_same_species = owner_species }
 									owner = {
-										NOR = {
+										OR = {
 											has_ethic = ethic_pacifist
 											has_ethic = ethic_fanatic_pacifist
 										}
 									}
-									is_same_species = owner_species
-									#member_of_faction = supremacist
 								}
-								if = {
-									limit = {
-										root = {
-											OR = {
-												has_country_flag = cc_isolationist_revolt_active
-												has_country_flag = cc_isolationist_secondary_revolt_active
-											}
-										}
-									}
-									has_ethic = ethic_xenophobe
-									is_enslaved = no
-									is_being_purged = no
-									has_culture_shock = no
-									
-									OR = {
-										NOT = { is_same_species = owner_species }
-										owner = {
-											OR = {
-												has_ethic = ethic_pacifist
-												has_ethic = ethic_fanatic_pacifist
-											}
-										}
-									}
-									#member_of_faction = isolationist
-								}
-							}
-						}
-						planet = {
-							while = {
-								count = 2
-								create_army = {
-									owner = event_target:cc_breakaway_country
-									species = root.species
-									type = "assault_army"
-								}
+								#member_of_faction = isolationist
 							}
 						}
 					}
-					
-					set_timed_planet_flag = {
-						flag = recent_unrest_event
-						days = 720
+					planet = {
+						while = {
+							count = 2
+							create_army = {
+								owner = event_target:cc_breakaway_country
+								species = root.species
+								type = "assault_army"
+							}
+						}
 					}
-					set_timed_planet_flag = {
-						flag = cc_faction_revolt_cappital
-						days = 720
-					}
+				}
+				
+				set_timed_planet_flag = {
+					flag = recent_unrest_event
+					days = 720
+				}
+				set_timed_planet_flag = {
+					flag = cc_faction_revolt_cappital
+					days = 720
 				}
 			}
 		}
@@ -3788,46 +3781,41 @@ country_event = {
 				last_created_fleet = {
 					set_location = event_target:cc_rebels_capital
 				}
-				else = {
-					if = {
-						limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
-						create_fleet_from_naval_cap = 0.2
-						last_created_fleet = {
-							set_location = event_target:cc_rebels_capital
-						}
-						else = {
-							create_fleet_from_naval_cap = 0.3
-							last_created_fleet = {
-								set_location = event_target:cc_rebels_capital
-							}
-						}
-					}
-				}
 			}
-
-			else = {
+			else_if = {
 				if = {
-					limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+					limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
 					create_fleet_from_naval_cap = 0.2
 					last_created_fleet = {
 						set_location = event_target:cc_rebels_capital
 					}
-					else = {
-						if = {
-							limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
-							create_fleet_from_naval_cap = 0.4
-							last_created_fleet = {
-								set_location = event_target:cc_rebels_capital
-							}
-							else = {
-								create_fleet_from_naval_cap = 0.6
-								last_created_fleet = {
-									set_location = event_target:cc_rebels_capital
-								}
-							}
-						}
-					}
 				}
+			}
+			else = {
+				create_fleet_from_naval_cap = 0.3
+				last_created_fleet = {
+					set_location = event_target:cc_rebels_capital
+				}
+			}
+		}
+		else_if = {
+			limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+			create_fleet_from_naval_cap = 0.2
+			last_created_fleet = {
+				set_location = event_target:cc_rebels_capital
+			}
+		}
+		else_if = {
+			limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+			create_fleet_from_naval_cap = 0.4
+			last_created_fleet = {
+				set_location = event_target:cc_rebels_capital
+			}
+		}
+		else = {
+			create_fleet_from_naval_cap = 0.6
+			last_created_fleet = {
+				set_location = event_target:cc_rebels_capital
 			}
 		}
 	}
@@ -3925,95 +3913,78 @@ planet_event = {
 					last_created_fleet = {
 						set_location = root
 					}
-								
-					else = {
-						if = {
-							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.24
-							last_created_fleet = {
-								set_location = root
-							}
+				}		
+				else_if = {
+					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 					
-							else = {
-								if = {
-									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.36
-									last_created_fleet = {
-										set_location = root
-									}
-								}
-							}
-						}
+					create_fleet_from_naval_cap = 0.24
+					last_created_fleet = {
+						set_location = root
 					}
 				}
-									
-				else = {
-					if = {
-						limit = {
-							num_owned_planets < 6
-						}
-						if = {
-							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.0675
-							last_created_fleet = {
-								set_location = root
-							}
-							
-							else = {
-								if = {
-									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-									
-									create_fleet_from_naval_cap = 0.135
-									last_created_fleet = {
-										set_location = root
-									}
-							
-									else = {
-										if = {
-											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.21
-											last_created_fleet = {
-												set_location = root
-											}
-										}
-									}
-								}
-							}
-						}
-						else = {
-							if = {
-								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-								
-								create_fleet_from_naval_cap = 0.03
-								last_created_fleet = {
-									set_location = root
-								}
-								
-								else = {
-									if = {
-										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-										
-										create_fleet_from_naval_cap = 0.06
-										last_created_fleet = {
-											set_location = root
-										}
-								
-										else = {
-											if = {
-												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.09
-												last_created_fleet = {
-													set_location = root
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+				
+				else_if = {
+					limit = { NOT = { num_pops < 7 } }
+					create_fleet_from_naval_cap = 0.36
+					last_created_fleet = {
+						set_location = root
 					}
+				}
+			}
+									
+			else_if = {
+				limit = {
+					num_owned_planets < 6
+				}
+				if = {
+					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					
+					create_fleet_from_naval_cap = 0.0675
+					last_created_fleet = {
+						set_location = root
+					}
+				}
+				else_if = {
+					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					
+					create_fleet_from_naval_cap = 0.135
+					last_created_fleet = {
+						set_location = root
+					}
+				}
+				
+				else_if = {
+					limit = { NOT = { num_pops < 7 } }
+					create_fleet_from_naval_cap = 0.21
+					last_created_fleet = {
+						set_location = root
+					}
+				}
+			}
+
+			else_if = {
+				limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+				
+				create_fleet_from_naval_cap = 0.03
+				last_created_fleet = {
+					set_location = root
+				}
+			}
+					
+			else_if = {
+				limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+				
+				create_fleet_from_naval_cap = 0.06
+				last_created_fleet = {
+					set_location = root
+				}
+			}
+			
+			else_if = {
+				limit = { NOT = { num_pops < 7 } }
+				create_fleet_from_naval_cap = 0.09
+				last_created_fleet = {
+					set_location = root
 				}
 			}
 		}
@@ -4686,95 +4657,77 @@ planet_event = {
 					last_created_fleet = {
 						set_location = root
 					}
+				}
+				else_if = {
+					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
 					
-					else = {
-						if = {
-							limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.2
-							last_created_fleet = {
-								set_location = root
-							}
-					
-							else = {
-								if = {
-									limit = { NOT = { num_pops < 7 } }
-									create_fleet_from_naval_cap = 0.3
-									last_created_fleet = {
-										set_location = root
-									}
-								}
-							}
-						}
+					create_fleet_from_naval_cap = 0.2
+					last_created_fleet = {
+						set_location = root
 					}
 				}
-							
-				else = {
-					if = {
-						limit = {
-							num_owned_planets < 6
-						}
-						if = {
-							limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-							
-							create_fleet_from_naval_cap = 0.06
-							last_created_fleet = {
-								set_location = root
-							}
-							
-							else = {
-								if = {
-									limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-									
-									create_fleet_from_naval_cap = 0.12
-									last_created_fleet = {
-										set_location = root
-									}
-							
-									else = {
-										if = {
-											limit = { NOT = { num_pops < 7 } }
-											create_fleet_from_naval_cap = 0.18
-											last_created_fleet = {
-												set_location = root
-											}
-										}
-									}
-								}
-							}
-						}
-						else = {
-							if = {
-								limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
-								
-								create_fleet_from_naval_cap = 0.025
-								last_created_fleet = {
-									set_location = root
-								}
-								
-								else = {
-									if = {
-										limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
-										
-										create_fleet_from_naval_cap = 0.05
-										last_created_fleet = {
-											set_location = root
-										}
-								
-										else = {
-											if = {
-												limit = { NOT = { num_pops < 7 } }
-												create_fleet_from_naval_cap = 0.075
-												last_created_fleet = {
-													set_location = root
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+					
+				else_if = {
+					limit = { NOT = { num_pops < 7 } }
+					create_fleet_from_naval_cap = 0.3
+					last_created_fleet = {
+						set_location = root
 					}
+				}
+			}
+							
+			else_if = {
+				limit = {
+					num_owned_planets < 6
+				}
+				if = {
+					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					
+					create_fleet_from_naval_cap = 0.06
+					last_created_fleet = {
+						set_location = root
+					}
+				}		
+				else_if = {
+					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					
+					create_fleet_from_naval_cap = 0.12
+					last_created_fleet = {
+						set_location = root
+					}
+				}
+				
+				else_if = {
+					limit = { NOT = { num_pops < 7 } }
+					create_fleet_from_naval_cap = 0.18
+					last_created_fleet = {
+						set_location = root
+					}
+				}
+			}
+			else_if = {
+				limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+				
+				create_fleet_from_naval_cap = 0.025
+				last_created_fleet = {
+					set_location = root
+				}
+			}
+					
+			else_if = {
+				limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+				
+				create_fleet_from_naval_cap = 0.05
+				last_created_fleet = {
+					set_location = root
+				}
+			}
+								
+			else_if = {
+				limit = { NOT = { num_pops < 7 } }
+				create_fleet_from_naval_cap = 0.075
+				last_created_fleet = {
+					set_location = root
 				}
 			}
 		}

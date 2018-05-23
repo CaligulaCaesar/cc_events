@@ -37,27 +37,25 @@ country_event = {
 				}
 				save_event_target_as = ship
 			}
-			else = {
-				if = {
-					limit = { fromfrom = { any_ship = { is_ship_size = cruiser } } }
-					random_owned_ship = { 
-						limit = {
-							fleet = { is_same_value = FROMFROM }
-							is_ship_size = cruiser
-							has_hp > 0
-						}
-						save_event_target_as = ship
-					}
-					else = {
-						random_owned_ship = { 
-							limit = {
-								fleet = { is_same_value = FROMFROM }
-								has_hp > 0
-							}
-							save_event_target_as = ship
-						}
-					}
+		}
+		else_if = {
+			limit = { fromfrom = { any_ship = { is_ship_size = cruiser } } }
+			random_owned_ship = { 
+				limit = {
+					fleet = { is_same_value = FROMFROM }
+					is_ship_size = cruiser
+					has_hp > 0
 				}
+				save_event_target_as = ship
+			}
+		}
+		else = {
+			random_owned_ship = { 
+				limit = {
+					fleet = { is_same_value = FROMFROM }
+					has_hp > 0
+				}
+				save_event_target_as = ship
 			}
 		}
 		if = {
@@ -141,25 +139,22 @@ country_event = {
 				}
 				7 = { last_created_leader = { kill_leader = { show_notification = no } } }
 			}
-			else = {
-				if = {
-					limit = { NOT = { exists = fromfrom.leader } }
-					country_event = { id = leader.92 }
-
-					else = {
-						random_list = {
-							1 = {
-								fromfrom.leader = { save_event_target_as = dpe_admiral }
-								set_timed_country_flag = {
-									flag = dpe_admiral
-									days = 5
-								}
-								country_event = { id = leader.92 }
-							}
-							2 = { last_created_leader = { kill_leader = { show_notification = no } } }
-						}
+		}
+		else_if = {
+			limit = { NOT = { exists = fromfrom.leader } }
+			country_event = { id = leader.92 }
+		}
+		else = {
+			random_list = {
+				1 = {
+					fromfrom.leader = { save_event_target_as = dpe_admiral }
+					set_timed_country_flag = {
+						flag = dpe_admiral
+						days = 5
 					}
+					country_event = { id = leader.92 }
 				}
+				2 = { last_created_leader = { kill_leader = { show_notification = no } } }
 			}
 		}
 	}

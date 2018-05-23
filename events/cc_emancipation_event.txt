@@ -640,13 +640,12 @@ planet_event = {
 				owner = { NOT = { any_owned_planet = { has_planet_flag = cc_second_emancipation_planet } } }
 			}
 			planet_event = { id = cc_emancipation.5 }
-
-			else = {
-				owner = {
-					if = {
-						limit = { NOT = { has_country_flag = cc_emancipation_movement } }
-						country_event = { id = cc_emancipation.6 }
-					}
+		}
+		else = {
+			owner = {
+				if = {
+					limit = { NOT = { has_country_flag = cc_emancipation_movement } }
+					country_event = { id = cc_emancipation.6 }
 				}
 			}
 		}
@@ -1411,11 +1410,11 @@ country_event = {
 				limit = { has_country_flag = slave_rebels }
 				save_event_target_as = breakaway_slaves
 			}
-			else = {
-				random_neighbor_country = {
-					limit = { has_ethic = ethic_fanatic_egalitarian }
-					save_event_target_as = egalitarian_neighbour
-				}
+		}
+		else = {
+			random_neighbor_country = {
+				limit = { has_ethic = ethic_fanatic_egalitarian }
+				save_event_target_as = egalitarian_neighbour
 			}
 		}
 		every_owned_pop = {
@@ -1435,8 +1434,8 @@ country_event = {
 				any_neighbor_country = { has_country_flag = slave_rebels }
 			}
 			custom_tooltip = cc_emancipation.20.tooltip.A
-			else = { custom_tooltip = cc_emancipation.20.tooltip.B }
 		}
+		else = { custom_tooltip = cc_emancipation.20.tooltip.B }
 	}
 }
 
@@ -1455,13 +1454,13 @@ pop_event = {
 					days = 5400
 				}
 			}
-			else = {
-				random = {
-					chance = 25
-					add_modifier = {
-						modifier = cc_worried_about_slaves
-						days = 5400
-					}
+		}
+		else = {
+			random = {
+				chance = 25
+				add_modifier = {
+					modifier = cc_worried_about_slaves
+					days = 5400
 				}
 			}
 		}

@@ -679,20 +679,14 @@ country_event = {
 		if = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_spiritualist } }
 			shift_ethic = ethic_spiritualist
-
-			else = {
-				if = {
-					limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
-					shift_ethic = ethic_xenophile
-
-					else = {
-						if = {
-							limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
-							shift_ethic = ethic_materialist
-						}
-					}
-				}
-			}
+		}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
+			shift_ethic = ethic_xenophile
+		}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
+			shift_ethic = ethic_materialist
 		}
 
 		hidden_effect = { country_event = { id = dpe_fe.3 days = 45 } }
@@ -783,25 +777,21 @@ country_event = {
 				modifier = dpe_paying_spirFE
 				days = 1800
 			}
+		}
 
-			else = {
-				if = {
-					limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
-					add_modifier = {
-						modifier = dpe_paying_xenoFE
-						days = 1800
-					}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
+			add_modifier = {
+				modifier = dpe_paying_xenoFE
+				days = 1800
+			}
+		}
 
-					else = {
-						if = {
-							limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
-							add_modifier = {
-								modifier = dpe_paying_matFE
-								days = 1800
-							}
-						}
-					}
-				}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
+			add_modifier = {
+				modifier = dpe_paying_matFE
+				days = 1800
 			}
 		}
 
@@ -928,25 +918,21 @@ country_event = {
 				modifier = dpe_paying_friendly_spirFE
 				days = 1800
 			}
+		}
 
-			else = {
-				if = {
-					limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
-					add_modifier = {
-						modifier = dpe_paying_friendly_xenoFE
-						days = 1800
-					}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
+			add_modifier = {
+				modifier = dpe_paying_friendly_xenoFE
+				days = 1800
+			}
+		}
 
-					else = {
-						if = {
-							limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
-							add_modifier = {
-								modifier = dpe_paying_friendly_matFE
-								days = 1800
-							}
-						}
-					}
-				}
+		else_if = {
+			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
+			add_modifier = {
+				modifier = dpe_paying_friendly_matFE
+				days = 1800
 			}
 		}
 

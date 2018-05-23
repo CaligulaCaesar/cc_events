@@ -122,76 +122,72 @@ country_event = {
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
 				}
-				else = {
-					if = {
+			}
+			else_if = {
+				limit = {
+					count_pop_factions = {
 						limit = {
-							count_pop_factions = {
-								limit = {
-									support > 0.10
-									pop_percentage = {
-										limit = { happiness < 0.4 }
-										percentage > 0.75
-									}
-									exists = leader
-								}
-								count > 0
+							support > 0.10
+							pop_percentage = {
+								limit = { happiness < 0.4 }
+								percentage > 0.75
 							}
+							exists = leader
 						}
-						random_pop_faction = {
-							limit = {
-								support > 0.10
-								pop_percentage = {
-									limit = { happiness < 0.4 }
-									percentage > 0.75
-								}
-								exists = leader
-							}
-							save_event_target_as = dpe_dissident_faction
-							leader = { save_event_target_as = dpe_dissident_faction_leader }
-						}
-						else = {
-							if = {
-								limit = {
-									count_pop_factions = {
-										limit = {
-											support > 0.05
-											pop_percentage = {
-												limit = { happiness < 0.4 }
-												percentage > 0.75
-											}
-											exists = leader
-										}
-										count > 0
-									}
-								}
-								random_pop_faction = {
-									limit = {
-										support > 0.05
-										pop_percentage = {
-											limit = { happiness < 0.4 }
-											percentage > 0.75
-										}
-										exists = leader
-									}
-									save_event_target_as = dpe_dissident_faction
-									leader = { save_event_target_as = dpe_dissident_faction_leader }
-								}
-								else = {
-									random_pop_faction = {
-										limit = {
-											pop_percentage = {
-												limit = { happiness < 0.4 }
-												percentage > 0.75
-											}
-											exists = leader
-										}
-										save_event_target_as = dpe_dissident_faction
-										leader = { save_event_target_as = dpe_dissident_faction_leader }
-									}
-								}
-							}
-						}
+						count > 0
 					}
+				}
+				random_pop_faction = {
+					limit = {
+						support > 0.10
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+						exists = leader
+					}
+					save_event_target_as = dpe_dissident_faction
+					leader = { save_event_target_as = dpe_dissident_faction_leader }
+				}
+			}
+			else_if = {
+				limit = {
+					count_pop_factions = {
+						limit = {
+							support > 0.05
+							pop_percentage = {
+								limit = { happiness < 0.4 }
+								percentage > 0.75
+							}
+							exists = leader
+						}
+						count > 0
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						support > 0.05
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+						exists = leader
+					}
+					save_event_target_as = dpe_dissident_faction
+					leader = { save_event_target_as = dpe_dissident_faction_leader }
+				}
+			}
+			else = {
+				random_pop_faction = {
+					limit = {
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
+						}
+						exists = leader
+					}
+					save_event_target_as = dpe_dissident_faction
+					leader = { save_event_target_as = dpe_dissident_faction_leader }
 				}
 			}
 		
@@ -554,37 +550,37 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				random_owned_planet = {
-					limit = {				
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
-						controller = { is_same_value = root }
-						any_owned_pop = {
-							OR = {
+		}
+		else = {
+			random_owned_planet = {
+				limit = {				
+					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					controller = { is_same_value = root }
+					any_owned_pop = {
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
 					}
-					save_event_target_as = dpe_talent_planet
-					set_timed_planet_flag = {
-						flag = dpe_recent_talent_planet
-						years = 50
-					}
-					root = {
-						set_timed_country_flag = {
-							flag = dpe_talent_scientist_default
-							days = 5
-						}
+				}
+				save_event_target_as = dpe_talent_planet
+				set_timed_planet_flag = {
+					flag = dpe_recent_talent_planet
+					years = 50
+				}
+				root = {
+					set_timed_country_flag = {
+						flag = dpe_talent_scientist_default
+						days = 5
 					}
 				}
 			}
@@ -607,36 +603,36 @@ country_event = {
 					trait = leader_trait_dpe_talented
 				}
 			}
-			else = {
-				event_target:dpe_talent_planet = {
-					random_owned_pop = {
-						limit = {
-							species = { pops_have_happiness = yes }
-							OR = {
+		}
+		else = {
+			event_target:dpe_talent_planet = {
+				random_owned_pop = {
+					limit = {
+						species = { pops_have_happiness = yes }
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
-						save_event_target_as = dpe_talent_leader_pop
 					}
+					save_event_target_as = dpe_talent_leader_pop
 				}
-				create_leader = {
-					type = scientist
-					species = event_target:dpe_talent_leader_pop.species
-					name = random
-					skill = 2
-					traits = {
-						trait = leader_trait_dpe_talented
-					}
+			}
+			create_leader = {
+				type = scientist
+				species = event_target:dpe_talent_leader_pop.species
+				name = random
+				skill = 2
+				traits = {
+					trait = leader_trait_dpe_talented
 				}
 			}
 		}
@@ -647,114 +643,113 @@ country_event = {
 					dpe_talent_scientist_has_speciality = no
 				}
 				dpe_talent_scientist_give_speciality = yes
-
-				else = {
-					if = {
-						limit = { has_trait = leader_trait_expertise_materials }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_materials
-								days = 5
-							}
+			}
+			else = {
+				if = {
+					limit = { has_trait = leader_trait_expertise_materials }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_materials
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_propulsion }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_propulsion
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_propulsion }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_propulsion
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_voidcraft }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_voidcraft
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_voidcraft }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_voidcraft
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_industry }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_industry
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_industry }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_industry
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_field_manipulation }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_field_manipulation
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_field_manipulation }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_field_manipulation
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_particles }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_particles
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_particles }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_particles
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_computing }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_computing
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_computing }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_computing
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_psionics }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_psionics
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_psionics }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_psionics
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_new_worlds }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_new_worlds
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_new_worlds }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_new_worlds
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_statecraft }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_statecraft
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_statecraft }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_statecraft
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_biology }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_biology
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_biology }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_biology
+							days = 5
 						}
 					}
-					if = {
-						limit = { has_trait = leader_trait_expertise_military_theory }
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_expertise_military_theory
-								days = 5
-							}
+				}
+				if = {
+					limit = { has_trait = leader_trait_expertise_military_theory }
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_expertise_military_theory
+							days = 5
 						}
 					}
 				}
@@ -932,37 +927,37 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				random_owned_planet = {
-					limit = {				
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
-						controller = { is_same_value = root }
-						any_owned_pop = {
-							OR = {
+		}
+		else = {
+			random_owned_planet = {
+				limit = {				
+					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					controller = { is_same_value = root }
+					any_owned_pop = {
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
 					}
-					save_event_target_as = dpe_talent_planet
-					set_timed_planet_flag = {
-						flag = dpe_recent_talent_planet
-						years = 50
-					}
-					root = {
-						set_timed_country_flag = {
-							flag = dpe_talent_general_default
-							days = 5
-						}
+				}
+				save_event_target_as = dpe_talent_planet
+				set_timed_planet_flag = {
+					flag = dpe_recent_talent_planet
+					years = 50
+				}
+				root = {
+					set_timed_country_flag = {
+						flag = dpe_talent_general_default
+						days = 5
 					}
 				}
 			}
@@ -986,37 +981,37 @@ country_event = {
 					trait = leader_trait_charismatic
 				}
 			}
-			else = {
-				event_target:dpe_talent_planet = {
-					random_owned_pop = {
-						limit = {
-							species = { pops_have_happiness = yes }
-							OR = {
+		}
+		else = {
+			event_target:dpe_talent_planet = {
+				random_owned_pop = {
+					limit = {
+						species = { pops_have_happiness = yes }
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
-						save_event_target_as = dpe_talent_leader_pop
 					}
+					save_event_target_as = dpe_talent_leader_pop
 				}
-				create_leader = {
-					type = general
-					species = event_target:dpe_talent_leader_pop.species
-					name = random
-					skill = 2
-					traits = {
-						trait = leader_trait_dpe_talented
-						trait = leader_trait_charismatic
-					}
+			}
+			create_leader = {
+				type = general
+				species = event_target:dpe_talent_leader_pop.species
+				name = random
+				skill = 2
+				traits = {
+					trait = leader_trait_dpe_talented
+					trait = leader_trait_charismatic
 				}
 			}
 		}
@@ -1132,48 +1127,47 @@ country_event = {
 							days = 5
 						}
 					}
-					else = {
-						root = {
-							set_timed_country_flag = {
-								flag = dpe_talent_cc_colony_direct_democracy
-								days = 5
-							}
+				}
+				else = {
+					root = {
+						set_timed_country_flag = {
+							flag = dpe_talent_cc_colony_direct_democracy
+							days = 5
 						}
 					}
 				}
 			}
-			
-			else = {
-				random_owned_planet = {
-					limit = {				
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
-						controller = { is_same_value = root }
-						any_owned_pop = {
-							OR = {
+		}
+		else = {
+			random_owned_planet = {
+				limit = {				
+					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					controller = { is_same_value = root }
+					any_owned_pop = {
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
 					}
-					save_event_target_as = dpe_talent_planet
-					set_timed_planet_flag = {
-						flag = dpe_recent_talent_planet
-						years = 50
-					}
-					root = {
-						set_timed_country_flag = {
-							flag = dpe_talent_governor_default
-							days = 5
-						}
+				}
+				save_event_target_as = dpe_talent_planet
+				set_timed_planet_flag = {
+					flag = dpe_recent_talent_planet
+					years = 50
+				}
+				root = {
+					set_timed_country_flag = {
+						flag = dpe_talent_governor_default
+						days = 5
 					}
 				}
 			}
@@ -1197,37 +1191,37 @@ country_event = {
 					trait = leader_trait_intellectual
 				}
 			}
-			else = {
-				event_target:dpe_talent_planet = {
-					random_owned_pop = {
-						limit = {
-							species = { pops_have_happiness = yes }
-							OR = {
+		}
+		else = {
+			event_target:dpe_talent_planet = {
+				random_owned_pop = {
+					limit = {
+						species = { pops_have_happiness = yes }
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root
+							}
+							AND = {
 								has_citizenship_type = {
-									type = citizenship_full
+									type = citizenship_caste_system
 									country = root
 								}
-								AND = {
-									has_citizenship_type = {
-										type = citizenship_caste_system
-										country = root
-									}
-									is_enslaved = no
-								}
+								is_enslaved = no
 							}
 						}
-						save_event_target_as = dpe_talent_leader_pop
 					}
+					save_event_target_as = dpe_talent_leader_pop
 				}
-				create_leader = {
-					type = governor
-					species = event_target:dpe_talent_leader_pop.species
-					name = random
-					skill = 2
-					traits = {
-						trait = leader_trait_dpe_talented
-						trait = leader_trait_intellectual
-					}
+			}
+			create_leader = {
+				type = governor
+				species = event_target:dpe_talent_leader_pop.species
+				name = random
+				skill = 2
+				traits = {
+					trait = leader_trait_dpe_talented
+					trait = leader_trait_intellectual
 				}
 			}
 		}
@@ -1333,53 +1327,51 @@ country_event = {
 					years = 50
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						any_system_within_border = {
-							starbase = {
-								has_starbase_size >= starbase_starport
-								OR = {
-									has_starbase_building = fleet_academy
-									has_starbase_building = command_center
-								}
-							}
-							NOT = { has_star_flag = dpe_recent_talent_starbase }
+		}
+		else_if = {
+			limit = {
+				any_system_within_border = {
+					starbase = {
+						has_starbase_size >= starbase_starport
+						OR = {
+							has_starbase_building = fleet_academy
+							has_starbase_building = command_center
 						}
 					}
-					random_system_within_border = {
-						limit = {
-							starbase = {
-								has_starbase_size >= starbase_starport
-								OR = {
-									has_starbase_building = fleet_academy
-									has_starbase_building = command_center
-								}
-							}
-							
-							NOT = { has_star_flag = dpe_recent_talent_starbase }
-						}
-						save_event_target_as = dpe_talent_starport_system
-						set_timed_star_flag = {
-							flag = dpe_recent_talent_starbase
-							years = 50
+					NOT = { has_star_flag = dpe_recent_talent_starbase }
+				}
+			}
+			random_system_within_border = {
+				limit = {
+					starbase = {
+						has_starbase_size >= starbase_starport
+						OR = {
+							has_starbase_building = fleet_academy
+							has_starbase_building = command_center
 						}
 					}
-					else = {
-						random_system_within_border = {
-							limit = {
-								starbase = {
-									has_starbase_size >= starbase_starport
-								}
-								NOT = { has_star_flag = dpe_recent_talent_starbase }
-							}
-							save_event_target_as = dpe_talent_starport_system
-							set_timed_star_flag = {
-								flag = dpe_recent_talent_starbase
-								years = 50
-							}
-						}
+					
+					NOT = { has_star_flag = dpe_recent_talent_starbase }
+				}
+				save_event_target_as = dpe_talent_starport_system
+				set_timed_star_flag = {
+					flag = dpe_recent_talent_starbase
+					years = 50
+				}
+			}
+		}
+		else = {
+			random_system_within_border = {
+				limit = {
+					starbase = {
+						has_starbase_size >= starbase_starport
 					}
+					NOT = { has_star_flag = dpe_recent_talent_starbase }
+				}
+				save_event_target_as = dpe_talent_starport_system
+				set_timed_star_flag = {
+					flag = dpe_recent_talent_starbase
+					years = 50
 				}
 			}
 		}

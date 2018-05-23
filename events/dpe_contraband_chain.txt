@@ -369,8 +369,8 @@ country_event = {
 					has_faction = progressive
 				}
 				country_event = { id = dpe_contraband_event.4 days = 270 random = 180 }
-				else = { country_event = { id = dpe_contraband_event.45 days = 270 random = 180 } }
 			}
+			else = { country_event = { id = dpe_contraband_event.45 days = 270 random = 180 } }
 		}
 		
 		ai_chance = {
@@ -632,18 +632,12 @@ country_event = {
 			limit = { has_closed_borders = event_target:dpe_drugs_country }
 			country_event = { id = dpe_contraband_event.900 }
 			event_target:dpe_drugs_country = { country_event = { id = dpe_contraband_event.901 } }
-
-			else = {
-				if = {
-					limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
-					country_event = { id = dpe_contraband_event.54 days = 480 random = 2160 }
-				
-					else = {
-						country_event = { id = dpe_contraband_event.52 days = 480 random = 2160 }
-					}
-				}
-			}
 		}
+		else_if = {
+			limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
+			country_event = { id = dpe_contraband_event.54 days = 480 random = 2160 }
+		}
+		else = { country_event = { id = dpe_contraband_event.52 days = 480 random = 2160 } }
 	}
 }
 
@@ -661,18 +655,12 @@ country_event = {
 			limit = { has_closed_borders = event_target:dpe_drugs_country }
 			country_event = { id = dpe_contraband_event.900 }
 			event_target:dpe_drugs_country = { country_event = { id = dpe_contraband_event.901 } }
-
-			else = {
-				if = {
-					limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
-					country_event = { id = dpe_contraband_event.53 days = 270 random = 720 }
-				
-					else = {
-						country_event = { id = dpe_contraband_event.51 days = 270 random = 720 }
-					}
-				}
-			}
 		}
+		else_if = {
+			limit = { event_target:dpe_drugs_country = { has_modifier = dpe_drug_cartels_tolerate } }
+			country_event = { id = dpe_contraband_event.53 days = 270 random = 720 }
+		}
+		else = { country_event = { id = dpe_contraband_event.51 days = 270 random = 720 } }
 	}
 }
 
@@ -1977,19 +1965,19 @@ country_event = {
 				}
 				country_event = { id = dpe_contraband_event.999 }
 			}
+		}
 
-			else = {
-				random_country = {
-					limit = {
-						root = {
-							has_relation_flag = {
-								who = prev
-								flag = dpe_drug_cartels_ignore
-							}
+		else = {
+			random_country = {
+				limit = {
+					root = {
+						has_relation_flag = {
+							who = prev
+							flag = dpe_drug_cartels_ignore
 						}
 					}
-					country_event = { id = dpe_contraband_event.9991 }
 				}
+				country_event = { id = dpe_contraband_event.9991 }
 			}
 		}
 	}

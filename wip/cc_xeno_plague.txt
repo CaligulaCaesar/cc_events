@@ -123,37 +123,37 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { is_same_species = root }
-					
-					if = {
-						limit = { root = { has_country_flag = cc_plague_fast_cure } }
-						add_modifier = {
-							modifier = cc_ill
-							days = 720
-						}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { is_same_species = root }
+				
+				if = {
+					limit = { root = { has_country_flag = cc_plague_fast_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 720
 					}
-					if = {
-						limit = { root = { has_country_flag = cc_plague_med_cure } }
-						add_modifier = {
-							modifier = cc_ill
-							days = 1800
-						}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_med_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 1800
 					}
-					if = {
-						limit = { root = { has_country_flag = cc_plague_slow_cure } }
-						add_modifier = {
-							modifier = cc_ill
-							days = 3600
-						}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_slow_cure } }
+					add_modifier = {
+						modifier = cc_ill
+						days = 3600
 					}
-					if = {
-						limit = { root = { has_country_flag = cc_plague_incurable } }
-						add_modifier = {
-							modifier = cc_ill
-							days = -1
-						}
+				}
+				if = {
+					limit = { root = { has_country_flag = cc_plague_incurable } }
+					add_modifier = {
+						modifier = cc_ill
+						days = -1
 					}
 				}
 			}

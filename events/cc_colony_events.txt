@@ -428,18 +428,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -1225,18 +1225,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -2046,9 +2046,8 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_pacmonument_will_be_built
-			
-			else = { custom_tooltip = cc_minor_pacmonument_will_be_built }
 		}
+		else = { custom_tooltip = cc_minor_pacmonument_will_be_built }
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.351 days = 1800 } }
 		
@@ -2262,18 +2261,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -3034,11 +3033,11 @@ planet_event = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-				else = {
-					random = {
-						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-					}
+			}
+			else = {
+				random = {
+					chance = 33
+					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
@@ -3245,11 +3244,11 @@ planet_event = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-				else = {
-					random = {
-						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-					}
+			}
+			else = {
+				random = {
+					chance = 33
+					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
@@ -3311,11 +3310,11 @@ planet_event = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
 				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-				else = {
-					random = {
-						chance = 33
-						planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
-					}
+			}
+			else = {
+				random = {
+					chance = 33
+					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
@@ -3623,24 +3622,23 @@ planet_event = {
 				}
 			}
 			planet_event = { id = cc_colony_events.5400 }
-			
-			else = {
-				owner = {
-					random_relation = {
-						limit = {
-							NOR = {
-								is_same_species = prev
-								has_authority = auth_machine_intelligence
-							}
-							OR = {
-								has_defensive_pact = prev
-								is_in_federation_with = prev
-							}
+		}
+		else = {
+			owner = {
+				random_relation = {
+					limit = {
+						NOR = {
+							is_same_species = prev
+							has_authority = auth_machine_intelligence
 						}
-						save_event_target_as = ally
-						
-						country_event = { id = cc_colony_events.540 }
+						OR = {
+							has_defensive_pact = prev
+							is_in_federation_with = prev
+						}
 					}
+					save_event_target_as = ally
+					
+					country_event = { id = cc_colony_events.540 }
 				}
 			}
 		}
@@ -3864,17 +3862,17 @@ planet_event = {
 						}
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
-						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
-							owner = {
-								every_pop_faction = {
-									limit = { NOT = { is_same_value = prevprev } }
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
-								}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = { NOT = { is_same_value = prevprev } }
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
 							}
 						}
 					}
@@ -4093,13 +4091,13 @@ planet_event = {
 						days = 5400
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = {
-							modifier = cc_xenophobe_assassinated
-							days = 5400
-						}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = {
+						modifier = cc_xenophobe_assassinated
+						days = 5400
 					}
 				}
 			}
@@ -4179,17 +4177,17 @@ planet_event = {
 						}
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
-						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
-							owner = {
-								every_pop_faction = {
-									limit = { NOT = { is_same_value = prevprev } }
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
-								}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = { NOT = { is_same_value = prevprev } }
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
 							}
 						}
 					}
@@ -4407,13 +4405,13 @@ planet_event = {
 						days = 5400
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = {
-							modifier = cc_xenophobe_assassinated_attempt
-							days = 5400
-						}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = {
+						modifier = cc_xenophobe_assassinated_attempt
+						days = 5400
 					}
 				}
 			}
@@ -4507,17 +4505,17 @@ planet_event = {
 						}
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
-						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
-							owner = {
-								every_pop_faction = {
-									limit = { NOT = { is_same_value = prevprev } }
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
-								}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = { NOT = { is_same_value = prevprev } }
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
 							}
 						}
 					}
@@ -4613,13 +4611,13 @@ planet_event = {
 						days = 5400
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = {
-							modifier = cc_xenophobe_assassinated_attempt
-							days = 5400
-						}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = {
+						modifier = cc_xenophobe_assassinated_attempt
+						days = 5400
 					}
 				}
 			}
@@ -4753,13 +4751,13 @@ planet_event = {
 							years = 5
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = {
-								modifier = cc_mourning_xenophobe
-								years = 5
-							}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = {
+							modifier = cc_mourning_xenophobe
+							years = 5
 						}
 					}
 				}
@@ -4774,9 +4772,8 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_xenophobe_institute_will_be_built
-			
-			else = { custom_tooltip = cc_minor_xenophobe_institute_will_be_built }
 		}
+		else = { custom_tooltip = cc_minor_xenophobe_institute_will_be_built }
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.551 days = 1800 } }
 		
@@ -4821,13 +4818,13 @@ planet_event = {
 							years = 5
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = {
-								modifier = cc_mourning_and_angry_xenophobe
-								years = 5
-							}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = {
+							modifier = cc_mourning_and_angry_xenophobe
+							years = 5
 						}
 					}
 				}
@@ -5017,18 +5014,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -5838,9 +5835,8 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
-			
-			else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
 		}
+		else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.651 days = 1800 } }
 		
@@ -6050,18 +6046,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -6786,18 +6782,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -8022,18 +8018,18 @@ planet_event = {
 					skill = 0
 				}
 			}
-			else = {
-				random_owned_pop = {
-					limit = { species = { pops_have_happiness = yes } }
-					save_event_target_as = cc_leader_pop
-				}
-				owner = {
-					create_leader = {
-						type = general
-						species = cc_leader_pop.species
-						name = random
-						skill = 0
-					}
+		}
+		else = {
+			random_owned_pop = {
+				limit = { species = { pops_have_happiness = yes } }
+				save_event_target_as = cc_leader_pop
+			}
+			owner = {
+				create_leader = {
+					type = general
+					species = cc_leader_pop.species
+					name = random
+					skill = 0
 				}
 			}
 		}
@@ -8817,9 +8813,8 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
-			
-			else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
 		}
+		else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.1051 days = 1800 } }
 		

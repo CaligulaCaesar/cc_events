@@ -774,27 +774,24 @@ country_event = {
 					}
 				}
 				from = { country_event = { id = dpe_xenophile_mission.15 days = 1500 random = 600 } }
-				
-				else = {
-					if = {
-						limit = {
-							relative_power = {
-								who = from
-								category = technology
-								value > equivalent
-							}
-							from = {
-								NOT = {
-									has_relation_flag = {
-										who = root
-										flag = dpe_xenophile_mission_spying
-									}
-								}
+			}
+			else_if = {
+				limit = {
+					relative_power = {
+						who = from
+						category = technology
+						value > equivalent
+					}
+					from = {
+						NOT = {
+							has_relation_flag = {
+								who = root
+								flag = dpe_xenophile_mission_spying
 							}
 						}
-						from = { country_event = { id = dpe_xenophile_mission.1499 days = 1500 random = 600 } }
 					}
 				}
+				from = { country_event = { id = dpe_xenophile_mission.1499 days = 1500 random = 600 } }
 			}
 
 			#Tensions event
@@ -1576,21 +1573,21 @@ country_event = {
 						}
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
-						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
-							owner = {
-								every_pop_faction = {
-									limit = {
-										NOR = {
-											is_same_value = prevprev
-										}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = {
+									NOR = {
+										is_same_value = prevprev
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
 							}
 						}
 					}
@@ -1698,21 +1695,21 @@ country_event = {
 						}
 					}
 				}
-				else = {
-					random_pop_faction = {
-						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
-						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
-							owner = {
-								every_pop_faction = {
-									limit = {
-										NOR = {
-											is_same_value = prevprev
-										}
+			}
+			else = {
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = { modifier = embraced_faction days = 3600 }
+					hidden_effect = { 
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						owner = {
+							every_pop_faction = {
+								limit = {
+									NOR = {
+										is_same_value = prevprev
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
+								add_modifier = { modifier = embraced_another_faction days = 3600 }
 							}
 						}
 					}
@@ -1919,159 +1916,151 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						event_target:dpe_xenophile_country = {
-							relative_power = {
-								who = ROOT
-								category = technology 
-								value = superior
-							}
-						}
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_xenophile_country = {
+					relative_power = {
+						who = ROOT
+						category = technology 
+						value = superior
 					}
-					random_list = {
-						1 = {
-							add_monthly_resource_mult = {
-								resource = physics_research
-								value = @tier4researchreward
-								min = @tier4researchmin
-								max = @tier4researchmax
-							}
-						}
-						1 = {
-							add_monthly_resource_mult = {
-								resource = society_research
-								value = @tier4researchreward
-								min = @tier4researchmin
-								max = @tier4researchmax
-							}
-						}
-						1 = {
-							add_monthly_resource_mult = {
-								resource = engineering_research
-								value = @tier4researchreward
-								min = @tier4researchmin
-								max = @tier4researchmax
-							}
-						}
+				}
+			}
+			random_list = {
+				1 = {
+					add_monthly_resource_mult = {
+						resource = physics_research
+						value = @tier4researchreward
+						min = @tier4researchmin
+						max = @tier4researchmax
 					}
-					else = {
-						if = {
-							limit = {
-								event_target:dpe_xenophile_country = {
-									relative_power = {
-										who = ROOT
-										category = technology 
-										value = equivalent
-									}
-								}
-							}
-							random_list = {
-								1 = {
-									add_monthly_resource_mult = {
-										resource = physics_research
-										value = @tier3researchreward
-										min = @tier3researchmin
-										max = @tier3researchmax
-									}
-								}
-								1 = {
-									add_monthly_resource_mult = {
-										resource = society_research
-										value = @tier3researchreward
-										min = @tier3researchmin
-										max = @tier3researchmax
-									}
-								}
-								1 = {
-									add_monthly_resource_mult = {
-										resource = engineering_research
-										value = @tier3researchreward
-										min = @tier3researchmin
-										max = @tier3researchmax
-									}
-								}
-							}
-							else = {
-								if = {
-									limit = {
-										event_target:dpe_xenophile_country = {
-											relative_power = {
-												who = ROOT
-												category = technology 
-												value = inferior
-											}
-										}
-									}
-									random_list = {
-										1 = {
-											add_monthly_resource_mult = {
-												resource = physics_research
-												value = @tier2researchreward
-												min = @tier2researchmin
-												max = @tier2researchmax
-											}
-										}
-										1 = {
-											add_monthly_resource_mult = {
-												resource = society_research
-												value = @tier2researchreward
-												min = @tier2researchmin
-												max = @tier2researchmax
-											}
-										}
-										1 = {
-											add_monthly_resource_mult = {
-												resource = engineering_research
-												value = @tier2researchreward
-												min = @tier2researchmin
-												max = @tier2researchmax
-											}
-										}
-									}
-									else = {
-										if = {
-											limit = {
-												event_target:dpe_xenophile_country = {
-													relative_power = {
-														who = ROOT
-														category = technology 
-														value = pathetic
-													}
-												}
-											}
-											random_list = {
-												1 = {
-													add_monthly_resource_mult = {
-														resource = physics_research
-														value = @tier1researchreward
-														min = @tier1researchmin
-														max = @tier1researchmax
-													}
-												}
-												1 = {
-													add_monthly_resource_mult = {
-														resource = society_research
-														value = @tier1researchreward
-														min = @tier1researchmin
-														max = @tier1researchmax
-													}
-												}
-												1 = {
-													add_monthly_resource_mult = {
-														resource = engineering_research
-														value = @tier1researchreward
-														min = @tier1researchmin
-														max = @tier1researchmax
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = society_research
+						value = @tier4researchreward
+						min = @tier4researchmin
+						max = @tier4researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = engineering_research
+						value = @tier4researchreward
+						min = @tier4researchmin
+						max = @tier4researchmax
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_xenophile_country = {
+					relative_power = {
+						who = ROOT
+						category = technology 
+						value = equivalent
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					add_monthly_resource_mult = {
+						resource = physics_research
+						value = @tier3researchreward
+						min = @tier3researchmin
+						max = @tier3researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = society_research
+						value = @tier3researchreward
+						min = @tier3researchmin
+						max = @tier3researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = engineering_research
+						value = @tier3researchreward
+						min = @tier3researchmin
+						max = @tier3researchmax
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_xenophile_country = {
+					relative_power = {
+						who = ROOT
+						category = technology 
+						value = inferior
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					add_monthly_resource_mult = {
+						resource = physics_research
+						value = @tier2researchreward
+						min = @tier2researchmin
+						max = @tier2researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = society_research
+						value = @tier2researchreward
+						min = @tier2researchmin
+						max = @tier2researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = engineering_research
+						value = @tier2researchreward
+						min = @tier2researchmin
+						max = @tier2researchmax
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_xenophile_country = {
+					relative_power = {
+						who = ROOT
+						category = technology 
+						value = pathetic
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					add_monthly_resource_mult = {
+						resource = physics_research
+						value = @tier1researchreward
+						min = @tier1researchmin
+						max = @tier1researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = society_research
+						value = @tier1researchreward
+						min = @tier1researchmin
+						max = @tier1researchmax
+					}
+				}
+				1 = {
+					add_monthly_resource_mult = {
+						resource = engineering_research
+						value = @tier1researchreward
+						min = @tier1researchmin
+						max = @tier1researchmax
 					}
 				}
 			}
@@ -3966,14 +3955,14 @@ country_event = {
 				}
 				save_event_target_as = random_planet
 			}
-			else = {
-				random_owned_planet = {
-					limit = {
-						num_pops > 5
-						any_owned_pop = { is_same_species = root }
-					}
-					save_event_target_as = random_planet
+		}
+		else = {
+			random_owned_planet = {
+				limit = {
+					num_pops > 5
+					any_owned_pop = { is_same_species = root }
 				}
+				save_event_target_as = random_planet
 			}
 		}
 	}

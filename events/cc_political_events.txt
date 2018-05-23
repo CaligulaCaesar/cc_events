@@ -202,22 +202,22 @@ country_event = {
 							}
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = embraced_faction days = 3600 }
-							hidden_effect = { 
-								add_modifier = { modifier = embraced_faction_timer days = 3600 }
-								owner = {
-									every_pop_faction = {
-										limit = {
-											NOR = {
-												is_same_value = prevprev
-												is_pop_faction_type = xenoist
-											}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
 										}
-										add_modifier = { modifier = embraced_another_faction days = 3600 }
 									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
 							}
 						}
@@ -252,22 +252,22 @@ country_event = {
 							}
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = embraced_faction days = 3600 }
-							hidden_effect = { 
-								add_modifier = { modifier = embraced_faction_timer days = 3600 }
-								owner = {
-									every_pop_faction = {
-										limit = {
-											NOR = {
-												is_same_value = prevprev
-												is_pop_faction_type = xenoist
-											}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
 										}
-										add_modifier = { modifier = embraced_another_faction days = 3600 }
 									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
 							}
 						}
@@ -548,22 +548,22 @@ country_event = {
 							}
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = embraced_faction days = 3600 }
-							hidden_effect = { 
-								add_modifier = { modifier = embraced_faction_timer days = 3600 }
-								owner = {
-									every_pop_faction = {
-										limit = {
-											NOR = {
-												is_same_value = prevprev
-												is_pop_faction_type = xenoist
-											}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
 										}
-										add_modifier = { modifier = embraced_another_faction days = 3600 }
 									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
 							}
 						}
@@ -598,22 +598,22 @@ country_event = {
 							}
 						}
 					}
-					else = {
-						random_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = embraced_faction days = 3600 }
-							hidden_effect = { 
-								add_modifier = { modifier = embraced_faction_timer days = 3600 }
-								owner = {
-									every_pop_faction = {
-										limit = {
-											NOR = {
-												is_same_value = prevprev
-												is_pop_faction_type = xenoist
-											}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						add_modifier = { modifier = embraced_faction days = 3600 }
+						hidden_effect = { 
+							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							owner = {
+								every_pop_faction = {
+									limit = {
+										NOR = {
+											is_same_value = prevprev
+											is_pop_faction_type = xenoist
 										}
-										add_modifier = { modifier = embraced_another_faction days = 3600 }
 									}
+									add_modifier = { modifier = embraced_another_faction days = 3600 }
 								}
 							}
 						}
@@ -1513,14 +1513,14 @@ event = {
 						modifier = cc_practising_xenophile
 						days = -1
 					}
-					else = {
-						remove_modifier = cc_secret_xenophile
-						add_modifier = {
-							modifier = cc_practising_xenophile
-							days = -1
-						}
+				}
+				else = {
+					remove_modifier = cc_secret_xenophile
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
 					}
-				}					
+				}				
 			}
 		}
 		every_country = {
@@ -1539,14 +1539,14 @@ event = {
 						modifier = cc_secretly_practising_xenophile
 						days = -1
 					}
-					else = {
-						remove_modifier = cc_secret_xenophile
-						add_modifier = {
-							modifier = cc_secretly_practising_xenophile
-							days = -1
-						}
+				}
+				else = {
+					remove_modifier = cc_secret_xenophile
+					add_modifier = {
+						modifier = cc_secretly_practising_xenophile
+						days = -1
 					}
-				}					
+				}				
 			}
 		}
 		every_country = {
@@ -1565,14 +1565,14 @@ event = {
 						modifier = cc_secret_xenophile
 						days = -1
 					}
-					else = {
-						remove_modifier = cc_secretly_practising_xenophile
-						add_modifier = {
-							modifier = cc_secret_xenophile
-							days = -1
-						}
+				}
+				else = {
+					remove_modifier = cc_secretly_practising_xenophile
+					add_modifier = {
+						modifier = cc_secret_xenophile
+						days = -1
 					}
-				}					
+				}				
 			}
 		}
 		
@@ -2372,8 +2372,8 @@ country_event = {
 				}
 				1 = { random_owned_leader = { save_event_target_as = cc_scandal_leader } }
 			}
-			else = { random_owned_leader = { save_event_target_as = cc_scandal_leader } }
 		}
+		else = { random_owned_leader = { save_event_target_as = cc_scandal_leader } }
 	}
 	option = {
 		name = cc_events_mod.18.A

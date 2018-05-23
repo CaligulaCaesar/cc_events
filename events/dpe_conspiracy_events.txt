@@ -86,25 +86,22 @@ country_event = {
 					civic = civic_cutthroat_politics
 				}
 			}
-			
-			else = {
-				if = {
-					limit = { has_civic = civic_syncretic_evolution }
-					change_government = {
-						authority = auth_dictatorial
-						civics = {
-							civic = civic_syncretic_evolution
-							civic = civic_cutthroat_politics
-						}
-					}
-					
-					else = {
-						change_government = {
-							authority = auth_dictatorial
-							civics = random
-						}
-					}
+		}
+		else_if = {
+			limit = { has_civic = civic_syncretic_evolution }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_syncretic_evolution
+					civic = civic_cutthroat_politics
 				}
+			}
+		}
+				
+		else = {
+			change_government = {
+				authority = auth_dictatorial
+				civics = random
 			}
 		}
 
@@ -231,21 +228,21 @@ country_event = {
 				}
 				save_event_target_as = rival
 			}
+		}
 			
-			else = {
-				random_country = {
-					limit = {
-						is_country_type = default
-						NOR = {
-							has_ethic = ethic_gestalt_consciousness
-							has_ethic = ethic_fanatic_xenophobe
-							is_in_federation_with = root
-						}
+		else = {
+			random_country = {
+				limit = {
+					is_country_type = default
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						is_in_federation_with = root
 					}
-					save_event_target_as = rival
 				}
+				save_event_target_as = rival
 			}
-		}					
+		}				
 	}
 	option = { name = CCEXCELLENT }
 }
@@ -330,25 +327,22 @@ country_event = {
 					civic = civic_cutthroat_politics
 				}
 			}
-			
-			else = {
-				if = {
-					limit = { has_civic = civic_syncretic_evolution }
-					change_government = {
-						authority = auth_dictatorial
-						civics = {
-							civic = civic_syncretic_evolution
-							civic = civic_cutthroat_politics
-						}
-					}
-					
-					else = {
-						change_government = {
-							authority = auth_dictatorial
-							civics = random
-						}
-					}
+		}
+		else_if = {
+			limit = { has_civic = civic_syncretic_evolution }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_syncretic_evolution
+					civic = civic_cutthroat_politics
 				}
+			}
+		}
+					
+		else = {
+			change_government = {
+				authority = auth_dictatorial
+				civics = random
 			}
 		}
 		
@@ -502,14 +496,13 @@ country_event = {
 		if = {
 			limit = { exists = ruler }
 			country_event = { id = dpe_conspiracy.2700 }
-			
-			else = {
-				country_event = { id = dpe_conspiracy.27 days = 30 }
-				country_event = { id = dpe_conspiracy.28 days = 46 }
-				set_timed_country_flag = {
-					flag = dpe_authoritarian_conspiracy_chain_extended
-					days = 30
-				}
+		}
+		else = {
+			country_event = { id = dpe_conspiracy.27 days = 30 }
+			country_event = { id = dpe_conspiracy.28 days = 46 }
+			set_timed_country_flag = {
+				flag = dpe_authoritarian_conspiracy_chain_extended
+				days = 30
 			}
 		}
 	}
@@ -576,27 +569,25 @@ country_event = {
 					civic = civic_cutthroat_politics
 				}
 			}
-			
-			else = {
-				if = {
-					limit = { has_civic = civic_syncretic_evolution }
-					change_government = {
-						authority = auth_dictatorial
-						civics = {
-							civic = civic_syncretic_evolution
-							civic = civic_cutthroat_politics
-						}
-					}
-					
-					else = {
-						change_government = {
-							authority = auth_dictatorial
-							civics = random
-						}
-					}
+		}
+		else_if = {
+			limit = { has_civic = civic_syncretic_evolution }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_syncretic_evolution
+					civic = civic_cutthroat_politics
 				}
 			}
 		}
+					
+		else = {
+			change_government = {
+				authority = auth_dictatorial
+				civics = random
+			}
+		}
+
 		set_leader = dpe_authoritarian_conspirator
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
@@ -644,27 +635,26 @@ country_event = {
 					civic = civic_cutthroat_politics
 				}
 			}
+		}
 			
-			else = {
-				if = {
-					limit = { has_civic = civic_syncretic_evolution }
-					change_government = {
-						authority = auth_dictatorial
-						civics = {
-							civic = civic_syncretic_evolution
-							civic = civic_cutthroat_politics
-						}
-					}
-					
-					else = {
-						change_government = {
-							authority = auth_dictatorial
-							civics = random
-						}
-					}
+		else_if = {
+			limit = { has_civic = civic_syncretic_evolution }
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_syncretic_evolution
+					civic = civic_cutthroat_politics
 				}
 			}
 		}
+				
+		else = {
+			change_government = {
+				authority = auth_dictatorial
+				civics = random
+			}
+		}
+
 		set_leader = dpe_authoritarian_conspirator
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
@@ -749,21 +739,21 @@ country_event = {
 				}
 				save_event_target_as = rival
 			}
+		}
 			
-			else = {
-				random_country = {
-					limit = {
-						is_country_type = default
-						NOR = {
-							has_ethic = ethic_gestalt_consciousness
-							has_ethic = ethic_fanatic_xenophobe
-							is_in_federation_with = root
-						}
+		else = {
+			random_country = {
+				limit = {
+					is_country_type = default
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						has_ethic = ethic_fanatic_xenophobe
+						is_in_federation_with = root
 					}
-					save_event_target_as = rival
 				}
+				save_event_target_as = rival
 			}
-		}					
+		}				
 	}
 	option = { name = CCEXCELLENT }
 }
@@ -1044,8 +1034,8 @@ country_event = {
 		if = {
 			limit = { exists = ruler }
 			country_event = { id = dpe_conspiracy.2000 }
-			else = { country_event = { id = dpe_conspiracy.2 days = 30 } }
 		}
+		else = { country_event = { id = dpe_conspiracy.2 days = 30 } }
 	}
 }
 	
@@ -1542,15 +1532,12 @@ country_event = {
 			
 			custom_tooltip = dpe_conspiracy.6.C.tooltip
 			hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
+		}
+		else_if = {
+			limit = { used_naval_capacity_percent > 0.8 }
 			
-			else = {
-				if = {
-					limit = { used_naval_capacity_percent > 0.8 }
-					
-					custom_tooltip = dpe_conspiracy.6.C.tooltip2
-					hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
-				}
-			}
+			custom_tooltip = dpe_conspiracy.6.C.tooltip2
+			hidden_effect = { country_event = { id = dpe_conspiracy.2 days = 2400 } }
 		}
 		ai_chance = {
 			factor = 1
