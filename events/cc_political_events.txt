@@ -656,7 +656,7 @@ country_event = {
 
 
 
-# A war has been won, by force
+# A war has been won
 # Root = Winner Warleader
 # From = Loser Warleader
 # FromFrom = War
@@ -896,11 +896,9 @@ country_event = {
 		pop_percentage = {
 			percentage > 0.02
 			limit = {
-				OR = {
-					has_citizenship_type = { country = root type = citizenship_full }
-					has_citizenship_type = { country = root type = citizenship_limited }
-					has_citizenship_type = { country = root type = citizenship_caste_system }
-					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+				NOR = {
+					is_enslaved = yes
+					is_being_purged = yes
 				}
 				has_pop_flag = cc_literally_xenophile_manifested
 			}
@@ -1331,11 +1329,9 @@ pop_event = {
 						is_same_species = root
 					}
 					species = { pops_have_happiness = yes }
-					OR = {
-						has_citizenship_type = { type = citizenship_full }
-						has_citizenship_type = { type = citizenship_limited }
-						has_citizenship_type = { type = citizenship_caste_system }
-						has_citizenship_type = { type = citizenship_caste_system_limited }
+					NOR = {
+						is_enslaved = yes
+						is_being_purged = yes
 					}
 				}
 			}
@@ -1397,11 +1393,9 @@ pop_event = {
 							is_same_species = root
 						}
 						species = { pops_have_happiness = yes }
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
+						NOR = {
+							is_enslaved = yes
+							is_being_purged = yes
 						}
 					}
 				}
@@ -1923,12 +1917,7 @@ country_event = {
 				is_same_species = root
 			}
 			species = { pops_have_happiness = yes }
-			OR = {
-				has_citizenship_type = { type = citizenship_full }
-				has_citizenship_type = { type = citizenship_limited }
-				has_citizenship_type = { type = citizenship_caste_system }
-				has_citizenship_type = { type = citizenship_caste_system_limited }
-			}
+			has_citizenship_rights = yes
 		}
 		any_owned_leader = {
 			NOR = {

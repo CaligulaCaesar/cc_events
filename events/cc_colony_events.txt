@@ -351,7 +351,32 @@ planet_event = {
 				
 				planet_event = { id = cc_colony_events.9 }
 			}
-			20 = { }
+			20 = {
+				modifier = {
+					factor = 1.5
+					years_passed > 25
+				}
+				modifier = {
+					factor = 1.5
+					years_passed > 35
+				}
+				modifier = {
+					factor = 1.5
+					years_passed > 50
+				}
+				modifier = {
+					factor = 1.5
+					years_passed > 65
+				}
+				modifier = {
+					factor = 1.5
+					years_passed > 80
+				}
+				modifier = {
+					factor = 1.5
+					years_passed > 100
+				}
+			}
 		}
 	}
 }

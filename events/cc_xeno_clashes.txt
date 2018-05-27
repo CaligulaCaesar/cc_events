@@ -12,7 +12,7 @@ planet_event = {
 		has_planet_flag = cc_eventperf_xeno_clashes_planet
 		NOR = {
 			has_planet_flag = cc_xeno_clashes
-			has_planet_flag = pop_modification
+#			has_planet_flag = pop_modification
 			owner = {
 				OR = {
 					has_country_flag = cc_recent_xeno_empire_clashes
@@ -24,7 +24,7 @@ planet_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 80
+		years = 50
 		
 		modifier = {
 			factor = 2

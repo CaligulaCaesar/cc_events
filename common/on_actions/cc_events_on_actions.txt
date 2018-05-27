@@ -5,7 +5,7 @@
 # Root = Winner Warleader
 # From = Loser Warleader
 # FromFrom = War
-on_war_won_forced = {
+on_war_won = {
 	events = {
 	}
 	random_events = {
@@ -59,10 +59,10 @@ on_policy_changed = {
 
 
 on_colony_10_years_old = {
-	random_events = {
-		75 = 0
+	random_events = { #it is only 50-50 in early years, later the random list changes
+		1 = 0
 
-		25 = cc_colony_events.1 #colony gets a 'leader'
+		1 = cc_colony_events.1 #colony gets a 'leader'
 	}
 }
 

@@ -1,5 +1,55 @@
 check_planet_modifiers_dpe = {
 	if = {
+		limit = { has_modifier = cc_faction_stronghold_xenoist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_supremacist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_isolationist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_totalitarian }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_progressive }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_technologist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_traditionalist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_imperialist }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_faction_stronghold_prosperity }
+		change_variable = { which = energy_mult_planet_base value = -0.25 }
+		change_variable = { which = minerals_mult_planet_base value = -0.25 }
+	}
+	if = {
+		limit = { has_modifier = cc_bribed_planet }
+		change_variable = { which = energy_mult_planet_base value = -0.65 }
+		change_variable = { which = minerals_mult_planet_base value = -0.65 }
+	}
+	if = {
 		limit = { has_modifier = cc_pacifist_protectorate }
 		change_variable = { which = minerals_mult_planet_base value = -0.25 }
 		change_variable = { which = energy_mult_planet_base value = -0.25 }
@@ -156,55 +206,5 @@ check_planet_modifiers_dpe = {
 	if = {
 		limit = { has_modifier = dpe_planet_talented_socscientist }
 		change_variable = { which = society_research_mult_planet_base value = 0.2 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_xenoist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_supremacist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_isolationist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_totalitarian }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_progressive }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_technologist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_traditionalist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_imperialist }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_faction_stronghold_prosperity }
-		change_variable = { which = energy_mult_planet_base value = -0.25 }
-		change_variable = { which = minerals_mult_planet_base value = -0.25 }
-	}
-	if = {
-		limit = { has_modifier = cc_bribed_planet }
-		change_variable = { which = energy_mult_planet_base value = -0.65 }
-		change_variable = { which = minerals_mult_planet_base value = -0.65 }
 	}
 }

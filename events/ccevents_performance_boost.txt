@@ -425,11 +425,9 @@ country_event = {
 						is_same_species = prev
 					}
 					species = { pops_have_happiness = yes }
-					OR = {
-						has_citizenship_type = { type = citizenship_full }
-						has_citizenship_type = { type = citizenship_limited }
-						has_citizenship_type = { type = citizenship_caste_system }
-						has_citizenship_type = { type = citizenship_caste_system_limited }
+					NOR = {
+						is_enslaved = yes
+						is_being_purged = yes
 					}
 				}
 				any_owned_leader = {
@@ -1093,7 +1091,7 @@ country_event = {
 					}
 				}
 				years_of_peace = {
-					value > 15
+					value > 10
 					delay = 20
 				}
 				has_federation = no
@@ -1213,13 +1211,17 @@ country_event = {
 				is_at_war = no
 				is_subject = no
 				has_faction = imperialist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = imperialist
+							
+							pop_percentage = {
+								limit = { happiness < 0.4 }
+								percentage > 0.75
+							}
 						}
 					}
 				}
@@ -1532,11 +1534,9 @@ country_event = {
 							}
 							is_robot_pop = no
 							species = { pops_have_happiness = yes }
-							OR = {
-								has_citizenship_type = { type = citizenship_full }
-								has_citizenship_type = { type = citizenship_limited }
-								has_citizenship_type = { type = citizenship_caste_system }
-								has_citizenship_type = { type = citizenship_caste_system_limited }
+							NOR = {
+								is_enslaved = yes
+								is_being_purged = yes
 							}
 						}
 					}
@@ -1548,11 +1548,9 @@ country_event = {
 						}
 						is_robot_pop = no
 						species = { pops_have_happiness = yes }
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
+						NOR = {
+							is_enslaved = yes
+							is_being_purged = yes
 						}
 						root = {
 							pop_percentage = {
@@ -1576,11 +1574,9 @@ country_event = {
 						}
 						is_robot_pop = no
 						species = { pops_have_happiness = yes }
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
+						NOR = {
+							is_enslaved = yes
+							is_being_purged = yes
 						}
 						prev = {
 							pop_percentage = {
@@ -1605,11 +1601,9 @@ country_event = {
 					}
 					is_robot_pop = no
 					species = { pops_have_happiness = yes }
-					OR = {
-						has_citizenship_type = { type = citizenship_full }
-						has_citizenship_type = { type = citizenship_limited }
-						has_citizenship_type = { type = citizenship_caste_system }
-						has_citizenship_type = { type = citizenship_caste_system_limited }
+					NOR = {
+						is_enslaved = yes
+						is_being_purged = yes
 					}
 					owner = {
 						pop_percentage = {
@@ -1632,11 +1626,9 @@ country_event = {
 						}
 						is_robot_pop = no
 						species = { pops_have_happiness = yes }
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
+						NOR = {
+							is_enslaved = yes
+							is_being_purged = yes
 						}
 						owner = {
 							pop_percentage = {
@@ -1689,11 +1681,9 @@ country_event = {
 				pop_percentage = {
 					percentage > 0.02
 					limit = {
-						OR = {
-							has_citizenship_type = { type = citizenship_full }
-							has_citizenship_type = { type = citizenship_limited }
-							has_citizenship_type = { type = citizenship_caste_system }
-							has_citizenship_type = { type = citizenship_caste_system_limited }
+						NOR = {
+							is_enslaved = yes
+							is_being_purged = yes
 						}
 						has_pop_flag = cc_literally_xenophile_manifested
 					}
@@ -1708,11 +1698,9 @@ country_event = {
 					pop_percentage = {
 						percentage > 0.04
 						limit = {
-							OR = {
-								has_citizenship_type = { type = citizenship_full }
-								has_citizenship_type = { type = citizenship_limited }
-								has_citizenship_type = { type = citizenship_caste_system }
-								has_citizenship_type = { type = citizenship_caste_system_limited }
+							NOR = {
+								is_enslaved = yes
+								is_being_purged = yes
 							}
 							has_pop_flag = cc_literally_xenophile_manifested
 						}
@@ -2289,7 +2277,7 @@ country_event = {
 		}
 		else = {
 			random_list = {
-				3 = { country_event = { id = dpe_conspiracy.20 } }
+				2 = { country_event = { id = dpe_conspiracy.20 } }
 				2 = { }
 			}
 		}
@@ -2788,7 +2776,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 10
+		years = 8
 #		modifier = {
 #			factor = 3
 #			is_ai = yes
@@ -2819,7 +2807,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { #the conditions are fairly improbable, and it also has a small chance of happening via dpe_diplo.1
-		years = 30
+		years = 27
 	}
 	
 	immediate = {
@@ -2867,7 +2855,7 @@ country_event = {
 		}
 		else = {
 			random_list = {
-				2 = { country_event = { id = dpe_conspiracy.1 } }
+				1 = { country_event = { id = dpe_conspiracy.1 } }
 				3 = { }
 			}
 		}

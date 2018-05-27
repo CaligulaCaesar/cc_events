@@ -793,13 +793,18 @@ country_event = {
 		is_at_war = no
 		is_subject = no
 		has_faction = imperialist
-		count_pop_factions = {
-			limit = {
-				is_pop_faction_type = imperialist
-				
-				pop_percentage = {
-					limit = { happiness < 0.4 }
-					percentage > 0.75
+
+		OR = {
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+			count_pop_factions = {
+				limit = {
+					is_pop_faction_type = imperialist
+					
+					pop_percentage = {
+						limit = { happiness < 0.4 }
+						percentage > 0.75
+					}
 				}
 			}
 		}
@@ -817,7 +822,7 @@ country_event = {
 				}
 			}
 		}
-		used_naval_capacity_percent > 1.2
+		used_naval_capacity_percent > 1
 		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }

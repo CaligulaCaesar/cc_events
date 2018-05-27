@@ -136,7 +136,12 @@ country_event = {
 	
 	
 	trigger = {
-		NOT = { has_global_flag = irm_main_on } #disables for Imperial Routine mod as that messes with factions
+		NOR = {  #disables for mods that mess with factions
+			has_global_flag = irm_main_on
+			has_global_flag = gf_alphamod_activated
+			has_global_flag = cultural_overhaul_active
+			has_global_flag = star_trek_new_horizons
+		}
 		NOT = { has_country_flag = cc_recent_factional_revolt }
 		is_country_type = default
 		num_owned_planets > 5
