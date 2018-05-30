@@ -554,7 +554,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.2
-				event_target:cc_fourth_corrupt
+				exists = event_target:cc_fourth_corrupt
 				event_target:cc_fourth_corrupt = { has_skill > 5 }
 			}
 		}

@@ -59,6 +59,7 @@ country_event = {
 						is_pop_faction_type = technologist
 						support > 0.3
 					}
+					count = 1
 				}
 			}
 		}
@@ -97,6 +98,7 @@ country_event = {
 		}
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				has_ethic = ethic_fanatic_authoritarian
@@ -112,6 +114,7 @@ country_event = {
 						is_pop_faction_type = progressive
 						support > 0.15
 					}
+					count = 1
 				}
 			}
 		}
@@ -135,6 +138,7 @@ country_event = {
 						is_pop_faction_type = technologist
 						support > 0.3
 					}
+					count = 1
 				}
 			}
 		}
@@ -243,6 +247,7 @@ country_event = {
 		}
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 2
 				NOT = { any_owned_planet = { unrest > 0 } }
@@ -366,6 +371,7 @@ country_event = {
 		}
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				OR = {
@@ -557,6 +563,7 @@ country_event = {
 							is_pop_faction_type = progressive
 							support > 0.15
 						}
+						count = 1
 					}
 				}
 			}

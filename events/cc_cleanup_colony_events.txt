@@ -739,8 +739,6 @@ planet_event = {
 	
 	picture = GFX_evt_cc_mausoleum
 	
-	is_triggered_only = yes
-	
 	option = {
 		name = CCGOODGOOD
 		
@@ -795,6 +793,7 @@ planet_event = {
 			days = -1
 		}
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				owner = {
@@ -836,6 +835,7 @@ planet_event = {
 		
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				owner = {
@@ -1410,8 +1410,6 @@ planet_event = {
 	
 	picture = GFX_evt_cc_university
 	
-	is_triggered_only = yes
-	
 	option = {
 		name = CCGOODGOOD
 		
@@ -1891,8 +1889,6 @@ planet_event = {
 	id = cc_cleanup_events.23
 	title = cc_cleanup_events.23.name
 	desc = cc_cleanup_events.23.desc
-	
-	is_triggered_only = yes
 	location = root
 	
 	trigger = { NOT = { has_planet_flag = cc_milacademy_cancelled } }
@@ -2922,8 +2918,6 @@ planet_event = {
 	id = cc_cleanup_events.41
 	title = cc_cleanup_events.41.name
 	desc = cc_cleanup_events.41.desc
-	
-	is_triggered_only = yes
 	location = root
 	
 	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
@@ -3193,7 +3187,7 @@ planet_event = {
 		#Added for Spiritualist Mission
 		if = {
 			limit = {
-				controller = { is_country_type = "ai_empire" }
+				controller = { is_country_type = ai_empire }
 				has_modifier = dpe_hosting_spiritualist_mission_planet
 			}
 			planet_event = { id = dpe_spiritualist_mission.961 }
