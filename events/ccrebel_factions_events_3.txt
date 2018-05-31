@@ -3831,12 +3831,10 @@ country_event = {
 				}
 			}
 			else_if = {
-				if = {
-					limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
-					create_fleet_from_naval_cap = 0.2
-					last_created_fleet = {
-						set_location = event_target:cc_rebels_capital
-					}
+				limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+				create_fleet_from_naval_cap = 0.2
+				last_created_fleet = {
+					set_location = event_target:cc_rebels_capital
 				}
 			}
 			else = {

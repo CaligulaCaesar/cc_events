@@ -371,6 +371,7 @@ country_event = {
 		response_text = dpe_conspiracy.24.B.response
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				NOT = {
@@ -434,6 +435,7 @@ country_event = {
 		}
 		
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				is_at_war = yes
@@ -517,8 +519,8 @@ country_event = {
 				has_country_flag = dpe_didnt_bother_on_conspiracy
 				has_country_flag = dpe_uncovered_authoritarian_conspiracy
 			}
-			text = dpe_conspiracy.27.desc
 		}
+		text = dpe_conspiracy.27.desc
 	}
 	desc = {
 		trigger = { has_country_flag = dpe_uncovered_authoritarian_conspiracy }
@@ -620,7 +622,7 @@ country_event = {
 	}
 	option = {
 		name = dpe_conspiracy.27.B
-		kill_leader = { type = ruler }
+		kill_leader = { type = ruler show_notification = no }
 		add_modifier = {
 			modifier = dpe_illegitimate_regime
 			days = 4800
@@ -806,6 +808,7 @@ country_event = {
 						percentage > 0.75
 					}
 				}
+				count = 1
 			}
 		}
 		NOT = {
@@ -1026,6 +1029,7 @@ country_event = {
 					percentage > 0.75
 				}
 			}
+			count = 1
 		}
 		used_naval_capacity_percent > 1
 		
@@ -1070,6 +1074,7 @@ country_event = {
 					percentage > 0.75
 				}
 			}
+			count = 1
 		}
 		used_naval_capacity_percent > 1
 		
@@ -1231,6 +1236,7 @@ country_event = {
 									percentage > 0.75
 								}
 							}
+							count = 1
 						}
 						any_owned_leader = {
 							NOT = { is_same_value = root.ruler }
@@ -1284,6 +1290,7 @@ country_event = {
 					percentage > 0.75
 				}
 			}
+			count = 1
 		}
 		used_naval_capacity_percent > 1
 		
