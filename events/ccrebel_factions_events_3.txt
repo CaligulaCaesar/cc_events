@@ -3124,6 +3124,7 @@ country_event = {
 					authority = random
 					name = random
 					flag = random
+					civics = random
 				
 					effect = {
 						remove_all_ethics = yes
@@ -4071,6 +4072,7 @@ planet_event = {
 		#create rebels
 		
 		create_rebels = {
+			name = random
 			ethos = event_target:cc_breakaway_country
 			authority = random
 			#civics = event_target:cc_breakaway_country
@@ -5628,6 +5630,7 @@ planet_event = {
 		#create rebels
 		
 		create_rebels = {
+			name = random
 			ethos = event_target:cc_breakaway_country
 			authority = random
 			#civics = event_target:cc_breakaway_country

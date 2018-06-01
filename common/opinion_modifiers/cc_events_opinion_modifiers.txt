@@ -321,7 +321,7 @@ dpe_xenomission_like = {
 
 dpe_xenomission_sent_home = {
 	opinion = {
-		base = -20
+		base = -25
 		modifier = {
 			add = -5
 			has_ethic = ethic_xenophile
@@ -330,6 +330,9 @@ dpe_xenomission_sent_home = {
 			add = -10
 			has_ethic = ethic_fanatic_xenophile
 		}
+	}
+	decay = {
+		base = 1
 	}
 }
 
@@ -354,7 +357,7 @@ dpe_xenomission_death = {
 
 dpe_deceitful = {
 	opinion = {
-		base = -20
+		base = -25
 	}
 	decay = {
 		base = 1
@@ -440,4 +443,33 @@ dpe_contraband_source_of_drugs = {
 	accumulative = yes
 	
 	min = -100
+}
+
+
+
+dpe_offered_some_help_with_elections = {
+	opinion = {
+		base = 50
+	}
+	decay = {
+		base = 3
+	}
+}
+
+dpe_rejected_help_with_elections = {
+	opinion = {
+		base = -50
+	}
+	decay = {
+		base = 3
+	}
+}
+
+dpe_helping_with_elections = {
+	opinion = {
+		base = 100
+	}
+	decay = {
+		base = 3
+	}
 }

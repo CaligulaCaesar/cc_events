@@ -827,3 +827,49 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  
  dpe_spirmission_killed_opinion:0 "Death of Missionaries"
  dpe_spirmission_killed_opinion2:0 "Murder of Missionaries"
+ 
+ 
+ 
+ 
+ ##########Egalitarian Mission 1
+ 
+ dpe_egalitarian_missions.1.name:0 "A Question of Voting"
+ dpe_egalitarian_missions.1.desc:0 "Our advisors have discussed our relationship with the [dpe_egalitarian.GetName] at great length, and have come up with a devious scheme. Many are convinced that we can use them to our advantage by asking them to help oversee our elections. It is true we don't have elections at the moment, and indeed we do not plan to ever let the people have a major role in running our state, but we can please them by allowing votes on some unimportant policy decisions and minor leadership roles. Regardless of what the plebs decide, we will simply claim the vote went the way we wanted it to all along, and they have no way of proving otherwise.\n\nThis is where our friends can come in: Even if our people don't see through our scheme, we can be sure that certain other nations in the galaxy will be highly sceptical and will do all they can to dispute the legitimacy of our elections. If we can convince our democratic friends to 'oversee' the elections and sign off on the results we announce, then it will lend the legitimacy we would need to make them believable. Do you approve of this scheme?"
+ dpe_egalitarian_missions.1.A:0 "Send the request and see what they say." (chain continues)
+ dpe_egalitarian_missions.1.B:0 "No! Even mock elections are too much for the commoners."
+ dpe_egalitarian_missions.1.B.tooltip:0 "Every other pop faction but the totalitarian faction receive the modifier §R$dpe_denied_a_say$§!, giving:\n\n§R-20% $MOD_FACTION_HAPPINESS$§!"
+ 
+ dpe_egalitarian_missions.2.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.2.desc:0 "Friends, inspired by your example, we are planning to - for the first time - hold elections. Given our inexperience in this field, we wish to request your assistance in observing them… in particular, in ensuring that the credibility of the results is upheld. Would you be willing to send observers?"
+ dpe_egalitarian_missions.2.option:0 "Since when does the [from.GetSpeciesAdj] [from.GetRulerTitle] care for elections?"
+ 
+ dpe_egalitarian_missions.3.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.3.desc:0 "It is true that this is an experiment. One that will have to be carefully managed. These are our first steps on this path, and we must of course ensure that ultimate authority rests with the [from.GetRulerTitle]. We will be upfront about it: It is our intention to avoid any undesirable outcomes at all costs. As our allies, we will expect you to support us in this endeavour."
+ dpe_egalitarian_missions.3.option:0 "You wish us to help you to forge election results?"
+ 
+ dpe_egalitarian_missions.4.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.4.desc:0 "We would avoid that particular phrasing, but yes, we wish for you to help ensure the credibility of the desired outcome."
+ dpe_egalitarian_missions.4.A:0 "Fake elections are better than no elections. We will support you."
+ dpe_egalitarian_missions.4.help.tooltip:0 "Both other egalitarian countries and our own citizens may be upset if they see us to have helped fix an election."
+ dpe_egalitarian_missions.4.B:0 "We will not sully the sanctity of Democracy!"
+ dpe_egalitarian_missions.4.C:0 "We will support you, at a price."
+ 
+ dpe_egalitarian_missions.5.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.5.desc:0 "Fake elections are better than no elections. We will support you."
+ 
+ dpe_egalitarian_missions.6.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.6.desc:0 "We will not sully the sanctity of Democracy!"
+ 
+
+
+ dpe_offered_some_help_with_elections:0 "Offered Electoral Aid"
+ dpe_rejected_help_with_elections:0 "Rejected Electoral Aid"
+ dpe_helping_with_elections:0 "Gave Electoral Aid"
+ dpe_denied_a_say:0 "Denied a Say"
+ dpe_denied_elections:0 "Denied Elections"
+ 
+ dpe_electoral_experiment:0 "Electoral Experiment"
+ dpe_electoral_experiment_desc:0 "The populace is electrified by the prospect of elections."
+ 
+ dpe_electoral_experiment_faction:0 "$dpe_electoral_experiment$"
+ dpe_electoral_experiment_faction_negative:0 "$dpe_electoral_experiment$"
