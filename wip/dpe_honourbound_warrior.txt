@@ -1,0 +1,181 @@
+
+
+
+
+#monthly pulse
+
+event = {
+	id = dpe_diplo_event.750
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_playable_country = {
+					#check this
+					has_ai_personality = honourbound_warriors
+				}
+			}
+			
+			every_playable_country = {
+				limit = {
+					any_playable_country = {
+						#check this
+						has_ai_personality = honourbound_warriors
+						NOT = { has_country_flag = dpe_hw_event_checked }
+						#check this
+						has_opinion_modifier = {
+							modifier = opinion_insult
+							who = prev
+						}
+					}
+				}
+				every_playable_country = {
+					limit = {
+						NOT = { is_same_value = prev }
+						#check this
+						has_ai_personality = honourbound_warriors
+						NOT = { has_country_flag = dpe_hw_event_checked }
+						#check this
+						has_opinion_modifier = {
+							modifier = opinion_insult
+							who = prev
+						}
+					}
+					#Check appropriate number of days
+					set_timed_country_flag = {
+						flag = dpe_hw_event_checked
+						days = ???
+					}
+					
+					if = {
+						limit = {
+							NOT = {
+								has_relation_flag = {
+									flag = dpe_has_had_HW_chain
+									who = prev
+								}
+							}
+							prev = { NOT = { has_country_flag = dpe_recent_HW_event } }
+						}
+						random_list = {
+							3 = {
+								country_event = { id = dpe_diplo_event.751 days = 10 }
+								prev = { save_event_target_as = dpe_insult_country }
+								save_event_target_as = dpe_Honourbound_country
+								
+								set_timed_relation_flag = {
+									flag = dpe_has_had_HW_chain
+									who = prev
+									days = 21600
+								}
+								set_timed_country_flag = {
+									flag = dpe_recent_HW_event
+									days = 7200
+								}
+								set_country_flag = dpe_has_had_HW_chain
+							}
+							2 = {
+								modifier = {
+									factor = 0
+									NOT = { has_country_flag = dpe_has_had_HW_chain }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_diplo_event.751
+	title = dpe_diplo_event.751.name
+	desc = {
+		trigger = { exists = heir }
+		text = dpe_diplo_event.751.desc.heir
+	}
+	desc = {
+		trigger = { NOT = { exists = heir } }
+		text = dpe_diplo_event.751.desc.else
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { NOT = { exists = heir } }
+			
+			if = {
+				limit = {
+					any_owned_leader = {
+						leader_of_faction = imperialist
+						is_same_species = root
+					}
+				}
+				random_owned_leader = {
+					limit = {
+						leader_of_faction = imperialist
+						is_same_species = root
+					}
+					save_event_target_as = dpe_duel_leader
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						is_same_species = root
+					}
+				}
+				random_owned_leader = {
+					limit = {
+						is_same_species = root
+					}
+					save_event_target_as = dpe_duel_leader
+				}
+			}
+			else = { random_owned_leader = { save_event_target_as = dpe_duel_leader } }
+		}
+	}
+	
+	
+	option = {
+		name = dpe_diplo_event.751.A
+		
+		if = {
+			limit = { exists = heir }
+			custom_tooltip = dpe_diplo_event.751.A.tooltip.heir
+		}
+		else = { custom_tooltip = dpe_diplo_event.751.A.tooltip.no_heir }
+	
+	
+	
+if = {
+	limit = { }
+	else = { }
+}
+
+if = {
+	limit = {
+	}
+}
+else = { }
+
+if = {
+	limit = { }
+	if = {
+		limit = { }
+	}
+	else = { }
+}
+
+if = {
+	limit = { }
+	if = {
+		limit = { }
+		else = { }
+	}
+	else = { }
+}

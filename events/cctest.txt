@@ -416,32 +416,130 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		capital_scope = {
+		root.capital_scope = {
 			set_variable = {
-				which = cctest_variable
-				value = 0.5
+				which = cctest_factions_variable
+				value = 1
 			}
-			change_variable = {
-				which = cctest_variable
-				value = 0.75
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = prosperity }
+			save_event_target_as = prosperity_faction
+		}
+#		random_owned_leader = {
+#			limit = { leader_of_faction = prosperity }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_factions_variable
+#					value = 1
+#				}
+#			}
+#		}
+#		random_owned_leader = {
+#			limit = { leader_of_faction = yes }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_factions_variable
+#					value = 1
+#				}
+#			}
+#		}
+#		random_owned_leader = {
+#			limit = { leader_of_faction = no }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_factions_variable
+#					value = 1
+#				}
+#			}
+#		}
+#		random_owned_leader = {
+#			limit = { leader_of_faction = event_target:prosperity_faction }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_factions_variable
+#					value = 1
+#				}
+#			}
+#		}
+	}
+}
+
+
+country_event = {
+	id = cctest.55
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { 
+				any_war = { is_war_participant = { who = root } }
 			}
-			multiply_variable = {
-				which = cctest_variable
-				value = 1.2
-			}
-			
-			if = {
-				limit = {
-					check_variable = {
-						which = cctest_variable
-						value = 1.5
-					}
-				}
-				multiply_variable = {
-					which = cctest_variable
-					value = 100
+			root.capital_scope = {
+				set_variable = {
+					which = cctest_war_variable
+					value = 10
 				}
 			}
 		}
 	}
 }
+
+
+
+country_event = {
+	id = cctest.60
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		root.capital_scope = {
+			set_variable = {
+				which = cctest_member_faction_variable
+				value = 1
+			}
+		}
+		random_pop_faction = {
+			limit = { is_pop_faction_type = prosperity }
+			save_event_target_as = prosperity_faction
+		}
+#		random_owned_pop = {
+#			limit = { member_of_faction = prosperity }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_member_faction_variable
+#					value = 1
+#				}
+#			}
+#		}
+		random_owned_pop = {
+			limit = { member_of_faction = yes }
+			root.capital_scope = {
+				change_variable = {
+					which = cctest_member_faction_variable
+					value = 1
+				}
+			}
+		}
+		random_owned_pop = {
+			limit = { member_of_faction = no }
+			root.capital_scope = {
+				change_variable = {
+					which = cctest_member_faction_variable
+					value = 1
+				}
+			}
+		}
+#		random_owned_pop = {
+#			limit = { member_of_faction = event_target:prosperity_faction }
+#			root.capital_scope = {
+#				change_variable = {
+#					which = cctest_member_faction_variable
+#					value = 1
+#				}
+#			}
+#		}
+	}
+}
+

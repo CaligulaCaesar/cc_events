@@ -91,6 +91,8 @@ country_event = {
 							percentage > 0.75
 						}
 						exists = leader
+
+						is_a_vanilla_faction = yes
 					}
 					count > 0
 				}
@@ -106,6 +108,8 @@ country_event = {
 								percentage > 0.75
 							}
 							exists = leader
+
+							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
@@ -133,6 +137,8 @@ country_event = {
 								percentage > 0.75
 							}
 							exists = leader
+
+							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
@@ -145,6 +151,8 @@ country_event = {
 							percentage > 0.75
 						}
 						exists = leader
+
+						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -160,6 +168,8 @@ country_event = {
 								percentage > 0.75
 							}
 							exists = leader
+
+							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
@@ -172,6 +182,8 @@ country_event = {
 							percentage > 0.75
 						}
 						exists = leader
+
+						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -185,6 +197,8 @@ country_event = {
 							percentage > 0.75
 						}
 						exists = leader
+
+						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -193,7 +207,7 @@ country_event = {
 		
 			if = {
 				limit = {
-					ruler = { NOT = { leader_of_faction = event_target:dpe_dissident_faction } }
+					ruler = { NOT = { dpe_leader_of_dissident_faction = yes } }
 				}
 				set_timed_country_flag = {
 					flag = dpe_recent_ruler_debate
