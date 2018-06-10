@@ -2458,7 +2458,7 @@ ethic_militarist = {
 		}
 		modifier = {
 			factor = 0.5
-			has_military_service_type = { type = military_service_none country = root }
+			has_military_service_type = { type = military_service_none country = from.owner }
 		}
 		modifier = {
 			factor = 0.75
