@@ -3113,7 +3113,7 @@ country_event = {
 				
 				if = {
 					limit = { NOT = { any_owned_pop = { is_same_species = root } } }
-					random_pop = { change_species = root }
+					random_pop = { change_species = root.species }
 				}
 				
 				#create rebels

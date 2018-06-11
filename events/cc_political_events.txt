@@ -49,10 +49,7 @@ country_event = {
 		NOT = { ruler = { leader_of_faction = xenoist } }
 
 		any_owned_pop = {
-			NOR = {
-				is_subspecies = root
-				is_same_species = root
-			}
+			NOT = { is_same_species = root }
 			species = { pops_have_happiness = yes }
 			is_robot_pop = no
 			OR = {
@@ -75,12 +72,7 @@ country_event = {
 						}
 						pop_percentage = {
 							percentage < 0.4
-							limit = {
-								OR = {
-									is_same_species = root
-									is_subspecies = root
-								}
-							}
+							limit = { is_same_species = root }
 						}
 					}
 				}
@@ -95,10 +87,7 @@ country_event = {
 		}
 		random_owned_pop = {
 			limit = {
-				NOR = {
-					is_subspecies = root
-					is_same_species = root
-				}
+				NOT = { is_same_species = root }
 				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 				OR = {
@@ -121,12 +110,7 @@ country_event = {
 							}
 							pop_percentage = {
 								percentage < 0.4
-								limit = {
-									OR = {
-										is_same_species = root
-										is_subspecies = root
-									}
-								}
+								limit = { is_same_species = root }
 							}
 						}
 					}
@@ -373,10 +357,7 @@ country_event = {
 
 		
 		any_owned_pop = {
-			NOR = {
-				is_subspecies = root
-				is_same_species = root
-			}
+			NOT = { is_same_species = root }
 			is_robot_pop = no
 			species = { pops_have_happiness = yes }
 			OR = {
@@ -400,10 +381,7 @@ country_event = {
 						pop_percentage = {
 							percentage < 0.4
 							limit = {
-								OR = {
-									is_same_species = root
-									is_subspecies = root
-								}
+								is_same_species = root
 							}
 						}
 					}
@@ -422,10 +400,7 @@ country_event = {
 		}
 		random_owned_pop = {
 			limit = {
-				NOR = {
-					is_subspecies = root
-					is_same_species = root
-				}
+				NOT = { is_same_species = root }
 				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 				OR = {
@@ -449,10 +424,7 @@ country_event = {
 							pop_percentage = {
 								percentage < 0.4
 								limit = {
-									OR = {
-										is_same_species = root
-										is_subspecies = root
-									}
+									is_same_species = root
 								}
 							}
 						}
@@ -1324,10 +1296,7 @@ pop_event = {
 			pop_percentage = {
 				percentage > 0.2
 				limit = {
-					NOR = {
-						is_subspecies = root
-						is_same_species = root
-					}
+					NOT = { is_same_species = root }
 					species = { pops_have_happiness = yes }
 					NOR = {
 						is_enslaved = yes
@@ -1388,10 +1357,7 @@ pop_event = {
 				pop_percentage = {
 					percentage > 0.1
 					limit = {
-						NOR = {
-							is_subspecies = root
-							is_same_species = root
-						}
+						NOT = { is_same_species = root }
 						species = { pops_have_happiness = yes }
 						NOR = {
 							is_enslaved = yes
@@ -1908,10 +1874,7 @@ country_event = {
 		has_policy_flag = allows_im
 		
 		any_owned_pop = {
-			NOR = {
-				is_subspecies = root
-				is_same_species = root
-			}
+			NOT = { is_same_species = root }
 			species = { pops_have_happiness = yes }
 			has_citizenship_rights = yes
 		}
@@ -1943,10 +1906,7 @@ country_event = {
 		
 		random_owned_pop = {
 			limit = {
-				NOR = {
-					is_subspecies = root
-					is_same_species = root
-				}
+				NOT = { is_same_species = root }
 				species = { pops_have_happiness = yes }
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
@@ -2029,7 +1989,6 @@ country_event = {
 		
 		any_owned_pop = {
 			NOR = {
-				is_subspecies = root
 				is_same_species = root
 				is_robot_pop = no
 			}
@@ -2051,10 +2010,9 @@ country_event = {
 		random_owned_pop = {
 			limit = {
 				NOR = {
-					is_subspecies = root
 					is_same_species = root
-					is_robot_pop = no
 				}
+				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 			}
 			save_event_target_as = xeno
@@ -2319,10 +2277,9 @@ country_event = {
 	
 		any_owned_pop = {
 			NOR = {
-				is_subspecies = root
 				is_same_species = root
-				is_robot_pop = no
 			}
+			is_robot_pop = no
 			species = { pops_have_happiness = yes }
 		}
 	}
@@ -2335,11 +2292,10 @@ country_event = {
 		
 		random_owned_pop = {
 			limit = {
-				NOR = {
-					is_subspecies = root
+				NOT = {
 					is_same_species = root
-					is_robot_pop = no
 				}
+				is_robot_pop = no
 				species = { pops_have_happiness = yes }
 			}
 			save_event_target_as = xeno
