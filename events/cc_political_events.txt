@@ -83,7 +83,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = recent_xenophobic_comments
-			years = 50
+			years = 65
 		}
 		random_owned_pop = {
 			limit = {
@@ -396,7 +396,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = recent_xenophobic_comments
-			years = 50
+			years = 65
 		}
 		random_owned_pop = {
 			limit = {
@@ -1922,7 +1922,7 @@ country_event = {
 			type = scientist
 			species = event_target:marriage_species.species
 			name = random
-			skill = 0
+			skill = 1
 			event_leader = yes
 		}
 		last_created_leader = {
@@ -1999,7 +1999,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = cc_recent_sex_scandal
-			years = 20
+			years = 50
 		}
 	
 		random_owned_leader = {
@@ -2287,7 +2287,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = cc_recent_sex_scandal
-			years = 20
+			years = 50
 		}
 		
 		random_owned_pop = {
@@ -2504,7 +2504,7 @@ country_event = {
 			type = general
 			species = root
 			name = random
-			skill = 0
+			skill = 1
 		}
 		
 		last_created_leader = {

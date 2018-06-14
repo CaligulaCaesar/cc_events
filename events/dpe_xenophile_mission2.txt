@@ -19,6 +19,7 @@ namespace = dpe_xenophile_mission
 @tier5researchmin = 180
 @tier5researchmax = 2250
 
+
 #This event is necessary to ensure that only new contacts are taken into account.
 #yearly pulse
 event = {
@@ -198,28 +199,28 @@ country_event = {
 				}
 				count = 1
 			}
-			NOR = {
-				any_relation = {
-					is_same_species = event_target:dpe_new_contact
-					has_relation_flag = {
-						who = prev
-						flag = dpe_has_had_xenophile_mission
-					}
+		}
+		NOR = {
+			any_relation = {
+				is_same_species = event_target:dpe_new_contact
+				has_relation_flag = {
+					who = prev
+					flag = dpe_has_had_xenophile_mission
 				}
-				any_owned_pop = {
-					is_same_species = event_target:dpe_new_contact
-					owner = {
-						any_owned_pop = {
-							NOT = { is_same_value = prevprev }
-							is_same_species = event_target:dpe_new_contact
-							owner = {
-								any_owned_pop = {
-									NOR = {
-										is_same_value = prevprev
-										is_same_value = prevprevprevprev
-									}
-									is_same_species = event_target:dpe_new_contact
+			}
+			any_owned_pop = {
+				is_same_species = event_target:dpe_new_contact
+				owner = {
+					any_owned_pop = {
+						NOT = { is_same_value = prevprev }
+						is_same_species = event_target:dpe_new_contact
+						owner = {
+							any_owned_pop = {
+								NOR = {
+									is_same_value = prevprev
+									is_same_value = prevprevprevprev
 								}
+								is_same_species = event_target:dpe_new_contact
 							}
 						}
 					}
@@ -269,7 +270,7 @@ country_event = {
 	immediate = {
 		event_target:dpe_new_contact = { save_event_target_as = event_target:dpe_new_contact }
 		random_list = {
-			12 = {
+			8 = {
 				country_event = { id = dpe_xenophile_mission.3 }
 				modifier = {
 					factor = 0.65
@@ -302,6 +303,14 @@ country_event = {
 					factor = 2
 					any_system_within_border = {
 						has_hyperlane_to = event_target:dpe_new_contact
+					}
+				}
+				
+				modifier = {
+					factor = 2.5
+					OR = {
+						is_ai = no
+						event_target:dpe_new_contact = { is_ai = no }
 					}
 				}
 				

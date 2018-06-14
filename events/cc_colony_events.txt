@@ -450,7 +450,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -464,7 +464,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -1247,7 +1247,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -1261,7 +1261,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -2283,7 +2283,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -2297,7 +2297,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -3006,7 +3006,7 @@ planet_event = {
 				type = general
 				species = root.owner_species
 				name = random
-				skill = 0
+				skill = 1
 			}
 		}
 		last_created_leader = {
@@ -5037,7 +5037,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -5051,7 +5051,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -5797,7 +5797,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	picture = GFX_evt_cc_mausoleum
+	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
 	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
 	
@@ -5972,7 +5972,7 @@ planet_event = {
 	
 	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
 	
-	picture = GFX_evt_cc_mausoleum
+	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
 	is_triggered_only = yes
 	location = root
@@ -6069,7 +6069,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -6083,7 +6083,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -6805,7 +6805,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -6819,7 +6819,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -8041,7 +8041,7 @@ planet_event = {
 					type = general
 					species = root.owner_species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -8055,7 +8055,7 @@ planet_event = {
 					type = general
 					species = event_target:cc_leader_pop.species
 					name = random
-					skill = 0
+					skill = 1
 				}
 			}
 		}
@@ -8945,7 +8945,7 @@ planet_event = {
 	
 	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
 	
-	picture = GFX_evt_cc_mausoleum
+	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
 	is_triggered_only = yes
 	location = root

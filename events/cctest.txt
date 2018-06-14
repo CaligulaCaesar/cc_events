@@ -543,3 +543,196 @@ country_event = {
 	}
 }
 
+
+planet_event = {
+	id = cctest.70
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			create_leader = {
+				type = general
+				species = root.owner_species
+				name = random
+				skill = 1
+			}
+		}
+		root.owner_species = {
+			mutate_species = yes
+		}
+	}
+}
+
+
+planet_event = {
+	id = cctest.80
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					pop_percentage = {
+						limit = {
+							is_same_species = root.owner
+							log = [this.GetName]
+							log = [planet.GetName]
+						}
+						percentage > 0.1
+					}
+				}
+			}
+			
+			root = {
+				if = {
+					limit = {
+						count_pops = {
+							limit = {
+								is_same_species = prevprev
+								log = this
+							}
+							count > 3
+						}
+					}
+					set_variable = {
+						which = cctest_count_pops_1
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						count_pops = {
+							limit = {
+								is_same_species = prev
+								log = [this.GetName]
+								log = [this.planet.GetName]
+								log = [prev.GetName]
+								log = [planet.GetName]
+								log = [owner.GetName]
+							}
+							count > 3
+						}
+					}
+					set_variable = {
+						which = cctest_count_pops_2
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						count_pops = {
+							limit = {
+								is_same_species = this
+							}
+							count > 3
+						}
+					}
+					set_variable = {
+						which = cctest_count_pops_3
+						value = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.90
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		if = {
+			limit = {
+				count_pop_factions = {
+					count > 0
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_count_faction_variable
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.95
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_pop = {
+					is_robot_pop = yes
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_robot_pop_yes
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_pop = {
+					is_robot_pop = no
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_robot_pop_no
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.99
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		create_leader = {
+			species = root
+			traits = {
+				add_trait = dpe_leader_trait_ancient_knowledge
+			}
+			type = scientist
+		}
+		create_fleet = {
+			effect = {
+				set_owner = root
+				while = {
+					count = 20 
+					create_army_transport = {
+						ship_name = "NAME_Pirate_Transport"
+						army_type = "assault_army"
+						species = root
+					}
+				}
+				set_location = {
+					target = root.capital_scope
+					distance = 45
+					angle = random
+				}
+			}
+		}
+	}
+}

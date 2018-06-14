@@ -23,6 +23,7 @@ country_event = {
 			}
 		}
 		NOT = { has_country_flag = dpe_satisfied_egalitarians }
+		NOT = { has_country_flag = dpe_recent_charity_scandal }
 		exists = ruler
 		ruler = { NOT = { leader_of_faction = totalitarian } }
 	}
@@ -30,7 +31,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_charity_scandal
-			years = 50
+			years = 65
 		}
 	}
 	
@@ -188,7 +189,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_corruption_scandal
-			years = 50
+			years = 65
 		}
 		random_owned_leader = {
 			limit = { NOT = { is_same_value = root.ruler } }
@@ -335,7 +336,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_disbelief_scandal
-			years = 50
+			years = 75
 		}
 	}
 			
@@ -1028,7 +1029,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_cultist_scandal
-			years = 50
+			years = 65
 		}
 		create_leader = {
 			type = admiral
