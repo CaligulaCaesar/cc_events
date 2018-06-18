@@ -246,18 +246,18 @@ country_event = {
 					}
 				}
 				any_owned_pop = {
-					is_same_species = event_target:dpe_new_contact
+					is_same_species = root
 					owner = {
 						any_owned_pop = {
 							NOT = { is_same_value = prevprev }
-							is_same_species = event_target:dpe_new_contact
+							is_same_species = root
 							owner = {
 								any_owned_pop = {
 									NOR = {
 										is_same_value = prevprev
 										is_same_value = prevprevprevprev
 									}
-									is_same_species = event_target:dpe_new_contact
+									is_same_species = root
 								}
 							}
 						}
@@ -701,8 +701,8 @@ country_event = {
 
 country_event = {
 	id = dpe_xenophile_mission.5
-	title = dpe_xenophile_mission.5.name
-	desc = dpe_xenophile_mission.5.desc
+	title = dpe_xenophile_mission.6.name #deliberate
+	desc = dpe_xenophile_mission.6.desc #deliberate
 	is_triggered_only = yes
 	
 	diplomatic = yes
@@ -722,8 +722,8 @@ country_event = {
 #scope is originator
 country_event = {
 	id = dpe_xenophile_mission.6
-	title = dpe_xenophile_mission.6.name
-	desc = dpe_xenophile_mission.6.desc
+	title = dpe_xenophile_mission.5.name #deliberate
+	desc = dpe_xenophile_mission.5.desc #deliberate
 	is_triggered_only = yes
 	
 	diplomatic = yes
