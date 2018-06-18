@@ -862,7 +862,7 @@ country_event = {
 		trigger = {
 			has_relation_flag = {
 				who = from
-				flag = dpe_xenophile_mission_spying
+				flag = dpe_xenophile_mission_betraying
 			}
 		}
 	}
@@ -877,6 +877,7 @@ country_event = {
 		}
 	}
 }
+
 #Mission Established originator country
 country_event = {
 	id = dpe_xenophile_mission.71
