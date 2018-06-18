@@ -86,13 +86,14 @@ country_event = {
 				exists = ruler
 				count_pop_factions = {
 					limit = {
+						exists = leader
+
+						is_a_vanilla_faction = yes
+
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-						exists = leader
-
-						is_a_vanilla_faction = yes
 					}
 					count > 0
 				}
@@ -102,14 +103,14 @@ country_event = {
 				limit = {
 					count_pop_factions = {
 						limit = {
+							exists = leader
+
+							is_a_vanilla_faction = yes
 							support > 0.15
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
 							}
-							exists = leader
-
-							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
@@ -131,28 +132,28 @@ country_event = {
 				limit = {
 					count_pop_factions = {
 						limit = {
+							exists = leader
+
+							is_a_vanilla_faction = yes
 							support > 0.10
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
 							}
-							exists = leader
-
-							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
 				}
 				random_pop_faction = {
 					limit = {
+						exists = leader
+
+						is_a_vanilla_faction = yes
 						support > 0.10
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-						exists = leader
-
-						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -162,28 +163,28 @@ country_event = {
 				limit = {
 					count_pop_factions = {
 						limit = {
+							exists = leader
+
+							is_a_vanilla_faction = yes
 							support > 0.05
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
 							}
-							exists = leader
-
-							is_a_vanilla_faction = yes
 						}
 						count > 0
 					}
 				}
 				random_pop_faction = {
 					limit = {
+						exists = leader
+
+						is_a_vanilla_faction = yes
 						support > 0.05
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-						exists = leader
-
-						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -192,13 +193,13 @@ country_event = {
 			else = {
 				random_pop_faction = {
 					limit = {
+						exists = leader
+
+						is_a_vanilla_faction = yes
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-						exists = leader
-
-						is_a_vanilla_faction = yes
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }

@@ -651,7 +651,30 @@ country_event = {
 		if = {
 			limit = {
 				count_pop_factions = {
-					count > 0
+					limit = {
+						is_pop_faction_type = progressive
+					}
+					count = 1
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_count_faction_variable
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					limit = {
+						pop_percentage = {
+							percentage > 0
+							limit = { is_same_species = root }
+						}
+						is_pop_faction_type = progressive
+					}
+					count = 1
 				}
 			}
 			capital_scope = {

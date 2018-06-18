@@ -163,7 +163,17 @@ country_event = {
 				has_a_factional_revolt_active = no
 				count_pop_factions = {
 					limit = {
-						is_a_vanilla_faction = yes
+						OR = {
+							is_pop_faction_type = imperialist
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = progressive
+							is_pop_faction_type = prosperity
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = technologist
+							is_pop_faction_type = totalitarian
+							is_pop_faction_type = traditionalist
+							is_pop_faction_type = xenoist
+						}
 						support > 0.15
 						pop_percentage = {
 							percentage > 0.74
@@ -373,10 +383,7 @@ country_event = {
 									count > 1
 								}
 								any_owned_pop = {
-									NOR = {
-										is_same_species = prevprev
-										is_subspecies = prevprev
-									}
+									NOT = { is_same_species = prevprev }
 									species = { pops_have_happiness = yes }
 									is_robot_pop = no
 									is_enslaved = no
@@ -1284,12 +1291,11 @@ country_event = {
 				exists = ruler
 				count_pop_factions = {
 					limit = {
+						is_a_vanilla_faction = yes
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-
-						is_a_vanilla_faction = yes
 					}
 					count > 0
 				}
@@ -1519,10 +1525,7 @@ country_event = {
 							limit = { is_same_species = root }
 						}
 						any_owned_pop = {
-							NOR = {
-								is_subspecies = root
-								is_same_species = root
-							}
+							NOT = { is_same_species = root }
 							is_robot_pop = no
 							species = { pops_have_happiness = yes }
 							NOR = {
