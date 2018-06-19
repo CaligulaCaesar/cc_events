@@ -71,7 +71,27 @@ country_event = {
 	id = dpe_smallpos_events.3
 	hide_window = yes
 	
-	trigger = { has_country_flag = dpe_can_have_ruler_debate }
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_oligarchic
+		}
+		NOT = { has_country_flag = dpe_recent_ruler_debate }
+		exists = ruler
+		count_pop_factions = {
+			limit = {
+				is_a_vanilla_faction = yes
+				exists = leader
+				leader = { not = { is_same_value = root.ruler } }
+				pop_percentage = {
+					limit = { happiness < 0.4 }
+					percentage > 0.75
+				}
+			}
+			count > 0
+		}
+	}
 	
 	mean_time_to_happen = { years = 20 }
 	
@@ -89,6 +109,7 @@ country_event = {
 						exists = leader
 
 						is_a_vanilla_faction = yes
+						leader = { not = { is_same_value = root.ruler } }
 
 						pop_percentage = {
 							limit = { happiness < 0.4 }
@@ -107,6 +128,7 @@ country_event = {
 
 							is_a_vanilla_faction = yes
 							support > 0.15
+							leader = { not = { is_same_value = root.ruler } }
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
@@ -117,12 +139,14 @@ country_event = {
 				}
 				random_pop_faction = {
 					limit = {
+						exists = leader
+						is_a_vanilla_faction = yes
 						support > 0.15
+						leader = { not = { is_same_value = root.ruler } }
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
 						}
-						exists = leader
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -136,6 +160,7 @@ country_event = {
 
 							is_a_vanilla_faction = yes
 							support > 0.10
+							leader = { not = { is_same_value = root.ruler } }
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
@@ -150,6 +175,7 @@ country_event = {
 
 						is_a_vanilla_faction = yes
 						support > 0.10
+						leader = { not = { is_same_value = root.ruler } }
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
@@ -167,6 +193,7 @@ country_event = {
 
 							is_a_vanilla_faction = yes
 							support > 0.05
+							leader = { not = { is_same_value = root.ruler } }
 							pop_percentage = {
 								limit = { happiness < 0.4 }
 								percentage > 0.75
@@ -181,6 +208,7 @@ country_event = {
 
 						is_a_vanilla_faction = yes
 						support > 0.05
+						leader = { not = { is_same_value = root.ruler } }
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
@@ -196,6 +224,7 @@ country_event = {
 						exists = leader
 
 						is_a_vanilla_faction = yes
+						leader = { not = { is_same_value = root.ruler } }
 						pop_percentage = {
 							limit = { happiness < 0.4 }
 							percentage > 0.75
@@ -206,18 +235,14 @@ country_event = {
 				}
 			}
 		
-			if = {
-				limit = {
-					ruler = { NOT = { dpe_leader_of_dissident_faction = yes } }
-				}
-				set_timed_country_flag = {
-					flag = dpe_recent_ruler_debate
-					days = 7200
-				}
-				random_list = {
-					2 = { country_event = { id = dpe_smallpos_events.4 } }
-					1 = { country_event = { id = dpe_smallpos_events.5 } }
-				}
+		
+			set_timed_country_flag = {
+				flag = dpe_recent_ruler_debate
+				days = 7200
+			}
+			random_list = {
+				2 = { country_event = { id = dpe_smallpos_events.4 } }
+				1 = { country_event = { id = dpe_smallpos_events.5 } }
 			}
 		}
 	}

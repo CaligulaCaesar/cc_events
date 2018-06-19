@@ -1278,34 +1278,6 @@ country_event = {
 			}
 		}
 
-		#Leader Debates
-		
-		if = {
-			limit = {
-
-				OR = {
-					has_authority = auth_democratic
-					has_authority = auth_oligarchic
-				}
-				NOT = { has_country_flag = dpe_recent_ruler_debate }
-				exists = ruler
-				count_pop_factions = {
-					limit = {
-						is_a_vanilla_faction = yes
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
-					}
-					count > 0
-				}
-			}
-			set_timed_country_flag = {
-			flag = dpe_can_have_ruler_debate
-			days = 31
-			}
-		}
-
 		#Spiritualist Mission
 		if = {
 			limit = {
