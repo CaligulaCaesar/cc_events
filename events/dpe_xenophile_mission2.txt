@@ -59,7 +59,7 @@ event = {
 				set_timed_relation_flag = {
 					who = prev
 					flag = dpe_new_relation
-					days = 1800
+					days = 1080
 				}
 				save_event_target_as = dpe_new_contact
 				
@@ -331,7 +331,7 @@ country_event = {
 					}
 				}
 			}
-			988 = { country_event = { id = dpe_xenophile_mission.2 days = 21 } }
+			988 = { country_event = { id = dpe_xenophile_mission.2 days = 14 } }
 		}
 	}
 }
