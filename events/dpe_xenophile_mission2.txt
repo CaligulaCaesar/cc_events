@@ -3858,7 +3858,12 @@ country_event = {
 		
 		custom_tooltip = dpe_xenophile_mission.25.A.tooltip
 		hidden_effect = {
-			every_owned_ship = { ship_event = { id = dpe_xenophile_mission.26 } }
+			every_owned_ship = {
+				random_list = {
+					1 = { delete_ship = this }
+					2 = { }
+				}
+			}
 		}
 		add_modifier = {
 			modifier = dpe_xenomission_disbanding_fleet
@@ -3903,18 +3908,6 @@ country_event = {
 	}
 }
 
-ship_event = {
-	id = dpe_xenophile_mission.26
-	is_triggered_only = yes
-	hide_window = yes
-
-	immediate = {
-		random = {
-			chance = 33
-			delete_ship = this
-		}
-	}
-}
 
 #failed
 country_event = {
