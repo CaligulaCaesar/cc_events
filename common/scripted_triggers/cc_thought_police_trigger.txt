@@ -11,6 +11,7 @@ is_valid_TP_refugee_pop = {
 		any_relation = {
 			is_country_type = default
 			NOT = { has_policy_flag = refugees_not_allowed } 
+			NOT = { has_country_edict = cc_thought_police }
 			root = {
 				OR = { 
 					has_citizenship_type = { type = citizenship_full country = prev }
