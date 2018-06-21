@@ -1,11 +1,11 @@
 
-
+namespace = dpe_hw_duel
 
 
 #monthly pulse
 
 event = {
-	id = dpe_diplo_event.750
+	id = dpe_hw_duel.1
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -61,7 +61,7 @@ event = {
 						}
 						random_list = {
 							3 = {
-								country_event = { id = dpe_diplo_event.751 days = 10 }
+								country_event = { id = dpe_hw_duel.2 days = 10 }
 								prev = { save_event_target_as = dpe_insult_country }
 								save_event_target_as = dpe_Honourbound_country
 								
@@ -91,91 +91,59 @@ event = {
 }
 
 country_event = {
-	id = dpe_diplo_event.751
-	title = dpe_diplo_event.751.name
-	desc = {
-		trigger = { exists = heir }
-		text = dpe_diplo_event.751.desc.heir
-	}
-	desc = {
-		trigger = { NOT = { exists = heir } }
-		text = dpe_diplo_event.751.desc.else
-	}
+	id = dpe_hw_duel.2
+	title = dpe_hw_duel.2.name
+	desc = dpe_hw_duel.2.desc
 	
 	is_triggered_only = yes
 	
 	immediate = {
 		if = {
-			limit = { NOT = { exists = heir } }
-			
-			if = {
-				limit = {
-					any_owned_leader = {
-						leader_of_faction = imperialist
-						is_same_species = root
-					}
-				}
-				random_owned_leader = {
-					limit = {
-						leader_of_faction = imperialist
-						is_same_species = root
-					}
-					save_event_target_as = dpe_duel_leader
-				}
-			}
-			else_if = {
-				limit = {
-					any_owned_leader = {
-						is_same_species = root
-					}
-				}
-				random_owned_leader = {
-					limit = {
-						is_same_species = root
-					}
-					save_event_target_as = dpe_duel_leader
-				}
-			}
-			else = { random_owned_leader = { save_event_target_as = dpe_duel_leader } }
+			limit = { exists = heir }
+
+			heir = { save_event_target_as = dpe_duel_leader }
 		}
+		
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					leader_of_faction = imperialist
+					is_same_species = root
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					leader_of_faction = imperialist
+					is_same_species = root
+				}
+				save_event_target_as = dpe_duel_leader
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					is_same_species = root
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					is_same_species = root
+				}
+				save_event_target_as = dpe_duel_leader
+			}
+		}
+		else = { random_owned_leader = { save_event_target_as = dpe_duel_leader } }
 	}
 	
 	
 	option = {
-		name = dpe_diplo_event.751.A
+		name = dpe_hw_duel.2.A
 		
 		if = {
 			limit = { exists = heir }
-			custom_tooltip = dpe_diplo_event.751.A.tooltip.heir
+			custom_tooltip = dpe_hw_duel.2.A.tooltip.heir
 		}
-		else = { custom_tooltip = dpe_diplo_event.751.A.tooltip.no_heir }
+		else = { custom_tooltip = dpe_hw_duel.2.A.tooltip.no_heir }
 	
 	
 	
-if = {
-	limit = { }
-	else = { }
-}
-
-if = {
-	limit = {
-	}
-}
-else = { }
-
-if = {
-	limit = { }
-	if = {
-		limit = { }
-	}
-	else = { }
-}
-
-if = {
-	limit = { }
-	if = {
-		limit = { }
-		else = { }
-	}
-	else = { }
-}

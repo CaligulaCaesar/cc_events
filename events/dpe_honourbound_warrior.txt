@@ -1,0 +1,288 @@
+
+namespace = dpe_hw_duel
+
+
+#monthly pulse
+
+country_event = {
+	id = dpe_hw_duel.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_ai_personality = honorbound_warriors
+		NOR = {
+			has_country_flag = dpe_recent_HW_event
+			has_country_flag = dpe_never_again_HW_event
+		}
+		any_country = {
+			has_relation_flag = {
+				flag = dpe_insult
+				who = root
+			}
+			NOR = {
+				has_country_flag = dpe_recent_HW_event
+				has_relation_flag = {
+					flag = dpe_has_had_HW_chain
+					who = root
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = {
+				random_country = {
+					limit = {
+						has_relation_flag = {
+							flag = dpe_insult
+							who = root
+						}
+						NOR = {
+							has_country_flag = dpe_recent_HW_event
+							has_relation_flag = {
+								flag = dpe_has_had_HW_chain
+								who = root
+							}
+						}
+					}
+					save_event_target_as = dpe_insult_country
+					set_timed_relation_flag = {
+						flag = dpe_has_had_HW_chain
+						who = root
+						days = 21600
+					}
+					set_timed_country_flag = {
+						flag = dpe_recent_HW_event
+						days = 9000
+					}
+				}
+				
+				set_timed_country_flag = {
+					flag = dpe_recent_HW_event
+					days = 7200
+				}
+				save_event_target_as = dpe_honourbound_country
+				set_country_flag = dpe_has_had_HW_chain
+
+				country_event = { id = dpe_hw_duel.2 days = 10 }
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NOT = { has_country_flag = dpe_has_had_HW_chain }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_hw_duel.2
+	title = dpe_hw_duel.2.name
+	desc = dpe_hw_duel.2.desc
+
+	picture = GFX_evt_victorious_army
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { exists = heir }
+
+			heir = { save_event_target_as = dpe_duel_leader }
+		}
+		
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					leader_of_faction = imperialist
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					leader_of_faction = imperialist
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader
+			}
+		}
+		else = {
+			random_owned_leader = {
+				limit = {
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader
+			}
+		}
+	}
+	
+	
+	option = {
+		name = dpe_hw_duel.2.A
+
+		trigger = { exists = event_target:dpe_duel_leader }
+		
+		if = {
+			limit = {
+				exists = heir
+				heir = { is_same_value = event_target:dpe_duel_leader }
+			}
+			custom_tooltip = dpe_hw_duel.2.A.tooltip.heir
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader = { leader_class = general }
+			}
+			custom_tooltip = dpe_hw_duel.2.A.tooltip.general
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader = { leader_class = admiral }
+			}
+			custom_tooltip = dpe_hw_duel.2.A.tooltip.admiral
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader = { leader_class = governor }
+			}
+			custom_tooltip = dpe_hw_duel.2.A.tooltip.governor
+		}
+
+		event_target:dpe_insult_country = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_demanded_duel				
+			}
+		}
+		
+		hidden_effect = { event_target:dpe_insult_country = { country_event = { id = dpe_hw_duel.3 } } }
+	}
+	
+	option = {
+		name = dpe_hw_duel.2.B
+
+		trigger = { exists = event_target:dpe_duel_leader }
+		
+		event_target:dpe_insult_country = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_demanded_duel				
+			}
+		}
+		
+		hidden_effect = { event_target:dpe_insult_country = { country_event = { id = dpe_hw_duel.3 } } }
+	}
+	
+	option = {
+		name = dpe_hw_duel.2.C
+
+		trigger = { NOT = { exists = event_target:dpe_duel_leader } }
+		
+		event_target:dpe_insult_country = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_demanded_duel				
+			}
+		}
+		
+		hidden_effect = { event_target:dpe_insult_country = { country_event = { id = dpe_hw_duel.3 } } }
+	}
+	
+	option = {
+		name = dpe_hw_duel.2.D
+
+		add_modifier = {
+			modifier = dpe_cowardly_empire
+			days = 3600
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_cowardly_empire_faction
+				days = 3600
+			}
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				relative_power = {
+					who = event_target:dpe_insult_country
+					value < equivalent
+				}
+				relative_power = {
+					who = event_target:dpe_insult_country
+					value < inferior
+				}
+			}
+			modifier = {
+				factor = 2
+				relative_power = {
+					who = event_target:dpe_insult_country
+					value < inferior
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_hw_duel.2.E
+		custom_tooltip = dpe_hw_duel.2.E.tooltip
+
+		add_modifier = {
+			modifier = dpe_cowardly_empire
+			days = 3600
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			add_modifier = {
+				modifier = dpe_cowardly_empire_faction
+				days = 3600
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = dpe_never_again_HW_event
+		}
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+}

@@ -873,3 +873,49 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  
  dpe_electoral_experiment_faction:0 "$dpe_electoral_experiment$"
  dpe_electoral_experiment_faction_negative:0 "$dpe_electoral_experiment$"
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#Honourbound Warriors
+
+ dpe_demanded_duel:0 "Demanded Duel"
+ dpe_cowardly_empire:0 "Cowardly Empire"
+ dpe_cowardly_empire_faction:0 "Cowardly Empire"
+ 
+ dpe_hw_duel.2.name:0 "The [dpe_insult_country.GetSpeciesNamePlural]' Insults"
+ dpe_hw_duel.2.desc:0 "The [from.GetName]'s insulting words have struck the heart of what it is to be a [root.GetSpeciesName]. Widespread protests demand that we see our honour restored by proving that we are worthier than the cowardly [from.GetSpeciesNamePlural]! [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], inspired by their calls, has requested permission to duel a [from.GetSpeciesAdj] champion and see that the deed is done."
+
+ dpe_hw_duel.2.A:0 "Excellent idea!"
+ dpe_hw_duel.2.A.tooltip.heir:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_ruler$, granting:\n$MOD_POP_HAPPINESS$: +5%\n$pop_ethic_militarist_attraction_mult$: +20%"
+ dpe_hw_duel.2.A.tooltip.general:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_general$, granting:\n$MOD_ARMY_MORALE$: +10%\n$MOD_ARMY_MORALE_DAMAGE_MULT$": +10%" 
+ dpe_hw_duel.2.A.tooltip.admiral:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_admiral$, granting:\n$MOD_SHIP_FIRE_RATE_MULT$: +10%\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: +25%"
+ dpe_hw_duel.2.A.tooltip.governor:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_governor$, granting:\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: +33%\n$pop_ethic_militarist_attraction_mult$: +33%"
+ 
+ dpe_hw_duel.2.B:0 "[dpe_duel_leader.GetName] is too valuable. Nominate a Champion."
+ dpe_hw_duel.2.C:0 "Excellent idea! Nominate a Champion."
+ dpe_hw_duel.2.D:0 "We'd better not risk an incident."
+ dpe_hw_duel.2.E:0 "Let us outlaw this barbaric practice."
+ dpe_hw_duel.2.E.tooltip:0 "This event chain will not happen again.\n"
+ 
+ 
+ dpe_duel_victor_ruler:0 "Victor"
+ dpe_duel_victor_ruler_desc:0 "This leader has proved their valour by defeating an enemy champion in a duel."
+ dpe_duel_victor_general:0 "$dpe_duel_victor_ruler$"
+ dpe_duel_victor_general_desc:0 "$dpe_duel_victor_ruler_desc$"
+ dpe_duel_victor_admiral:0 "$dpe_duel_victor_ruler$"
+ dpe_duel_victor_admiral_desc:0 "$dpe_duel_victor_ruler_desc$"
+ dpe_duel_victor_governor:0 "$dpe_duel_victor_ruler$"
+ dpe_duel_victor_governor_desc:0 "$dpe_duel_victor_ruler_desc$"

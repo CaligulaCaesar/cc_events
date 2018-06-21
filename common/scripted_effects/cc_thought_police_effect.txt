@@ -2,6 +2,7 @@
 
 TP_refugee_pop_effect = {
 	remove_modifier = "pop_recently_conquered"
+	remove_culture_shock = yes
 	owner = {
 		save_event_target_as = RefugeeEscapedFrom
 		random_relation = {
@@ -19,6 +20,68 @@ TP_refugee_pop_effect = {
 							}
 							prev = { has_policy_flag = refugees_allowed }
 						}	
+					}
+					OR = {
+						prev = {
+							OR = {
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+						AND = {
+							has_ethic = ethic_militarist
+							prev = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+							}
+						}
+						AND = {
+							has_ethic = ethic_pacifist
+							prev = {
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+							}
+						}
+						AND = {
+							has_ethic = ethic_spiritualist
+							prev = {
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+							}
+						}
+						AND = {
+							has_ethic = ethic_materialist
+							prev = {
+								OR = {
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+								}
+							}
+						}
+						AND = {
+							has_ethic = ethic_xenophile
+							prev = {
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+								}
+							}
+						}
+						AND = {
+							has_ethic = ethic_xenophobe
+							prev = {
+								OR = {
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+						}
 					}		
 				}	
 				any_owned_planet = {

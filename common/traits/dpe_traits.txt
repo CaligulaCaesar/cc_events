@@ -109,3 +109,74 @@ dpe_leader_trait_reinvigorated = {
 		weight = 50
 	}
 }
+
+
+
+dpe_duel_victor_ruler = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	modifier = {
+		pop_happiness = 0.05
+		pop_ethic_militarist_attraction_mult = 0.2
+	}
+	
+	leader_class = { ruler }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_victor_general = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	modifier = {
+		army_morale = 0.1
+		army_morale_damage_mult = 0.1
+	}
+	
+	leader_class = { general }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_victor_admiral = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_experience_gain_mult = 0.25
+	}
+	
+	leader_class = { admiral }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+
+dpe_duel_victor_admiral = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	modifier = {
+		ARMY_DEFENSE_DAMAGE_MULT = 0.33
+		pop_ethic_militarist_attraction_mult = 0.33
+	}
+	
+	leader_class = { dpe_duel_victor_governor }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
