@@ -3859,6 +3859,9 @@ country_event = {
 		custom_tooltip = dpe_xenophile_mission.25.A.tooltip
 		hidden_effect = {
 			every_owned_ship = {
+				limit = {
+					is_ship_class = shipclass_military
+				}
 				random_list = {
 					1 = { delete_ship = this }
 					2 = { }

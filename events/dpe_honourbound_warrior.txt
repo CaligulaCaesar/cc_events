@@ -10,6 +10,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+#		always = no
 		has_ai_personality = honorbound_warriors
 		NOR = {
 			has_country_flag = dpe_recent_HW_event
@@ -286,3 +287,187 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = dpe_hw_duel.3
+	title = dpe_hw_duel.3.name
+	desc = {
+		trigger = {
+			exists = event_target:dpe_duel_leader
+			event_target:dpe_duel_leader = {
+				is_same_value = from.heir
+			}
+		}
+		text = dpe_hw_duel.3.desc.heir
+	}
+	desc = {
+		trigger = {
+			NAND = {
+				exists = event_target:dpe_duel_leader
+				event_target:dpe_duel_leader = {
+					is_same_value = from.heir
+				}
+			}
+		}
+		text = dpe_hw_duel.3.desc.other
+	}
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_hw_duel.3.reject
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophobe
+				has_valid_civic = civic_hive_devouring_swarm
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+
+	option = {
+		name = dpe_hw_duel.3.reject.FE
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_hw_duel.3.reject.purifier
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+
+	option = {
+		name = dpe_hw_duel.3.reject.swarm
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = dpe_hw_duel.3.reject.hive
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+	}
+
+	option = {
+		name = dpe_hw_duel.3.reject.machine
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_honourless
+				who = root
+			}
+			hidden_effect = { country_event = { id = dpe_hw_duel.4 days = 5 } }
+		}
+
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+	}
+
+	
+	#positive responses
+	option = {
+		name = dpe_hw_duel.3.accept
+
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_hw_duel.5 days = 5 }
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_authority = auth_machine_intelligence
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminators
+			}
+		}
+	}
+
+#	has_ethic = ethic_militarist
+#	has_ethic = ethic_fanatic_militarist
+#	has_authority = auth_machine_intelligence
+
+	#need to complete this and get rid of always = no

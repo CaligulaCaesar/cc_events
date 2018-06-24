@@ -2631,6 +2631,7 @@ pop_event = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_policy_flag = purge_allowed
+				has_edict = cc_thought_police
 			}
 		}
 	}
@@ -2642,88 +2643,6 @@ pop_event = {
 				modifier = {
 					factor = 0
 					is_same_species = owner
-				}
-			}
-		}
-	}
-}
-
-#Thought Police
-pop_event = {
-	id = cc_events_performance.22
-	hide_window = yes
-	mean_time_to_happen = { years = 35 }
-
-	trigger = {
-		exists = owner
-		owner = { has_edict = cc_thought_police }
-		
-		is_enslaved = no
-		happiness < 0.4
-		if = {
-			limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
-			NOT = { has_ethic = ethic_authoritarian }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_spiritualist } }
-			NOT = { has_ethic = ethic_spiritualist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_materialist } }
-			NOT = { has_ethic = ethic_materialist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_pacifist } }
-			NOT = { has_ethic = ethic_pacifist }
-		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
-				}
-			}
-			NOT = { has_ethic = ethic_militarist }
-		}
-		if = {
-			limit = { owner = { has_ethic = ethic_xenophile } }
-			NOT = { has_ethic = ethic_xenophile }
-		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-				}
-			}
-			NOT = { has_ethic = ethic_xenophobe }
-		}
-	}
-
-	immediate = {
-		random_list = {
-			100 = { pop_event = { id = cc_thought_police.1 } }
-
-			100 = {
-				modifier = {
-					factor = 0.75
-					has_ethic = ethic_egalitarian
-				}
-				modifier = {
-					factor = 0.67
-					happiness < 0.3
-				}
-				modifier = {
-					factor = 0.67
-					happiness < 0.2
-				}
-				modifier = {
-					factor = 0
-					happiness < 0.1
 				}
 			}
 		}
