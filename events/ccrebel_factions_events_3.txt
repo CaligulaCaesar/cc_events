@@ -2595,24 +2595,22 @@ country_event = {
 									is_disloyal_to = event_target:old_owner
 									is_domineering_to = event_target:old_owner
 								}
-								AND = {
-									OR = {
-										has_country_resource = {
-											type = minerals
-											amount > 2000
-										}
-										has_monthly_income = {
-											resource = minerals
-											value > 100
-										}
+								OR = {
+									has_country_resource = {
+										type = minerals
+										amount > 2000
 									}
-									OR = {
-										has_monthly_income = {
-											resource = energy
-											value > 100
-										}
-										energy > 2000
+									has_monthly_income = {
+										resource = minerals
+										value > 100
 									}
+								}
+								OR = {
+									has_monthly_income = {
+										resource = energy
+										value > 100
+									}
+									energy > 2000
 								}
 							}
 							prevprev = {
@@ -3687,26 +3685,22 @@ country_event = {
 	title = ccfaction.601.name
 	desc = {
 		trigger = {
-			AND = {
-				exists = event_target:cc_rebellious_faction_leader
-				ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
-				exists = event_target:cc_new_reb_faction_leader
-				ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
-			}
+			exists = event_target:cc_rebellious_faction_leader
+			ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+			exists = event_target:cc_new_reb_faction_leader
+			ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
 		}
 		text = ccfaction.601.desc.both
 	}
 	desc = {
 		trigger = {
-			AND = {
-				exists = event_target:cc_rebellious_faction_leader
-				ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
-				OR = {
-					NOT = { exists = event_target:cc_new_reb_faction_leader }
-					AND = {
-						exists = event_target:cc_new_reb_faction_leader
-						ruler = { is_same_value = event_target:cc_new_reb_faction_leader }
-					}
+			exists = event_target:cc_rebellious_faction_leader
+			ruler = { NOT = { is_same_value = event_target:cc_rebellious_faction_leader } }
+			OR = {
+				NOT = { exists = event_target:cc_new_reb_faction_leader }
+				AND = {
+					exists = event_target:cc_new_reb_faction_leader
+					ruler = { is_same_value = event_target:cc_new_reb_faction_leader }
 				}
 			}
 		}
@@ -3714,17 +3708,15 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			AND = {
-				OR = {
-					NOT = { exists = event_target:cc_rebellious_faction_leader }
-					AND = {
-						exists = event_target:cc_rebellious_faction_leader
-						ruler = { is_same_value = event_target:cc_rebellious_faction_leader }
-					}
+			OR = {
+				NOT = { exists = event_target:cc_rebellious_faction_leader }
+				AND = {
+					exists = event_target:cc_rebellious_faction_leader
+					ruler = { is_same_value = event_target:cc_rebellious_faction_leader }
 				}
-				exists = event_target:cc_new_reb_faction_leader
-				ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
 			}
+			exists = event_target:cc_new_reb_faction_leader
+			ruler = { NOT = { is_same_value = event_target:cc_new_reb_faction_leader } }
 		}
 		text = ccfaction.601.desc.only2
 	}

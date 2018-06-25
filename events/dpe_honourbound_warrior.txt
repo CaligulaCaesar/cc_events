@@ -346,6 +346,42 @@ country_event = {
 				has_authority = auth_machine_intelligence
 			}
 		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				relative_power = {
+					who = from
+					value < equivalent
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relative_power = {
+					who = from
+					value < inferior
+				}
+			}
+			modifier = {
+				factor = 0.75
+				relative_power = {
+					who = from
+					value > equivalent
+				}
+			}
+			modifier = {
+				factor = 0.5
+				relative_power = {
+					who = from
+					value > superior
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ai_personality = honorbound_warriors
+			}
+		}
 	}
 
 	option = {
@@ -443,6 +479,7 @@ country_event = {
 		}
 
 		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				OR = {
@@ -461,13 +498,105 @@ country_event = {
 				is_country_type = awakened_fallen_empire
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_machine_terminators
+				has_valid_civic = civic_machine_terminator
 			}
 		}
 	}
+	
+	option = {
+		name = dpe_hw_duel.3.accept.machine
 
-#	has_ethic = ethic_militarist
-#	has_ethic = ethic_fanatic_militarist
-#	has_authority = auth_machine_intelligence
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_hw_duel.5 days = 5 }
+			}
+		}
 
-	#need to complete this and get rid of always = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+			NOT = { has_valid_civic = civic_machine_terminator }
+		}
+	}
+
+	option = {
+		name = dpe_hw_duel.3.accept.militarist
+
+		hidden_effect = {
+			country_event = { id = dpe_hw_duel.45 }
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_hw_duel.3.apologise
+
+		add_modifier = {
+			modifier = dpe_cowardly_empire
+			days = 3600
+		}
+
+		if = {
+			limit = {
+				count_pop_factions = {
+					count = 1
+					limit = { is_pop_faction_type = imperialist }
+				}
+			}
+			random_pop_faction = {
+				limit = { is_pop_faction_type = imperialist }
+				add_modifier = {
+					modifier = dpe_cowardly_empire_faction
+					days = 3600
+				}
+			}
+		}
+
+		hidden_effect = {
+			from = { country_event = { id = dpe_hw_duel.48 } }
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOT = {
+					relative_power = {
+						who = from
+						value < equivalent
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					count_pop_factions = {
+						count > 0
+						limit = { is_pop_faction_type = imperialist }
+					}
+				}
+			}
+		}
+
+		trigger = {
+			NOR = {
+				has_ai_personality = honorbound_warriors
+				has_ethic = ethic_fanatic_militarist
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
