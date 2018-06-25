@@ -448,6 +448,9 @@ country_event = {
 
 		trigger = {
 			has_authority = auth_hive_mind
+			NOT = { 
+				has_valid_civic = civic_hive_devouring_swarm
+			}
 		}
 	}
 
@@ -491,8 +494,16 @@ country_event = {
 
 		trigger = {
 			NOR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
+				AND = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					any_owned_leader = {
+						NOR = {
+							leader_class = scientist
+							is_same_value = root.leader
+						}
+					}
+				}
 				has_authority = auth_machine_intelligence
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
@@ -522,7 +533,7 @@ country_event = {
 		name = dpe_hw_duel.3.accept.militarist
 
 		hidden_effect = {
-			country_event = { id = dpe_hw_duel.45 }
+			country_event = { id = dpe_hw_duel.45 days = 3 }
 		}
 
 		ai_chance = {
@@ -533,6 +544,12 @@ country_event = {
 			OR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
+			}
+			any_owned_leader = {
+				NOR = {
+					leader_class = scientist
+					is_same_value = root.leader
+				}
 			}
 		}
 	}
@@ -600,3 +617,298 @@ country_event = {
 		}
 	}
 }
+
+
+
+country_event = {
+	id = dpe_hw_duel.45
+	title = dpe_hw_duel.45.name
+	desc = dpe_hw_duel.45.desc
+
+	picture = GFX_evt_victorious_army
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { exists = heir }
+
+			heir = { save_event_target_as = dpe_duel_leader2 }
+		}
+		
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					leader_of_faction = imperialist
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					leader_of_faction = imperialist
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader2
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader2
+			}
+		}
+		else = {
+			random_owned_leader = {
+				limit = {
+					NOR = {
+						leader_class = scientist
+						is_same_value = root.leader
+					}
+				}
+				save_event_target_as = dpe_duel_leader2
+			}
+		}
+	}
+	
+	
+	option = {
+		name = dpe_hw_duel.45.A
+
+		if = {
+			limit = {
+				exists = heir
+				heir = { is_same_value = event_target:dpe_duel_leader2 }
+			}
+			custom_tooltip = dpe_hw_duel.45.A.tooltip.heir
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader2 = { leader_class = general }
+			}
+			custom_tooltip = dpe_hw_duel.45.A.tooltip.general
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader2 = { leader_class = admiral }
+			}
+			custom_tooltip = dpe_hw_duel.45.A.tooltip.admiral
+		}
+		else_if = {
+			limit = {
+				event_target:dpe_duel_leader2 = { leader_class = governor }
+			}
+			custom_tooltip = dpe_hw_duel.45.A.tooltip.governor
+		}
+
+		hidden_effect = { fromfrom = { country_event = { id = dpe_hw_duel.5 days = 2 } } }
+	}
+	
+	option = {
+		name = dpe_hw_duel.45.B
+
+		hidden_effect = { fromfrom = { country_event = { id = dpe_hw_duel.5 days = 2 } } }
+	}
+}
+
+
+#rejection
+country_event = {
+	id = dpe_hw_duel.4
+	title = dpe_hw_duel.4.name
+	desc = {
+		trigger = {
+			from = {
+				NOR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_xenophobe
+					has_valid_civic = civic_hive_devouring_swarm
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = dpe_hw_duel.4.desc
+	}
+	desc = {
+		trigger = {
+			from = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+		}
+		text = dpe_hw_duel.4.desc.FE
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		text = dpe_hw_duel.4.desc.phobe
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+		text = dpe_hw_duel.4.desc.swarm
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_authority = auth_machine_intelligence
+			}
+		}
+		text = dpe_hw_duel.4.desc.machine
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_authority = auth_hive_mind
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
+			}
+		}
+		text = dpe_hw_duel.4.desc.hive
+	}
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+
+	option = {
+		name = dpe_hw_duel.4.option
+	}
+}
+
+
+
+#apology
+country_event = {
+	id = dpe_hw_duel.48
+	title = dpe_hw_duel.48.name
+	desc = dpe_hw_duel.48.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_hw_duel.48.A
+
+		add_opinion_modifier = {
+			who =  from
+			modifier = dpe_hw_forgiven
+			
+		}
+
+		hidden_effect = {
+			from = { country_event = { id = dpe_hw_duel.481 days = 5 } }
+		}
+	}
+	option = {
+		name = dpe_hw_duel.48.B
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_hostile_to = from
+					is_rival = from
+				}
+			}
+		}
+		hidden_effect = {
+			from = { country_event = { id = dpe_hw_duel.482 days = 5 } }
+		}
+	}
+}
+
+
+country_event = {
+	id = dpe_hw_duel.481
+	title = dpe_hw_duel.481.name
+	desc = dpe_hw_duel.481.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = dpe_hw_duel.482
+	title = dpe_hw_duel.482.name
+	desc = dpe_hw_duel.482.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+	

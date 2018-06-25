@@ -899,10 +899,11 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_hw_duel.2.desc:0 "The [from.GetName]'s insulting words have struck the heart of what it is to be a [root.GetSpeciesName]. Widespread protests demand that we see our honour restored by proving that we are worthier than the cowardly [from.GetSpeciesNamePlural]! [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], inspired by their calls, has requested permission to duel a [from.GetSpeciesAdj] champion and see that the deed is done."
 
  dpe_hw_duel.2.A:0 "Excellent idea!"
- dpe_hw_duel.2.A.tooltip.heir:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_ruler$, granting:\n$MOD_POP_HAPPINESS$: +5%\n$pop_ethic_militarist_attraction_mult$: +20%"
- dpe_hw_duel.2.A.tooltip.general:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_general$, granting:\n$MOD_ARMY_MORALE$: +10%\n$MOD_ARMY_MORALE_DAMAGE_MULT$": +10%" 
- dpe_hw_duel.2.A.tooltip.admiral:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_admiral$, granting:\n$MOD_SHIP_FIRE_RATE_MULT$: +10%\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: +25%"
- dpe_hw_duel.2.A.tooltip.governor:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_governor$, granting:\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: +33%\n$pop_ethic_militarist_attraction_mult$: +33%"
+ dpe_hw_duel.2.A.tooltip:0 "If victorious, [dpe_duel_leader.GetName] will gain the trait $dpe_duel_victor_ruler$, granting:"
+ dpe_hw_duel.2.A.tooltip.heir:0 "$dpe_hw_duel.2.A.tooltip$\n$MOD_POP_HAPPINESS$: +5%\n$pop_ethic_militarist_attraction_mult$: +20%"
+ dpe_hw_duel.2.A.tooltip.general:0 "$dpe_hw_duel.2.A.tooltip$\n$MOD_ARMY_MORALE$: +10%\n$MOD_ARMY_MORALE_DAMAGE_MULT$": +10%" 
+ dpe_hw_duel.2.A.tooltip.admiral:0 "$dpe_hw_duel.2.A.tooltip$\n$MOD_SHIP_FIRE_RATE_MULT$: +10%\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: +25%"
+ dpe_hw_duel.2.A.tooltip.governor:0 "$dpe_hw_duel.2.A.tooltip$\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: +33%\n$pop_ethic_militarist_attraction_mult$: +33%"
  
  dpe_hw_duel.2.B:0 "[dpe_duel_leader.GetName] is too valuable. Nominate a Champion."
  dpe_hw_duel.2.C:0 "Excellent idea! Nominate a Champion."
@@ -935,3 +936,36 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_hw_duel.3.accept.machine:0 "A duel? Excellent idea!"
  dpe_hw_duel.3.accept.militarist:0 "Very well. We will dismantle your champion."
  dpe_hw_duel.3.apologise:0 "We humbly apologise for the misunderstanding. Please forgive us."
+ 
+ 
+ dpe_hw_duel.4.name:0 "$dpe_title_response$"
+ dpe_hw_duel.4.desc:0 "$dpe_hw_duel.3.reject$"
+ dpe_hw_duel.4.desc.FE:0 "$dpe_hw_duel.3.reject.FE$"
+ dpe_hw_duel.4.desc.phobe:0 "$dpe_hw_duel.3.reject.purifier$"
+ dpe_hw_duel.4.desc.swarm:0 "$dpe_hw_duel.3.reject.swarm$"
+ dpe_hw_duel.4.desc.machine:0 "$dpe_hw_duel.3.reject.machine$"
+ dpe_hw_duel.4.desc.hive:0 "$dpe_hw_duel.3.reject.hive$"
+ dpe_hw_duel.4.option:0 "Spineless Cowards!"
+ 
+ dpe_hw_duel.45.name:0 "A Challenge"
+ dpe_hw_duel.45.desc:0 "There has been some debate about who our champion should be for the duel. [dpe_duel_leader2.GetTitle] [dpe_duel_leader2.GetName] has been particularly loud in clamouring to be given the task of knocking the [fromfrom.GetSpeciesNamePlural] down a notch or two. However, there is no shortage of other, more expendable volunteers for the job..."
+ dpe_hw_duel.45.A:0 "[dpe_duel_leader2.GetName] will make an excellent Champion."
+ dpe_hw_duel.45.A.tooltip:0 "If victorious, [dpe_duel_leader1.GetName] will gain the trait $dpe_duel_victor_ruler$, granting:"
+ dpe_hw_duel.45.A.tooltip.heir:0 "$dpe_hw_duel.45.A.tooltip$\n$MOD_POP_HAPPINESS$: +5%\n$pop_ethic_militarist_attraction_mult$: +20%"
+ dpe_hw_duel.45.A.tooltip.general:0 "$dpe_hw_duel.45.A.tooltip$\n$MOD_ARMY_MORALE$: +10%\n$MOD_ARMY_MORALE_DAMAGE_MULT$": +10%"
+ dpe_hw_duel.45.A.tooltip.admiral:0 "$dpe_hw_duel.45.A.tooltip$\n$MOD_SHIP_FIRE_RATE_MULT$: +10%\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: +25%"
+ dpe_hw_duel.45.A.tooltip.governor:0 "$dpe_hw_duel.45.A.tooltip$\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: +33%\n$pop_ethic_militarist_attraction_mult$: +33%"
+ dpe_hw_duel.45.B:0 "Select another champion."
+ 
+ dpe_hw_duel.48.name:0 "$dpe_title_response$"
+ dpe_hw_duel.48.desc:0 "$dpe_hw_duel.3.apologise$
+ dpe_hw_duel.48.A:0 "You are forgiven."
+ dpe_hw_duel.48.B:0 "Spineless Cowards!"
+ 
+ dpe_hw_duel.481.name:0 "$dpe_title_response$"
+ dpe_hw_duel.481.desc:0 "$dpe_hw_duel.48.A$"
+ dpe_hw_duel.482.name:0 "$dpe_title_response$ May this incident never recur."
+ dpe_hw_duel.482.desc:0 "$dpe_hw_duel.48.B$ You will not buy our forgiveness this easily!"
+ 
+ dpe_hw_forgiven:0 "Forgiven"
+ 
