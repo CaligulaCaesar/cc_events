@@ -760,3 +760,154 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = cctest.200
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_playable_country = {
+			country_event = { id = cctest.201 }
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.201
+	is_triggered_only = yes
+	hide_window = yes	
+	immediate = {
+		capital_scope = {
+			change_variable = {
+				which = dpe_froms_test
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					check_variable = {
+						which = dpe_froms_test
+						value = 1000
+					}
+				}
+			}
+			break = yes
+		}
+		from = { country_event = { id = cctest.201 } }
+	}
+}
+		
+		
+
+country_event = {
+	id = cctest.300
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					has_relation_flag = {
+						flag = dpe_test
+						who = root
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cctest.301
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					has_relation_flag = {
+						flag = dpe_test
+						who = from
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cctest.302
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_country_flag = dpe_test@prevprevprevprev
+	}
+}
+
+country_event = {
+	id = cctest.303
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_relation_flag = {
+			flag = dpe_test
+			who = prevprevprevprev
+		}
+	}
+}
+
+country_event = {
+	id = cctest.304
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_relation_flag = {
+			flag = dpe_test
+			who = event_target:doesnt_exist
+		}
+	}
+}
+
+country_event = {
+	id = cctest.305
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_relation_flag = {
+			flag = dpe_test
+			who = root.capital_scope
+		}
+	}
+}
+
+country_event = {
+	id = cctest.306
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_relation_flag = {
+			flag = dpe_test
+			who = root
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_relation_flag = {
+						flag = dpe_test
+						who = root
+					}
+				}
+			}
+			log = "Idiot"
+		}
+	}
+}

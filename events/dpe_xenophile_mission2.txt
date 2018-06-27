@@ -819,7 +819,7 @@ country_event = {
 						}
 					}
 				}
-				country_event = { id = dpe_xenophile_mission.8 days = 420 random = 120 }
+				from = { country_event = { id = dpe_xenophile_mission.8 days = 420 random = 120 } }
 			}
 		}
 	}
@@ -1145,6 +1145,8 @@ country_event = {
 	picture = GFX_evt_alien_segregation
 
 	is_triggered_only = yes
+
+	trigger = { exists = from }
 
 	option = {
 		name = dpe_xenophile_mission.81.A
