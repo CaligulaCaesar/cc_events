@@ -1311,7 +1311,7 @@ country_event = {
 			type = scientist
 			species = owner_main_species
 			name = random
-		event_leader = yes
+			event_leader = yes
 			skill = 5
 			traits = {
 				trait = leader_trait_maniacal
@@ -1384,7 +1384,6 @@ country_event = {
 		custom_tooltip = fallen_empire_angry_tooltip
 		
 		hidden_effect = { event_target:FallenEmpireTaskOrigin = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_demand } } }
-		hidden_effect = { event_target:dpe_escaped_scientist = { kill_leader = { show_notification = no } } }
 
 		ai_chance = {
 			factor = 100
@@ -1416,7 +1415,9 @@ country_event = {
 		custom_tooltip = fallen_empire_happy_tooltip
 
 		event_target:FallenEmpireTaskOrigin = { add_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
-	
+
+		hidden_effect = { event_target:dpe_escaped_scientist = { kill_leader = { show_notification = no } } }
+
 		ai_chance = {
 			factor = 1
 		}
@@ -1449,6 +1450,8 @@ country_event = {
 		
 		
 		hidden_effect = { event_target:FallenEmpireTaskOrigin = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } } }
+
+		hidden_effect = { event_target:dpe_escaped_scientist = { kill_leader = { show_notification = no } } }
 
 		ai_chance = {
 			factor = 50
