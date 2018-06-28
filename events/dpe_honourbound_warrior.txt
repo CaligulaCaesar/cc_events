@@ -190,6 +190,13 @@ country_event = {
 				modifier = dpe_demanded_duel				
 			}
 		}
+
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = dpe_hw_duel_leader
+				days = 60
+			}
+		}
 		
 		hidden_effect = { event_target:dpe_insult_country = { country_event = { id = dpe_hw_duel.3 } } }
 	}
@@ -723,6 +730,12 @@ country_event = {
 			custom_tooltip = dpe_hw_duel.45.A.tooltip.governor
 		}
 
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = dpe_hw_duel_leader
+				days = 60
+			}
+		}
 		hidden_effect = { fromfrom = { country_event = { id = dpe_hw_duel.5 days = 2 } } }
 	}
 	
@@ -911,4 +924,83 @@ country_event = {
 		name = UNFORTUNATE
 	}
 }
-	
+
+
+#this does nothing much
+
+country_event = {
+	id = dpe_hw_duel.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					has_ai_personality = honorbound_warriors
+				}
+			}
+			from = {
+				country_event = { id = dpe_hw_duel.52 days = 30 }
+			}
+		}
+		else = { country_event = { id = dpe_hw_duel.51 days = 30 } }
+	}
+}
+
+country_event = {
+	id = dpe_hw_duel.51
+	title = dpe_hw_duel.51.name
+	desc = {
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			from = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.51.desc.gestalt.leader
+	}
+	desc = {
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+		}
+		text = dpe_hw_duel.51.desc.gestalt.no_leader
+	}
+	desc = {
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.51.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.51.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.51.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.51.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
