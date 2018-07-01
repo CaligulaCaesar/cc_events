@@ -518,6 +518,7 @@ country_event = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
 			}
+			NOT = { has_ethic = ethic_fanatic_pacifist }
 		}
 	}
 	
@@ -1004,3 +1005,1514 @@ country_event = {
 	trigger = {
 		exists = from
 	}
+
+
+	option = {
+		name = dpe_hw_duel.51.A
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+
+		hidden_effect = {
+			from = {
+				random_list = {
+					#resounding win
+					20 = {
+						country_event = { id = dpe_hw_duel.60 days = 5 }
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal win
+					40 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.61 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.62 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal loss
+					30 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.63 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.65 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									OR = {
+										leader_class = general
+										is_same_value = prev.heir
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+					#bad loss
+					15 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.66 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.68 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									leader_class = general
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_hw_duel.51.B
+
+		custom_tooltip = dpe_hw_duel.51.B.tooltip
+
+		hidden_effect = {
+			from = {
+				random_list = {
+					#resounding win
+					20 = {
+						country_event = { id = dpe_hw_duel.60 days = 5 }
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal win
+					40 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.61 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.62 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal loss
+					30 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.63 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.64 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									OR = {
+										leader_class = general
+										is_same_value = prev.heir
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+					#bad loss
+					15 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.66 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.67 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									leader_class = general
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = dpe_hw_duel.52
+	title = dpe_hw_duel.52.name
+	desc = {
+		trigger = {
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.52.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.52.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.52.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.52.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+
+	option = {
+		name = dpe_hw_duel.52.option
+
+		hidden_effect = {
+			from = {
+				random_list = {
+					#resounding win
+					20 = {
+						country_event = { id = dpe_hw_duel.60 days = 5 }
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal win
+					40 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.61 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.62 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							has_ethic = ethic_fanatic_militarist
+						}
+						modifier = {
+							factor = 0.75
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_weak
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_quarrelsome
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							if = {
+								limit = {
+									has_country_flag = dpe_hw_duel_leader
+								}
+								event_target:dpe_duel_leader = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+								else = {
+									species = {
+										has_trait = trait_very_strong
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+							event_target:dpe_duel_leader = {
+								OR = {
+									leader_class = general
+									is_same_value = prev.heir
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							has_country_flag = dpe_hw_duel_leader
+						}
+					}
+					#normal loss
+					30 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.63 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.64 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									OR = {
+										leader_class = general
+										is_same_value = prev.heir
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.2
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+					#bad loss
+					15 = {
+						random_list = {
+							1 = {
+								country_event = { id = dpe_hw_duel.66 days = 5 }
+							}
+							1 = {
+								country_event = { id = dpe_hw_duel.67 days = 5 }
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_gestalt_consciousness
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								has_ethic = ethic_pacifist
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_faction = imperialist
+								}
+							}
+						}
+						modifier = {
+							factor = 0.75
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_weak
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_quarrelsome
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.67
+							root = {
+								if = {
+									limit = {
+										has_country_flag = dpe_hw_duel_leader
+									}
+									event_target:dpe_duel_leader2 = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+									else = {
+										species = {
+											has_trait = trait_very_strong
+										}
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+								event_target:dpe_duel_leader2 = {
+									leader_class = general
+								}
+							}
+						}
+						modifier = {
+							factor = 1.33
+							root = {
+								has_country_flag = dpe_hw_duel_leader
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

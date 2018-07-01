@@ -968,4 +968,27 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_hw_duel.482.desc:0 "$dpe_hw_duel.48.B$ You will not buy our forgiveness this easily!"
  
  dpe_hw_forgiven:0 "Forgiven"
+
+
+ dpe_hw_duel.51.name:0 "Final Preparations for the Duel"
+ dpe_hw_duel.51.desc.gestalt.leader:0 "Our battle [root.GetSubroutineDrone] is about to duel with the [from.GetSpeciesAdj] “champion”, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName]. Given that it is our subroutine’s purpose to fight on our behalf, it will naturally fight to the death - however, we are advised that the [from.GetSpeciesNamePlural]' conception of honour includes the “surrender”, in which the weaker opponent is spared death. Should we adhere to this concept in this duel?"
+ dpe_hw_duel.51.desc.gestalt.no_leader:0 "Our battle [root.GetSubroutineDrone] is about to duel with the [from.GetSpeciesAdj] “champion”. Given that it is our subroutine’s purpose to fight on our behalf, it will naturally fight to the death - however, we are advised that the [from.GetSpeciesNamePlural]’ conception of honour includes the “surrender”, in which the weaker opponent is spared death. Should we adhere to this concept in this duel?"
+ dpe_hw_duel.51.desc.from_leader:0 "The duel with the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], is about to take place. What should our instructions to our champion be: Should they fight to kill, or should they take the path of greater honour?"
+ dpe_hw_duel.51.desc.no_leader:0 "The duel with the [from.GetSpeciesAdj] champion is about to take place. What should our instructions to our champion be: Should they fight to kill, or should they take the path of greater honour?"
+ dpe_hw_duel.51.desc.root_leader:0 "The duel with the [from.GetSpeciesAdj] champion is about to take place. What should our instructions to [dpe_duel_leader2.GetName] be: Should [dpe_duel_leader2.GetSheHe] fight to kill, or should [dpe_duel_leader2.GetSheHe] take the path of greater honour?"
+ dpe_hw_duel.51.desc.both_leader:0 "The duel with the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], is about to take place. What should our instructions to [dpe_duel_leader2.GetName] be: Should [dpe_duel_leader2.GetSheHe] fight to kill, or should [dpe_duel_leader2.GetSheHe] take the path of greater honour?"
+ dpe_hw_duel.51.A:0 "Fight to kill."
+ dpe_hw_duel.51.B:0 "Aim for an honourable surrender."
+ dpe_hw_duel.51.B.tooltip:0 "Note: This option does not rule out our champion killing theirs if no surrender can be secured."
+
+ dpe_hw_duel.52.name:0 "Final Preparations for the Duel"
+ dpe_hw_duel.52.desc.from_leader:0 "The final preparations for the duel between our champion and the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.52.desc.no_leader:0 "The final preparations for the duel between our champion and the [from.GetSpeciesAdj] champion are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.52.desc.root_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader2.GetName], and the [from.GetSpeciesAdj] champion are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.52.desc.both_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader2.GetName], and the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.52.option:0 "Fight well and fight fair!"
+
  
+
+
+

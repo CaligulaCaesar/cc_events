@@ -302,3 +302,18 @@ defined_text = {
 		localization_key = dpe_xenophile_spying_caught
 	}
 }
+
+
+#Used for xenophile spying result
+defined_text = {
+	name = GetSubroutineDrone
+	
+	text = {
+		trigger = { root = { has_authority = auth_machine_intelligence } }
+		localization_key = dpe_subroutine
+	}
+	text = {
+		trigger = { root = { has_authority = auth_hive_mind } }
+		localization_key = dpe_drone
+	}
+}
