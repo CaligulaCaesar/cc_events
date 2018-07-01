@@ -875,18 +875,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = cctest.305
-	is_triggered_only = yes
-	hide_window = yes
-	
-	immediate = {
-		set_relation_flag = {
-			flag = dpe_test
-			who = root.capital_scope
-		}
-	}
-}
 
 country_event = {
 	id = cctest.306
@@ -908,6 +896,34 @@ country_event = {
 				}
 			}
 			log = "Idiot"
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = cctest.400
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root
+				set_location = root.capital_scope
+				create_ship = {
+					name = random
+					design = "NAME_Pirate_Hideout"
+					graphical_culture = "pirate_01"
+				}
+				create_ship = {
+					name = random
+					design = "Small Crystal Entity Blue"
+					graphical_culture = "pirate_01"
+				}
+			}
 		}
 	}
 }

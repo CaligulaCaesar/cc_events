@@ -1134,6 +1134,10 @@ country_event = {
 							}
 							1 = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
+								modifier = {
+									factor = 0
+									root = { has_ethic = ethic_gestalt_consciousness }
+								}
 							}
 						}
 						modifier = {
@@ -1617,6 +1621,10 @@ country_event = {
 							}
 							1 = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
+								modifier = {
+									factor = 0
+									root = { has_ethic = ethic_gestalt_consciousness }
+								}
 							}
 						}
 						modifier = {
@@ -2143,6 +2151,10 @@ country_event = {
 							}
 							1 = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
+								modifier = {
+									factor = 0
+									root = { has_ethic = ethic_gestalt_consciousness }
+								}
 							}
 						}
 						modifier = {
@@ -2512,6 +2524,408 @@ country_event = {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+
+
+#HW side results
+
+#resounding win
+country_event = {
+	id = dpe_hw_duel.60
+	title = dpe_hw_duel.60.name	
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.60.desc.hive.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.60.desc.hive.no_leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.60.desc.machine.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.60.desc.machine.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.60.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.60.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.60.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.60.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = EXCELLENT
+
+		add_modifier = {
+			modifier = dpe_honour_restored
+			days = 3600
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = imperialist
+			}
+			add_modifier = {
+				modifier = dpe_honour_restored_faction
+				days = 3600
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = dpe_hw_duel_leader
+			}
+			event_target:dpe_duel_leader = {
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = dpe_duel_victor_admiral
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = dpe_duel_victor_governor
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = dpe_duel_victor_general
+				}
+				if = {
+					limit = {
+						OR = {
+							is_same_value = root.heir
+							is_same_value = root.ruler
+						}
+					}
+					add_ruler_trait = dpe_duel_victor_ruler
+				}
+				else = {
+					hidden_effect = {
+						add_ruler_trait = dpe_duel_victor_ruler
+					}
+				}
+			}
+		}
+		every_relation = {
+			limit = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+				}
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_valourous
+			}
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_hw_duel.70 }
+			}
+		}
+	}
+}
+
+
+#mild win + kill
+country_event = {
+	id = dpe_hw_duel.61
+	title = dpe_hw_duel.61.name	
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.61.desc.hive.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.61.desc.hive.no_leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.61.desc.machine.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.61.desc.machine.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.61.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.61.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.61.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.61.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = EXCELLENT
+
+		add_modifier = {
+			modifier = dpe_honour_restored
+			days = 3600
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = imperialist
+			}
+			add_modifier = {
+				modifier = dpe_honour_restored_faction
+				days = 3600
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = dpe_hw_duel_leader
+			}
+			event_target:dpe_duel_leader = {
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = dpe_duel_victor_admiral
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = dpe_duel_victor_governor
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = dpe_duel_victor_general
+				}
+				if = {
+					limit = {
+						OR = {
+							is_same_value = root.heir
+							is_same_value = root.ruler
+						}
+					}
+					add_ruler_trait = dpe_duel_victor_ruler
+				}
+				else = {
+					hidden_effect = {
+						add_ruler_trait = dpe_duel_victor_ruler
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_hw_duel.71 }
+			}
+		}
+	}
+}
+
+
+#mild win + surrender
+country_event = {
+	id = dpe_hw_duel.62
+	title = dpe_hw_duel.62.name
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.62.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.62.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.62.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.62.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = EXCELLENT
+
+		add_modifier = {
+			modifier = dpe_honour_restored
+			days = 3600
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = imperialist
+			}
+			add_modifier = {
+				modifier = dpe_honour_restored_faction
+				days = 3600
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = dpe_hw_duel_leader
+			}
+			event_target:dpe_duel_leader = {
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = dpe_duel_victor_admiral
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = dpe_duel_victor_governor
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = dpe_duel_victor_general
+				}
+				if = {
+					limit = {
+						OR = {
+							is_same_value = root.heir
+							is_same_value = root.ruler
+						}
+					}
+					add_ruler_trait = dpe_duel_victor_ruler
+				}
+				else = {
+					hidden_effect = {
+						add_ruler_trait = dpe_duel_victor_ruler
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_hw_duel.72 }
 			}
 		}
 	}
