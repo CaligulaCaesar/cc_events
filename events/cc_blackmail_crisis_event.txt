@@ -147,10 +147,8 @@ country_event = {
 								has_ethic = ethic_xenophobe
 								has_ethic = ethic_fanatic_xenophobe
 							}
-							OR = {
-								has_ethic = ethic_pacifist
-								has_ethic = ethic_fanatic_pacifist
-							}
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
 						}
 					}
 					modifier = {

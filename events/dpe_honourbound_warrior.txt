@@ -2930,3 +2930,102 @@ country_event = {
 		}
 	}
 }
+
+
+
+#close defeat + kill
+country_event = {
+	id = dpe_hw_duel.63
+	title = dpe_hw_duel.63.name	
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.63.desc.hive.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_hive_mind }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.63.desc.hive.no_leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.63.desc.machine.leader
+	}
+	desc = {
+		trigger = {
+			from = { has_authority = auth_machine_intelligence }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.63.desc.machine.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.63.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.63.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.63.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.63.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = UNFORTUNATE
+
+		if = {
+			limit = { has_country_flag = dpe_hw_duel_leader }
+			event_target:dpe_duel_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+		add_modifier = {
+			modfier = dpe_duel_disgraced
+			days = 3600
+		}
+		hidden_effect = { from = { country_event = { id = dpe_hw_duel.73 } }
+	}
+	}

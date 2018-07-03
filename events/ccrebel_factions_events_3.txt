@@ -491,19 +491,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					AND = {
-						has_faction = supremacist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = supremacist
-								support > 0.15
-								pop_percentage = {
-									percentage > 0.6
-									limit = { happiness < 0.3 }
-								}
+					has_faction = supremacist
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = supremacist
+							support > 0.15
+							pop_percentage = {
+								percentage > 0.6
+								limit = { happiness < 0.3 }
 							}
-							count = 1
 						}
+						count = 1
 					}
 				}
 				modifier = {
