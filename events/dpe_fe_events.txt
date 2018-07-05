@@ -421,7 +421,8 @@ country_event = {
 		name = dpe_fe.1.no
 		custom_tooltip = dpe_fe.1.no.tooltip
 
-		ruler = { kill_leader = { show_notification = no } }
+		hidden_effect = { country_event = { id = dpe_fe.5 days = 15 random = 90 } }
+		custom_tooltip = dpe_leader_die_soon
 
 		ai_chance = { factor = 1 }
 	}
@@ -499,8 +500,9 @@ country_event = {
 					flag = dpe_asking_fe_for_help
 				}
 			}
+			country_event = { id = dpe_fe.5 days = 15 random = 90 }
 		}
-		ruler = { kill_leader = { show_notification = no } }
+		custom_tooltip = dpe_leader_die_soon
 	}
 }
 
@@ -1016,8 +1018,6 @@ country_event = {
 	option = { #	The price is too high - I will die a mortal death.
 		name = dpe_fe.2.nopay
 
-		ruler = { kill_leader = { show_notification = no } }
-
 		event_target:dpe_fe = {
 			add_opinion_modifier = {
 				who = ROOT
@@ -1032,7 +1032,9 @@ country_event = {
 					flag = dpe_asking_fe_for_help
 				}
 			}
+			country_event = { id = dpe_fe.5 days = 15 random = 90 }
 		}
+		custom_tooltip = dpe_leader_die_soon
 
 		trigger = {
 			event_target:dpe_fe = {
@@ -1060,6 +1062,17 @@ country_event = {
 
 	option = {
 		name = UNFORTUNATE
+
+		hidden_effect = {
+			event_target:dpe_fe = {
+				remove_relation_flag = {
+					who = ROOT
+					flag = dpe_asking_fe_for_help
+				}
+			}
+			country_event = { id = dpe_fe.5 days = 15 random = 90 }
+		}
+		custom_tooltip = dpe_leader_die_soon
 
 		trigger = {
 			event_target:dpe_fe = {
@@ -1253,8 +1266,28 @@ country_event = {
 	option = { name = UNFORTUNATE }
 }
 
+country_event = {
+	id = dpe_fe.5
+	hide_window = yes
+	is_triggered_only = yes
 
-#second event chain (runaway scientist):
+	trigger = {
+		ruler = {
+			is_same_value = event_target:dpe_ailing_ruler
+		}
+	}
+
+	immediate = {
+		ruler = { kill_leader = { show_notification = no } }
+	}
+}
+
+
+
+
+#########################################
+#second event chain (runaway scientist):#
+#########################################
 
 country_event = {
 	id = dpe_fe.20
