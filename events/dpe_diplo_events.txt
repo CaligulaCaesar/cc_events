@@ -963,10 +963,8 @@ country_event = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOR = { 
 					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_hostile_to = FROM
@@ -983,10 +981,8 @@ country_event = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOR = { 
 					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_neutral_to = FROM
@@ -1002,10 +998,8 @@ country_event = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOR = { 
 					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_friendly_to = FROM

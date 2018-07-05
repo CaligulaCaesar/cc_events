@@ -5,6 +5,10 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_global_flag = dynamic_political_events_active }
+	}
 	
 	immediate = { set_global_flag = "dynamic_political_events_active" }
 }

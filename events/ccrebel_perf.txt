@@ -9,6 +9,154 @@ event = {
 	
 	immediate = {
 		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							OR = {
+								has_country_resource = {
+									type = minerals
+									amount > 1000
+								}
+								has_monthly_income = {
+									resource = minerals
+									value > 50
+								}
+							}
+							OR = {
+								has_monthly_income = {
+									resource = energy
+									value > 50
+								}
+								energy > 1000
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = ccrebel_poor
+					days = 31
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							OR = {
+								has_country_resource = {
+									type = minerals
+									amount > 1800
+								}
+								has_monthly_income = {
+									resource = minerals
+									value > 90
+								}
+							}
+							OR = {
+								has_monthly_income = {
+									resource = energy
+									value > 90
+								}
+								energy > 1800
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = ccrebel_medium_poor
+					days = 31
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							OR = {
+								has_country_resource = {
+									type = minerals
+									amount > 2500
+								}
+								has_monthly_income = {
+									resource = minerals
+									value > 125
+								}
+							}
+							OR = {
+								has_monthly_income = {
+									resource = energy
+									value > 125
+								}
+								energy > 2500
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = ccrebel_medium_income
+					days = 31
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						OR = {
+							has_country_resource = {
+								type = minerals
+								amount > 5000
+							}
+							has_monthly_income = {
+								resource = minerals
+								value > 250
+							}
+						}
+						OR = {
+							has_monthly_income = {
+								resource = energy
+								value > 250
+							}
+							energy > 5000
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = ccrebel_medium_rich
+					days = 31
+				}
+				if = {
+					limit = {
+						owner = {
+							OR = {
+								has_country_resource = {
+									type = minerals
+									amount > 10000
+								}
+								has_monthly_income = {
+									resource = minerals
+									value > 500
+								}
+							}
+							OR = {
+								has_monthly_income = {
+									resource = energy
+									value > 500
+								}
+								energy > 10000
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = ccrebel_rich
+						days = 31
+					}
+				}
+			}
+
 			every_owned_planet = {
 				limit = {
 					count_pops = {
