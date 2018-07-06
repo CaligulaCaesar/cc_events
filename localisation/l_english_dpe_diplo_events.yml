@@ -978,6 +978,8 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  
  dpe_hw_forgiven:0 "Forgiven"
 
+ dpe_hw_duel.5.name:0 "$dpe_title_response$
+ dpe_hw_duel.5.desc:0 "We will fight your champion, [root.GetSpeciesAdj]. May the best [from.GetSpeciesAdj] win!"
 
  dpe_hw_duel.51.name:0 "Final Preparations for the Duel"
  dpe_hw_duel.51.desc.gestalt.leader:0 "Our battle [root.GetSubroutineDrone] is about to duel with the [from.GetSpeciesAdj] “champion”, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName]. Given that it is our subroutine’s purpose to fight on our behalf, it will naturally fight to the death - however, we are advised that the [from.GetSpeciesNamePlural]' conception of honour includes the “surrender”, in which the weaker opponent is spared death. Should we adhere to this concept in this duel?"
@@ -996,6 +998,13 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_hw_duel.52.desc.root_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader2.GetName], and the [from.GetSpeciesAdj] champion are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
  dpe_hw_duel.52.desc.both_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader2.GetName], and the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
  dpe_hw_duel.52.option:0 "Fight well and fight fair!"
+
+ dpe_hw_duel.53.name:0 "Final Preparations for the Duel"
+ dpe_hw_duel.53.desc.from_leader:0 "The final preparations for the duel between our champion and the [from.GetSpeciesAdj] champion, [dpe_duel_leader2.GetTitle] [dpe_duel_leader2.GetName], are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.53.desc.no_leader:0 "The final preparations for the duel between our champion and the [from.GetSpeciesAdj] champion are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.53.desc.root_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader.GetName], and the [from.GetSpeciesAdj] champion are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.53.desc.both_leader:0 "The final preparations for the duel between our champion, [dpe_duel_leader.GetName], and the [from.GetSpeciesAdj] champion, [dpe_duel_leader2.GetTitle] [dpe_duel_leader2.GetName], are under way. The event is eagerly awaited on both sides - which of our species will prove the more valiant?"
+ dpe_hw_duel.53.option:0 "Fight well and fight fair!"
 
  dpe_hw_duel.60.name:0 "Our Champion is Victorious!"
  dpe_hw_duel.60.desc.hive.leader:0 "The duel against the [dpe_insult_country.GetSpeciesAdj] combat drone went well. Their fighter fought ruthlessly, without any hesitation or fear. Yet [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], our expert warrior, fended off their blows and managed to slay the vicious creature. Thankfully, [dpe_duel_leader.GetName] suffered no serious injuries and emerged from the duel with [dpe_duel_leader.GetHisHer] reputation much improved. Our honour as a nation too was restored. The galactic community will now remember the might of our glorious people without the stain of this petty insult."

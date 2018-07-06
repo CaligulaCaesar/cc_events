@@ -931,21 +931,34 @@ country_event = {
 
 country_event = {
 	id = dpe_hw_duel.5
+	title = dpe_hw_duel.5.name
+	desc = dpe_hw_duel.5.desc
 	hide_window = yes
-	is_triggered_only = yes
+	diplomatic = yes
 
-	immediate = {
-		if = {
-			limit = {
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = EXCELLENT
+		hidden_effect = {
+			if = {
+				limit = {
+					from = {
+						has_ai_personality = honorbound_warriors
+					}
+				}
 				from = {
-					has_ai_personality = honorbound_warriors
+					country_event = { id = dpe_hw_duel.52 days = 30 }
 				}
 			}
-			from = {
-				country_event = { id = dpe_hw_duel.52 days = 30 }
-			}
+			else = { from = { country_event = { id = dpe_hw_duel.51 days = 30 } } }
 		}
-		else = { from = { country_event = { id = dpe_hw_duel.51 days = 30 } } }
 	}
 }
 
@@ -1006,6 +1019,9 @@ country_event = {
 		exists = from
 	}
 
+	immediate = {
+		from = { country_event = { id = dpe_hw_duel.53 } }
+	}
 
 	option = {
 		name = dpe_hw_duel.51.A
@@ -2042,6 +2058,9 @@ country_event = {
 		exists = from
 	}
 
+	immediate = {
+		from = { country_event = { id = dpe_hw_duel.53 } }
+	}
 
 	option = {
 		name = dpe_hw_duel.52.option
@@ -2526,6 +2545,51 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+#HW told of impending duel (nothing else, dead-end event)
+country_event = {
+	id = dpe_hw_duel.53
+	title = dpe_hw_duel.53.name
+	desc = {
+		trigger = {
+			from = { has_country_flag = dpe_hw_duel_leader }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.53.desc.from_leader
+	}
+	desc = {
+		trigger = {
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			NOT = { has_country_flag = dpe_hw_duel_leader }
+		}
+		text = dpe_hw_duel.53.desc.no_leader
+	}
+	desc = {
+		trigger = {
+			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.53.desc.root_leader
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = dpe_hw_duel_leader }
+			has_country_flag = dpe_hw_duel_leader
+		}
+		text = dpe_hw_duel.53.desc.both_leader
+	}
+	picture = GFX_evt_victorious_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = dpe_hw_duel.53.option
 	}
 }
 
