@@ -111,6 +111,7 @@ dpe_leader_trait_reinvigorated = {
 }
 
 
+#HW Duel traits
 
 dpe_duel_victor_ruler = {
 	cost = 0
@@ -163,7 +164,6 @@ dpe_duel_victor_admiral = {
 	randomized = no
 }
 
-
 dpe_duel_victor_governor = {
 	cost = 0
 	modification = no
@@ -171,6 +171,71 @@ dpe_duel_victor_governor = {
 	modifier = {
 		ARMY_DEFENSE_DAMAGE_MULT = 0.33
 		pop_ethic_militarist_attraction_mult = 0.33
+	}
+	
+	leader_class = { dpe_duel_victor_governor }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_loser_ruler = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	modifier = {
+		pop_happiness = -0.05
+		pop_ethic_militarist_attraction_mult = -0.15
+	}
+	
+	leader_class = { ruler }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_loser_general = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	modifier = {
+		army_morale = -0.1
+	}
+	
+	leader_class = { general }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_loser_admiral = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	modifier = {
+		ship_fire_rate_mult = -0.1
+	}
+	
+	leader_class = { admiral }
+	
+	leader_trait = yes
+	
+	initial = no
+	randomized = no
+}
+
+dpe_duel_loser_governor = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	modifier = {
+		pop_ethic_militarist_attraction_mult = -0.2
 	}
 	
 	leader_class = { dpe_duel_victor_governor }
