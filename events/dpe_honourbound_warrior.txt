@@ -933,6 +933,7 @@ country_event = {
 	id = dpe_hw_duel.5
 	title = dpe_hw_duel.5.name
 	desc = dpe_hw_duel.5.desc
+
 	diplomatic = yes
 
 	picture_event_data = {
@@ -942,6 +943,8 @@ country_event = {
 		city_level = from
 		room = from.ruler
 	}
+
+	is_triggered_only = yes
 
 	option = {
 		name = EXCELLENT
