@@ -837,10 +837,6 @@ country_event = {
 				}
 			}
 		}
-	}
-	option = {
-		name = CCWORRYING
-		
 		add_modifier = {
 			modifier = cc_country_factional_unrest
 			days = -1
@@ -860,6 +856,32 @@ country_event = {
 			}
 			add_appropriate_seditious_talk = yes
 		}
+	}
+	option = {
+		name = CCWORRYING
+		
+		tooltip = {
+			add_modifier = {
+				modifier = cc_country_factional_unrest
+				days = -1
+			}
+			every_owned_planet = {
+				limit = {
+					OR = {
+						count_pops = {
+							limit = { has_same_ethic_as_faction = yes }
+							count > 3
+						}
+						pop_percentage = {
+							percentage > 0.24
+							limit = { has_same_ethic_as_faction = yes }
+						}
+					}
+				}
+				add_appropriate_seditious_talk = yes
+			}
+		}
+		
 		hidden_effect = {
 #			country_event = { id = ccfaction.2 days = 60 }
 #			country_event = { id = ccfaction.21 days = 61 }
@@ -1746,12 +1768,6 @@ country_event = {
 				}
 			}
 		}
-	}
-							
-					
-	option = {
-		name = CCWORRYING
-
 		every_owned_planet = {
 			limit = {
 				count_pops = {
@@ -1799,6 +1815,62 @@ country_event = {
 				}
 			}
 			add_appropriate_2nd_faction_sedition = yes
+		}
+	}
+							
+					
+	option = {
+		name = CCWORRYING
+
+		tooltip = {
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						limit = { has_same_faction_as_2nd_faction = yes }
+						count > 4
+					}
+				}
+				add_appropriate_2nd_faction_stronghold = yes
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						limit = { has_same_ethic_as_2nd_faction = yes }
+						count > 2
+					}
+					NOT = {
+						count_pops = {
+							limit = { has_same_faction_as_2nd_faction = yes }
+							count > 4
+						}
+					}
+				}
+				add_appropriate_2nd_faction_sympathies = yes
+			}
+			every_owned_planet = {
+				limit = {				
+					NOT = {
+						count_pops = {
+							limit = { has_same_ethic_as_2nd_faction = yes }
+							count > 2
+						}
+					}
+					owner = {
+						any_owned_planet = {
+							count_pops = {
+								limit = { has_same_faction_as_2nd_faction = yes }
+								count > 4
+							}
+							distance = {
+								source = prevprev
+								min_distance >= 0
+								max_distance <= 65
+							}
+						}
+					}
+				}
+				add_appropriate_2nd_faction_sedition = yes
+			}
 		}
 	}
 }
@@ -3718,6 +3790,9 @@ country_event = {
 		}
 		text = ccfaction.601.desc.only2
 	}
+
+	#somehow this doesn't work
+	trigger = { always = no }
 	
 	picture = GFX_evt_hangar_bay
 	
