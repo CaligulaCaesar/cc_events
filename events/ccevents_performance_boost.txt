@@ -1071,6 +1071,17 @@ country_event = {
 				NOT = { has_country_flag = dpe_recent_militarists_want_war }
 				is_at_war = no
 				is_subject = no
+				NOT = {
+					any_country = {
+						OR = {
+							is_country_type = extradimensional 
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+							is_country_type = swarm
+						}
+					}
+				}
 				OR = {
 					has_ethic = ethic_fanatic_militarist
 					has_ethic = ethic_militarist
