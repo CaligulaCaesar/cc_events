@@ -213,11 +213,22 @@ dpe_honour_restored = {
 	pop_ethic_militarist_attraction_mult = 0.5
 }
 
+dpe_honour_restored1 = {
+	country_resource_unity_mult = 0.33
+	country_resource_influence_mult = 0.33
+	pop_ethic_militarist_attraction_mult = 0.5
+}
+
 dpe_honour_restored_faction = {
 	faction_happiness = 0.15
 }
 
 dpe_duel_disgraced = {
+	country_resource_unity_mult = -0.25
+	country_resource_influence_mult = -0.25
+}
+
+dpe_duel_disgraced1 = {
 	country_resource_unity_mult = -0.25
 	country_resource_influence_mult = -0.25
 }
