@@ -109,13 +109,13 @@ cc_events_blackmail.205.name:0 "Manipulation of Election Results Leaked!"
 cc_events_blackmail.205.desc:0 "The hackers have leaked evidence that the government has been involved in deliberately manipulating and even outright altering the results of elections for high office in the [root.GetName]. The populace is outraged, and faith in democracy has taken a major blow."
 
 cc_events_blackmail.206.name:0 "Leading Scientists Exposed as Fraudsters!"
-cc_events_blackmail.206.desc:0 "The hackers have revealed that our leading scientists are, for want of better words, fraudsters! Despite publicly making displays of their great genius, it turns out that they have never had an original thought in their lives, and had simply copied other states' technologies through the use of an extensive hacking system. The populace's faith in our species' ingenuity is shaken, and our neighbours are demanding that the scientists in question be fired and put in prison."
+cc_events_blackmail.206.desc:0 "The hackers have revealed that our leading scientists are, for want of better words, fraudsters! Despite publicly making displays of their great genius, it turns out that they have never had an original thought in their lives and had simply copied other states' technologies through the use of an extensive hacking system. The populace's faith in our species' ingenuity is shaken, and our neighbours are demanding that the scientists in question be fired and put in prison."
 cc_events_blackmail.206.A:0 "Keep the scientists in their positions - they are doing just fine."
 cc_events_blackmail.206.B:0 "Fire the scientists."
 
 cc_events_blackmail.207.name:0 "Data on Interspecies Discrimination Revealed!"
-cc_events_blackmail.207.desc:0 "The hackers have revealed data detailing how administrators across the [root.GetName] have systematically discriminated against citizens of other species in allocating positions and benefits. The non-[root.GetSpeciesName] citizens had always claimed that they were not seen as equal, but their complaints had been swept under the doorway. They now feel vindicated in their distrust of the supposedly multicultural state, and are calling for extensive reforms."
-cc_events_blackmail.207.tooltip:0 "Every £pop  Pop that is not of your main species gains the modifier §R$cc_outrage_at_discrimination$§!, giving -15% happiness and +50% xenophobe ethics attaction."
+cc_events_blackmail.207.desc:0 "The hackers have revealed data detailing how administrators across the [root.GetName] have systematically discriminated against citizens of other species in allocating positions and benefits. The non-[root.GetSpeciesName] citizens had always claimed that they were not seen as equal, but their complaints had been swept under the doorway. They now feel vindicated in their distrust of the supposedly multicultural state and are calling for extensive reforms."
+cc_events_blackmail.207.tooltip:0 "Every £pop  Pop that is not of your main species gains the modifier §R$cc_outrage_at_discrimination$§!, giving -15% happiness and +50% xenophobe ethics attraction."
 
 cc_events_blackmail.208.name:0 "Prison Security Codes Leaked!"
 cc_events_blackmail.208.desc:0 "It turns out that the data the hackers stole was the security codes and layouts of the [root.GetName]'s high security prisons. Several of them were struck simultaneously today in a well-organised strike. A large number of prominent troublemakers have been released, as well as some feared criminals."
@@ -125,7 +125,7 @@ cc_events_blackmail.209.name:0 "Ship Designs Leaked to Rivals!"
 cc_events_blackmail.209.desc:0 "The hackers have leaked details about our ship designs - including their weaknesses - to our enemies. Our ships are now vulnerable to attack!"
 
 cc_events_blackmail.210.name:0 "[from.GetSpeciesAdj] Ship Designs Leaked!"
-cc_events_blackmail.210.desc:0 "Subversive elements in the [from.GetName] have leaked their ship designs - including details about their ships' weaknesses - to us. We must attack to press home this advantage, before they can refit their ships!"
+cc_events_blackmail.210.desc:0 "Subversive elements in the [from.GetName] have leaked their ship designs - including details about their ships' weaknesses - to us. We must attack to press home this advantage before they can refit their ships!"
 
 #Emancipation Movement
 
@@ -163,7 +163,7 @@ cc_luddite.1.desc:0 "Groups of what can only be described as luddites - primitiv
 cc_luddite.2.name:0 "Luddites are smashing up Robots on [root.GetName]"
 cc_luddite.2.desc:0 "Despite their outrageous demands, the 'luddites' appear to have attracted support, and there are risks of copycat strikes on other planets. We must take action!\n\nWhat should we do about them?"
 cc_luddite.2.A:0 "We can do without robots on [root.GetName]."
-cc_luddite.2.A.tooltip:0 "All robot £pops  Pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]. Additionally, there is a high chance that Ludditism will spread to other planets."
+cc_luddite.2.A.tooltip:0 "All robot £pops  Pops will be purged. If any are rebuilt, this will trigger upset on [root.GetName]. Additionally, there is a high chance that Luddism will spread to other planets."
 cc_luddite.2.B:0 "Ignore them - they will bow to progress, eventually."
 cc_luddite.2.B.tooltip:0 "There is a chance that there will be further strikes on this and other planets."
 cc_luddite.2.C.tooltip:0 "There is a reduced chance that there will be further strikes on this and other planets."
@@ -199,7 +199,7 @@ cc_luddite.13.C.tooltip:0 "All future manifestations of Luddism during this cris
 cc_luddite.13.D.tooltip:0 "All £pops  Pops that have taken part in the Luddite movement will be killed. Further Luddism will not be allowed to happen."
 
 cc_luddite.15.name:0 "'Luddites' on [root.GetName] feel betrayed"
-cc_luddite.15.desc:0 "Despite our promises not to carry on using robots on [root.GetName], authorities have built new robotic £pops  Pops. The populace are angry at our broken promises."
+cc_luddite.15.desc:0 "Despite our promises not to carry on using robots on [root.GetName], authorities have built new robotic £pops  Pops. The populace is angry at our broken promises."
 cc_luddite.15.option:0 "Ah well."
 
 cc_luddite.20.name:0 "Worries about Robotic Workers"
@@ -237,7 +237,7 @@ cc_events_mod.17.B.tooltip:0 "$CCREMOVERULER.tooltip$"
 #Modifiers ----------------------------------------------------------------------------------------------------------
 
 cc_made_peace:0 "Backed down to Anti-War Movement"
-cc_made_peace_desc:0 "The government bowed down to the demands of the Anti-War Movement, and made peace."
+cc_made_peace_desc:0 "The government bowed down to the demands of the Anti-War Movement and made peace."
 cc_faction_peace_celebration:0 "Victory of Anti-War Movement"
 cc_peace_celebrations:0 "Celebrations at Anti-War Movement's Success"
 cc_peace_celebrations_desc:0 "The Anti-War activists on this planet are celebrating the success of their movement."
@@ -381,7 +381,7 @@ policy_cc_interspecies_marriage:0 "Interspecies Relationships"
 policy_cc_interspecies_marriage_desc:0 "We can decide whether or not £pops  Pops from different species are allowed to marry or even have relationships with each other."
 
 allow_im:0 "Allow Interspecies Marriage"
-allow_im_desc:0 "Legalise the marriage of amourous couples from different species.\n\nNote: Xenophilic £pops  Pops will be happy at this and xenophilism is likely to increase as a practice, but if it takes hold in large numbers, this could hit the birth rate."
+allow_im_desc:0 "Legalise the marriage of amorous couples from different species.\n\nNote: Xenophilic £pops  Pops will be happy at this and xenophilism is likely to increase as a practice, but if it takes hold in large numbers, this could hit the birth rate."
 allows_im_name:0 "Allows Interspecies Marriage"
 
 do_not_allow_im:0 "Do not allow Interspecies Marriage"

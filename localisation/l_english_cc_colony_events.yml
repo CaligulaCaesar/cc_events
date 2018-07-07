@@ -266,7 +266,7 @@ cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
 cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
 
 cc_colony_events.451.name:0 "Cultural Exchange on [root.GetName] inaugurated"
-cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honouris ready. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
+cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour is ready. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
 
 
 cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
@@ -292,7 +292,7 @@ cc_building_xenophile_institute:0 "Preparing a Cultural Exchange"
 cc_building_xenophile_institute_desc:0 "A Cultural Exchange that is meant to secure the legacy of this planet's "Mediator" is being prepared."
 
 cc_xenophile_institute:0 "Cultural Exchange"
-cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory of a celebrated citizen who sought to improve interspecies relations. Their spirit and teachings live on in it, and will be remembered for as long as it is celebrated."
+cc_xenophile_institute_desc:0 "This planet hosts a Cultural Exchange in memory of a celebrated citizen who sought to improve interspecies relations. Their spirit and teachings live on in it and will be remembered for as long as it is celebrated."
 
 cc_founders_memory_disrespected_1_xenophile:0 "Local Founding Citizen Disrespected"
 cc_founders_memory_disrespected_1_xenophile_desc:0 "The population is disappointed at the manner in which the parent state treated this planet's "Mediator", a well-regarded citizen who had sought good relations between all species."
@@ -409,7 +409,7 @@ cc_colony_events.551.desc.A:0 "The Institute in [cc_colony_leader.GetName]'s hon
 cc_colony_events.551.desc.B:0 "The Institute in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
 cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
-cc_xenophobe_hero_1_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero, and would gladly follow them into battle against either the xenos or their sympathisers in government."
+cc_xenophobe_hero_1_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero and would gladly follow them into battle against either the xenos or their sympathisers in government."
 cc_widespread_xenophobic_unrest:0 "Widespread Xenophobic Unrest"
 cc_widespread_xenophobic_unrest_desc:0 "There is widespread support for the aggrieved xenophobic faction, which has proof that the state tried to assassinate one of its leaders on behalf of a foreign power."
 cc_xenophobe_assassinated_attempt:0 "Attempted Assassination of Hegemon"
@@ -422,7 +422,7 @@ cc_mourning_xenophobe:0 "Mourning a Hero"
 cc_mourning_and_angry_xenophobe:0 "Anger at response to death of a Hero"
 
 cc_xenophobe_hero:0 "Xenophobic Hero"
-cc_xenophobe_hero_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero, and would gladly follow them into battle against the xenos."
+cc_xenophobe_hero_desc:0 "Many on this planet view the 'Hegemon' of a nearby planet as their hero and would gladly follow them into battle against the xenos."
 cc_xenophobe_assassinated:0 "Hero Assassinated"
 cc_betrayed_us_ally:0 "Betrayed us"
 cc_ignored_ally:0 "Ignored our concerns"
@@ -821,7 +821,7 @@ CC_GOODIGUESS:0 "Good... I guess."
 #cc_cleanup_events.response.servitor2.tooltip:0 "The populace will soon forget their grievances."
 
 cc_cleanup_events.2.name:0 "Prominent Guru on [root.GetName]"
-cc_cleanup_events.2.desc:0 "A prominent guru is active on [root.GetName], and is the centrepoint of the planet's influential spiritualist network. Should they be allowed to remain in their position?"
+cc_cleanup_events.2.desc:0 "A prominent guru is active on [root.GetName], and is the focal point of the planet's influential spiritualist network. Should they be allowed to remain in their position?"
 
 cc_cleanup_events.3.name:0 "Mausoleum to a famous Guru on [root.GetName]"
 cc_cleanup_events.3.desc:0 "The old owners of [root.GetName] had been building a mausoleum in honour of a prominent guru who was native to the planet. If completed, it will be the centre of the planet's influential spiritualist network. Should we continue building the mausoleum?"
@@ -860,7 +860,7 @@ cc_cleanup_events.12.name:0 "University on [root.GetName]"
 cc_cleanup_events.12.desc:0 "The old owners of [root.GetName] had built a major university on [root.GetName]. It is the centre of the planet's influential network of intellectuals. Should we spare the building from destruction?"
 
 cc_cleanup_events.13.name:0 "Prominent Intellectual on [root.GetName]"
-cc_cleanup_events.13.desc:0 "A prominent intellectual is active on [root.GetName], and is the centrepoint of the planet's influential network of intellectuals. Should they be allowed to remain in their position?"
+cc_cleanup_events.13.desc:0 "A prominent intellectual is active on [root.GetName], and is the focal point of the planet's influential network of intellectuals. Should they be allowed to remain in their position?"
 
 cc_cleanup_events.14.name:0 "Underground Intellectual Movement on [root.GetName]"
 cc_cleanup_events.14.desc:0 "An underground intellectual movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that a university be built.\n\nShould we build this university?"
@@ -887,7 +887,7 @@ cc_cleanup_events.19.name:0 "Military Academy on [root.GetName]"
 cc_cleanup_events.19.desc:0 "The old owners of [root.GetName] had built a major military academy on [root.GetName]. It is the centre of the planet's influential militarist network. Should we spare the building from destruction?"
 
 cc_cleanup_events.20.name:0 "The Legate of [root.GetName]"
-cc_cleanup_events.20.desc:0 "A prominent former naval officer currently holds the title of 'Legate of [root.GetName]', and is well-regarded by the populace. They are the centrepoint of the planet's influential network of intellectuals. Should they be allowed to remain in their position?"
+cc_cleanup_events.20.desc:0 "A prominent former naval officer currently holds the title of 'Legate of [root.GetName]', and is well-regarded by the populace. They are the focal point of the planet's influential network of intellectuals. Should they be allowed to remain in their position?"
 
 cc_cleanup_events.21.name:0 "Underground Militarist Movement on [root.GetName]"
 cc_cleanup_events.21.desc:0 "An underground militarist movement had been making trouble for the previous owners of [Root.GetName]. Their representatives have met with the new masters of the planet, and have offered to lay down their arms on the condition that a major military academy be built.\n\nShould we build this military academy?"
@@ -905,7 +905,7 @@ cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add 
 
 
 cc_cleanup_events.25.name:0 "Prominent Pacifist Activist on [root.GetName]"
-cc_cleanup_events.25.desc:0 "A prominent pacifist activist is active on [root.GetName], and is the centrepoint of the planet's influential pacifistic 'Ghandeis' network. Should they be allowed to remain in their position?"
+cc_cleanup_events.25.desc:0 "A prominent pacifist activist is active on [root.GetName], and is the focal point of the planet's influential pacifistic 'Ghandeis' network. Should they be allowed to remain in their position?"
 
 cc_cleanup_events.26.name:0 "Monument to a famous Activist on [root.GetName]"
 cc_cleanup_events.26.desc:0 "The old owners of [root.GetName] had been building a monument in honour of a prominent pacifist activist who was native to the planet. If completed, it will be the centre of the planet's influential pacifistic 'Ghandeis' network. Should we continue building the monument?"
@@ -946,7 +946,7 @@ cc_cleanup_events.35.desc:0 "An underground xenophobe movement had been making t
 
 
 cc_cleanup_events.36.name:0 "Prominent Xenoist Activist on [root.GetName]"
-cc_cleanup_events.36.desc:0 "A prominent xenoist activist is active on [root.GetName], and is the centrepoint of the planet's influential movement for peace and cooperation between species. Should they be allowed to remain in their position?"
+cc_cleanup_events.36.desc:0 "A prominent xenoist activist is active on [root.GetName], and is the focal point of the planet's influential movement for peace and cooperation between species. Should they be allowed to remain in their position?"
 
 cc_cleanup_events.37.name:0 "Cultural Exchange on [root.GetName]"
 cc_cleanup_events.37.desc:0 "The old owners of [root.GetName] had been preparing a Cultural Exchange in honour of a prominent xenoist activist who was native to the planet. If completed, it will be contribute to establishing the planet's reputation as a multispecies haven. Should we continue to support it?"
