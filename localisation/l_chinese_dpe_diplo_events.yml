@@ -1,4 +1,6 @@
-﻿l_english:
+﻿l_chinese:
+#l_english:
+#commented this out so that I get the correct tooltips with my validator
 
 dpe_diplo.1.name:0 "民众渴望战争"
 dpe_diplo.1.desc:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName],该国领导人最近公开嘲讽了[root.GetSpeciesNamePlural]，称我们胆小怕事，毫无荣誉可言。愤怒的民众呼吁对此还以战争。"
@@ -818,5 +820,20 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
 
 dpe_spirmission_succeeded:0 "信仰相同的兄弟姐"
  
+ 
+dpe_spiritualist_mission.982.name:0 "Our Missionaries returned to us!"
+dpe_spiritualist_mission.982.desc:0 "Due to our current conflict with the [dpe_neighbour.GetName], our missionaries have been returned to us. They say they were treated decently, but most of their belongings and materials were confiscated."
+dpe_spiritualist_mission.982.option:0 "Things could be worse, all things considered."
+dpe_spiritualist_mission.983.name:0 "Our Missionaries imprisoned!"
+dpe_spiritualist_mission.983.desc:0 "The recent outbreak of hostilities between us and the [dpe_neighbour.GetName] has led to some unintended consequences. Our attempts to enlighten them have put our citizens in danger. They are currently held in custody on [dpe_mission_host_planet.GetName], and all requests for them to be freed have been ignored."
+dpe_spiritualist_mission.983.option:0 "At least they are still alive."
 
  dpe_xenomission_imprisoned_citizens:0 "Imprisoned Citizens"
+ 
+ dpe_contraband_event.999.name:0 "Source of Drugs Located"
+ dpe_contraband_event.999.desc:0 "The chaos that has brought down the [dpe_drugs_country.GetName] appears to have disrupted the drugs trade, which apparently originated from there. Now that we know the drugs' source, we will be better able to combat the problem."
+ dpe_contraband_event.999.option:0 "Good to know."
+ 
+ dpe_contraband_event.9991.name:0 "New Consumers for our Drugs Needed"
+ dpe_contraband_event.9991.desc:0 "With the fall of the [LastKilledCountryName], our smugglers will have to find a new target."
+ dpe_contraband_event.9991.option:0 "A shame."
