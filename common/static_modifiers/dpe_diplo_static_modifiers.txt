@@ -190,8 +190,8 @@ dpe_denied_elections = { faction_happiness = -0.15 }
 
 dpe_electoral_experiment = {
 	pop_citizen_happiness = 0.05
-	pop_ethic_authoritarian_attraction_mult = 1.25
-	country_unrest_unhappy_pop_effect_mult = -0.5
+	pop_ethic_egalitarian_attraction_mult = 1
+	country_unrest_unhappy_pop_effect_mult = -0.25
 }
 
 dpe_electoral_experiment_faction = { faction_happiness = 0.15 }
@@ -235,4 +235,19 @@ dpe_duel_disgraced1 = {
 
 dpe_paying_foreign_country = {
 	country_resource_minerals_add = -125
+}
+
+dpe_auth_held_successful_election = {
+	pop_government_ethic_attraction = 0.5
+	pop_citizen_happiness = 0.05
+	country_unrest_unhappy_pop_effect_mult = -0.25
+}
+
+dpe_auth_held_election = {
+	pop_citizen_happiness = 0.05
+	pop_ethic_egalitarian_attraction_mult = 1
+}
+
+dpe_betrayed_democracy_faction = {
+	faction_happiness = -0.15
 }

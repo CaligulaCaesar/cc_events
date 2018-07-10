@@ -529,3 +529,26 @@ dpe_pitiful_warriors = {
 		base = 2
 	}
 }
+
+
+dpe_electoral_help_auth = {
+	opinion = {
+		base = 100
+	}
+	decay = {
+		base = 6
+	}
+}
+
+dpe_betrayed_democracy_opinion = {
+	opinion = {
+		base = -30
+		modifier = {
+			add = -20
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	decay = {
+		base = 3
+	}
+}

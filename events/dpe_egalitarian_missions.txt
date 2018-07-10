@@ -458,7 +458,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_electoral_experiment
-			days = 3600
+			days = 360
 		}
 
 		hidden_effect = { from = { country_event = { id = dpe_egalitarian_missions.8 days = 90 } } }
@@ -578,7 +578,7 @@ country_event = {
 	id = dpe_egalitarian_missions.8
 	title = dpe_egalitarian_missions.8.name
 	desc = dpe_egalitarian_missions.8.desc
-	picture = GFX_evt_arguing_senate
+	picture = GFX_evt_galactic_senate
 
 	is_triggered_only = yes
 
@@ -592,7 +592,45 @@ country_event = {
 
 		hidden_effect = {
 			from = {
-				country_event = { id = dpe_egalitarian_missions.9 days = 30 }
+				random_list = {
+					2 = { #truly authoritarian result
+						country_event = { id = dpe_egalitarian_missions.9 days = 30 }
+						
+						modifier = {
+							factor = 2
+							count_pop_factions = {
+								limit = {
+									is_pop_faction_type = totalitarian
+									support > 0.6
+								}
+								count = 1
+							}
+						}
+						modifier = {
+							factor = 2
+							count_pop_factions = {
+								limit = {
+									is_pop_faction_type = totalitarian
+									support > 0.4
+								}
+								count = 1
+							}
+						}
+						modifier = {
+							factor = 0.5
+							count_pop_factions = {
+								limit = {
+									is_pop_faction_type = totalitarian
+									support < 0.25
+								}
+								count = 1
+							}
+						}
+					}
+					2 = { #authoritarian result contested
+						country_event = { id = dpe_egalitarian_missions.10 days = 30 }
+					}
+				}
 			}
 		}
 
@@ -647,7 +685,7 @@ country_event = {
 			from = {
 				random_list = {
 					1 = { #truly authoritarian result
-						country_event = { id = dpe_egalitarian_missions.10 days = 30 }
+						country_event = { id = dpe_egalitarian_missions.11 days = 30 }
 
 						modifier = {
 							factor = 2
@@ -681,7 +719,7 @@ country_event = {
 						}
 					}
 					1 = { #result contra auth wishes
-						country_event = { id = dpe_egalitarian_missions.11 days = 30 }
+						country_event = { id = dpe_egalitarian_missions.12 days = 30 }
 					}
 				}
 			}
@@ -689,6 +727,150 @@ country_event = {
 
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+
+
+#They complied, good result
+country_event = {
+	id = dpe_egalitarian_missions.9
+	title = dpe_egalitarian_missions.9.name
+	desc = dpe_egalitarian_missions.9.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = dpe_egalitarian_missions.9.option
+
+		add_modifier = {
+			modifier = dpe_auth_held_successful_election
+			days = 1800
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_egalitarian_missions.91 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_egalitarian_missions.91
+	title = dpe_egalitarian_missions.91.name
+	desc = dpe_egalitarian_missions.91.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_egalitarian_missions.91.option
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_electoral_help_auth
+				who = root
+			}
+			hidden_effect = {
+				remove_opinion_modifier = {
+					modifier = dpe_rejected_help_with_elections
+					who = root
+				}
+				remove_opinion_modifier = {
+					modifier = dpe_helping_with_elections
+					who = root
+				}
+
+				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
+			}
+		}
+	}
+}
+
+
+#They complied, there is some dissent
+country_event = {
+	id = dpe_egalitarian_missions.10
+	title = dpe_egalitarian_missions.10.name
+	desc = dpe_egalitarian_missions.10.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = dpe_egalitarian_missions.10.option
+
+		add_modifier = {
+			modifier = dpe_auth_held_election
+			days = 1800
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_egalitarian_missions.101 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_egalitarian_missions.101
+	title = dpe_egalitarian_missions.101.name
+	desc = dpe_egalitarian_missions.101.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_egalitarian_missions.101.option
+
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = progressive
+			}
+			add_modifier = {
+				modifier = dpe_betrayed_democracy_faction
+				days = 3600
+			}
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_electoral_help_auth
+				who = root
+			}
+			hidden_effect = {
+				remove_opinion_modifier = {
+					modifier = dpe_rejected_help_with_elections
+					who = root
+				}
+				remove_opinion_modifier = {
+					modifier = dpe_helping_with_elections
+					who = root
+				}
+
+				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
+			}
+		}
+		every_relation = {
+			limit = {
+				has_authority = auth_democratic
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_betrayed_democracy_opinion
+			}
 		}
 	}
 }
