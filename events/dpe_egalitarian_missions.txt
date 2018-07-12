@@ -574,6 +574,7 @@ country_event = {
 	}
 }
 
+#cheat them or not
 country_event = {
 	id = dpe_egalitarian_missions.8
 	title = dpe_egalitarian_missions.8.name
@@ -650,6 +651,24 @@ country_event = {
 					}
 					count = 1
 				}
+			}
+			modifier = {
+				factor = 0.5
+				count_pop_factions = {
+					limit = {
+						is_pop_faction_type = progressive
+						support > 0.5
+					}
+					count = 1
+				}
+			}
+			modifier = {
+				factor = 0.8
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_egalitarian
 			}
 			modifier = {
 				factor = 2
