@@ -84,6 +84,8 @@ country_event = {
 	option = {
 		name = dpe_egalitarian_missions.1.A
 
+		custom_tooltip = dpe_egalitarian_missions.1.A.tooltip
+
 		random_pop_faction = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
