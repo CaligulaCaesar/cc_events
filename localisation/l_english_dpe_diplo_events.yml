@@ -897,6 +897,22 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_egalitarian_missions.101.desc:0 "Our agents have observed and reported on the elections as instructed. The [from.GetSpeciesNamePlural] allies are very enthused by our cooperation with their scheme as we announced a result very favourable to their leaders. However, there the [from.GetSpeciesAdj] opposition is challenging the result,  rightly feeling that they gained more votes than the announced results suggest. Unfortunately, it seems that this incident has reached the attention of both pro-democracy interest groups within our country and the governments of other democratic countries, attracting their disgust and outrage."
  dpe_egalitarian_missions.101.option:0 "We have done what we must."
 
+ dpe_egalitarian_missions.11.name:0 "Elections Successfully Held"
+ dpe_egalitarian_missions.11.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetSpeciesNamePlural]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results… As expected, our choice won the election!\n\nThe result is however a bit closer than we had hoped. It appears that the [from.GetSpeciesNamePlural] announced the true results, rather than arranging it to be more in our favour. We will let them know of our displeasure."
+ dpe_egalitarian_missions.11.option:0 "The people will be thrilled!"
+
+ dpe_egalitarian_missions.111.name:0 "[from.GetSpeciesAdj] Elections Held"
+ dpe_egalitarian_missions.111.desc:0 "[from.GetSpeciesNamePlural], we appreciate your help with the elections. However, we are a bit disappointed that you let the result be as close as it was - we must stress again our aim is not to hold competitive democratic elections, but to please the people with the appearance of these!"
+ dpe_egalitarian_missions.111.option:0 "A job well done."
+
+ dpe_egalitarian_missions.12.name:0 "Electoral Defeat!"
+ dpe_egalitarian_missions.12.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetSpeciesNamePlural]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results… What! How could we have lost?"
+ dpe_egalitarian_missions.12.option:0 "The [from.GetSpeciesNamePlural] double crossed us!"
+
+ dpe_egalitarian_missions.121.name:0 "[from.GetSpeciesAdj] Anger at Election Result"
+ dpe_egalitarian_missions.121.desc:0 "Traitorous filth! How dare you double cross us in such a brazen manner! We will have our revenge..."
+ dpe_egalitarian_missions.121.option:0 "A victory for democracy!"
+ 
  dpe_offered_some_help_with_elections:0 "Offered Electoral Aid"
  dpe_rejected_help_with_elections:0 "Rejected Electoral Aid"
  dpe_helping_with_elections:0 "Gave Electoral Aid"
@@ -912,8 +928,12 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_paying_foreign_country:0 "Paying Foreign Country"
  
  dpe_electoral_help_auth:0 "Electoral Aid"
+ dpe_electoral_help_auth_1:0 "$dpe_electoral_help_auth$"
+ dpe_electoral_betrayal:0 "Betrayal in Electoral Aid"
  dpe_betrayed_democracy_opinion:0 "Betrayed Democracy"
  dpe_betrayed_democracy_faction:0 "$dpe_betrayed_democracy_opinion$"
  dpe_auth_held_successful_election:0 "Successful Election"
  dpe_auth_held_election:0 "Elections Held"
+ dpe_promoted_democracy_opinion:0 "Promoted Democracy"
+ dpe_promoted_democracy_faction:0 "$dpe_promoted_democracy_opinion$"
  

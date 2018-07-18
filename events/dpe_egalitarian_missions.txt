@@ -895,3 +895,163 @@ country_event = {
 		}
 	}
 }
+
+
+#Didn't comply, authoritarian result anyway
+country_event = {
+	id = dpe_egalitarian_missions.11
+	title = dpe_egalitarian_missions.11.name
+	desc = dpe_egalitarian_missions.11.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = dpe_egalitarian_missions.11.option
+
+		add_modifier = {
+			modifier = dpe_auth_held_successful_election
+			days = 1800
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_egalitarian_missions.111 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_egalitarian_missions.111
+	title = dpe_egalitarian_missions.111.name
+	desc = dpe_egalitarian_missions.111.desc
+	
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_egalitarian_missions.111.option
+
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_electoral_help_auth_1
+				who = root
+			}
+			hidden_effect = {
+				remove_opinion_modifier = {
+					modifier = dpe_rejected_help_with_elections
+					who = root
+				}
+				remove_opinion_modifier = {
+					modifier = dpe_helping_with_elections
+					who = root
+				}
+
+				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
+			}
+		}
+	}
+}
+
+
+#They didn't comply, the result is egalitarian
+country_event = {
+	id = dpe_egalitarian_missions.12
+	title = dpe_egalitarian_missions.12.name
+	desc = dpe_egalitarian_missions.12.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	option = {
+		name = dpe_egalitarian_missions.12.option
+
+		add_modifier = {
+			modifier = dpe_auth_held_election
+			days = 1800
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_egalitarian_missions.121 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_egalitarian_missions.121
+	title = dpe_egalitarian_missions.121.name
+	desc = dpe_egalitarian_missions.121.desc
+	
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_egalitarian_missions.121.option
+
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = progressive
+			}
+			add_modifier = {
+				modifier = dpe_promoted_democracy_faction
+				days = 3600
+			}
+		}
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_electoral_betrayal
+				who = root
+			}
+			hidden_effect = {
+				remove_opinion_modifier = {
+					modifier = dpe_rejected_help_with_elections
+					who = root
+				}
+				remove_opinion_modifier = {
+					modifier = dpe_helping_with_elections
+					who = root
+				}
+			}
+		}
+		every_relation = {
+			limit = {
+				has_authority = auth_democratic
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_promoted_democracy_opinion
+			}
+		}
+	}
+}

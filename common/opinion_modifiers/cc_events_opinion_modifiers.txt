@@ -540,11 +540,42 @@ dpe_electoral_help_auth = {
 	}
 }
 
+dpe_electoral_help_auth_1 = {
+	opinion = {
+		base = 50
+	}
+	decay = {
+		base = 6
+	}
+}
+
+dpe_electoral_betrayal = {
+	opinion = {
+		base = -100
+	}
+	decay = {
+		base = 3
+	}
+}
+
 dpe_betrayed_democracy_opinion = {
 	opinion = {
 		base = -30
 		modifier = {
 			add = -20
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	decay = {
+		base = 3
+	}
+}
+
+dpe_promoted_democracy_opinion = {
+	opinion = {
+		base = 30
+		modifier = {
+			add = 20
 			has_ethic = ethic_fanatic_egalitarian
 		}
 	}
