@@ -465,6 +465,7 @@ country_event = {
 
 		hidden_effect = {
 			set_country_flag = dpe_provided_with_egalitarian_mission
+			hidden_effect = { from = { country_event = { id = dpe_egalitarian_missions.72 } } }
 			from = {
 				country_event = { id = dpe_egalitarian_missions.8 days = 90 }
 			}
@@ -1918,6 +1919,7 @@ country_event = {
 
 		hidden_effect = {
 			from = {
+				country_event = { id = dpe_egalitarian_missions.2023 }
 				country_event = { id = dpe_egalitarian_missions.204 days = 60 }
 			}
 		}
@@ -1967,10 +1969,11 @@ country_event = {
 	}
 }
 
+#No bribes
 country_event = {
 	id = dpe_egalitarian_missions.2022
-	title = dpe_egalitarian_missions.2022.name
-	desc = dpe_egalitarian_missions.2022.desc
+	title = dpe_egalitarian_missions.71.name
+	desc = dpe_egalitarian_missions.71.desc
 
 	diplomatic = yes
 
@@ -1989,6 +1992,32 @@ country_event = {
 	}
 }
 
+#positive response
+country_event = {
+	id = dpe_egalitarian_missions.2022
+	title = dpe_egalitarian_missions.72.name
+	desc = dpe_egalitarian_missions.72.desc
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+
+		add_minerals = 1000
+	}
+}
+
+#Not continuing
 country_event = {
 	id = dpe_egalitarian_missions.203
 	title = dpe_egalitarian_missions.203.name
@@ -2192,7 +2221,7 @@ country_event = {
 #They complied, good result
 country_event = {
 	id = dpe_egalitarian_missions.205
-	title = dpe_egalitarian_missions.9.name
+	title = dpe_egalitarian_missions.205.name
 	desc = dpe_egalitarian_missions.205.desc
 	picture = GFX_evt_arguing_senate
 	
