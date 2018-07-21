@@ -2105,6 +2105,10 @@ country_event = {
 		ai_chance = {
 			factor = 2
 			modifier = {
+				factor = 2
+				from = { has_country_flag = dpe_auth_elections_positive_outcome }
+			}
+			modifier = {
 				factor = 0.5
 				count_pop_factions = {
 					limit = {
@@ -2213,6 +2217,15 @@ country_event = {
 
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 3
+				from = {
+					OR = {
+						has_country_flag = dpe_auth_elections_positive_outcome_risk
+						has_country_flag = dpe_auth_elections_negative_outcome
+					}
+				}
+			}
 		}
 	}
 }
