@@ -3809,7 +3809,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		country_event = { id = ccfaction.607 }
+		country_event = { id = ccfaction.607 days = 1 }
 
 		if = {
 			limit = { exists = event_target:cc_new_reb_faction_leader }
@@ -3868,6 +3868,30 @@ country_event = {
 	is_triggered_only = yes 
 
 	immediate = {
+		
+		if = {
+			limit = {
+				from.solar_system.starbase = {
+					has_starbase_size = starbase_outpost
+				}
+			}
+			from.solar_system.starbase = {
+				set_starbase_size = starbase_starport
+				set_starbase_module = {
+					slot = 0
+					module = shipyard
+				}
+				set_starbase_module = {
+					slot = 0
+					module = shipyard
+				}
+				set_starbase_building = {
+					slot = 0
+					building = crew_quarters
+				}
+			}
+		}
+
 		save_event_target_as = cc_rebels
 		random_owned_pop = {
 			save_event_target_as = cc_rebels_pop

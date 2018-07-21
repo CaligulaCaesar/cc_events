@@ -14,6 +14,30 @@ country_event = {
 	trigger = { NOT = { has_country_flag = ccrebel_dont_declare_war } }
 	
 	immediate = {
+
+		if = {
+			limit = {
+				from.solar_system.starbase = {
+					has_starbase_size = starbase_outpost
+				}
+			}
+			from.solar_system.starbase = {
+				set_starbase_size = starbase_starport
+				set_starbase_module = {
+					slot = 0
+					module = shipyard
+				}
+				set_starbase_module = {
+					slot = 0
+					module = shipyard
+				}
+				set_starbase_building = {
+					slot = 0
+					building = crew_quarters
+				}
+			}
+		}
+
 			
 		save_event_target_as = cc_rebels
 		random_owned_pop = {
