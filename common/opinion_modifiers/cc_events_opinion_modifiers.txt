@@ -538,6 +538,8 @@ dpe_electoral_help_auth = {
 	decay = {
 		base = 6
 	}
+	accumulative = yes
+	max = 200
 }
 
 dpe_electoral_help_auth_1 = {
@@ -547,6 +549,8 @@ dpe_electoral_help_auth_1 = {
 	decay = {
 		base = 6
 	}
+	accumulative = yes
+	max = 100
 }
 
 dpe_cancelled_electoral_aid = {
@@ -565,6 +569,8 @@ dpe_electoral_betrayal = {
 	decay = {
 		base = 3
 	}
+	accumulative = yes
+	min = -1000
 }
 
 dpe_betrayed_democracy_opinion = {
