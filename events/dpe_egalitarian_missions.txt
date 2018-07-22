@@ -220,7 +220,7 @@ country_event = {
 	option = {
 		name = dpe_egalitarian_missions.2.option
 
-		hidden_effect = { country_event = { id = dpe_egalitarian_missions.3 } }
+		from = { hidden_effect = { country_event = { id = dpe_egalitarian_missions.3 } } }
 	}
 }
 
@@ -245,7 +245,7 @@ country_event = {
 	option = {
 		name = dpe_egalitarian_missions.3.option
 
-		hidden_effect = { country_event = { id = dpe_egalitarian_missions.4 } }
+		from = { hidden_effect = { country_event = { id = dpe_egalitarian_missions.4 } } }
 	}
 }
 
@@ -465,9 +465,11 @@ country_event = {
 
 		hidden_effect = {
 			set_country_flag = dpe_provided_with_egalitarian_mission
-			hidden_effect = { from = { country_event = { id = dpe_egalitarian_missions.72 } } }
 			from = {
-				country_event = { id = dpe_egalitarian_missions.8 days = 90 }
+				hidden_effect = {
+					country_event = { id = dpe_egalitarian_missions.72 }
+					country_event = { id = dpe_egalitarian_missions.8 days = 90 }
+				}
 			}
 		}
 
