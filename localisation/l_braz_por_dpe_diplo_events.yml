@@ -829,3 +829,161 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  
  
  dpe_xenomission_imprisoned_citizens:0 "Imprisoned Citizens"
+
+
+ 
+ ##########Egalitarian Mission 1
+ 
+ dpe_egalitarian_missions.1.name:0 "A Question of Voting"
+ dpe_egalitarian_missions.1.desc:0 "Our advisors have discussed our relationship with the [dpe_egalitarian.GetName] at great length, and have come up with a devious scheme. Many are convinced that we can use them to our advantage by asking them to help oversee our elections. It is true we don't have elections at the moment, and indeed we do not plan to ever let the people have a major role in running our state, but we can please them by allowing votes on some unimportant policy decisions and minor leadership roles. Regardless of what the plebs decide, we will simply claim the vote went the way we wanted it to all along, and they have no way of proving otherwise.\n\nThis is where our friends can come in: Even if our people don't see through our scheme, we can be sure that certain other nations in the galaxy will be highly sceptical and will do all they can to dispute the legitimacy of our elections. If we can convince our democratic friends to 'oversee' the elections and sign off on the results we announce, then it will lend the legitimacy we would need to make them believable. Do you approve of this scheme?"
+ dpe_egalitarian_missions.1.A:0 "Send the request and see what they say." (chain continues)
+ dpe_egalitarian_missions.1.B:0 "No! Even mock elections are too much for the commoners."
+ dpe_egalitarian_missions.1.B.tooltip:0 "Every other pop faction but the totalitarian faction receive the modifier §R$dpe_denied_a_say$§!, giving:\n\n§R-20% $MOD_FACTION_HAPPINESS$§!"
+ dpe_egalitarian_missions.1.A.tooltip:0 "If the electoral experiment is a success, the [root.GetName] will gain the modifier $dpe_auth_held_successful_election$ for 5 years, granting:\n$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§\n$MOD_COUNTRY_UNREST_UNHAPPY_POP_EFFECT_MULT$: §G-25%§"
+ 
+ dpe_egalitarian_missions.2.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.2.desc:0 "Friends, inspired by your example, we are planning to - for the first time - hold elections. Given our inexperience in this field, we wish to request your assistance in observing them… in particular, in ensuring that the credibility of the results is upheld. Would you be willing to send observers?"
+ dpe_egalitarian_missions.2.option:0 "Since when does the [from.GetSpeciesAdj] [from.GetRulerTitle] care for elections?"
+ 
+ dpe_egalitarian_missions.3.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.3.desc:0 "It is true that this is an experiment. One that will have to be carefully managed. These are our first steps on this path, and we must of course ensure that ultimate authority rests with the [from.GetRulerTitle]. We will be upfront about it: It is our intention to avoid any undesirable outcomes at all costs. As our allies, we will expect you to support us in this endeavour."
+ dpe_egalitarian_missions.3.option:0 "You wish us to help you to forge election results?"
+ 
+ dpe_egalitarian_missions.4.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.4.desc:0 "We would avoid that particular phrasing, but yes, we wish for you to help ensure the credibility of the desired outcome."
+ dpe_egalitarian_missions.4.A:0 "Fake elections are better than no elections. We will support you."
+ dpe_egalitarian_missions.4.help.tooltip:0 "Both other egalitarian countries and our own citizens may be upset if they see us to have helped fix an election."
+ dpe_egalitarian_missions.4.B:0 "We will not sully the sanctity of Democracy!"
+ dpe_egalitarian_missions.4.C:0 "We will support you, at a price."
+ 
+ dpe_egalitarian_missions.5.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.5.desc:0 "Fake elections are better than no elections. We will support you."
+ 
+ dpe_egalitarian_missions.6.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.6.desc:0 "We will not sully the sanctity of Democracy!"
+ 
+ dpe_egalitarian_missions.7.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.7.desc:0 "We will support you, at a price."
+ dpe_egalitarian_missions.7.A:0 "It is worth it, pay them."
+ dpe_egalitarian_missions.7.B:0 "How outrageous. The elections are cancelled."
+
+ dpe_egalitarian_missions.71.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.71.desc:0 "We will not comply with your outrageous demands. The elections are cancelled."
+ 
+ dpe_egalitarian_missions.72.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.72.desc:0 "As you wish. You had better make your services worth it!"
+ 
+ dpe_egalitarian_missions.8.name:0 "Honouring our Agreement?"
+ dpe_egalitarian_missions.8.desc:0 "Since we entered into an agreement with the [from.GetSpeciesAdj] government to 'oversee' their elections, some members of our government have begun having second thoughts. Many of the more zealous democrats believe that we should use this unique opportunity and, instead of helping fix the elections, push for free and fair elections in the [from.GetName]. However, our more cautious advisors point out that this could potentially ruin our relationship with the [from.GetSpeciesAdj] government, as well as our standing in the eyes of other nations.\n\nAre we going to play along and fake the election, or should we publish the true results?"
+ dpe_egalitarian_missions.8.A:0 "We will honour the deal."
+ dpe_egalitarian_missions.8.A.tooltip:0 "The egalitarian faction and other egalitarian nations will be upset if we are seen to have faked the result."
+ dpe_egalitarian_missions.8.B:0 "The results are the results, no matter what."
+ dpe_egalitarian_missions.8.B.tooltip:0 "The [from.GetSpeciesAdj] regime will be upset if we announce a result contrary to their wishes."
+ 
+ dpe_egalitarian_missions.9.name:0 "Elections Successfully Held"
+ dpe_egalitarian_missions.9.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetSpeciesNamePlural]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... As expected, our choice won the election!"
+ dpe_egalitarian_missions.9.option:0 "The people will be thrilled!"
+ 
+ dpe_egalitarian_missions.91.name:0 "[from.GetSpeciesAdj] Elections Successfully Held"
+ dpe_egalitarian_missions.91.desc:0 "Our agents have observed and reported on the elections as instructed. The [from.GetSpeciesNamePlural] allies are very enthused by our cooperation with their scheme, and their people seem to be blissfully ignorant of the entire charade. Hopefully we haven’t done democracy a disservice today."
+ dpe_egalitarian_missions.91.option:0 "We have done what we must."
+ 
+ dpe_egalitarian_missions.10.name:0 "Elections Held"
+ dpe_egalitarian_missions.10.desc:0 "$dpe_egalitarian_missions.9.desc$\n\nHowever, it seems that some of the opposition feel that they gained a much larger portion of the vote than they were allocated. Unfortunately, this is quite true. The ungrateful fools are protesting the result, something which has caused a great deal of embarrassment among the [from.GetSpeciesNamePlural]."
+ dpe_egalitarian_missions.10.option:0 "They will survive."
+ 
+ dpe_egalitarian_missions.101.name:0 "[from.GetSpeciesAdj] Elections Held"
+ dpe_egalitarian_missions.101.desc:0 "Our agents have observed and reported on the elections as instructed. The [from.GetSpeciesNamePlural] allies are very enthused by our cooperation with their scheme as we announced a result very favourable to their leaders. However, there the [from.GetSpeciesAdj] opposition is challenging the result,  rightly feeling that they gained more votes than the announced results suggest. Unfortunately, it seems that this incident has reached the attention of both pro-democracy interest groups within our country and the governments of other democratic countries, attracting their disgust and outrage."
+ dpe_egalitarian_missions.101.option:0 "We have done what we must."
+
+ dpe_egalitarian_missions.11.name:0 "Elections Successfully Held"
+ dpe_egalitarian_missions.11.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetSpeciesNamePlural]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... As expected, our choice won the election!\n\nThe result is however a bit closer than we had hoped. It appears that the [from.GetSpeciesNamePlural] announced the true results, rather than arranging it to be more in our favour. We will let them know of our displeasure."
+ dpe_egalitarian_missions.11.option:0 "The people will be thrilled!"
+
+ dpe_egalitarian_missions.111.name:0 "[from.GetSpeciesAdj] Elections Held"
+ dpe_egalitarian_missions.111.desc:0 "[from.GetSpeciesNamePlural], we appreciate your help with the elections. However, we are a bit disappointed that you let the result be as close as it was - we must stress again our aim is not to hold competitive democratic elections, but to please the people with the appearance of these!"
+ dpe_egalitarian_missions.111.option:0 "A job well done."
+
+ dpe_egalitarian_missions.12.name:0 "Electoral Defeat!"
+ dpe_egalitarian_missions.12.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetSpeciesNamePlural]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... What! How could we have lost?"
+ dpe_egalitarian_missions.12.option:0 "The [from.GetSpeciesNamePlural] double crossed us!"
+
+ dpe_egalitarian_missions.121.name:0 "[from.GetSpeciesAdj] Anger at Election Result"
+ dpe_egalitarian_missions.121.desc:0 "Traitorous filth! How dare you double cross us in such a brazen manner! We will have our revenge..."
+ dpe_egalitarian_missions.121.option:0 "A victory for democracy!"
+ 
+ dpe_offered_some_help_with_elections:0 "Offered Electoral Aid"
+ dpe_rejected_help_with_elections:0 "Rejected Electoral Aid"
+ dpe_helping_with_elections:0 "Gave Electoral Aid"
+ dpe_denied_a_say:0 "Denied a Say"
+ dpe_denied_elections:0 "Denied Elections"
+ 
+ dpe_electoral_experiment:0 "Electoral Experiment"
+ dpe_electoral_experiment_desc:0 "The populace is electrified by the prospect of elections."
+ 
+ dpe_electoral_experiment_faction:0 "$dpe_electoral_experiment$"
+ dpe_electoral_experiment_faction_negative:0 "$dpe_electoral_experiment$"
+
+ dpe_paying_foreign_country:0 "Paying Foreign Country"
+ 
+ dpe_electoral_help_auth:0 "Electoral Aid"
+ dpe_electoral_help_auth_1:0 "$dpe_electoral_help_auth$"
+ dpe_electoral_betrayal:0 "Betrayal in Electoral Aid"
+ dpe_betrayed_democracy_opinion:0 "Betrayed Democracy"
+ dpe_betrayed_democracy_faction:0 "$dpe_betrayed_democracy_opinion$"
+ dpe_auth_held_successful_election:0 "Successful Election"
+ dpe_auth_held_election:0 "Elections Held"
+ dpe_promoted_democracy_opinion:0 "Promoted Democracy"
+ dpe_promoted_democracy_faction:0 "$dpe_promoted_democracy_opinion$"
+ 
+ dpe_cancelled_electoral_aid:0 "Cancelled Electoral Aid"
+ dpe_upcoming_elections:0 "Upcoming Elections"
+ dpe_elections_cancelled:0 "Elections Cancelled"
+ dpe_elections_cancelled_1:0 "Elections Cancelled"
+ dpe_sham_elections:0 "Sham Elections"
+
+ dpe_egalitarian_missions.20.name:0 "Continue Holding Elections?"
+ dpe_egalitarian_missions.20.pos:0 "The scheduled time for new "elections" has arrived. Should we continue our arrangement with the [from.GetSpeciesNamePlural] that brought us such benefits last time around?"
+ dpe_egalitarian_missions.20.half_pos:0 "The scheduled time for new "elections" has arrived. We had previously struck an arrangement with the [from.GetSpeciesNamePlural] to carefully control the results of the elections, which govern choices for non-vital administrative positions. However, although the result of the last elections was very much in our favour, we are unsure whether the [from.GetSpeciesNamePlural] are willing to play their part in fixing the results. Should we risk continuing the arrangement?"
+ dpe_egalitarian_missions.20.neg:0 "The scheduled time for new "elections" has arrived. We had previously struck an arrangement with the [from.GetSpeciesNamePlural] to carefully control the results of the elections, which govern choices for non-vital administrative positions. However, they announced a result contrary to our interests. This has tempted many in the government to cancel further elections. Nonetheless, it seems many of our citizens are attached to the idea of such elections continuing. Should we risk further elections?"
+ dpe_egalitarian_missions.20.no_more_destroyed:0 "We had previously struck an arrangement with a friendly democracy to hold controlled elections in our country. However, since our last election, this country has ceased to exist. As neither our populace nor anyone else will respect the outcome of the elections without external observers, we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.no_more_nodemo:0 "We had previously struck an arrangement with the democratic [from.GetSpeciesNamePlural] to hold controlled elections in our country. However, since our last election, the [from.GetSpeciesNamePlural] have abolished their own democracy. As neither our populace nor anyone else will respect the outcome of the elections without external observers - a position the [from.GetSpeciesNamePlural] now lack the credentials to fill - we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.no_friends:0 "We had previously struck an arrangement with the democratic [from.GetSpeciesNamePlural] to hold controlled elections in our country. However, since our last election, our relations with the [from.GetName] have soured, so that our nations can no longer be called "friends". This being the case, we can no longer trust them to act as observers. As neither our populace nor anyone else will respect the outcome of the elections without external observers, we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.A:0 "Of course."
+ dpe_egalitarian_missions.20.B:0 "Best not to."
+ dpe_egalitarian_missions.20.C:0 "It's worth the risk."
+ dpe_egalitarian_missions.20.D:0 "Best not to."
+ dpe_egalitarian_missions.20.E:0 "Let's try this again."
+ dpe_egalitarian_missions.20.F:0 "No. Definitely no elections for us!"
+
+ dpe_egalitarian_missions.201.name:0 "Continue Giving Electoral Aid?"
+ dpe_egalitarian_missions.201.pos:0 "Dear [root.GetSpeciesNamePlural], we have decided to request your aid in holding elections again. This has been a valuable arrangement for us, which we hope will continue to develop into greater ties of friendship between our nations. Will you continue to provide us your services?"
+ dpe_egalitarian_missions.201.half_pos:0 "[root.GetSpeciesNamePlural], we have decided to request your aid in holding elections again. We hope that you will continue to ensure that the result of these elections remains in our favour - should it not, our displeasure would be considerable. Will you continue to provide us your services?"
+ dpe_egalitarian_missions.201.neg:0 "[root.GetSpeciesNamePlural], we have decided to request your aid in holding elections again. Please ensure the result is more in our favour this time. Our displeasure would be considerable if it is not. Will you send us your electoral observers?"
+ dpe_egalitarian_missions.201.continue:0 "We will continue the arrangement."
+ dpe_egalitarian_missions.201.bribe:0 "You must pay us to receive our services."
+ dpe_egalitarian_missions.201.cancel:0 "Our electoral support is cancelled."
+
+ dpe_egalitarian_missions.202.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.202.desc:0 "We will continue to keep our side of the arrangement."
+
+ dpe_egalitarian_missions.2021.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.2021.desc:0 "We will continue to offer our services, at a price."
+
+ dpe_egalitarian_missions.203.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.203.desc:0 "Dear [root.GetSpeciesNamePlural], we have elected not to continue this arrangement. We hope you will be understanding of our decision."
+
+ dpe_egalitarian_missions.204.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.204.desc:0 "Should we honour our agreement with the [from.GetSpeciesNamePlural] and fix the election, or should we take the opportunity to score a victory for true democracy?"
+
+ dpe_egalitarian_missions.205.name:0 "$dpe_egalitarian_missions.9.name$"
+ dpe_egalitarian_missions.205.desc:0 "The [from.GetSpeciesNamePlural] have announced the results of the election: Our candidates have won, as arranged. The citizens are oblivious to the deception, and are happy to have had a chance to have their thoughts heard."
+
+ dpe_egalitarian_missions.206.name:0 "$dpe_egalitarian_missions.10.name$"
+ dpe_egalitarian_missions.206.desc:0 "The [from.GetSpeciesNamePlural] have announced the results of the election: Our candidates have won, as arranged. However, it seems that some of the opposition feel that they gained a much larger portion of the vote than they were allocated. Unfortunately, this is quite true. The ungrateful fools are protesting the result, something which has caused a great deal of embarrassment among the [from.GetSpeciesNamePlural].""
+
+ dpe_egalitarian_missions.207.name:0 "$dpe_egalitarian_missions.11.name$"
+ dpe_egalitarian_missions.207.desc:0 "The [from.GetSpeciesNamePlural] have announced the results of the election: Our candidates have won, but our opponents have achieved a respectable portion of the votes. It seems they announced the true results, rather than arranging it to be more in our favour. We will let them know of our displeasure."
+
+ dpe_egalitarian_missions.208.name:0 "$dpe_egalitarian_missions.12.name$"
+ dpe_egalitarian_missions.208.desc:0 "The [from.GetSpeciesNamePlural] have announced the results of the election: Our opponents have scored major victories! It seems they double-crossed us and announced the true results, rather than arranging it to be more in our favour. This is an outrage!"
