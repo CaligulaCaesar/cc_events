@@ -3,9 +3,9 @@
 #commented this out so that I get the correct tooltips with my validator
 
 dpe_diplo.1.name:0 "民众渴望战争"
-dpe_diplo.1.desc:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName],该国领导人最近公开嘲讽了[root.GetSpeciesNamePlural]，称我们胆小怕事，毫无荣誉可言。愤怒的民众呼吁对此还以战争。"
-dpe_diplo.1.desc.machine:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来传出消息，这个机械文明在向下属单元发出的指示中称 [root.GetSpeciesNamePlural]"易受惊吓，战力低弱，基本无害"。愤怒的民众呼吁对此还以战争。"
-dpe_diplo.1.desc.hive:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光——[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来我们发现这个蜂群意识对[root.GetSpeciesNamePlural]的统一评价是"胆小怕事，缺乏荣誉，基本无害"。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.desc:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光--[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName],该国领导人最近公开嘲讽了[root.GetSpeciesNamePlural]，称我们胆小怕事，毫无荣誉可言。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.desc.machine:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光--[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来传出消息，这个机械文明在向下属单元发出的指示中称 [root.GetSpeciesNamePlural]"易受惊吓，战力低弱，基本无害"。愤怒的民众呼吁对此还以战争。"
+dpe_diplo.1.desc.hive:0 "[root.GetSpeciesNamePlural]大众间的民族主义浪潮近来达到顶点，全国各地都在举行游行，要求重塑民族荣光--[root.GetName]国内承平日久，民众对此焦躁不安，担心这会使敌人认为我们已经变得软弱可欺。他们的狂热指向了[enemy.GetName]，因为近来我们发现这个蜂群意识对[root.GetSpeciesNamePlural]的统一评价是"胆小怕事，缺乏荣誉，基本无害"。愤怒的民众呼吁对此还以战争。"
 dpe_diplo.1.A:0 "宣战"
 #dpe_diplo.1.A.tooltip:0 "战争诉求将被定为$war_demand_humiliate_header$ 及 $war_demand_dpe_cede_borders_header$. 将会要求割让以下行星："
 dpe_diplo.1.B: "耐心。很快我们就会按照自己的步调进行宣战"
@@ -77,9 +77,9 @@ dpe_spiritualist_mission.2.B:0 "不，他们不配蒙受我们神圣宗教的恩
 dpe_spiritualist_mission.2.C:0 "不，这群教士需要认清自己的位置。权力皆归于我！"
 
 dpe_spiritualist_mission.2.D:0 "也许[dpe_ally.GetName]是更好的传教对象？ "
-dpe_spiritualist_mission.2.E:0 "让我们把神恩照进最幽深的角落——将教团派往 [dpe_hive.GetName]"
+dpe_spiritualist_mission.2.E:0 "让我们把神恩照进最幽深的角落--将教团派往 [dpe_hive.GetName]"
 dpe_spiritualist_mission.2.E.tooltip:0 "此举可能徒劳无功。谁知道蜂群会作何反应呢？"
-dpe_spiritualist_mission.2.F:0 "让我们把神恩照进最幽深的角落——将教团派往[dpe_machines.GetName]"
+dpe_spiritualist_mission.2.F:0 "让我们把神恩照进最幽深的角落--将教团派往[dpe_machines.GetName]"
 dpe_spiritualist_mission.2.F.tooltip:0 "此举很可能徒劳无功。"
 
 dpe_missionary_faction:0 "接纳外国教团"
@@ -110,9 +110,9 @@ dpe_spiritualist_mission.300.A:0 "我们竭力将你们引向救赎"
 
 dpe_spiritualist_mission.4.name:0 "你们愿意接待我们的布道使团吗"
 dpe_spiritualist_mission.4.desc.normal:0 "亲爱的[root.GetSpeciesNamePlural],我们[from.GetSpeciesNamePlural]一直坚信，只要遵循正确的道路，所有生命都能在真神面前寻得救赎。以全宇宙所有美好事物之名，我们希望将启蒙带给你们。诚然贵我两族存在颇多差异，但只要认真倾听，你们一定会发现，我们的福音蕴含真意。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？"
-dpe_spiritualist_mission.4.desc.ally:0 "亲爱的朋友，我们[from.GetSpeciesNamePlural]向来与贵国民众亲密无间，但为你们谋求救赎的夙愿使我们担忧焦虑——你们的习俗在某些至关重要的层面与我们相去甚远。我们希望将启蒙带给你们，使你们在面对造物主时无需为永堕地狱而忧惧。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？ "
+dpe_spiritualist_mission.4.desc.ally:0 "亲爱的朋友，我们[from.GetSpeciesNamePlural]向来与贵国民众亲密无间，但为你们谋求救赎的夙愿使我们担忧焦虑--你们的习俗在某些至关重要的层面与我们相去甚远。我们希望将启蒙带给你们，使你们在面对造物主时无需为永堕地狱而忧惧。你们愿意接待我们义理最为精深的宗教学者，由他们指引踏上侍奉真神的正途吗？ "
 dpe_spiritualist_mission.4.A:0 "我们的人民不会听凭外星人指手画脚"
-dpe_spiritualist_mission.4.B:0 "我们会让他们入境，但不要企图耍任何花招——我们会盯着你们的！ "
+dpe_spiritualist_mission.4.B:0 "我们会让他们入境，但不要企图耍任何花招--我们会盯着你们的！ "
 dpe_spiritualist_mission.4.C:0 "我们很高兴接待你们的使团，朋友。"
 dpe_spiritualist_mission.4.D:0 "（欺骗）我们十分乐意接待你们的使团"
 dpe_spiritualist_mission.4.D.tooltip:0 "\n我们将采取秘密措施，阻止他们散播自己的理念。如果被发现，[from.GetName]将会大为恼火。"
@@ -147,7 +147,7 @@ dpe_spiritualist_mission.51.name:0 "[dpe_missionary_country.GetSpeciesAdj]布道
 dpe_spiritualist_mission.51.desc.normal:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱或可疑举动。我们的情报人员对这些外星人保持着密切监视，看来他们确实表里如一。然而，一些进展值得关注：越来越多的当地民众开始参与传教士们组织的典礼与祭仪。他们的宗教似乎正在逐渐流行开来。我们应该容忍这种趋势吗？"
 dpe_spiritualist_mission.51.desc.ally:0 "目前为止，[dpe_mission_host_planet.GetName]上负责监管[dpe_missionary_country.GetSpeciesAdj]使团的当地官员并未汇报任何骚乱。传教士们顺利在当地立足。事实上，他们发现许多[root.GetSpeciesNamePlural]都对其布道乐于接受。然而，部分民众担忧，如果使团继续自由行事，我们可能会失去部分身为[root.GetSpeciesNamePlural]的自我认同。应该如何回应？"
 dpe_spiritualist_mission.51.normal.A:0 "如果我们惧怕他们的宗教，当初就不会允许他们入境了。"
-dpe_spiritualist_mission.51.normal.B:0 "送他们回去——原以为没人会真的被他们那套太空邪教洗脑的！"
+dpe_spiritualist_mission.51.normal.B:0 "送他们回去--原以为没人会真的被他们那套太空邪教洗脑的！"
 dpe_spiritualist_mission.51.ally.A:0 "使团当然可以继续活动"
 dpe_spiritualist_mission.51.ally.B:0 "我们应该找个借口送他们回去。"
 
@@ -180,7 +180,7 @@ dpe_spiritualist_mission.61.B:0 "尽力保护使团，但他们要自己承担�
 
 dpe_spiritualist_mission.62.name:0 "[from.GetSpeciesNamePlural]将我们的布道使团送回"
 dpe_spiritualist_mission.62.desc:0 "[dpe_mission_host_planet.GetName]上的局势迅速恶化，超出了我们的控制。你们的使团必须被送回，以免整颗行星陷入动荡。"
-dpe_spiritualist_mission.62.option.A:0 "真是遗憾——我们只是想把救赎带给你们。"
+dpe_spiritualist_mission.62.option.A:0 "真是遗憾--我们只是想把救赎带给你们。"
 dpe_spiritualist_mission.62.option.B:0 "你们怎敢自绝于神恩！"
 
 
@@ -268,8 +268,8 @@ dpe_spiritualist_mission.10.desc.low:0 "我们派往[from.GetName]的使团在�
 dpe_spiritualist_mission.10.desc.mid:0 "我们派往[from.GetName]的使团在过去这些年间取得了有限的成功：一个略具规模的[from.GetSpeciesNamePlural]团体现在已被引领踏上正途。布道活动应该继续吗？ "
 dpe_spiritualist_mission.10.desc.high:0 "我们派往[from.GetName]的使团在过去这些年间大获成功：尽管[from.GetSpeciesAdj]政府还没有完全踏上正途，许多[from.GetSpeciesNamePlural]却已经先行一步。有些虔信者甚至开启了前往我们星球的朝圣之旅。布道活动应该继续吗？"
 dpe_spiritualist_mission.10.desc.success:0 "我们派往[from.GetName]的使团大获成功：由于他们的不懈努力，唯心主义已经完全融入[from.GetSpeciesNamePlural]的生活方式，许多当地民众甚至踏上了前往我们星球的朝圣之旅。除了少数几人决定留在[dpe_mission_host_planet.GetName]，继续引导[from.GetSpeciesNamePlural]大众之外，大部分传教士已经开始准备荣归故里。他们在[from.GetName]布道的岁月中已与许多当地人成为了朋友，[from.GetSpeciesNamePlural]为欢送使团组织了一次大型庆典。此次盛事标志着两族之间一段全新友谊的开端。"
-dpe_spiritualist_mission.10.option.continue:0 "继续传教——他们的工作意义非凡"
-dpe_spiritualist_mission.10.option.cancel:0 "迎回使团——他们已经奉献了太多"
+dpe_spiritualist_mission.10.option.continue:0 "继续传教--他们的工作意义非凡"
+dpe_spiritualist_mission.10.option.cancel:0 "迎回使团--他们已经奉献了太多"
 dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
 
 #this is every 15 years afterwards
@@ -300,7 +300,7 @@ dpe_spiritualist_mission.1011.option:0 "并非所有物种都能得到启蒙。"
  
 dpe_spiritualist_mission.1099.name:0 "使命达成"
 dpe_spiritualist_mission.1099.desc:0 "[from.GetSpeciesAdj]使团正在准备返回故土，他们的布道已大获成功：由于他们的不懈努力，唯心主义已经完全融入了我们的生活方式。传教士们在[dpe_mission_host_planet.GetName]布道的岁月中已与当地许多人成为了朋友，民众为欢送使团组织了一次大型庆典。几名[from.GetSpeciesNamePlural]请求留在[dpe_mission_host_planet.GetName]，继续指引[root.GetSpeciesNamePlural]。我们应该答应这一请求吗？"
-dpe_spiritualist_mission.1099.A:0 "当然——他们是最为尊贵的客人"
+dpe_spiritualist_mission.1099.A:0 "当然--他们是最为尊贵的客人"
 dpe_spiritualist_mission.1099.B:0 "他们没什么理由继续留在我们境内了。"
 
 
@@ -410,7 +410,7 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
 
 #Death Chain
  dpe_xenophile_mission.20.name:0 "行动之机"
- dpe_xenophile_mission.20.desc:0 "动手的时机成熟了。情报机构制定的计划堪称精妙：现在[from.GetSpeciesNamePlural]已经放松了警惕，我们的特种部队将会制服他们的安保队伍，然后抓捕尽可能多的人质。为确保他们无法逃离，我们已经在其飞船的自动导航系统中植入了恶意代码，足以使其瘫痪。作为后备措施，我们还在飞船上安装了反物质炸药。与此同时，我们的代表团将会悄无声息的离开，从[from.GetSpeciesAdj]空域中消失——从一开始，他们就被战略性地派驻在[from.GetSpeciesAdj]边境，以便逃脱。计划成功后我们就可以凭人质向[from.GetSpeciesNamePlural]索取好处了。"
+ dpe_xenophile_mission.20.desc:0 "动手的时机成熟了。情报机构制定的计划堪称精妙：现在[from.GetSpeciesNamePlural]已经放松了警惕，我们的特种部队将会制服他们的安保队伍，然后抓捕尽可能多的人质。为确保他们无法逃离，我们已经在其飞船的自动导航系统中植入了恶意代码，足以使其瘫痪。作为后备措施，我们还在飞船上安装了反物质炸药。与此同时，我们的代表团将会悄无声息的离开，从[from.GetSpeciesAdj]空域中消失--从一开始，他们就被战略性地派驻在[from.GetSpeciesAdj]边境，以便逃脱。计划成功后我们就可以凭人质向[from.GetSpeciesNamePlural]索取好处了。"
  dpe_xenophile_mission.20.A:0 "很好，动手"
  dpe_xenophile_mission.20.A.tooltip:0 "我们的特工会尝试抓捕[from.GetSpeciesNamePlural]作为人质"
  dpe_xenophile_mission.20.B:0 "风险太大，我们还是把他们送回去吧"
@@ -446,7 +446,7 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
  dpe_xenophile_mission.29.option:0 "他们怎敢如此肆意妄为？"
  
  dpe_xenophile_mission.291.name:0 "灾难性失败"
- dpe_xenophile_mission.291.desc:0 "[from.GetSpeciesNamePlural]设法在[random_planet.GetName]附近引爆了我们安置在他们飞船上的一枚反物质炸弹，对行星造成了可怕的破坏——数百万人在爆炸的余波中丧生。民众震惊悲痛，要求政府作出解释。"
+ dpe_xenophile_mission.291.desc:0 "[from.GetSpeciesNamePlural]设法在[random_planet.GetName]附近引爆了我们安置在他们飞船上的一枚反物质炸弹，对行星造成了可怕的破坏--数百万人在爆炸的余波中丧生。民众震惊悲痛，要求政府作出解释。"
  dpe_xenophile_mission.291.A:0 "我们必须严惩涉事恐怖分子"
  dpe_xenophile_mission.291.B:0 "关闭边境，[from.GetSpeciesNamePlural]在这里不受欢迎"
 
@@ -469,12 +469,12 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
 #Tensions event chain
  dpe_xenophile_mission.81.name:0 "我方代表团面临紧张局势"
  dpe_xenophile_mission.81.desc:0 "最近我们派往[from.GetName]的代表团遭遇了一系列不幸事件。它们最初都是由于我方人员对当地文化的误解而引发。当来自完全不同社会背景的两个群体初次接触，这种摩擦实属难以避免。不幸的是，[from.GetSpeciesAdj]内部的排外分子借此事由，引导民众大开倒车：代表们不论去往何地都会遭遇越来越多的抗议，[from.GetSpeciesAdj]政府表示他们的安保队伍已经挫败了数起暴力行动，难以保证代表团后续安全。部分代表因此颇受惊吓，要求立即返回祖国，领队也批准了他们的要求；然而大部分代表准备勇敢面对挑战，希望能够逐步克服眼下的困难。我们应将代表团召回吗？"
- dpe_xenophile_mission.81.A:0 "继续任务——文化交流本非易事"
+ dpe_xenophile_mission.81.A:0 "继续任务--文化交流本非易事"
  dpe_xenophile_mission.81.B:0 "带他们回家，以免事态向更糟的方向发展！"
 
  dpe_xenophile_mission.82.name:0 "[from.GetSpeciesAdj]代表团面临紧张局势"
- dpe_xenophile_mission.82.desc:0 "最近[from.GetSpeciesAdj]派驻我国的代表团遭遇了一系列不幸事件。它们最初都是由于[from.GetSpeciesNamePlural]对本地文化的误解而引发。当来自完全不同社会背景的两个群体初次接触，这种摩擦实属难以避免。不幸的是，我们社会中的部分群体一直寻求使我们的种族远离外部影响，他们借此事由，在民众中引导扩大了对异星使团的反感：[from.GetSpeciesNamePlural]代表们不论去往何地都会遭遇越来越多的抗议，我们的安保队伍已经挫败了数起暴力行动。他们的领队试图采取勇敢的姿态，表达了继续文化交流使命的意愿——[from.GetSpeciesAdj]政府对此表示支持——尽管部分代表已经先行返回祖国了。我们应该采取何种措施？"
- dpe_xenophile_mission.82.A:0 "继续任务——文化交流本非易事"
+ dpe_xenophile_mission.82.desc:0 "最近[from.GetSpeciesAdj]派驻我国的代表团遭遇了一系列不幸事件。它们最初都是由于[from.GetSpeciesNamePlural]对本地文化的误解而引发。当来自完全不同社会背景的两个群体初次接触，这种摩擦实属难以避免。不幸的是，我们社会中的部分群体一直寻求使我们的种族远离外部影响，他们借此事由，在民众中引导扩大了对异星使团的反感：[from.GetSpeciesNamePlural]代表们不论去往何地都会遭遇越来越多的抗议，我们的安保队伍已经挫败了数起暴力行动。他们的领队试图采取勇敢的姿态，表达了继续文化交流使命的意愿--[from.GetSpeciesAdj]政府对此表示支持--尽管部分代表已经先行返回祖国了。我们应该采取何种措施？"
+ dpe_xenophile_mission.82.A:0 "继续任务--文化交流本非易事"
  dpe_xenophile_mission.82.B:0 "把他们送回去，以免事态向更糟的方向发展！"
  
  dpe_xenophile_mission.83.name:0 "[from.GetSpeciesNamePlural]撤回文化交流使团"
@@ -523,10 +523,10 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
  dpe_xenophile_mission.12.B:0 "谨慎处理此事"
  dpe_xenophile_mission.12.B.tooltip:0 "与对方领导人沟通，警告他们下次再犯绝不容忍"
  dpe_xenophile_mission.12.C:0 "或许我们可以达成交易"
- dpe_xenophile_mission.12.C.tooltip:0 "我们可以保证不泄露他们的间谍行为——使其国家声望不致受损——以换取他们的科技"
+ dpe_xenophile_mission.12.C.tooltip:0 "我们可以保证不泄露他们的间谍行为--使其国家声望不致受损--以换取他们的科技"
 
  dpe_xenophile_mission.121.name:0 "[from.GetSpeciesNamePlural]抓获了我们的间谍！"
- dpe_xenophile_mission.121.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经逮捕了贵方代表团中的数名不法分子。他们似乎试图将我们的科技资料偷送往贵方。请确保杜绝此类事件——如果民众得知贵方代表进行间谍活动，必将造成极大不便，届时进一步措施将不可避免……"
+ dpe_xenophile_mission.121.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经逮捕了贵方代表团中的数名不法分子。他们似乎试图将我们的科技资料偷送往贵方。请确保杜绝此类事件--如果民众得知贵方代表进行间谍活动，必将造成极大不便，届时进一步措施将不可避免......"
  dpe_xenophile_mission.121.A:0 "了解"
  dpe_xenophile_mission.121.B:0 "（欺骗）我们一定停止间谍活动"
  dpe_xenophile_mission.continue_spying:0 "我们将会继续秘密进行间谍活动"
@@ -537,11 +537,11 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
  
 
  dpe_xenophile_mission.14.name:0 "[from.GetSpeciesNamePlural]再次被发现进行间谍活动！"
- dpe_xenophile_mission.14.desc:0 "我们发现[from.GetSpeciesNamePlural]试图偷取科技——又一次！我们已将代表团遣返，并正式表达了对其欺诈行为的不满。"
+ dpe_xenophile_mission.14.desc:0 "我们发现[from.GetSpeciesNamePlural]试图偷取科技--又一次！我们已将代表团遣返，并正式表达了对其欺诈行为的不满。"
  dpe_xenophile_mission.14.option:0 "他们不能被信任"
  
  dpe_xenophile_mission.141.name:0 "间谍活动再次被发现！"
- dpe_xenophile_mission.141.desc:0 "狡诈成性的[root.GetSpeciesNamePlural]，欺骗我们一次已属背德，欺骗我们两次且都被发现……你们真是低劣恶邻"
+ dpe_xenophile_mission.141.desc:0 "狡诈成性的[root.GetSpeciesNamePlural]，欺骗我们一次已属背德，欺骗我们两次且都被发现......你们真是低劣恶邻"
  
  dpe_xenophile_mission.13.name:0 "突击搜查[fromfrom.GetSpeciesAdj]飞船"
  dpe_xenophile_mission.13.desc:0 "搜查证实了先前的担忧：[fromfrom.GetSpeciesAdj]所谓宣扬友谊的代表团仅仅是掩护他们窃取科技的幌子。自交流活动开始，他们已经将难以计数的原型设备、样本、数据及软件程序偷送回了[fromfrom.GetName]。我们已经逮捕了[fromfrom.GetSpeciesNamePlural]代表团。应该如何处置他们？"
@@ -567,7 +567,7 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
  dpe_xenophile_mission.125.C:0 "你们怎么敢作出如此指控？我们将终止文化交流活动"
  
  dpe_xenophile_mission.1251.name:0 "$dpe_xenophile_mission.1211.name$"
- dpe_xenophile_mission.1251.desc:0 "请接收贵方所需科技资料，[root.GetSpeciesName]。我们再次致以诚挚歉意——类似事件绝不会再次发生"
+ dpe_xenophile_mission.1251.desc:0 "请接收贵方所需科技资料，[root.GetSpeciesName]。我们再次致以诚挚歉意--类似事件绝不会再次发生"
  dpe_xenophile_mission.1251.option:0 "$dpe_xenophile_mission.1211.option$"
  
  dpe_xenophile_mission.1252.name:0 "$dpe_xenophile_mission.1211.name$"
@@ -613,11 +613,11 @@ dpe_xenophile_mission_ends:0 "文化交流活动终止"
  dpe_xenophile_mission.174.B:0 "我们不能信任[from.GetSpeciesNamePlural]。终止文化交流，送他们回去"
  
  dpe_xenophile_mission.175.name:0 "技术窃取引起不满"
- dpe_xenophile_mission.175.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经拘捕了贵方代表团中的一些不法分子。他们似乎打算窃取我国某些科技。请确保类似事件不再发生——如果公众得知贵方代表团在从事间谍活动，势将造成极大不便，迫使我们采取进一步措施……"
+ dpe_xenophile_mission.175.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们已经拘捕了贵方代表团中的一些不法分子。他们似乎打算窃取我国某些科技。请确保类似事件不再发生--如果公众得知贵方代表团在从事间谍活动，势将造成极大不便，迫使我们采取进一步措施......"
  dpe_xenophile_mission.175.option:0 "明白"
  
  dpe_xenophile_mission.176.name:0 "技术窃取引起愤怒"
- dpe_xenophile_mission.176.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们正式通告，贵方代表团在我们星系的文化交流任务就此结束，我们也将同步召回派往贵方的使团。数名贵方代表团成员企图窃取我方科技——显然是受贵方政府指示。在将其逮捕后，我们作出了这一决定。此次事件严重削弱了我们对贵方的信任。对于再次与[root.GetSpeciesNamePlural]合作，我们将十分谨慎。"
+ dpe_xenophile_mission.176.desc:0 "亲爱的[root.GetSpeciesNamePlural]，我们正式通告，贵方代表团在我们星系的文化交流任务就此结束，我们也将同步召回派往贵方的使团。数名贵方代表团成员企图窃取我方科技--显然是受贵方政府指示。在将其逮捕后，我们作出了这一决定。此次事件严重削弱了我们对贵方的信任。对于再次与[root.GetSpeciesNamePlural]合作，我们将十分谨慎。"
 
  dpe_xenomission_denied_tech:0 "科技分享提议被拒"
  dpe_xenomission_granted_tech:0 "获赠科技资料"
@@ -632,14 +632,14 @@ dpe_xenophile_mission.151.title:0 "[root.GetSpeciesNamePlural]与[from.GetSpecie
 dpe_xenophile_mission.151.desc:0 "随着[from.GetSpeciesNamePlural]计划中的归期渐近，数名[from.GetSpeciesNamePlural]决定留下，与他们的[root.GetSpeciesAdj]伴侣共同生活在[root.GetName]，尽管这种亲密关系在[root.GetSpeciesAdj]法律下并不享受完整权益。"
 
 dpe_xenophile_mission.152.title:0 "[root.GetSpeciesNamePlural]-[from.GetSpeciesNamePlural]婚姻？"
-dpe_xenophile_mission.152.desc:0 "随着[from.GetSpeciesNamePlural]计划中的归期渐近，在文化交流中情意渐生的几对[from.GetSpeciesName]-[root.GetSpeciesName]伴侣逐渐吸引了更多注意力。[root.GetSpeciesAdj]现行法律对这种亲密关系的合法性并未作出明确界定，使得有关个体面临诸多不确定性。[xenophile_faction.GetName]派系已经同意支持他们的诉求，正在[root.GetName]内推动民众对这种结合的认可——然而社会中更偏保守的群体对此极为反感。我们应当允许跨物种婚姻吗？ "
+dpe_xenophile_mission.152.desc:0 "随着[from.GetSpeciesNamePlural]计划中的归期渐近，在文化交流中情意渐生的几对[from.GetSpeciesName]-[root.GetSpeciesName]伴侣逐渐吸引了更多注意力。[root.GetSpeciesAdj]现行法律对这种亲密关系的合法性并未作出明确界定，使得有关个体面临诸多不确定性。[xenophile_faction.GetName]派系已经同意支持他们的诉求，正在[root.GetName]内推动民众对这种结合的认可--然而社会中更偏保守的群体对此极为反感。我们应当允许跨物种婚姻吗？ "
 dpe_xenophile_mission.152.A:0 "允许跨物种婚姻，外星伴侣可以留下"
 dpe_xenophile_mission.152.B:0 "容留外星伴侣，但不合法化跨物种婚姻"
 dpe_xenophile_mission.152.C:0 "禁止跨物种性行为，把他们全部送回去"
 
 dpe_xenophile_mission.154.title:0 "[root.GetSpeciesNamePlural]与[from.GetSpeciesNamePlural]的联姻！"
 dpe_xenophile_mission.154.desc:0 "随着派往[from.GetName]的代表团返回，我们得知不少[root.GetSpeciesNamePlural]决定留在[from.GetName]，与他们的[from.GetSpeciesAdj]伴侣共同生活。尽管这种做法有违我们的法律，但我们对此难以施加干预。对他们应报以同情理解还是加以谴责也在公众中造成了意见分歧。"
-dpe_xenophile_mission.154.option:0 "只要他们不把这种做法带回国……"
+dpe_xenophile_mission.154.option:0 "只要他们不把这种做法带回国......"
 
 dpe_xenomission_xenophilia_torn:0 "跨物种婚姻引起公众争论Debate over Xenophile Marriages"
 dpe_xenomission_xenophilia_torn_desc:0 "国内民众因对跨物种婚姻正当性的争论而产生了意见分裂"
@@ -671,7 +671,7 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_xenophile_mission.990.name:0 "我们派往[dpe_xenophile_opponent.GetName]的代表团返回"
  dpe_xenophile_mission.990.desc:0 "随着我们与[dpe_xenophile_opponent.GetName]开战，双方互相派驻的文化交流使团都已各自返回祖国。"
  dpe_xenophile_mission.999.name:0 "我们派往[LastKilledCountryName] 的代表团返回"
- dpe_xenophile_mission.999.desc:0 "[LastKilledCountryName]不复存在——它已经因为政治动荡与冲突而陨落。双方互相派驻的文化交流使团都已各自返回祖国。"
+ dpe_xenophile_mission.999.desc:0 "[LastKilledCountryName]不复存在--它已经因为政治动荡与冲突而陨落。双方互相派驻的文化交流使团都已各自返回祖国。"
 
  
  
@@ -680,7 +680,7 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
 
 #Contraband Chain 
  dpe_contraband_event.1.name:0 "走私团伙"
- dpe_contraband_event.1.desc:0 "我们的执法部门近期发现一些人从事着向[dpe_neighbour.GetName]走私货物的勾当。这些走私品在我们境内可合法流通，但对[dpe_neighbor.GetSpeciesAdj]个体却相当于颇具效力的致幻药物——[dpe_neighbour.GetSpeciesAdj]政府因此对其实行严格控制。\n\n一部分走私者属于普通民众，与邻国同伙一起倒卖赚钱，另一些则是大型企业，它们在合法出口的同时夹带违禁品。走私者们收益颇丰，对地区经济也贡献良多。我们应当怎样处理他们？ "
+ dpe_contraband_event.1.desc:0 "我们的执法部门近期发现一些人从事着向[dpe_neighbour.GetName]走私货物的勾当。这些走私品在我们境内可合法流通，但对[dpe_neighbor.GetSpeciesAdj]个体却相当于颇具效力的致幻药物--[dpe_neighbour.GetSpeciesAdj]政府因此对其实行严格控制。\n\n一部分走私者属于普通民众，与邻国同伙一起倒卖赚钱，另一些则是大型企业，它们在合法出口的同时夹带违禁品。走私者们收益颇丰，对地区经济也贡献良多。我们应当怎样处理他们？ "
  dpe_contraband_event.1.A:0 "严厉打击。我们不能放任危害这种危害外交关系的行为"
  dpe_contraband_event.1.B:0 "睁一只眼闭一只眼，闷声发财才是最好的"
  dpe_contraband_event.1.B.tooltip:0 "如果被发现，[dpe_neighbor.GetName]将会感到不满"
@@ -734,19 +734,19 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.51.name:0 "非法药物源头指向[from.GetName]"
  dpe_contraband_event.51.desc:0 "通过审问涉嫌参与违禁品走私的疑犯，执法人员取得了突破。他们成功获取了关于某个边境星系走私团伙的行动线索。通过精心策划的伏击，执法人员瘫痪了一艘走私飞船并登舰搜查。在短暂的交火后，不法分子被制服。令人震惊的是，其中一半都是[dpe_drugs_country.GetSpeciesAdj]公民！他们随即被带往审讯室，经审问后交代，[dpe_drugs_country.GetName]政府允许走私团体活动，从中按比例抽水。我们应作何应对？"
  dpe_contraband_event.51.A:0 "不可接受！召唤他们的大使，我们得好好谈谈"
- dpe_contraband_event.51.B:0 "保持克制——我们不想引发外交事件"
+ dpe_contraband_event.51.B:0 "保持克制--我们不想引发外交事件"
  dpe_contraband_event.51.B.tooltip:0 "避免将此次事件政治化，低调联系[dpe_drugs_country.GetSpeciesAdj]大使，以遣返对方涉事人员为条件，要求他们在国内采取行动"
 
  dpe_contraband_event.52.name:0 "$dpe_contraband_event.51.name$"
  dpe_contraband_event.52.desc:0 "对违禁品源头的调查一直以来进展缓慢，但一次重要突破终于到来：海关官员在来自[dpe_drugs_country.GetName]的一大批进口货物中发现了大量致幻药物，它们被虚假报备，藏在数个货箱中。这批货物属于一家大型[dpe_drugs_country.GetSpeciesAdj]跨国公司的常规出口。进一步的调查显示，此类药物对[dpe_drugs_country.GetSpeciesNamePlural]个体作用温和，在其国内可自由流通。情报及边境安全部门由此怀疑，此次事件并非孤例，并开始对所有来自[dpe_drugs_country.GetName]的进口货物展开全面检查。我们应采取何种措施？ "
  dpe_contraband_event.52.A:0 "靠我们人民的苦难来牟利，他们必将后悔！"
  dpe_contraband_event.52.A.tooltip:0 "查没涉事公司的资产，实行严厉的边境管控"
- dpe_contraband_event.52.B:0 "保持克制——我们不想造成外交事件"
+ dpe_contraband_event.52.B:0 "保持克制--我们不想造成外交事件"
  dpe_contraband_event.52.B.tooltip:0 "对涉嫌走私者启动司法程序，但避免指控[dpe_drugs_country.GetSpeciesAdj]政府"
  dpe_contraband_event.52.C:0 "联系他们的大使，寻求外交解决方案"
 
  dpe_contraband_event.53.name:0 "$dpe_contraband_event.51.name$"
- dpe_contraband_event.53.desc:0 "非法致幻药物在国内愈发泛滥，执法部门针对其源头的调查取得了突破。他们划定了问题最为严重的地区，开始系统性的审问所有可疑人物。最终一个胆小怕事的嫌犯同意交代情况以换取减轻处罚。凭其供述，加上毒品卡特尔的疏忽，我们得以追查到走私者们的身份。令人惊讶的是，其中大部分人都是[dpe_drugs_country.GetSpeciesNamePlural]——事实上，这种药物在[dpe_drugs_country.GetName]是合法的，他们在那里可轻易得到货源，以供走私。\n\n后续调查没有发现[dpe_drugs_country.GetSpeciesAdj]政府参与其中的证据，但情报人员相信，他们很可能对走私活动早已知悉，却没有采取任何行动。下一步我们应该采取何种措施？"
+ dpe_contraband_event.53.desc:0 "非法致幻药物在国内愈发泛滥，执法部门针对其源头的调查取得了突破。他们划定了问题最为严重的地区，开始系统性的审问所有可疑人物。最终一个胆小怕事的嫌犯同意交代情况以换取减轻处罚。凭其供述，加上毒品卡特尔的疏忽，我们得以追查到走私者们的身份。令人惊讶的是，其中大部分人都是[dpe_drugs_country.GetSpeciesNamePlural]--事实上，这种药物在[dpe_drugs_country.GetName]是合法的，他们在那里可轻易得到货源，以供走私。\n\n后续调查没有发现[dpe_drugs_country.GetSpeciesAdj]政府参与其中的证据，但情报人员相信，他们很可能对走私活动早已知悉，却没有采取任何行动。下一步我们应该采取何种措施？"
  dpe_contraband_event.53.A:0 "立刻采取行动，关闭边境"
  dpe_contraband_event.53.B:0 "寻求[from.GetSpeciesAdj]帮助以共同打击走私"
  dpe_contraband_event.53.B.tooltip:0 "对情报人员的判断保持缄默，寻求外交外交解决方案。"
@@ -761,7 +761,7 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.61.option:0 "无所谓"
  
  dpe_contraband_event.62.name:0 "$dpe_contraband_event.62.name$"
- dpe_contraband_event.62.desc:0 "[root.GetSpeciesName]，我们风闻贵国政府一直以来竟通过通过向我国倾泻违禁药物以自肥。我们实在不愿相信原本被当做友邻的人会作出如此恶行。如果你们帮助我们共同解决走私问题，我们将不会深究——也不会将这些指控公之于众。"
+ dpe_contraband_event.62.desc:0 "[root.GetSpeciesName]，我们风闻贵国政府一直以来竟通过通过向我国倾泻违禁药物以自肥。我们实在不愿相信原本被当做友邻的人会作出如此恶行。如果你们帮助我们共同解决走私问题，我们将不会深究--也不会将这些指控公之于众。"
  dpe_contraband_event.62.A:0 "我们会全力协助"
  dpe_contraband_event.62.B:0 "我们不会提供帮助，[from.GetSpeciesName]"
  dpe_contraband_event.62.B.tooltip:0 "[from.GetSpeciesNamePlural]将会十分不满"
@@ -779,14 +779,14 @@ dpe_xenomission_like:0 "$dpe_xenomission_love$"
  dpe_contraband_event.63.option:0 "我们谴责你们的行径"
  
  dpe_contraband_event.64.name:0 "$dpe_contraband_event.62.name$"
- dpe_contraband_event.64.desc:0 "亲爱的[root.GetSpeciesAdj]，我们查获了一家[root.GetSpeciesAdj]企业向[from.GetName]走私非法药物的案件。我们非常希望贵方政府与此罪行毫无牵连……事实上，我们已经指示调查人员，如果走私活动显著减少，他们在采取行动时要牢记双方的传统友谊。希望贵方理解我们的好意……"
+ dpe_contraband_event.64.desc:0 "亲爱的[root.GetSpeciesAdj]，我们查获了一家[root.GetSpeciesAdj]企业向[from.GetName]走私非法药物的案件。我们非常希望贵方政府与此罪行毫无牵连......事实上，我们已经指示调查人员，如果走私活动显著减少，他们在采取行动时要牢记双方的传统友谊。希望贵方理解我们的好意......"
  dpe_contraband_event.64.A:0 "好戏要开场了"
  dpe_contraband_event.64.B:0 "什么药物？"
  dpe_contraband_event.64.B.tooltip:0 "[from.GetSpeciesNamePlural]将会十分不满"
  
  dpe_contraband_event.641.name:0 "$dpe_title_response$"
  dpe_contraband_event.641.desc:0 "我们不明白贵方言下何意。你们怎敢作出如此指控！"
- dpe_contraband_event.641.A:0 "或许我们应该更加深入的调查贵国政府在此事中的角色……"
+ dpe_contraband_event.641.A:0 "或许我们应该更加深入的调查贵国政府在此事中的角色......"
  
  dpe_contraband_event.642.name:0 "[from.GetSpeciesNamePlural]公然声称我方牵涉犯罪活动！"
  dpe_contraband_event.642.desc:0 "进一步调查揭示，你方政府与走私集团存在共谋。很遗憾这将迫使我们采取更加激烈的行动。"
@@ -851,7 +851,7 @@ dpe_spiritualist_mission.983.option:0 "At least they are still alive."
  dpe_egalitarian_missions.1.A.tooltip:0 "If the electoral experiment is a success, the [root.GetName] will gain the modifier $dpe_auth_held_successful_election$ for 5 years, granting:\n$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§\n$MOD_COUNTRY_UNREST_UNHAPPY_POP_EFFECT_MULT$: §G-25%§"
  
  dpe_egalitarian_missions.2.name:0 "An Unexpected Request"
- dpe_egalitarian_missions.2.desc:0 "Friends, inspired by your example, we are planning to - for the first time - hold elections. Given our inexperience in this field, we wish to request your assistance in observing them… in particular, in ensuring that the credibility of the results is upheld. Would you be willing to send observers?"
+ dpe_egalitarian_missions.2.desc:0 "Friends, inspired by your example, we are planning to - for the first time - hold elections. Given our inexperience in this field, we wish to request your assistance in observing them... in particular, in ensuring that the credibility of the results is upheld. Would you be willing to send observers?"
  dpe_egalitarian_missions.2.option:0 "Since when does the [from.GetSpeciesAdj] [from.GetRulerTitle] care for elections?"
  
  dpe_egalitarian_missions.3.name:0 "An Unexpected Request"
@@ -894,7 +894,7 @@ dpe_spiritualist_mission.983.option:0 "At least they are still alive."
  dpe_egalitarian_missions.9.option:0 "The people will be thrilled!"
  
  dpe_egalitarian_missions.91.name:0 "[from.GetSpeciesAdj] Elections Successfully Held"
- dpe_egalitarian_missions.91.desc:0 "Our agents have observed and reported on the elections as instructed. The [from.GetSpeciesNamePlural] allies are very enthused by our cooperation with their scheme, and their people seem to be blissfully ignorant of the entire charade. Hopefully we haven’t done democracy a disservice today."
+ dpe_egalitarian_missions.91.desc:0 "Our agents have observed and reported on the elections as instructed. The [from.GetSpeciesNamePlural] allies are very enthused by our cooperation with their scheme, and their people seem to be blissfully ignorant of the entire charade. Hopefully we haven't done democracy a disservice today."
  dpe_egalitarian_missions.91.option:0 "We have done what we must."
  
  dpe_egalitarian_missions.10.name:0 "Elections Held"

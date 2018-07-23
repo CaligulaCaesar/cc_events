@@ -5,7 +5,7 @@
 #Militarist:
 cc_colony_events.2.name:0 "退休的舰队司令在[root.GetName]上声望日隆"
 cc_colony_events.2.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的功勋退休舰队军官以其卓越的领导力激励了新殖民地上的居民，他们越发信赖[cc_colony_leader.GetHisHer]的判断。幸运的是，[cc_colony_leader.GetSheHe]似乎并不准备用[cc_colony_leader.GetHisHer]影响力来挑战[root.owner.GetName]政府。事实上，当地官员已向中央政府请愿，希望给予[cc_colony_leader.GetName]"[root.GetName]使节"的官方身份，以确保殖民地被妥善治理。" 
-cc_colony_events.2.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的功勋退休舰队军官以其卓越的领导力激励了新殖民地上的居民，他们越发信赖[cc_colony_leader.GetHisHer]的判断。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]——事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好——但是将[cc_colony_leader.GetHisHer]"[root.GetName]使节"的称号予以官方认可的请愿 (这并不符合我们的通常做法)获得了广泛支持。\n\n我们应该如何回应这一请愿?"
+cc_colony_events.2.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的功勋退休舰队军官以其卓越的领导力激励了新殖民地上的居民，他们越发信赖[cc_colony_leader.GetHisHer]的判断。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]--事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好--但是将[cc_colony_leader.GetHisHer]"[root.GetName]使节"的称号予以官方认可的请愿 (这并不符合我们的通常做法)获得了广泛支持。\n\n我们应该如何回应这一请愿?"
 cc_colony_events.2.desc.neg:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的功勋退休舰队军官以其卓越的领导力激励了新殖民地上的居民，他们越发信赖[cc_colony_leader.GetHisHer]的判断。[cc_colony_leader.GetName]十分享受自己新近获得的权威，被我们的地方官员称作"麻烦人物"。[cc_colony_leader.GetSheHe]支持了一项将其"[root.GetName]使节" 的称号予以官方认可的请愿。不幸的是，尽管与[root.GetName]的治理原则背道而驰，此事获得了广泛支持。\n\n我们应该如何回应这一请愿?" 
 
 cc_colony_events.2.A1:0 "将[cc_colony_leader.GetHimHer]任命为殖民地使节。" 
@@ -29,7 +29,7 @@ cc_colony_events.22.B:0 "释放[cc_colony_leader.GetHimHer]承认[cc_colony_lead
 
 
 cc_colony_events.221.name:0 "信任危机在[Root.GetName]上持续"
-cc_colony_events.221.desc:0 "数年之后,针对[cc_colony_leader.GetName]被捕的抗议已经消散。然而[cc_colony_leader.GetHisHer]的记忆——以及对[cc_colony_leader.GetSheHe]是如何被与[root.GetName]粗暴分离的记忆已经深深刻入了[root.GetName]的民众心中，仍然隐隐作痛。这里的殖民者不太可能再次毫无保留地信任母星系了。"
+cc_colony_events.221.desc:0 "数年之后,针对[cc_colony_leader.GetName]被捕的抗议已经消散。然而[cc_colony_leader.GetHisHer]的记忆--以及对[cc_colony_leader.GetSheHe]是如何被与[root.GetName]粗暴分离的记忆已经深深刻入了[root.GetName]的民众心中，仍然隐隐作痛。这里的殖民者不太可能再次毫无保留地信任母星系了。"
 
 cc_colony_events.23.name:0 "抗议者解救[cc_colony_leader.GetName]"
 cc_colony_events.23.desc:0 "[cc_colony_leader.GetName]被捕在[Root.GetName]激起了全面抗议。当地官员未能控制事态，在一片混乱中，一群抗议者冲破了行星监狱，释放了[cc_colony_leader.GetName]。我们的代表向执政官请求指导处理这一事件。"
@@ -99,7 +99,7 @@ cc_mourning_martyr:0 "缅怀烈士"
 #Pacifists
 
 cc_colony_events.3.name:0 "和平主义活动家在[root.GetName]上声望日隆"
-cc_colony_events.3.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的退休外交官最近在新殖民地上开展了一场媒体宣传活动，宣扬[root.owner.GetName]所推行的政治哲学，警告民众冲突的危险。一小群支持者迅速自发组织起来，他们称自己为"新甘地主义者"。这项新运动似乎在当地民众中广受欢迎，许多地方领袖也共同发声，反对战争与暴力。民众们——带着我们当地官员的支持——提议将[cc_colony_leader.GetName]确立为殖民地领袖，以支持[root.owner.GetName]确保银河和平的努力。"
+cc_colony_events.3.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上,情况正是如此。一位名叫[cc_colony_leader.GetName]的退休外交官最近在新殖民地上开展了一场媒体宣传活动，宣扬[root.owner.GetName]所推行的政治哲学，警告民众冲突的危险。一小群支持者迅速自发组织起来，他们称自己为"新甘地主义者"。这项新运动似乎在当地民众中广受欢迎，许多地方领袖也共同发声，反对战争与暴力。民众们--带着我们当地官员的支持--提议将[cc_colony_leader.GetName]确立为殖民地领袖，以支持[root.owner.GetName]确保银河和平的努力。"
 cc_colony_events.3.desc.neut:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的退休外交官最近在新殖民地上开展了一场媒体宣传活动，警告民众冲突的危险。一小群支持者迅速自发组织起来，他们称自己为"新甘地主义者"。这项新运动似乎在当地民众中广受欢迎，许多地方领袖也共同发声，反对战争与暴力。民众们提议将[cc_colony_leader.GetName]确立为殖民地领袖，以确保帝国理解他们对于外交政策的立场。 \n\n您希望如何处理这一情况?"
 cc_colony_events.3.desc.neg:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的退休外交官最近在新殖民地上开展了一场媒体宣传活动，警告民众冲突的危险。一小群支持者迅速自发组织起来，他们称自己为"新甘地主义者"。这项新运动似乎在当地民众中广受欢迎，许多地方领袖也共同发声，反对战争与暴力。民众们提议将[cc_colony_leader.GetName]确立为殖民地领袖，以确保帝国理解他们对于外交政策的立场。目前该星球上的政府官员对事态发展表示失望。在一些地区，当地民众对我们代理人的存在越发焦虑不满。\n\n您希望如何处理这一情况?"
 
@@ -150,7 +150,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]已经完成了对自己�
 
 
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]的星际旅程以悲剧告终"
-cc_colony_events.342.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的帝国主义者在安保人员作出反应之前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的人群当场将凶手杀死，我们无法对其展开审讯。阴谋论大行其道，声称一些人 - 甚至包括[root.owner.GetSpeciesAdj]政府的高层——是此次暗杀的幕后黑手。还有一些声音认为[random_visit_planet.GetName]上的[root.owner.GetSpeciesAdj]官员没有给[cc_colony_leader.GetName]提供足够的安保措施，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的和平主义团体激愤难平。和平主义派系领导人[pacifist_faction.GetName]在一片混乱中与政府官员进行了会面，表达了他们的震怒，但同时也提议为了平息和平主义者们的怒火，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为他建立一座纪念碑。"
+cc_colony_events.342.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的帝国主义者在安保人员作出反应之前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的人群当场将凶手杀死，我们无法对其展开审讯。阴谋论大行其道，声称一些人 - 甚至包括[root.owner.GetSpeciesAdj]政府的高层--是此次暗杀的幕后黑手。还有一些声音认为[random_visit_planet.GetName]上的[root.owner.GetSpeciesAdj]官员没有给[cc_colony_leader.GetName]提供足够的安保措施，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的和平主义团体激愤难平。和平主义派系领导人[pacifist_faction.GetName]在一片混乱中与政府官员进行了会面，表达了他们的震怒，但同时也提议为了平息和平主义者们的怒火，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为他建立一座纪念碑。"
 cc_colony_events.342.A:0 "照做。[cc_colony_leader.GetSheHeCap]配得上这样的荣誉"
 cc_pacmonument_will_be_built:0 "\n纪念碑会在5年后完成。 将会添加如下调整值：T §Y$cc_pacifist_centre$§!，效果：\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
@@ -217,7 +217,7 @@ cc_underground_pacifist_movement_2_desc:0 "在这颗星球上，一场以一名�
 
 cc_colony_events.4.name:0 "[root.GetName]上的亲外主义活动家"
 cc_colony_events.4.desc.pos:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。这在很大程度上要归功于一位名叫[cc_colony_leader.GetName]的博爱人士,他呼吁建立一个确保所有外星人得到平等、公正对待的系统。这种理念在新殖民者中正变得广受欢迎，大家都沉醉于使[root.GetName]成为一个多元文化天堂的愿景。他们开始称[cc_colony_leader.GetHimHer]为"协调者" 并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。幸运的是,[cc_colony_leader.GetSheHe]十分注重使自己的活动不被视为企图颠覆当地政府，总是在作重要决定前寻求地方官员的意见。作为回报，他们对[cc_colony_leader.GetHisHer]教导及倡议赞赏有加，并建议将[cc_colony_leader.GetHimHer]纳入当地决策层。" 
-cc_colony_events.4.desc.neut:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。这在很大程度上要归功于一位名叫[cc_colony_leader.GetName]的博爱人士,他呼吁建立一个确保所有外星人得到平等、公正对待的系统。这种理念在新殖民者中正变得广受欢迎，大家都沉醉于使[root.GetName]成为一个多元文化天堂的愿景。他们开始称[cc_colony_leader.GetHimHer]为"协调者" 并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]——事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好-但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导阶层通常所倡导的颇有不同。\n\n我们应如何对待[cc_colony_leader.GetHimHer]?"
+cc_colony_events.4.desc.neut:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。这在很大程度上要归功于一位名叫[cc_colony_leader.GetName]的博爱人士,他呼吁建立一个确保所有外星人得到平等、公正对待的系统。这种理念在新殖民者中正变得广受欢迎，大家都沉醉于使[root.GetName]成为一个多元文化天堂的愿景。他们开始称[cc_colony_leader.GetHimHer]为"协调者" 并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]--事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好-但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导阶层通常所倡导的颇有不同。\n\n我们应如何对待[cc_colony_leader.GetHimHer]?"
 cc_colony_events.4.desc.neg:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。这在很大程度上是由一位名叫[cc_colony_leader.GetName]的麻烦人物引起的,他呼吁建立一个确保所有外星人得到平等、公正对待的系统。这种理念在新殖民者中正变得广受欢迎，大家都沉醉于使[root.GetName]成为一个多元文化天堂的愿景。他们开始称[cc_colony_leader.GetHimHer]为"协调者" 并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetSheHe]将自己新获的权威用于宣扬其与[root.owner.GetName]主流相去甚远的理念，被我们的当地官员称为"公害"。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?" 
 
 cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
@@ -306,7 +306,7 @@ cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespe
 
 cc_colony_events.5.name:0 "Nationalist Agitator on[root.GetName]"
 cc_colony_events.5.desc.pos:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。 这在很大程度上要归功于一位名叫[cc_colony_leader.GetName]的演讲家,[cc_colony_leader.GetSheHe]反对所有外星人的激情演说征服了此地的新殖民者们，他们 开始称[cc_colony_leader.GetHimHer]为 "霸权家"，并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。幸运的是,[cc_colony_leader.GetSheHe]十分注重使自己的活动不被视为企图颠覆当地政府，总是在作重要决定前寻求地方官员的意见。作为回报，他们对[cc_colony_leader.GetHisHer]教导及倡议赞赏有加，并建议将[cc_colony_leader.GetHimHer]纳入当地决策层。" 
-cc_colony_events.5.desc.neut:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。 这在很大程度上是由一位名叫[cc_colony_leader.GetName]的演讲家引起,[cc_colony_leader.GetSheHe]反对所有外星人的激情演说征服了此地的新殖民者们，他们 开始称[cc_colony_leader.GetHimHer]为 "霸权家"，并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetName]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]——事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好-但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导阶层通常所倡导的颇有不同。\n\n我们应如何对待[cc_colony_leader.GetHimHer]?"
+cc_colony_events.5.desc.neut:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。 这在很大程度上是由一位名叫[cc_colony_leader.GetName]的演讲家引起,[cc_colony_leader.GetSheHe]反对所有外星人的激情演说征服了此地的新殖民者们，他们 开始称[cc_colony_leader.GetHimHer]为 "霸权家"，并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetName]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]--事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好-但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导阶层通常所倡导的颇有不同。\n\n我们应如何对待[cc_colony_leader.GetHimHer]?"
 cc_colony_events.5.desc.neg:0 "随着我们的步伐迈向群星，许多人开始思考，当我们发现其他生命时该如何面对？ \n\n在[root.GetName]上，这个话题在公众讨论中尤其热门。 这在很大程度上是由一位名叫[cc_colony_leader.GetName]的演讲家引起,[cc_colony_leader.GetSheHe]反对所有外星人的激情演说征服了此地的新殖民者们，他们 开始称[cc_colony_leader.GetHimHer]为 "霸权家"，并遵从[cc_colony_leader.GetHisHer]建议，甚至比对[root.owner.GetSpeciesAdj]高层更为尊重。[cc_colony_leader.GetName]将自己新获的权威用于宣扬其与[root.owner.GetName]主流相去甚远的理念，被我们的当地官员称为"一个对我们礼仪与星际外交关系的威胁" \n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?" 
 
 cc_colony_events.5.B:0 "$cc_colony_events.3.B$"
@@ -380,26 +380,26 @@ cc_colony_events.543.desc:0 "我们很高兴与你们合作，除去那个麻烦
 
 
 cc_colony_events.544.name:0 "成功解决[cc_colony_leader.GetName]"
-cc_colony_events.544.desc:0 "除去[cc_colony_leader.GetName]的计划基本取得成功——事情已经了结，没有留下任何能够牵连到我们的罪证。尽管如此，[cc_colony_leader.GetName]的支持者们似乎还是将我们视为幕后黑手——自然，如果一个人以外星阴谋论的视角看待一切事物，他总会蒙中那么一两次。不管怎么说，[from.owner.GetName]政府积极为我们掩护，并保证没有任何事物能够损害他们与[root.GetName]长久以来的友谊。"
+cc_colony_events.544.desc:0 "除去[cc_colony_leader.GetName]的计划基本取得成功--事情已经了结，没有留下任何能够牵连到我们的罪证。尽管如此，[cc_colony_leader.GetName]的支持者们似乎还是将我们视为幕后黑手--自然，如果一个人以外星阴谋论的视角看待一切事物，他总会蒙中那么一两次。不管怎么说，[from.owner.GetName]政府积极为我们掩护，并保证没有任何事物能够损害他们与[root.GetName]长久以来的友谊。"
 
 cc_colony_events.545.name:0 "[from.owner.GetName]背叛了我们!"
-cc_colony_events.545.desc:0 "[cc_colony_leader.GetName]已被成功消灭——事情了结，没有留下任何能够牵连到我们的罪证。尽管如此，[cc_colony_leader.GetName]的支持者们似乎还是将我们视为幕后黑手——自然，如果一个人以外星阴谋论的视角看待一切事物，他总会蒙中那么一两次。然而，尽管[from.owner.GetSpeciesAdj][from.owner.GetRulerTitle]先前向我们保证支持此次计划，事发之后[from.owner.leader.GetSheHe]却背信弃义，将责任全部推到[root.GetName]头上,以最恶毒的侮辱诋毁我们的帝国。当我们的大使要求解释时，他却被命令10日之内离开当地星球......"
+cc_colony_events.545.desc:0 "[cc_colony_leader.GetName]已被成功消灭--事情了结，没有留下任何能够牵连到我们的罪证。尽管如此，[cc_colony_leader.GetName]的支持者们似乎还是将我们视为幕后黑手--自然，如果一个人以外星阴谋论的视角看待一切事物，他总会蒙中那么一两次。然而，尽管[from.owner.GetSpeciesAdj][from.owner.GetRulerTitle]先前向我们保证支持此次计划，事发之后[from.owner.leader.GetSheHe]却背信弃义，将责任全部推到[root.GetName]头上,以最恶毒的侮辱诋毁我们的帝国。当我们的大使要求解释时，他却被命令10日之内离开当地星球......"
 cc_colony_events.545.option:0 "$cc_colony_events.542.option$"
 
 cc_colony_events.546.name:0 "暗杀失败!" 
-cc_colony_events.546.desc:0 "我们的情报官员搞砸了刺杀[cc_colony_leader.GetName]的计划,并在行动中被捕。为了不暴露政府在此事中的牵连，我们无法将他们救回，因此他们的命运只能全靠自己了。不幸的是，他们似乎已经招供，不仅承认我们企图暗杀[cc_colony_leader.GetHimHer],更揭露了我们是应[ally.GetName]要求而行事。此事在全国范围内激起轩然大波。[cc_colony_leader.GetName]的支持者们怒气冲天，已经开始公然号召抵制中央政府——其呼声在普通民众间也获得了相当程度的支持，许多人都对政府选择与外星政权共谋杀害一位自己的公民而义愤填膺。为此，要求政府下台的抗议四处扩散。\n\n[ally.GetName]的大使已为计划的失败道歉，并愿意提供任何[ally.GetName]力所能及的帮助，不过他认为更多的[ally.GetSpeciesAdj]参与在目前的政治风向中可能会产生反效果-在受到刺杀威胁后，他目前在政府大楼中避难。\n\n另一方面，眼下[cc_colony_leader.GetName]的声望如日中天，现在正在拜访自己母星附近各个星球上的支持者,呼吁大家支持[cc_colony_leader.GetHimHer],一个"真正的[root.owner.GetSpeciesName]",以对抗政府中的"叛徒"。\n\n我们在目前的动乱局势中应该如何行事？" 
+cc_colony_events.546.desc:0 "我们的情报官员搞砸了刺杀[cc_colony_leader.GetName]的计划,并在行动中被捕。为了不暴露政府在此事中的牵连，我们无法将他们救回，因此他们的命运只能全靠自己了。不幸的是，他们似乎已经招供，不仅承认我们企图暗杀[cc_colony_leader.GetHimHer],更揭露了我们是应[ally.GetName]要求而行事。此事在全国范围内激起轩然大波。[cc_colony_leader.GetName]的支持者们怒气冲天，已经开始公然号召抵制中央政府--其呼声在普通民众间也获得了相当程度的支持，许多人都对政府选择与外星政权共谋杀害一位自己的公民而义愤填膺。为此，要求政府下台的抗议四处扩散。\n\n[ally.GetName]的大使已为计划的失败道歉，并愿意提供任何[ally.GetName]力所能及的帮助，不过他认为更多的[ally.GetSpeciesAdj]参与在目前的政治风向中可能会产生反效果-在受到刺杀威胁后，他目前在政府大楼中避难。\n\n另一方面，眼下[cc_colony_leader.GetName]的声望如日中天，现在正在拜访自己母星附近各个星球上的支持者,呼吁大家支持[cc_colony_leader.GetHimHer],一个"真正的[root.owner.GetSpeciesName]",以对抗政府中的"叛徒"。\n\n我们在目前的动乱局势中应该如何行事？" 
 cc_colony_events.546.A:0 "我们会渡过难关"
 cc_colony_events.546.B:0 "尝试达成和解：谴责暗杀行动及[ally.GetSpeciesNamePlural]"
 cc_colony_events.546.C:0 "道歉并辞职下台"
 
 cc_colony_events.547.name:0 "暗杀计划失败"
-cc_colony_events.547.desc:0 "我们的盟友和他们无能的特工不仅没能杀掉"霸权家"[cc_colony_leader.GetName],反而在行动中被捕。特工随后供出了我们对此事的参与，在[from.owner.GetName]内部引起了轩然大波,导致双方外交关系空前紧张——不过到目前为止，他们的领导人向我们保证，他们对我们的态度没有改变。"
+cc_colony_events.547.desc:0 "我们的盟友和他们无能的特工不仅没能杀掉"霸权家"[cc_colony_leader.GetName],反而在行动中被捕。特工随后供出了我们对此事的参与，在[from.owner.GetName]内部引起了轩然大波,导致双方外交关系空前紧张--不过到目前为止，他们的领导人向我们保证，他们对我们的态度没有改变。"
 cc_colony_events.548.name:0 "背叛!"
 cc_colony_events.548.desc:0 "我们的盟友和他们无能的特工不仅没能杀掉"霸权家"[cc_colony_leader.GetName],反而在行动中被捕。特工随后供出了我们对此事的参与，在[from.owner.GetName]内部引起了轩然大波。被民众的动乱所裹挟，[from.owner.GetSpeciesAdj]政府试图将事件归咎于我们，严厉谴责了[root.GetName]，口径与[cc_colony_leader.GetName]如出一辙。当我们的大使要求解释时，他被告知限10日之内离开当地星球。看来我们与[from.owner.GetName]的关系已经急剧恶化！"
 cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
 
 cc_colony_events.55.name:0 "伟人离世"
-cc_colony_events.55.desc:0 "[cc_colony_leader.GetName],[root.GetName]中的"霸权家",于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]民众陷入悲伤，并要求我们以[cc_colony_leader.GetHisHer]的名义建立一所特殊的学院——不仅为纪念[cc_colony_leader.GetHisHer]的成就，更为展现[cc_colony_leader.Species.GetAdj]族民的荣光。"
+cc_colony_events.55.desc:0 "[cc_colony_leader.GetName],[root.GetName]中的"霸权家",于今天早晨离世。[cc_colony_leader.GetSheHe]已经与糟糕的健康状况斗争了很久，一次高烧最终夺去了其生命。[root.GetName]民众陷入悲伤，并要求我们以[cc_colony_leader.GetHisHer]的名义建立一所特殊的学院--不仅为纪念[cc_colony_leader.GetHisHer]的成就，更为展现[cc_colony_leader.Species.GetAdj]族民的荣光。"
 cc_colony_events.55.A: "$cc_colony_events.25.A$"
 cc_colony_events.55.B: "$cc_colony_events.25.B$"
 cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
@@ -473,7 +473,7 @@ cc_hostile_towards_xenos:0 "敌视外星人"
 
 cc_colony_events.6.name:0 "唯心主义长老在[root.GetName]上声望日隆"
 cc_colony_events.6.desc.pos:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为"长老" ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。幸运的是,[cc_colony_leader.GetSheHe]十分注重使自己的活动不被视为企图颠覆当地政府，总是在作重要决定前寻求地方官员的意见。作为回报，他们对[cc_colony_leader.GetHisHer]教导及倡议赞赏有加，并建议将[cc_colony_leader.GetHimHer]纳入当地核心决策层。"
-cc_colony_events.6.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为"长老" ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。到目前为止，[cc_colony_leader.GetSheHe]还没有将其权威用于反对[root.owner.GetName]——的确,[cc_colony_leader.GetSheHe]一直与我们的当地政府合作良好- 但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导人颇有不同。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?"
+cc_colony_events.6.desc.neut:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为"长老" ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。到目前为止，[cc_colony_leader.GetSheHe]还没有将其权威用于反对[root.owner.GetName]--的确,[cc_colony_leader.GetSheHe]一直与我们的当地政府合作良好- 但[cc_colony_leader.GetHisHer]的理念确实与[root.owner.GetName]领导人颇有不同。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?"
 cc_colony_events.6.desc.neg:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。一位名叫[cc_colony_leader.GetName]的精神领袖声望日渐高涨，人们将[cc_colony_leader.GetHimHer]称为"长老" ，对[cc_colony_leader.GetHisHer]的教导甚至比对[root.owner.GetSpeciesAdj]高层的法令更为看重。[cc_colony_leader.GetSheHe]将自己新获的权威用于实践其与[root.owner.GetName]主流相去甚远的理念，被我们的当地官员称为"麻烦人物"。\n\n我们应对[cc_colony_leader.GetHimHer]采取何种措施?"
 
 cc_colony_events.6.B:0 "$cc_colony_events.3.B$"
@@ -522,7 +522,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 
 
 cc_colony_events.642.name:0 "[cc_colony_leader.GetName]的星际旅行以悲剧收场"
-cc_colony_events.642.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的反唯心主义者在保镖作出反应前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的现场群众在我们有机会前审讯凶手前就将他撕碎。阴谋论大行其道，声称有人——甚至可能是[root.owner.GetSpeciesAdj]政府中的高层——暗中策划了刺杀。也有声音指责[random_visit_planet.GetName]上的当地政府没有给[cc_colony_leader.GetName]配备足够的安保力量，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的唯心主义团体奋起抗议。唯心主义派系领导[spiritualist_faction.GetName]在动乱中与政府官员会面，明确表达了他们的愤怒，但同时也表示，为平息唯心主义者们的伤痛，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为[cc_colony_leader.GetHimHer]建起一座陵墓。"
+cc_colony_events.642.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的反唯心主义者在保镖作出反应前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的现场群众在我们有机会前审讯凶手前就将他撕碎。阴谋论大行其道，声称有人--甚至可能是[root.owner.GetSpeciesAdj]政府中的高层--暗中策划了刺杀。也有声音指责[random_visit_planet.GetName]上的当地政府没有给[cc_colony_leader.GetName]配备足够的安保力量，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的唯心主义团体奋起抗议。唯心主义派系领导[spiritualist_faction.GetName]在动乱中与政府官员会面，明确表达了他们的愤怒，但同时也表示，为平息唯心主义者们的伤痛，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为[cc_colony_leader.GetHimHer]建起一座陵墓。"
 cc_colony_events.642.A:0 "批准。[cc_colony_leader.GetSheHeCap]值得如此纪念"
 cc_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_religious_centre$§!，效果:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
@@ -544,11 +544,11 @@ cc_colony_events.651.desc:0 "[cc_colony_leader.GetName]的陵墓已经完工。[
 #General random spiritualist guru
 
 cc_colony_events.100.name:0 "[root.GetName]上的著名长老"
-cc_colony_events.100.desc.pos:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布——[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。尽管有人担忧[cc_colony_leader.GetName]的光芒已经遮蔽了[root.owner.GetRulerTitle]，幸运的是，[cc_colony_leader.GetSheHe]已明确表示全面支持[root.owner.GetRulerTitle]，愿意服从其权威。"
+cc_colony_events.100.desc.pos:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布--[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。尽管有人担忧[cc_colony_leader.GetName]的光芒已经遮蔽了[root.owner.GetRulerTitle]，幸运的是，[cc_colony_leader.GetSheHe]已明确表示全面支持[root.owner.GetRulerTitle]，愿意服从其权威。"
 
-cc_colony_events.100.desc.neut:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布——[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。尽管有人担忧[cc_colony_leader.GetName]的光芒已经遮蔽了[root.owner.GetRulerTitle]，幸运的是，[cc_colony_leader.GetSheHe]已明确表示全面支持[root.owner.GetRulerTitle]，愿意服从其权威。\n\n然而[cc_colony_leader.GetName]所传授的哲学显著偏离了[root.owner.GetName]主流。我们应该采取行动吗?"
+cc_colony_events.100.desc.neut:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布--[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。尽管有人担忧[cc_colony_leader.GetName]的光芒已经遮蔽了[root.owner.GetRulerTitle]，幸运的是，[cc_colony_leader.GetSheHe]已明确表示全面支持[root.owner.GetRulerTitle]，愿意服从其权威。\n\n然而[cc_colony_leader.GetName]所传授的哲学显著偏离了[root.owner.GetName]主流。我们应该采取行动吗?"
 
-cc_colony_events.100.desc.neg:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布——[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。[root.owner.GetSpeciesName]政府中的许多人对其影响力的增长感到担忧，认为这将会威胁[root.owner.GetRulerTitle]的权威。[cc_colony_leader.GetName]还没有作出任何带有反叛意味的举动，但[cc_colony_leader.GetHisHer]哲学与[root.owner.GetName]主流水火不容。\n\n我们应该如何应对？"
+cc_colony_events.100.desc.neg:0 "一位名叫[cc_colony_leader.GetName]的唯心主义长老在[root.GetName]上地位日渐崇高。[cc_colony_leader.GetHisHerCap]的教导被大部分唯心主义民众所遵从，[cc_colony_leader.GetHisHer]的建议被视为宝贵财富。[cc_colony_leader.GetSheHeCap]已成功为[root.GetName]上的唯心主义派系重新注入了活力，甚至在附近星球上也信众遍布--[cc_colony_leader.GetSheHe]目前正在准备进行一场星际旅行，去拜访自己的追随者们。[root.owner.GetSpeciesName]政府中的许多人对其影响力的增长感到担忧，认为这将会威胁[root.owner.GetRulerTitle]的权威。[cc_colony_leader.GetName]还没有作出任何带有反叛意味的举动，但[cc_colony_leader.GetHisHer]哲学与[root.owner.GetName]主流水火不容。\n\n我们应该如何应对？"
 
 cc_colony_events.100.tooltip:0 "75单位距离内的星球将会得到以下调整值： $cc_spiritualist_leader_visit$，给予 §Y+20%§! $pop_ethic_spiritualist_attraction_mult$ 和 §G+10%§! $MOD_POP_HAPPINESS$."
 
@@ -690,8 +690,8 @@ cc_materialists_offended_desc:0 "这颗星球上的唯物主义人口因新政�
 cc_colony_events.8.name:0 "[root.GetName]上的君主制"
 cc_colony_events.8.desc.pos1:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。幸运的是，[cc_colony_leader.GetSheHe]似乎并不准备滥用其人望以挑战[root.owner.GetName]政府的权威。事实上，当地官员已向中央政府请愿正式给予[cc_colony_leader.GetName]"[root.GetName]亲王"的身份，以确保星球得到妥善治理。" 
 cc_colony_events.8.desc.pos2:0 "一个新生的殖民地对于雄心勃勃的人来说总是意味着一次进取的机会。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。幸运的是，[cc_colony_leader.GetSheHe]似乎并不准备滥用其人望以挑战[root.owner.GetName]政府的权威。事实上，当地官员已向中央政府请愿正式给予[cc_colony_leader.GetName]"[root.GetName]亲王"的身份，以确保星球得到妥善治理。"
-cc_colony_events.8.desc.neut1:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]——事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好——但是将[cc_colony_leader.GetHisHer]"[root.GetName]亲王" 的地位予以官方认可的请愿 (这并不符合我们的通常做法) 获得了广泛支持。\n\n我们应该如何回应这一请愿?" 
-cc_colony_events.8.desc.neut2:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]——事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好——但是将[cc_colony_leader.GetHisHer]"[root.GetName]亲王" 的地位予以官方认可的请愿 (这并不符合我们的通常做法) 获得了广泛支持。\n\n我们应该如何回应这一请愿?"
+cc_colony_events.8.desc.neut1:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]--事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好--但是将[cc_colony_leader.GetHisHer]"[root.GetName]亲王" 的地位予以官方认可的请愿 (这并不符合我们的通常做法) 获得了广泛支持。\n\n我们应该如何回应这一请愿?" 
+cc_colony_events.8.desc.neut2:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetSheHeCap]目前还没有将自己新近建立的权威用以反对[root.owner.GetName]--事实上，[cc_colony_leader.GetSheHe]与我们的当地官员合作良好--但是将[cc_colony_leader.GetHisHer]"[root.GetName]亲王" 的地位予以官方认可的请愿 (这并不符合我们的通常做法) 获得了广泛支持。\n\n我们应该如何回应这一请愿?"
 cc_colony_events.8.desc.neg1:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetName]十分享受自己新近获得的权威，被我们的地方官员称作"麻烦人物"。[cc_colony_leader.GetSheHe]支持了一项将其"[root.GetName]亲王" 的地位予以官方认可的请愿。不幸的是，尽管与[root.GetName]的治理原则背道而驰，此事获得了广泛支持。\n\n我们应该如何回应这一请愿?" 
 cc_colony_events.8.desc.neg2:0 "一个新生的殖民地总是意味着一次进取的机会,尤其是对那些难以在政治结构更为稳固的旧世界中取得显赫地位的人来说。\n\n在[root.GetName]上，情况正是如此。天资卓绝的[cc_colony_leader.GetName]以其无与伦比的领袖能力征服了新殖民者们，民众开始以皇室礼节待[cc_colony_leader.GetHimHer]。[cc_colony_leader.GetName]十分享受自己新近获得的权威，被我们的地方官员称作"麻烦人物"。[cc_colony_leader.GetSheHe]支持了一项将其"[root.GetName]亲王" 的地位予以官方认可的请愿。不幸的是，尽管与[root.GetName]的治理原则背道而驰，此事获得了广泛支持。\n\n我们应该如何回应这一请愿?"
 
