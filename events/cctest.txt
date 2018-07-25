@@ -928,3 +928,48 @@ country_event = {
 		}
 	}
 }
+
+
+
+
+country_event = {
+	id = cctest.500
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				capital_scope = {
+					habitability = {
+						who = root
+						value > 0.6
+					}
+				}
+			}
+			change_variable = {
+				which = cctest_habitability_1
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_playable_country = {
+						NOT = { has_ethic = ethic_gestalt_consciousness }
+						capital_scope = {
+							habitability = {
+								who = root
+								value < 0.95
+							}
+						}
+					}
+				}
+			}
+			change_variable = {
+				which = cctest_habitability_2
+				value = 1
+			}
+		}
+	}
+}

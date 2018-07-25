@@ -1,7 +1,6 @@
 
 namespace = cc_xeno_clashes
 
-
 planet_event = {
 	id = cc_xeno_clashes.1
 	hide_window = yes
@@ -9,7 +8,15 @@ planet_event = {
 	trigger = {
 		exists = owner
 		has_owner = yes
-		has_planet_flag = cc_eventperf_xeno_clashes_planet
+		owner = {
+			is_country_type = default
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		num_pops > 5
+		
+		any_owned_pop = { has_ethic = ethic_xenophobe }
+
+
 		NOR = {
 			has_planet_flag = cc_xeno_clashes
 #			has_planet_flag = pop_modification
@@ -21,78 +28,19 @@ planet_event = {
 				}
 			}
 		}
-	}
-	
-	mean_time_to_happen = {
-		years = 50
-		
-		modifier = {
-			factor = 2
-			unrest < 1
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
-			unrest < 1
-		}
-		modifier = {
-			factor = 0.67
-			unrest > 30
-		}
-		modifier = {
-			factor = 0.8
-			has_planet_flag = ccrebel_perf_xenophobes_1
-		}
-		modifier = {
-			factor = 0.8
-			has_planet_flag = ccrebel_perf_xenophobes_2
-		}
-		modifier = {
-			factor = 0.8
-			has_planet_flag = ccrebel_perf_xenophobes_3
-		}
-		modifier = {
-			factor = 1.33
-			has_planet_flag = ccrebel_perf_xenophiles_1
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_planet_flag = ccrebel_perf_xenophiles_2
-				has_planet_flag = ccrebel_perf_xenophiles_3
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = { NOT = { has_faction = supremacist } }
-		}
-		modifier = {
-			factor = 0.75
-			has_planet_flag = cc_eventperf_xeno_clashes_planet_likely
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
-		}
-	}
-	
-	immediate = {
-		owner = {
-			save_event_target_as = cc_owner
-			set_timed_country_flag = {
-				flag = cc_recent_first_xeno_clashes
-				years = 5
-			}
-		}
-		if = {
-			limit = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
-			owner.species = { save_event_target_as = species1 }
-		}
-		else = {
-			random_owned_pop = {
-				limit = {
+
+		any_owned_pop = {
+			species = { pops_have_happiness = yes }
+			is_enslaved = no
+			is_being_purged = no
+			planet = {
+				count_pops = {
+					limit = { is_same_species = prev }
+					count > 1
+				}
+				any_owned_pop = {
+					NOT = { is_same_species = prevprev }
 					species = { pops_have_happiness = yes }
-					is_robot_pop = no
 					is_enslaved = no
 					is_being_purged = no
 					
@@ -103,50 +51,195 @@ planet_event = {
 						}
 					}
 				}
-				species = {
-					save_event_target_as = species1
-				}
 			}
 		}
-		random_owned_pop = {
-			limit = {
-				species = { NOT = { is_same_value = event_target:species1 } }
-				species = { pops_have_happiness = yes }
-				is_robot_pop = no
-				is_enslaved = no
-				is_being_purged = no
-				planet = {
-					count_pops = {
-						limit = { is_same_species = prev }
-						count > 1
+		
+	}
+	
+	mean_time_to_happen = {
+		years = 30
+	}
+	
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0.5
+					unrest > 30
+				}
+				modifier = {
+					factor = 2
+					owner = { NOT = { has_faction = supremacist } }
+				}
+				modifier = {
+					factor = 0.75
+					
+					any_owned_pop = {
+						species = { pops_have_happiness = yes }
+						NOT = { is_robot_pop = yes }
+						is_enslaved = no
+						is_being_purged = no
+						planet = {
+							count_pops = {
+								limit = { is_same_species = prev }
+								count > 2
+							}
+							any_owned_pop = {
+								NOT = { is_same_species = prevprev }
+								species = { pops_have_happiness = yes }
+								is_robot_pop = no
+								is_enslaved = no
+								is_being_purged = no
+								
+								planet = {
+									count_pops = {
+										limit = { is_same_species = prev }
+										count > 2
+									}
+								}
+							}
+						}
 					}
 				}
 			}
-			species = {
-				save_event_target_as = species2
+
+			1 = {
+				modifier = {
+					factor = 0.5
+					unrest < 1
+				}
+				modifier = {
+					factor = 0.75
+					has_planet_flag = ccrebel_perf_xenophiles_1
+					NOR = {
+						has_planet_flag = ccrebel_perf_xenophiles_2
+						has_planet_flag = ccrebel_perf_xenophiles_3
+					}
+				}
+				modifier = {
+					factor = 0.5
+					OR = {
+						has_planet_flag = ccrebel_perf_xenophiles_2
+						has_planet_flag = ccrebel_perf_xenophiles_3
+					}
+				}
+				modifier = {
+					factor = 1.25
+					has_planet_flag = ccrebel_perf_xenophobes_1
+				}
+				modifier = {
+					factor = 1.25
+					has_planet_flag = ccrebel_perf_xenophobes_2
+				}
+				modifier = {
+					factor = 1.25
+					has_planet_flag = ccrebel_perf_xenophobes_3
+				}
+
+				owner = {
+					save_event_target_as = cc_owner
+					set_timed_country_flag = {
+						flag = cc_recent_first_xeno_clashes
+						years = 5
+					}
+				}
+				if = {
+					limit = {
+						any_owned_pop = {
+							species = { pops_have_happiness = yes }
+							NOT = { is_robot_pop = yes }
+							is_enslaved = no
+							is_being_purged = no
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+								any_owned_pop = {
+									NOT = { is_same_species = prevprev }
+									species = { pops_have_happiness = yes }
+									is_robot_pop = no
+									is_same_species = owner_species
+									is_enslaved = no
+									is_being_purged = no
+									
+									planet = {
+										count_pops = {
+											limit = { is_same_species = prev }
+											count > 1
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_planet_flag = {
+						flag = cc_eventperf_xeno_clashes_own_species_planet
+						days = 360
+					}
+					owner.species = { save_event_target_as = species1 }
+				}
+				else = {
+					random_owned_pop = {
+						limit = {
+							species = { pops_have_happiness = yes }
+							NOT = { is_robot_pop = yes }
+							is_enslaved = no
+							is_being_purged = no
+							
+							planet = {
+								count_pops = {
+									limit = { is_same_species = prev }
+									count > 1
+								}
+							}
+						}
+						species = {
+							save_event_target_as = species1
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						species = { NOT = { is_same_value = event_target:species1 } }
+						species = { pops_have_happiness = yes }
+						NOT = { is_robot_pop = yes }
+						is_enslaved = no
+						is_being_purged = no
+						planet = {
+							count_pops = {
+								limit = { is_same_species = prev }
+								count > 1
+							}
+						}
+					}
+					species = {
+						save_event_target_as = species2
+					}
+				}
+					
+					
+				if = {
+					limit = {
+						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+						unrest < 30
+					}
+					planet_event = { id = cc_xeno_clashes.2 }
+				}
+				if = {
+					limit = {
+						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+						NOT = { unrest < 30 }
+					}
+					planet_event = { id = cc_xeno_clashes.3 }
+				}
+				if = {
+					limit = {
+						NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+					}
+					planet_event = { id = cc_xeno_clashes.2 }
+				}
 			}
-		}
-			
-			
-		if = {
-			limit = {
-				has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
-				unrest < 30
-			}
-			planet_event = { id = cc_xeno_clashes.2 }
-		}
-		if = {
-			limit = {
-				has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
-				NOT = { unrest < 30 }
-			}
-			planet_event = { id = cc_xeno_clashes.3 }
-		}
-		if = {
-			limit = {
-				NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
-			}
-			planet_event = { id = cc_xeno_clashes.2 }
 		}
 	}
 }
