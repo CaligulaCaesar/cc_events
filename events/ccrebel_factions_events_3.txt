@@ -2531,6 +2531,11 @@ country_event = {
 					has_modifier = cc_faction_acute_unrest
 				}
 				save_event_target_as = cc_rebel_faction_capital
+
+				set_timed_planet_flag = {
+					flag = cc_faction_revolt_capital
+					days = 3600
+				}
 				
 				if = {
 					limit = { NOT = { any_owned_pop = { is_same_species = root } } }
@@ -3175,7 +3180,12 @@ country_event = {
 					controller = { is_same_value = root }
 					has_modifier = cc_faction_acute_unrest
 				}
+				save_event_target_as = cc_rebel_faction_capital
 			
+				set_timed_planet_flag = {
+					flag = cc_faction_revolt_capital
+					days = 3600
+				}
 			
 				set_planet_flag = revolt_in_progress
 				

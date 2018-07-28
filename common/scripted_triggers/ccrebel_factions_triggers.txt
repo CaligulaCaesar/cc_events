@@ -372,7 +372,7 @@ has_same_faction_as_2nd_faction = {
 			has_culture_shock = no
 		}
 		AND = {
-			owner = { has_country_flag = cc_xenoist_revolt_secondary_active }
+			owner = { has_country_flag = cc_xenoist_secondary_revolt_active }
 #			member_of_faction = xenoist
 			has_ethic = ethic_xenophile
 			is_enslaved = no

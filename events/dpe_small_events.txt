@@ -518,11 +518,23 @@ country_event = {
 	desc = dpe_smallpos_events.11.desc
 	picture = {
 		picture = GFX_evt_society_research
-		trigger = { has_country_flag = dpe_temp_soc_research }
+		trigger = {
+			OR = {
+				has_country_flag = dpe_temp_soc_research
+				NOR = {
+					has_country_flag = dpe_temp_phy_research
+					has_country_flag = dpe_temp_psionics
+				}
+			}
+		}
 	}
 	picture = {
 		picture = GFX_evt_physics_research
 		trigger = { has_country_flag = dpe_temp_phy_research }
+	}
+	picture = {
+		picture = GFX_evt_psionics
+		trigger = { has_country_flag = dpe_temp_psionics }
 	}
 
 	location = event_target:dpe_talent_planet
@@ -692,6 +704,10 @@ country_event = {
 							flag = dpe_talent_expertise_materials
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -699,6 +715,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_propulsion
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_phy_research
 							days = 5
 						}
 					}
@@ -710,6 +730,10 @@ country_event = {
 							flag = dpe_talent_expertise_voidcraft
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_phy_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -717,6 +741,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_industry
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
 							days = 5
 						}
 					}
@@ -728,6 +756,10 @@ country_event = {
 							flag = dpe_talent_expertise_field_manipulation
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_phy_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -735,6 +767,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_particles
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_phy_research
 							days = 5
 						}
 					}
@@ -746,6 +782,10 @@ country_event = {
 							flag = dpe_talent_expertise_computing
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_phy_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -753,6 +793,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_psionics
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_psionics
 							days = 5
 						}
 					}
@@ -764,6 +808,10 @@ country_event = {
 							flag = dpe_talent_expertise_new_worlds
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -771,6 +819,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_statecraft
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
 							days = 5
 						}
 					}
@@ -782,6 +834,10 @@ country_event = {
 							flag = dpe_talent_expertise_biology
 							days = 5
 						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
+							days = 5
+						}
 					}
 				}
 				if = {
@@ -789,6 +845,10 @@ country_event = {
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_military_theory
+							days = 5
+						}
+						set_timed_country_flag = {
+							flag = dpe_temp_soc_research
 							days = 5
 						}
 					}

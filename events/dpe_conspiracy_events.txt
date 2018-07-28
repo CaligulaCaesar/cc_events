@@ -256,6 +256,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_uncovered_authoritarian_conspiracy
+			days = 3600
+		}
 		random_list = {
 			1 = { country_event = { id = dpe_conspiracy.25 days = 180 } }
 			1 = { country_event = { id = dpe_conspiracy.27 days = 270 } }
@@ -294,7 +298,13 @@ country_event = {
 	}
 
 	is_triggered_only = yes
-	
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_uncovered_authoritarian_conspiracy
+			days = 3600
+		}
+	}
 
 	option = {
 		name = dpe_conspiracy.24.A
@@ -422,6 +432,11 @@ country_event = {
 				modifier = dpe_state_in_lockdown_faction
 				days = 180
 			}
+		}
+
+		set_timed_country_flag = {
+			flag = dpe_uncovered_authoritarian_conspiracy
+			days = 3600
 		}
 			
 		
