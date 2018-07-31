@@ -459,8 +459,9 @@ country_event = {
 					flag = dpe_asking_fe_for_help
 				}
 			}
+			country_event = { id = dpe_fe.5 days = 15 random = 90 }
 		}
-		ruler = { kill_leader = { show_notification = no } }
+		custom_tooltip = dpe_leader_die_soon
 	}
 }
 
@@ -1107,6 +1108,15 @@ country_event = {
 
 	option = {
 		name = dpe_fe.3.option
+
+		hidden_effect = {
+			event_target:dpe_fe = {
+				remove_relation_flag = {
+					who = ROOT
+					flag = dpe_asking_fe_for_help
+				}
+			}
+		}
 	
 		if = {
 			limit = {
@@ -1189,12 +1199,6 @@ country_event = {
 			custom_tooltip = dpe_fe.3.option.materialist 
 
 			hidden_effect = {
-				event_target:dpe_fe = {
-					remove_relation_flag = {
-						who = ROOT
-						flag = dpe_asking_fe_for_help
-					}
-				}
 				root.ruler = {
 					modify_species = {
 						add_trait = trait_cybernetic
@@ -1239,6 +1243,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		from = { is_same_value = root.ruler }
 		has_country_flag = dpe_has_had_terminally_ill_ruler
 		any_country = {
 			has_relation_flag = {
