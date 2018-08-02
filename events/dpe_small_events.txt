@@ -523,6 +523,7 @@ country_event = {
 				has_country_flag = dpe_temp_soc_research
 				NOR = {
 					has_country_flag = dpe_temp_phy_research
+					has_country_flag = dpe_temp_eng_research
 					has_country_flag = dpe_temp_psionics
 				}
 			}
@@ -531,6 +532,10 @@ country_event = {
 	picture = {
 		picture = GFX_evt_physics_research
 		trigger = { has_country_flag = dpe_temp_phy_research }
+	}
+	picture = {
+		picture = GFX_evt_engineering_research
+		trigger = { has_country_flag = dpe_temp_eng_research }
 	}
 	picture = {
 		picture = GFX_evt_psionics
@@ -705,7 +710,7 @@ country_event = {
 							days = 5
 						}
 						set_timed_country_flag = {
-							flag = dpe_temp_soc_research
+							flag = dpe_temp_eng_research
 							days = 5
 						}
 					}
@@ -731,7 +736,7 @@ country_event = {
 							days = 5
 						}
 						set_timed_country_flag = {
-							flag = dpe_temp_phy_research
+							flag = dpe_temp_eng_research
 							days = 5
 						}
 					}
@@ -744,7 +749,7 @@ country_event = {
 							days = 5
 						}
 						set_timed_country_flag = {
-							flag = dpe_temp_soc_research
+							flag = dpe_temp_eng_research
 							days = 5
 						}
 					}
@@ -783,7 +788,7 @@ country_event = {
 							days = 5
 						}
 						set_timed_country_flag = {
-							flag = dpe_temp_phy_research
+							flag = dpe_temp_eng_research
 							days = 5
 						}
 					}
