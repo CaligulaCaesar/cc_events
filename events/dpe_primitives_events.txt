@@ -5,7 +5,7 @@ namespace = dpe_primitives
 
 #on_space_battle_won
 country_event = {
-	id = mem_dpe_primitive_events.1
+	id = dpe_primitive_events.1
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -21,7 +21,8 @@ country_event = {
 				owner = {
 					is_country_type = primitive
 					
-					NOT = { has_country_flag = mem_dpe_has_discovered_aliens }
+					NOT = { has_country_flag = dpe_has_discovered_aliens }
+					NOT = { has_country_flag = dpe_has_had_lights_in_sky }
 				}
 				if = {
 					limit = { has_observation_outpost = yes }
@@ -37,6 +38,7 @@ country_event = {
 	
 	immediate = {
 		fromfrom.solar_system = {
+			save_event_target_as = dpe_primitive_system
 			random_planet = {
 				limit = {
 					has_owner = yes
@@ -46,13 +48,14 @@ country_event = {
 				save_event_target_as = dpe_primitive_planet
 				owner = {
 					save_event_target_as = dpe_primitive_civ
+					set_country_flag = dpe_has_had_lights_in_sky
 				}
 				if = {
 					limit = { has_observation_outpost = yes }
 					random_list = {
 						1 = {
 							observation_outpost_owner = {
-								country_event = { id = mem_dpe_primitive_events.2 days = 20 }
+								country_event = { id = dpe_primitive_events.2 days = 20 }
 							}
 							modifier = {
 								factor = 2
@@ -177,7 +180,7 @@ country_event = {
 							}
 						}
 						root = {
-							country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
+							country_event = { id = dpe_primitive_events.3 days = 60 random = 360 }
 						}
 					}
 				}
@@ -236,7 +239,42 @@ country_event = {
 
 	is_triggered_only = yes
 
-	picture!
+	picture = {
+		trigger = {
+			event_target:dpe_primitive_civ = {
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+				}
+			}
+		}
+		picture = GFX_evt_alien_cavemen
+	}
+	picture = {
+		trigger = {
+			event_target:dpe_primitive_civ = {
+				OR = {
+					has_country_flag = iron_age
+					has_country_flag = late_medieval_age
+					has_country_flag = renaissance_age
+					has_country_flag = steam_age
+				}
+			}
+		}
+		picture = GFX_evt_medieval_alien_civilization
+	}
+	picture = {
+		trigger = {
+			event_target:dpe_primitive_civ = {
+				OR = {
+					has_country_flag = machine_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
+			}
+		}
+		picture = GFX_evt_news_room
+	}
 
 	immediate = {
 		if = {
@@ -245,12 +283,75 @@ country_event = {
 					has_country_flag = early_space_age
 				}
 			}
-			country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
+			country_event = { id = dpe_primitive_events.3 days = 60 random = 360 }
 		}
 	}
 
-	option = { #need several for different ethics
+	option = {
+		name = INTERESTING
 
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				event_target:dpe_primitive_civ = {
+					has_country_flag = early_space_age
+				}
+			}
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	option = {
+		name = dpe_primitive_events.2.amusing
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				event_target:dpe_primitive_civ = {
+					has_country_flag = early_space_age
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_primitive_events.2.irrelevant
+
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	option = {
+		name = dpe_primitive_events.2.terminator
+
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+
+	option = {
+		name = dpe_primitive_events.2.devourer
+
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
 	}
 }	
 					
