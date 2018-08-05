@@ -43,8 +43,9 @@ country_event = {
 					exists = owner
 					owner = { is_country_type = primitive }
 				}
+				save_event_target_as = dpe_primitive_planet
 				owner = {
-					save_event_target_as = dpe_primitives
+					save_event_target_as = dpe_primitive_civ
 				}
 				if = {
 					limit = { has_observation_outpost = yes }
@@ -191,7 +192,7 @@ country_event = {
 
 	desc = {
 		trigger = {
-			event_target:dpe_primitives = {
+			event_target:dpe_primitive_civ = {
 				OR = {
 					has_country_flag = stone_age
 					has_country_flag = bronze_age
@@ -203,18 +204,18 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitives = {
+			event_target:dpe_primitive_civ = {
 				OR = {
 					has_country_flag = late_medieval_age
 					has_country_flag = renaissance_age
 				}
 			}
 		}
-		text = dpe_primitives.2.enlightened
+		text = dpe_primitives.2.renaissance
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitives = {
+			event_target:dpe_primitive_civ = {
 				OR = {
 					has_country_flag = steam_age
 					has_country_flag = machine_age
@@ -226,17 +227,21 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitives = {
+			event_target:dpe_primitive_civ = {
 				has_country_flag = early_space_age
 			}
 		}
 		text = dpe_primitives.2.space_age
 	}
 
+	is_triggered_only = yes
+
+	picture!
+
 	immediate = {
 		if = {
 			limit = {
-				event_target:dpe_primitives = {
+				event_target:dpe_primitive_civ = {
 					has_country_flag = early_space_age
 				}
 			}
