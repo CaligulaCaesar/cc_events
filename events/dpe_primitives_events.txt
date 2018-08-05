@@ -175,7 +175,7 @@ country_event = {
 								has_country_flag = early_space_age
 							}
 						}
-						owner = {
+						root = {
 							country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
 						}
 					}
@@ -233,10 +233,19 @@ country_event = {
 		text = dpe_primitives.2.space_age
 	}
 
+	immediate = {
+		if = {
+			limit = {
+				event_target:dpe_primitives = {
+					has_country_flag = early_space_age
+				}
+			}
+			country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
+		}
+	}
 
+	option = { #need several for different ethics
 
-	option = {
-		
 	}
 }	
 					
