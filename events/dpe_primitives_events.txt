@@ -416,6 +416,7 @@ country_event = {
 						years = 30
 					}
 				}
+				country_event = { id = dpe_primitive_events.3 }
 			}
 			solar_system = {
 				save_event_target_as = dpe_primitive_system
@@ -443,13 +444,10 @@ country_event = {
 		}
 		text = dpe_primitive_events.3.desc.gestalt
 	}
-
+	is_triggered_only = yes
+	
 	trigger = {
-
-	}
-
-	mean_time_to_happen = {
-		
+		Needs to check the primitives are still primitive
 	}
 }
 
