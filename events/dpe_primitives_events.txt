@@ -15,6 +15,9 @@ country_event = {
 				which = dpe_space_battle
 				value > 20
 			}
+			NOT = {
+				has_star_flag = mem_lunar_age_system
+			}
 			any_planet = {
 				has_owner = yes
 				exists = owner
@@ -23,6 +26,11 @@ country_event = {
 					
 					NOT = { has_country_flag = dpe_has_discovered_aliens }
 					NOT = { has_country_flag = dpe_has_had_lights_in_sky }
+				}
+				any_pop = {
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
 				}
 				if = {
 					limit = { has_observation_outpost = yes }
@@ -354,8 +362,106 @@ country_event = {
 		}
 	}
 }	
-					
-					
+
+#Persistent Radio Signals - primitives trigger
+country_event = {
+	id = dpe_primitive_events.299
+	hide_window = yes
+
+	trigger = {
+		is_primitive = yes
+		has_country_flag = early_space_age
+
+		NOT = {
+			has_country_flag = dpe_has_discovered_aliens
+		}
+		
+		any_owned_pop = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		capital_scope = {
+			has_observation_outpost = yes
+
+			observation_outpost_owner = {
+				NOT = {
+					has_country_flag = dpe_recently_discovered_by_primitives
+				}
+			}
+
+			solar_system = {
+				NOT = {
+					has_star_flag = mem_lunar_age_system
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 30
+	}
+
+	immediate = {
+		set_country_flag = dpe_has_discovered_aliens
+
+		save_event_target_as = dpe_primitive_civ
+		
+		capital_scope = {
+			save_event_target_as = dpe_primitive_planet
+			observation_outpost_owner = {
+				NOT = {
+					set_timed_country_flag = {
+						flag = dpe_recently_discovered_by_primitives
+						years = 30
+					}
+				}
+			}
+			solar_system = {
+				save_event_target_as = dpe_primitive_system
+			}
+		}
+	}
+}
+
+
+#Persistent Radio Signals - actual event
+country_event = {
+	id = dpe_primitive_events.3
+	title = dpe_primitive_events.3.name
+	desc = {
+		trigger = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		text = dpe_primitive_events.3.desc
+	}
+	desc = {
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		text = dpe_primitive_events.3.desc.gestalt
+	}
+
+	trigger = {
+
+	}
+
+	mean_time_to_happen = {
+		
+	}
+}
+
+country_event = {
+	id = dpe_primitive_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+}
 					
 #other event: MTTH, much more likely to happen if you 
 		

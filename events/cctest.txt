@@ -973,3 +973,25 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = cctest.600
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		capital_scope.solar_system = {
+			spawn_megastructure = {
+				type = lgate_base
+				orbit_angle = 0
+				orbit_distance = 100
+			}
+			
+			spawn_megastructure = {
+				type = lgate_base
+				random_pos = yes
+			}
+		}
+	}
+}
