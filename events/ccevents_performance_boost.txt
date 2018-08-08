@@ -1081,35 +1081,6 @@ country_event = {
 			}
 		}
 
-		#Unity Planets
-		if = {
-			limit = {
-
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
-					has_country_flag = dpe_recent_unity_planet
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					unrest < 1
-					NOT = { has_planet_flag = dpe_unity_planet }
-					count_pops = {
-						limit = { species = { pops_have_happiness = yes } }
-						count > 7
-					}
-					pop_percentage = {
-						limit = { happiness > 0.55 }
-						percentage > 0.75
-					}
-				}
-				set_timed_planet_flag = {
-					flag = dpe_potential_unity_planet
-				days = 31
-				}
-			}
-		}
-
 		#Spiritualist Mission
 		if = {
 			limit = {

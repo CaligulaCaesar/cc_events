@@ -1,11 +1,37 @@
 
 namespace = dpe_smallpos_events
 
+
 planet_event = {
 	id = dpe_smallpos_events.1
 	hide_window = yes
 
-	trigger = { has_planet_flag = dpe_potential_unity_planet }
+	trigger = {
+		has_owner = yes
+
+		unrest < 1
+		NOR = {
+			has_planet_flag = dpe_unity_planet
+			has_planet_flag = dpe_dissent_planet
+		}
+		count_pops = {
+			limit = { species = { pops_have_happiness = yes } }
+			count > 7
+		}
+		pop_percentage = {
+			limit = { happiness > 0.55 }
+			percentage > 0.75
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = dpe_recent_unity_planet
+			}
+		}
+	}
 
 	mean_time_to_happen = { years = 50 }
 
@@ -21,27 +47,6 @@ planet_event = {
 	picture = GFX_evt_unity_symbol
 
 	is_triggered_only = yes
-
-	trigger = {
-		exists = owner
-		owner = {
-			is_country_type = default
-			NOR = {
-				has_ethic = ethic_gestalt_consciousness
-				has_country_flag = dpe_recent_unity_planet
-			}
-		}
-		NOT = { has_planet_flag = dpe_unity_planet }
-		unrest < 1
-		count_pops = {
-			limit = { species = { pops_have_happiness = yes } }
-			count > 7
-		}
-		pop_percentage = {
-			limit = { happiness > 0.55 }
-			percentage > 0.75
-		}
-	}
 
 	immediate = {
 		set_timed_planet_flag = {
@@ -1532,3 +1537,187 @@ country_event = {
 		}
 	}
 }
+
+
+
+
+
+######Output-based events (like the unity one)
+
+#Dissent
+planet_event = {
+	id = dpe_smallpos_events.20
+	title = dpe_smallpos_events.20.name
+	desc = {
+		text = dpe_smallpos_events.20.desc.A
+		trigger = {
+			has_planet_flag = dpe_dissent_a
+		}
+	}
+	desc = {
+		text = dpe_smallpos_events.20.desc.B
+		trigger = {
+			has_planet_flag = dpe_dissent_b
+		}
+	}
+	picture = GFX_evt_alien_propaganda
+
+	trigger = {
+		has_owner = yes
+
+		NOR = {
+			has_planet_flag = dpe_unity_planet
+			has_planet_flag = dpe_dissent_planet
+		}
+		count_pops = {
+			limit = {
+				species = { pops_have_happiness = yes }
+				has_citizenship_rights = yes
+			}
+			count > 7
+		}
+		pop_percentage = {
+			limit = { happiness < 0.75 }
+			percentage > 0.75
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = dpe_recent_dissent_planet
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 60 }
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_dissent_planet
+			years = 40
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_dissent_planet
+				years = 30
+			}
+		}
+		random_list = {
+			1 = {
+				set_timed_country_flag = {
+					flag = dpe_dissent_a
+					days = 5
+				}
+			}
+			1 = {
+				set_timed_country_flag = {
+					flag = dpe_dissent_b
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+		add_modifier = {
+			modifier = dpe_dissent_planet
+			days = 3600
+		}
+	}
+}
+
+#Positive Energy
+planet_event = {
+	id = dpe_smallpos_events.21
+	title = dpe_smallpos_events.21.name
+	desc = {
+		text = dpe_smallpos_events.21.desc
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+	desc = {
+		text = dpe_smallpos_events.21.desc.gestalt
+		owner = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	picture = GFX_evt_metropolis
+
+	trigger = {
+		has_owner = yes
+
+		NOR = {
+			has_planet_flag = dpe_posenergy_planet
+			has_planet_flag = dpe_negenergy_planet
+		}
+
+		num_pops > 8
+		
+		if = {
+			limit = {
+				years_passed < 50
+			}
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = energy
+						amount > 2.5
+					}
+				}
+				count > 4
+			}
+			else = {
+				count_pops = {
+					limit = {
+						pop_produces_resource = {
+							type = energy
+							amount > 3.5
+						}
+					}
+					count > 5
+				}
+			}
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOT = {
+				has_country_flag = dpe_recent_posenergy_planet
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 50 }
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_posenergy_planet
+			years = 30
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_posenergy_planet
+				years = 30
+			}
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+		add_modifier = {
+			modifier = dpe_posenergy_planet
+			days = 1080
+		}
+	}
+}
+
+
+#GFX_evt_mining_operations
+#GFX_evt_metropolis
