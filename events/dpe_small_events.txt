@@ -1606,13 +1606,13 @@ planet_event = {
 		}
 		random_list = {
 			1 = {
-				set_timed_country_flag = {
+				set_timed_planet_flag = {
 					flag = dpe_dissent_a
 					days = 5
 				}
 			}
 			1 = {
-				set_timed_country_flag = {
+				set_timed_planet_flag = {
 					flag = dpe_dissent_b
 					days = 5
 				}
@@ -1718,6 +1718,269 @@ planet_event = {
 	}
 }
 
+#Negative Energy
+planet_event = {
+	id = dpe_smallpos_events.22
+	title = dpe_smallpos_events.22.name
+	desc = {
+		text = dpe_smallpos_events.22.desc
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+	desc = {
+		text = dpe_smallpos_events.22.desc.gestalt
+		owner = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	picture = GFX_evt_metropolis
 
-#GFX_evt_mining_operations
-#GFX_evt_metropolis
+	trigger = {
+		has_owner = yes
+
+		NOR = {
+			has_planet_flag = dpe_posenergy_planet
+			has_planet_flag = dpe_negenergy_planet
+		}
+
+		num_pops > 8
+		
+		if = {
+			limit = {
+				years_passed < 50
+			}
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = energy
+						amount > 2.5
+					}
+				}
+				count > 4
+			}
+			else = {
+				count_pops = {
+					limit = {
+						pop_produces_resource = {
+							type = energy
+							amount > 3.5
+						}
+					}
+					count > 5
+				}
+			}
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOT = {
+				has_country_flag = dpe_recent_negenergy_planet
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 60 }
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_negenergy_planet
+			years = 30
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_negenergy_planet
+				years = 30
+			}
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		add_modifier = {
+			modifier = dpe_negenergy_planet
+			days = 1080
+		}
+	}
+}
+
+#Positive Energy
+planet_event = {
+	id = dpe_smallpos_events.23
+	title = dpe_smallpos_events.23.name
+	desc = {
+		text = dpe_smallpos_events.23.desc
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+	desc = {
+		text = dpe_smallpos_events.23.desc.gestalt
+		owner = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	picture = GFX_evt_mining_operations
+
+	trigger = {
+		has_owner = yes
+
+		NOR = {
+			has_planet_flag = dpe_posminerals_planet
+			has_planet_flag = dpe_negminerals_planet
+		}
+
+		num_pops > 8
+		
+		if = {
+			limit = {
+				years_passed < 50
+			}
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = minerals
+						amount > 2.5
+					}
+				}
+				count > 4
+			}
+			else = {
+				count_pops = {
+					limit = {
+						pop_produces_resource = {
+							type = minerals
+							amount > 3.5
+						}
+					}
+					count > 5
+				}
+			}
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOT = {
+				has_country_flag = dpe_recent_posminerals_planet
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 50 }
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_posminerals_planet
+			years = 30
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_posminerals_planet
+				years = 30
+			}
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+		add_modifier = {
+			modifier = dpe_posminerals_planet
+			days = 3600
+		}
+	}
+}
+
+#Negative Energy
+planet_event = {
+	id = dpe_smallpos_events.24
+	title = dpe_smallpos_events.24.name
+	desc = {
+		text = dpe_smallpos_events.24.desc
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+	desc = {
+		text = dpe_smallpos_events.24.desc.gestalt
+		owner = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	picture = GFX_evt_mining_operations
+
+	trigger = {
+		has_owner = yes
+
+		NOR = {
+			has_planet_flag = dpe_posminerals_planet
+			has_planet_flag = dpe_negminerals_planet
+		}
+
+		num_pops > 8
+		
+		if = {
+			limit = {
+				years_passed < 50
+			}
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = minerals
+						amount > 2.5
+					}
+				}
+				count > 4
+			}
+			else = {
+				count_pops = {
+					limit = {
+						pop_produces_resource = {
+							type = minerals
+							amount > 3.5
+						}
+					}
+					count > 5
+				}
+			}
+		}
+
+		exists = owner
+		owner = {
+			is_country_type = default
+			NOT = {
+				has_country_flag = dpe_recent_negminerals_planet
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 60 }
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = dpe_negminerals_planet
+			years = 30
+		}
+		owner = {
+			set_timed_country_flag = {
+				flag = dpe_recent_negminerals_planet
+				years = 30
+			}
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		add_modifier = {
+			modifier = dpe_negminerals_planet
+			days = 3600
+		}
+	}
+}

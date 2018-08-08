@@ -560,8 +560,36 @@ dpe_dissent_planet = {
 	tile_resource_unity_mult = -0.33
 	pop_citizen_happiness = -0.15
 
-	icon_frame = 1
+	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+}
+
+dpe_posenergy_planet = {
+	tile_resource_energy_mult = 0.33
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sustainable_energy.dds"
+}
+
+dpe_negenergy_planet = {
+	tile_resource_energy_mult = -0.33
+
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_winter.dds"
+}
+
+dpe_posminerals_planet = {
+	tile_resource_minerals_mult = 0.2
+
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+}
+
+dpe_negminerals_planet = {
+	tile_resource_minerals_mult = -0.2
+
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_poor.dds"
 }
 
 dpe_persuasive_leader = {
