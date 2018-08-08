@@ -1,10 +1,10 @@
 
-namespace = dpe_space_battle
+namespace = mem_dpe_space_battle
 
 
 #on_ship_destroyed_perp
 country_event = {
-	id = dpe_space_battle.1
+	id = mem_dpe_space_battle.1
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -16,7 +16,7 @@ country_event = {
 				corvette = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 1
 						}
 					}
@@ -24,7 +24,7 @@ country_event = {
 				destroyer = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 2
 						}
 					}
@@ -32,7 +32,7 @@ country_event = {
 				cruiser = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 4
 						}
 					}
@@ -40,7 +40,7 @@ country_event = {
 				battleship = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 8
 						}
 					}
@@ -48,7 +48,7 @@ country_event = {
 				titan = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 16
 						}
 					}
@@ -56,7 +56,7 @@ country_event = {
 				default = {
 					solar_system = {
 						change_variable = {
-							which = dpe_space_battle
+							which = mem_dpe_space_battle
 							value = 2
 						}
 					}
@@ -69,27 +69,27 @@ country_event = {
 
 #on_space_battle_won
 country_event = {
-	id = dpe_space_battle.2
+	id = mem_dpe_space_battle.2
 	hide_window = yes
 	is_triggered_only = yes
 	
 	immediate = {
-		fromfrom.solar_system = { save_event_target_as = dpe_recently_ended_battle }
+		fromfrom.solar_system = { save_event_target_as = mem_dpe_recently_ended_battle }
 		
-		country_event = { id = dpe_space_battle.3 days = 5 }
+		country_event = { id = mem_dpe_space_battle.3 days = 5 }
 	}
 }
 
 
 country_event = {
-	id = dpe_space_battle.3
+	id = mem_dpe_space_battle.3
 	hide_window = yes
 	is_triggered_only = yes
 	
 	immediate = {
-		event_target:dpe_recently_ended_battle = {
+		event_target:mem_dpe_recently_ended_battle = {
 			set_variable = {
-				which = dpe_space_battle
+				which = mem_dpe_space_battle
 				value = 0
 			}
 		}

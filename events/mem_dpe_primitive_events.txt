@@ -1,5 +1,5 @@
 
-namespace = dpe_primitive_events
+namespace = mem_dpe_primitive_events
 
 
 
@@ -9,7 +9,7 @@ namespace = dpe_primitive_events
 # FromFrom = fleet 1
 # FromFromFrom = fleet 2
 country_event = {
-	id = dpe_primitive_events.1
+	id = mem_dpe_primitive_events.1
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -19,12 +19,12 @@ country_event = {
 			starbase.owner = {
 				is_country_type = default
 				NOT = {
-					has_country_flag = dpe_has_had_recent_lights_in_sky
+					has_country_flag = mem_dpe_has_had_recent_lights_in_sky
 				}
 			}
 
 			check_variable = {
-				which = dpe_space_battle
+				which = mem_dpe_space_battle
 				value > 20
 			}
 			NOT = {
@@ -40,8 +40,8 @@ country_event = {
 					
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						has_country_flag = dpe_has_had_lights_in_sky
-						has_country_flag = dpe_has_discovered_aliens
+						has_country_flag = mem_dpe_has_had_lights_in_sky
+						has_country_flag = mem_dpe_has_discovered_aliens
 					}
 				}
 				if = {
@@ -69,13 +69,13 @@ country_event = {
 	immediate = {
 		fromfrom.solar_system = {
 			starbase.owner = {
-				save_event_target_as = dpe_primitive_host
+				save_event_target_as = mem_dpe_primitive_host
 				set_timed_country_flag = {
-					flag = dpe_has_had_recent_lights_in_sky
+					flag = mem_dpe_has_had_recent_lights_in_sky
 					years = 20
 				}
 			}
-			save_event_target_as = dpe_primitive_system
+			save_event_target_as = mem_dpe_primitive_system
 			random_planet = {
 				limit = {
 					has_owner = yes
@@ -85,28 +85,28 @@ country_event = {
 				
 						NOR = {
 							has_ethic = ethic_gestalt_consciousness
-							has_country_flag = dpe_has_had_lights_in_sky
-							has_country_flag = dpe_has_discovered_aliens
+							has_country_flag = mem_dpe_has_had_lights_in_sky
+							has_country_flag = mem_dpe_has_discovered_aliens
 						}
 					}
 				}
-				save_event_target_as = dpe_primitive_planet
+				save_event_target_as = mem_dpe_primitive_planet
 				owner = {
-					save_event_target_as = dpe_primitive_civ
-					set_country_flag = dpe_has_had_lights_in_sky
+					save_event_target_as = mem_dpe_primitive_civ
+					set_country_flag = mem_dpe_has_had_lights_in_sky
 				}
 				if = {
 					limit = { has_observation_outpost = yes }
 					random_list = {
 						1 = {
 							observation_outpost_owner = {
-								country_event = { id = dpe_primitive_events.2 days = 20 }
+								country_event = { id = mem_dpe_primitive_events.2 days = 20 }
 							}
 							modifier = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 40
 									}
 								}
@@ -115,7 +115,7 @@ country_event = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 60
 									}
 								}
@@ -124,7 +124,7 @@ country_event = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 80
 									}
 								}
@@ -133,7 +133,7 @@ country_event = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 100
 									}
 								}
@@ -142,7 +142,7 @@ country_event = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 120
 									}
 								}
@@ -151,7 +151,7 @@ country_event = {
 								factor = 2
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 150
 									}
 								}
@@ -160,7 +160,7 @@ country_event = {
 								factor = 10
 								solar_system = {
 									check_variable = {
-										which = dpe_space_battle
+										which = mem_dpe_space_battle
 										value > 200
 									}
 								}
@@ -224,8 +224,8 @@ country_event = {
 								has_country_flag = early_space_age
 							}
 						}
-						event_target:dpe_primitive_host = {
-							country_event = { id = dpe_primitive_events.3 days = 60 random = 360 }
+						event_target:mem_dpe_primitive_host = {
+							country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
 						}
 					}
 				}
@@ -235,12 +235,12 @@ country_event = {
 }
 					
 country_event = {
-	id = dpe_primitive_events.2
-	title = dpe_primitives.2.name
+	id = mem_dpe_primitive_events.2
+	title = mem_dpe_primitives.2.name
 
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = stone_age
 					has_country_flag = bronze_age
@@ -248,22 +248,22 @@ country_event = {
 				}
 			}
 		}
-		text = dpe_primitives.2.primitive
+		text = mem_dpe_primitives.2.primitive
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = late_medieval_age
 					has_country_flag = renaissance_age
 				}
 			}
 		}
-		text = dpe_primitives.2.renaissance
+		text = mem_dpe_primitives.2.renaissance
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = steam_age
 					has_country_flag = machine_age
@@ -271,22 +271,22 @@ country_event = {
 				}
 			}
 		}
-		text = dpe_primitives.2.machine
+		text = mem_dpe_primitives.2.machine
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				has_country_flag = early_space_age
 			}
 		}
-		text = dpe_primitives.2.space_age
+		text = mem_dpe_primitives.2.space_age
 	}
 
 	is_triggered_only = yes
 
 	picture = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = stone_age
 					has_country_flag = bronze_age
@@ -297,7 +297,7 @@ country_event = {
 	}
 	picture = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = iron_age
 					has_country_flag = late_medieval_age
@@ -310,7 +310,7 @@ country_event = {
 	}
 	picture = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_country_flag = machine_age
 					has_country_flag = atomic_age
@@ -324,11 +324,11 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				event_target:dpe_primitive_civ = {
+				event_target:mem_dpe_primitive_civ = {
 					has_country_flag = early_space_age
 				}
 			}
-			country_event = { id = dpe_primitive_events.3 days = 60 random = 360 }
+			country_event = { id = mem_dpe_primitive_events.3 days = 60 random = 360 }
 		}
 	}
 
@@ -341,7 +341,7 @@ country_event = {
 				has_ethic = ethic_fanatic_xenophile
 				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
-				event_target:dpe_primitive_civ = {
+				event_target:mem_dpe_primitive_civ = {
 					has_country_flag = early_space_age
 				}
 			}
@@ -353,7 +353,7 @@ country_event = {
 	}
 
 	option = {
-		name = dpe_primitive_events.2.amusing
+		name = mem_dpe_primitive_events.2.amusing
 
 		trigger = {
 			NOR = {
@@ -365,7 +365,7 @@ country_event = {
 				has_ethic = ethic_fanatic_xenophobe
 				has_valid_civic = civic_machine_terminator
 				has_valid_civic = civic_hive_devouring_swarm
-				event_target:dpe_primitive_civ = {
+				event_target:mem_dpe_primitive_civ = {
 					has_country_flag = early_space_age
 				}
 			}
@@ -373,7 +373,7 @@ country_event = {
 	}
 
 	option = {
-		name = dpe_primitive_events.2.irrelevant
+		name = mem_dpe_primitive_events.2.irrelevant
 
 		trigger = {
 			OR = {
@@ -384,7 +384,7 @@ country_event = {
 	}
 
 	option = {
-		name = dpe_primitive_events.2.terminator
+		name = mem_dpe_primitive_events.2.terminator
 
 		trigger = {
 			has_valid_civic = civic_machine_terminator
@@ -392,7 +392,7 @@ country_event = {
 	}
 
 	option = {
-		name = dpe_primitive_events.2.devourer
+		name = mem_dpe_primitive_events.2.devourer
 
 		trigger = {
 			has_valid_civic = civic_hive_devouring_swarm
@@ -402,7 +402,7 @@ country_event = {
 
 #Persistent Radio Signals - primitives trigger
 country_event = {
-	id = dpe_primitive_events.299
+	id = mem_dpe_primitive_events.299
 	hide_window = yes
 
 	trigger = {
@@ -410,7 +410,7 @@ country_event = {
 		has_country_flag = early_space_age
 
 		NOR = {
-			has_country_flag = dpe_has_discovered_aliens
+			has_country_flag = mem_dpe_has_discovered_aliens
 			has_ethic = ethic_gestalt_consciousness
 		}
 		
@@ -422,7 +422,7 @@ country_event = {
 				starbase.owner = {
 					is_country_type = default
 					NOT = {
-						has_country_flag = dpe_recently_discovered_by_primitives
+						has_country_flag = mem_dpe_recently_discovered_by_primitives
 					}
 				}
 				NOT = {
@@ -460,23 +460,23 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = dpe_has_discovered_aliens
+		set_country_flag = mem_dpe_has_discovered_aliens
 
-		save_event_target_as = dpe_primitive_civ
+		save_event_target_as = mem_dpe_primitive_civ
 		
 		capital_scope = {
-			save_event_target_as = dpe_primitive_planet
+			save_event_target_as = mem_dpe_primitive_planet
 			observation_outpost_owner = {
 				NOT = {
 					set_timed_country_flag = {
-						flag = dpe_recently_discovered_by_primitives
+						flag = mem_dpe_recently_discovered_by_primitives
 						years = 30
 					}
 				}
-				country_event = { id = dpe_primitive_events.3 }
+				country_event = { id = mem_dpe_primitive_events.3 }
 			}
 			solar_system = {
-				save_event_target_as = dpe_primitive_system
+				save_event_target_as = mem_dpe_primitive_system
 			}
 		}
 	}
@@ -485,8 +485,8 @@ country_event = {
 
 #Persistent Radio Signals - actual event
 country_event = {
-	id = dpe_primitive_events.3
-	title = dpe_primitive_events.3.name
+	id = mem_dpe_primitive_events.3
+	title = mem_dpe_primitive_events.3.name
 	desc = {
 		trigger = {
 			OR = {
@@ -495,7 +495,7 @@ country_event = {
 				has_valid_civic = civic_machine_terminator
 			}
 		}
-		text = dpe_primitive_events.3.desc.evil
+		text = mem_dpe_primitive_events.3.desc.evil
 	}
 	desc = {
 		trigger = {
@@ -503,29 +503,29 @@ country_event = {
 				has_ethic = ethic_gestalt_consciousness
 			}
 		}
-		text = dpe_primitive_events.3.desc
+		text = mem_dpe_primitive_events.3.desc
 	}
 	desc = {
 		trigger = {
 			has_ethic = ethic_gestalt_consciousness
 		}
-		text = dpe_primitive_events.3.desc.gestalt
+		text = mem_dpe_primitive_events.3.desc.gestalt
 	}
 	is_triggered_only = yes
 	
 	trigger = {
-		exists = event_target:dpe_primitive_civ
-		exists = event_target:dpe_primitive_planet
+		exists = event_target:mem_dpe_primitive_civ
+		exists = event_target:mem_dpe_primitive_planet
 
-		event_target:dpe_primitive_planet = {
+		event_target:mem_dpe_primitive_planet = {
 			has_ground_combat = no
 			has_orbital_bombardment = no
 			owner = {
-				is_same_value = event_target:dpe_primitive_civ
+				is_same_value = event_target:mem_dpe_primitive_civ
 			}
 		}
 
-		event_target:dpe_primitive_civ = {
+		event_target:mem_dpe_primitive_civ = {
 			is_primitive = yes
 		}
 	}
@@ -533,7 +533,7 @@ country_event = {
 	option = {
 		name = INTERESTING
 
-		country_event = { id = dpe_primitive_events.4 }
+		country_event = { id = mem_dpe_primitive_events.4 }
 
 		trigger = {
 			NOR = {
@@ -546,10 +546,10 @@ country_event = {
 
 	
 	option = {
-		name = dpe_primitive_events.3.option.evil
+		name = mem_dpe_primitive_events.3.option.evil
 
 		#Start Independence Day chain
-		country_event = { id = dpe_primitive_events.15 days = 90 random = 270 }
+		country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
 
 		trigger = {
 			OR = {
@@ -564,14 +564,14 @@ country_event = {
 
 #Gatekeeper for what message comes
 country_event = {
-	id = dpe_primitive_events.4
+	id = mem_dpe_primitive_events.4
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		if = {
 			limit = {
-				event_target:dpe_primitive_civ = {
+				event_target:mem_dpe_primitive_civ = {
 					OR = {
 						has_ethic = ethic_xenophobe
 						has_ethic = ethic_fanatic_xenophobe
@@ -581,39 +581,39 @@ country_event = {
 					}
 				}
 			}
-			country_event = { id = dpe_primitive_events.12 }
+			country_event = { id = mem_dpe_primitive_events.12 }
 		}
 		else = {
-			country_event = { id = dpe_primitive_events.5 }
+			country_event = { id = mem_dpe_primitive_events.5 }
 		}
 	}
 }
 
 
 country_event = {
-	id = dpe_primitive_events.5
-	title = dpe_primitive_events.5.name
+	id = mem_dpe_primitive_events.5
+	title = mem_dpe_primitive_events.5.name
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				OR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
-		text = dpe_primitive_events.5.desc.spiritualist
+		text = mem_dpe_primitive_events.5.desc.spiritualist
 	}
 	desc = {
 		trigger = {
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				NOR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
-		text = dpe_primitive_events.5.desc.else
+		text = mem_dpe_primitive_events.5.desc.else
 	}
 	is_triggered_only = yes
 	diplomatic = yes
@@ -623,24 +623,24 @@ country_event = {
 	}
 
 	option = { #Give no answer
-		name = dpe_primitive_events.5.A
+		name = mem_dpe_primitive_events.5.A
 
 		hidden_effect = { #Probe chain
-			country_event = { id = dpe_primitive_events.20 days = 120 random = 360 }
+			country_event = { id = mem_dpe_primitive_events.20 days = 120 random = 360 }
 		}
 	}
 	option = { #Welcome to Galactic Community
-		name = dpe_primitive_events.5.B
+		name = mem_dpe_primitive_events.5.B
 		if = {
 			limit = {
 				NOT = {
 					has_valid_civic = civic_inwards_perfection
 				}
-				custom_tooltip = dpe_primitive_events.5.B.tooltip
+				custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
 			}
 		}
 		else = {
-			custom_tooltip = dpe_primitive_events.5.B.tooltip.inwards_protection
+			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip.inwards_protection
 		}
 
 		allow = {
@@ -651,7 +651,7 @@ country_event = {
 		}
 
 		hidden_effect = { #Taken from event primitive.16 with slight alterations
-			event_target:dpe_primitive_civ = {
+			event_target:mem_dpe_primitive_civ = {
 				remove_country_flag = early_space_age
 				set_country_flag = primitives_can_into_space
 				set_country_type = default
@@ -788,7 +788,7 @@ country_event = {
 					remove_all_armies = yes
 					solar_system = {
 						starbase = {
-							set_owner = event_target:dpe_primitive_civ
+							set_owner = event_target:mem_dpe_primitive_civ
 						}
 					}		
 				}
@@ -818,17 +818,17 @@ country_event = {
 		}
 	}
 	option = { #You are not worthy of our empire
-		name = dpe_primitive_events.5.C
+		name = mem_dpe_primitive_events.5.C
 
 		hidden_effect = { #sorry to hear that
-			country_event = { id = dpe_primitive_events.6 days = 10 }
+			country_event = { id = mem_dpe_primitive_events.6 days = 10 }
 		}
 		ai_chance = {
 			factor = 10
 		}
 	}
 	option = { #You will bow before us
-		name = dpe_primitive_events.5.D
+		name = mem_dpe_primitive_events.5.D
 
 		allow = {
 			NOR = {
@@ -840,7 +840,7 @@ country_event = {
 		}
 
 		hidden_effect = { #start Independence Day Chain
-			country_event = { id = dpe_primitive_events.15 days = 90 random = 270 }
+			country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
 		}
 	}
 }
