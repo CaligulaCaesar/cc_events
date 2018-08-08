@@ -180,3 +180,37 @@ dpe_talented_captain:0 "技艺高超的舰长"
 cc_luddite.30.name:0 "机械劳工大受欢迎"
 cc_luddite.30.desc:0 "随着机械劳工被引入[root.GetName]，[root.GetSpeciesAdj]民众对人工智能与机器人的热情不断高涨。一些反对者担忧大规模应用机器人将会带来冲击与潜在威胁，但他们的观点正逐渐被边缘化。新技术带来的生活水准提升已将疑虑的声音一扫而空。现在大家都对机器人趋之若鹜，相关新兴企业如雨后春笋般蓬勃发展。"
 cc_antiluddite:0 "机械劳工大受欢迎"
+
+
+
+
+ dpe_dissent_planet:0 "Anti-Government Feeling"
+ dpe_dissent_planet_desc:0 "The populace of this planet is somewhat disenchanted at recent government decisions."
+ dpe_posenergy_planet:0 "Energy Surplus"
+ dpe_posenergy_planet_desc:0 "Good weather and hard work have allowed this planet to overshoot its energy production targets."
+ dpe_negenergy_planet:0 "Energy Shortfall"
+ dpe_negenergy_planet_desc:0 "Poor weather has forced this planet to miss its energy production targets."
+ dpe_posminerals_planet:0 "New Deposits Found"
+ dpe_posminerals_planet_desc:0 "Newly found deposits make this planet's mining enterprises particularly profitable."
+ dpe_negminerals_planet:0 "Mineral Depletion"
+ dpe_negminerals_planet_desc:0 "The deposits on this planet are becoming depleted, meaning that the mining enterprises are having to spend more time looking for new ones to mine."
+
+ dpe_smallpos_events.20.name:0 "Unrest Brewing on [root.GetName]"
+ dpe_smallpos_events.20.desc.A:0 "There is considerable dissent on [root.GetName] regarding a recent decision on a key infrastructure project by the governor. As a result, various underlying issues have bubbled to the surface, leading to a wave of dissatisfaction at the current government."
+ dpe_smallpos_events.20.desc.B:0 "There is considerable dissent on [root.GetName] regarding a recent decision to increase local taxes by the governor. As a result, various underlying issues have bubbled to the surface, leading to a wave of dissatisfaction at the current government."
+
+ dpe_smallpos_events.21.name:0 "Energy Surplus on [root.GetName]"
+ dpe_smallpos_events.21.desc:0 "A combination of favourable weather conditions on one of [root.GetName]'s largest continents and the dedication of our workers has allowed the planetary energy company to overshoot its production targets. As a result, we have a sizeable energy surplus from [root.GetName]."
+ dpe_smallpos_events.21.desc.gestalt:0 "A combination of favourable weather conditions on one of [root.GetName]'s largest continents and the tireless efforts of our worker drones has allowed our planetary energy subdivision to overshoot its production targets. As a result, we have a sizeable energy surplus from [root.GetName]."
+
+ dpe_smallpos_events.22.name:0 "Energy Shortfall on [root.GetName]"
+ dpe_smallpos_events.22.desc:0 "The excessively long and harsh winter that [root.GetName]'s largest continent is experiencing has caused energy consumption to increase significantly, whilst decreasing the efficacy of solar-based energy production. As a result, the planet is experiencing some energy shortfalls."
+ dpe_smallpos_events.22.desc.gestalt:0 "$dpe_smallpos_events.22.desc$"
+
+ dpe_smallpos_events.23.name:0 "New Deposits found on [root.GetName]"
+ dpe_smallpos_events.23.desc:0 "[root.GetName]'s main mining company reports the finding of a major new vein of high-quality ore. This will surely boost production!"
+ dpe_smallpos_events.23.desc.gestalt:0 "Our mining drones on [root.GetName] report the finding of a major new vein of high-quality ore. This will surely boost production!"
+
+ dpe_smallpos_events.24.name:0 "Mineral Depletion on [root.GetName]"
+ dpe_smallpos_events.24.desc:0 "[root.GetName]'s main mining company reports difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
+ dpe_smallpos_events.24.desc.gestalt:0 "Our mining drones on [root.GetName] report difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
