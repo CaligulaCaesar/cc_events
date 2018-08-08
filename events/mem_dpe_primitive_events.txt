@@ -466,17 +466,15 @@ country_event = {
 		
 		capital_scope = {
 			save_event_target_as = mem_dpe_primitive_planet
-			observation_outpost_owner = {
-				NOT = {
-					set_timed_country_flag = {
-						flag = mem_dpe_recently_discovered_by_primitives
-						years = 30
-					}
-				}
-				country_event = { id = mem_dpe_primitive_events.3 }
-			}
 			solar_system = {
 				save_event_target_as = mem_dpe_primitive_system
+			}
+			observation_outpost_owner = {
+				set_timed_country_flag = {
+					flag = mem_dpe_recently_discovered_by_primitives
+					years = 30
+				}
+				country_event = { id = mem_dpe_primitive_events.3 }
 			}
 		}
 	}
