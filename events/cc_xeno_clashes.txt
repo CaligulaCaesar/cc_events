@@ -33,6 +33,7 @@ planet_event = {
 			species = { pops_have_happiness = yes }
 			is_enslaved = no
 			is_being_purged = no
+			is_robot_pop = no
 			planet = {
 				count_pops = {
 					limit = { is_same_species = prev }
@@ -43,6 +44,7 @@ planet_event = {
 					species = { pops_have_happiness = yes }
 					is_enslaved = no
 					is_being_purged = no
+					is_robot_pop = no
 					
 					planet = {
 						count_pops = {
