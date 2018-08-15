@@ -1635,16 +1635,20 @@ planet_event = {
 	title = dpe_smallpos_events.21.name
 	desc = {
 		text = dpe_smallpos_events.21.desc
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+		trigger = {
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
 			}
 		}
 	}
 	desc = {
 		text = dpe_smallpos_events.21.desc.gestalt
-		owner = {
-			has_ethic = ethic_gestalt_consciousness
+		trigger = {
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 	}
 	picture = GFX_evt_metropolis
@@ -1724,16 +1728,22 @@ planet_event = {
 	title = dpe_smallpos_events.22.name
 	desc = {
 		text = dpe_smallpos_events.22.desc
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
 			}
 		}
 	}
 	desc = {
 		text = dpe_smallpos_events.22.desc.gestalt
-		owner = {
-			has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 	}
 	picture = GFX_evt_metropolis
@@ -1813,16 +1823,22 @@ planet_event = {
 	title = dpe_smallpos_events.23.name
 	desc = {
 		text = dpe_smallpos_events.23.desc
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
 			}
 		}
 	}
 	desc = {
 		text = dpe_smallpos_events.23.desc.gestalt
-		owner = {
-			has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 	}
 	picture = GFX_evt_mining_operations
@@ -1902,16 +1918,22 @@ planet_event = {
 	title = dpe_smallpos_events.24.name
 	desc = {
 		text = dpe_smallpos_events.24.desc
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
 			}
 		}
 	}
 	desc = {
 		text = dpe_smallpos_events.24.desc.gestalt
-		owner = {
-			has_ethic = ethic_gestalt_consciousness
+
+		trigger = {
+			owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 	}
 	picture = GFX_evt_mining_operations
