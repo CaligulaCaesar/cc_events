@@ -662,6 +662,13 @@ country_event = {
 		hidden_effect = { #sorry to hear that
 			country_event = { id = mem_dpe_primitive_events.6 days = 10 }
 
+			event_target:mem_dpe_primitive_civ = {
+				add_opinion_modifier = {
+					who = root
+					modifier = mem_dpe_primitive_snub
+				}
+			}
+
 			if = {
 				limit = {
 					years_passed > 15
@@ -736,6 +743,18 @@ country_event = {
 
 	is_triggered_only = yes
 
+	trigger = {
+		exists = event_target:mem_dpe_primitive_civ
+		event_target:mem_dpe_primitive_civ = {
+			is_primitive = yes
+
+			capital_scope = {
+				has_orbital_bombardment = no
+				has_ground_combat = no
+			}
+		}
+	}
+
 	option = { #Destroy it
 		name = mem_dpe_primitive_events.20.A
 		
@@ -793,6 +812,13 @@ country_event = {
 		hidden_effect = { #sorry to hear that
 			country_event = { id = mem_dpe_primitive_events.6 days = 10 }
 
+			event_target:mem_dpe_primitive_civ = {
+				add_opinion_modifier = {
+					who = root
+					modifier = mem_dpe_primitive_snub
+				}
+			}
+			
 			if = {
 				limit = {
 					years_passed > 15
@@ -953,6 +979,72 @@ country_event = {
 
 	option = {
 		name = mem_dpe_primitive_events.21.option
+	}
+}
+
+
+
+
+#Hostile contact
+country_event = {
+	id = mem_dpe_primitive_events.12
+	title = mem_dpe_primitive_events.12.name
+	desc = mem_dpe_primitive_events.12.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+
+	immediate = {
+		event_target:mem_dpe_primitive_civ = {
+			set_country_flag = mem_dpe_hostile_contact
+		}
+	}
+
+	option = { #ignore
+		name = mem_dpe_primitive_events.12.A
+
+		hidden_effect = { #Probe chain
+			country_event = { id = mem_dpe_primitive_events.20 days = 120 random = 360 }
+		}
+	}
+	option = { #we will respect your sovereignty
+		name = mem_dpe_primitive_events.12.B
+
+		
+		event_target:mem_dpe_primitive_civ = {
+			capital_scope.solar_system.starbase = {
+				delete_fleet = yes
+			}
+		}
+
+		hidden_effect = {
+			event_target:mem_dpe_primitive_civ = {
+				country_event = { id = primitive.16 days = 360 }
+			}
+		}
+	}
+	option = { #insolent
+		name = mem_dpe_primitive_events.12.C
+
+		hidden_effect = {
+			country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+		}
+
+		allow = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
