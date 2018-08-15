@@ -29,3 +29,27 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
  mem_dpe_primitive_events.5.C:0 "You are not worthy of our Empire."
  mem_dpe_primitive_events.5.D:0 "You will bow before us, [mem_dpe_primitive_civ.GetSpeciesNamePlural]."
 
+
+ mem_dpe_primitive_events.6.name:0 ""The [mem_dpe_primitive_civ.GetSpeciesAdj] Response""
+ mem_dpe_primitive_events.6.desc:0 "It saddens us to hear this message. We will redouble our efforts and seek to reach your heights. One day, perhaps, you will see us in a better light."
+ mem_dpe_primitive_events.6.A:0 "Perhaps."
+ mem_dpe_primitive_events.6.B:0 "Doubtful."
+
+
+
+
+ mem_dpe_primitive_events.20.name:0 "[mem_primitive_civ.GetSpeciesNamePlural] Launch Probe"
+ mem_dpe_primitive_events.20.desc:0 "It appears that the [mem_primitive_civ.GetSpeciesNamePlural] are convinced that we exist, despite our refusal to make contact with them. They have launched a probe towards our starbase to investigate it further. If the probe is allowed to reach the vicinity of our starbase, we will not be able to prevent them from discovering our presence. What action should we take?"
+ mem_dpe_primitive_events.20.A:0 "Destroy it."
+ mem_dpe_primitive_events.20.B:0 "Let it find us."
+ mem_dpe_primitive_events.20.C:0 "Make Contact: $mem_dpe_primitive_events.5.B$"
+ mem_dpe_primitive_events.20.D:0 "Make Contact: $mem_dpe_primitive_events.5.C$"
+ mem_dpe_primitive_events.20.E:0 "Make Contact: $mem_dpe_primitive_events.5.D$"
+
+ mem_dpe_primitive_events.21.name:0 "We are Discovered"
+ mem_dpe_primitive_events.21.desc:0 "The [mem_primitive_civ.GetSpeciesAdj] probe has discovered our starbase in the [mem_primitive_system.GetName] system. It has orbited it several times, taking numerous images of our station. These images, broadcast back to [mem_primitive_planet.GetName], have created quite the stir, representing as they do undeniable evidence of alien presence in their system. Debates are underway among the [mem_primitive_civ.GetSpeciesNamePlural] as to how to respond to this development."
+ mem_dpe_primitive_events.21.desc.no_post:0 "The [mem_primitive_civ.GetSpeciesAdj] probe has discovered our starbase in the [mem_primitive_system.GetName] system. It has orbited it several times, taking numerous images of our station. It awaits to be seen what the [mem_primitive_civ.GetName] will do at this undeniable evidence of alien presence in their system."
+ mem_dpe_primitive_events.21.option:0 "We will monitor the situation."
+
+ 
+

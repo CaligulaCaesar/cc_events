@@ -648,169 +648,8 @@ country_event = {
 			}
 		}
 
-		hidden_effect = { #Taken from event primitive.16 with slight alterations
-			event_target:mem_dpe_primitive_civ = {
-				remove_country_flag = early_space_age
-				set_country_flag = primitives_can_into_space
-				set_country_type = default
-				change_country_flag = random
-				if = {
-					limit = { is_species_class = MAM }
-					set_graphical_culture = mammalian_01
-				}
-				if = {
-					limit = { is_species_class = REP }
-					set_graphical_culture = reptilian_01
-				}
-				if = {
-					limit = { is_species_class = AVI }
-					set_graphical_culture = avian_01
-				}
-				if = {
-					limit = { is_species_class = ART }
-					set_graphical_culture = arthropoid_01
-				}
-				if = {
-					limit = { is_species_class = MOL }
-					set_graphical_culture = molluscoid_01
-				}
-				if = {
-					limit = { is_species_class = FUN }
-					set_graphical_culture = fungoid_01
-				}
-				if = {
-					limit = { is_species_class = PLANT }
-					set_graphical_culture = plantoid_01
-				}		
-				change_government = {
-					authority = random
-					civics = random
-				}
-				set_name = random
+		mem_dpe_become_protectorate = yes
 
-				add_minerals = 1000 # enough for a spaceport and then some
-				add_energy = 500
-				add_influence = 300
-				capital_scope = {
-					every_tile = {
-						limit = {
-							has_blocker = yes
-							NOR = {
-								has_blocker = tb_decrepit_dwellings
-								has_blocker = tb_failing_infrastructure
-							}
-						}
-						remove_blocker = yes
-					}
-					while = {
-						limit = { 
-							num_pops < 8
-							any_tile = {
-								has_grown_pop = no
-								has_growing_pop = no
-								has_blocker = no
-							}
-						}
-						random_tile = {
-							limit = {
-								has_grown_pop = no
-								has_growing_pop = no
-								has_blocker = no
-							}
-							create_pop = {
-								species = owner
-							}
-						}
-					}
-					random_tile = {
-						limit = {
-							has_grown_pop = yes
-							OR = {
-								has_building = "building_primitive_farm"
-								has_building = "building_primitive_factory"
-								has_building = no
-							}
-						}
-						clear_deposits = yes
-						add_deposit = d_energy_deposit
-						set_building = "building_capital_2"
-					}
-					while = {
-						count = 2
-						random_tile = {
-							limit = {
-								has_grown_pop = yes
-								OR = {
-									has_building = "building_primitive_farm"
-									has_building = "building_primitive_factory"
-									has_building = no
-								}
-							}
-							clear_deposits = yes
-							add_deposit = d_mineral_deposit
-							set_building = "building_mining_network_1"
-						}
-					}
-					while = {
-						count = 2
-						random_tile = {
-							limit = {
-								has_grown_pop = yes
-								OR = {
-									has_building = "building_primitive_farm"
-									has_building = "building_primitive_factory"
-									has_building = no
-								}
-							}
-							clear_deposits = yes
-							add_deposit = d_farmland_deposit
-							set_building = "building_hydroponics_farm_1"
-						}
-					}
-					while = {
-						count = 3
-						random_tile = {
-							limit = {
-								has_grown_pop = yes
-								OR = {
-									has_building = "building_primitive_farm"
-									has_building = "building_primitive_factory"
-									has_building = no
-								}
-							}
-							clear_deposits = yes
-							add_deposit = d_energy_deposit
-							set_building = "building_power_plant_1"
-						}
-					}
-					remove_all_armies = yes
-					solar_system = {
-						starbase = {
-							set_owner = event_target:mem_dpe_primitive_civ
-						}
-					}		
-				}
-				random_owned_ship = {
-					limit = { is_ship_size = primitive_space_station }
-					fleet = { destroy_fleet = THIS }
-				}
-				if = {
-					limit = {
-						root = { has_valid_civic = "civic_inwards_perfection" }
-					}
-					set_subject_of = {
-						who = root
-						subject_type = tributary
-					}
-				}			
-				else = {
-					set_subject_of = {
-						who = root
-						subject_type = protectorate
-					}						
-				}
-			}
-		}
 		ai_chance = {
 			factor = 50
 		}
@@ -820,6 +659,28 @@ country_event = {
 
 		hidden_effect = { #sorry to hear that
 			country_event = { id = mem_dpe_primitive_events.6 days = 10 }
+
+			if = {
+				limit = {
+					years_passed > 15
+				}
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 3600 }
+				}
+			}
+			else_if = {
+				limit = {
+					years_passed > 5
+				}
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 7200 }
+				}
+			}
+			else = {
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 9000 }
+				}
+			}
 		}
 		ai_chance = {
 			factor = 10
@@ -843,3 +704,257 @@ country_event = {
 	}
 }
 
+#We are sorry to hear of this
+country_event = {
+	id = mem_dpe_primitive_events.6
+	title = mem_dpe_primitive_events.6.name
+	desc = mem_dpe_primitive_events.6.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = mem_dpe_primitive_events.6.A
+	}
+	option = {
+		name = mem_dpe_primitive_events.6.B
+	}
+}
+
+#Probe sent
+country_event = {
+	id = mem_dpe_primitive_events.20
+	title = mem_dpe_primitive_events.20.name
+	desc = mem_dpe_primitive_events.20.desc
+	picture = GFX_evt_space_station
+
+	is_triggered_only = yes
+
+	option = { #Destroy it
+		name = mem_dpe_primitive_events.20.A
+		
+		hidden_effect = { #start Independence Day Chain
+			event_target:mem_dpe_primitive_civ = {
+				set_country_flag = mem_dpe_probe_independence_day
+			}
+			country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+		}
+	}
+	
+	option = { #Let it find us
+		name = mem_dpe_primitive_events.20.B
+
+		hidden_effect = { #Gatekeeper: Either quick ascension or Independence Day
+			
+			country_event = { id = mem_dpe_primitive_events.21 days = 30 }
+		}
+	}
+	
+	option = { #Make contact: Welcome
+		name = mem_dpe_primitive_events.20.C
+		if = {
+			limit = {
+				NOT = {
+					has_valid_civic = civic_inwards_perfection
+				}
+				custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
+			}
+		}
+		else = {
+			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip.inwards_protection
+		}
+
+		allow = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+
+		trigger = {
+			event_target:mem_dpe_primitive_civ = {
+				NOT = {
+					has_country_flag = mem_dpe_hostile_contact
+				}
+			}
+		}
+
+		mem_dpe_become_protectorate = yes
+	}
+	option = { #Make contact: You are not worthy of our empire
+		name = mem_dpe_primitive_events.20.D
+
+		hidden_effect = { #sorry to hear that
+			country_event = { id = mem_dpe_primitive_events.6 days = 10 }
+
+			if = {
+				limit = {
+					years_passed > 15
+				}
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 3600 }
+				}
+			}
+			else_if = {
+				limit = {
+					years_passed > 5
+				}
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 7200 }
+				}
+			}
+			else = {
+				event_target:mem_dpe_primitive_civ = {
+					country_event = { id = primitive.16 days = 9000 }
+				}
+			}
+		}
+		trigger = {
+			event_target:mem_dpe_primitive_civ = {
+				NOT = {
+					has_country_flag = mem_dpe_hostile_contact
+				}
+			}
+		}
+	}
+	option = { #Make contact: You will bow before us
+		name = mem_dpe_primitive_events.20.E
+
+		allow = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+
+		hidden_effect = { #start Independence Day Chain
+			country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+		}
+	}
+}
+
+#Probe found us
+country_event = {
+	id = mem_dpe_primitive_events.21
+	title = mem_dpe_primitive_events.21.name
+	desc = {
+		text = mem_dpe_primitive_events.21.desc
+		trigger = {
+			event_target:mem_dpe_primitive_planet = {
+				has_observation_outpost = yes
+			}
+		}
+	}
+	desc = {
+		text = mem_dpe_primitive_events.21.desc.no_post
+		trigger = {
+			event_target:mem_dpe_primitive_planet = {
+				has_observation_outpost = no
+			}
+		}
+	}
+	picture = GFX_evt_space_station
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { #Independence Day
+				country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+				
+				modifier = {
+					factor = 2
+					event_target:mem_dpe_primitive_civ = {
+						NOT = {
+							any_owned_pop = {
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_xenophile
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					event_target:mem_dpe_primitive_civ = {
+						NOT = {
+							any_owned_pop = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_xenophobe
+								}
+							}
+						}
+						any_owned_pop = {
+							OR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_xenophile
+							}
+						}
+					}
+				}
+			}
+			1 = { #Quick Ascension
+				modifier = {
+					factor = 0
+					event_target:mem_dpe_primitive_civ = {
+						has_country_flag = mem_dpe_hostile_contact
+					}
+				}
+
+				modifier = {
+					factor = 2
+					event_target:mem_dpe_primitive_civ = {
+						NOT = {
+							any_owned_pop = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_xenophobe
+								}
+							}
+						}
+					}
+				}
+
+
+				if = {
+					limit = {
+						years_passed > 15
+					}
+					event_target:mem_dpe_primitive_civ = {
+						country_event = { id = primitive.16 days = 3600 }
+					}
+				}
+				else_if = {
+					limit = {
+						years_passed > 5
+					}
+					event_target:mem_dpe_primitive_civ = {
+						country_event = { id = primitive.16 days = 7200 }
+					}
+				}
+				else = {
+					event_target:mem_dpe_primitive_civ = {
+						country_event = { id = primitive.16 days = 9000 }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mem_dpe_primitive_events.21.option
+	}
+}
+
+
+#Hostile contact: mem_dpe_hostile_contact
+
+#In .15: mem_dpe_probe_independence_day
