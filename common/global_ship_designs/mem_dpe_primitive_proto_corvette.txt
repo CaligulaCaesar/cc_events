@@ -1,0 +1,39 @@
+
+# Generic Corvette
+ship_design = {
+	name = "NAME_mem_dpe_proto_corvette"
+	ship_size = mem_dpe_proto_corvette
+	is_event_design = yes
+	section = {
+		template = "MEM_DPE_PROTO_CORVETTE_MID_S3"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_MASS_DRIVER_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_MASS_DRIVER_1"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_MASS_DRIVER_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "SMALL_SHIELD_1"
+		}		
+	}
+	required_component="SHIP_THRUSTER_1"
+	required_component="SENSOR_1"
+	required_component = "CORVETTE_FISSION_REACTOR"
+}

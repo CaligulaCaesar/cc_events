@@ -753,6 +753,11 @@ country_event = {
 				has_ground_combat = no
 			}
 		}
+		event_target:mem_dpe_primitive_system = {
+			owner = {
+				is_same_value = root
+			}
+		}
 	}
 
 	option = { #Destroy it
@@ -1049,6 +1054,151 @@ country_event = {
 }
 
 
-#Hostile contact: mem_dpe_hostile_contact
+country_event = {
+	id = mem_dpe_primitive_events.15
+	hide_window = yes
+	is_triggered_only = yes
 
-#In .15: mem_dpe_probe_independence_day
+	trigger = {
+		exists = event_target:mem_dpe_primitive_civ
+		event_target:mem_dpe_primitive_civ = {
+			is_primitive = yes
+			capital_scope = {
+				has_orbital_bombardment = no
+				has_ground_combat = no
+			}
+		}
+		event_target:mem_dpe_primitive_system = {
+			owner = {
+				is_same_value = root
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				event_target:mem_dpe_primitive_planet = {
+					has_observation_outpost = yes
+				}
+			}
+			country_event = { id = mem_dpe_primitive_events.16 }
+		}
+		country_event = { id = mem_dpe_primitive_events.17 days = 180 random = 90 }
+	}
+}
+
+#Outpost warns you
+country_event = {
+	id = mem_dpe_primitive_events.16
+	title = mem_dpe_primitive_events.16.name
+	desc = {
+		trigger = {
+			NOT = {
+				event_target:mem_dpe_primitive_civ = {
+					has_country_flag = mem_dpe_probe_independence_day
+				}
+			}
+		}
+		text = mem_dpe_primitive_events.16.desc
+	}
+	desc = {
+		trigger = {
+			event_target:mem_dpe_primitive_civ = {
+				has_country_flag = mem_dpe_probe_independence_day
+			}
+		}
+		text = mem_dpe_primitive_events.16.desc.probe
+	}
+	picture = GFX_evt_federation_fleet
+
+	is_triggered_only = yes
+
+	option = {
+		name = mem_dpe_primitive_events.16.option		
+	}
+}
+
+
+country_event = {
+	id = mem_dpe_primitive_events.17
+	title = mem_dpe_primitive_events.17.name
+	desc = {
+		trigger = {
+			event_target:mem_dpe_primitive_planet = {
+				has_observation_outpost = no
+			}
+		}
+		text = mem_dpe_primitive_events.17.desc
+	}
+	desc = {
+		trigger = {
+			event_target:mem_dpe_primitive_planet = {
+				has_observation_outpost = yes
+			}
+		}
+		text = mem_dpe_primitive_events.17.desc.post
+	}
+	picture = GFX_evt_federation_fleet
+
+	trigger = {
+		exists = event_target:mem_dpe_primitive_civ
+		event_target:mem_dpe_primitive_civ = {
+			is_primitive = yes
+			capital_scope = {
+				has_orbital_bombardment = no
+				has_ground_combat = no
+			}
+		}
+		event_target:mem_dpe_primitive_system = {
+			owner = {
+				is_same_value = root
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				event_target:mem_dpe_primitive_planet = {
+					has_observation_outpost = yes
+				}
+			}
+			observation_outpost = {
+				destroy_fleet = this
+			}
+		}
+		create_country = {
+			type = faction
+			name = event_target:mem_dpe_primitive_civ
+		}
+		create_fleet = {
+			name = "Liberation Fleet"
+
+			effect = {
+				set_owner = last_created_country
+
+				create_ship_design = {
+					design = "NAME_mem_dpe_proto_corvette"
+				}
+				while = {
+					count = 30
+					create_ship = {
+						design = last_created_design
+						upgradable = no
+					}
+				}
+
+				set_location = event_target:mem_dpe_primitive_planet
+
+				queue_actions = {
+					move_to = event_target:mem_dpe_primitive_system.starbase
+				}
+			}
+		}
+	}
+	option = {
+		name = mem_dpe_primitive_events.17.option
+		custom_tooltip = mem_dpe_primitive_events.17.tooltip
+	}
+}
