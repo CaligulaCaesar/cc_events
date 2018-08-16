@@ -636,8 +636,8 @@ country_event = {
 				NOT = {
 					has_valid_civic = civic_inwards_perfection
 				}
-				custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
 			}
+			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
 		}
 		else = {
 			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip.inwards_protection
@@ -787,8 +787,8 @@ country_event = {
 				NOT = {
 					has_valid_civic = civic_inwards_perfection
 				}
-				custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
 			}
+			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip
 		}
 		else = {
 			custom_tooltip = mem_dpe_primitive_events.5.B.tooltip.inwards_protection
@@ -1022,8 +1022,15 @@ country_event = {
 
 		
 		event_target:mem_dpe_primitive_civ = {
-			capital_scope.solar_system.starbase = {
-				delete_fleet = yes
+			capital_scope.solar_system = {
+				random_fleet_in_system = {
+					limit = {
+						any_owned_ship = {
+							is_ship_class = starbase
+						}
+					}
+					delete_fleet = this
+				}
 			}
 		}
 
@@ -1140,6 +1147,8 @@ country_event = {
 		text = mem_dpe_primitive_events.17.desc.post
 	}
 	picture = GFX_evt_federation_fleet
+
+	is_triggered_only = yes
 
 	trigger = {
 		exists = event_target:mem_dpe_primitive_civ
