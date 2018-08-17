@@ -3474,7 +3474,7 @@ country_event = {
 											}
 										}
 										event_target:deleted_ship = {
-											set_leader = event_target:cc_rebellious_faction_leader
+											set_leader = cc_rebellious_faction_leader
 											leader = { exile_leader_as = cc_rebellious_faction_leader }
 											delete_fleet = this
 										}
@@ -3562,7 +3562,7 @@ country_event = {
 									}
 								}
 								event_target:deleted_ship = {
-									set_leader = event_target:cc_new_reb_faction_leader
+									set_leader = cc_new_reb_faction_leader
 									leader = { unassign_leader = this }
 									delete_fleet = this
 								}
