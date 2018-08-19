@@ -1180,6 +1180,11 @@ country_event = {
 		create_country = {
 			type = faction
 			name = event_target:mem_dpe_primitive_civ
+
+			effect = {
+				set_country_flag = mem_dpe_primitive_fleet@root
+				set_country_flag = mem_dpe_primitive_fleet_country@event_target:mem_dpe_primitive_civ
+			}
 		}
 		create_fleet = {
 			name = "Liberation Fleet"
@@ -1211,3 +1216,156 @@ country_event = {
 		custom_tooltip = mem_dpe_primitive_events.17.tooltip
 	}
 }
+
+
+#You destroy their fleet
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+	id = mem_dpe_primitive_events.30
+	title = mem_dpe_primitive_events.30.name
+	desc = mem_dpe_primitive_events.30.desc
+	picture = GFX_evt_small_space_battle
+
+	trigger = {
+		from = {
+			has_country_flag = mem_dpe_primitive_fleet@root
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				from = {
+					has_country_flag = mem_dpe_primitive_fleet_country@prev
+				}
+			}
+			save_event_target_as = mem_dpe_primitive_civ
+			capital_scope = {
+				save_event_target_as = mem_dpe_primitive_planet
+			}
+		}
+	}
+
+	option = { #destroy them
+		name = mem_dpe_primitive_events.30.A
+
+		effects = yes
+	}
+	option = { #demand their surrender them
+		name = mem_dpe_primitive_events.30.B
+
+		hidden_effect = {
+			random_list = {
+				1 = { #Oster-Hagen Key
+					country_event = { id = mem_dpe_primitive_events.31 days = 10 }
+					modifier = {
+						factor = 4
+						event_target:mem_dpe_primitive_civ = {
+							has_ethic = ethic_xenophobe
+						}
+					}
+					modifier = {
+						factor = 10
+						event_target:mem_dpe_primitive_civ = {
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+				2 = { #Surrender
+					country_event = { id = mem_dpe_primitive_events.31 days = 10 }
+
+					modifier = {
+						factor = 0.25
+						OR = {
+							has_ethic = ethic_gestalt_consciousness
+							has_valid_civic = civic_fanatic_purifiers
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #let them be free
+		name = mem_dpe_primitive_events.30.C
+		custom_tooltip = mem_dpe_primitive_events.30.C.tooltip
+		effects = yes
+	}
+}
+
+#Oster-Hagen Key
+country_event = {
+	id = mem_dpe_primitive_events.31
+	title = mem_dpe_primitive_events.31.name
+	desc = mem_dpe_primitive_events.31.desc
+	picture = GFX_evt_nuclear_explosion
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+
+		event_target:mem_dpe_primitive_civ = {
+			destroy_country = yes
+		}
+		event_target:mem_dpe_primitive_planet = {
+			destroy_colony = yes
+		}
+	}
+}
+
+#Surrender
+country_event = {
+	id = mem_dpe_primitive_events.32
+	title = mem_dpe_primitive_events.32.name
+	desc = mem_dpe_primitive_events.32.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = EXCELLENT
+
+		event_target:mem_dpe_primitive_planet = {
+			set_owner = root
+			hidden_effect = {
+				every_owned_pop = {
+					add_modifier = {
+						modifier = culture_shock_early_space_age
+						years = 5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:mem_dpe_primitive_civ = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+#on_fleet_destroyed_perp = {
+#	events = {
+#		mem_dpe_primitive_events.30
+#	}
+#}
+
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+#on_fleet_destroyed_victim = {
+#	events = {
+#		mem_dpe_primitive_events.35

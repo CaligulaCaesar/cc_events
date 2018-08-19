@@ -65,8 +65,8 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
  mem_dpe_primitive_events.16.option:0 "We will be ready for them."
  
  mem_dpe_primitive_events.17.name:0 "Primitives Launch Strike Force"
- mem_dpe_primitive_events.17.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! A dozen 'proto-corvettes' are now heading for our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
- mem_dpe_primitive_events.17.desc.post:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! A dozen 'proto-corvettes' have quickly overwhelmed our observation post, and have begun their approach to our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
+ mem_dpe_primitive_events.17.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! Several dozen 'proto-corvettes' are now heading for our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
+ mem_dpe_primitive_events.17.desc.post:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! Several dozen 'proto-corvettes' have quickly overwhelmed our observation post, and have begun their approach to our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
  mem_dpe_primitive_events.17.option:0 "Weapons systems ready!"
  mem_dpe_primitive_events.17.tooltip:0 "Thirty primitive proto-Corvettes are heading for our starbase in the [mem_dpe_primitive_system.GetName] system!"
  
@@ -76,3 +76,18 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
  shipsize_mem_dpe_proto_corvette_construction_speed_mult:0 ""
  shipsize_mem_dpe_proto_corvette_build_cost_mult:0 ""
  shipsize_mem_dpe_proto_corvette_upkeep_mult:0 ""
+
+
+
+ mem_dpe_primitive_events.30.name:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] Fleet is Crushed"
+ mem_dpe_primitive_events.30.desc:0 "We have crushed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet. The [mem_dpe_primitive_civ.GetSpeciesNamePlural] are at our mercy. What should we do about them?"
+ mem_dpe_primitive_events.30.A:0 "Destroy them."
+ mem_dpe_primitive_events.30.B:0 "Demand their surrender."
+ mem_dpe_primitive_events.30.C:0 "We don't want them in our empire."
+ mem_dpe_primitive_events.30.C.tooltip:0 "To avoid further conflict, we will cede the [mem_dpe_primitive_system.GetName] to them."
+
+ mem_dpe_primitive_events.31.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Are No More"
+ mem_dpe_primitive_events.31.desc:0 "It appears that the authorities on [mem_dpe_primitive_planet.GetName] were so distressed at the prospect of their subjugation to our Empire that they implemented a devastating final solution: Nuclear annihilation. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] nuclear arsenal was denoted in unison, striking every major population centre. The planet almost instantly became a nuclear wasteland. The few survivors of the calamity will soon fall to radiation poisoning."
+
+ mem_dpe_primitive_events.32.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Surrender"
+ mem_dpe_primitive_events.32.desc:0 "We cannot withstand your might, [root.GetSpeciesName]. We surrender."
