@@ -995,3 +995,79 @@ country_event = {
 		}
 	}
 }
+
+
+###This works perfectly :)
+country_event = {
+	id = cctest.700
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+			}
+			save_event_target_as = cctest_country
+			log = [this.GetName]
+		}
+		
+		while = {
+			count = 10
+			random_owned_leader = {
+				save_event_target_as = dpe_defect_leader
+			}
+			create_fleet = {
+				name = "NAME_Other_Science_Ship"
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_Prototype"
+					}
+					create_ship = {
+						name = "NAME_From_Beyond"
+						design = last_created_design
+						graphical_culture = "extra_dimensional_01"
+						prefix = no
+						upgradable = no
+					}
+					set_location = root.capital_scope
+					save_event_target_as = deleted_ship
+				}
+			}
+			event_target:deleted_ship = {
+				set_leader = event_target:dpe_defect_leader
+				leader = { exile_leader_as = dpe_defect_leader }
+				delete_fleet = this
+			}
+			
+			create_fleet = {
+				name = "NAME_Other_Science_Ship"
+				effect = {
+					set_owner = event_target:cctest_country
+					create_ship_design = {
+						design = "NAME_Prototype"
+					}
+					create_ship = {
+						name = "NAME_From_Beyond"
+						design = last_created_design
+						graphical_culture = "extra_dimensional_01"
+						prefix = no
+						upgradable = no
+					}
+					set_location = event_target:cctest_country.capital_scope
+					save_event_target_as = deleted_ship
+				}
+			}
+			event_target:deleted_ship = {
+				set_leader = dpe_defect_leader
+				leader = { unassign_leader = this }
+				delete_fleet = this
+			}
+		}
+	}
+}
+
+
