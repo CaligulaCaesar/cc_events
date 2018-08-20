@@ -382,7 +382,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = mem_dpe_primitive_events.2.terminator
 
@@ -1246,6 +1246,7 @@ country_event = {
 			capital_scope = {
 				save_event_target_as = mem_dpe_primitive_planet
 			}
+			set_country_flag = mem_dpe_fleet_destroyed@root
 		}
 	}
 
@@ -1253,8 +1254,15 @@ country_event = {
 		name = mem_dpe_primitive_events.30.A
 
 		effects = yes
+		
+		trigger = {
+			OR = {
+				is_evil_empire = yes
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
 	}
-	option = { #demand their surrender them
+	option = { #demand their surrender
 		name = mem_dpe_primitive_events.30.B
 
 		hidden_effect = {
@@ -1291,7 +1299,26 @@ country_event = {
 	option = { #let them be free
 		name = mem_dpe_primitive_events.30.C
 		custom_tooltip = mem_dpe_primitive_events.30.C.tooltip
-		effects = yes
+		
+		event_target:mem_dpe_primitive_civ = {
+			add_opinion_modifier = {
+				who = root
+				modifier = mem_dpe_primitive_conflict
+			}
+			hidden_effect = {
+				capital_scope.solar_system = {
+					random_fleet_in_system = {
+						limit = {
+							any_owned_ship = {
+								is_ship_class = starbase
+							}
+						}
+						delete_fleet = this
+					}
+				}
+				country_event = { id = primitive.16 }
+			}
+		}
 	}
 }
 
@@ -1352,21 +1379,214 @@ country_event = {
 	}
 }
 
-# This = owner of fleet 1 (combatant)
-# From = owner of fleet 2 (destroyed)
-# FromFrom = fleet 1
-# FromFromFrom = fleet 2
-#on_fleet_destroyed_perp = {
-#	events = {
-#		mem_dpe_primitive_events.30
-#	}
-#}
+
+#33 will be the same as 31 but as the outcome of the SP so not sure on the scope
 
 
+
+
+
+
+#They destroy your starbase
 # This = owner of fleet 1 (destroyed)
 # From = owner of fleet 2 (combatant)
 # FromFrom = fleet 1
 # FromFromFrom = fleet 2
-#on_fleet_destroyed_victim = {
-#	events = {
-#		mem_dpe_primitive_events.35
+country_event = {
+	id = mem_dpe_primitive_events.35
+	title = mem_dpe_primitive_events.35.name
+	desc = mem_dpe_primitive_events.35.desc
+	picture = GFX_evt_small_space_battle
+
+	trigger = {
+		from = {
+			has_country_flag = mem_dpe_primitive_fleet@root
+		}
+		fromfrom = {
+			any_owned_ship = {
+				is_ship_class = starbase
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				from = {
+					has_country_flag = mem_dpe_primitive_fleet_country@prev
+				}
+			}
+			save_event_target_as = mem_dpe_primitive_civ
+			capital_scope = {
+				save_event_target_as = mem_dpe_primitive_planet
+			}
+			set_country_flag = mem_dpe_fleet_destroyed@root
+		}
+		country_event = { id = mem_dpe_primitive_events.36 days = 720 }
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		custom_tooltip = mem_dpe_primitive_events.35.tooltip
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+#They ascend
+country_event = {
+	id = mem_dpe_primitive_events.36
+	title = mem_dpe_primitive_events.36.name
+	desc = mem_dpe_primitive_events.36.desc
+	todo: picture = metropolis
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_flag = mem_dpe_fleet_destroyed@root
+		}
+	}
+	
+	immediate = {
+		effects = yes
+		#copy primitive.16
+		#leave out communications if there are any there
+		
+		fromfromfromfrom = {
+			delete_fleet = this
+		}
+		
+		event_target:mem_dpe_primitive_civ = {
+			establish_communications_no_message = root
+			create_fleet_from_naval_cap = 1.5
+			add_modifier = {
+				modifier = mem_dpe_primitives_boost
+				days = 7200
+			}
+			add_physics_research = 10000
+			add_society_research = 10000
+			add_engineering_research = 10000
+			
+			add_opinion_modifier = {
+				who = root
+				modifier = mem_dpe_primitive_conflict
+			}
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+		
+		custom_tooltip = mem_dpe_primitive_events.36.tooltip
+		
+		hidden_effect = {
+			country_event = { id = mem_dpe_primitive_events.37 days = 5 }
+		}
+	}
+}
+
+#first contact
+country_event = {
+	id = mem_dpe_primitive_events.37
+	title = mem_dpe_primitive_events.37.name
+	desc = {
+		trigger = {
+			event_target:mem_dpe_primitive_civ = {
+				has_country_flag = mem_dpe_hostile_contact
+			}
+		}
+		text = mem_dpe_primitive_events.37.desc.hostile
+	}
+	desc = {
+		trigger = {
+			event_target:mem_dpe_primitive_civ = {
+				NOT = { has_country_flag = mem_dpe_hostile_contact }
+			}
+		}
+		text = mem_dpe_primitive_events.37.desc.hostile
+	}
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:mem_dpe_primitive_civ
+		planet_background = event_target:mem_dpe_primitive_civ
+		graphical_culture = event_target:mem_dpe_primitive_civ
+		city_level = event_target:mem_dpe_primitive_civ
+		room = event_target:mem_dpe_primitive_civ.ruler
+	}
+	
+	option = {
+		name = mem_dpe_primitive_events.37.A
+	}
+	option = {
+		name = mem_dpe_primitive_events.37.B.hostile
+		
+		effects = yes
+		#declare war with claims
+		
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+			event_target:mem_dpe_primitive_civ = {
+				has_country_flag = mem_dpe_hostile_contact
+			}
+		}
+	}
+	option = {
+		name = mem_dpe_primitive_events.37.B.conciliatory
+		
+		effects = yes
+		#declare war with claims
+		
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+			event_target:mem_dpe_primitive_civ = {
+				NOT = { has_country_flag = mem_dpe_hostile_contact }
+			}
+		}
+	}
+	option = {
+		name = mem_dpe_primitive_events.37.C
+		
+		effects = yes
+		#declare TW
+		
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+	option = {
+		name = mem_dpe_primitive_events.37.D
+		
+		effects = yes
+		#declare TW
+		
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	option = {
+		name = mem_dpe_primitive_events.37.E
+		
+		effects = yes
+		#declare TW
+		
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+}
