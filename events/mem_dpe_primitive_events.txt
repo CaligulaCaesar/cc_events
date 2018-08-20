@@ -1442,7 +1442,7 @@ country_event = {
 	id = mem_dpe_primitive_events.36
 	title = mem_dpe_primitive_events.36.name
 	desc = mem_dpe_primitive_events.36.desc
-	todo: picture = metropolis
+	picture = GFX_evt_news_room
 	
 	is_triggered_only = yes
 	
@@ -1508,7 +1508,7 @@ country_event = {
 				NOT = { has_country_flag = mem_dpe_hostile_contact }
 			}
 		}
-		text = mem_dpe_primitive_events.37.desc.hostile
+		text = mem_dpe_primitive_events.37.desc.conciliatory
 	}
 	
 	is_triggered_only = yes
@@ -1528,8 +1528,15 @@ country_event = {
 	option = {
 		name = mem_dpe_primitive_events.37.B.hostile
 		
-		effects = yes
-		#declare war with claims
+		event_target:mem_dpe_primitive_system = {
+			add_claims = {
+				who = root
+			}
+		}
+		declare_war = {
+			target = event_target:mem_dpe_primitive_civ
+			attacker_war_goal = wg_conquest
+		}
 		
 		trigger = {
 			NOR = {
@@ -1545,8 +1552,15 @@ country_event = {
 	option = {
 		name = mem_dpe_primitive_events.37.B.conciliatory
 		
-		effects = yes
-		#declare war with claims
+		event_target:mem_dpe_primitive_system = {
+			add_claims = {
+				who = root
+			}
+		}
+		declare_war = {
+			target = event_target:mem_dpe_primitive_civ
+			attacker_war_goal = wg_conquest
+		}
 		
 		trigger = {
 			NOR = {
@@ -1562,8 +1576,10 @@ country_event = {
 	option = {
 		name = mem_dpe_primitive_events.37.C
 		
-		effects = yes
-		#declare TW
+		declare_war = {
+			target = event_target:mem_dpe_primitive_civ
+			attacker_war_goal = wg_cleansing
+		}
 		
 		trigger = {
 			has_valid_civic = civic_fanatic_purifiers
@@ -1572,8 +1588,10 @@ country_event = {
 	option = {
 		name = mem_dpe_primitive_events.37.D
 		
-		effects = yes
-		#declare TW
+		declare_war = {
+			target = event_target:mem_dpe_primitive_civ
+			attacker_war_goal = wg_absorption
+		}
 		
 		trigger = {
 			has_valid_civic = civic_hive_devouring_swarm
@@ -1582,8 +1600,10 @@ country_event = {
 	option = {
 		name = mem_dpe_primitive_events.37.E
 		
-		effects = yes
-		#declare TW
+		declare_war = {
+			target = event_target:mem_dpe_primitive_civ
+			attacker_war_goal = wg_cleansing
+		}
 		
 		trigger = {
 			has_valid_civic = civic_machine_terminator
