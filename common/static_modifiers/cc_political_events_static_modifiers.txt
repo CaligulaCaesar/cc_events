@@ -719,3 +719,29 @@ dpe_cultist_scandal_empire = {
 	pop_citizen_happiness = -0.05
 	pop_ethic_spiritualist_attraction_mult = 0.75
 }
+
+
+
+
+dpe_defector_scientist_from = {
+	country_resource_physics_research_mult = -0.15
+	country_resource_society_research_mult = -0.15
+	country_resource_engineering_research_mult = -0.15
+}
+
+dpe_defector_governor_from = {
+	country_resource_energy_mult = -0.33
+	country_resource_minerals_mult = -0.33
+}
+
+dpe_defector_military_receive = {
+	ship_weapon_damage = 0.15
+}
+
+dpe_defector_military_from = {
+	ship_weapon_damage = -0.15
+}
+
+dpe_defector_xenophobe_faction = {
+	faction_happiness = -0.2
+}

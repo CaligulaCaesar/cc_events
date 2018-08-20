@@ -212,3 +212,40 @@ cc_antiluddite:0 "Celebrating Robotic Workers"
  dpe_smallpos_events.24.desc:0 "[root.GetName]'s main mining company reports difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
  dpe_smallpos_events.24.desc.gestalt:0 "Our mining drones on [root.GetName] report difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
 
+
+
+
+
+
+ dpe_defect_leader.2.name:0 "Incoming Transmission"
+ dpe_defect_leader.2.desc.military:0 "All praise to my [root.RulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gained access to the [dpe_defected_country.GetSpeciesNamePlural]’s best-kept military secrets and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.desc.civilian:0 "All praise to my [root.RulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gathered a stash of [dpe_defected_country.GetSpeciesAdj] [dpe_defect_leader.GetDPEDefectorText] and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.A:0 "You are a true [root.GetSpeciesName]."
+ dpe_defect_leader.2.A.tooltip:0 "[dpe_defect_leader.GetTitle [dpe_defect_leader.GetName] will join the [root.GetName]. The [dpe_defected_country.GetSpeciesNamePlural] will be greatly annoyed."
+ dpe_defect_leader.2.B:0 "We will not take in traitors."
+ dpe_defect_leader.2.B.tooltip:0 "Hand [dpe_defect_leader.GetHimHer] over to the [dpe_defected_country.GetSpeciesNamePlural]. They will be pleased."
+
+ dpe_defect_leader.3.name:0 "Defecting [dpe_defect_leader.GetTitle]!"
+ dpe_defect_leader.3.desc.military:0 "[dpe_defect_leader.GetName] has hacked into our military secrets and defected to the [from.GetName]. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.3.desc.civilian:0 "[dpe_defect_leader.GetName] has gathered a stash of [dpe_defect_leader.GetDPEDefectorText] and defected to the [from.GetName]. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.3.A:0 "Maybe they are right!"
+ dpe_defect_leader.3.B:0 "Merely lodge a complaint with the [from.GetSpeciesNamePlural]."
+
+ dpe_defect_leader.4.name:0 "Incoming Transmission"
+ dpe_defect_leader.4.desc.military:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect and hand over your military secrets to us. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.desc.civilian:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect with a stash of your [dpe_defect_leader.GetDPEDefectorText]. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.A:0 "Many thanks. Arrest [dpe_defect_leader.GetHimHer]!"
+ dpe_defect_leader.4.B:0 "This is why we shouldn’t have xenos in positions of authority!"
+
+
+
+ dpe_defector_scientist_from:0 "Defecting Scientist"
+ dpe_defector_governor_from:0 "Defecting Governor"
+ dpe_defector_military_receive:0 "Military Secrets"
+ dpe_defector_military_receive_desc:0 "A defector from another country brought with them that country's military secrets, giving our navy an edge in battle, for a time at least."
+ dpe_defector_military_from:0 "Military Secrets Compromised"
+ dpe_defector_military_from:0 "A defector to another country took with them our military secrets, leaving our navy at a disadvantage, for a time at least."
+ dpe_defector_xenophobe_faction:0 "Xeno Defector"
+
+ dpe_defector_governor_text:0 "state resources"
+ dpe_defector_scientist_text: "technology"

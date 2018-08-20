@@ -317,3 +317,17 @@ defined_text = {
 		localization_key = dpe_drone
 	}
 }
+
+
+#Used in Defector events
+defined_text = {
+	name = GetDPEDefectorText
+	text = {
+		trigger = { dpe_is_governor = yes }
+		localization_key = dpe_defector_governor_text
+	}
+	text = {
+		trigger = { dpe_is_scientist = yes }
+		localization_key = dpe_defector_scientist_text
+	}
+}

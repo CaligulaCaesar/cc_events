@@ -1,0 +1,760 @@
+#Original idea by Iyur. I (Caligula) did all the rest, though.
+
+namespace = dpe_defect_leader
+
+
+
+country_event = {
+	id = dpe_defect_leader.1
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+		NOT = { exists = overlord }
+		NOT = { has_country_flag = dpe_recent_defect_leader }
+		any_owned_leader = {
+			NOR = {
+				is_same_species = root
+				is_same_value = root.ruler
+				has_leader_flag = dpe_defect_leader
+			}
+			
+			any_country = {
+				is_country_type = default
+				is_same_species = prev
+				
+				NOR = {
+					exists = overlord
+					has_defensive_pact = root
+					is_in_federation_with = root
+					
+					has_country_flag = dpe_recent_defect_leader
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_defect_leader
+			days = 9000
+		}
+		save_event_target_as = dpe_defected_country
+		
+		random_owned_leader = {
+			limit = {
+				NOT = { is_same_species = root }
+				NOT = { is_same_value = root.ruler}
+				
+				any_country = {
+					is_country_type = default
+					is_same_species = prev
+					
+					NOR = {
+						exists = overlord
+						has_defensive_pact = root
+						is_in_federation_with = root
+						
+						has_country_flag = dpe_recent_defect_leader
+					}
+				}
+			}
+			save_event_target_as = dpe_defect_leader
+			
+			set_leader_flag = dpe_defect_leader
+			
+			random_country = {
+				limit = {
+					is_country_type = default
+					is_same_species = prev
+					
+					NOR = {
+						has_defensive_pact = root
+						is_in_federation_with = root
+						
+						has_country_flag = dpe_recent_defect_leader
+					}
+				}
+				
+				save_event_target_as = dpe_defect_to_country
+			}
+		}
+		
+		
+		random_list = {
+			4 = {
+				event_target:dpe_defect_to_country = {
+					set_timed_country_flag = {
+						flag = dpe_recent_defect_leader
+						days = 4800
+					}
+					country_event = { id = dpe_defect_leader.2 }
+				}
+				
+				modifier = {
+					factor = 0.5
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 0.5
+					NOR = {
+						is_hostile_to = event_target:dpe_defect_to_country
+						is_rival = event_target:dpe_defect_to_country
+						event_target:dpe_defect_to_country = {
+							OR = {
+								is_hostile_to = event_target:dpe_defect_to_country
+								is_rival = event_target:dpe_defect_to_country
+							}
+						}
+					}
+				}
+			}
+			6 = {
+				country_event = { id = dpe_defect_leader.3 }
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = dpe_defect_leader.2
+	title = dpe_defect_leader.2.name
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+		}
+		text = dpe_defect_leader.2.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+		}
+		text = dpe_defect_leader.2.desc.civilian
+	}
+	
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:dpe_defect_leader
+		room = ethic_spaceship_room
+	}
+	
+	option = { #accept
+		name = dpe_defect_leader.2.A
+		custom_tooltip = dpe_defect_leader.2.A.tooltip
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = overwhelming
+						}
+					}
+				}
+				@DPE_resource_reward = 24
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = superior
+						}
+					}
+				}
+				@DPE_resource_reward = 18
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = equivalent
+						}
+					}
+				}
+				@DPE_resource_reward = 12
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = inferior
+						}
+					}
+				}
+				@DPE_resource_reward = 9
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = pathetic
+						}
+					}
+				}
+				@DPE_resource_reward = 6
+			}
+		}
+		
+		event_target:dpe_defect_leader = {
+			switch = {
+				trigger = leader_class
+				scientist = {
+					root = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @DPE_resource_reward
+						}
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @DPE_resource_reward
+						}
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @DPE_resource_reward
+						}
+					}
+					from = {
+						add_modifier = {
+							modifier = dpe_defector_scientist_from
+							days = 3600
+						}
+					}
+				}
+				governor = {
+					root = {
+						add_monthly_resource_mult = {
+							resource = minerals
+							value = @DPE_resource_reward
+						}
+						add_monthly_resource_mult = {
+							resource = energy
+							value = @DPE_resource_reward
+						}
+					}
+					from = {
+						add_modifier = {
+							modifier = dpe_defector_governor_from
+							days = 360
+						}
+					}
+				}
+				general = {
+					root = {
+						add_modifier = {
+							modifier = dpe_defector_military_receive
+							days = 3600
+						}
+					}
+					from = {
+						add_modifier = {
+							modifier = dpe_defector_military_from
+							days = 3600
+						}
+					}
+				}
+				admiral = {
+					root = {
+						add_modifier = {
+							modifier = dpe_defector_military_receive
+							days = 3600
+						}
+					}
+					from = {
+						add_modifier = {
+							modifier = dpe_defector_military_from
+							days = 3600
+						}
+					}
+				}
+			}
+		}
+		
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_took_in_defector
+			}
+			DPE_Get_Attitude = yes
+		}
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_defect_leader.3 }
+				
+				create_fleet = {
+					name = "NAME_Other_Science_Ship"
+					effect = {
+						set_owner = from
+						create_ship_design = {
+							design = "NAME_Prototype"
+						}
+						create_ship = {
+							name = "NAME_From_Beyond"
+							design = last_created_design
+							graphical_culture = "extra_dimensional_01"
+							prefix = no
+							upgradable = no
+						}
+						set_location = from.capital_scope
+						save_event_target_as = deleted_ship
+					}
+				}
+				event_target:deleted_ship = {
+					set_leader = event_target:dpe_defect_leader
+					leader = { exile_leader_as = dpe_defect_leader }
+					delete_fleet = this
+				}
+			}
+			
+			create_fleet = {
+				name = "NAME_Other_Science_Ship"
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_Prototype"
+					}
+					create_ship = {
+						name = "NAME_From_Beyond"
+						design = last_created_design
+						graphical_culture = "extra_dimensional_01"
+						prefix = no
+						upgradable = no
+					}
+					set_location = root.capital_scope
+					save_event_target_as = deleted_ship
+				}
+			}
+			event_target:deleted_ship = {
+				set_leader = dpe_defect_leader
+				leader = { unassign_leader = this }
+				delete_fleet = this
+			}
+		}
+		
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_protective_to = from
+					is_cordial_to = from
+					is_loyal_to = from
+					is_friendly_to = from
+				}
+			}
+		}
+	}
+	option = { #reject
+		name = dpe_defect_leader.2.B
+		custom_tooltip = dpe_defect_leader.2.B.tooltip
+		
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_told_of_defector
+			}
+			hidden_effect = {
+				country_event = { id = dpe_defect_leader.4 }
+			}
+			DPE_Get_Attitude = yes
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = from
+					is_hostile_to = from
+					is_disloyal_to = from
+					is_domineering_to = from
+				}
+				relative_power = {
+					who = from
+					value > pathetic
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_threatened_to = from
+					is_dismissive_to = from
+					is_unfriendly_to = from
+					is_rival = from
+					is_hostile_to = from
+					is_disloyal_to = from
+					is_domineering_to = from
+				}
+			}
+			modifier = {
+				factor = 0.5
+				relative_power = {
+					who = from
+					value > equivalent
+				}
+			}
+			modifier = {
+				factor = 2
+				relative_power = {
+					who = from
+					value < equivalent
+				}
+			}
+		}
+	}
+}
+	
+
+#Leader has defected
+country_event = {
+	id = dpe_defect_leader.3
+	title = dpe_defect_leader.3.name
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+		}
+		text = dpe_defect_leader.3.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+		}
+		text = dpe_defect_leader.3.desc.civilian
+	}
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_hangar_bay
+
+
+	option = {
+		name = dpe_defect_leader.3.A
+		
+		allow = {
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		shift_ethic = ethic_xenophobe
+		
+		tooltip = {
+			event_target:dpe_defect_leader = {
+				switch = {
+					trigger = leader_class
+					scientist = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = physics_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = engineering_research
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_scientist_from
+								days = 3600
+							}
+						}
+					}
+					governor = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = minerals
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = energy
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_governor_from
+								days = 360
+							}
+						}
+					}
+					general = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+					admiral = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_defect_leader.3.B
+		
+		if = {
+			limit = {
+				has_faction = supremacist
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = supremacist
+				}
+				add_modifier = {
+					modifier = dpe_defector_xenophobe_faction
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_faction = isolationist
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = isolationist
+				}
+				add_modifier = {
+					modifier = dpe_defector_xenophobe_faction
+					days = 3600
+				}
+			}
+		}
+		
+		tooltip = {
+			event_target:dpe_defect_leader = {
+				switch = {
+					trigger = leader_class
+					scientist = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = physics_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = engineering_research
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_scientist_from
+								days = 3600
+							}
+						}
+					}
+					governor = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = minerals
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = energy
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_governor_from
+								days = 360
+							}
+						}
+					}
+					general = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+					admiral = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 2 }
+	}
+}
+
+
+#Other country informs you that the leader offered to defect
+country_event = {
+	id = dpe_defect_leader.4
+	title = dpe_defect_leader.4.name
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+		}
+		text = dpe_defect_leader.4.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+		}
+		text = dpe_defect_leader.4.desc.civilian
+	}
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+	
+	option = {
+		name = dpe_defect_leader.4.A
+		
+		hidden_effect = {
+			event_target:dpe_defect_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_defect_leader.4.B
+		
+		if = {
+			limit = {
+				has_ethic = ethic_xenophobe
+			}
+			shift_ethic = ethic_fanatic_xenophobe
+		}
+		else = {
+			shift_ethic = ethic_xenophobe
+		}
+		
+		trigger = {
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+		}
+		
+		hidden_effect = {
+			event_target:dpe_defect_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+}
