@@ -113,6 +113,9 @@ country_event = {
 			}
 			hidden_effect = { country_event = { id = dpe_egalitarian_missions.2 } }
 		}
+		event_target:dpe_egalitarian = {
+			DPE_Get_Attitude = yes
+		}
 		ai_chance = {
 			factor = 1
 			modifier = {

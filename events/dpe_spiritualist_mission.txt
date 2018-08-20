@@ -276,7 +276,11 @@ country_event = {
 			modifier = dpe_missionary_country
 			days = 3600
 		}
-		
+
+		event_target:dpe_neighbour = {
+			DPE_Get_Attitude = yes
+		}
+
 		hidden_effect = { 
 			event_target:dpe_neighbour = { country_event = { id = dpe_spiritualist_mission.4 } }
 		}
@@ -365,7 +369,11 @@ country_event = {
 			modifier = dpe_missionary_country
 			days = 3600
 		}
-		
+
+		event_target:dpe_ally = {
+			DPE_Get_Attitude = yes
+		}
+
 		hidden_effect = {
 			event_target:dpe_ally = {
 				save_event_target_as = dpe_neighbour
@@ -400,7 +408,11 @@ country_event = {
 			modifier = dpe_missionary_country
 			days = 3600
 		}
-		
+
+		event_target:dpe_hive = {
+			DPE_Get_Attitude = yes
+		}
+
 		hidden_effect = {
 			event_target:dpe_hive = {
 				save_event_target_as = dpe_neighbour
@@ -444,7 +456,11 @@ country_event = {
 			modifier = dpe_missionary_country
 			days = 3600
 		}
-		
+
+		event_target:dpe_machines = {
+			DPE_Get_Attitude = yes
+		}
+
 		hidden_effect = {
 			event_target:dpe_machines = {
 				save_event_target_as = dpe_neighbour

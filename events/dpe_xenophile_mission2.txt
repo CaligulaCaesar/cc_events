@@ -364,6 +364,10 @@ country_event = {
 			country_event = { id = dpe_xenophile_mission.4 }
 		}
 
+		event_target:dpe_new_contact = {
+			DPE_Get_Attitude = yes
+		}
+
 		ai_chance = {
 			factor = 3
 			modifier = {

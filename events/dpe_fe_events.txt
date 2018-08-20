@@ -106,6 +106,10 @@ country_event = {
 			country_event = { id = dpe_fe.2 days = 20 }
 		}
 
+		event_target:dpe_materialist_fe = {
+			DPE_Get_Attitude = yes
+		}
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -170,6 +174,10 @@ country_event = {
 				}
 			}
 			country_event = { id = dpe_fe.2 days = 20 }
+		}
+
+		event_target:dpe_spiritualist_fe = {
+			DPE_Get_Attitude = yes
 		}
 
 		ai_chance = {
@@ -238,6 +246,10 @@ country_event = {
 			country_event = { id = dpe_fe.2 days = 20 }
 		}
 
+		event_target:dpe_xenophile_fe = {
+			DPE_Get_Attitude = yes
+		}
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -304,6 +316,10 @@ country_event = {
 			country_event = { id = dpe_fe.12 days = 20 }
 		}
 
+		event_target:dpe_xenophobe_fe = {
+			DPE_Get_Attitude = yes
+		}
+
 		ai_chance = {
 			factor = 0.25
 			modifier = {
@@ -368,6 +384,10 @@ country_event = {
 				}
 			}
 			country_event = { id = dpe_fe.15 days = 20 }
+		}
+
+		event_target:dpe_machine_fe = {
+			DPE_Get_Attitude = yes
 		}
 
 		ai_chance = {

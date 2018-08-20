@@ -1,0 +1,165 @@
+
+#executed in scope of target country
+DPE_Get_Attitude = {
+	save_event_target_as = dpe_attitude_country
+	if = {
+		limit = {
+			is_cordial_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_cordial
+		}
+	}
+	else_if = {
+		limit = {
+			is_rival = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_rival
+		}
+	}
+	else_if = {
+		limit = {
+			is_hostile_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_hostile
+		}
+	}
+	else_if = {
+		limit = {
+			is_angry_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_angry
+		}
+	}
+	else_if = {
+		limit = {
+			is_patronizing_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_patronizing
+		}
+	}
+	else_if = {
+		limit = {
+			is_dismissive_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_dismissive
+		}
+	}
+	else_if = {
+		limit = {
+			is_threatened_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_threatened
+		}
+	}
+	else_if = {
+		limit = {
+			is_protective_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_protective
+		}
+	}
+	else_if = {
+		limit = {
+			is_neutral_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_neutral
+		}
+	}
+	else_if = {
+		limit = {
+			is_friendly_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_friendly
+		}
+	}
+	else_if = {
+		limit = {
+			is_loyal_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_loyal
+		}
+	}
+	else_if = {
+		limit = {
+			is_belligerent_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_belligerent
+		}
+	}
+	else_if = {
+		limit = {
+			is_imperious_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_imperious
+		}
+	}
+	else_if = {
+		limit = {
+			is_arrogant_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_arrogant
+		}
+	}
+	else_if = {
+		limit = {
+			is_enigmatic_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_enigmatic
+		}
+	}
+	else_if = {
+		limit = {
+			is_berserker_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_berserker
+		}
+	}
+	else_if = {
+		limit = {
+			is_domineering_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_domineering
+		}
+	}
+	else_if = {
+		limit = {
+			is_unfriendly_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_unfriendly
+		}
+	}
+	else_if = {
+		limit = {
+			is_disloyal_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_disloyal
+		}
+	}
+	else_if = {
+		limit = {
+			is_custodial_to = root
+		}
+		root = {
+			custom_tooltip = dpe_attitude_custodial
+		}
+	}
+}
