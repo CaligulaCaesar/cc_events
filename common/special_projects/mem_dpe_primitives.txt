@@ -1,0 +1,23 @@
+
+
+
+
+special_project = {
+	key = "mem_dpe_destroy_primitives"
+	cost = 0
+	days_to_research = 30
+	picture = GFX_evt_nuclear_explosion
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_military = 10
+	}
+	
+	on_success = {
+		ship_event = { id = mem_dpe_primitive_events.33 }
+	}
+	
+	on_fail = {
+	}
+}

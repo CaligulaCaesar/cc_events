@@ -1245,6 +1245,9 @@ country_event = {
 			save_event_target_as = mem_dpe_primitive_civ
 			capital_scope = {
 				save_event_target_as = mem_dpe_primitive_planet
+				solar_system = {
+					save_event_target_as = mem_dpe_primitive_system
+				}
 			}
 			set_country_flag = mem_dpe_fleet_destroyed@root
 		}
@@ -1253,7 +1256,10 @@ country_event = {
 	option = { #destroy them
 		name = mem_dpe_primitive_events.30.A
 
-		effects = yes
+		enable_special_project = {
+			name = mem_dpe_destroy_primitives
+			location = event_target:mem_dpe_primitive_planet
+		}
 		
 		trigger = {
 			OR = {
@@ -1380,7 +1386,26 @@ country_event = {
 }
 
 
-#33 will be the same as 31 but as the outcome of the SP so not sure on the scope
+#They are blown up
+country_event = {
+	id = mem_dpe_primitive_events.33
+	title = mem_dpe_primitive_events.33.name
+	desc = mem_dpe_primitive_events.33.desc
+	picture = GFX_evt_nuclear_explosion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+
+		event_target:mem_dpe_primitive_civ = {
+			destroy_country = yes
+		}
+		event_target:mem_dpe_primitive_planet = {
+			destroy_colony = yes
+		}
+	}
+}
 
 
 
@@ -1419,6 +1444,9 @@ country_event = {
 			save_event_target_as = mem_dpe_primitive_civ
 			capital_scope = {
 				save_event_target_as = mem_dpe_primitive_planet
+				solar_system = {
+					save_event_target_as = mem_dpe_primitive_system
+				}
 			}
 			set_country_flag = mem_dpe_fleet_destroyed@root
 		}
@@ -1453,9 +1481,167 @@ country_event = {
 	}
 	
 	immediate = {
-		effects = yes
-		#copy primitive.16
-		#leave out communications if there are any there
+		event_target:mem_dpe_primitive_civ = {
+			remove_country_flag = early_space_age
+			set_country_flag = primitives_can_into_space
+			set_country_type = default
+			change_country_flag = random
+			if = {
+				limit = { is_species_class = MAM }
+				set_graphical_culture = mammalian_01
+			}
+			if = {
+				limit = { is_species_class = REP }
+				set_graphical_culture = reptilian_01
+			}
+			if = {
+				limit = { is_species_class = AVI }
+				set_graphical_culture = avian_01
+			}
+			if = {
+				limit = { is_species_class = ART }
+				set_graphical_culture = arthropoid_01
+			}
+			if = {
+				limit = { is_species_class = MOL }
+				set_graphical_culture = molluscoid_01
+			}
+			if = {
+				limit = { is_species_class = FUN }
+				set_graphical_culture = fungoid_01
+			}
+			if = {
+				limit = { is_species_class = PLANT }
+				set_graphical_culture = plantoid_01
+			}		
+			change_government = {
+				authority = random
+				civics = random
+			}
+			set_name = random
+			add_minerals = 1000 # enough for a spaceport and then some
+			add_energy = 500
+			add_influence = 300
+			capital_scope = {
+				every_tile = {
+					limit = {
+						has_blocker = yes
+						NOR = {
+							has_blocker = tb_decrepit_dwellings
+							has_blocker = tb_failing_infrastructure
+						}
+					}
+					remove_blocker = yes
+				}
+				while = {
+					limit = { 
+						num_pops < 8
+						any_tile = {
+							has_grown_pop = no
+							has_growing_pop = no
+							has_blocker = no
+						}
+					}
+					random_tile = {
+						limit = {
+							has_grown_pop = no
+							has_growing_pop = no
+							has_blocker = no
+						}
+						create_pop = {
+							species = owner
+						}
+					}
+				}
+				random_tile = {
+					limit = {
+						has_grown_pop = yes
+						OR = {
+							has_building = "building_primitive_farm"
+							has_building = "building_primitive_factory"
+							has_building = no
+						}
+					}
+					clear_deposits = yes
+					add_deposit = d_energy_deposit
+					set_building = "building_capital_2"
+				}
+				while = {
+					count = 2
+					random_tile = {
+						limit = {
+							has_grown_pop = yes
+							OR = {
+								has_building = "building_primitive_farm"
+								has_building = "building_primitive_factory"
+								has_building = no
+							}
+						}
+						clear_deposits = yes
+						add_deposit = d_mineral_deposit
+						set_building = "building_mining_network_1"
+					}
+				}
+				while = {
+					count = 2
+					random_tile = {
+						limit = {
+							has_grown_pop = yes
+							OR = {
+								has_building = "building_primitive_farm"
+								has_building = "building_primitive_factory"
+								has_building = no
+							}
+						}
+						clear_deposits = yes
+						add_deposit = d_farmland_deposit
+						set_building = "building_hydroponics_farm_1"
+					}
+				}
+				while = {
+					count = 3
+					random_tile = {
+						limit = {
+							has_grown_pop = yes
+							OR = {
+								has_building = "building_primitive_farm"
+								has_building = "building_primitive_factory"
+								has_building = no
+							}
+						}
+						clear_deposits = yes
+						add_deposit = d_energy_deposit
+						set_building = "building_power_plant_1"
+					}
+				}
+				remove_all_armies = yes
+				solar_system = {
+					if = {
+						limit = {
+							NOT = { exists = starbase }
+						}
+						create_starbase = {
+							size = starbase_outpost
+							owner = event_target:mem_dpe_primitive_civ
+						}
+					}
+					else_if = {
+						limit = {
+							starbase = {
+								NOT = { owner = { is_same_value = event_target:mem_dpe_primitive_civ } }
+							}
+						}	
+						starbase = {
+							set_owner = event_target:mem_dpe_primitive_civ
+						}
+					}
+				}				
+			}
+			random_owned_ship = {
+				limit = { is_ship_size = primitive_space_station }
+				fleet = { destroy_fleet = THIS }
+			}
+		}
 		
 		fromfromfromfrom = {
 			delete_fleet = this
@@ -1468,6 +1654,7 @@ country_event = {
 				modifier = mem_dpe_primitives_boost
 				days = 7200
 			}
+			add_influence = 650
 			add_physics_research = 10000
 			add_society_research = 10000
 			add_engineering_research = 10000

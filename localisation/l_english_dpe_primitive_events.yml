@@ -92,6 +92,12 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
  mem_dpe_primitive_events.32.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Surrender"
  mem_dpe_primitive_events.32.desc:0 "We cannot withstand your might, [root.GetSpeciesName]. We surrender."
 
+ mem_dpe_destroy_primitives:0 "Destroy the Primitives"
+ mem_dpe_destroy_primitives_DESC:0 "Wipe out the primitives that have dared to resist us."
+ 
+ mem_dpe_primitive_events.33.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Are No More"
+ mem_dpe_primitive_events.33.desc:0 "We have destroyed the primitives that used to inhabit [mem_dpe_primitive_planet.GetName]. The planet is now ripe for our colonisation."
+
 
  mem_dpe_primitive_events.35.name:0 "Our Control of the [mem_dpe_primitive_system.GetName] System Wavers"
  mem_dpe_primitive_events.35.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have destroyed our starbase! With the techs they will be able to harvest from the wreckage of our facilities, they will very soon be able to leave the borders of their system!"
@@ -111,6 +117,5 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
  mem_dpe_primitive_events.37.D:0 "Why does the food speak?"
  mem_dpe_primitive_events.37.E:0 "<<< Weapons protocols enabled >>>"
 
- 
  mem_dpe_primitive_conflict:0 "Conflict over Home System"
  mem_dpe_primitives_boost:0 "Latecomer Bonus"
