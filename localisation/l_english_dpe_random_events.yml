@@ -218,10 +218,10 @@ cc_antiluddite:0 "Celebrating Robotic Workers"
 
 
  dpe_defect_leader.2.name:0 "Incoming Transmission"
- dpe_defect_leader.2.desc.military:0 "All praise to my [root.RulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gained access to the [dpe_defected_country.GetSpeciesNamePlural]’s best-kept military secrets and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
- dpe_defect_leader.2.desc.civilian:0 "All praise to my [root.RulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gathered a stash of [dpe_defected_country.GetSpeciesAdj] [dpe_defect_leader.GetDPEDefectorText] and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.desc.military:0 "All praise to my [root.GetRulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gained access to the [dpe_defected_country.GetSpeciesNamePlural]’s best-kept military secrets and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.desc.civilian:0 "All praise to my [root.GetRulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gathered a stash of [dpe_defected_country.GetSpeciesAdj] [dpe_defect_leader.GetDPEDefectorText] and am prepared to defect at a moment’s notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
  dpe_defect_leader.2.A:0 "You are a true [root.GetSpeciesName]."
- dpe_defect_leader.2.A.tooltip:0 "[dpe_defect_leader.GetTitle [dpe_defect_leader.GetName] will join the [root.GetName]. The [dpe_defected_country.GetSpeciesNamePlural] will be greatly annoyed."
+ dpe_defect_leader.2.A.tooltip:0 "[dpe_defect_leader.GetTitle] [dpe_defect_leader.GetName] will join the [root.GetName]. The [dpe_defected_country.GetSpeciesNamePlural] will be greatly annoyed."
  dpe_defect_leader.2.B:0 "We will not take in traitors."
  dpe_defect_leader.2.B.tooltip:0 "Hand [dpe_defect_leader.GetHimHer] over to the [dpe_defected_country.GetSpeciesNamePlural]. They will be pleased."
 
@@ -249,3 +249,8 @@ cc_antiluddite:0 "Celebrating Robotic Workers"
 
  dpe_defector_governor_text:0 "state resources"
  dpe_defector_scientist_text: "technology"
+
+
+ dpe_told_of_defector:0 "Informed about Defector"
+
+ dpe_took_in_defector:0 "Took in Defector"
