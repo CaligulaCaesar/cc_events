@@ -1,0 +1,97 @@
+
+namespace = mem_dpe_space_battle
+
+
+#on_ship_destroyed_perp
+country_event = {
+	id = mem_dpe_space_battle.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		fromfromfrom = {
+			switch = {
+				trigger = is_ship_class
+				corvette = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 1
+						}
+					}
+				}
+				destroyer = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 2
+						}
+					}
+				}
+				cruiser = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 4
+						}
+					}
+				}
+				battleship = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 8
+						}
+					}
+				}
+				titan = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 16
+						}
+					}
+				}
+				default = {
+					solar_system = {
+						change_variable = {
+							which = mem_dpe_space_battle
+							value = 2
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#on_space_battle_won
+country_event = {
+	id = mem_dpe_space_battle.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom.solar_system = { save_event_target_as = mem_dpe_recently_ended_battle }
+		
+		country_event = { id = mem_dpe_space_battle.3 days = 5 }
+	}
+}
+
+
+country_event = {
+	id = mem_dpe_space_battle.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:mem_dpe_recently_ended_battle = {
+			set_variable = {
+				which = mem_dpe_space_battle
+				value = 0
+			}
+		}
+	}
+}
