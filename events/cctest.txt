@@ -1131,10 +1131,13 @@ country_event = {
 
 		create_leader = {
 			name = random
-			type = random
+			type = scientist
 			species = event_target:cctest_country.species
 		}
-		country_event = { id = dpe_defect_leader.1 }
+		event_target:cctest_country = {
+			set_player = root
+		}
+		country_event = { id = dpe_defect_leader.1 days = 2 }
 		country_event = { id = cctest.752 days = 2 }
 	}
 	option = {
@@ -1142,7 +1145,9 @@ country_event = {
 	}
 	option = {
 		name = THEIR_SIDE
-		set_player = event_target:cctest_country
+		event_target:cctest_country = {
+			set_player = root
+		}
 	}
 }
 
@@ -1185,7 +1190,9 @@ country_event = {
 	}
 	option = {
 		name = THEIR_SIDE
-		set_player = event_target:cctest_country
+		event_target:cctest_country = {
+			set_player = root
+		}
 	}
 }
 

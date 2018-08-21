@@ -658,11 +658,11 @@ country_event = {
 			}
 			create_leader = {
 				type = scientist
-				species = root
+				species = root.species
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
+					add_trait = leader_trait_dpe_talented
 				}
 			}
 		}
@@ -694,7 +694,7 @@ country_event = {
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
+					add_trait = leader_trait_dpe_talented
 				}
 			}
 		}
@@ -1083,12 +1083,12 @@ country_event = {
 			}
 			create_leader = {
 				type = general
-				species = root
+				species = root.species
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
-					trait = leader_trait_charismatic
+					add_trait = leader_trait_dpe_talented
+					add_trait = leader_trait_charismatic
 				}
 			}
 		}
@@ -1120,8 +1120,8 @@ country_event = {
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
-					trait = leader_trait_charismatic
+					add_trait = leader_trait_dpe_talented
+					add_trait = leader_trait_charismatic
 				}
 			}
 		}
@@ -1293,12 +1293,12 @@ country_event = {
 			}
 			create_leader = {
 				type = governor
-				species = root
+				species = root.species
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
-					trait = leader_trait_intellectual
+					add_trait = leader_trait_dpe_talented
+					add_trait = leader_trait_intellectual
 				}
 			}
 		}
@@ -1330,8 +1330,8 @@ country_event = {
 				name = random
 				skill = 2
 				traits = {
-					trait = leader_trait_dpe_talented
-					trait = leader_trait_intellectual
+					add_trait = leader_trait_dpe_talented
+					add_trait = leader_trait_intellectual
 				}
 			}
 		}
@@ -1491,8 +1491,8 @@ country_event = {
 			name = random
 			skill = 2
 			traits = {
-				trait = leader_trait_dpe_talented
-				trait = leader_trait_aggressive
+				add_trait = leader_trait_dpe_talented
+				add_trait = leader_trait_aggressive
 			}
 		}
 		last_created_leader = { save_event_target_as = dpe_talent_leader }

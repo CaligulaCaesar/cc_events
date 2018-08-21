@@ -239,76 +239,79 @@ country_event = {
 				trigger = leader_class
 				scientist = {
 					root = {
-						switch = {
-							trigger = has_country_flag
-							dpe_defect_overwhelming = {
-								add_monthly_resource_mult = {
-									resource = physics_research
-									value = 24
+						custom_tooltip = dpe_defects_scientist_tooltip
+						hidden_effect = {
+							switch = {
+								trigger = has_country_flag
+								dpe_defect_overwhelming = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 24
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 24
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 24
+									}
 								}
-								add_monthly_resource_mult = {
-									resource = society_research
-									value = 24
+								dpe_defect_superior = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 18
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 18
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 18
+									}
 								}
-								add_monthly_resource_mult = {
-									resource = engineering_research
-									value = 24
+								dpe_defect_equivalent = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 12
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 12
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 12
+									}
 								}
-							}
-							dpe_defect_superior = {
-								add_monthly_resource_mult = {
-									resource = physics_research
-									value = 18
+								dpe_defect_inferior = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 9
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 9
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 9
+									}
 								}
-								add_monthly_resource_mult = {
-									resource = society_research
-									value = 18
-								}
-								add_monthly_resource_mult = {
-									resource = engineering_research
-									value = 18
-								}
-							}
-							dpe_defect_equivalent = {
-								add_monthly_resource_mult = {
-									resource = physics_research
-									value = 12
-								}
-								add_monthly_resource_mult = {
-									resource = society_research
-									value = 12
-								}
-								add_monthly_resource_mult = {
-									resource = engineering_research
-									value = 12
-								}
-							}
-							dpe_defect_inferior = {
-								add_monthly_resource_mult = {
-									resource = physics_research
-									value = 9
-								}
-								add_monthly_resource_mult = {
-									resource = society_research
-									value = 9
-								}
-								add_monthly_resource_mult = {
-									resource = engineering_research
-									value = 9
-								}
-							}
-							dpe_defect_pathetic = {
-								add_monthly_resource_mult = {
-									resource = physics_research
-									value = 6
-								}
-								add_monthly_resource_mult = {
-									resource = society_research
-									value = 6
-								}
-								add_monthly_resource_mult = {
-									resource = engineering_research
-									value = 6
+								dpe_defect_pathetic = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 6
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 6
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 6
+									}
 								}
 							}
 						}
@@ -322,56 +325,59 @@ country_event = {
 				}
 				governor = {
 					root = {
-						switch = {
-							trigger = has_country_flag
-							dpe_defect_overwhelming = {
-								add_monthly_resource_mult = {
-									resource = energy
-									value = 24
+						custom_tooltip = dpe_defects_governor_tooltip
+							hidden_effect = {
+							switch = {
+								trigger = has_country_flag
+								dpe_defect_overwhelming = {
+									add_monthly_resource_mult = {
+										resource = energy
+										value = 24
+									}
+									add_monthly_resource_mult = {
+										resource = minerals
+										value = 24
+									}
 								}
-								add_monthly_resource_mult = {
-									resource = minerals
-									value = 24
+								dpe_defect_superior = {
+									add_monthly_resource_mult = {
+										resource = energy
+										value = 18
+									}
+									add_monthly_resource_mult = {
+										resource = minerals
+										value = 18
+									}
 								}
-							}
-							dpe_defect_superior = {
-								add_monthly_resource_mult = {
-									resource = energy
-									value = 18
+								dpe_defect_equivalent = {
+									add_monthly_resource_mult = {
+										resource = energy
+										value = 12
+									}
+									add_monthly_resource_mult = {
+										resource = minerals
+										value = 12
+									}
 								}
-								add_monthly_resource_mult = {
-									resource = minerals
-									value = 18
+								dpe_defect_inferior = {
+									add_monthly_resource_mult = {
+										resource = energy
+										value = 9
+									}
+									add_monthly_resource_mult = {
+										resource = minerals
+										value = 9
+									}
 								}
-							}
-							dpe_defect_equivalent = {
-								add_monthly_resource_mult = {
-									resource = energy
-									value = 12
-								}
-								add_monthly_resource_mult = {
-									resource = minerals
-									value = 12
-								}
-							}
-							dpe_defect_inferior = {
-								add_monthly_resource_mult = {
-									resource = energy
-									value = 9
-								}
-								add_monthly_resource_mult = {
-									resource = minerals
-									value = 9
-								}
-							}
-							dpe_defect_pathetic = {
-								add_monthly_resource_mult = {
-									resource = energy
-									value = 6
-								}
-								add_monthly_resource_mult = {
-									resource = minerals
-									value = 6
+								dpe_defect_pathetic = {
+									add_monthly_resource_mult = {
+										resource = energy
+										value = 6
+									}
+									add_monthly_resource_mult = {
+										resource = minerals
+										value = 6
+									}
 								}
 							}
 						}
