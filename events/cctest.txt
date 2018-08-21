@@ -1119,6 +1119,9 @@ country_event = {
 country_event = {
 	id = cctest.751
 	is_triggered_only = yes
+	title = OK
+	desc = OK
+	picture = GFX_evt_aggressive_flora
 
 	immediate = {
 		random_playable_country = {
@@ -1129,7 +1132,7 @@ country_event = {
 		create_leader = {
 			name = random
 			type = random
-			species = event_target:cctest_country
+			species = event_target:cctest_country.species
 		}
 		country_event = { id = dpe_defect_leader.1 }
 		country_event = { id = cctest.752 days = 2 }
@@ -1159,6 +1162,9 @@ country_event = {
 
 country_event = {
 	id = cctest.753
+	title = OK
+	desc = OK
+	picture = GFX_evt_aggressive_flora
 	is_triggered_only = yes
 
 	immediate = {

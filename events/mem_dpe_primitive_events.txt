@@ -25,7 +25,7 @@ country_event = {
 
 			check_variable = {
 				which = mem_dpe_space_battle
-				value > 20
+				value > 5
 			}
 			NOT = {
 				has_star_flag = mem_lunar_age_system
@@ -107,7 +107,7 @@ country_event = {
 								solar_system = {
 									check_variable = {
 										which = mem_dpe_space_battle
-										value > 40
+										value > 10
 									}
 								}
 							}
@@ -116,7 +116,7 @@ country_event = {
 								solar_system = {
 									check_variable = {
 										which = mem_dpe_space_battle
-										value > 60
+										value > 15
 									}
 								}
 							}
@@ -125,7 +125,7 @@ country_event = {
 								solar_system = {
 									check_variable = {
 										which = mem_dpe_space_battle
-										value > 80
+										value > 20
 									}
 								}
 							}
@@ -134,25 +134,7 @@ country_event = {
 								solar_system = {
 									check_variable = {
 										which = mem_dpe_space_battle
-										value > 100
-									}
-								}
-							}
-							modifier = {
-								factor = 2
-								solar_system = {
-									check_variable = {
-										which = mem_dpe_space_battle
-										value > 120
-									}
-								}
-							}
-							modifier = {
-								factor = 2
-								solar_system = {
-									check_variable = {
-										which = mem_dpe_space_battle
-										value > 150
+										value > 30
 									}
 								}
 							}
@@ -161,12 +143,21 @@ country_event = {
 								solar_system = {
 									check_variable = {
 										which = mem_dpe_space_battle
-										value > 200
+										value > 40
+									}
+								}
+							}
+							modifier = {
+								factor = 10
+								solar_system = {
+									check_variable = {
+										which = mem_dpe_space_battle
+										value > 50
 									}
 								}
 							}
 						}
-						2 = { #they miss it
+						4 = { #they miss it
 							#set the modifiers for the level of primitiveness - low up to middle ages, but unmissable for early space age
 							modifier = {
 								factor = 2.5
