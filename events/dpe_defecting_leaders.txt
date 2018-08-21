@@ -114,7 +114,7 @@ country_event = {
 				}
 			}
 			6 = {
-				country_event = { id = dpe_defect_leader.3 }
+				country_event = { id = dpe_defect_leader.5 }
 			}
 		}
 	}
@@ -428,6 +428,14 @@ country_event = {
 	}
 }
 	
+#6
+#It seems our confidence in [dpe_defect_leader.GetName] was misplaced. [dpe_defect_leader.GetSheHeCap] has defected to the [from.GetName], taking with [dpe_defect_leader.GetHimHer] a stash of state resources / technology. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government.
+#It seems our confidence in [dpe_defect_leader.GetName] was misplaced. [dpe_defect_leader.GetSheHeCap] has defected to the [from.GetName], taking with [dpe_defect_leader.GetHimHer] information on our best-kept military secrets. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government.
+
+#20
+#It appears that [dpe_defect_leader.GetName] noticed our investigations into [dpe_defect_leader.GetHimHer]. Before we realised what was happening, [dpe_defect_leader.GetSheHe] enacted [dpe_defect_leader.GetHisHer] escape plan and left for the [dpe_defect_to_country.GetName] with [dpe_defect_leader.GetHisHer] stash of technology / state resources. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government.
+#It appears that [dpe_defect_leader.GetName] noticed our investigations into [dpe_defect_leader.GetHimHer]. Before we realised what was happening, [dpe_defect_leader.GetSheHe] enacted [dpe_defect_leader.GetHisHer] escape plan and left for the [dpe_defect_to_country.GetName] with [dpe_defect_leader.GetHisHer] knowledge of our military secrets. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government.
+
 
 #Leader has defected
 country_event = {
@@ -441,6 +449,10 @@ country_event = {
 					leader_class = admiral
 				}
 			}
+			NOR = {
+				has_country_flag = dpe_defect_investigation@from
+				has_country_flag = dpe_defect_misplaced_confidence@from
+			}
 		}
 		text = dpe_defect_leader.3.desc.military
 	}
@@ -452,8 +464,60 @@ country_event = {
 					leader_class = scientist
 				}
 			}
+			NOR = {
+				has_country_flag = dpe_defect_investigation@from
+				has_country_flag = dpe_defect_misplaced_confidence@from
+			}
 		}
 		text = dpe_defect_leader.3.desc.civilian
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+			has_country_flag = dpe_defect_misplaced_confidence@from
+		}
+		text = dpe_defect_leader.6.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+			has_country_flag = dpe_defect_misplaced_confidence@from
+		}
+		text = dpe_defect_leader.6.desc.civilian
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+			has_country_flag = dpe_defect_investigation@from
+		}
+		text = dpe_defect_leader.20.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+			has_country_flag = dpe_defect_investigation@from
+		}
+		text = dpe_defect_leader.20.desc.civilian
 	}
 	
 	is_triggered_only = yes
@@ -597,6 +661,11 @@ country_event = {
 					days = 3600
 				}
 			}
+		}
+		
+		add_modifier = {
+			modifier = dpe_defector_xenophobia
+			days = 3600
 		}
 		
 		tooltip = {
@@ -757,5 +826,919 @@ country_event = {
 		}
 		
 		ai_chance = { factor = 0 }
+	}
+}
+
+
+
+#A member of [dpe_defect_leader.GetName]'s staff claims that [dpe_defect_leader.GetSheHe] is preparing to defect to the [dpe_defect_to_country.GetName]. They claim to have overheard [dpe_defect_leader.GetHimHer] talking with other [dpe_defect_to_country.GetSpeciesNamePlural] and to have understood enough to work out what the subject was. However, they are unable to provide evidence to back up their story.
+
+#[dpe_defect_leader.GetSheHeCap] has our full confidence!
+#Arrest [dpe_defect_leader.GetHimHer] immediately!
+#Investigate [dpe_defect_leader.GetHimHer] discreetly.
+
+#Allegations Raised
+country_event = {
+	id = dpe_defect_leader.5
+	title = dpe_defect_leader.5.name
+	desc = dpe_defect_leader.5.desc
+	picture = GFX_evt_smugglers_in_bar
+	
+	is_triggered_only = yes
+	
+	option = { #Full confidence
+		name = dpe_defect_leader.5.A
+		
+		random_list = {
+			4 = {
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = dpe_defect_misplaced_confidence@event_target:dpe_defect_to_country
+						days = 65
+					}
+					event_target:dpe_defect_to_country = {
+						country_event = { id = dpe_defect_leader.2 days = 30 random = 30 }
+					}
+				}
+				custom_tooltip = dpe_defect_leader.5.A.defects
+				
+				modifier = {
+					factor = 2
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						is_hostile_to = event_target:dpe_defect_to_country
+						is_rival = event_target:dpe_defect_to_country
+						event_target:dpe_defect_to_country = {
+							OR = {
+								is_hostile_to = event_target:dpe_defect_to_country
+								is_rival = event_target:dpe_defect_to_country
+							}
+						}
+					}
+				}
+			}
+			6 = {
+				hidden_effect = {
+					country_event = { id = dpe_defect_leader.7 days = 50 random = 30 }
+				}
+				custom_tooltip = dpe_defect_leader.5.A.not_defects
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_hostile_to = event_target:dpe_defect_to_country
+					is_rival = event_target:dpe_defect_to_country
+					event_target:dpe_defect_to_country = {
+						OR = {
+							is_hostile_to = event_target:dpe_defect_to_country
+							is_rival = event_target:dpe_defect_to_country
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Arrest
+		name = dpe_defect_leader.5.B
+		
+		custom_tooltip = dpe_defect_leader.5.B.tooltip
+		
+		if = {
+			limit = {
+				has_faction = xenoist
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = xenoist
+				}
+				add_modifier = {
+					modifier = dpe_defector_arbitrary_detention
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_faction = progressive
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = progressive
+				}
+				add_modifier = {
+					modifier = dpe_defector_arbitrary_detention
+					days = 3600
+				}
+			}
+		}
+		
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_Other_Science_Ship"
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_Prototype"
+					}
+					create_ship = {
+						name = "NAME_From_Beyond"
+						design = last_created_design
+						graphical_culture = "extra_dimensional_01"
+						prefix = no
+						upgradable = no
+					}
+					set_location = root.capital_scope
+					save_event_target_as = deleted_ship
+				}
+			}
+			event_target:deleted_ship = {
+				set_leader = event_target:dpe_defect_leader
+				leader = { exile_leader_as = dpe_defect_leader_arrested }
+				delete_fleet = this
+			}
+			
+			event_target:dpe_defect_to_country = {
+				country_event = { id = dpe_defect_leader.11 days = 15 }
+			}
+		}
+	
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_hostile_to = event_target:dpe_defect_to_country
+					is_rival = event_target:dpe_defect_to_country
+					event_target:dpe_defect_to_country = {
+						OR = {
+							is_hostile_to = event_target:dpe_defect_to_country
+							is_rival = event_target:dpe_defect_to_country
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = { #Investigate
+		name = dpe_defect_leader.5.C
+		
+		random_list = {
+			3 = {
+				hidden_effect = {
+					country_event = { id = dpe_defect_leader.8 days = 15 random = 15 }
+				}
+				custom_tooltip = dpe_defect_leader.5.C.caught_guilty
+				
+				modifier = {
+					factor = 2
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						is_hostile_to = event_target:dpe_defect_to_country
+						is_rival = event_target:dpe_defect_to_country
+						event_target:dpe_defect_to_country = {
+							OR = {
+								is_hostile_to = event_target:dpe_defect_to_country
+								is_rival = event_target:dpe_defect_to_country
+							}
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					set_timed_country_flag = {
+						flag = dpe_defect_investigation@event_target:dpe_defect_to_country
+						days = 25
+					}
+					event_target:dpe_defect_to_country = {
+						country_event = { id = dpe_defect_leader.2 days = 10 random = 10 }
+					}
+				}
+				custom_tooltip = dpe_defect_leader.5.C.flees
+				
+				modifier = {
+					factor = 2
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						is_hostile_to = event_target:dpe_defect_to_country
+						is_rival = event_target:dpe_defect_to_country
+						event_target:dpe_defect_to_country = {
+							OR = {
+								is_hostile_to = event_target:dpe_defect_to_country
+								is_rival = event_target:dpe_defect_to_country
+							}
+						}
+					}
+				}
+			}
+			4 = {
+				hidden_effect = {
+					country_event = { id = dpe_defect_leader.9 days = 15 random = 15 }
+				}
+				custom_tooltip = dpe_defect_leader.5.C.no_evidence
+			}
+			2 = {
+				hidden_effect = {
+					country_event = { id = dpe_defect_leader.10 days = 10 random = 10 }
+				}
+				custom_tooltip = dpe_defect_leader.5.C.caught_investigating_not_guilty
+			}
+		}
+	}
+}
+
+
+#7
+#Full confidence:
+#It appears that our confidence in [dpe_defect_leader.GetName] has paid off. Not only has [dpe_defect_leader.GetSheHe] not defected, but [dpe_defect_leader.GetSheHe] has managed to restore public confidence in [dpe_defect_leader.GetHimHer]self, and is now seen as a model of xeno integration into [root.GetSpeciesAdj] society.
+#I need to give an extra bonus to this option
+
+country_event = {
+	id = dpe_defect_leader.7
+	title = dpe_defect_leader.7.name
+	desc = dpe_defect_leader.7.desc
+	picture = GFX_evt_cc_military_ceremony
+
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		
+		add_modifier = {
+			modifier = dpe_defect_trust_in_xenos
+			days = 3600
+		}
+	}
+}
+
+
+#8
+#Our investigation into [dpe_defect_leader.GetName] has turned up clear evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetIsAre] planning to defect. We must take immediate action!
+#    -Arrest [dpe_defect_leader.GetHimHer]!
+#    -Let's test the [dpe_defect_to_country.GetSpeciesNamePlural].
+#        We will keep [dpe_defect_leader.GetName] under surveillance and will arrest [dpe_defect_leader.GetHimHer] as soon as we know whether the [dpe_defect_to_country.GetSpeciesNamePlural] would take [dpe_defect_leader.GetHimHer] in.
+
+country_event = {
+	id = dpe_defect_leader.8
+	title = dpe_defect_leader.8.name
+	desc = dpe_defect_leader.8.desc
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	option = { #Arrest
+		name = dpe_defect_leader.8.A
+		
+		hidden_effect = {
+			event_target:dpe_defect_leader = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				NOR = {
+					is_hostile_to = event_target:dpe_defect_to_country
+					is_rival = event_target:dpe_defect_to_country
+					event_target:dpe_defect_to_country = {
+						OR = {
+							is_hostile_to = event_target:dpe_defect_to_country
+							is_rival = event_target:dpe_defect_to_country
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Watch
+		name = dpe_defect_leader.8.B
+		
+		custom_tooltip = dpe_defect_leader.8.B.tooltip
+		
+		hidden_effect = {
+			event_target:dpe_defect_to_country = {
+				country_event = { id = dpe_defect_leader.17 days = 30 random = 30 }
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+	
+
+#9
+#Our investigation into [dpe_defect_leader.GetName] has turned up no evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetWasWere] planning to defect. Having publicly stated our confidence in [dpe_defect_leader.GetName], we can breathe a sigh of relief and consider the matter closed.
+
+country_event = {
+	id = dpe_defect_leader.9
+	title = dpe_defect_leader.9.name
+	desc = dpe_defect_leader.9.desc
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+
+#10
+#My [root.GetRulerTitle], it has come to my notice that you are investigating me for my supposed disloyalty to the [root.GetName]. As one who has always considered [dpe_defect_leader.GetHimHer]sel[dpe_defect_leader.GetFVes] a [root.GetSpeciesName] citizen as much as a [dpe_defect_leader.GetSpeciesName], I am most disappointed in this lack of confidence in me. It is therefore with regret that I must tender my resignation. I cannot serve a government in which I am not welcome.
+
+country_event = {
+	id = dpe_defect_leader.10
+	title = dpe_defect_leader.10.name
+	desc = dpe_defect_leader.10.desc
+	
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:dpe_defect_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = UNFORTUNATE
+		
+		hidden_effect = {
+			event_target:dpe_defect_leader = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+#National Incarcerated
+#It has come to our attention that [dpe_defect_leader.GetName], a [root.GetSpeciesAdj] who had been a high government official in the [from.GetName], faces persecution on account of [dpe_defect_leader.GetHisHer] species. Taking up [dpe_defect_leader.GetHisHer] case could be a good opportunity to embarrass the [from.GetSpeciesNamePlural] while furthering the [root.GetSpeciesAdj] cause.
+#Lodge a complaint.
+#The fate of this sell-out is of no concern to us.
+
+#National Incarcerated
+country_event = {
+	id = dpe_defect_leader.11
+	title = dpe_defect_leader.11.name
+	desc = dpe_defect_leader.11.desc
+	picture = GFX_evt_alien_segregation
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = from
+		
+		NOR = {
+			is_cordial_to = from
+			is_friendly_to = from
+		}
+	}
+	
+	option = {
+		name = dpe_defect_leader.11.A
+		
+		from = {
+			add_opinion_modifier = {
+				modifier = dpe_defect_leader_interference
+				who = root
+			}
+			hidden_effect = {
+				country_event = { id = dpe_defect_leader.12 }
+			}
+		}
+		add_opinion_modifier = {
+			modifier = dpe_defect_leader_incarcerated_national
+			who = from
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_hostile_to = from
+					is_rival = from
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_defect_leader.11.B
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_hostile_to = from
+					is_rival = from
+				}
+			}
+			modifier = {
+				factor = 2
+				is_neutral_to = from
+			}
+		}
+	}
+}
+		
+
+
+
+#[root.GetSpeciesName], we have heard that you are persecuting one of our nationals, [dpe_defect_leader.GetName], on account of [dpe_defect_leader.GetHisHer] species. We demand that [dpe_defect_leader.GetSheHe] be allowed to take asylum in the [from.GetName].
+
+#You may have [dpe_defect_leader.GetHimHer].
+#No way.
+
+#Complaint Raised
+country_event = {
+	id = dpe_defect_leader.12
+	title = dpe_defect_leader.12.name
+	desc = dpe_defect_leader.12.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+	
+	option = {
+		name = dpe_defect_leader.12.A
+		
+		from = {
+			remove_opinion_modifier = {
+				modifier = dpe_defect_leader_incarcerated_national
+				who = root
+			}
+			hidden_effect = {
+				country_event = { id = dpe_defect_leader.13 days = 5 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_hostile_to = event_target:dpe_defect_to_country
+					is_rival = event_target:dpe_defect_to_country
+					event_target:dpe_defect_to_country = {
+						OR = {
+							is_hostile_to = event_target:dpe_defect_to_country
+							is_rival = event_target:dpe_defect_to_country
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_defect_leader.12.B
+		hidden_effect = {
+			country_event = { id = dpe_defect_leader.14 days = 5 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Accepted
+country_event = {
+	id = dpe_defect_leader.13
+	title = dpe_defect_leader.13.name
+	desc = dpe_defect_leader.13.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = EXCELLENT
+
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_Other_Science_Ship"
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_Prototype"
+					}
+					create_ship = {
+						name = "NAME_From_Beyond"
+						design = last_created_design
+						graphical_culture = "extra_dimensional_01"
+						prefix = no
+						upgradable = no
+					}
+					set_location = root.capital_scope
+					save_event_target_as = deleted_ship
+				}
+			}
+			event_target:deleted_ship = {
+				set_leader = dpe_defect_leader_arrested
+				leader = { unassign_leader = this }
+				delete_fleet = this
+			}
+		}
+	}
+}
+
+
+#Rejected
+country_event = {
+	id = dpe_defect_leader.14
+	title = dpe_defect_leader.14.name
+	desc = dpe_defect_leader.14.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { #You will live to regret this
+		name = dpe_defect_leader.14.option
+	}
+}
+
+
+
+
+#17 - dummy of 2
+
+country_event = {
+	id = dpe_defect_leader.17
+	title = dpe_defect_leader.2.name
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = general
+					leader_class = admiral
+				}
+			}
+		}
+		text = dpe_defect_leader.2.desc.military
+	}
+	desc = {
+		trigger = {
+			event_target:dpe_defect_leader = {
+				OR = {
+					leader_class = governor
+					leader_class = scientist
+				}
+			}
+		}
+		text = dpe_defect_leader.2.desc.civilian
+	}
+	
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:dpe_defect_leader
+		room = ethic_spaceship_room
+	}
+	
+	option = { #accept
+		name = dpe_defect_leader.2.A
+		custom_tooltip = dpe_defect_leader.2.A.tooltip
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = overwhelming
+						}
+					}
+				}
+				@DPE_resource_reward = 24
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = superior
+						}
+					}
+				}
+				@DPE_resource_reward = 18
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = equivalent
+						}
+					}
+				}
+				@DPE_resource_reward = 12
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = inferior
+						}
+					}
+				}
+				@DPE_resource_reward = 9
+			}
+			else_if = {
+				limit = {
+					from = {
+						relative_power = {
+							who = root
+							value = pathetic
+						}
+					}
+				}
+				@DPE_resource_reward = 6
+			}
+		}
+		
+		tooltip = {
+			event_target:dpe_defect_leader = {
+				switch = {
+					trigger = leader_class
+					scientist = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = physics_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = engineering_research
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_scientist_from
+								days = 3600
+							}
+						}
+					}
+					governor = {
+						root = {
+							add_monthly_resource_mult = {
+								resource = minerals
+								value = @DPE_resource_reward
+							}
+							add_monthly_resource_mult = {
+								resource = energy
+								value = @DPE_resource_reward
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_governor_from
+								days = 360
+							}
+						}
+					}
+					general = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+					admiral = {
+						root = {
+							add_modifier = {
+								modifier = dpe_defector_military_receive
+								days = 3600
+							}
+						}
+						from = {
+							add_modifier = {
+								modifier = dpe_defector_military_from
+								days = 3600
+							}
+						}
+					}
+				}
+			}
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_took_in_defector
+			}
+			DPE_Get_Attitude = yes
+		}
+		hidden_effect = {
+			country_event = { id = dpe_defect_leader.18 }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_protective_to = from
+					is_cordial_to = from
+					is_loyal_to = from
+					is_friendly_to = from
+				}
+			}
+		}
+	}
+	option = { #reject
+		name = dpe_defect_leader.2.B
+		custom_tooltip = dpe_defect_leader.2.B.tooltip
+		
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = dpe_told_of_defector
+			}
+			hidden_effect = {
+				country_event = { id = dpe_defect_leader.4 }
+			}
+			DPE_Get_Attitude = yes
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = from
+					is_hostile_to = from
+					is_disloyal_to = from
+					is_domineering_to = from
+				}
+				relative_power = {
+					who = from
+					value > pathetic
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					is_threatened_to = from
+					is_dismissive_to = from
+					is_unfriendly_to = from
+					is_rival = from
+					is_hostile_to = from
+					is_disloyal_to = from
+					is_domineering_to = from
+				}
+			}
+			modifier = {
+				factor = 0.5
+				relative_power = {
+					who = from
+					value > equivalent
+				}
+			}
+			modifier = {
+				factor = 2
+				relative_power = {
+					who = from
+					value < equivalent
+				}
+			}
+		}
+	}
+}
+
+
+
+#18
+#Did you really think it wouldn't escape our notice that one of our own government officials was planning to defect? [dpe_defect_leader.GetName] has been apprehended and will remain in our custody. We are most disappointed that [dpe_defect_leader.GetSheHe] had your encouragement.
+#Caught in the Act
+country_event = {
+	id = dpe_defect_leader.18
+	title = dpe_defect_leader.18.name
+	desc = dpe_defect_leader.18.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = fromfrom
+		planet_background = fromfrom
+		graphical_culture = fromfrom
+		city_level = fromfrom
+		room = fromfrom.ruler
+	}
+
+	option = { #Whatever.
+		name = dpe_defect_leader.18.option
 	}
 }

@@ -1071,3 +1071,46 @@ country_event = {
 }
 
 
+
+
+
+country_event = {
+	id = cctest.750
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_war = {
+					is_war_participant = {
+						who = root
+					}
+					defender_war_exhaustion > 0
+				}
+			}
+			capital_scope = {
+				set_variable = {
+					which = ccwarexhtest1
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_war = {
+					is_war_participant = {
+						who = root
+					}
+					defender_war_exhaustion > 1
+				}
+			}
+			capital_scope = {
+				set_variable = {
+					which = ccwarexhtest2
+					value = 1
+				}
+			}
+		}
+	}
+}
