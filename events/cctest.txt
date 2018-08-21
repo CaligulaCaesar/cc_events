@@ -1114,3 +1114,93 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = cctest.751
+	is_triggered_only = yes
+
+	immediate = {
+		random_playable_country = {
+			establish_communications_no_message = root
+			save_event_target_as = cctest_country
+		}
+
+		create_leader = {
+			name = random
+			type = random
+			species = event_target:cctest_country
+		}
+		country_event = { id = dpe_defect_leader.1 }
+		country_event = { id = cctest.752 days = 2 }
+	}
+	option = {
+		name = OUR_SIDE
+	}
+	option = {
+		name = THEIR_SIDE
+		set_player = event_target:cctest_country
+	}
+}
+
+country_event = {
+	id = cctest.752
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		remove_country_flag = dpe_recent_defect_leader
+		event_target:cctest_country = {
+			remove_country_flag = dpe_recent_defect_leader
+		}
+	}
+}
+
+
+country_event = {
+	id = cctest.753
+	is_triggered_only = yes
+
+	immediate = {
+		random_playable_country = {
+			limit = {
+				has_authority = auth_hive_mind
+			}
+			establish_communications_no_message = root
+			save_event_target_as = cctest_country
+		}
+		country_event = {
+			id = cctest.754
+			days = 1
+		}
+	}
+	option = {
+		name = OUR_SIDE
+	}
+	option = {
+		name = THEIR_SIDE
+		set_player = event_target:cctest_country
+	}
+}
+
+
+country_event = {
+	id = cctest.754
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = mem_hive_encounter_happened
+				}
+			}
+			country_event = { id = mem_hive_encounter.1 }
+			country_event = {
+				id = cctest.754
+				days = 1
+			}
+		}
+	}
+}

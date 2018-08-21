@@ -76,6 +76,10 @@ country_event = {
 						has_country_flag = dpe_recent_defect_leader
 					}
 				}
+				set_timed_country_flag = {
+					flag = dpe_recent_defect_leader
+					days = 4800
+				}
 				
 				save_event_target_as = dpe_defect_to_country
 			}
@@ -85,10 +89,6 @@ country_event = {
 		random_list = {
 			4 = {
 				event_target:dpe_defect_to_country = {
-					set_timed_country_flag = {
-						flag = dpe_recent_defect_leader
-						days = 4800
-					}
 					country_event = { id = dpe_defect_leader.2 }
 				}
 				
