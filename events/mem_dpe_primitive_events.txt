@@ -311,6 +311,8 @@ country_event = {
 		}
 		picture = GFX_evt_news_room
 	}
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	immediate = {
 		if = {
@@ -501,6 +503,8 @@ country_event = {
 		text = mem_dpe_primitive_events.3.desc.gestalt
 	}
 	picture = GFX_evt_satellite_in_orbit
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 	
@@ -609,6 +613,8 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	
+	location = event_target:mem_dpe_primitive_planet
+	
 	picture_event_data = {
 		room = no_video_feed_room
 	}
@@ -710,6 +716,8 @@ country_event = {
 	title = mem_dpe_primitive_events.6.name
 	desc = mem_dpe_primitive_events.6.desc
 	
+	location = event_target:mem_dpe_primitive_planet
+	
 	is_triggered_only = yes
 	diplomatic = yes
 	
@@ -731,6 +739,8 @@ country_event = {
 	title = mem_dpe_primitive_events.20.name
 	desc = mem_dpe_primitive_events.20.desc
 	picture = GFX_evt_space_station
+	
+	location = event_target:mem_dpe_primitive_system
 
 	is_triggered_only = yes
 
@@ -884,6 +894,8 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_space_station
+	
+	location = event_target:mem_dpe_primitive_system
 
 	is_triggered_only = yes
 
@@ -986,6 +998,8 @@ country_event = {
 	id = mem_dpe_primitive_events.12
 	title = mem_dpe_primitive_events.12.name
 	desc = mem_dpe_primitive_events.12.desc
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1109,6 +1123,8 @@ country_event = {
 		text = mem_dpe_primitive_events.16.desc.probe
 	}
 	picture = GFX_evt_federation_fleet
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 
@@ -1138,6 +1154,8 @@ country_event = {
 		text = mem_dpe_primitive_events.17.desc.post
 	}
 	picture = GFX_evt_federation_fleet
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 
@@ -1219,6 +1237,8 @@ country_event = {
 	title = mem_dpe_primitive_events.30.name
 	desc = mem_dpe_primitive_events.30.desc
 	picture = GFX_evt_small_space_battle
+	
+	location = event_target:mem_dpe_primitive_system
 
 	is_triggered_only = yes
 
@@ -1327,6 +1347,8 @@ country_event = {
 	title = mem_dpe_primitive_events.31.name
 	desc = mem_dpe_primitive_events.31.desc
 	picture = GFX_evt_nuclear_explosion
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 
@@ -1348,6 +1370,8 @@ country_event = {
 	id = mem_dpe_primitive_events.32
 	title = mem_dpe_primitive_events.32.name
 	desc = mem_dpe_primitive_events.32.desc
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1385,6 +1409,8 @@ ship_event = {
 	title = mem_dpe_primitive_events.33.name
 	desc = mem_dpe_primitive_events.33.desc
 	picture = GFX_evt_nuclear_explosion
+	
+	location = event_target:mem_dpe_primitive_planet
 
 	is_triggered_only = yes
 
@@ -1415,6 +1441,8 @@ country_event = {
 	title = mem_dpe_primitive_events.35.name
 	desc = mem_dpe_primitive_events.35.desc
 	picture = GFX_evt_small_space_battle
+	
+	location = event_target:mem_dpe_primitive_system
 
 	is_triggered_only = yes
 
@@ -1466,6 +1494,8 @@ country_event = {
 	title = mem_dpe_primitive_events.36.name
 	desc = mem_dpe_primitive_events.36.desc
 	picture = GFX_evt_news_room
+	
+	location = event_target:mem_dpe_primitive_system
 	
 	is_triggered_only = yes
 	
@@ -1692,6 +1722,8 @@ country_event = {
 		}
 		text = mem_dpe_primitive_events.37.desc.conciliatory
 	}
+	
+	location = event_target:mem_dpe_primitive_system
 	
 	is_triggered_only = yes
 	diplomatic = yes
