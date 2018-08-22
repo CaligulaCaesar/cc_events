@@ -1350,7 +1350,9 @@ event = {
 		every_country = {
 			every_owned_pop = {
 				limit = {
-					has_a_happiness_gauge = no
+					species = {
+						pops_have_happiness = no
+					}
 					OR = {
 						has_pop_flag = cc_literally_xenophile
 						has_pop_flag = cc_literally_xenophile_manifested
@@ -1408,7 +1410,12 @@ event = {
 			}
 		}
 		every_country = {
-			limit = { has_policy_flag = does_not_allow_im }
+			limit = {
+				OR = {
+					has_policy_flag = does_not_allow_im
+					NOT = { has_country_flag = cc_has_had_interspecies_marriage }
+				}
+			}
 			every_owned_pop = {
 				limit = {
 					OR = {
@@ -2428,7 +2435,7 @@ country_event = {
 		
 		create_leader = {
 			type = general
-			species = root
+			species = this
 			name = random
 			skill = 1
 		}

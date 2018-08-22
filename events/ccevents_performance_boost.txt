@@ -1680,6 +1680,7 @@ pop_event = {
 
 	trigger = {
 		has_pop_flag = cc_literally_xenophile
+		NOT = { has_pop_flag = cc_literally_xenophile_manifested }
 		exists = owner
 		owner = { has_country_flag = cc_eventperf_has_minority }
 		species = { pops_have_happiness = yes }
