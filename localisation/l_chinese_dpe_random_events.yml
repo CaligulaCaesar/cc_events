@@ -214,3 +214,108 @@ cc_antiluddite:0 "机械劳工大受欢迎"
  dpe_smallpos_events.24.name:0 "Mineral Depletion on [root.GetName]"
  dpe_smallpos_events.24.desc:0 "[root.GetName]'s main mining company reports difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
  dpe_smallpos_events.24.desc.gestalt:0 "Our mining drones on [root.GetName] report difficulties in meeting production targets. It seems that some of the planet's main deposits have become depleted, and they have had to spend additional time surveying to replace them."
+
+ 
+ 
+ 
+###Defecting Leaders
+
+ dpe_defect_leader.2.name:0 "Incoming Transmission"
+ dpe_defect_leader.2.desc.military:0 "All praise to my [root.GetRulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gained access to the [dpe_defected_country.GetSpeciesNamePlural]'s best-kept military secrets and am prepared to defect at a moment's notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.desc.civilian:0 "All praise to my [root.GetRulerTitle]! I am [dpe_defect_leader.GetName], a [dpe_defect_leader.GetTitle] in the [dpe_defected_country.GetName]. However, my loyalties lie with my kin, not with the [dpe_defected_country.GetSpeciesNamePlural]. I have gathered a stash of [dpe_defected_country.GetSpeciesAdj] [dpe_defect_leader.GetDPEDefectorText] and am prepared to defect at a moment's notice, if you will promise me protection from the [dpe_defected_country.GetSpeciesAdj] authorities."
+ dpe_defect_leader.2.A:0 "You are a true [root.GetSpeciesName]."
+ dpe_defect_leader.2.A.tooltip:0 "[dpe_defect_leader.GetTitle] [dpe_defect_leader.GetName] will join the [root.GetName]. The [dpe_defected_country.GetName] will be greatly annoyed.\n"
+ dpe_defects_scientist_tooltip:0 "The [root.GetName] gains a lump sum of research.\n"
+ dpe_defects_governor_tooltip:0 "The [root.GetName] gains a lump sum of energy and minerals.\n"
+ dpe_defect_leader.2.B:0 "We will not take in traitors."
+ dpe_defect_leader.2.B.tooltip:0 "Hand [dpe_defect_leader.GetHimHer] over to the [dpe_defected_country.GetSpeciesNamePlural]. They will be pleased."
+
+ dpe_defect_leader.3.name:0 "Defecting [dpe_defect_leader.GetTitle]!"
+ dpe_defect_leader.3.desc.military:0 "[dpe_defect_leader.GetName] has hacked into our military secrets and defected to the [from.GetName]. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.3.desc.civilian:0 "[dpe_defect_leader.GetName] has gathered a stash of [dpe_defect_leader.GetDPEDefectorText] and defected to the [from.GetName]. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.3.A:0 "Maybe they are right!"
+ dpe_defect_leader.3.B:0 "Merely lodge a complaint with the [from.GetSpeciesNamePlural]."
+
+ dpe_defect_leader.4.name:0 "Incoming Transmission"
+ dpe_defect_leader.4.desc.military:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect and hand over your military secrets to us. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.desc.civilian:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect with a stash of your [dpe_defect_leader.GetDPEDefectorText]. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.A:0 "Many thanks. Arrest [dpe_defect_leader.GetHimHer]!"
+ dpe_defect_leader.4.B:0 "This is why we shouldn't have xenos in positions of authority!"
+
+ dpe_defect_leader.6.desc.military:0 "It seems our confidence in [dpe_defect_leader.GetName] was misplaced. [dpe_defect_leader.GetSheHeCap] has defected to the [from.GetName], taking with [dpe_defect_leader.GetHimHer] information on our best-kept military secrets. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.6.desc.civilian:0 "It seems our confidence in [dpe_defect_leader.GetName] was misplaced. [dpe_defect_leader.GetSheHeCap] has defected to the [from.GetName], taking with [dpe_defect_leader.GetHimHer] a stash of [dpe_defect_leader.GetDPEDefectorText]. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+
+ dpe_defect_leader.20.desc.military:0 "It appears that [dpe_defect_leader.GetName] noticed our investigations into [dpe_defect_leader.GetHimHer]. Before we realised what was happening, [dpe_defect_leader.GetSheHe] enacted [dpe_defect_leader.GetHisHer] escape plan and left for the [dpe_defect_to_country.GetName] with [dpe_defect_leader.GetHisHer] knowledge of our military secrets. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+ dpe_defect_leader.20.desc.civilian:0 "It appears that [dpe_defect_leader.GetName] noticed our investigations into [dpe_defect_leader.GetHimHer]. Before we realised what was happening, [dpe_defect_leader.GetSheHe] enacted [dpe_defect_leader.GetHisHer] escape plan and left for the [dpe_defect_to_country.GetName] with [dpe_defect_leader.GetHisHer] stash of [dpe_defect_leader.GetDPEDefectorText]. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
+
+ dpe_defect_leader.5.name:0 "Allegations of Disloyalty"
+ dpe_defect_leader.5.desc:0 "A member of [dpe_defect_leader.GetTitle] [dpe_defect_leader.GetName]'s staff claims that [dpe_defect_leader.GetSheHe] is preparing to defect to the [dpe_defect_to_country.GetName]. They claim to have overheard [dpe_defect_leader.GetHimHer] talking with other [dpe_defect_to_country.GetSpeciesNamePlural] and to have understood enough to work out what the subject was. However, they are unable to provide evidence to back up their story."
+ dpe_defect_leader.5.A:0 "[dpe_defect_leader.GetSheHeCap] has our full confidence!"
+ dpe_defect_leader.5.A.defects:0 "[dpe_defect_leader.GetName] defects."
+ dpe_defect_leader.5.A.not_defects:0 "[dpe_defect_leader.GetName] remains loyal.\nInspired by [dpe_defect_leader.GetHisHer] example and the trust shown in [dpe_defect_leader.GetHimHer] by the government, the country gains the $dpe_defect_trust_in_xenos$ modifier, giving +5% citizen happiness and +50% xenophile attraction." 
+ dpe_defect_leader.5.B:0 "Arrest [dpe_defect_leader.GetHimHer] immediately!"
+ dpe_defect_leader.5.B.tooltip:0 "The [dpe_defect_to_country.GetName] may protest this action."
+ dpe_defect_leader.5.C:0 "Investigate [dpe_defect_leader.GetHimHer] discreetly."
+ dpe_defect_leader.5.C.caught_guilty:0 "[dpe_defect_leader.GetName] is found guilty."
+ dpe_defect_leader.5.C.flees:0 "[dpe_defect_leader.GetName] flees before we catch [dpe_defect_leader.GetHimHer]."
+ dpe_defect_leader.5.C.no_evidence:0 "[dpe_defect_leader.GetName] is exonerated."
+ dpe_defect_leader.5.C.caught_investigating_not_guilty:0 "[dpe_defect_leader.GetName] uncovers our suspicions and resigns in protest."
+
+ dpe_defect_leader.7.name:0 "Trust Well Deserved"
+ dpe_defect_leader.7.desc:0 "It appears that our confidence in [dpe_defect_leader.GetName] was not misplaced. Not only has [dpe_defect_leader.GetSheHe] not defected, but [dpe_defect_leader.GetSheHe] has managed to restore public confidence in [dpe_defect_leader.GetHimHer]self, and is now seen as a model of xeno integration into [root.GetSpeciesAdj] society."
+
+ dpe_defect_leader.8.name:0 "[dpe_defect_leader.GetName] is a Traitor"
+ dpe_defect_leader.8.desc:0 "Our investigation into [dpe_defect_leader.GetName] has turned up clear evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetIsAre] planning to defect. We must take immediate action!"
+ dpe_defect_leader.8.A:0 "Arrest [dpe_defect_leader.GetHimHer]!"
+ dpe_defect_leader.8.B:0 "Let's test the [dpe_defect_to_country.GetSpeciesNamePlural]."
+ dpe_defect_leader.8.B.tooltip:0 " We will keep [dpe_defect_leader.GetName] under surveillance and will arrest [dpe_defect_leader.GetHimHer] as soon as we know whether the [dpe_defect_to_country.GetSpeciesNamePlural] would take [dpe_defect_leader.GetHimHer] in."
+
+ dpe_defect_leader.9.name:0 "No Evidence of Wrongdoing"
+ dpe_defect_leader.9.desc:0 "Our investigation into [dpe_defect_leader.GetName] has turned up no evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetWasWere] planning to defect. Having publicly stated our confidence in [dpe_defect_leader.GetName], we can breathe a sigh of relief and consider the matter closed."
+
+ dpe_defect_leader.10.name:0 "Resignation Letter"
+ dpe_defect_leader.10.desc:0 "My [root.GetRulerTitle], it has come to my notice that you are investigating me for my supposed disloyalty to the [root.GetName]. As one who has always considered [dpe_defect_leader.GetHimHer]sel[dpe_defect_leader.GetFVes] a [root.GetSpeciesName] citizen as much as a [dpe_defect_leader.GetSpeciesName], I am most disappointed in this lack of confidence in me. It is therefore with regret that I must tender my resignation. I cannot serve a government in which I am not welcome."
+
+ dpe_defect_leader.11.name:0 "National Incarcerated"
+ dpe_defect_leader.11.desc:0 "It has come to our attention that [dpe_defect_leader.GetName], a [root.GetSpeciesAdj] who had been a high government official in the [from.GetName], faces persecution on account of [dpe_defect_leader.GetHisHer] species. Taking up [dpe_defect_leader.GetHisHer] case could be a good opportunity to embarrass the [from.GetSpeciesNamePlural] while furthering the [root.GetSpeciesAdj] cause."
+ dpe_defect_leader.11.A:0 "Lodge a complaint."
+ dpe_defect_leader.11.B:0 "The fate of this sell-out is of no concern to us."
+
+ dpe_defect_leader.12.name:0 "Incoming Transmission"
+ dpe_defect_leader.12.desc:0 "[root.GetSpeciesName], we have heard that you are persecuting one of our nationals, [dpe_defect_leader.GetName], on account of [dpe_defect_leader.GetHisHer] species. We demand that [dpe_defect_leader.GetSheHe] be allowed to take asylum in the [from.GetName]."
+ dpe_defect_leader.12.A:0 "You may have [dpe_defect_leader.GetHimHer]."
+ dpe_defect_leader.12.B:0 "No way."
+
+ dpe_defect_leader.13.name:0 "$dpe_title_response$"
+ dpe_defect_leader.13.desc:0 "Fine, take [dpe_defect_leader.GetHimHer]. [dpe_defect_leader.GetSheHeCap] [dpe_defect_leader.GetIsAre] of no use to us, anyway."
+
+ dpe_defect_leader.14.name:0 "$dpe_title_response$"
+ dpe_defect_leader.14.desc:0 "You may not have [dpe_defect_leader.GetHimHer]. [dpe_defect_leader.GetSheHeCap] has penance to serve in our jails."
+ dpe_defect_leader.14.option:0 "You will live to regret this."
+
+ dpe_defect_leader.18.name:0 "Caught in the Act"
+ dpe_defect_leader.18.desc:0 "Did you really think it wouldn't escape our notice that one of our own government officials was planning to defect? [dpe_defect_leader.GetName] has been apprehended and will remain in our custody. We are most disappointed that [dpe_defect_leader.GetSheHe] had your encouragement."
+ dpe_defect_leader.18.option:0 "We've been had."
+
+
+ dpe_defector_scientist_from:0 "Defecting Scientist"
+ dpe_defector_governor_from:0 "Defecting Governor"
+ dpe_defector_military_receive:0 "Military Secrets"
+ dpe_defector_military_receive_desc:0 "A defector from another country brought with them that country's military secrets, giving our navy an edge in battle, for a time at least."
+ dpe_defector_military_from:0 "Military Secrets Compromised"
+ dpe_defector_military_from_desc:0 "A defector to another country took with them our military secrets, leaving our navy at a disadvantage, for a time at least."
+ dpe_defector_xenophobe_faction:0 "Xeno Defector"
+
+ dpe_defector_governor_text:0 "state resources"
+ dpe_defector_scientist_text: "technology"
+
+ dpe_told_of_defector:0 "Informed about Defector"
+ dpe_took_in_defector:0 "Took in Defector"
+ 
+ dpe_defect_leader_interference:0 "Interference"
+ dpe_defect_leader_incarcerated_national:0 "Incarcerated National"
+ dpe_defector_xenophobia:0 "Xenophobic Wave"
+ dpe_defector_xenophobia_desc:0 "The defection of a highly ranked xeno to one of our enemies has turned public sentiment against all xenos."
+ dpe_defector_arbitrary_detention:0 "Arbitrary Detention of Xeno Citizen"
+ dpe_defect_trust_in_xenos:0 "Trust in Xenos"
+ dpe_defect_trust_in_xenos_desc:0 "The positive example of a prominent xeno - and the trust publicly put in them by the government - has helped to build a more open society."
