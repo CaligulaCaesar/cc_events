@@ -1164,3 +1164,41 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = cctest.753
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_primitive = yes
+				has_country_flag = early_space_age
+		
+				NOR = {
+					has_country_flag = mem_dpe_has_discovered_aliens
+					has_ethic = ethic_gestalt_consciousness
+				}
+				
+				home_planet = {
+		
+					solar_system = {
+						exists = starbase
+						
+						starbase.owner = {
+							is_same_value = root
+						}
+					}
+				}
+			}
+			log = [this.GetName]
+			log = [home_planet.GetName]
+			log = [home_planet.solar_system.GetName]
+			log = [capital_scope.GetName]
+			log = [capital_scope.solar_system.GetName]
+			country_event = { id = mem_dpe_primitive_events.299 }
+		}
+	}
+}
+

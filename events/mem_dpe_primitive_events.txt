@@ -407,7 +407,7 @@ country_event = {
 			has_ethic = ethic_gestalt_consciousness
 		}
 		
-		capital_scope = {
+		home_planet = {
 
 			solar_system = {
 				exists = starbase
@@ -449,25 +449,45 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		years = 30
+		years = 15
 	}
 
 	immediate = {
-		set_country_flag = mem_dpe_has_discovered_aliens
-
-		save_event_target_as = mem_dpe_primitive_civ
+		random_list = {
+			1 = {
+				set_country_flag = mem_dpe_has_discovered_aliens
 		
-		capital_scope = {
-			save_event_target_as = mem_dpe_primitive_planet
-			solar_system = {
-				save_event_target_as = mem_dpe_primitive_system
-			}
-			observation_outpost_owner = {
-				set_timed_country_flag = {
-					flag = mem_dpe_recently_discovered_by_primitives
-					years = 30
+				save_event_target_as = mem_dpe_primitive_civ
+				
+				home_planet = {
+					save_event_target_as = mem_dpe_primitive_planet
+					solar_system = {
+						save_event_target_as = mem_dpe_primitive_system
+
+						starbase.owner = {
+							set_timed_country_flag = {
+								flag = mem_dpe_recently_discovered_by_primitives
+								years = 30
+							}
+							country_event = { id = mem_dpe_primitive_events.3 }
+						}
+					}
 				}
-				country_event = { id = mem_dpe_primitive_events.3 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					home_planet = {
+						solar_system = {
+							any_planet = {
+								is_colony = yes
+								NOT = {
+									is_same_value = prevprev
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -528,7 +548,9 @@ country_event = {
 	option = {
 		name = INTERESTING
 
-		country_event = { id = mem_dpe_primitive_events.4 }
+		hidden_effect = {
+			country_event = { id = mem_dpe_primitive_events.4 }
+		}
 
 		trigger = {
 			NOR = {
@@ -544,7 +566,9 @@ country_event = {
 		name = mem_dpe_primitive_events.3.option.evil
 
 		#Start Independence Day chain
-		country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+		hidden_effect = {
+			country_event = { id = mem_dpe_primitive_events.15 days = 90 random = 270 }
+		}
 
 		trigger = {
 			OR = {
@@ -1190,9 +1214,13 @@ country_event = {
 			type = faction
 			name = event_target:mem_dpe_primitive_civ
 
+			flag = event_target:mem_dpe_primitive_civ
+
 			effect = {
 				set_country_flag = mem_dpe_primitive_fleet@root
 				set_country_flag = mem_dpe_primitive_fleet_country@event_target:mem_dpe_primitive_civ
+
+				establish_communications_no_message = root
 			}
 		}
 		create_fleet = {
@@ -1298,6 +1326,14 @@ country_event = {
 						factor = 10
 						event_target:mem_dpe_primitive_civ = {
 							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+					modifier = {
+						factor = 10
+						OR = {
+							has_valid_civic = civic_fanatic_purifiers
+							has_valid_civic = civic_hive_devouring_swarm
+							has_valid_civic = civic_machine_terminator
 						}
 					}
 				}
@@ -1452,11 +1488,11 @@ country_event = {
 		}
 		fromfrom = {
 			any_owned_ship = {
-				is_ship_class = starbase
+				is_ship_class = shipclass_starbase
 			}
 		}
 	}
-
+	
 	immediate = {
 		random_country = {
 			limit = {
