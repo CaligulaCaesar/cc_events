@@ -1244,6 +1244,14 @@ country_event = {
 
 				queue_actions = {
 					move_to = event_target:mem_dpe_primitive_system.starbase
+					orbit_planet = event_target:mem_dpe_primitive_system.star
+
+					effect = {
+						id = mem_dpe_primitive_events.17.action
+						root = {
+							country_event = { id = mem_dpe_primitive_events.35 }
+						}
+					}
 				}
 			}
 		}
@@ -1467,11 +1475,6 @@ ship_event = {
 
 
 
-#They destroy your starbase
-# This = owner of fleet 1 (destroyed)
-# From = owner of fleet 2 (combatant)
-# FromFrom = fleet 1
-# FromFromFrom = fleet 2
 country_event = {
 	id = mem_dpe_primitive_events.35
 	title = mem_dpe_primitive_events.35.name
@@ -1482,31 +1485,8 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		from = {
-			has_country_flag = mem_dpe_primitive_fleet@root
-		}
-		fromfrom = {
-			any_owned_ship = {
-				is_ship_class = shipclass_starbase
-			}
-		}
-	}
-	
 	immediate = {
-		random_country = {
-			limit = {
-				from = {
-					has_country_flag = mem_dpe_primitive_fleet_country@prev
-				}
-			}
-			save_event_target_as = mem_dpe_primitive_civ
-			capital_scope = {
-				save_event_target_as = mem_dpe_primitive_planet
-				solar_system = {
-					save_event_target_as = mem_dpe_primitive_system
-				}
-			}
+		event_target:mem_dpe_primitive_civ = {
 			set_country_flag = mem_dpe_fleet_destroyed@root
 		}
 		country_event = { id = mem_dpe_primitive_events.36 days = 720 }
