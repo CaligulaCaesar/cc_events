@@ -4633,6 +4633,17 @@ country_event = {
 			}
 		}
 
+		if = {
+			limit = { has_faction = isolationist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = isolationist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_allowed_isolationist
+					days = -1
+				}
+			}
+		}
+		
 		random_owned_planet = {
 			limit = {
 				any_pop = { is_same_species = root }

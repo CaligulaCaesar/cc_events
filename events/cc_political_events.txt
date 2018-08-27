@@ -851,6 +851,17 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = { has_faction = isolationist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = isolationist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_allowed_isolationist
+					days = -1
+				}
+			}
+		}
+		
 		
 		hidden_effect = {
 			every_owned_pop = {
@@ -1471,6 +1482,23 @@ event = {
 
 		every_country = {
 			limit = {
+				has_faction = isolationist
+				has_country_flag = cc_has_had_interspecies_marriage
+				has_policy_flag = allows_im
+				NOT = { has_country_flag = cc_im_isolationists }			
+			}
+			set_country_flag = cc_im_isolationists
+			
+			random_pop_faction = {
+				limit = { is_pop_faction_type = isolationist }
+				add_modifier = {
+					modifier = cc_xeno_marriage_allowed_supremacist
+					days = -1
+				}
+			}
+		}
+		every_country = {
+			limit = {
 				has_faction = supremacist
 				has_country_flag = cc_has_had_interspecies_marriage
 				NOT = { has_country_flag = cc_im_supremacists }			
@@ -1633,6 +1661,17 @@ country_event = {
 			}
 			
 			if = {
+				limit = { has_faction = isolationist }
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					add_modifier = {
+						modifier = cc_xeno_marriage_allowed_isolationist
+						days = -1
+					}
+				}
+			}
+
+			if = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
@@ -1710,6 +1749,22 @@ country_event = {
 			}
 			
 			if = {
+				limit = {
+					has_faction = isolationist
+					count_pop_factions = {
+						limit = {
+							has_modifier = cc_xeno_marriage_allowed_isolationist
+						}
+						count = 1
+					}
+				}
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					remove_modifier = cc_xeno_marriage_allowed_isolationist
+				}
+			}
+			
+			if = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
@@ -1764,6 +1819,22 @@ country_event = {
 				if = {
 					limit = { has_modifier = cc_xeno_marriage_not_allowed_xenoist }
 					remove_modifier = cc_xeno_marriage_not_allowed_xenoist
+				}
+			}
+			
+			if = {
+				limit = {
+					has_faction = isolationist
+					count_pop_factions = {
+						limit = {
+							has_modifier = cc_xeno_marriage_allowed_isolationist
+						}
+						count = 1
+					}
+				}
+				random_pop_faction = {
+					limit = { is_pop_faction_type = isolationist }
+					remove_modifier = cc_xeno_marriage_allowed_isolationist
 				}
 			}
 			
