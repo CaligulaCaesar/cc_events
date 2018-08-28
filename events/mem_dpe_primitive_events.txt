@@ -1055,7 +1055,7 @@ country_event = {
 				random_fleet_in_system = {
 					limit = {
 						any_owned_ship = {
-							is_ship_class = starbase
+							is_ship_class = shipclass_starbase
 						}
 					}
 					delete_fleet = this
@@ -1222,7 +1222,7 @@ country_event = {
 
 				establish_communications_no_message = root
 				
-				save_event_taget_as = mem_dpe_primitive_fleet
+				save_event_target_as = mem_dpe_primitive_fleet
 			}
 		}
 		create_fleet = {
@@ -1375,7 +1375,7 @@ country_event = {
 					random_fleet_in_system = {
 						limit = {
 							any_owned_ship = {
-								is_ship_class = starbase
+								is_ship_class = shipclass_starbase
 							}
 						}
 						delete_fleet = this
