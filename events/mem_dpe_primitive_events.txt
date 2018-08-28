@@ -1221,6 +1221,8 @@ country_event = {
 				set_country_flag = mem_dpe_primitive_fleet_country@event_target:mem_dpe_primitive_civ
 
 				establish_communications_no_message = root
+				
+				save_event_taget_as = mem_dpe_primitive_fleet
 			}
 		}
 		create_fleet = {
@@ -1486,9 +1488,6 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		event_target:mem_dpe_primitive_civ = {
-			set_country_flag = mem_dpe_fleet_destroyed@root
-		}
 		country_event = { id = mem_dpe_primitive_events.36 days = 720 }
 	}
 	
@@ -1517,7 +1516,9 @@ country_event = {
 	
 	trigger = {
 		NOT = {
-			has_country_flag = mem_dpe_fleet_destroyed@root
+			event_target:mem_dpe_primitive_civ = {
+				has_country_flag = mem_dpe_fleet_destroyed@root
+			}
 		}
 	}
 	
@@ -1684,8 +1685,10 @@ country_event = {
 			}
 		}
 		
-		fromfromfromfrom = {
-			delete_fleet = this
+		event_target:mem_dpe_primitive_fleet = {
+			every_owned_fleet = {
+				delete_fleet = this
+			}
 		}
 		
 		event_target:mem_dpe_primitive_civ = {
