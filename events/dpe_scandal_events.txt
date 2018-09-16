@@ -9,7 +9,7 @@ country_event = {
 	picture = GFX_evt_news_room
 	
 	mean_time_to_happen = {
-		years = 90
+		years = 100
 		
 #		modifier = {
 #			factor = 0.75
@@ -81,7 +81,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_charity_scandal
-			years = 65
+			years = 80
 		}
 	}
 	
@@ -213,7 +213,7 @@ country_event = {
 		
 		
 	mean_time_to_happen = {
-		years = 90
+		years = 100
 		
 		modifier = {
 			factor = 0.8
@@ -239,7 +239,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_corruption_scandal
-			years = 65
+			years = 80
 		}
 		random_owned_leader = {
 			limit = { NOT = { is_same_value = root.ruler } }
@@ -342,55 +342,86 @@ country_event = {
 
 #Ruler does not Believe
 country_event = {
-	id = dpe_scandal.3
-	title = dpe_scandal.3.name
-	desc = dpe_scandal.3.desc
-	picture = GFX_evt_cc_priesthood
+	id = dpe_scandal.299
+	hide_window = yes
 	
 	trigger = {
-		has_country_flag = dpe_can_have_disbelief_scandal
-
 		OR = {
 			has_ethic = ethic_spiritualist
 			has_ethic = ethic_fanatic_spiritualist
 		}
-		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+		NOT = { has_ascension_perk = ap_transcendence }
 
+		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
+		
 		NOT = { has_civic = civic_imperial_cult }
 		NOT = { has_modifier = cc_ruler_cult }
-		
 		exists = ruler
-		ruler = { NOT = { leader_of_faction = traditionalist } }
+		ruler = {
+			NOR = {
+				leader_of_faction = traditionalist
+				has_leader_flag = mem_neochadanus
+			}
+		}
+		
+		has_faction = traditionalist
+		has_faction = technologist
+		
+		count_pop_factions = {
+			limit = {
+				is_pop_faction_type = traditionalist
+				support > 0.3
+			}
+			count = 1
+		}
 	}
-		
-		
+
 	mean_time_to_happen = {
-		years = 115
-		
-		modifier = {
-			factor = 0.75
-			has_faction = technologist
-		}
-		modifier = {
-			factor = 0.75
-			has_faction = technologist
-			ruler = { leader_of_faction = technologist }
-		}
-		
-		modifier = {
-			factor = 0.75
-			has_country_flag = dpe_disbelief_scandal_more_likely
+		years = 100
+	}
+
+	immediate = {
+		random_list = {
+			2 = {
+				country_event = { id = dpe_scandal.3 }
+
+				modifier = {
+					factor = 0.5
+					count_pop_factions = {
+						limit = {
+							is_pop_faction_type = technologist
+							support < 0.07
+						}
+						count = 1
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					ruler = { leader_of_faction = technologist }
+				}
+			}
 		}
 	}
-	
+}
+
+
+country_event = {
+	id = dpe_scandal.3
+	title = dpe_scandal.3.name
+	desc = dpe_scandal.3.desc
+	picture = GFX_evt_cc_priesthood
+
+	is_triggered_only = yes
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_disbelief_scandal
-			years = 75
+			years = 150
 		}
 	}
-			
-	
+
 	option = {
 		name = dpe_scandal.3.A
 		
@@ -433,7 +464,15 @@ country_event = {
 						}
 						count = 1
 					}
-					NOT = { has_country_flag = dpe_disbelief_scandal_more_likely }
+					NOT = { 
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = technologist
+								support > 0.15
+							}
+							count = 1
+						}
+					}
 				}
 			}
 			modifier = {
@@ -468,7 +507,15 @@ country_event = {
 						}
 						count = 1
 					}
-					NOT = { has_country_flag = dpe_disbelief_scandal_more_likely }
+					NOT = { 
+						count_pop_factions = {
+							limit = {
+								is_pop_faction_type = technologist
+								support > 0.15
+							}
+							count = 1
+						}
+					}
 				}
 			}
 			modifier = {

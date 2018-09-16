@@ -1334,7 +1334,10 @@ event = {
 				NOT = { has_modifier = cc_literally_xenophile_country }
 				pop_percentage = {
 					percentage > 0.15
-					limit = { has_pop_flag = cc_literally_xenophile_manifested }
+					limit = {
+						has_pop_flag = cc_literally_xenophile_manifested
+						is_robot_pop = no
+					}
 				}
 			}
 			add_modifier = {
@@ -1352,7 +1355,10 @@ event = {
 				NOT = {
 					pop_percentage = {
 						percentage > 0.15
-						limit = { has_pop_flag = cc_literally_xenophile_manifested }
+						limit = {
+							has_pop_flag = cc_literally_xenophile_manifested
+							is_robot_pop = no
+						}
 					}
 				}
 			}

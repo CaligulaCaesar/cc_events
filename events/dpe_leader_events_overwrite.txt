@@ -19,6 +19,13 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		free_leader_slots > 0
+		
+		fromfrom.solar_system = {
+			check_variable = {
+				which = mem_dpe_space_battle
+				value > 10
+			}
+		}
 	}
 
 	immediate = {

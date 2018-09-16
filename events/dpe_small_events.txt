@@ -7,6 +7,7 @@ planet_event = {
 	hide_window = yes
 
 	trigger = {
+		years_passed > 15
 		has_owner = yes
 
 		unrest < 1
@@ -33,7 +34,7 @@ planet_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 50 }
+	mean_time_to_happen = { years = 60 }
 
 	immediate = {
 		planet_event = { id = dpe_smallpos_events.2 }
@@ -1563,6 +1564,7 @@ planet_event = {
 	picture = GFX_evt_alien_propaganda
 
 	trigger = {
+		years_passed > 30
 		has_owner = yes
 
 		NOR = {
@@ -1584,6 +1586,7 @@ planet_event = {
 		exists = owner
 		owner = {
 			is_country_type = default
+			num_owned_planets > 1
 			NOR = {
 				has_ethic = ethic_gestalt_consciousness
 				has_country_flag = dpe_recent_dissent_planet
@@ -1591,7 +1594,7 @@ planet_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 60 }
+	mean_time_to_happen = { years = 75 }
 
 	immediate = {
 		set_timed_planet_flag = {
@@ -1654,6 +1657,8 @@ planet_event = {
 	picture = GFX_evt_metropolis
 
 	trigger = {
+		years_passed > 15
+
 		has_owner = yes
 
 		NOR = {
@@ -1698,7 +1703,7 @@ planet_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 50 }
+	mean_time_to_happen = { years = 60 }
 
 	immediate = {
 		set_timed_planet_flag = {
@@ -1749,6 +1754,7 @@ planet_event = {
 	picture = GFX_evt_metropolis
 
 	trigger = {
+		years_passed > 30
 		has_owner = yes
 
 		NOR = {
@@ -1787,13 +1793,14 @@ planet_event = {
 		exists = owner
 		owner = {
 			is_country_type = default
+			num_owned_planets > 1
 			NOT = {
 				has_country_flag = dpe_recent_negenergy_planet
 			}
 		}
 	}
 
-	mean_time_to_happen = { years = 60 }
+	mean_time_to_happen = { years = 75 }
 
 	immediate = {
 		set_timed_planet_flag = {
@@ -1817,7 +1824,7 @@ planet_event = {
 	}
 }
 
-#Positive Energy
+#Positive Minerals
 planet_event = {
 	id = dpe_smallpos_events.23
 	title = dpe_smallpos_events.23.name
@@ -1844,6 +1851,7 @@ planet_event = {
 	picture = GFX_evt_mining_operations
 
 	trigger = {
+		years_passed > 15
 		has_owner = yes
 
 		NOR = {
@@ -1888,7 +1896,7 @@ planet_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 50 }
+	mean_time_to_happen = { years = 60 }
 
 	immediate = {
 		set_timed_planet_flag = {
@@ -1912,7 +1920,7 @@ planet_event = {
 	}
 }
 
-#Negative Energy
+#Negative Minerals
 planet_event = {
 	id = dpe_smallpos_events.24
 	title = dpe_smallpos_events.24.name
@@ -1939,6 +1947,7 @@ planet_event = {
 	picture = GFX_evt_mining_operations
 
 	trigger = {
+		years_passed > 30
 		has_owner = yes
 
 		NOR = {
@@ -1977,13 +1986,14 @@ planet_event = {
 		exists = owner
 		owner = {
 			is_country_type = default
+			num_owned_planets > 1
 			NOT = {
 				has_country_flag = dpe_recent_negminerals_planet
 			}
 		}
 	}
 
-	mean_time_to_happen = { years = 60 }
+	mean_time_to_happen = { years = 75 }
 
 	immediate = {
 		set_timed_planet_flag = {
