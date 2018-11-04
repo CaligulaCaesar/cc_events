@@ -2,19 +2,6 @@
 namespace = dpe_spiritualist_mission
 
 
-
-country_event = {
-	id = dpe_spiritualist_mission.1
-	hide_window = yes
-	
-	trigger = { has_country_flag = dpe_spiritualist_mission_possible }
-	
-	mean_time_to_happen = { years = 50 }
-	
-	immediate = { country_event = { id = dpe_spiritualist_mission.2 } }
-}
-
-
 country_event = {
 	id = dpe_spiritualist_mission.2
 	title = dpe_spiritualist_mission.2.name
@@ -22,8 +9,6 @@ country_event = {
 	
 	picture = GFX_evt_cc_priesthood
 	location = event_target:dpe_neighbour.capital_scope
-	
-	is_triggered_only = yes
 	
 	trigger = {
 		is_country_type = default
@@ -85,6 +70,8 @@ country_event = {
 		}
 	}
 	
+	mean_time_to_happen = { years = 50 }
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_spiritualist_mission

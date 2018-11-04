@@ -12,6 +12,7 @@ planet_event = { #shifted back to completely normal planet event start.
 		
 		exists = owner
 		owner = {
+			is_country_type = default
 			allows_slavery = yes
 			has_faction = progressive
 			NOR = {
@@ -1414,24 +1415,9 @@ event = {
 
 #extra setup event
 country_event = {
-	id = cc_emancipation.20
-	title = cc_emancipation.20.name
-	desc = {
-		trigger = {
-			any_relation = { has_country_flag = slave_rebels }
-		}
-		text = cc_emancipation.20.desc.breakaways
-	}
-	desc = {
-		trigger = {
-			NOT = { any_relation = { has_country_flag = slave_rebels } }
-			any_neighbor_country = { has_ethic = ethic_fanatic_egalitarian }
-		}
-		text = cc_emancipation.20.desc.neighbour
-	}
+	id = cc_emancipation.2000
+	hide_window = yes
 
-	picture = GFX_evt_cc_emancipation
-	
 	trigger = {
 		is_country_type = default
 		allows_slavery = yes
@@ -1452,25 +1438,55 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		years = 10
-		modifier = {
-			factor = 0.75
-			any_neighbor_country = { has_country_flag = slave_rebels }
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_faction = progressive }
-		}
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_enough_egalitarians
-		}
-		modifier = {
-			factor = 1.5
-			has_country_flag = cc_many2_authoritarians
+	mean_time_to_happen = { months = 78 }
+	
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0.75
+					any_neighbor_country = { has_country_flag = slave_rebels }
+				}
+				modifier = {
+					factor = 4
+					NOT = { has_faction = progressive }
+				}
+				modifier = {
+					factor = 0.75
+					has_country_flag = cc_enough_egalitarians
+				}
+				modifier = {
+					factor = 2
+					has_country_flag = cc_many2_authoritarians
+				}
+			}
+			2 = {
+				country_event = { id = cc_emancipation.2000 }
+			}
 		}
 	}
+}
+
+country_event = {
+	id = cc_emancipation.20
+	title = cc_emancipation.20.name
+	desc = {
+		trigger = {
+			any_relation = { has_country_flag = slave_rebels }
+		}
+		text = cc_emancipation.20.desc.breakaways
+	}
+	desc = {
+		trigger = {
+			NOT = { any_relation = { has_country_flag = slave_rebels } }
+			any_neighbor_country = { has_ethic = ethic_fanatic_egalitarian }
+		}
+		text = cc_emancipation.20.desc.neighbour
+	}
+
+	picture = GFX_evt_cc_emancipation
+
+	is_triggered_only = yes
 	
 	immediate = {
 		set_timed_country_flag = {

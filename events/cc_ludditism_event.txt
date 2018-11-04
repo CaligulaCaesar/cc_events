@@ -13,6 +13,7 @@ planet_event = { #shifted back to a completely normal planet event
 		has_owner = yes
 		exists = owner
 		owner = {
+			is_country_type = default
 			has_policy_flag = robots_allowed
 			NOR = {
 				has_ethic = ethic_gestalt_consciousness
@@ -2135,24 +2136,9 @@ country_event = {
 
 #Extra setup event
 country_event = {
-	id = cc_luddite.20
-	title = cc_luddite.20.name
-	desc = {
-		trigger = {
-			any_relation = { has_country_flag = machine_uprising_country }
-		}
-		text = cc_luddite.20.desc.uprising
-	}
-	desc = {
-		trigger = {
-			NOT = { any_relation = { has_country_flag = machine_uprising_country } }
-			any_neighbor_country = { has_valid_civic = civic_machine_terminator }
-		}
-		text = cc_luddite.20.desc.exterminators
-	}
+	id = cc_luddite.2000
+	hide_window = yes
 
-	picture = GFX_evt_organic_oppression
-	
 	trigger = {
 		is_country_type = default
 		has_policy_flag = robots_allowed
@@ -2175,32 +2161,62 @@ country_event = {
 		any_owned_pop = { is_non_sapient_robot = yes }
 	}
 	
-	mean_time_to_happen = {
-		years = 10
-		modifier = {
-			factor = 0.75
-			any_relation = {
-				has_country_flag = machine_uprising_country
-				has_valid_civic = civic_machine_terminator
+	mean_time_to_happen = { months = 78 }
+	
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0.75
+					any_relation = {
+						has_country_flag = machine_uprising_country
+						has_valid_civic = civic_machine_terminator
+					}
+				}
+				modifier = {
+					factor = 4
+					NOT = { has_faction = traditionalist }
+				}
+				modifier = {
+					factor = 0.75
+					has_country_flag = cc_enough_spiritualists
+				}
+				modifier = {
+					factor = 2
+					has_country_flag = cc_many_materialists
+				}
+				modifier = {
+					factor = 2
+					has_country_flag = cc_lots_materialists
+				}
+			}
+			2 = {
+				country_event = { id = cc_luddite.20 }
 			}
 		}
-		modifier = {
-			factor = 2
-			NOT = { has_faction = traditionalist }
-		}
-		modifier = {
-			factor = 0.75
-			has_country_flag = cc_enough_spiritualists
-		}
-		modifier = {
-			factor = 1.5
-			has_country_flag = cc_many_materialists
-		}
-		modifier = {
-			factor = 2
-			has_country_flag = cc_lots_materialists
-		}
 	}
+}
+
+country_event = {
+	id = cc_luddite.20
+	title = cc_luddite.20.name
+	desc = {
+		trigger = {
+			any_relation = { has_country_flag = machine_uprising_country }
+		}
+		text = cc_luddite.20.desc.uprising
+	}
+	desc = {
+		trigger = {
+			NOT = { any_relation = { has_country_flag = machine_uprising_country } }
+			any_neighbor_country = { has_valid_civic = civic_machine_terminator }
+		}
+		text = cc_luddite.20.desc.exterminators
+	}
+
+	picture = GFX_evt_organic_oppression
+	
+	is_triggered_only = yes
 	
 	immediate = {
 		set_country_flag = cc_preluddite_event

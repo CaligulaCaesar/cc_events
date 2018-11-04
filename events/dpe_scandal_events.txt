@@ -1,6 +1,5 @@
 namespace = dpe_scandal
 
-#triggered in performance events
 country_event = {
 	id = dpe_scandal.1
 	title = dpe_scandal.1.name
@@ -8,8 +7,7 @@ country_event = {
 	
 	picture = GFX_evt_news_room
 	
-	mean_time_to_happen = {
-		years = 100
+	mean_time_to_happen = { years = 100 }
 		
 #		modifier = {
 #			factor = 0.75
@@ -27,7 +25,7 @@ country_event = {
 #			exists = ruler
 #			ruler = { leader_of_faction = progressive }
 #		}
-	}
+#	}
 	
 	trigger = {
 		is_country_type = default
@@ -197,45 +195,96 @@ country_event = {
 }
 
 
-
 #Corruption Scandal (adapted from cc_events_blackmail.201)
+country_event = {
+	id = dpe_scandal.2002
+	hide_window = yes
+
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = dpe_recent_corruption_scandal }
+		is_at_war = no
+		
+		OR = {
+			has_monthly_income = {
+				resource = minerals
+				value > 250
+			}
+			has_monthly_income = {
+				resource = energy
+				value > 250
+			}
+		}
+	}
+
+	mean_time_to_happen = { years = 67 }
+	
+	immediate = {
+		random_list = {
+			1 = { #nothing
+				modifier = {
+					factor = 0.8
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
+				modifier = {
+					factor = 0.8
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 500
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 500
+						}
+					}
+				}
+				modifier = {
+					factor = 0.8
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 750
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 750
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_monthly_income = {
+							resource = minerals
+							value > 1000
+						}
+						has_monthly_income = {
+							resource = energy
+							value > 1000
+						}
+					}
+				}
+			}
+			2 = {
+				country_event = { id = dpe_scandal.2 }
+			}
+		}
+	}
+}
+	
 country_event = {
 	id = dpe_scandal.2
 	title = dpe_scandal.2.name
 	desc = dpe_scandal.2.desc
 	picture = GFX_evt_news_room
 	
-	trigger = {
-		has_country_flag = dpe_can_have_corruption_scandal
-		NOT = { has_country_flag = dpe_recent_corruption_scandal }
-		is_at_war = no
-	}
-		
-		
-	mean_time_to_happen = {
-		years = 100
-		
-		modifier = {
-			factor = 0.8
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
-		}
-		modifier = {
-			factor = 0.8
-			has_country_flag = dpe_corruption_scandal_more_likely
-		}
-		modifier = {
-			factor = 0.8
-			has_country_flag = dpe_corruption_scandal_likely
-		}
-		modifier = {
-			factor = 0.65
-			has_country_flag = dpe_corruption_scandal_very_likely
-		}
-	}
-	
+	is_triggered_only = yes
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_corruption_scandal
@@ -594,7 +643,6 @@ country_event = {
 }
 
 
-#triggered in performance
 #Ruler is an ex-slave
 country_event = {
 	id = dpe_scandal.10
@@ -608,10 +656,10 @@ country_event = {
 		room = root.ruler
 	}
 	
-	is_triggered_only = yes
-
 	trigger = {
 		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		years_passed > 25
 		allows_slavery = yes
 		
 		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
@@ -625,7 +673,15 @@ country_event = {
 			is_same_species = root.ruler
 			is_enslaved = yes
 		}
+
+		ruler = {
+			NOT = {
+				has_ruler_trait = leader_trait_ruler_chosen
+			}
+		}
 	}
+	
+	mean_time_to_happen = { years = 115 }
 	
 	immediate = {
 		set_timed_country_flag = {

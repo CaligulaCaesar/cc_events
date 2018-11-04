@@ -81,6 +81,8 @@ mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
 
  mem_dpe_primitive_events.30.name:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] Fleet is Crushed"
  mem_dpe_primitive_events.30.desc:0 "We have crushed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet. The [mem_dpe_primitive_civ.GetSpeciesNamePlural] are at our mercy. What should we do about them?"
+ mem_dpe_primitive_events.30.desc.help:0 "The [from.GetName] has destroyed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet for us. The [mem_dpe_primitive_civ.GetSpeciesNamePlural] are at our mercy. What should we do about them?"
+ mem_dpe_primitive_events.30.desc.unasked_for_help:0 "The [from.GetName] has destroyed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet for us. However, as we do not currently control the [mem_dpe_primitive_system.GetName] system, we are unable to benefit from this turn of events."
  mem_dpe_primitive_events.30.A:0 "Destroy them."
  mem_dpe_primitive_events.30.B:0 "Demand their surrender."
  mem_dpe_primitive_events.30.C:0 "We don't want them in our empire."

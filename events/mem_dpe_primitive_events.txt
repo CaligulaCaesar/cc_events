@@ -1292,17 +1292,20 @@ country_event = {
 # FromFromFrom = fleet 2
 country_event = {
 	id = mem_dpe_primitive_events.30
-	title = mem_dpe_primitive_events.30.name
-	desc = mem_dpe_primitive_events.30.desc
-	picture = GFX_evt_small_space_battle
-	
-	location = event_target:mem_dpe_primitive_system
+	hide_window = yes
 
 	is_triggered_only = yes
 
 	trigger = {
-		from = {
-			has_country_flag = mem_dpe_primitive_fleet@root
+		OR = {
+			from = {
+				has_country_flag = mem_dpe_primitive_fleet@root
+			}
+			any_country = {
+				from = {
+					has_country_flag = mem_dpe_primitive_fleet@prev
+				}
+			}
 		}
 	}
 	
@@ -1322,7 +1325,77 @@ country_event = {
 			}
 			set_country_flag = mem_dpe_fleet_destroyed@root
 		}
+
+		if = {
+			limit = {
+				from = {
+					has_country_flag = mem_dpe_primitive_fleet@root
+				}
+			}
+			country_event = { id = mem_dpe_primitive_events.301 }
+		}
+
+		else = {
+			random_country = {
+				limit = {
+					from = {
+						has_country_flag = mem_dpe_primitive_fleet@prev
+					}
+				}
+				set_timed_country_flag = {
+					flag = dpe_help_with_primitives
+					days = 10
+				}
+				if = {
+					limit = {
+						OR = {
+							is_at_war_with = root
+							is_hostile = root
+						}
+					}
+					set_timed_country_flag = {
+						flag = dpe_unasked_for_help_with_primitives
+						days = 10
+					}
+				}
+				country_event = { id = mem_dpe_primitive_events.301 }
+			}
+		}
 	}
+}
+
+country_event = {
+	id = mem_dpe_primitive_events.301
+	title = mem_dpe_primitive_events.30.name
+	desc = {
+		trigger = {
+			NOT = {
+				has_country_flag = dpe_help_with_primitives
+			}
+		}
+		text = mem_dpe_primitive_events.30.desc
+	}
+	desc = {
+		trigger = {
+			has_country_flag = dpe_help_with_primitives
+			NOT = {
+				has_country_flag = dpe_unasked_for_help_with_primitives
+			}
+		}
+		text = mem_dpe_primitive_events.30.desc.help
+	}
+	desc = {
+		trigger = {
+			has_country_flag = dpe_help_with_primitives
+			has_country_flag = dpe_unasked_for_help_with_primitives
+		}
+		text = mem_dpe_primitive_events.30.desc.unasked_for_help
+	}
+	picture = GFX_evt_small_space_battle
+	
+	location = event_target:mem_dpe_primitive_system
+
+	is_triggered_only = yes
 
 	option = { #destroy them
 		name = mem_dpe_primitive_events.30.A
@@ -1336,6 +1409,9 @@ country_event = {
 			OR = {
 				is_evil_empire = yes
 				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_country_flag = dpe_unasked_for_help_with_primitives
 			}
 		}
 	}
@@ -1380,6 +1456,12 @@ country_event = {
 				}
 			}
 		}
+
+		trigger = {
+			NOT = {
+				has_country_flag = dpe_unasked_for_help_with_primitives
+			}
+		}
 	}
 	option = { #let them be free
 		name = mem_dpe_primitive_events.30.C
@@ -1403,6 +1485,25 @@ country_event = {
 				}
 				country_event = { id = primitive.16 }
 			}
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = dpe_unasked_for_help_with_primitives
+			}
+		}
+	}
+
+	option = { #they will ascend in due course
+		name = OK
+
+		hidden_effect = {
+			event_target:mem_dpe_primitive_civ = {
+				country_event = { id = primitive.16 days = 3600 }
+			}
+		}
+
+		trigger = {
+			has_country_flag = dpe_unasked_for_help_with_primitives
 		}
 	}
 }

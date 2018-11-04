@@ -98,33 +98,71 @@ country_event = {
 	
 	trigger = {
 		years_passed > 30
-		has_country_flag = cc_potential_faction_revolt
+		num_owned_planets > 5
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_a_factional_revolt_active = no
+		count_pop_factions = {
+			limit = {
+				is_a_vanilla_faction = yes
+				support > 0.15
+				pop_percentage = {
+					percentage > 0.74
+					limit = { happiness < 0.4 }
+				}
+			}
+			count > 0
+		}
 	}
 	
-	mean_time_to_happen = {
-#		months = 1
-		months = 120
-		
-		modifier = {
-			factor = 2
-			num_owned_planets < 10
-		}
-		
-		modifier = {
-			factor = 0.8
-			num_owned_planets > 25
-		}
-		
-		modifier = {
-			factor = 0.67
-			has_country_flag = cc_large_faction_revolt
-		}
-		modifier = {
-			factor = 0.67
-			has_country_flag = cc_angry_faction_revolt
+	mean_time_to_happen = { months = 50 }
+
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 2
+					num_owned_planets < 10
+				}
+				
+				modifier = {
+					factor = 0.8
+					num_owned_planets > 25
+				}
+				
+				modifier = {
+					factor = 0.5
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.15
+							pop_percentage = {
+								percentage > 0.6
+								limit = { happiness < 0.3 }
+							}
+						}
+						count > 0
+					}
+				}
+				modifier = {
+					factor = 0
+					count_pop_factions = {
+						limit = {
+							is_a_vanilla_faction = yes
+							support > 0.2
+							pop_percentage = {
+								percentage > 0.75
+								limit = { happiness < 0.4 }
+							}
+						}
+						count > 0
+					}
+				}
+			}
+			1 = {
+				country_event = { id = ccfaction.1 }
+			}
 		}
 	}
-	immediate = { country_event = { id = ccfaction.1 } }
 }
 
 country_event = {
@@ -2370,18 +2408,165 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_country_flag = cc_factional_revolt_can_attempt
+		is_country_type = default
+		
+		has_factional_revolt_stage3 = yes
+		NOR = {
+			has_country_flag = cc_factional_revolt_attempt
+			has_country_flag = cc_factional_revolt_succeeded
+		}
+		any_owned_planet = {
+			is_faction_stronghold = yes
+			unrest > 80
+			has_ground_combat = no
+			exists = controller
+			controller = { is_same_value = prev.owner }
+			has_modifier = cc_faction_acute_unrest
+		}
 	}
 	
 	is_triggered_only = yes
 	
 	immediate = {
+		#For Random List...
+		if = {
+			limit = { #so it will only do the complicated stuff every 3rd time
+				NOT = {
+					has_country_flag = cc_factional_revolt_attempt_3planets
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						is_faction_stronghold = yes
+						unrest > 80
+						has_ground_combat = no
+						exists = controller
+						controller = { is_same_value = prev.owner }
+						has_modifier = cc_faction_acute_unrest
+						
+						owner = {
+							any_owned_planet = {
+								NOT = { is_same_value = prevprev }
+								is_faction_stronghold = yes
+								unrest > 80
+								has_ground_combat = no
+								exists = controller
+								controller = { is_same_value = prev.owner }
+								has_modifier = cc_faction_acute_unrest
+								
+								owner = {
+									any_owned_planet = {
+										NOR = {
+											is_same_value = prevprev
+											is_same_value = prevprevprevprev
+										}
+										is_faction_stronghold = yes
+										unrest > 80
+										has_ground_combat = no
+										exists = controller
+										controller = { is_same_value = prev.owner }
+										has_modifier = cc_faction_acute_unrest
+									}
+								}
+							}
+						}
+					}
+				}
+				set_timed_country_flag = {
+					flag = cc_factional_revolt_attempt_3planets
+					days = 31
+				}
+				if = {
+					limit = {
+						any_owned_planet = {
+							is_faction_stronghold = yes
+							unrest > 80
+							has_ground_combat = no
+							exists = controller
+							controller = { is_same_value = prev.owner }
+							has_modifier = cc_faction_acute_unrest
+							
+							owner = {
+								any_owned_planet = {
+									NOT = { is_same_value = prevprev }
+									is_faction_stronghold = yes
+									unrest > 80
+									has_ground_combat = no
+									exists = controller
+									controller = { is_same_value = prev.owner }
+									has_modifier = cc_faction_acute_unrest
+									
+									owner = {
+										any_owned_planet = {
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
+											}
+											is_faction_stronghold = yes
+											unrest > 80
+											has_ground_combat = no
+											exists = controller
+											controller = { is_same_value = prev.owner }
+											has_modifier = cc_faction_acute_unrest
+											owner = {
+												any_owned_planet = {
+													NOR = {
+														is_same_value = prevprev
+														is_same_value = prevprevprevprev
+														is_same_value = prevprevprevprev.prevprev
+													}
+													is_faction_stronghold = yes
+													unrest > 80
+													has_ground_combat = no
+													exists = controller
+													controller = { is_same_value = prev.owner }
+													has_modifier = cc_faction_acute_unrest
+													owner = {
+														any_owned_planet = {
+															NOR = {
+																is_same_value = prevprev
+																is_same_value = prevprevprevprev
+																is_same_value = prevprevprevprev.prevprev
+																is_same_value = prevprevprevprev.prevprevprev
+															}
+															is_faction_stronghold = yes
+															unrest > 80
+															has_ground_combat = no
+															exists = controller
+															controller = { is_same_value = prev.owner }
+															has_modifier = cc_faction_acute_unrest
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					set_timed_country_flag = {
+						flag = cc_factional_revolt_attempt_5planets
+						days = 31
+					}
+				}
+			}
+		}
+		
 		random_list = {
 			25 = {
 				country_event = { id = ccfaction.6 }
 				modifier = {
 					factor = 1.5
-					has_country_flag = cc_factional_revolt_attempt_will_succeed
+					any_owned_planet = {
+						is_faction_stronghold = yes
+						unrest > 99
+						has_ground_combat = no
+						exists = controller
+						controller = { is_same_value = prev.owner }
+						has_modifier = cc_faction_acute_unrest
+					}
 				}
 				modifier = {
 					factor = 1.5
