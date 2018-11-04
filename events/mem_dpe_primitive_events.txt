@@ -543,6 +543,9 @@ country_event = {
 		event_target:mem_dpe_primitive_civ = {
 			is_primitive = yes
 		}
+
+		#just in case
+		is_country_type = default
 	}
 
 	option = {
@@ -1206,8 +1209,10 @@ country_event = {
 					has_observation_outpost = yes
 				}
 			}
-			observation_outpost = {
-				destroy_fleet = this
+			event_target:mem_dpe_primitive_planet = {
+				observation_outpost = {
+					destroy_fleet = this
+				}
 			}
 		}
 		create_country = {
@@ -1234,11 +1239,26 @@ country_event = {
 				create_ship_design = {
 					design = "NAME_mem_dpe_proto_corvette"
 				}
-				while = {
-					count = 30
-					create_ship = {
-						design = last_created_design
-						upgradable = no
+
+				if = {
+					limit = {
+						years_passed < 30
+					}
+					while = {
+						count = 15
+						create_ship = {
+							design = last_created_design
+							upgradable = no
+						}
+					}
+				}
+				else = {
+					while = {
+						count = 30
+						create_ship = {
+							design = last_created_design
+							upgradable = no
+						}
 					}
 				}
 
