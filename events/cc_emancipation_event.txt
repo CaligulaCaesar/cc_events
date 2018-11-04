@@ -1,6 +1,80 @@
 
 namespace = cc_emancipation
 
+
+#Emancipation Crisis Start
+planet_event = { #shifted back to completely normal planet event start.
+	id = cc_emancipation.1000
+	hide_window = yes
+	
+	trigger = {
+		has_owner = yes
+		
+		exists = owner
+		owner = {
+			allows_slavery = yes
+			has_faction = progressive
+			NOR = {
+				has_country_flag = cc_emancipation_movement
+				has_country_flag = cc_recent_emancipation_movement
+				has_country_flag = cc_emancipation_first_strike
+			}
+		}
+
+		unrest > 0
+		NOT = { has_planet_flag = cc_emancipation_movement }
+		any_owned_pop = {
+			is_enslaved = yes
+			species = { pops_have_happiness = yes }
+			happiness < 0.4
+		}
+		any_owned_pop = {
+			has_ethic = ethic_egalitarian
+			is_enslaved = no
+		}
+		
+	}
+	
+	mean_time_to_happen = { years = 80 }
+
+	immediate = {
+		random_list = {
+			10 = { }
+			10 = {
+				modifier = {
+					factor = 1.35
+					count_pops = {
+						count > 2
+						limit = {
+							is_enslaved = no
+							has_ethic = ethic_egalitarian
+						}
+					}
+				}
+
+				modifier = {
+					factor = 1.35
+					owner = {
+						any_neighbor_country = {
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0.5
+					owner = {
+						has_country_flag = cc_has_had_emancipation_crisis
+					}
+				}
+
+
+				planet_event = { id = cc_emancipation.1 }
+			}
+		}
+	}
+}
+
 #triggered in performance now
 planet_event = {
 	id = cc_emancipation.1

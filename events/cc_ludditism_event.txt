@@ -2,7 +2,77 @@
 
 namespace = cc_luddite
 
-#triggered in performance
+
+
+#Ludditism Crisis Start
+planet_event = { #shifted back to a completely normal planet event
+	id = cc_luddite.1000
+	hide_window = yes
+	
+	trigger = {
+		has_owner = yes
+		exists = owner
+		owner = {
+			has_policy_flag = robots_allowed
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				is_synthetic_empire = yes
+				is_mechanical_empire = yes
+				has_country_flag = cc_luddite_movement
+				has_country_flag = cc_recent_luddite_movement
+				has_country_flag = cc_first_luddite_strike
+				has_country_flag = cc_recent_antiluddite_event
+			}
+		}
+		
+		unrest > 0
+		NOT = { has_planet_flag = cc_luddite_strike }
+		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop = {
+			has_ethic = ethic_spiritualist
+			has_citizenship_rights = yes
+			happiness < 0.4
+		}
+	}
+	
+	mean_time_to_happen = { years = 80 }
+	
+	immediate = {
+		random_list = {
+			10 = { }
+			10 = {
+				planet_event = { id = cc_luddite.1 }
+				
+				modifier = {
+					factor = 1.5
+					count_pops = {
+						count > 2
+						limit = {
+							has_citizenship_rights = yes
+							has_ethic = ethic_spiritualist
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 1.2
+					owner = {
+						has_faction = traditionalist
+					}
+				}
+				
+				modifier = {
+					factor = 0.4
+					owner = {
+						has_country_flag = cc_has_had_luddite_crisis
+					}
+				}
+			}
+		}
+	}
+}
+
+
 planet_event = {
 	id = cc_luddite.1
 	title = cc_luddite.1.name
