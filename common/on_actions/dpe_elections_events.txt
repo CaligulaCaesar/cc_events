@@ -1,0 +1,17 @@
+
+# Called when an election starts
+# scope: country
+on_election_started = {
+	events = {
+		dpe_election_events.1
+	}
+}
+
+# Called when an election ends
+# scope: country
+on_election_ended = {
+	random_events = {
+		10 = 0
+		1 = dpe_election_events.2
+	}
+}

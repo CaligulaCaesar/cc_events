@@ -1,0 +1,284 @@
+
+namespace = dpe_election_events
+
+#Ideas and basic text for events 15, 20, 30, 40 and follow-ups are by Leylos
+
+country_event = {
+	id = dpe_election_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		exists = ruler
+	}
+
+	immediate = {
+		ruler = {
+			set_timed_leader_flag = {
+				flag = dpe_incumbent_ruler
+				days = 450
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_election_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		#don't see what benefit there is to the AI having these events
+		is_ai = no
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		ruler = {
+			NOR = {
+				has_leader_flag = dpe_incumbent_ruler
+				leader_of_faction = progressive
+			}
+		}
+		NOT = {
+			has_country_flag = dpe_recent_election_scandal
+		}
+
+		count_pop_factions = {
+			count > 2
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_election_scandal
+			years = 50
+		}
+		switch = {
+			trigger = has_authority
+			auth_democratic = {
+				if = {
+					limit = {
+						OR = {
+							has_faction = supremacist
+							has_faction = isolationist
+						}
+						ruler = {
+							OR = {
+								leader_of_faction = traditionalist
+								leader_of_faction = supremacist
+								leader_of_faction = isolationist
+							}
+						}
+						NOT = {
+							AND = {
+								ruler = {
+									leader_of_faction = traditionalist
+								}
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+							}
+						}
+					}
+					random_list = {
+						3 = {
+							country_event = { id = dpe_election_events.10 days = 5 }
+						}
+						1 = {
+							country_event = { id = dpe_election_events.15 days = 5 }
+						}
+					}
+					country_event = { id = dpe_election_events.10 days = 5 }
+
+					else = {
+						country_event = { id = dpe_election_events.15 days = 5 }
+					}
+				}
+			}
+			auth_oligarchic = {
+				country_event = { id = dpe_election_events.20 days = 5 }
+			}
+			auth_dictatorial = {
+				country_event = { id = dpe_election_events.30 days = 5 }
+			}
+			auth_imperial = {
+				country_event = { id = dpe_election_events.40 days = 5 }
+			}
+		}
+	}
+}
+
+
+
+#Trump
+country_event = {
+	id = dpe_election_events.10
+	title = dpe_election_events.10.name
+	desc = dpe_election_events.10.desc
+	picture = TODO
+
+	is_triggered_only = yes
+
+	option = { #Crackdown
+		name = dpe_election_events.10.A
+
+		add_modifier = { #+50% authoritarianism, -25% unity
+			modifier = dpe_political_crackdown
+			days = 1800
+		}
+
+		if = {
+			limit = {
+				has_faction = progressive
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = progressive
+				}
+				add_modifier = { #-15% happiness
+					modifier = dpe_political_crackdown_faction
+					days = 1800
+				}
+			}
+		}
+
+		allow = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	option = { #Tolerate this
+		name = dpe_election_events.10.B
+
+		every_pop_faction = {
+			limit = {
+				NOR = {
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = traditionalist
+					is_pop_faction_type = totalitarian
+				}
+			}
+			add_modifier = { #-10 happiness
+				modifier = dpe_upset_intolerant_ruler_faction
+				days = 1800
+			}
+		} 
+	}
+	
+	option = { #Embrace Intolerance
+		name = dpe_election_events.10.C
+
+		if = {
+			limit = {
+				has_ethic = ethic_xenophobe
+			}
+			shift_ethic = ethic_fanatic_xenophobe
+		}
+		else = {
+			shift_ethic = ethic_xenophobe
+		}
+
+		if = {
+			limit = { has_faction = supremacist }
+			random_pop_faction = {
+				limit = { is_pop_faction_type = supremacist }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				hidden_effect = { 
+					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					owner = {
+						every_pop_faction = {
+							limit = {
+								NOR = {
+									is_same_value = prevprev
+									is_pop_faction_type = isolationist
+								}
+							}
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+			}
+		}
+		else = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = isolationist }
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				hidden_effect = { 
+					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					owner = {
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = prevprev } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+			count_pop_factions = {
+				count = 1
+				limit = {
+					OR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
+					}
+					support > 0.15
+				}
+			}
+		}
+	}
+}
+
+
+#Election Fixing
+country_event = {
+	id = dpe_election_events.15
+	title = dpe_election_events.15.name
+	desc = dpe_election_events.15.desc
+	picture = TODO
+
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_election_events.15.A
+
+		add_modifier = { #governing ethics attraction -25%, -10% happiness, +50% authoritarianism
+			modifier = dpe_disillusioned_with_democracy
+			days = 3600
+		}
+	}
+	option = {
+		name = dpe_election_events.15.B
+		
+		random_list = {
+			1 = { #name cleared
+				custom_tooltip = dpe_election_events.15.B.1
+
+				hidden_effect = {
+					country_event = { id = dpe_election_events.16 }
+				}
+			}
+			1 = { #found guilty
+				custom_tooltip = dpe_election_events.15.B.2
+
+				hidden_effect = {
+					country_event = { id = dpe_election_events.17 }
+				}
+			}
+		}
+	}
+}
+
