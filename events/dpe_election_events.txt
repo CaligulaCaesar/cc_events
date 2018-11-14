@@ -132,23 +132,23 @@ country_event = {
 	option = { #Crackdown
 		name = dpe_election_events.10.A
 
-		add_modifier = { #+50% authoritarianism, -25% unity
+		add_modifier = { #+50% authoritarianism, +30% governing ethics, -25% unity
 			modifier = dpe_political_crackdown
 			days = 1800
 		}
 
-		if = {
+		every_pop_faction = {
 			limit = {
-				has_faction = progressive
+				NOR = {
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = traditionalist
+					is_pop_faction_type = totalitarian
+				}
 			}
-			random_pop_faction = {
-				limit = {
-					is_pop_faction_type = progressive
-				}
-				add_modifier = { #-15% happiness
-					modifier = dpe_political_crackdown_faction
-					days = 1800
-				}
+			add_modifier = { #-15% happiness
+				modifier = dpe_political_crackdown_faction
+				days = 1800
 			}
 		}
 
@@ -177,72 +177,18 @@ country_event = {
 		} 
 	}
 	
-	option = { #Embrace Intolerance
+	option = { #Step down, new elections
 		name = dpe_election_events.10.C
 
-		if = {
-			limit = {
-				has_ethic = ethic_xenophobe
-			}
-			shift_ethic = ethic_fanatic_xenophobe
-		}
-		else = {
-			shift_ethic = ethic_xenophobe
-		}
+		custom_tooltip = CCREMOVERULER.tooltip
 
-		if = {
-			limit = { has_faction = supremacist }
-			random_pop_faction = {
-				limit = { is_pop_faction_type = supremacist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
-				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
-					owner = {
-						every_pop_faction = {
-							limit = {
-								NOR = {
-									is_same_value = prevprev
-									is_pop_faction_type = isolationist
-								}
-							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
-						}
-					}
+		ruler = {
+			hidden_effect = {
+				kill_leader = {
+					show_notification = no
 				}
 			}
-		}
-		else = {
-			random_pop_faction = {
-				limit = { is_pop_faction_type = isolationist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
-				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
-					owner = {
-						every_pop_faction = {
-							limit = { NOT = { is_same_value = prevprev } }
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			OR = {
-				has_faction = supremacist
-				has_faction = isolationist
-			}
-			count_pop_factions = {
-				count = 1
-				limit = {
-					OR = {
-						is_pop_faction_type = supremacist
-						is_pop_faction_type = isolationist
-					}
-					support > 0.15
-				}
-			}
-		}
+		} 
 	}
 }
 
