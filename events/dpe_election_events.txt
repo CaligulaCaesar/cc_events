@@ -20,7 +20,7 @@ country_event = {
 		ruler = {
 			set_timed_leader_flag = {
 				flag = dpe_incumbent_ruler
-				days = 450
+				days = 360
 			}
 		}
 	}
@@ -61,43 +61,47 @@ country_event = {
 		switch = {
 			trigger = has_authority
 			auth_democratic = {
-				if = {
-					limit = {
-						OR = {
-							has_faction = supremacist
-							has_faction = isolationist
-						}
-						ruler = {
-							OR = {
-								leader_of_faction = traditionalist
-								leader_of_faction = supremacist
-								leader_of_faction = isolationist
-							}
-						}
-						NOT = {
-							AND = {
-								ruler = {
-									leader_of_faction = traditionalist
-								}
-								OR = {
-									has_ethic = ethic_spiritualist
-									has_ethic = ethic_fanatic_spiritualist
-								}
-							}
-						}
+				random_list = {
+					1 = { #fallback if nothing else is possible
 					}
-					random_list = {
-						3 = {
-							country_event = { id = dpe_election_events.10 days = 5 }
-						}
-						1 = {
-							country_event = { id = dpe_election_events.15 days = 5 }
-						}
-					}
-					country_event = { id = dpe_election_events.10 days = 5 }
+					30 = {
+						country_event = { id = dpe_election_events.10 days = 5 }
 
-					else = {
+						modifier = {
+							factor = 0
+							NAND = {
+								OR = {
+									has_faction = supremacist
+									has_faction = isolationist
+								}
+								ruler = {
+									OR = {
+										leader_of_faction = traditionalist
+										leader_of_faction = supremacist
+										leader_of_faction = isolationist
+									}
+								}
+								NOT = {
+									AND = {
+										ruler = {
+											leader_of_faction = traditionalist
+										}
+										OR = {
+											has_ethic = ethic_spiritualist
+											has_ethic = ethic_fanatic_spiritualist
+										}
+									}
+								}
+							}
+						}
+					}
+					10 = {
 						country_event = { id = dpe_election_events.15 days = 5 }
+
+						modifier = {
+							factor = 0
+							num_owned_planets = 1
+						}
 					}
 				}
 			}
@@ -252,6 +256,18 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				NOT = {
+					is_same_value = ruler
+				}
+				leader_of_faction = yes
+			}
+			save_event_target_as = dpe_election_scandal_accuser
+		}
+	}
+
 	option = {
 		name = dpe_election_events.15.A
 
@@ -262,23 +278,173 @@ country_event = {
 	}
 	option = {
 		name = dpe_election_events.15.B
+
+		hidden_effect = {
+			ruler = {
+				save_event_target_as = dpe_scandal_ruler
+			}
+		}
 		
 		random_list = {
 			1 = { #name cleared
 				custom_tooltip = dpe_election_events.15.B.1
 
 				hidden_effect = {
-					country_event = { id = dpe_election_events.16 }
+					country_event = { id = dpe_election_events.16 days = 20 }
 				}
 			}
 			1 = { #found guilty
 				custom_tooltip = dpe_election_events.15.B.2
 
 				hidden_effect = {
-					country_event = { id = dpe_election_events.17 }
+					country_event = { id = dpe_election_events.17 days = 20 }
 				}
 			}
 		}
 	}
 }
 
+country_event = {
+	id = dpe_election_events.16
+	title = dpe_election_events.16.name
+	desc = dpe_election_events.16.desc
+	picture = TODO
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:dpe_scandal_ruler
+		ruler = {
+			is_same_value = event_target:dpe_scandal_ruler
+		}
+	}
+
+	option = {
+		name = dpe_election_events.16.option
+
+		custom_tooltip = dpe_election_events.16.tooltip #[dpe_election_scandal_accuser.GetName] is removed from the game.
+
+		event_target:dpe_election_scandal_accuser = {
+			root = {
+				random_pop_faction = {
+					limit = {
+						leader = {
+							is_same_value = prevprevprev
+						}
+					}
+					add_modifier = {
+						modifier = dpe_election_scandal_upset_faction
+						days = 1800
+					}
+				}
+			}
+			hidden_effect = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dpe_election_events.17
+	title = dpe_election_events.17.name
+	desc = dpe_election_events.17.desc
+	picture = TODO
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:dpe_scandal_ruler
+		ruler = {
+			is_same_value = event_target:dpe_scandal_ruler
+		}
+	}
+
+	option = {
+		name = dpe_election_events.16.option
+
+		custom_tooltip = CCREMOVERULER.tooltip
+
+		ruler = {
+			if = {
+				limit = {
+					leader_of_faction = yes
+				}
+				root = {
+					random_pop_faction = {
+						limit = {
+							leader = {
+								is_same_value = prevprevprev
+							}
+						}
+						add_modifier = {
+							modifier = dpe_election_scandal_upset_faction
+							days = 1800
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = dpe_election_events.80
+	title = dpe_election_events.80.name
+	desc = dpe_election_events.80.desc
+	picture = TODO
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		ruler = {
+			NOT = {
+				has_leader_flag = dpe_incumbent_ruler
+			}
+		}
+		NOT = {
+			has_country_flag = dpe_recent_election_positive
+		}
+
+		count_pop_factions = {
+			limit = {
+				pop_percentage = {
+					limit = {
+						happiness < 0.4
+					}
+					percentage > 0.75
+				}
+			}
+			count > 0
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = dpe_recent_election_positive
+			days = 144000
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+
+		add_modifier = {
+			modifier = dpe_election_unifying_candidate
+			days = 1800
+		}
+	}
+}

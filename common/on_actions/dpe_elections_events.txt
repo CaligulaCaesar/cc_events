@@ -10,8 +10,11 @@ on_election_started = {
 # Called when an election ends
 # scope: country
 on_election_ended = {
+	events = {
+	}
 	random_events = {
 		10 = 0
 		1 = dpe_election_events.2
+		1 = dpe_election_events.80
 	}
 }
