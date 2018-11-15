@@ -428,5 +428,20 @@ country_event = {
 				}
 			}
 		}
+		
+		every_pop_faction = {
+			limit = {
+				pop_percentage = {
+					limit = {
+						happiness < 0.4
+					}
+					percentage > 0.75
+				}
+			}
+			add_modifier = {
+				modifier = dpe_election_unifying_candidate_faction
+				days = 1800
+			}
+		}
 	}
 }

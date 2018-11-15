@@ -13,8 +13,20 @@ dpe_political_crackdown_faction = {
 	faction_happiness = -0.15
 }
 
+dpe_upset_intolerant_ruler_faction = {
+	faction_happiness = -0.1
+}
+
 dpe_political_crackdown = {
 	pop_government_ethic_attraction = 0.3
 	country_resource_unity_mult = -0.25
 	pop_ethic_authoritarian_attraction_mult = 0.5
+}
+
+dpe_election_unifying_candidate = {
+	pop_government_ethic_attraction = 0.3
+}
+
+dpe_election_unifying_candidate_faction = {
+	faction_happiness = 0.1
 }
