@@ -206,7 +206,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				NOT = {
-					is_same_value = ruler
+					is_same_value = root.ruler
 				}
 				leader_of_faction = yes
 			}
@@ -346,7 +346,18 @@ country_event = {
 country_event = {
 	id = dpe_election_events.80
 	title = dpe_election_events.80.name
-	desc = dpe_election_events.80.desc
+	desc = {
+		trigger = {
+			has_a_factional_revolt_active = no
+		}
+		text = dpe_election_events.80.desc
+	}
+	desc = {
+		trigger = {
+			has_a_factional_revolt_active = yes
+		}
+		text = dpe_election_events.80.desc.fac_revolt
+	}
 	picture = TODO
 
 	is_triggered_only = yes
@@ -383,6 +394,12 @@ country_event = {
 			flag = dpe_recent_election_positive
 			days = 144000
 		}
+		if = {
+			limit = {
+				has_a_factional_revolt_active = yes
+			}
+			save_faction_revolt_event_target = yes
+		}
 	}
 
 	option = {
@@ -391,6 +408,25 @@ country_event = {
 		add_modifier = {
 			modifier = dpe_election_unifying_candidate
 			days = 1800
+		}
+		
+
+		if = {
+			limit = {
+				has_a_factional_revolt_active = yes
+			}
+			remove_modifier = cc_country_factional_unrest
+		
+			custom_tooltip = cc_faction_revolt_modifiers_removed
+			hidden_effect = {
+				remove_all_faction_revolt_flags = yes
+				every_owned_planet = {
+					remove_all_seditious_talk = yes
+					remove_all_faction_strongholds = yes
+					remove_all_faction_sympathies = yes
+					remove_all_faction_seditions = yes
+				}
+			}
 		}
 	}
 }
