@@ -35,6 +35,10 @@ country_event = {
 		is_country_type = default
 		#don't see what benefit there is to the AI having these events
 		is_ai = no
+		
+		#remove if adding new events for other authorities
+		has_authority = auth_democratic
+		
 		NOT = {
 			has_ethic = ethic_gestalt_consciousness
 		}
@@ -105,14 +109,17 @@ country_event = {
 					}
 				}
 			}
+			#I have removed them for now as the current ideas are not good enough to be implemented without significant work
 			auth_oligarchic = {
-				country_event = { id = dpe_election_events.20 days = 5 }
+#				country_event = { id = dpe_election_events.20 days = 5 }
 			}
 			auth_dictatorial = {
-				country_event = { id = dpe_election_events.30 days = 5 }
+#				country_event = { id = dpe_election_events.30 days = 5 }
 			}
 			auth_imperial = {
-				country_event = { id = dpe_election_events.40 days = 5 }
+#				country_event = { id = dpe_election_events.40 days = 5 }
+			}
+			default = {
 			}
 		}
 	}
