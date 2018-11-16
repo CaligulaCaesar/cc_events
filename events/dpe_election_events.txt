@@ -226,6 +226,14 @@ country_event = {
 			}
 			save_event_target_as = dpe_election_scandal_accuser
 		}
+		random_owned_planet = {
+			limit = {
+				NOT = {
+					is_same_value = root.capital_scope
+				}
+			}
+			save_event_target_as = dpe_election_scandal_planet
+		}
 	}
 
 	option = {

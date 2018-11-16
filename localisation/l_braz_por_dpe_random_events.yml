@@ -316,3 +316,51 @@ cc_antiluddite:0 "Celebrando Trabalhadores Robóticos"
  dpe_defector_arbitrary_detention:0 "Arbitrary Detention of Xeno Citizen"
  dpe_defect_trust_in_xenos:0 "Trust in Xenos"
  dpe_defect_trust_in_xenos_desc:0 "The positive example of a prominent xeno - and the trust publicly put in them by the government - has helped to build a more open society."
+
+
+
+
+
+#Election Events
+
+ dpe_election_events.10.name:0 "The [root.ruler.GetName]'s Big Mouth"
+ dpe_election_events.10.desc:0 "Opponents of the newly-elected [root.GetRulerTitle], [root.ruler.GetName], are alarmed at a series of statements [root.ruler.GetSheHe] made during the election campaign. It seems that [root.ruler.GetSheHe] managed to insult nearly every minority group imaginable, earning [root.ruler.GetHerHim]sel[root.ruler.GetFVes] many sworn enemies. A coalition of [root.ruler.GetHisHer] enemies have taken to the streets to protest against [root.ruler.GetHisHer] election. They promise to oppose any measure enacted during [root.ruler.GetHisHer] period in office."
+ dpe_election_events.10.A:0 "Crack down on the dissent."
+ dpe_election_events.10.B:0 "We will have to tolerate this."
+ dpe_election_events.10.C:0 "Step down and call for new elections."
+
+ dpe_election_events.15.name:0 "Allegations of Electoral Fraud"
+ dpe_election_events.15.desc:0 "Leaders of the opposition have put the final results of the recent election into question. They claim that several key voting districts on [dpe_election_scandal_planet.GetName] - a key stronghold of support for [root.ruler.GetName] - had significantly higher voting participation than there were eligible voters. Many citizens across the [root.GetName] have taken to the streets in protest. [dpe_election_scandal_accuser.GetTitle] [dpe_election_scandal_accuser.GetName], the most vocal of the accusers, has formally called for an investigation into the events."
+ dpe_election_events.15.A:0 "Dismiss the allegations."
+ dpe_election_events.15.B:0 "Start an official investigation."
+ dpe_election_events.15.B.1:0 "[root.ruler.GetTitle] [root.ruler.GetName] is found not guilty. [dpe_election_scandal_accuser.GetTitle] [dpe_election_scandal_accuser.GetName] is be forced to resign."
+ dpe_election_events.15.B.2:0 "[root.ruler.GetTitle] [root.ruler.GetName] is found guilty and forced to resign."
+
+ dpe_election_events.16.name:0 "No Evidence of Wrongdoing"
+ dpe_election_events.16.desc:0 "Our investigation into the voter fraud has failed to produce any evidence to corroborate the allegations put forth by the opposition. [root.GetRulerTitle] [root.GetRulerName] has asked [dpe_election_scandal_accuser.GetName] to step down for the inflammatory remarks."
+ dpe_election_events.16.option:0 "A victory for democracy."
+ dpe_election_events.16.tooltip:0 "[dpe_election_scandal_accuser.GetTitle] [dpe_election_scandal_accuser.GetName] is removed from the game."
+
+ dpe_election_events.17.name:0 "Evidence of Wrongdoing Uncovered"
+ dpe_election_events.17.desc:0 "Our investigation into the voter fraud has produced extensive evidence of wrongdoing. Substantial amounts of votes were removed from the electronic voting system and many votes cast in favour of [root.GetRulerName] were shown to be from citizens long deceased. Authorities have taken [root.GetRulerName] and many other suspects into custody."
+ dpe_election_events.17.option:0 "Bring [root.ruler.GetHerHim] to justice!"
+
+
+ dpe_election_events.80.name:0 "In Praise of [root.GetRulerName]"
+ dpe_election_events.80.desc:0 "After a period of tensions, the new [root.GetRulerTitle], [root.GetRulerName], has been hailed as a unifying figure capable of bringing together the various ideological movements in the [root.GetName]. Time will tell whether [root.ruler.GetSheHe] will enjoy success in this endeavour, but the initial signs are encouraging."
+ dpe_election_events.80.desc.fac_revolt:0 "After a period of tensions, the new [root.GetRulerTitle], [root.GetRulerName], has been hailed as a unifying figure capable of bringing together the various ideological movements in the [root.GetName]. In recognition of [root.GetRulerName]’s positive intentions, the [cc_rebellious_faction.GetName] has agreed to cease its separatist agitations for now. Time will tell whether [root.ruler.GetSheHe] will enjoy lasting success in this endeavour, but the initial signs are encouraging."
+
+ dpe_disillusioned_with_democracy:0 "Disillusioned with Democracy"
+ dpe_disillusioned_with_democracy_desc:0 "The public has lost faith in the workings of democracy."
+
+ dpe_election_scandal_upset_faction:0 "Upset at Electoral Result"
+ dpe_political_crackdown_faction:0 "Subject of Political Crackdown"
+ dpe_upset_intolerant_ruler_faction:0 "Insulted by Ruler"
+
+ dpe_political_crackdown:0 "Political Crackdown"
+ dpe_political_crackdown_desc:0 "The government is cracking down on all voices that express dissent at its direction."
+
+ dpe_election_unifying_candidate:0 "Unifying Ruler"
+ dpe_election_unifying_candidate:0 "The current ruler was elected on the promise of uniting the people, who have become divided by ideological discord."
+ 
+ dpe_election_unifying_candidate_faction:0 "Unifying Ruler"
