@@ -81,22 +81,25 @@ country_event = {
 								ruler = {
 									OR = {
 										leader_of_faction = traditionalist
+										leader_of_faction = totalitarian
 										leader_of_faction = supremacist
 										leader_of_faction = isolationist
 									}
 								}
-								NOT = {
-									AND = {
-										ruler = {
-											leader_of_faction = traditionalist
-										}
-										OR = {
-											has_ethic = ethic_spiritualist
-											has_ethic = ethic_fanatic_spiritualist
-										}
+								NAND = {
+									ruler = {
+										leader_of_faction = traditionalist
+									}
+									OR = {
+										has_ethic = ethic_spiritualist
+										has_ethic = ethic_fanatic_spiritualist
 									}
 								}
 							}
+						}
+						modifier = {
+							factor = 0.25
+							has_country_flag = dpe_has_had_trump
 						}
 					}
 					10 = {
@@ -132,9 +135,13 @@ country_event = {
 	id = dpe_election_events.10
 	title = dpe_election_events.10.name
 	desc = dpe_election_events.10.desc
-	picture = TODO
+	picture = GFX_evt_alien_segregation
 
 	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = dpe_has_had_trump
+	}
 
 	option = { #Crackdown
 		name = dpe_election_events.10.A
@@ -205,7 +212,7 @@ country_event = {
 	id = dpe_election_events.15
 	title = dpe_election_events.15.name
 	desc = dpe_election_events.15.desc
-	picture = TODO
+	picture = GFX_evt_arguing_senate
 
 	is_triggered_only = yes
 
@@ -261,7 +268,7 @@ country_event = {
 	id = dpe_election_events.16
 	title = dpe_election_events.16.name
 	desc = dpe_election_events.16.desc
-	picture = TODO
+	picture = GFX_evt_arguing_senate
 
 	is_triggered_only = yes
 
@@ -304,7 +311,7 @@ country_event = {
 	id = dpe_election_events.17
 	title = dpe_election_events.17.name
 	desc = dpe_election_events.17.desc
-	picture = TODO
+	picture = GFX_evt_arguing_senate
 
 	is_triggered_only = yes
 
@@ -316,7 +323,7 @@ country_event = {
 	}
 
 	option = {
-		name = dpe_election_events.16.option
+		name = dpe_election_events.17.option
 
 		custom_tooltip = CCREMOVERULER.tooltip
 
@@ -365,7 +372,7 @@ country_event = {
 		}
 		text = dpe_election_events.80.desc.fac_revolt
 	}
-	picture = TODO
+	picture = GFX_evt_arguing_senate
 
 	is_triggered_only = yes
 
@@ -385,6 +392,7 @@ country_event = {
 
 		count_pop_factions = {
 			limit = {
+				support > 0.1
 				pop_percentage = {
 					limit = {
 						happiness < 0.4
