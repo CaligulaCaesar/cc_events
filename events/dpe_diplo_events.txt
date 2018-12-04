@@ -543,11 +543,11 @@ planet_event = {
 				planet_event = { id = dpe_diplo.4 }
 				modifier = {
 					factor = 1.5
-					unrest > 0
+					planet_stability < 50
 				}
 				modifier = {
 					factor = 1.5
-					unrest > 30
+					planet_stability < 35
 				}
 				modifier = {
 					factor = 2

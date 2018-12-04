@@ -1819,11 +1819,14 @@ country_event = {
 				modifier = mem_dpe_primitives_boost
 				days = 7200
 			}
-			add_influence = 650
-			add_physics_research = 10000
-			add_society_research = 10000
-			add_engineering_research = 10000
 			
+			add_resource = {
+				influence = 1000
+				physics = 10000
+				society = 10000
+				engineering = 10000
+			}
+
 			add_opinion_modifier = {
 				who = root
 				modifier = mem_dpe_primitive_conflict

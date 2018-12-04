@@ -1092,3 +1092,21 @@ country_event = {
 		}
 	}
 }
+
+
+
+
+country_event = {
+	id = cctest.780
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_resource = {
+			influence = 1000
+			physics = 10000
+			society = 10000
+			engineering = 10000
+		}
+	}
+}

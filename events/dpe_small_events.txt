@@ -10,7 +10,7 @@ planet_event = {
 		years_passed > 15
 		has_owner = yes
 
-		unrest < 1
+		planet_stability > 65
 		NOR = {
 			has_planet_flag = dpe_unity_planet
 			has_planet_flag = dpe_dissent_planet
@@ -872,10 +872,15 @@ country_event = {
 		name = dpe_smallpos_events.11.A
 
 		allow = {
-			energy > 150
+			resource_stockpile_compare = {
+				resource = energy
+				value > 150
+			}
 		}
 		
-		add_energy = -150
+		add_resource = {
+			energy = -150
+		}
 
 		custom_tooltip = dpe_smallpos_events.11.A.tooltip
 
@@ -1133,10 +1138,15 @@ country_event = {
 		name = dpe_smallpos_events.12.A
 
 		allow = {
-			energy > 150
+			resource_stockpile_compare = {
+				resource = energy
+				value > 150
+			}
 		}
 		
-		add_energy = -150
+		add_resource = {
+			energy = -150
+		}
 
 		custom_tooltip = dpe_smallpos_events.12.A.tooltip
 
@@ -1343,10 +1353,15 @@ country_event = {
 		name = dpe_smallpos_events.13.A
 
 		allow = {
-			energy > 150
+			resource_stockpile_compare = {
+				resource = energy
+				value > 150
+			}
 		}
 		
-		add_energy = -150
+		add_resource = {
+			energy = -150
+		}
 
 		custom_tooltip = dpe_smallpos_events.13.A.tooltip
 
@@ -1503,10 +1518,15 @@ country_event = {
 		name = dpe_smallpos_events.14.A
 
 		allow = {
-			energy > 150
+			resource_stockpile_compare = {
+				resource = energy
+				value > 150
+			}
 		}
 		
-		add_energy = -150
+		add_resource = {
+			energy = -150
+		}
 
 		custom_tooltip = dpe_smallpos_events.14.A.tooltip
 

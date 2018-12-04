@@ -377,7 +377,10 @@ country_event = {
 					resource = minerals
 					value < 50
 				}
-				minerals < 2500
+				resource_stockpile_compare = {
+					resource = minerals
+					minerals < 2500
+				}
 			}
 		}
 	}
@@ -498,7 +501,10 @@ country_event = {
 					resource = minerals
 					value < 50
 				}
-				minerals < 2500
+				resource_stockpile_compare = {
+					resource = minerals
+					minerals < 2500
+				}
 			}
 			modifier = {
 				factor = 2
@@ -579,7 +585,9 @@ country_event = {
 	option = {
 		name = EXCELLENT
 
-		add_minerals = 1000
+		add_resource = {
+			minerals = 1000
+		}
 		
 		hidden_effect = {
 			set_country_flag = dpe_has_provided_egalitarian_mission@from
@@ -1784,7 +1792,10 @@ country_event = {
 					resource = minerals
 					value < 50
 				}
-				minerals < 2500
+				resource_stockpile_compare = {
+					resource = minerals
+					minerals < 2500
+				}
 			}
 			modifier = {
 				factor = 1
@@ -1946,7 +1957,10 @@ country_event = {
 					resource = minerals
 					value < 50
 				}
-				minerals < 2500
+				resource_stockpile_compare = {
+					resource = minerals
+					minerals < 2500
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2013,7 +2027,9 @@ country_event = {
 	option = {
 		name = EXCELLENT
 
-		add_minerals = 1000
+		add_resource = {
+			minerals = 1000
+		}
 	}
 }
 
