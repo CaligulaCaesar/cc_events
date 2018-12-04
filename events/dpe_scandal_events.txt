@@ -48,10 +48,7 @@ country_event = {
 			limit = {
 				is_pop_faction_type = progressive
 				support > 0.1
-				pop_percentage = {
-					limit = { happiness > 0.5 }
-					percentage > 0.74
-				}
+				faction_approval > 50
 			}
 			count = 0
 		}
