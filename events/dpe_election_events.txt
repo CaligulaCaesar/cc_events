@@ -401,12 +401,7 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				support > 0.1
-				pop_percentage = {
-					limit = {
-						happiness < 0.4
-					}
-					percentage > 0.75
-				}
+				faction_approval < @cc_faction_danger_number
 			}
 			count > 0
 		}
@@ -454,12 +449,7 @@ country_event = {
 		
 		every_pop_faction = {
 			limit = {
-				pop_percentage = {
-					limit = {
-						happiness < 0.4
-					}
-					percentage > 0.75
-				}
+				faction_approval < @cc_faction_danger_number
 			}
 			add_modifier = {
 				modifier = dpe_election_unifying_candidate_faction
