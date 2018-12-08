@@ -8,10 +8,10 @@ dpe_ruler_looks_weak = { #mild version of "humiliated"
 }
 
 dpe_ruler_looks_weak_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 dpe_ruler_looks_weak_and_breaks_promises_faction = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 dpe_indemnity_paid = {
@@ -30,15 +30,15 @@ dpe_indemnity_receive = {
 
 dpe_militarist_unrest = {
 	pop_ethic_militarist_attraction_mult = 0.8
-	planet_unrest_add = 30
+	planet_stability_add = -20
 	
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
 }
 
-dpe_missionary_faction = { faction_happiness = 0.05 }
-dpe_missionary_faction_rejected = { faction_happiness = -0.05 }
-dpe_missionary_faction_rejected1 = { faction_happiness = -0.10 }
+dpe_missionary_faction = { faction_approval = 0.05 }
+dpe_missionary_faction_rejected = { faction_approval = -0.05 }
+dpe_missionary_faction_rejected1 = { faction_approval = -0.10 }
 
 dpe_missionary_country = { pop_ethic_spiritualist_attraction_mult = 0.33 }
 dpe_missionary_country_rejected = { pop_ethic_spiritualist_attraction_mult = -0.25 }
@@ -60,29 +60,29 @@ dpe_missionary_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_spiritualist.dds"
 }
 
-dpe_rejected_xenophile_mission_faction = { faction_happiness = -0.1 }
+dpe_rejected_xenophile_mission_faction = { faction_approval = -0.1 }
 
-dpe_killed_missionaries_faction = { faction_happiness = -0.2 }
-dpe_killed_missionaries_faction1 = { faction_happiness = 0.1 }
-dpe_not_killed_missionaries_faction = { faction_happiness = -0.1 }
+dpe_killed_missionaries_faction = { faction_approval = -0.2 }
+dpe_killed_missionaries_faction1 = { faction_approval = 0.1 }
+dpe_not_killed_missionaries_faction = { faction_approval = -0.1 }
 
 dpe_spirmission_minor_mission = { pop_ethic_spiritualist_attraction_mult = 0.4 }
 dpe_spirmission_major_mission = { pop_ethic_spiritualist_attraction_mult = 0.8 }
 
 dpe_hosting_spirmission_planet_turbulence = {
 	pop_ethic_xenophobe_attraction_mult = 2
-	planet_unrest_add = 25
+	planet_stability_add = -15
 
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
-dpe_spirmission_killed_faction = { faction_happiness = -0.2 }
+dpe_spirmission_killed_faction = { faction_approval = -0.2 }
 dpe_spirmission_killed_xenophobia = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = 10
 }
 
-dpe_spirmission_killed_faction1 = { faction_happiness = -0.1 }
+dpe_spirmission_killed_faction1 = { faction_approval = -0.1 }
 
 dpe_spirmission_planet_xenos_unwelcome = {
 	pop_ethic_xenophobe_attraction_mult = 2
@@ -97,9 +97,9 @@ dpe_spirmission_succeeded_country = {
 	pop_ethic_spiritualist_attraction_mult = 0.5
 }
 
-dpe_spirmission_succeeded_faction = { faction_happiness = 0.15 }
+dpe_spirmission_succeeded_faction = { faction_approval = 0.15 }
 
-dpe_spirmission_sent_home_faction = { faction_happiness = -0.1 }
+dpe_spirmission_sent_home_faction = { faction_approval = -0.1 }
 
 
 dpe_successful_xenomission = {
@@ -134,11 +134,11 @@ dpe_xenomission_imprisoned_citizens = {
 	pop_ethic_xenophobe_attraction_mult = 1
 }
 dpe_xenomission_imprisoned_citizens_auth_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 dpe_xenomission_imprisoned_citizens_phobe_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 #Contraband 
@@ -154,7 +154,7 @@ dpe_taxing_drugs = {
 }
 
 dpe_taxing_drugs_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 dpe_contraband_crisis = {
@@ -163,7 +163,7 @@ dpe_contraband_crisis = {
 }
 
 dpe_taking_action_drugs_faction = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 
 dpe_drug_cartels_tolerate = {
@@ -179,7 +179,7 @@ dpe_drug_trade_legit = {
 }
 
 dpe_contraband_stop_and_search_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 dpe_raids_worry = { pop_ethic_egalitarian_attraction_mult = 1 }
@@ -190,7 +190,7 @@ dpe_cowardly_empire = {
 }
 
 dpe_cowardly_empire_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 
@@ -207,7 +207,7 @@ dpe_honour_restored1 = {
 }
 
 dpe_honour_restored_faction = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 
 dpe_duel_disgraced = {
@@ -222,8 +222,8 @@ dpe_duel_disgraced1 = {
 
 
 
-dpe_denied_a_say = { faction_happiness = -0.05 }
-dpe_denied_elections = { faction_happiness = -0.15 }
+dpe_denied_a_say = { faction_approval = -0.05 }
+dpe_denied_elections = { faction_approval = -0.15 }
 
 
 dpe_electoral_experiment = {
@@ -237,8 +237,8 @@ dpe_upcoming_elections = {
 	pop_ethic_egalitarian_attraction_mult = 1
 }
 
-dpe_electoral_experiment_faction = { faction_happiness = 0.15 }
-dpe_electoral_experiment_faction_negative = { faction_happiness = -0.1 }
+dpe_electoral_experiment_faction = { faction_approval = 0.15 }
+dpe_electoral_experiment_faction_negative = { faction_approval = -0.1 }
 
 dpe_paying_foreign_country = {
 	country_resource_minerals_add = -125
@@ -256,21 +256,21 @@ dpe_auth_held_election = {
 }
 
 dpe_betrayed_democracy_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 dpe_promoted_democracy_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 dpe_elections_cancelled = {
-	faction_happiness = -0.05
+	faction_approval = -0.05
 }
 
 dpe_elections_cancelled_1 = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 dpe_sham_elections = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }

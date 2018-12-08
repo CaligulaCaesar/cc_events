@@ -275,7 +275,7 @@ cc_faction_sedition_prosperity = {
 }
 
 cc_faction_acute_unrest = {
-	planet_unrest_mult = 1
+	planet_stability_add = -20
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 	icon_frame = 3
@@ -283,13 +283,13 @@ cc_faction_acute_unrest = {
 
 cc_failed_factional_revolt = {
 	pop_government_ethic_attraction = 1
-	planet_unrest_add = -25
+	planet_stability_add = 20
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
 
 cc_breakaway_sympathy = {
-	planet_unrest_mult = 0.8
+	planet_stability_add = -15
 	pop_government_ethic_attraction = -0.5
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_guy_fawkes.dds"

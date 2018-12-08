@@ -1,38 +1,35 @@
 
 
-is_valid_xenophilia_refugee_pop = {
+is_valid_xenophilia_refugee_pop = {	
 	has_pop_flag = cc_literally_xenophile_manifested
 	is_robot_pop = no
-	NOR = { 
+	has_culture_shock = no
+	NOR = {
 		has_trait = trait_hive_mind 
 		has_trait = trait_nerve_stapled
-	}		
+	}
 	owner = {
 		any_relation = {
 			is_country_type = default
-			NOT = { has_policy_flag = refugees_not_allowed } 
+			NOT = { has_policy_flag = refugees_not_allowed }
 			has_policy_flag = allows_im
-			prevprev = {
+			prevprev = { #this ensures Pop scope, as root will not always be pop scope
 				OR = { 
 					has_citizenship_type = { type = citizenship_full country = prev }
 					has_citizenship_type = { type = citizenship_caste_system country = prev }
 					AND = {
-						OR = {
-							has_citizenship_type = { type = citizenship_limited country = prev }
-							has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
-						}
+						has_citizenship_type = { type = citizenship_limited country = prev }
+						has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
 						prev = { has_policy_flag = refugees_allowed }
-					}	
+					}
 				}
 			}
 			any_owned_planet = {
-				habitability = { who = prevprevprev value > 0.2 }
-				any_tile = {
-					has_blocker = no
-					has_pop = no
-				}
+				is_under_colonization = no
+				is_controlled_by = owner
+				has_orbital_bombardment = no
 			}
-		}		
+		}
 	}
 }
 

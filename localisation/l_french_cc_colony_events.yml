@@ -532,7 +532,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "Le Tour des Mondes de [cc_colony_leader.GetName] finit sur une tragédie"
 cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] rencontrait ses partisans sur [random_visit_planet.GetName] quand un fanatique anti-spiritualiste à moitié fou lui a tiré dessus avant que ses gardes du corps puissent réagir. Malheureusement, la foule a battu à mort l'assassin avant que nous puissions l'interroger. Cela a donné naissances à des théories conspirationnistes, affirmant que quelqu'un - peut-être même quelqu'un haut placé dans le gouvernement [root.owner.GetSpeciesAdj] - était derrière l'assassinat. Il circule également des affirmations que les autorités [root.owner.GetSpeciesAdj] sur [random_visit_planet.GetName] n'étaient pas parvenu à offre à [cc_colony_leader.GetName] une protection adéquate, et ainsi permettant à cette tragédie de se produire. En conséquence, la communauté spiritualiste du [root.owner.GetName] sont outragés. Le dirigeant de [spiritualist_faction.GetName] a rencontré des membres du gouvernement au milieu de ce chaos et leur a fait part de leur mécontentement, mais il a aussi suggéré que, pour apaiser les spiritualistes, [cc_colony_leader.GetName] pourrait recevoir des funérailles d'état et un grand mausolée pourrait être construit en son honneur sur [root.GetName]."
 cc_colony_events.642.A:0 "Faites-le. [cc_colony_leader.GetSheHeCap] le mérite."
-cc_mausoleum_will_be_built:0 "\nLe Mausolée prendra 5 ans à construire. Il ajoutera le modificateur §Y$cc_religious_centre$§!, donnant :\n$tile_resource_unity_mult$ : §G+50%§!\n$planet_resource_unity_add$ : §G+2§!\n$MOD_POP_HAPPINESS$ : §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$ : §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$ : §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\nLe Mausolée prendra 5 ans à construire. Il ajoutera le modificateur §Y$cc_religious_centre$§!, donnant :\n$tile_resource_unity_mult$ : §G+50%§!\n$planet_resource_unity_add$ : §G+2§!\n$MOD_POP_HAPPINESS$ : §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$ : §G+20§!\n$pop_ethic_spiritualist_attraction_mult$ : §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "Mausolée ouvert sur [root.GetName]"
@@ -669,7 +669,7 @@ cc_colony_events.75.B.tooltip:0 "L'influence de [cc_colony_leader.GetName] sur l
 cc_colony_events.751.name:0 "Une Université ouvre sur [root.GetName]"
 cc_colony_events.751.desc:0 "L'université en l'honneur de [cc_colony_leader.GetName] a été construite. Son ouverture a été accueillie avec joie chez la population, qui voit [root.GetName] comme un centre d'apprentissage dans le [root.owner.GetName]. De plus, les matérialistes à travers le [root.owner.GetName] sont satisfait de cette preuve du dévouement [root.owner.GetDuDelaDelDir] [root.owner.GetRulerTitle] envers le progrès scientifique."
 
-cc_university_will_be_built:0 "\nL'Université va prendre 5 ans à construire. Elle ajoutera le modificateur §Y$cc_university$§!, donnant :\n$tile_resource_physics_research_mult$ : §G+33%§!\n$tile_resource_society_research_mult$ : §G+33%§!\n$tile_resource_engineering_research_mult$ : §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$ : §G+25%§!\n$pop_ethic_materialist_attraction_mult$ : §Y+150%§!"
+cc_university_will_be_built:0 "\nL'Université va prendre 5 ans à construire. Elle ajoutera le modificateur §Y$cc_university$§!, donnant :\n$tile_resource_physics_research_mult$ : §G+33%§!\n$tile_resource_society_research_mult$ : §G+33%§!\n$tile_resource_engineering_research_mult$ : §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$ : §G+10§!\n$pop_ethic_materialist_attraction_mult$ : §Y+150%§!"
 
 
 cc_founder_materialist:0 "Eminent intellectuel"
@@ -860,7 +860,7 @@ cc_cleanup_events.10.desc:0 "The old owners of [root.GetName] had offended the p
 
 cc_cleanup_events.11.name:0 "Université sur [root.GetName]"
 cc_cleanup_events.11.desc:0 "The old owners of [root.GetName] had been building a major university. If completed, it will be the centre of the planet's influential network of intellectuals. Should we continue building the university?"
-cc_cleanup_events.11.tooltip:0 "\nUne fois construite, cette Université ajoutera le modificateur §Y$cc_university$§!, donnant :\n$tile_resource_physics_research_mult$ : §G+33%§!\n$tile_resource_society_research_mult$ : §G+33%§!\n$tile_resource_engineering_research_mult$ : §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$ : §G+25%§!\n$pop_ethic_materialist_attraction_mult$ : §Y+150%§!"
+cc_cleanup_events.11.tooltip:0 "\nUne fois construite, cette Université ajoutera le modificateur §Y$cc_university$§!, donnant :\n$tile_resource_physics_research_mult$ : §G+33%§!\n$tile_resource_society_research_mult$ : §G+33%§!\n$tile_resource_engineering_research_mult$ : §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$ : §G+10§!\n$pop_ethic_materialist_attraction_mult$ : §Y+150%§!"
 
 cc_cleanup_events.12.name:0 "Université sur [root.GetName]"
 cc_cleanup_events.12.desc:0 "The old owners of [root.GetName] had built a major university on [root.GetName]. It is the centre of the planet's influential network of intellectuals. Should we spare the building from destruction?"

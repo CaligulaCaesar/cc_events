@@ -524,7 +524,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer anti-Spiritualist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die spiritualistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [spiritualist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Spiritualisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Mausoleum zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird."
 
  cc_colony_events.642.A:0 "$cc_colony_events.342.A$"
- cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+ cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
  cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.643.name:0 "Mausoleum auf [root.GetName] eröffnet"
@@ -661,7 +661,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.751.name:0 "Universität auf [root.GetName] eröffnet"
  cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an dem technologischen Fortschritt."
 
- cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 
  cc_founder_materialist:0 "Angesehener Intellektueller"
@@ -851,7 +851,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_cleanup_events.11.name:0 "Universität auf [root.GetName]"
  cc_cleanup_events.11.desc:0 ""Die alten Herrscher von [root.GetName] waren dabei, eine große Universität auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist, werden. Sollten wir die Universität weiterbauen?"
- cc_cleanup_events.11.tooltip:0 "\nNach der Fertigstellung wird die Universität den Modifikator §Y$cc_university$§! hinzufügen:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.11.tooltip:0 "\nNach der Fertigstellung wird die Universität den Modifikator §Y$cc_university$§! hinzufügen:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
  cc_cleanup_events.12.name:0 "Universität auf [root.GetName]"
  cc_cleanup_events.12.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Universität auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"

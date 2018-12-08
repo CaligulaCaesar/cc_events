@@ -46,11 +46,11 @@ cc_pacifist_leader_visit = {
 }
 
 cc_mourning_pacifist = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_mourning_and_angry_pacifist = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_building_pacmonument = {
@@ -99,7 +99,7 @@ cc_underground_pacifist_movement_1 = {
 
 cc_underground_pacifist_movement_2 = {
 	pop_ethic_pacifist_attraction_mult = 1.5
-	planet_unrest_add = 25
+	planet_stability_add = -15
 	tile_resource_minerals_mult = -0.25
 	tile_resource_energy_mult = -0.25
 	icon_frame = 3
@@ -133,11 +133,11 @@ cc_spiritualist_leader_visit = {
 }
 
 cc_mourning_spiritualist = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_mourning_and_angry_spiritualist = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_building_mausoleum = {
@@ -161,7 +161,7 @@ cc_religious_centre = {
 	tile_resource_unity_mult = 0.5
 	planet_resource_unity_add = 2
 	pop_happiness = 0.1
-	planet_migration_all_pull = 0.5
+	planet_immigration_pull_add = 20
 	pop_ethic_spiritualist_attraction_mult = 2.5
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
@@ -216,15 +216,14 @@ cc_colony_distrusts = {
 
 cc_underground_spiritualist_movement_1 = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_spiritualist.dds"
 }
 
 cc_underground_spiritualist_movement_2 = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -252,13 +251,13 @@ cc_oppression = {
 
 
 cc_planet_oppression = {
-	planet_unrest_mult = -0.5
+	planet_stability_add = 15
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
 
 cc_arrested_guru = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 
@@ -298,15 +297,14 @@ cc_major_protests_egalitarian = {
 
 cc_underground_egalitarian_movement_1 = {
 	pop_ethic_egalitarian_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_egalitarian.dds"
 }
 
 cc_underground_egalitarian_movement_2 = {
 	pop_ethic_egalitarian_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -347,27 +345,26 @@ cc_university = {
 	tile_resource_physics_research_mult = 0.33
 	tile_resource_society_research_mult = 0.33
 	tile_resource_engineering_research_mult = 0.33
-	planet_migration_all_pull = 0.25
+	planet_immigration_pull_add = 10
 	pop_ethic_materialist_attraction_mult = 1.5
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_university.dds"
 }
 
 cc_university_built_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_underground_materialist_movement_1 = {
 	pop_ethic_materialist_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_materialist.dds"
 }
 
 cc_underground_materialist_movement_2 = {
 	pop_ethic_materialist_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -426,15 +423,14 @@ cc_major_protests_authoritarian = {
 
 cc_underground_authoritarian_movement_1 = {
 	pop_ethic_authoritarian_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_authoritarian.dds"
 }
 
 cc_underground_authoritarian_movement_2 = {
 	pop_ethic_authoritarian_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -475,15 +471,14 @@ cc_major_protests_militarist = {
 
 cc_underground_militarist_movement_1 = {
 	pop_ethic_militarist_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_militarist.dds"
 }
 
 cc_underground_militarist_movement_2 = {
 	pop_ethic_militarist_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -496,7 +491,7 @@ cc_militarists_offended = {
 }
 
 cc_milacademy_built_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_building_milacademy = {
@@ -537,11 +532,11 @@ cc_xenophobe_martyr = {
 }
 
 cc_mourning_xenophobe = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_mourning_and_angry_xenophobe = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_xenophobe_hero = {
@@ -553,7 +548,7 @@ cc_xenophobe_hero = {
 }
 
 cc_xenophobe_assassinated = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_founder_xenophobe = {
@@ -581,15 +576,14 @@ cc_major_protests_xenophobe = {
 
 cc_underground_xenophobe_movement_1 = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
 }
 
 cc_underground_xenophobe_movement_2 = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -602,7 +596,7 @@ cc_xenophobes_offended = {
 }
 
 cc_xenophobe_institute_built_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_building_xenophobe_institute = {
@@ -651,17 +645,17 @@ cc_hostile_towards_xenos = {
 
 
 cc_xenophobe_assassinated_attempt = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_widespread_xenophobic_unrest = {
-	planet_unrest_mult = 0.1
+	planet_stability_add = -5
 	pop_ethic_xenophobe_attraction_mult = 0.75
 }
 
 cc_xenophobe_hero_1 = {
 	pop_ethic_spiritualist_attraction_mult = 0.75
-	planet_unrest_mult = 0.1
+	planet_stability_add = -5
 	
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
@@ -692,15 +686,14 @@ cc_major_protests_xenophile = {
 
 cc_underground_xenophile_movement_1 = {
 	pop_ethic_xenophile_attraction_mult = 1.5
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_xenophile.dds"
 }
 
 cc_underground_xenophile_movement_2 = {
 	pop_ethic_xenophile_attraction_mult = 1.5
-	planet_unrest_add = 25
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }

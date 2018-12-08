@@ -658,7 +658,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = scientist
+				class = scientist
 				species = root.species
 				name = random
 				skill = 2
@@ -690,7 +690,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = scientist
+				class = scientist
 				species = event_target:dpe_talent_leader_pop.species
 				name = random
 				skill = 2
@@ -1088,7 +1088,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = general
+				class = general
 				species = root.species
 				name = random
 				skill = 2
@@ -1121,7 +1121,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = general
+				class = general
 				species = event_target:dpe_talent_leader_pop.species
 				name = random
 				skill = 2
@@ -1303,7 +1303,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = governor
+				class = governor
 				species = root.species
 				name = random
 				skill = 2
@@ -1336,7 +1336,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				type = governor
+				class = governor
 				species = event_target:dpe_talent_leader_pop.species
 				name = random
 				skill = 2
@@ -1502,7 +1502,7 @@ country_event = {
 			}
 		}
 		create_leader = {
-			type = admiral
+			class = admiral
 			species = root.species
 			name = random
 			skill = 2

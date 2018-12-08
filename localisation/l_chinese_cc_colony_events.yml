@@ -524,7 +524,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "[cc_colony_leader.GetName]的星际旅行以悲剧收场"
 cc_colony_events.642.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的反唯心主义者在保镖作出反应前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的现场群众在我们有机会前审讯凶手前就将他撕碎。阴谋论大行其道，声称有人--甚至可能是[root.owner.GetSpeciesAdj]政府中的高层--暗中策划了刺杀。也有声音指责[random_visit_planet.GetName]上的当地政府没有给[cc_colony_leader.GetName]配备足够的安保力量，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的唯心主义团体奋起抗议。唯心主义派系领导[spiritualist_faction.GetName]在动乱中与政府官员会面，明确表达了他们的愤怒，但同时也表示，为平息唯心主义者们的伤痛，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为[cc_colony_leader.GetHimHer]建起一座陵墓。"
 cc_colony_events.642.A:0 "批准。[cc_colony_leader.GetSheHeCap]值得如此纪念"
-cc_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_religious_centre$§!，效果:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_religious_centre$§!，效果:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "[root.GetName]上的陵墓揭幕"
@@ -661,7 +661,7 @@ cc_colony_events.75.B.tooltip:0 "[cc_colony_leader.GetName]的影响将在30年�
 cc_colony_events.751.name:0 "[root.GetName]上的大学揭幕"
 cc_colony_events.751.desc:0 "为纪念[cc_colony_leader.GetName]而建的大学已经完工。殖民地民众为其揭幕仪式而欢呼雀跃，他们相信[root.GetName]已经作为[root.owner.GetName]中的重要智识中心而声名远播。[root.owner.GetName]境内各地的唯物主义者也为此而欢欣鼓舞，将之视为[root.owner.GetRulerTitle]追求科学进步的明证。"
 
-cc_university_will_be_built:0 "\n大学会在5年后完工。将给予以下调整值： §Y$cc_university$§!，效果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+cc_university_will_be_built:0 "\n大学会在5年后完工。将给予以下调整值： §Y$cc_university$§!，效果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 
 cc_founder_materialist:0 "知名学者"
@@ -855,7 +855,7 @@ cc_cleanup_events.10.desc:0 "[root.GetName]的前任政权因废止了此地的�
 
 cc_cleanup_events.11.name:0 "[root.GetName]上的大学"
 cc_cleanup_events.11.desc:0 "[root.GetName]的前任政权之前正在建设一座宏伟大学。此地的知识分子组织影响广泛，如果大学完工，就将成为其中心。我们应该继续建造吗？"
-cc_cleanup_events.11.tooltip:0 "\n完工之后，大学会添加调整值 §Y$cc_university$§!，效果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.11.tooltip:0 "\n完工之后，大学会添加调整值 §Y$cc_university$§!，效果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 cc_cleanup_events.12.name:0 "[root.GetName]上的大学"
 cc_cleanup_events.12.desc:0 "[root.GetName]的前任政权在当地建设了一座宏伟大学。此地的知识分子组织影响广泛，这所大学则居于其中心地位。我们应该保护该建筑免于毁灭吗？"

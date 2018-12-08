@@ -151,7 +151,7 @@ country_event = {
 			}
 		}
 
-		custom_tooltip = dpe_egalitarian_missions.1.B.tooltip #Every other pop faction but the totalitarian faction receive the modifier §R$dpe_denied_a_say$§!, giving:\n\n§R-20% $MOD_FACTION_HAPPINESS$§!
+		custom_tooltip = dpe_egalitarian_missions.1.B.tooltip #Every other pop faction but the totalitarian faction receive the modifier §R$dpe_denied_a_say$§!, giving:\n\n§R-20% $MOD_FACTION_APPROVAL$§!
 		hidden_effect = {
 			every_pop_faction = {
 				limit = {

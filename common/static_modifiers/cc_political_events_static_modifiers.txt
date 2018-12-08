@@ -5,11 +5,11 @@ cc_ruler_humiliated = {
 }
 
 cc_xenophobic_offence_1 = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_xenophobic_offence_2 = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_species_insulted_1 = {
@@ -25,7 +25,7 @@ cc_acceeded_to_demands_xenophile = {
 }
 
 cc_ruler_cult_offended = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_ruler_revered = {
@@ -64,31 +64,31 @@ cc_secret_xenophile = {
 
 
 cc_xeno_marriage_allowed_xenoist = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_xeno_marriage_allowed_supremacist = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_xeno_marriage_allowed_isolationist = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_xeno_marriage_not_allowed_xenoist = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_xeno_marriage_not_allowed_supremacist = {
-	faction_happiness = 0.05
+	faction_approval = 0.05
 }
 
 cc_xeno_marriage_banned_xenoist = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_xeno_marriage_banned_supremacist = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_recent_xenophile_wedding = {
@@ -98,34 +98,34 @@ cc_recent_xenophile_wedding = {
 }
 
 cc_recent_xenophile_wedding_xenophile = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 cc_recent_xenophile_wedding_xenophobe = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_recent_sex_scandal_hostile = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_recent_sex_scandal_hostile1 = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_recent_sex_scandal_unfriendly = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_recent_sex_scandal_unfriendly1 = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_recent_sex_scandal_friendly = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 
 cc_recent_sex_scandal_friendly1 = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_ruler_humiliated1 = {
@@ -143,11 +143,11 @@ cc_defiance_of_law1 = {
 }
 
 cc_defiance_of_law_egals = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_defiance_of_law_egals1 = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_defiance_of_law_mega = {
@@ -156,7 +156,7 @@ cc_defiance_of_law_mega = {
 }
 
 cc_defiance_of_law_egal_mega = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_paid_blackmail = {
@@ -179,7 +179,7 @@ cc_outrage_at_police_violence = {
 }
 
 cc_outrage_at_police_violence_faction = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 cc_outrage_at_priesthood_corruption = {
@@ -194,7 +194,7 @@ cc_outrage_at_electoral_manipulation = {
 }
 
 cc_outrage_at_electoral_manipulation_faction = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_loss_of_faith_in_ingenuity = {
@@ -212,8 +212,7 @@ cc_outrage_at_discrimination = {
 
 cc_prison_security_breach = {
 	pop_citizen_happiness = -0.1
-	planet_unrest_add = 20
-	planet_unrest_mult = 0.5
+	planet_stability_add = -15
 }
 
 cc_ship_designs_compromised = {
@@ -221,7 +220,7 @@ cc_ship_designs_compromised = {
 }
 
 cc_emancipation_movement = {
-	planet_unrest_mult = 1
+	planet_stability_add = -20
 	pop_ethic_egalitarian_attraction_mult = 1
 	pop_slave_resource_output = -0.25
 	icon_frame = 3
@@ -229,7 +228,7 @@ cc_emancipation_movement = {
 }
 
 cc_emancipation_furious = {
-	faction_happiness = -0.3
+	faction_approval = -0.3
 }
 
 cc_emancipated = {
@@ -263,7 +262,7 @@ cc_luddite_celebration = {
 }
 
 cc_luddite_movement = {
-	planet_unrest_mult = 1
+	planet_stability_add = -20
 	pop_ethic_spiritualist_attraction_mult = 1
 	pop_robot_production_output = -0.15
 	icon_frame = 3
@@ -275,19 +274,19 @@ cc_bowed_to_luddism = {
 }
 
 cc_luddite_faction_displeasure = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_luddite_oppress_faction_displeasure = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_bowed_to_luddism_faction_pos = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 
 cc_bowed_to_luddism_faction_neg = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 cc_worried_about_machines = {
@@ -295,7 +294,7 @@ cc_worried_about_machines = {
 }
 
 cc_peace_protests = {
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	pop_ethic_pacifist_attraction_mult = 1.5
 	tile_resource_energy_mult = -0.25
 	tile_resource_minerals_mult = -0.25
@@ -310,15 +309,15 @@ cc_country_peace_protests = {
 }
 
 cc_faction_peace_protests = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_faction_oppressed = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_peace_faction_betrayed = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_promises_to_pacifists = {
@@ -330,7 +329,7 @@ cc_made_peace = {
 }
 
 cc_faction_peace_celebration = {
-	faction_happiness = 0.15
+	faction_approval = 0.15
 }
 
 cc_peace_celebrations = {
@@ -342,14 +341,14 @@ cc_peace_celebrations = {
 
 cc_planet_hate_speech = {
 	pop_ethic_xenophobe_attraction_mult = 1
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
 }
 
 cc_planet_interspecies_tensions = {
 	pop_ethic_xenophobe_attraction_mult = 1.5
-	planet_unrest_mult = 1
+	planet_stability_add = -20
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
 }
@@ -369,7 +368,7 @@ cc_disrupted_government = {
 	tile_resource_physics_research_mult = -0.67
 	tile_resource_society_research_mult = -0.67
 	tile_resource_engineering_research_mult = -0.67
-	planet_unrest_mult = 0.5
+	planet_stability_add = -10
 	
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
@@ -380,23 +379,23 @@ cc_pop_fears_genocide = {
 }
 
 cc_xenos_spared_from_massacre = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_xenos_massacred = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 cc_xenos_disparaged = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_xenos_disparaged_sup = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 cc_xenos_encouraged = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 cc_martial_law = {
@@ -406,7 +405,7 @@ cc_martial_law = {
 	tile_resource_physics_research_mult = -0.33
 	tile_resource_society_research_mult = -0.3
 	tile_resource_engineering_research_mult = -0.33
-	planet_unrest_mult = -0.5
+	planet_stability_add = 10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
@@ -438,12 +437,12 @@ dpe_charity_unpopular_ruler = {
 }
 
 dpe_charity_faction_undeserving = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 
 dpe_unbelief_faction = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 dpe_unbelief_empire = {
@@ -451,7 +450,7 @@ dpe_unbelief_empire = {
 }
 
 dpe_damned_to_hell_faction = {
-	faction_happiness = -0.15
+	faction_approval = -0.15
 }
 
 dpe_damned_to_hell_empire = {
@@ -469,7 +468,7 @@ dpe_state_in_lockdown = {
 }
 
 dpe_state_in_lockdown_faction = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 dpe_illegitimate_regime = {
@@ -478,11 +477,11 @@ dpe_illegitimate_regime = {
 }
 
 dpe_seized_control_faction = {
-	faction_happiness = 0.1
+	faction_approval = 0.1
 }
 
 dpe_lost_control_faction = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 
@@ -496,11 +495,11 @@ dpe_extra_naval_expenses_2 = {
 }
 
 dpe_military_petition_rejected = {
-	faction_happiness = -0.10
+	faction_approval = -0.10
 }
 
 dpe_military_coup_faction = {
-	faction_happiness = -0.25
+	faction_approval = -0.25
 }
 
 dpe_navy_RandD = {
@@ -521,11 +520,11 @@ dpe_rebuilding_fleet_2 = {
 }
 
 dpe_naval_pay_cut_faction = {
-	faction_happiness = -0.05
+	faction_approval = -0.05
 }
 
 dpe_navy_privileges_cut_faction = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 dpe_encouraged_competition = {
@@ -533,15 +532,15 @@ dpe_encouraged_competition = {
 }
 
 dpe_disgruntled_CEO = {
-	planet_unrest_add = 20
+	planet_stability_add = -10
 	
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
 }
 
-dpe_patents_national_interest = { faction_happiness = 0.1 }
-dpe_patents_denied_faction = { faction_happiness = -0.1 }
-dpe_innovative_CEO_faction = { faction_happiness = 0.05 }
+dpe_patents_national_interest = { faction_approval = 0.1 }
+dpe_patents_denied_faction = { faction_approval = -0.1 }
+dpe_innovative_CEO_faction = { faction_approval = 0.05 }
 
 
 dpe_innovative_CEO = {
@@ -645,7 +644,7 @@ dpe_planet_talented_compscientist = {
 dpe_planet_talented_socscientist = {
 	tile_resource_society_research_mult = 0.2
 	mod_distance_to_capital_static_modifier_efficiency_mult = -0.15
-	planet_migration_all_pull = 0.15
+	planet_immigration_pull_add = 5
 
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_judge.dds"
@@ -712,11 +711,11 @@ cc_antiluddite = {
 }
 
 dpe_cultist_embraced = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 dpe_cultist_faction = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 dpe_cultist_scandal_empire = {
@@ -747,7 +746,7 @@ dpe_defector_military_from = {
 }
 
 dpe_defector_xenophobe_faction = {
-	faction_happiness = -0.2
+	faction_approval = -0.2
 }
 
 dpe_defector_xenophobia = {
@@ -755,7 +754,7 @@ dpe_defector_xenophobia = {
 }
 
 dpe_defector_arbitrary_detention = {
-	faction_happiness = -0.1
+	faction_approval = -0.1
 }
 
 

@@ -2,6 +2,7 @@
 mem_dpe_become_protectorate = {
 	hidden_effect = { #Taken from event primitive.16 with slight alterations
 		event_target:mem_dpe_primitive_civ = {
+
 			remove_country_flag = early_space_age
 			set_country_flag = primitives_can_into_space
 			set_country_type = default
@@ -39,108 +40,48 @@ mem_dpe_become_protectorate = {
 				civics = random
 			}
 			set_name = random
-
-			add_minerals = 1000 # enough for a spaceport and then some
-			add_energy = 500
-			add_influence = 300
+			add_resource = {
+				energy = 500
+				minerals = 1000 # enough for a spaceport and then some
+			}
+			add_resource = { influence = 300 }
 			capital_scope = {
-				every_tile = {
-					limit = {
-						has_blocker = yes
-						NOR = {
-							has_blocker = tb_decrepit_dwellings
-							has_blocker = tb_failing_infrastructure
-						}
-					}
-					remove_blocker = yes
-				}
+				clear_blockers = yes
 				while = {
 					limit = { 
 						num_pops < 8
-						any_tile = {
-							has_grown_pop = no
-							has_growing_pop = no
-							has_blocker = no
-						}
+						#free_housing > 0
 					}
-					random_tile = {
-						limit = {
-							has_grown_pop = no
-							has_growing_pop = no
-							has_blocker = no
-						}
-						create_pop = {
-							species = owner
-						}
+					create_pop = {
+						species = owner
 					}
 				}
-				random_tile = {
-					limit = {
-						has_grown_pop = yes
-						OR = {
-							has_building = "building_primitive_farm"
-							has_building = "building_primitive_factory"
-							has_building = no
-						}
-					}
-					clear_deposits = yes
-					add_deposit = d_energy_deposit
-					set_building = "building_capital_2"
-				}
-				while = {
-					count = 2
-					random_tile = {
-						limit = {
-							has_grown_pop = yes
-							OR = {
-								has_building = "building_primitive_farm"
-								has_building = "building_primitive_factory"
-								has_building = no
-							}
-						}
-						clear_deposits = yes
-						add_deposit = d_mineral_deposit
-						set_building = "building_mining_network_1"
-					}
-				}
-				while = {
-					count = 2
-					random_tile = {
-						limit = {
-							has_grown_pop = yes
-							OR = {
-								has_building = "building_primitive_farm"
-								has_building = "building_primitive_factory"
-								has_building = no
-							}
-						}
-						clear_deposits = yes
-						add_deposit = d_farmland_deposit
-						set_building = "building_hydroponics_farm_1"
-					}
-				}
-				while = {
-					count = 3
-					random_tile = {
-						limit = {
-							has_grown_pop = yes
-							OR = {
-								has_building = "building_primitive_farm"
-								has_building = "building_primitive_factory"
-								has_building = no
-							}
-						}
-						clear_deposits = yes
-						add_deposit = d_energy_deposit
-						set_building = "building_power_plant_1"
-					}
-				}
+				remove_building = building_primitive_farm
+				remove_building = building_primitive_factory
+				remove_building = building_primitive_capital
+				remove_building = building_urban_dwellings
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				add_district = district_generator
+				add_district = district_generator
+				add_building = building_capital
+				add_building = building_research_lab_1
+				add_building = building_foundry_1
+				add_building = building_factory_1
+				
 				remove_all_armies = yes
 				solar_system = {
 					starbase = {
 						set_owner = event_target:mem_dpe_primitive_civ
 					}
-				}		
+				}			
 			}
 			random_owned_ship = {
 				limit = { is_ship_size = primitive_space_station }

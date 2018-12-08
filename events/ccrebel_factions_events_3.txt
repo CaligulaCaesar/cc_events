@@ -3039,7 +3039,7 @@ country_event = {
 						
 					else = {
 						create_leader = {
-							type = ruler
+							class = ruler
 							species = owner_main_species
 							name = random
 							skill = 2
@@ -3124,7 +3124,7 @@ country_event = {
 					while = {
 						count = 3
 						create_leader = {
-							type = scientist
+							class = scientist
 							species = owner_main_species
 							name = random
 							skill = 1
@@ -3135,7 +3135,7 @@ country_event = {
 						}
 					}
 					create_leader = {
-						type = governor
+						class = governor
 						species = owner_main_species
 						name = random
 						skill = 1
@@ -3145,7 +3145,7 @@ country_event = {
 						add_random_leader_trait = yes
 					}
 					create_leader = {
-						type = admiral
+						class = admiral
 						species = owner_main_species
 						name = random
 						skill = 1
@@ -3155,7 +3155,7 @@ country_event = {
 						add_random_leader_trait = yes
 					}
 					create_leader = {
-						type = general
+						class = general
 						species = owner_main_species
 						name = random
 						skill = 1
@@ -3556,7 +3556,7 @@ country_event = {
 						}
 						else = {
 							create_leader = {
-								type = ruler
+								class = ruler
 								species = owner_main_species
 								name = random
 								skill = 2
@@ -4582,7 +4582,7 @@ country_event = {
 			days = 5
 		}
 		create_leader = {
-			type = ruler
+			class = ruler
 			species = owner_main_species
 			name = random
 			skill = 2
