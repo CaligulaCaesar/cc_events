@@ -2318,7 +2318,7 @@ country_event = {
 		}
 		any_owned_planet = {
 			is_faction_stronghold = yes
-			unrest > 80
+			planet_stability < @dpe_risk_unrest_value
 			has_ground_combat = no
 			exists = controller
 			controller = { is_same_value = prev.owner }
@@ -2340,7 +2340,7 @@ country_event = {
 				limit = {
 					any_owned_planet = {
 						is_faction_stronghold = yes
-						unrest > 80
+						planet_stability < @dpe_risk_unrest_value
 						has_ground_combat = no
 						exists = controller
 						controller = { is_same_value = prev.owner }
@@ -2350,7 +2350,7 @@ country_event = {
 							any_owned_planet = {
 								NOT = { is_same_value = prevprev }
 								is_faction_stronghold = yes
-								unrest > 80
+								planet_stability < @dpe_risk_unrest_value
 								has_ground_combat = no
 								exists = controller
 								controller = { is_same_value = prev.owner }
@@ -2363,7 +2363,7 @@ country_event = {
 											is_same_value = prevprevprevprev
 										}
 										is_faction_stronghold = yes
-										unrest > 80
+										planet_stability < @dpe_risk_unrest_value
 										has_ground_combat = no
 										exists = controller
 										controller = { is_same_value = prev.owner }
@@ -2382,7 +2382,7 @@ country_event = {
 					limit = {
 						any_owned_planet = {
 							is_faction_stronghold = yes
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 							has_ground_combat = no
 							exists = controller
 							controller = { is_same_value = prev.owner }
@@ -2392,7 +2392,7 @@ country_event = {
 								any_owned_planet = {
 									NOT = { is_same_value = prevprev }
 									is_faction_stronghold = yes
-									unrest > 80
+									planet_stability < @dpe_risk_unrest_value
 									has_ground_combat = no
 									exists = controller
 									controller = { is_same_value = prev.owner }
@@ -2405,7 +2405,7 @@ country_event = {
 												is_same_value = prevprevprevprev
 											}
 											is_faction_stronghold = yes
-											unrest > 80
+											planet_stability < @dpe_risk_unrest_value
 											has_ground_combat = no
 											exists = controller
 											controller = { is_same_value = prev.owner }
@@ -2418,7 +2418,7 @@ country_event = {
 														is_same_value = prevprevprevprev.prevprev
 													}
 													is_faction_stronghold = yes
-													unrest > 80
+													planet_stability < @dpe_risk_unrest_value
 													has_ground_combat = no
 													exists = controller
 													controller = { is_same_value = prev.owner }
@@ -2432,7 +2432,7 @@ country_event = {
 																is_same_value = prevprevprevprev.prevprevprev
 															}
 															is_faction_stronghold = yes
-															unrest > 80
+															planet_stability < @dpe_risk_unrest_value
 															has_ground_combat = no
 															exists = controller
 															controller = { is_same_value = prev.owner }
@@ -2462,7 +2462,7 @@ country_event = {
 					factor = 1.5
 					any_owned_planet = {
 						is_faction_stronghold = yes
-						unrest > 99
+						planet_stability < @dpe_acute_unrest_value
 						has_ground_combat = no
 						exists = controller
 						controller = { is_same_value = prev.owner }
@@ -2558,7 +2558,7 @@ country_event = {
 		num_owned_planets > 1
 		any_owned_planet = {
 			is_faction_stronghold = yes
-			unrest > 80
+			planet_stability < @dpe_risk_unrest_value
 			has_ground_combat = no
 			has_orbital_bombardment = no
 			exists = controller
@@ -2575,7 +2575,7 @@ country_event = {
 			limit = {
 				any_owned_planet = {
 					is_faction_stronghold = yes
-					unrest > 99
+					planet_stability < @dpe_acute_unrest_value
 					has_ground_combat = no
 					has_orbital_bombardment = no
 					exists = controller
@@ -2593,7 +2593,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					is_faction_stronghold = yes
-					unrest > 99
+					planet_stability < @dpe_acute_unrest_value
 					has_ground_combat = no
 					has_orbital_bombardment = no
 					exists = controller
@@ -3220,7 +3220,7 @@ country_event = {
 				limit = {
 					NOT = { is_same_value = event_target:cc_rebel_faction_capital }
 					is_faction_stronghold = yes
-					unrest > 80
+					planet_stability < @dpe_risk_unrest_value
 				}
 				planet_event = { id = ccfaction.61 days = 10 random = 20 }
 			}
@@ -3229,7 +3229,7 @@ country_event = {
 				limit = {
 					NOT = { is_same_value = event_target:cc_rebel_faction_capital }
 					is_faction_stronghold = yes
-					NOT = { unrest > 80 }
+					NOT = { planet_stability < @dpe_risk_unrest_value }
 				}
 				planet_event = { id = ccfaction.62 days = 10 random = 20 }
 			}
@@ -3243,7 +3243,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					is_faction_stronghold = yes
-					unrest > 80
+					planet_stability < @dpe_risk_unrest_value
 					has_ground_combat = no
 					has_orbital_bombardment = no
 					exists = controller
@@ -4456,7 +4456,7 @@ country_event = {
 				limit = {
 					NOT = { is_same_value = from }
 					is_faction_stronghold = yes
-					unrest > 80
+					planet_stability < @dpe_risk_unrest_value
 				}
 				planet_event = { id = ccfaction.61 days = 10 random = 20 }
 			}
@@ -4465,7 +4465,7 @@ country_event = {
 				limit = {
 					NOT = { is_same_value = event_target:cc_rebel_faction_capital }
 					is_faction_stronghold = yes
-					NOT = { unrest > 80 }
+					NOT = { planet_stability < @dpe_risk_unrest_value }
 				}
 				planet_event = { id = ccfaction.62 days = 10 random = 20 }
 			}
@@ -5730,13 +5730,13 @@ planet_event = {
 							controller = { is_same_value = root.owner }
 							has_ground_combat = no
 							has_orbital_bombardment = no
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 				}
 				modifier = {
 					factor = 1.5
-					unrest > 99
+					planet_stability < @dpe_acute_unrest_value
 				}
 			}
 			988 = { planet_event = { id = ccfaction.71 days = 30 } }
@@ -5762,7 +5762,7 @@ planet_event = {
 		has_modifier = cc_breakaway_sympathy
 		has_ground_combat = no
 		has_orbital_bombardment = no
-		unrest > 80
+		planet_stability < @dpe_risk_unrest_value
 		
 		owner = {
 			any_country = {

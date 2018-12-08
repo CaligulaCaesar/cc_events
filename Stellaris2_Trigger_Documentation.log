@@ -445,7 +445,7 @@ Supported Scopes: pop
 Supported Targets: none
 
 unrest - Compares the unrest present on the planet with the given value
-unrest > 50
+planet_stability < @dpe_somewhat_unrest_value
 Supported Scopes: planet
 Supported Targets: none
 

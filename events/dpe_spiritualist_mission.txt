@@ -2262,7 +2262,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					event_target:dpe_mission_host_planet = {
-						unrest > 50
+						planet_stability < @dpe_somewhat_unrest_value
 					}
 				}
 				modifier = {

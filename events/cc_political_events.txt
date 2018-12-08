@@ -821,7 +821,7 @@ country_event = {
 				}
 				NOT = {
 					any_owned_planet = {
-						unrest > 50
+						planet_stability < @dpe_somewhat_unrest_value
 						count_pops = {
 							limit = { has_ethic = ethic_spiritualist }
 							count > 3
@@ -1579,7 +1579,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				event_target:dpe_merchant_planet = {
-					unrest > 30
+					planet_stability < @dpe_normal_unrest_value
 				}
 			}
 		}

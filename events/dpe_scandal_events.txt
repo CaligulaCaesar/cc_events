@@ -347,7 +347,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				NOT = { any_owned_planet = { unrest > 0 } }
+				NOT = { any_owned_planet = { planet_stability < @dpe_normal_unrest_value } }
 			}
 			modifier = {
 				factor = 0.5

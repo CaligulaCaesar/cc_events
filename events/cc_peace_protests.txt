@@ -316,7 +316,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 30
+					planet_stability < @dpe_normal_unrest_value
 					count_pops = {
 						limit = {
 							has_ethic = ethic_pacifist
@@ -329,7 +329,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 50
+					planet_stability < @dpe_somewhat_unrest_value
 					count_pops = {
 						limit = {
 							has_ethic = ethic_pacifist
@@ -342,7 +342,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 80
+					planet_stability < @dpe_risk_unrest_value
 					count_pops = {
 						limit = {
 							has_ethic = ethic_pacifist

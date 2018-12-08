@@ -536,7 +536,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -624,7 +624,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -811,7 +811,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -886,7 +886,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 				1 = {
@@ -894,7 +894,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -1369,7 +1369,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -1564,7 +1564,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -1639,7 +1639,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -2401,7 +2401,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -2590,7 +2590,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -2665,7 +2665,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -3140,7 +3140,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -3365,7 +3365,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -3443,7 +3443,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -5159,7 +5159,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -5354,7 +5354,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -5429,7 +5429,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -6183,7 +6183,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -6370,7 +6370,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -6445,7 +6445,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -6893,7 +6893,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -6981,7 +6981,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -7194,7 +7194,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -7265,7 +7265,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -7652,7 +7652,7 @@ planet_event = {
 					planet_event = { id = cc_colony_events.91 days = 30 }
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -7741,7 +7741,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -8371,7 +8371,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -8565,7 +8565,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}
@@ -8634,7 +8634,7 @@ planet_event = {
 					
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 				}
 			}

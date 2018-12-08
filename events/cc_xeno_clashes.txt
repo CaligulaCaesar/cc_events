@@ -67,7 +67,7 @@ planet_event = {
 			1 = {
 				modifier = {
 					factor = 0.5
-					unrest > 30
+					planet_stability < @dpe_normal_unrest_value
 				}
 				modifier = {
 					factor = 2
@@ -419,7 +419,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		unrest > 0
+		planet_stability < @dpe_normal_unrest_value
 		owner = { is_same_value = event_target:cc_owner }
 		any_owned_pop = { species = { is_same_value = event_target:species1 } }
 		any_owned_pop = { species = { is_same_value = event_target:species2 } }
@@ -605,19 +605,19 @@ planet_event = {
 					planet_event = { id = cc_xeno_clashes.37 days = 180 }
 					modifier = {
 						factor = 1.5
-						unrest > 0
+						planet_stability < @dpe_normal_unrest_value
 					}
 					modifier = {
 						factor = 2
-						unrest > 30
+						planet_stability < @dpe_normal_unrest_value
 					}
 					modifier = {
 						factor = 4
-						unrest > 50
+						planet_stability < @dpe_somewhat_unrest_value
 					}
 					modifier = {
 						factor = 10
-						unrest > 80
+						planet_stability < @dpe_risk_unrest_value
 					}
 				}
 				4 = { }
@@ -820,19 +820,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.32 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					149 = { }
@@ -851,38 +851,38 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.33 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					1 = {
 						planet_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					297 = { }
@@ -902,19 +902,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.35 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					149 = { }
@@ -933,19 +933,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.36 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 						modifier = {
 							factor = 0
@@ -962,19 +962,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					297 = { }
@@ -1490,19 +1490,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.32 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					99 = { }
@@ -1521,38 +1521,38 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.33 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					1 = {
 						planet_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					198 = { }
@@ -1572,19 +1572,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.35 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					99 = { }
@@ -1603,19 +1603,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.36 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 						modifier = {
 							factor = 0
@@ -1632,19 +1632,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					198 = { }
@@ -2047,7 +2047,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		unrest > 0
+		planet_stability < @dpe_normal_unrest_value
 		owner = { is_same_value = event_target:cc_owner }
 		any_owned_pop = { species = { is_same_value = event_target:species1 } }
 		any_owned_pop = { species = { is_same_value = event_target:species2 } }
@@ -2563,19 +2563,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.42 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					149 = { }
@@ -2594,38 +2594,38 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.43 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					1 = {
 						planet_event = { id = cc_xeno_clashes.44 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					297 = { }
@@ -2645,19 +2645,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.45 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					149 = { }
@@ -2676,19 +2676,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.46 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 						modifier = {
 							factor = 0
@@ -2705,19 +2705,19 @@ planet_event = {
 						planet_event = { id = cc_xeno_clashes.44 }
 						modifier = {
 							factor = 1.5
-							unrest > 0
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 30
+							planet_stability < @dpe_normal_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 50
+							planet_stability < @dpe_somewhat_unrest_value
 						}
 						modifier = {
 							factor = 1.5
-							unrest > 80
+							planet_stability < @dpe_risk_unrest_value
 						}
 					}
 					297 = { }

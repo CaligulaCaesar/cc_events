@@ -26,7 +26,7 @@ planet_event = { #shifted back to a completely normal planet event
 			}
 		}
 		
-		unrest > 0
+		planet_stability < @dpe_normal_unrest_value
 		NOT = { has_planet_flag = cc_luddite_strike }
 		any_owned_pop = { is_non_sapient_robot = yes }
 		any_owned_pop = {
@@ -100,7 +100,7 @@ planet_event = {
 				has_country_flag = cc_recent_antiluddite_event
 			}
 		}
-		unrest > 0
+		planet_stability < @dpe_normal_unrest_value
 		NOT = { has_planet_flag = cc_luddite_strike }
 		any_owned_pop = { is_non_sapient_robot = yes }
 		any_owned_pop = {
@@ -356,11 +356,11 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				unrest > 30
+				planet_stability < @dpe_normal_unrest_value
 			}
 			modifier = {
 				factor = 1.5
-				unrest > 50
+				planet_stability < @dpe_somewhat_unrest_value
 			}
 			modifier = {
 				factor = 1.5
@@ -381,7 +381,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 1.5
-				unrest > 80
+				planet_stability < @dpe_risk_unrest_value
 				owner = {
 					NOR = {
 						has_valid_civic = civic_fanatic_purifiers
@@ -1500,11 +1500,11 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				unrest > 30
+				planet_stability < @dpe_normal_unrest_value
 			}
 			modifier = {
 				factor = 1.5
-				unrest > 50
+				planet_stability < @dpe_somewhat_unrest_value
 			}
 			modifier = {
 				factor = 1.5
@@ -1525,7 +1525,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 1.5
-				unrest > 80
+				planet_stability < @dpe_risk_unrest_value
 				owner = {
 					NOR = {
 						has_valid_civic = civic_fanatic_purifiers
@@ -1862,7 +1862,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 30
+					planet_stability < @dpe_normal_unrest_value
 					any_owned_pop = {
 						is_non_sapient_robot = yes
 					}
@@ -1874,7 +1874,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 50
+					planet_stability < @dpe_somewhat_unrest_value
 					any_owned_pop = {
 						is_non_sapient_robot = yes
 					}
@@ -1886,7 +1886,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					unrest > 80
+					planet_stability < @dpe_risk_unrest_value
 					any_owned_pop = {
 						is_non_sapient_robot = yes
 					}
