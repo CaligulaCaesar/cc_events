@@ -91,6 +91,12 @@ cc_interspecies_marriage = {
 				}
 			}
 		}
+
+		potential = {
+			NOT = {
+				has_ascension_perk = ap_xeno_compatibility
+			}
+		}
 	}
 	
 	option = {
@@ -115,6 +121,12 @@ cc_interspecies_marriage = {
 			modifier = {
 				factor = 100
 				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+
+		potential = {
+			NOT = {
+				has_ascension_perk = ap_xeno_compatibility
 			}
 		}
 	}

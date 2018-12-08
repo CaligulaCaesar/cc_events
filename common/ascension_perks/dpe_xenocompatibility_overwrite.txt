@@ -1,0 +1,133 @@
+
+
+ap_xeno_compatibility = {
+	potential = {
+		host_has_dlc = "Megacorp"
+		NOT = {
+			has_ascension_perk = ap_xeno_compatibility
+		}
+		is_regular_empire = yes
+	}
+	
+	modifier = {
+		planet_immigration_pull_mult = 0.33
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "civic_tooltip_xenophile"
+			is_xenophile = yes
+		}
+		custom_tooltip = {
+			fail_text = "requires_xeno_species"
+			any_owned_pop = {
+				NOR = {
+					is_same_species = root.owner
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					has_trait = trait_hive_mind
+				}
+			}		
+		}	
+		custom_tooltip = {
+			fail_text = "requires_technology_gene_tailoring"
+			has_technology = tech_gene_tailoring
+		}
+	}
+	
+	on_enabled = {
+		custom_tooltip = "allow_crossbreeding"
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_policy_flag = allows_im
+					}
+				}
+				set_policy = {
+					policy = cc_interspecies_marriage
+					option = allow_im
+					cooldown = yes
+				}
+				
+				set_country_flag = cc_has_had_interspecies_marriage
+			
+				random_pop_faction = {
+					limit = {
+						is_pop_faction_type = xenoist
+						NOT = {
+							has_modifier = cc_xeno_marriage_allowed_xenoist
+						}
+					}
+					add_modifier = {
+						modifier = cc_xeno_marriage_allowed_xenoist
+						days = -1
+					}
+				}
+				
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = {
+							is_pop_faction_type = supremacist
+							NOT = {
+								has_modifier = cc_xeno_marriage_allowed_supremacist
+							}
+						}
+						add_modifier = {
+							modifier = cc_xeno_marriage_allowed_supremacist
+							days = -1
+						}
+					}
+				}
+				if = {
+					limit = { has_faction = isolationist }
+					random_pop_faction = {
+						limit = {
+							is_pop_faction_type = isolationist
+							NOT = {
+								has_modifier = cc_xeno_marriage_allowed_isolationist
+							}
+						}
+						add_modifier = {
+							modifier = cc_xeno_marriage_allowed_isolationist
+							days = -1
+						}
+					}
+				}
+				
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = cc_literally_xenophile_manifested
+						NOT = { has_modifier = cc_practising_xenophile }
+					}
+					add_modifier = {
+						modifier = cc_practising_xenophile
+						days = -1
+					}
+				}
+				every_owned_pop = {
+					limit = { has_modifier = cc_secretly_practising_xenophile }
+					remove_modifier = cc_secretly_practising_xenophile
+				}
+				every_owned_pop = {
+					limit = { has_modifier = cc_secret_xenophile }
+					remove_modifier = cc_secret_xenophile
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+}

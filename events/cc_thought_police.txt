@@ -97,6 +97,7 @@ pop_event = {
 			limit = { is_valid_TP_refugee_pop = yes }
 			random_list = {
 				5 = {
+					save_event_target_as = refugee_pop
 					TP_refugee_pop_effect = yes
 					
 #					log = "Activist Pop in [root.owner.GetName] flees"
