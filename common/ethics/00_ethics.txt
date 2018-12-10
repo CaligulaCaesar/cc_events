@@ -20,12 +20,12 @@ ethic_fanatic_authoritarian = {
 	regular_variant = ethic_authoritarian
 	
 	country_modifier = {
-		country_resource_influence_add = 1
-		pop_slave_resource_output = 0.10
+		country_base_influence_produces_add = 1
+		planet_jobs_worker_produces_mult = 0.1
 	}
 	
 	tags = {
-		ETHIC_ALLOWS_CASTE_SYSTEM
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_SLAVERY
 		ETHIC_ONLY_AUTOCRACY
 	}	
@@ -43,12 +43,12 @@ ethic_authoritarian = {
 	fanatic_variant = ethic_fanatic_authoritarian
 	
 	country_modifier = {
-		country_resource_influence_add = 0.5
-		pop_slave_resource_output = 0.05
+		country_base_influence_produces_add = 0.5
+		planet_jobs_worker_produces_mult = 0.05
 	}	
 	
 	tags = {
-		ETHIC_ALLOWS_CASTE_SYSTEM
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_SLAVERY
 		ETHIC_NEVER_DEMOCRACY
 	}	
@@ -97,6 +97,7 @@ ethic_authoritarian = {
 			}
 		}
 	}
+	
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
 		trigger = {
@@ -105,6 +106,7 @@ ethic_authoritarian = {
 					OR = {
 						has_living_standard = { type = living_standard_utopian }
 						has_living_standard = { type = living_standard_good }
+						has_living_standard = { type = living_standard_shared_burdens }
 					}
 				}
 			}
@@ -161,7 +163,7 @@ ethic_authoritarian = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -172,7 +174,7 @@ ethic_authoritarian = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -183,7 +185,7 @@ ethic_authoritarian = {
 			}
 		}	
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_authoritarian
 				has_ethic = ethic_fanatic_authoritarian
@@ -196,11 +198,11 @@ ethic_authoritarian = {
 			ruler = { leader_of_faction = totalitarian }				
 		}
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_authoritarian
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_authoritarian
 		}
 		modifier = {
@@ -317,7 +319,14 @@ ethic_authoritarian = {
 		}
 		modifier = {
 			factor = 1.25
-			from = {
+			from = {	
+				NOT = {
+					any_owned_pop = {
+						is_same_species = root
+						is_robot_pop = no
+						is_enslaved = yes
+					}				
+				}
 				any_owned_pop = {
 					is_robot_pop = no
 					is_enslaved = yes
@@ -354,6 +363,10 @@ ethic_authoritarian = {
 			}
 		}
 		modifier = {
+			factor = 1.5
+			is_pop_category = ruler
+		}
+		modifier = {
 			factor = 1.35
 			from = {
 				owner = {
@@ -388,6 +401,7 @@ ethic_authoritarian = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}	
 		modifier = {
@@ -401,6 +415,7 @@ ethic_authoritarian = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -430,13 +445,12 @@ ethic_fanatic_egalitarian = {
 
 	tags = {
 		ETHIC_ONLY_DEMOCRACY
-		ETHIC_ALLOW_UTOPIA
-		ETHIC_DISALLOW_POVERTY
+		ETHIC_ALLOWS_UTOPIA
 	}	
 	
 	country_modifier = {
-		faction_influence_mult = 0.5
-		pop_consumer_goods_mult = -0.2
+		pop_factions_produces_mult = 0.5
+		planet_jobs_specialist_produces_mult = 0.1
 	}
 	
 	random_weight = {
@@ -455,13 +469,12 @@ ethic_egalitarian = {
 	
 	tags = {
 		ETHIC_NEVER_AUTOCRACY
-		ETHIC_ALLOW_UTOPIA
-		ETHIC_DISALLOW_POVERTY
+		ETHIC_ALLOWS_UTOPIA
 	}		
 	
 	country_modifier = {
-		faction_influence_mult = 0.25
-		pop_consumer_goods_mult = -0.1
+		pop_factions_produces_mult = 0.25
+		planet_jobs_specialist_produces_mult = 0.05
 	}
 
 	random_weight = {
@@ -505,6 +518,7 @@ ethic_egalitarian = {
 					OR = {
 						has_living_standard = { type = living_standard_utopian }
 						has_living_standard = { type = living_standard_good }
+						has_living_standard = { type = living_standard_shared_burdens }
 					}
 				}
 			}
@@ -522,6 +536,7 @@ ethic_egalitarian = {
 					}
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 				}
 				OR = {
 					has_ethic = ethic_egalitarian
@@ -595,7 +610,7 @@ ethic_egalitarian = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -606,7 +621,7 @@ ethic_egalitarian = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -617,7 +632,7 @@ ethic_egalitarian = {
 			}
 		}	
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
@@ -630,11 +645,11 @@ ethic_egalitarian = {
 			ruler = { leader_of_faction = progressive }				
 		}		
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_egalitarian
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		modifier = {
@@ -648,11 +663,12 @@ ethic_egalitarian = {
 			has_election_type = democratic
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			any_relation = {
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 				}
 				OR = {
 					has_ethic = ethic_egalitarian
@@ -839,10 +855,15 @@ ethic_egalitarian = {
 			}
 		}	
 		modifier = {
+			factor = 1.35
+			is_pop_category = worker
+		}
+		modifier = {
 			factor = 1.25
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -856,6 +877,7 @@ ethic_egalitarian = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -928,7 +950,7 @@ ethic_fanatic_xenophobe = {
 	
 	country_modifier = {		
 		country_starbase_influence_cost_mult = -0.4
-		country_claim_influence_cost_mult = -0.2
+		pop_growth_speed = 0.20
 	}
 	
 	random_weight = {
@@ -954,7 +976,7 @@ ethic_xenophobe = {
 	
 	country_modifier = {
 		country_starbase_influence_cost_mult = -0.2
-		country_claim_influence_cost_mult = -0.1
+		pop_growth_speed = 0.10
 	}
 	
 	random_weight = {
@@ -1098,7 +1120,6 @@ ethic_xenophobe = {
 					is_being_purged = no
 					is_sapient = yes
 					is_robot_pop = no
-					NOT = { has_citizenship_type = { type = citizenship_purge } }
 				}
 			}
 		}
@@ -1140,7 +1161,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
@@ -1168,12 +1189,16 @@ ethic_xenophobe = {
 			}
 		}		
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_xenophobe
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_inwards_perfection
 		}
 		modifier = {
 			factor = 1.5
@@ -1228,7 +1253,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			is_country_type = default
 			years_passed > 40
 			is_subject = no
@@ -1243,7 +1268,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.67
 			is_country_type = default
 			is_same_species = root
 			any_relation = {
@@ -1327,7 +1352,7 @@ ethic_xenophobe = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -1338,7 +1363,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -1471,6 +1496,7 @@ ethic_xenophobe = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -1500,14 +1526,14 @@ ethic_fanatic_xenophile = {
 	
 	tags = {
 		ETHIC_IMPROVED_DIPLOMACY
-		ETHIC_DISALLOW_FULL_NATIVE_TAMPERING
 		ETHIC_ALWAYS_REFUGEES
+		ETHIC_DISALLOWS_SLAVERY
 		ETHIC_DISALLOWS_DISPLACE
 	}
 	
 	country_modifier = {
-		country_border_friction_mult = -0.5
-		diplomacy_influence_cost = -0.5
+		trade_value_mult = 0.20
+		diplomacy_upkeep_mult = -0.5
 	}
 	
 	random_weight = {
@@ -1526,14 +1552,14 @@ ethic_xenophile = {
 	
 	tags = {
 		ETHIC_IMPROVED_DIPLOMACY
-		ETHIC_DISALLOW_FULL_NATIVE_TAMPERING
 		ETHIC_ALWAYS_REFUGEES
+		ETHIC_DISALLOWS_SLAVERY
 		ETHIC_DISALLOWS_DISPLACE
 	}
 	
 	country_modifier = {
-		country_border_friction_mult = -0.25
-		diplomacy_influence_cost = -0.25
+		trade_value_mult = 0.10
+		diplomacy_upkeep_mult = -0.25
 	}
 	
 	random_weight = {
@@ -1579,7 +1605,6 @@ ethic_xenophile = {
 					is_being_purged = no
 					is_sapient = yes
 					is_robot_pop = no
-					NOT = { has_citizenship_type = { type = citizenship_purge } }
 				}
 			}
 		}
@@ -1593,6 +1618,7 @@ ethic_xenophile = {
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 				}				
 			}
 		}
@@ -1690,7 +1716,7 @@ ethic_xenophile = {
 			}
 		}
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_xenophile
 				has_ethic = ethic_fanatic_xenophile
@@ -1710,11 +1736,11 @@ ethic_xenophile = {
 			ruler = { NOT = { is_same_species = root } }				
 		}
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_xenophile
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_xenophile
 		}
 		modifier = {
@@ -1744,7 +1770,7 @@ ethic_xenophile = {
 			has_country_flag = cc_eventperf_has_minority
 		}
 		modifier = {
-			factor = 1.30
+			factor = 1.20
 			is_country_type = default
 			has_country_flag = cc_eventperf_has_large_minority
 		}
@@ -1755,20 +1781,24 @@ ethic_xenophile = {
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 				}				
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
+			is_same_species = root
 			any_relation = {
-				has_opinion_modifier = { 
+				reverse_has_opinion_modifier = { 
 					who = root 
 					modifier = opinion_genocidal_our_species 
 				} 
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
+			is_same_species = root
+			NOT = { has_ethic = ethic_authoritarian }
 			any_relation = {
 				NOT = { is_same_species = root }
 				any_owned_pop = {
@@ -1837,7 +1867,7 @@ ethic_xenophile = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -1848,7 +1878,7 @@ ethic_xenophile = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -1966,6 +1996,7 @@ ethic_xenophile = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}		
 		modifier = {
@@ -1996,7 +2027,7 @@ ethic_fanatic_militarist = {
 	}	
 	
 	country_modifier = {
-		country_war_exhaustion_mult = -0.2
+		country_claim_influence_cost_mult = -0.2
 		ship_fire_rate_mult = 0.20
 	}
 	
@@ -2018,7 +2049,7 @@ ethic_militarist = {
 	}		
 	
 	country_modifier = {
-		country_war_exhaustion_mult = -0.1
+		country_claim_influence_cost_mult = -0.1
 		ship_fire_rate_mult = 0.10
 	}
 	
@@ -2173,7 +2204,7 @@ ethic_militarist = {
 		}
 			
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -2189,12 +2220,12 @@ ethic_militarist = {
 		}				
 			
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_militarist
 		}
 		
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_militarist
 		}
 		
@@ -2216,7 +2247,7 @@ ethic_militarist = {
 		}
 		
 		modifier = {
-			factor = 0.8
+			factor = 0.75
 			is_country_type = default
 			years_of_peace = {
 				value > 20
@@ -2340,7 +2371,7 @@ ethic_militarist = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -2351,7 +2382,7 @@ ethic_militarist = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -2461,14 +2492,6 @@ ethic_militarist = {
 			has_military_service_type = { type = military_service_none country = from.owner }
 		}
 		modifier = {
-			factor = 0.75
-			from = {
-				NOT = { has_planet_flag = cc_eventperf_planet_hostile_border }
-				has_building = building_capital_3
-				NOT = { has_building = building_military_academy }
-			}
-		}
-		modifier = {
 			factor = 1.5
 			from = { has_building = building_military_academy }
 		}
@@ -2519,6 +2542,7 @@ ethic_militarist = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}	
 		modifier = {
@@ -2558,8 +2582,8 @@ ethic_fanatic_pacifist = {
 	}	
 	
 	country_modifier = {
-		pop_resource_output = 0.10
-		country_core_sector_system_cap = 4
+		country_admin_cap_add = 20
+		planet_stability_add = 10
 	}
 	
 	random_weight = {
@@ -2577,8 +2601,8 @@ ethic_pacifist = {
 	fanatic_variant = ethic_fanatic_pacifist
 	
 	country_modifier = {
-		pop_resource_output = 0.05
-		country_core_sector_system_cap = 2
+		country_admin_cap_add = 10
+		planet_stability_add = 5
 	}
 	
 	tags = {
@@ -2682,7 +2706,7 @@ ethic_pacifist = {
 			}
 		}
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_pacifist
 				has_ethic = ethic_fanatic_pacifist
@@ -2704,11 +2728,11 @@ ethic_pacifist = {
 			ruler = { leader_of_faction = prosperity }				
 		}			
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_pacifist
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
@@ -2837,7 +2861,7 @@ ethic_pacifist = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -2848,7 +2872,7 @@ ethic_pacifist = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -2883,38 +2907,15 @@ ethic_pacifist = {
 			has_trait = trait_hive_mind
 		}	
 		modifier = {
+			factor = 1.2
+			has_trait = trait_agrarian
+		}	
+		modifier = {
 			factor = 0.5
 			from = { has_planet_flag = cc_eventperf_planet_hostile_border }
 			OR = {
 				has_citizenship_rights = yes
 				can_be_military_leader = yes
-			}
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				has_citizenship_rights = yes
-				can_be_military_leader = yes
-			}			
-			from = {
-				owner = { 
-					any_neighbor_country = {		
-						from = { is_neighbor_of = prev }
-						OR = {
-							is_hostile_to = from.owner
-							is_domineering_to = from.owner
-							is_rival = from.owner						
-						}
-					}
-				}
-			}
-		}	
-		modifier = {
-			factor = 1.5		
-			from = {
-				NOT = { has_planet_flag = cc_eventperf_planet_hostile_border }
-				has_building = building_capital_3
-				NOT = { has_building = building_military_academy }
 			}
 		}
 		modifier = {
@@ -2971,6 +2972,7 @@ ethic_pacifist = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -2998,13 +3000,12 @@ ethic_fanatic_spiritualist = {
 
 	tags = {
 		ETHIC_ALLOWS_TEMPLE
-		ETHIC_ALLOWS_HALLOW_WORLD
 		ETHIC_DISALLOW_AI
 	}	
 	
 	country_modifier = {
-		country_resource_unity_mult = 0.20
-		edict_cost = -0.10
+		country_unity_produces_mult = 0.20
+		edicts_cost_mult = -0.10
 	}
 	
 	random_weight = {
@@ -3021,13 +3022,12 @@ ethic_spiritualist = {
 	
 	tags = {
 		ETHIC_ALLOWS_TEMPLE
-		ETHIC_ALLOWS_HALLOW_WORLD
 		ETHIC_DISALLOW_AI
 	}		
 	
 	country_modifier = {
-		country_resource_unity_mult = 0.10
-		edict_cost = -0.05
+		country_unity_produces_mult = 0.10
+		edicts_cost_mult = -0.05
 	}
 	
 	random_weight = {
@@ -3080,6 +3080,7 @@ ethic_spiritualist = {
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 					AND = {
 						is_subject = no
 						has_migration_access = root
@@ -3151,7 +3152,7 @@ ethic_spiritualist = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -3162,7 +3163,7 @@ ethic_spiritualist = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -3173,7 +3174,7 @@ ethic_spiritualist = {
 			}
 		}	
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
@@ -3187,11 +3188,11 @@ ethic_spiritualist = {
 			ruler = { leader_of_faction = traditionalist }				
 		}			
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_spiritualist
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		modifier = {
@@ -3303,6 +3304,7 @@ ethic_spiritualist = {
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
+					has_commercial_pact = root
 				}
 				OR = {
 					has_ethic = ethic_spiritualist
@@ -3472,6 +3474,7 @@ ethic_spiritualist = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -3506,7 +3509,7 @@ ethic_fanatic_materialist = {
 	}	
 	
 	country_modifier = {
-		pop_robot_upkeep_mult = -0.2
+		planet_pops_robotics_upkeep_mult = -0.2
 		all_technology_research_speed = 0.10
 	}
 	
@@ -3531,7 +3534,7 @@ ethic_materialist = {
 	}			
 	
 	country_modifier = {
-		pop_robot_upkeep_mult = -0.1
+		planet_pops_robotics_upkeep_mult = -0.1
 		all_technology_research_speed = 0.05
 	}	
 	
@@ -3659,7 +3662,7 @@ ethic_materialist = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 20
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -3670,7 +3673,7 @@ ethic_materialist = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -3681,7 +3684,7 @@ ethic_materialist = {
 			}
 		}			
 		modifier = {
-			factor = 1.75
+			factor = 2
 			NOR = {
 				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
@@ -3695,11 +3698,11 @@ ethic_materialist = {
 			ruler = { leader_of_faction = technologist }				
 		}		
 		modifier = {
-			factor = 1.75
+			factor = 2
 			has_ethic = ethic_materialist
-		}	
+		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_ethic = ethic_fanatic_materialist
 		}
 		modifier = {
@@ -3707,7 +3710,7 @@ ethic_materialist = {
 			has_valid_civic = civic_mechanists
 		}			
 		modifier = {
-			factor = 1.33
+			factor = 1.25
 			is_country_type = default
 			has_policy_flag = ai_full_rights
 		}	
@@ -3730,6 +3733,10 @@ ethic_materialist = {
 			factor = 1.1
 			is_country_type = default
 			capital_scope = { has_building = building_institute }
+		}
+		modifier = {
+			factor = 1.2
+			is_pop_category = worker
 		}
 		modifier = {
 			factor = 1.25
@@ -3822,6 +3829,13 @@ ethic_materialist = {
 			has_trait = trait_hive_mind
 		}	
 		modifier = {
+			factor = 0
+			OR = {
+				has_job = priest
+				has_job = high_priest
+			}			
+		}
+		modifier = {
 			factor = 2.0
 			is_robot_pop = yes
 		}
@@ -3893,6 +3907,7 @@ ethic_materialist = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -3900,6 +3915,7 @@ ethic_materialist = {
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burdens }
 			}
 		}
 		modifier = {
@@ -3925,6 +3941,10 @@ ethic_materialist = {
 		modifier = {
 			factor = 1.1
 			has_trait = "trait_robot_logic_engines"
+		}
+		modifier = {
+			factor = 1.5
+			is_pop_category = specialist
 		}
 		modifier = {
 			factor = 0.75
@@ -3955,9 +3975,7 @@ ethic_gestalt_consciousness = {
 	
 	country_modifier = {
 		country_war_exhaustion_mult = -0.2
-		country_piracy_risk_mult = -0.33
-		country_resource_influence_add = 1
-		country_core_sector_system_cap = 2
+		country_base_influence_produces_add = 1
 	}
 	
 	tags = {

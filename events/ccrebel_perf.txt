@@ -1,6 +1,10 @@
 
 namespace = ccrebel_perf
 
+@dpe_pops_small_cluster = 5
+@dpe_pops_medium_cluster = 11
+@dpe_pops_large_cluster = 24
+
 #monthly
 event = {
 	id = ccrebel_perf.1
@@ -17,24 +21,25 @@ event = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						AND = {
-							OR = {
-								has_country_resource = {
-									type = minerals
-									amount > 1000
-								}
-								has_monthly_income = {
-									resource = minerals
-									value > 50
-								}
+					NAND = {
+						OR = {
+							has_country_resource = {
+								type = minerals
+								amount > 1000
 							}
-							OR = {
-								has_monthly_income = {
-									resource = energy
-									value > 50
-								}
-								energy > 1000
+							has_monthly_income = {
+								resource = minerals
+								value > 50
+							}
+						}
+						OR = {
+							has_monthly_income = {
+								resource = energy
+								value > 50
+							}
+							resource_stockpile_compare = {
+								resource = energy
+								value > 1000
 							}
 						}
 					}
@@ -46,24 +51,25 @@ event = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
-						AND = {
-							OR = {
-								has_country_resource = {
-									type = minerals
-									amount > 1800
-								}
-								has_monthly_income = {
-									resource = minerals
-									value > 90
-								}
+					NAND = {
+						OR = {
+							has_country_resource = {
+								type = minerals
+								amount > 1800
 							}
-							OR = {
-								has_monthly_income = {
-									resource = energy
-									value > 90
-								}
-								energy > 1800
+							has_monthly_income = {
+								resource = minerals
+								value > 90
+							}
+						}
+						OR = {
+							has_monthly_income = {
+								resource = energy
+								value > 90
+							}
+							resource_stockpile_compare = {
+								resource = energy
+								value > 1800
 							}
 						}
 					}
@@ -75,24 +81,25 @@ event = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
-						AND = {
-							OR = {
-								has_country_resource = {
-									type = minerals
-									amount > 2500
-								}
-								has_monthly_income = {
-									resource = minerals
-									value > 125
-								}
+					NAND = {
+						OR = {
+							has_country_resource = {
+								type = minerals
+								amount > 2500
 							}
-							OR = {
-								has_monthly_income = {
-									resource = energy
-									value > 125
-								}
-								energy > 2500
+							has_monthly_income = {
+								resource = minerals
+								value > 125
+							}
+						}
+						OR = {
+							has_monthly_income = {
+								resource = energy
+								value > 125
+							}
+							resource_stockpile_compare = {
+								resource = energy
+								value > 2500
 							}
 						}
 					}
@@ -120,7 +127,10 @@ event = {
 								resource = energy
 								value > 250
 							}
-							energy > 5000
+							resource_stockpile_compare = {
+								resource = energy
+								value > 5000
+							}
 						}
 					}
 				}
@@ -146,7 +156,10 @@ event = {
 									resource = energy
 									value > 500
 								}
-								energy > 10000
+								resource_stockpile_compare = {
+									resource = energy
+									value > 10000
+								}
 							}
 						}
 					}
@@ -161,7 +174,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_spiritualist }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -172,7 +185,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_spiritualist }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -193,18 +206,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_spiritualist }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_spiritualist }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_spiritualists_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_spiritualists_3
-					days = 365
 				}
 			}
 			
@@ -212,7 +225,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_authoritarian }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -223,7 +236,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_authoritarian }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -244,18 +257,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_authoritarian }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_authoritarian }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_authoritarians_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_authoritarians_3
-					days = 365
 				}
 			}
 			
@@ -263,7 +276,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_xenophile }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -274,7 +287,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_xenophile }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -295,18 +308,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_xenophile }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_xenophile }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_xenophiles_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_xenophiles_3
-					days = 365
 				}
 			}
 			
@@ -314,7 +327,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_materialist }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -325,7 +338,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_materialist }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -346,26 +359,26 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_materialist }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_materialist }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_materialists_3
+							days = 365
+						}
 					}
 				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_materialists_3
-					days = 365
-				}
 			}
-			
+
 			every_owned_planet = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_xenophobe }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -376,7 +389,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_xenophobe }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -397,18 +410,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_xenophobe }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_xenophobe }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_xenophobes_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_xenophobes_3
-					days = 365
 				}
 			}
 			
@@ -416,7 +429,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_egalitarian }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -427,7 +440,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_egalitarian }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -448,18 +461,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_egalitarian }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_egalitarian }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_egalitarians_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_egalitarians_3
-					days = 365
 				}
 			}
 			
@@ -467,7 +480,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_pacifist }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -478,7 +491,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_pacifist }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -499,18 +512,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_pacifist }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_pacifist }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_pacifists_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_pacifists_3
-					days = 365
 				}
 			}
 			
@@ -518,7 +531,7 @@ event = {
 				limit = {
 					count_pops = {
 						limit = { has_ethic = ethic_militarist }
-						count > 2
+						count > @dpe_pops_small_cluster
 					}
 				}
 				set_timed_planet_flag = {
@@ -529,7 +542,7 @@ event = {
 					limit = {
 						count_pops = {
 							limit = { has_ethic = ethic_militarist }
-							count > 5
+							count > @dpe_pops_medium_cluster
 						}
 					}
 					set_timed_planet_flag = {
@@ -550,18 +563,18 @@ event = {
 							days = 365
 						}
 					}
-				}
-			}
-			every_owned_planet = {
-				limit = {
-					pop_percentage = {
-						limit = { has_ethic = ethic_militarist }
-						percentage > 0.49
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_militarist }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_militarists_3
+							days = 365
+						}
 					}
-				}
-				set_timed_planet_flag = {
-					flag = ccrebel_perf_militarists_3
-					days = 365
 				}
 			}
 			
