@@ -802,7 +802,7 @@ country_event = {
 				OR = {
 					count_pops = {
 						limit = { has_same_ethic_as_faction = yes }
-						count > 3
+						count > 8
 					}
 					pop_percentage = {
 						percentage > 0.24
@@ -826,7 +826,7 @@ country_event = {
 					OR = {
 						count_pops = {
 							limit = { has_same_ethic_as_faction = yes }
-							count > 3
+							count > 8
 						}
 						pop_percentage = {
 							percentage > 0.24
@@ -876,7 +876,11 @@ country_event = {
 #			OR = {
 				count_pops = {
 					limit = { has_same_faction_as_faction = yes }
-					count > 4
+					count > 8
+				}
+				pop_percentage = {
+					percentage > 0.33
+					limit = { has_same_ethic_as_faction = yes }
 				}
 #				AND = {
 #					count_pops = {
@@ -1005,7 +1009,11 @@ country_event = {
 			limit = {
 				count_pops = {
 					limit = { has_same_faction_as_faction = yes }
-					count > 4
+					count > 10
+				}
+				pop_percentage = {
+					percentage > 0.33
+					limit = { has_same_ethic_as_faction = yes }
 				}
 			}
 			add_appropriate_faction_stronghold = yes
@@ -1014,12 +1022,16 @@ country_event = {
 			limit = {
 				count_pops = {
 					limit = { has_same_ethic_as_faction = yes }
-					count > 2
+					count > 6
 				}
-				NOT = {
+				NAND = {
 					count_pops = {
 						limit = { has_same_faction_as_faction = yes }
-						count > 4
+						count > 10
+					}
+					pop_percentage = {
+						percentage > 0.33
+						limit = { has_same_ethic_as_faction = yes }
 					}
 				}
 			}
@@ -1030,7 +1042,7 @@ country_event = {
 				NOT = {
 					count_pops = {
 						limit = { has_same_ethic_as_faction = yes }
-						count > 2
+						count > 6
 					}
 				}
 				
@@ -1038,7 +1050,11 @@ country_event = {
 					any_owned_planet = {
 						count_pops = {
 							limit = { has_same_faction_as_faction = yes }
-							count > 4
+							count > 10
+						}
+						pop_percentage = {
+							percentage > 0.33
+							limit = { has_same_ethic_as_faction = yes }
 						}
 						distance = {
 							source = prevprev
@@ -1695,7 +1711,7 @@ country_event = {
 			limit = {
 				count_pops = {
 					limit = { has_same_faction_as_2nd_faction = yes }
-					count > 4
+					count > 10
 				}
 			}
 			add_appropriate_2nd_faction_stronghold = yes
@@ -1704,12 +1720,16 @@ country_event = {
 			limit = {
 				count_pops = {
 					limit = { has_same_ethic_as_2nd_faction = yes }
-					count > 2
+					count > 6
 				}
-				NOT = {
+				NAND = {
 					count_pops = {
 						limit = { has_same_faction_as_2nd_faction = yes }
-						count > 4
+						count > 10
+					}
+					pop_percentage = {
+						percentage > 0.33
+						limit = { has_same_faction_as_2nd_faction = yes }
 					}
 				}
 			}
@@ -1720,14 +1740,18 @@ country_event = {
 				NOT = {
 					count_pops = {
 						limit = { has_same_ethic_as_2nd_faction = yes }
-						count > 2
+						count > 6
 					}
 				}
 				owner = {
 					any_owned_planet = {
 						count_pops = {
 							limit = { has_same_faction_as_2nd_faction = yes }
-							count > 4
+							count > 1-
+						}
+						pop_percentage = {
+							percentage > 0.33
+							limit = { has_same_faction_as_2nd_faction = yes }
 						}
 						distance = {
 							source = prevprev
@@ -1739,9 +1763,7 @@ country_event = {
 			}
 			add_appropriate_2nd_faction_sedition = yes
 		}
-	}
-							
-					
+	}	
 	option = {
 		name = CCWORRYING
 
@@ -1750,7 +1772,7 @@ country_event = {
 				limit = {
 					count_pops = {
 						limit = { has_same_faction_as_2nd_faction = yes }
-						count > 4
+						count > 10
 					}
 				}
 				add_appropriate_2nd_faction_stronghold = yes
@@ -1759,12 +1781,16 @@ country_event = {
 				limit = {
 					count_pops = {
 						limit = { has_same_ethic_as_2nd_faction = yes }
-						count > 2
+						count > 6
 					}
-					NOT = {
+					NAND = {
 						count_pops = {
 							limit = { has_same_faction_as_2nd_faction = yes }
-							count > 4
+							count > 10
+						}
+						pop_percentage = {
+							percentage > 0.33
+							limit = { has_same_faction_as_2nd_faction = yes }
 						}
 					}
 				}
@@ -1775,14 +1801,18 @@ country_event = {
 					NOT = {
 						count_pops = {
 							limit = { has_same_ethic_as_2nd_faction = yes }
-							count > 2
+							count > 6
 						}
 					}
 					owner = {
 						any_owned_planet = {
 							count_pops = {
 								limit = { has_same_faction_as_2nd_faction = yes }
-								count > 4
+								count > 1-
+							}
+							pop_percentage = {
+								percentage > 0.33
+								limit = { has_same_faction_as_2nd_faction = yes }
 							}
 							distance = {
 								source = prevprev
@@ -3994,14 +4024,14 @@ country_event = {
 		if = {
 			limit = { has_country_flag = ccrebel_cut_rebellion_fleet_spawn }
 			if = {
-				limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+				limit = { event_target:cc_rebels_capital = { num_pops < 16 } }
 				create_fleet_from_naval_cap = 0.1
 				last_created_fleet = {
 					set_location = event_target:cc_rebels_capital
 				}
 			}
 			else_if = {
-				limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+				limit = { event_target:cc_rebels_capital = { num_pops < 30 } }
 				create_fleet_from_naval_cap = 0.2
 				last_created_fleet = {
 					set_location = event_target:cc_rebels_capital
@@ -4015,14 +4045,14 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { event_target:cc_rebels_capital = { num_pops < 12 } }
+			limit = { event_target:cc_rebels_capital = { num_pops < 16 } }
 			create_fleet_from_naval_cap = 0.2
 			last_created_fleet = {
 				set_location = event_target:cc_rebels_capital
 			}
 		}
 		else_if = {
-			limit = { event_target:cc_rebels_capital = { num_pops < 19 } }
+			limit = { event_target:cc_rebels_capital = { num_pops < 30 } }
 			create_fleet_from_naval_cap = 0.4
 			last_created_fleet = {
 				set_location = event_target:cc_rebels_capital
@@ -4123,7 +4153,7 @@ planet_event = {
 				limit = { num_owned_planets < 4 }
 					
 				if = {
-					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
@@ -4131,7 +4161,7 @@ planet_event = {
 					}
 				}		
 				else_if = {
-					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.24
 					last_created_fleet = {
@@ -4140,7 +4170,7 @@ planet_event = {
 				}
 				
 				else_if = {
-					limit = { NOT = { num_pops < 7 } }
+					limit = { NOT = { num_pops < 12 } }
 					create_fleet_from_naval_cap = 0.36
 					last_created_fleet = {
 						set_location = root
@@ -4153,7 +4183,7 @@ planet_event = {
 					num_owned_planets < 6
 				}
 				if = {
-					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.0675
 					last_created_fleet = {
@@ -4161,7 +4191,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.135
 					last_created_fleet = {
@@ -4170,7 +4200,7 @@ planet_event = {
 				}
 				
 				else_if = {
-					limit = { NOT = { num_pops < 7 } }
+					limit = { NOT = { num_pops < 12 } }
 					create_fleet_from_naval_cap = 0.21
 					last_created_fleet = {
 						set_location = root
@@ -4179,7 +4209,7 @@ planet_event = {
 			}
 
 			else_if = {
-				limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+				limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 				
 				create_fleet_from_naval_cap = 0.03
 				last_created_fleet = {
@@ -4188,7 +4218,7 @@ planet_event = {
 			}
 					
 			else_if = {
-				limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+				limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 				
 				create_fleet_from_naval_cap = 0.06
 				last_created_fleet = {
@@ -4197,7 +4227,7 @@ planet_event = {
 			}
 			
 			else_if = {
-				limit = { NOT = { num_pops < 7 } }
+				limit = { NOT = { num_pops < 12 } }
 				create_fleet_from_naval_cap = 0.09
 				last_created_fleet = {
 					set_location = root
@@ -4868,7 +4898,7 @@ planet_event = {
 				limit = { num_owned_planets < 4 }
 			
 				if = {
-					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.1
 					last_created_fleet = {
@@ -4876,7 +4906,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.2
 					last_created_fleet = {
@@ -4885,7 +4915,7 @@ planet_event = {
 				}
 					
 				else_if = {
-					limit = { NOT = { num_pops < 7 } }
+					limit = { NOT = { num_pops < 12 } }
 					create_fleet_from_naval_cap = 0.3
 					last_created_fleet = {
 						set_location = root
@@ -4898,7 +4928,7 @@ planet_event = {
 					num_owned_planets < 6
 				}
 				if = {
-					limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.06
 					last_created_fleet = {
@@ -4906,7 +4936,7 @@ planet_event = {
 					}
 				}		
 				else_if = {
-					limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 					
 					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
@@ -4915,7 +4945,7 @@ planet_event = {
 				}
 				
 				else_if = {
-					limit = { NOT = { num_pops < 7 } }
+					limit = { NOT = { num_pops < 12 } }
 					create_fleet_from_naval_cap = 0.18
 					last_created_fleet = {
 						set_location = root
@@ -4923,7 +4953,7 @@ planet_event = {
 				}
 			}
 			else_if = {
-				limit = { root = { num_pops < 13 NOT = { num_pops < 7 } } }
+				limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
 				
 				create_fleet_from_naval_cap = 0.025
 				last_created_fleet = {
@@ -4932,7 +4962,7 @@ planet_event = {
 			}
 					
 			else_if = {
-				limit = { root = { num_pops < 19 NOT = { num_pops < 7 } } }
+				limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
 				
 				create_fleet_from_naval_cap = 0.05
 				last_created_fleet = {
@@ -4941,7 +4971,7 @@ planet_event = {
 			}
 								
 			else_if = {
-				limit = { NOT = { num_pops < 7 } }
+				limit = { NOT = { num_pops < 12 } }
 				create_fleet_from_naval_cap = 0.075
 				last_created_fleet = {
 					set_location = root
@@ -6132,7 +6162,7 @@ event = {
 						NOR = {
 							count_pops = {
 								limit = { has_same_ethic_as_faction = yes }
-								count > 3
+								count > 8
 							}
 							pop_percentage = {
 								percentage > 0.24
@@ -6148,7 +6178,7 @@ event = {
 						OR = {
 							count_pops = {
 								limit = { has_same_ethic_as_faction = yes }
-								count > 3
+								count > 8
 							}
 							pop_percentage = {
 								percentage > 0.24
@@ -6170,10 +6200,14 @@ event = {
 				every_owned_planet = {
 					limit = {
 						has_1st_faction_stronghold = yes
-						NOT = {
+						NAND = {
 							count_pops = {
 								limit = { has_same_faction_as_faction = yes }
-								count > 4
+								count > 10
+							}
+							pop_percentage = {
+								percentage > 0.33
+								limit = { has_same_ethic_as_faction = yes }
 							}
 						}
 					}
@@ -6215,7 +6249,7 @@ event = {
 						NOT = {
 							count_pops = {
 								limit = { has_same_ethic_as_faction = yes }
-								count > 2
+								count > 6
 							}
 						}
 					}
@@ -6228,7 +6262,11 @@ event = {
 						NOT = { has_modifier = cc_breakaway_sympathy }
 						count_pops = {
 							limit = { has_same_faction_as_faction = yes }
-							count > 4
+							count > 10
+						}
+						pop_percentage = {
+							percentage > 0.33
+							limit = { has_same_ethic_as_faction = yes }
 						}
 					}
 					if = {
@@ -6289,12 +6327,16 @@ event = {
 						has_1st_faction_sympathies = no
 						count_pops = {
 							limit = { has_same_ethic_as_faction = yes }
-							count > 2
+							count > 6
 						}
-						NOT = {
+						NAND = {
 							count_pops = {
 								limit = { has_same_faction_as_faction = yes }
-								count > 4
+								count > 10
+							}
+							pop_percentage = {
+								percentage > 0.33
+								limit = { has_same_ethic_as_faction = yes }
 							}
 						}
 					}
@@ -6312,10 +6354,14 @@ event = {
 					every_owned_planet = {
 						limit = {
 							has_2nd_faction_stronghold = yes
-							NOT = {
+							NAND = {
 								count_pops = {
 									limit = { has_same_faction_as_2nd_faction = yes }
-									count > 4
+									count > 10
+								}
+								pop_percentage = {
+									percentage > 0.33
+									limit = { has_same_faction_as_2nd_faction = yes }
 								}
 							}
 						}
@@ -6357,7 +6403,7 @@ event = {
 							NOT = {
 								count_pops = {
 									limit = { has_same_ethic_as_2nd_faction = yes }
-									count > 2
+									count > 6
 								}
 							}
 						}
@@ -6370,7 +6416,11 @@ event = {
 							NOT = { has_modifier = cc_breakaway_sympathy }
 							count_pops = {
 								limit = { has_same_faction_as_2nd_faction = yes }
-								count > 4
+								count > 10
+							}
+							pop_percentage = {
+								percentage > 0.33
+								limit = { has_same_faction_as_2nd_faction = yes }
 							}
 						}
 						if = {
@@ -6428,12 +6478,16 @@ event = {
 							has_2nd_faction_sympathies = no
 							count_pops = {
 								limit = { has_same_ethic_as_2nd_faction = yes }
-								count > 2
+								count > 6
 							}
-							NOT = {
+							NAND = {
 								count_pops = {
 									limit = { has_same_faction_as_2nd_faction = yes }
-									count > 4
+									count > 10
+								}
+								pop_percentage = {
+									percentage > 0.33
+									limit = { has_same_faction_as_2nd_faction = yes }
 								}
 							}
 						}
@@ -6498,13 +6552,7 @@ planet_event = {
 				limit = {
 					count_pops = {
 						limit = { has_same_ethic_as_faction = yes }
-						count > 2
-					}
-					NOT = {
-						count_pops = {
-							limit = { has_same_faction_as_faction = yes }
-							count > 4
-						}
+						count > 6
 					}
 				}
 				add_appropriate_faction_sympathies = yes
@@ -6537,13 +6585,7 @@ planet_event = {
 				limit = {
 					count_pops = {
 						limit = { has_same_ethic_as_2nd_faction = yes }
-						count > 2
-					}
-					NOT = {
-						count_pops = {
-							limit = { has_same_faction_as_2nd_faction = yes }
-							count > 4
-						}
+						count > 6
 					}
 				}
 				add_appropriate_2nd_faction_sympathies = yes

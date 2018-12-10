@@ -12,7 +12,7 @@ planet_event = {
 			is_country_type = default
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
-		num_pops > 5
+		num_pops > 10
 		
 		any_owned_pop = { has_ethic = ethic_xenophobe }
 
@@ -84,7 +84,7 @@ planet_event = {
 						planet = {
 							count_pops = {
 								limit = { is_same_species = prev }
-								count > 2
+								count > 3
 							}
 							any_owned_pop = {
 								NOT = { is_same_species = prevprev }
@@ -96,7 +96,7 @@ planet_event = {
 								planet = {
 									count_pops = {
 										limit = { is_same_species = prev }
-										count > 2
+										count > 3
 									}
 								}
 							}

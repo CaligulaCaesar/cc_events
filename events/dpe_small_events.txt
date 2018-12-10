@@ -17,7 +17,7 @@ planet_event = {
 		}
 		count_pops = {
 			limit = { species = { pops_have_happiness = yes } }
-			count > 7
+			count > 18
 		}
 		pop_percentage = {
 			limit = { happiness > 0.55 }
@@ -1596,7 +1596,7 @@ planet_event = {
 				species = { pops_have_happiness = yes }
 				has_citizenship_rights = yes
 			}
-			count > 7
+			count > 18
 		}
 		pop_percentage = {
 			limit = { happiness < 0.75 }
@@ -1686,7 +1686,7 @@ planet_event = {
 			has_planet_flag = dpe_negenergy_planet
 		}
 
-		num_pops > 8
+		num_pops > 20
 		
 		if = {
 			limit = {
@@ -1699,7 +1699,7 @@ planet_event = {
 						amount > 2.5
 					}
 				}
-				count > 4
+				count > 8
 			}
 			else = {
 				count_pops = {
@@ -1709,7 +1709,7 @@ planet_event = {
 							amount > 3.5
 						}
 					}
-					count > 5
+					count > 11
 				}
 			}
 		}
@@ -1782,7 +1782,7 @@ planet_event = {
 			has_planet_flag = dpe_negenergy_planet
 		}
 
-		num_pops > 8
+		num_pops > 20
 		
 		if = {
 			limit = {
@@ -1795,7 +1795,7 @@ planet_event = {
 						amount > 2.5
 					}
 				}
-				count > 4
+				count > 8
 			}
 			else = {
 				count_pops = {
@@ -1805,7 +1805,7 @@ planet_event = {
 							amount > 3.5
 						}
 					}
-					count > 5
+					count > 11
 				}
 			}
 		}
@@ -1879,7 +1879,7 @@ planet_event = {
 			has_planet_flag = dpe_negminerals_planet
 		}
 
-		num_pops > 8
+		num_pops > 20
 		
 		if = {
 			limit = {
@@ -1892,7 +1892,7 @@ planet_event = {
 						amount > 2.5
 					}
 				}
-				count > 4
+				count > 8
 			}
 			else = {
 				count_pops = {
@@ -1902,7 +1902,7 @@ planet_event = {
 							amount > 3.5
 						}
 					}
-					count > 5
+					count > 11
 				}
 			}
 		}
@@ -1975,7 +1975,7 @@ planet_event = {
 			has_planet_flag = dpe_negminerals_planet
 		}
 
-		num_pops > 8
+		num_pops > 20
 		
 		if = {
 			limit = {
@@ -1988,7 +1988,7 @@ planet_event = {
 						amount > 2.5
 					}
 				}
-				count > 4
+				count > 8
 			}
 			else = {
 				count_pops = {
@@ -1998,7 +1998,7 @@ planet_event = {
 							amount > 3.5
 						}
 					}
-					count > 5
+					count > 11
 				}
 			}
 		}

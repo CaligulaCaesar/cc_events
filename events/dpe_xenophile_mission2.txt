@@ -3936,14 +3936,14 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					num_pops > 5
+					num_pops > 15
 					any_owned_pop = { is_same_species = root }
 					is_neighbor_of = from
 				}
 			}
 			random_owned_planet = {
 				limit = {
-					num_pops > 5
+					num_pops > 15
 					any_owned_pop = { is_same_species = root }
 					is_neighbor_of = from
 				}
@@ -3953,7 +3953,7 @@ country_event = {
 		else = {
 			random_owned_planet = {
 				limit = {
-					num_pops > 5
+					num_pops > 15
 					any_owned_pop = { is_same_species = root }
 				}
 				save_event_target_as = random_planet

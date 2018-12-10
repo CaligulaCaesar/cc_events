@@ -799,7 +799,7 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					num_pops > 15
+					num_pops > 30
 					is_capital = no
 					exists = controller
 					controller = { is_same_value = root }
@@ -817,7 +817,7 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {
-					num_pops > 15
+					num_pops > 30
 					is_capital = no
 					exists = controller
 					controller = { is_same_value = root }
@@ -2270,7 +2270,7 @@ country_event = {
 					event_target:dpe_mission_host_planet = {
 						count_pops = {
 							limit = { has_ethic = ethic_xenophobe }
-							count < 1
+							count < 4
 						}
 					}
 				}
@@ -2279,7 +2279,7 @@ country_event = {
 					event_target:dpe_mission_host_planet = {
 						count_pops = {
 							limit = { has_ethic = ethic_xenophobe }
-							count > 2
+							count > 8
 						}
 					}
 				}
@@ -2288,7 +2288,7 @@ country_event = {
 					event_target:dpe_mission_host_planet = {
 						count_pops = {
 							limit = { has_ethic = ethic_xenophobe }
-							count > 4
+							count > 15
 						}
 					}
 				}

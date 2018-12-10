@@ -402,7 +402,7 @@ country_event = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 4
+						count > 9
 					}
 				}
 				if = {
@@ -479,7 +479,7 @@ country_event = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 4
+						count > 9
 					}
 				}
 				set_timed_planet_flag = {
@@ -532,7 +532,7 @@ planet_event = {
 				has_ethic = ethic_militarist
 				has_citizenship_rights = yes
 			}
-			count > 3
+			count > 9
 		}
 	}
 	
@@ -556,7 +556,7 @@ planet_event = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 6
+						count > 15
 					}
 				}
 			}

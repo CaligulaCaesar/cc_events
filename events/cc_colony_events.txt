@@ -8146,7 +8146,11 @@ planet_event = {
 	
 		NOT = { has_planet_flag = cc_colony_story }
 		count_pops = {
-			count > 5
+			count > 9
+			limit = { has_ethic = ethic_spiritualist }
+		}
+		pop_percentage = {
+			percentage > 0.33
 			limit = { has_ethic = ethic_spiritualist }
 		}
 	}
