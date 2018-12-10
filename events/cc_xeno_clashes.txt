@@ -108,7 +108,7 @@ planet_event = {
 			1 = {
 				modifier = {
 					factor = 0.5
-					unrest < 1
+					planet_stability > @dpe_normal_unrest_value
 				}
 				modifier = {
 					factor = 0.75
@@ -224,14 +224,14 @@ planet_event = {
 				if = {
 					limit = {
 						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
-						unrest < 30
+						planet_stability > @dpe_bit_unrest_value
 					}
 					planet_event = { id = cc_xeno_clashes.2 }
 				}
 				if = {
 					limit = {
 						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
-						NOT = { unrest < 30 }
+						NOT = { planet_stability > @dpe_bit_unrest_value }
 					}
 					planet_event = { id = cc_xeno_clashes.3 }
 				}
