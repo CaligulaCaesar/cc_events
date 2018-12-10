@@ -356,7 +356,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 			}
 			modifier = {
 				factor = 1.5
@@ -1500,7 +1500,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 			}
 			modifier = {
 				factor = 1.5
@@ -1862,7 +1862,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					planet_stability < @dpe_normal_unrest_value
+					planet_stability < @dpe_bit_unrest_value
 					any_owned_pop = {
 						is_non_sapient_robot = yes
 					}

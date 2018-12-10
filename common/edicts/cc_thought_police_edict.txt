@@ -53,7 +53,7 @@ country_edict = {
 		}	
 		modifier = {
 			factor = 0.5
-			NOT = { any_owned_planet = { planet_stability < @dpe_normal_unrest_value } }
+			NOT = { any_owned_planet = { planet_stability < @dpe_bit_unrest_value } }
 		}	
 		modifier = {
 			factor = 0

@@ -272,14 +272,14 @@ ethic_authoritarian = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_authoritarian }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_authoritarian }
 			}
 		}
@@ -794,14 +794,14 @@ ethic_egalitarian = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_egalitarian }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_egalitarian }
 			}
 		}
@@ -1357,14 +1357,14 @@ ethic_xenophobe = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_xenophobe }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_xenophobe }
 			}
 		}
@@ -1867,14 +1867,14 @@ ethic_xenophile = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_xenophile }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_xenophile }
 			}
 		}
@@ -2378,14 +2378,14 @@ ethic_militarist = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_militarist }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_militarist }
 			}
 		}
@@ -2867,14 +2867,14 @@ ethic_pacifist = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_pacifist }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_pacifist }
 			}
 		}
@@ -3376,14 +3376,14 @@ ethic_spiritualist = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_spiritualist }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_spiritualist }
 			}
 		}
@@ -3806,14 +3806,14 @@ ethic_materialist = {
 		modifier = {
 			factor = 0.8
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_materialist }
 			}
 		}
 		modifier = {
 			factor = 0.7
 			from = {
-				planet_stability < @dpe_normal_unrest_value
+				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_materialist }
 			}
 		}

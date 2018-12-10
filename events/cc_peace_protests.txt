@@ -316,7 +316,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				any_owned_planet = {
-					planet_stability < @dpe_normal_unrest_value
+					planet_stability < @dpe_bit_unrest_value
 					count_pops = {
 						limit = {
 							has_ethic = ethic_pacifist

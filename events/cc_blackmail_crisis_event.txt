@@ -319,8 +319,8 @@ country_event = {
 					modifier = {
 						factor = 2
 						any_owned_planet = {
-							unrest > 40
-							unrest < 80
+							planet_stability < @dpe_bit_unrest_value
+							planet_stability > @dpe_risk_unrest_value
 						}
 					}
 					modifier = {
