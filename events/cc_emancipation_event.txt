@@ -26,7 +26,7 @@ planet_event = { #shifted back to completely normal planet event start.
 		NOT = { has_planet_flag = cc_emancipation_movement }
 		any_owned_pop = {
 			is_enslaved = yes
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 			happiness < 0.4
 		}
 		any_owned_pop = {
@@ -111,7 +111,7 @@ planet_event = {
 		NOT = { has_planet_flag = cc_emancipation_movement }
 		any_owned_pop = {
 			is_enslaved = yes
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 			happiness < 0.4
 		}
 		any_owned_pop = {
@@ -221,7 +221,7 @@ planet_event = {
 						}
 						any_owned_pop = {
 							is_enslaved = yes
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							happiness < 0.4
 						}
 						any_owned_pop = {
@@ -281,7 +281,7 @@ planet_event = {
 						}
 						any_owned_pop = {
 							is_enslaved = yes
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							happiness < 0.4
 						}
 						any_owned_pop = {
@@ -741,7 +741,7 @@ planet_event = {
 	trigger = {
 		any_owned_pop = {
 			is_enslaved = yes
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 			happiness < 0.4
 		}
 		any_owned_pop = {
@@ -1065,7 +1065,7 @@ country_event = {
 				
 				any_owned_pop = {
 					is_enslaved = yes
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 					happiness < 0.4
 				}
 				any_owned_pop = {
@@ -1094,7 +1094,7 @@ country_event = {
 				
 				any_owned_pop = {
 					is_enslaved = yes
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 					happiness < 0.4
 				}
 				any_owned_pop = {
@@ -1161,7 +1161,7 @@ country_event = {
 					planet_stability < @dpe_bit_unrest_value
 					any_owned_pop = {
 						is_enslaved = yes
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -1176,7 +1176,7 @@ country_event = {
 					planet_stability < @dpe_somewhat_unrest_value
 					any_owned_pop = {
 						is_enslaved = yes
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -1191,7 +1191,7 @@ country_event = {
 					planet_stability < @dpe_risk_unrest_value
 					any_owned_pop = {
 						is_enslaved = yes
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -1259,7 +1259,7 @@ country_event = {
 				limit = {
 					any_owned_pop = {
 						is_enslaved = yes
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -1376,7 +1376,7 @@ event = {
 					
 					any_owned_pop = {
 						is_enslaved = yes
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop = {
@@ -1434,7 +1434,7 @@ country_event = {
 		
 		any_owned_pop = {
 			is_enslaved = yes
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 		}
 	}
 	
@@ -1510,7 +1510,7 @@ country_event = {
 		every_owned_pop = {
 			limit = {
 				is_enslaved = no
-				species = { pops_have_happiness = yes }
+				cc_has_happiness = yes
 			}
 			pop_event = { id = cc_emancipation.21 }
 		}

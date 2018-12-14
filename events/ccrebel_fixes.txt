@@ -2139,30 +2139,3 @@ country_event = {
 }
 
 
-
-#Fix to unrest variable not resetting and some modifiers not being removed
-
-planet_event = {
-	id = rebellionscript.520
-	hide_window = yes 
-	is_triggered_only = yes 
-
-	immediate = {
-		if = {
-			limit = { check_variable = { which = unrest_50 value > 0 } }
-			change_variable = { which = unrest_50 value = 0 }
-		}
-		if = {
-			limit = { has_modifier = free_at_last }
-			remove_modifier = free_at_last
-		}
-		if = {
-			limit = { has_modifier = insurgents_free }
-			remove_modifier = insurgents_free
-		}
-		if = {
-			limit = { has_modifier = slaves_defected }
-			remove_modifier = slaves_defected
-		}
-	}
-}

@@ -16,7 +16,7 @@ planet_event = {
 			has_planet_flag = dpe_dissent_planet
 		}
 		count_pops = {
-			limit = { species = { pops_have_happiness = yes } }
+			limit = { cc_has_happiness = yes }
 			count > 18
 		}
 		pop_percentage = {
@@ -319,7 +319,7 @@ country_event = {
 			NOT = { has_planet_flag = dpe_recent_talent_planet }
 			controller = { is_same_value = root }
 			any_owned_pop = {
-				species = { pops_have_happiness = yes }
+				cc_has_happiness = yes
 				has_citizenship_rights = yes
 				is_enslaved = no
 			}
@@ -671,7 +671,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1102,7 +1102,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1317,7 +1317,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1593,7 +1593,7 @@ planet_event = {
 		}
 		count_pops = {
 			limit = {
-				species = { pops_have_happiness = yes }
+				cc_has_happiness = yes
 				has_citizenship_rights = yes
 			}
 			count > 18

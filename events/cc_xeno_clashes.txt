@@ -30,7 +30,7 @@ planet_event = {
 		}
 
 		any_owned_pop = {
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 			is_enslaved = no
 			is_being_purged = no
 			is_robot_pop = no
@@ -41,7 +41,7 @@ planet_event = {
 				}
 				any_owned_pop = {
 					NOT = { is_same_species = prevprev }
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 					is_enslaved = no
 					is_being_purged = no
 					is_robot_pop = no
@@ -77,7 +77,7 @@ planet_event = {
 					factor = 0.75
 					
 					any_owned_pop = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOT = { is_robot_pop = yes }
 						is_enslaved = no
 						is_being_purged = no
@@ -88,7 +88,7 @@ planet_event = {
 							}
 							any_owned_pop = {
 								NOT = { is_same_species = prevprev }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 								is_robot_pop = no
 								is_enslaved = no
 								is_being_purged = no
@@ -148,7 +148,7 @@ planet_event = {
 				if = {
 					limit = {
 						any_owned_pop = {
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							NOT = { is_robot_pop = yes }
 							is_enslaved = no
 							is_being_purged = no
@@ -159,7 +159,7 @@ planet_event = {
 								}
 								any_owned_pop = {
 									NOT = { is_same_species = prevprev }
-									species = { pops_have_happiness = yes }
+									cc_has_happiness = yes
 									is_robot_pop = no
 									is_same_species = owner_species
 									is_enslaved = no
@@ -184,7 +184,7 @@ planet_event = {
 				else = {
 					random_owned_pop = {
 						limit = {
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							NOT = { is_robot_pop = yes }
 							is_enslaved = no
 							is_being_purged = no
@@ -204,7 +204,7 @@ planet_event = {
 				random_owned_pop = {
 					limit = {
 						species = { NOT = { is_same_value = event_target:species1 } }
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOT = { is_robot_pop = yes }
 						is_enslaved = no
 						is_being_purged = no

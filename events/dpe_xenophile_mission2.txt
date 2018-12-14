@@ -110,14 +110,14 @@ event = {
 				limit = {
 					any_owned_pop = {
 						NOT = { is_same_species = prev }
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 					}
 				}
 				random_owned_pop = {
 					limit = {
 						NOT = { is_same_species = prev }
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 					}
 					species = {
@@ -129,14 +129,14 @@ event = {
 					limit = {
 						any_owned_pop = {
 							NOT = { is_same_species = prev }
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 						}
 					}
 					random_owned_pop = {
 						limit = {
 							NOT = { is_same_species = prev }
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 						}
 						species = {
@@ -148,14 +148,14 @@ event = {
 						limit = {
 							any_owned_pop = {
 								NOT = { is_same_species = prev }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 							}
 						}
 						random_owned_pop = {
 							limit = {
 								NOT = { is_same_species = prev }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
 							}
 							species = {

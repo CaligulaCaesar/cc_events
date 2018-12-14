@@ -807,7 +807,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					pop_percentage = {
 						percentage > 0.75
-						limit = { species = { pops_have_happiness = yes } }
+						limit = { cc_has_happiness = yes }
 					}
 					pop_percentage = {
 						percentage > 0.5
@@ -825,7 +825,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					pop_percentage = {
 						percentage > 0.75
-						limit = { species = { pops_have_happiness = yes } }
+						limit = { cc_has_happiness = yes }
 					}
 					pop_percentage = {
 						percentage > 0.5
@@ -1483,7 +1483,7 @@ country_event = {
 				count = 4
 				random_pop = {
 					limit = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
 					pop_change_ethic = ethic_spiritualist
@@ -2576,7 +2576,7 @@ country_event = {
 				count = 2
 				random_pop = {
 					limit = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
 					pop_change_ethic = ethic_spiritualist
@@ -2863,7 +2863,7 @@ country_event = {
 					count = 2
 					random_pop = {
 						limit = {
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
 						}
 						pop_change_ethic = ethic_spiritualist

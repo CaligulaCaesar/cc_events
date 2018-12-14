@@ -486,7 +486,7 @@ country_event = {
 					limit = {
 						has_citizenship_rights = yes
 						NOT = { has_ethic = ethic_authoritarian }
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 					}
 					pop_event = { id = dpe_contraband_event.46 }
 				}
@@ -581,7 +581,7 @@ country_event = {
 				limit = {
 					has_citizenship_rights = yes
 					NOT = { has_ethic = ethic_authoritarian }
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 				}
 				pop_event = { id = dpe_contraband_event.46 }
 			}

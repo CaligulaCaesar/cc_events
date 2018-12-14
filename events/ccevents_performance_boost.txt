@@ -204,7 +204,7 @@ country_event = {
 						any_owned_pop = {
 							NOT = { is_same_species = root }
 							is_robot_pop = no
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 							NOR = {
 								is_enslaved = yes
 								is_being_purged = yes
@@ -218,7 +218,7 @@ country_event = {
 							is_same_species = prev
 						}
 						is_robot_pop = no
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOR = {
 							is_enslaved = yes
 							is_being_purged = yes
@@ -244,7 +244,7 @@ country_event = {
 							is_same_species = prev
 						}
 						is_robot_pop = no
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOR = {
 							is_enslaved = yes
 							is_being_purged = yes
@@ -271,7 +271,7 @@ country_event = {
 						is_same_species = prev
 					}
 					is_robot_pop = no
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 					NOR = {
 						is_enslaved = yes
 						is_being_purged = yes
@@ -296,7 +296,7 @@ country_event = {
 							is_same_species = prev
 						}
 						is_robot_pop = no
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 						NOR = {
 							is_enslaved = yes
 							is_being_purged = yes

@@ -270,13 +270,13 @@ event = {
 			limit = {
 				any_owned_pop = {
 					NOT = { is_same_species = prev }
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 				}
 			}
 			every_owned_planet = {
 				limit = {
 					any_owned_pop = {
-						species = { pops_have_happiness = yes }
+						cc_has_happiness = yes
 					}
 				}
 				planet_event = { id = cc_events_mod.81 days = 1 random = 15 }
@@ -292,7 +292,7 @@ planet_event = {
 
 	immediate = {
 		every_owned_pop = {
-			limit = { species = { pops_have_happiness = yes } }
+			limit = { cc_has_happiness = yes }
 			pop_event = { id = cc_events_mod.9 }
 		}
 	}
@@ -326,7 +326,7 @@ pop_event = {
 						planet = {
 							any_owned_pop = {
 								NOT = { is_same_species = root }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 							}
 						}
 					}
@@ -343,7 +343,7 @@ pop_event = {
 					planet = {
 						any_owned_pop = {
 							NOT = { is_same_species = root }
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 						}
 					}
 				}
@@ -362,7 +362,7 @@ pop_event = {
 						planet = {
 							any_owned_pop = {
 								NOT = { is_same_species = root }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 							}
 						}
 					}
@@ -387,7 +387,7 @@ pop_event = {
 					planet = {
 						any_owned_pop = {
 							NOT = { is_same_species = root }
-							species = { pops_have_happiness = yes }
+							cc_has_happiness = yes
 						}
 					}
 				}
@@ -406,7 +406,7 @@ pop_event = {
 						planet = {
 							any_owned_pop = {
 								NOT = { is_same_species = root }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 							}
 						}
 					}
@@ -436,7 +436,7 @@ pop_event = {
 						planet = {
 							any_owned_pop = {
 								NOT = { is_same_species = root }
-								species = { pops_have_happiness = yes }
+								cc_has_happiness = yes
 							}
 						}
 					}
@@ -455,7 +455,7 @@ pop_event = {
 	mean_time_to_happen = { years = 20 }
 	
 	trigger = {
-		species = { pops_have_happiness = yes }
+		cc_has_happiness = yes
 		has_pop_flag = cc_literally_xenophile
 		NOT = { has_pop_flag = cc_literally_xenophile_manifested }
 		exists = owner
@@ -464,7 +464,7 @@ pop_event = {
 				percentage > 0.2
 				limit = {
 					NOT = { is_same_species = root }
-					species = { pops_have_happiness = yes }
+					cc_has_happiness = yes
 					NOR = {
 						is_enslaved = yes
 						is_being_purged = yes
@@ -539,7 +539,7 @@ pop_event = {
 	mean_time_to_happen = { years = 25 }
 
 	trigger = {
-		species = { pops_have_happiness = yes }
+		cc_has_happiness = yes
 		has_pop_flag = cc_literally_xenophile_manifested
 		exists = owner
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minority } }
@@ -623,9 +623,7 @@ event = {
 		every_country = {
 			every_owned_pop = {
 				limit = {
-					species = {
-						pops_have_happiness = no
-					}
+					cc_has_happiness = no
 					OR = {
 						has_pop_flag = cc_literally_xenophile
 						has_pop_flag = cc_literally_xenophile_manifested
@@ -1207,7 +1205,7 @@ country_event = {
 		
 		any_owned_pop = {
 			NOT = { is_same_species = root }
-			species = { pops_have_happiness = yes }
+			cc_has_happiness = yes
 			has_citizenship_rights = yes
 			NOR = {
 				is_enslaved = yes
@@ -1243,7 +1241,7 @@ country_event = {
 		random_owned_pop = {
 			limit = {
 				NOT = { is_same_species = root }
-				species = { pops_have_happiness = yes }
+				cc_has_happiness = yes
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
