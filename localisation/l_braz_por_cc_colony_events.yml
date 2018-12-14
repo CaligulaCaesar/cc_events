@@ -59,7 +59,7 @@ cc_colony_events.25.B.tooltip:0 "A influência de [cc_colony_leader.GetName] des
 cc_colony_events.251.name:0 "Academia abre em [root.GetName]"
 cc_colony_events.251.desc:0 "A academia militar em honra de [cc_colony_leader.GetName] foi terminada. Possui uma estátua proeminente do líder agora falecido. Sua abertura foi recebida com alegria pelos habitantes da colônia, que sentem que [root.GetName] foi colocado no mapa como importante centro de aprendizagem militar dentro de [root.owner.GetName]. Além disso, os membros do serviço e seus apoiadores [root.owner.GetName] estão satisfeitos com a prova da dedicação [root.owner.GetRulerTitle] por seus súditos que servem esta extraordinária nação."
 
-cc_milacademy_will_be_built:0 "\nA Academia Militar vai levar 5 anos para ficar pronta. Adicionará o efeito §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nA Academia Militar vai levar 5 anos para ficar pronta. Adicionará o efeito §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 cc_founder_militarist:0 "Enviado Planetário"
 cc_founder_militarist_desc:0 "Esta colônia é governada por um oficial naval aposentado que recebeu o título de 'Enviado'."
@@ -151,7 +151,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] terminou de visitar os m
 cc_colony_events.342.name:0 "A visita de [cc_colony_leader.GetName] pelos mundos terminou em tragédia"
 cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] estava se reunindo com apoiadores em [random_visit_planet.GetName] quando uma imperialista fanática disparou contra [cc_colony_leader.GetHimHer] antes que os guardas pudessem reagir na proteção [cc_colony_leader.GetHisHer]. Infelizmente, a multidão destruiu a assassina antes que ela pudesse ser detida. O acontecido tem alimentado teorias da conspiração, que afirmam que pessoas - ligadas até mesmo ao alto governo de [root.owner.GetSpeciesAdj] - estão por trás do assassinato. Há também alegações de que as autoridades [root.owner.GetSpeciesAdj] em [random_visit_planet.GetName] falharam em prover [cc_colony_leader.GetName] com uma força de segurança adequada, facilitando assim que a tragédia ocorresse. Como resultado, a comunidade pacifista em [root.owner.GetName] está pegando em armas. A liderança da [pacifist_faction.GetName] reuniu-se com agentes do alto governo em meio ao caos e expuseram o seu aborrecimento, mas também sugeriu que, para acalmar os ânimos dos pacifistas, [cc_colony_leader.GetName] deveria receber um funeral estatal e um grande funeral deveria ser construído em sua honra [cc_colony_leader.GetHisHer] em [root.GetName]."
 cc_colony_events.342.A:0 "Faça! [cc_colony_leader.GetSheHeCap] merece."
-cc_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para ficar pronto. Será adicionada a seguinte modificação §Y$cc_pacifist_centre$§!, granting:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+cc_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para ficar pronto. Será adicionada a seguinte modificação §Y$cc_pacifist_centre$§!, granting:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.343.name:0 "Centro Congregacional abre em [root.GetName]"
@@ -165,7 +165,7 @@ cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] foi apenas um agitador. 
 
 cc_colony_events.35.C.tooltip:0 "[root.GetName] estará livre da influência de [cc_colony_leader.GetName] em 30 anos."
 
-cc_minor_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para terminar. O seguinte efeito será aplicado §Y$cc_minor_pacmonument$§!, granting:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+cc_minor_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para terminar. O seguinte efeito será aplicado §Y$cc_minor_pacmonument$§!, granting:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
 cc_colony_events.351.desc:0 "O Monumento em honra de [cc_colony_leader.GetName] está pronto. A população em [root.GetName] agora tem um lugar para lembrar-se dos ensinamentos e conquistas [cc_colony_leader.GetHisHer]."
 
 
@@ -269,7 +269,7 @@ cc_colony_events.451.name:0 "Intercâmbio Cultural aberto em [root.GetName]"
 cc_colony_events.451.desc:0 "O Intercâmbio Cultural em honra de [cc_colony_leader.GetName] está completado. Sua abertura foi bem-vinda em geral tanto pela população do planeta como por xenos no vasto [root.owner.GetName]. O espírito [cc_colony_leader.GetHisHerCap] vive, e será lembrado por muito tempo com muitas celebrações."
 
 
-cc_xenophile_institute_will_be_built:0 "\nO Intercâmbio Cultural levará 5 anos para ser completado. Adicionará os seguintes efeitos §Y$cc_xenophile_institute$§!, concedendo:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+cc_xenophile_institute_will_be_built:0 "\nO Intercâmbio Cultural levará 5 anos para ser completado. Adicionará os seguintes efeitos §Y$cc_xenophile_institute$§!, concedendo:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
 
 cc_founder_xenophile:0 "Mediador Xenófilo"
@@ -432,9 +432,9 @@ cc_xenophobe_assassinated:0 "Herói Assassinado"
 cc_betrayed_us_ally:0 "Fomos Traídos"
 cc_ignored_ally:0 "Ignoramos nossas preocupações"
 
-cc_xenophobe_institute_will_be_built:0 "\nO Instituto da Purificação vai levar 5 anos para ficar pronto. Terá os seguintes efeitos §Y$cc_xenophobe_institute$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+cc_xenophobe_institute_will_be_built:0 "\nO Instituto da Purificação vai levar 5 anos para ficar pronto. Terá os seguintes efeitos §Y$cc_xenophobe_institute$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
 
-cc_minor_xenophobe_institute_will_be_built:0 "\nO Instituto Hegemon vai levar 5 anos para ficar pronto. Terá os seguintes efeitos §Y$cc_minor_xenophobe_institute$§!, granting:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
+cc_minor_xenophobe_institute_will_be_built:0 "\nO Instituto Hegemon vai levar 5 anos para ficar pronto. Terá os seguintes efeitos §Y$cc_minor_xenophobe_institute$§!, granting:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
 
 
 cc_founder_xenophobe:0 "Hegemonia Planetária"
@@ -528,7 +528,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "Turnê em Outros Mundos [cc_colony_leader.GetName] Termina em Tragédia"
 cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] reuniu-se com apoiadores em [random_visit_planet.GetName] quando um anti-espiritualista fanático atirou contra [cc_colony_leader.GetHimHer] antes que os guardas [cc_colony_leader.GetHisHer] pudessem reagir em sua defesa. Infelizmente, a multidão destruiu o assassino antes que ele pudesse ser detido. Teorias da conspiração tem se alimentado do caso, teorias que afirmam que pessoas - até mesmo do alto escalão do governo [root.owner.GetSpeciesAdj] - estão por trás do assassinato. Há também alegações de que as autoridades [root.owner.GetSpeciesAdj] em [random_visit_planet.GetName] falharam em prover a [cc_colony_leader.GetName] com uma força de segurança adequada, permitindo que a infeliz tragédia acontecesse. Como resultado, a comunidade espiritualista em [root.owner.GetName] está em armas. As lideranças de [spiritualist_faction.GetName] tem se reunido com autoridades de alto escalão do governo em meio ao caos e deixado claro o seu aborrecimento, mas sugeriram que, para aliviar os ânimos dos espiritualistas, [cc_colony_leader.GetName] deve receber um funeral estatal e um grande Mausoléu deve ser construído em honra [cc_colony_leader.GetHisHer] em [root.GetName]."
 cc_colony_events.642.A:0 "Faça isso. [cc_colony_leader.GetSheHeCap] merece."
-cc_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 5 anos para ficar pronto. O seguinte modificador será adicionado §Y$cc_religious_centre$§!, granting:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 5 anos para ficar pronto. O seguinte modificador será adicionado §Y$cc_religious_centre$§!, granting:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "Mausoléu abre em [root.GetName]"
@@ -542,7 +542,7 @@ cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap] foi só um[cc_colony_lea
 
 cc_colony_events.65.C.tooltip:0 "[root.GetName] vai estar livre da influência de [cc_colony_leader.GetName] em 30 anos."
 
-cc_minor_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 30 anos para ficar pronto. Adicionará os seguintes efeitos §Y$cc_minor_mausoleum$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+cc_minor_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 30 anos para ficar pronto. Adicionará os seguintes efeitos §Y$cc_minor_mausoleum$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
 cc_colony_events.651.desc:0 "O Mausoléu em honra de [cc_colony_leader.GetName] está pronto. O povo em [root.GetName] agora tem um lugar para se lembrar dos ensinamentos e conquistas [cc_colony_leader.GetHisHer]."
 
 #General random spiritualist guru
@@ -554,7 +554,7 @@ cc_colony_events.100.desc.neut:0 "Um mestre religioso chamado [cc_colony_leader.
 
 cc_colony_events.100.desc.neg:0 "Um mestre religioso chamado [cc_colony_leader.GetName] tem ganhado forte influência em [root.GetName]. Os ensinamentos [cc_colony_leader.GetHisHerCap] são seguidos pela maioria da população espiritualista, e os conselhos [cc_colony_leader.GetHisHer] são muito valorizados. [cc_colony_leader.GetSheHeCap] conseguiu revogar o movimento espiritualista em [root.GetName], e até mesmo atraiu uma atenção considerável em planetas vizinhos - [cc_colony_leader.GetSheHe] está saindo em uma Turnê a Outros Mundos para visitar os admiradores [cc_colony_leader.GetHisHer]. Muitos no governo [root.owner.GetSpeciesName] estão preocupados com a crescente influência [cc_colony_leader.GetHisHer], que pode ser uma ameaça a [root.owner.GetRulerTitle]. [cc_colony_leader.GetName] não fez nenhum movimento rebelde, mas a filosofia [cc_colony_leader.GetHisHer] vai diretamente contra a de [root.owner.GetName].\n\nO que devemos fazer sobre isso?"
 
-cc_colony_events.100.tooltip:0 "Planetas em um raio de 75 unidades planetárias vão receber o seguinte modificador $cc_spiritualist_leader_visit$, concedendo §Y+20%§! $pop_ethic_spiritualist_attraction_mult$ e §G+10%§! $MOD_POP_HAPPINESS$."
+cc_colony_events.100.tooltip:0 "Planetas em um raio de 75 unidades planetárias vão receber o seguinte modificador $cc_spiritualist_leader_visit$, concedendo §Y+20%§! $mod_pop_ethic_spiritualist_attraction_mult$ e §G+10%§! $MOD_POP_HAPPINESS$."
 
 cc_colony_events.102.B:0 "Liberte a [cc_colony_leader.GetHimHer]. Mas proíba a Turnê."
 cc_colony_events.103.A.tooltip:0 "A turnê não vai acontecer."
@@ -665,7 +665,7 @@ cc_colony_events.75.B.tooltip:0 "A influência de [cc_colony_leader.GetName] vai
 cc_colony_events.751.name:0 "Universidade abre em [root.GetName]"
 cc_colony_events.751.desc:0 "A universidade em honra de [cc_colony_leader.GetName] está pronta. Sua abertura foi recebida com alegria pelos cidadãos da colônia, os quais sentem que [root.GetName] foi colocado no mapa como um importante centro de aprendizado e estudos dentro de [root.owner.GetName]. Além disso, os materialistas de [root.owner.GetName] estão muito satisfeitos com esta prova de dedicação de [root.owner.GetRulerTitle] para o progresso científico."
 
-cc_university_will_be_built:0 "\nA Universidade vai levar 5 anos para ficar pronta. Adicionará os seguintes efeitos §Y$cc_university$§!, granting:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+cc_university_will_be_built:0 "\nA Universidade vai levar 5 anos para ficar pronta. Adicionará os seguintes efeitos §Y$cc_university$§!, granting:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 
 cc_founder_materialist:0 "Intelectual Proeminente"
@@ -856,7 +856,7 @@ cc_cleanup_events.10.desc:0 "Os antigos senhores de [root.GetName] ofenderam a p
 
 cc_cleanup_events.11.name:0 "Universidade em [root.GetName]"
 cc_cleanup_events.11.desc:0 "Os antigos proprietários em [root.GetName] estavam construindo uma grande universidade. Se completado, vai se tornar um importante centro da influente rede planetária de intelectuais. Devemos terminar a construção da Universidade?"
-cc_cleanup_events.11.tooltip:0 "\nUma vez completada, a Universidade vai adicionar os seguintes efeitos §Y$cc_university$§!, granting:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.11.tooltip:0 "\nUma vez completada, a Universidade vai adicionar os seguintes efeitos §Y$cc_university$§!, granting:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 cc_cleanup_events.12.name:0 "Universidade em [root.GetName]"
 cc_cleanup_events.12.desc:0 "Os antigos senhores de [root.GetName] construíram uma grande Universidade em [root.GetName]. Ela é o centro da influente rede planetária de intelectuais. Devemos poupar a Universidade da destruição?"
@@ -902,7 +902,7 @@ cc_cleanup_events.23.desc:0 "A Academia em [root.GetName] está pronta. Possui u
 
 cc_cleanup_events.24.name:0 "Academia Militar em construção em [root.GetName]"
 cc_cleanup_events.24.desc:0 "Os antigos senhores de [root.GetName] começaram a construir uma grande academia em [root.GetName]. Quando terminada ela será o centro da influente Rede Planetária de Militares. Gostaria de terminar a construção?"
-cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.24.tooltip:0 "\nOnce completed, the Military Academy will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_militarist_attraction_mult$: §Y+150%§!"
 
 
 
@@ -950,7 +950,7 @@ cc_cleanup_events.36.desc:0 "Um ativista xenófilo proeminente está presente em
 
 cc_cleanup_events.37.name:0 "Intercâmbio Cultural em [root.GetName]"
 cc_cleanup_events.37.desc:0 "Os antigos senhores de [root.GetName] haviam começado a preparar um Intercâmbio Cultural em honra de um proeminente ativista que foi nativo deste planeta. Se terminado, contribuirá para estabelecer a reputação do planeta como um paraíso multiespécies. Devemos apoiar a iniciativa?"
-cc_cleanup_events.37.tooltip:0 "Uma vez completo, O Intercâmbio Cultural adicionará o modificador §Y$cc_xenophile_institute$§!, dando:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+cc_cleanup_events.37.tooltip:0 "Uma vez completo, O Intercâmbio Cultural adicionará o modificador §Y$cc_xenophile_institute$§!, dando:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
 cc_cleanup_events.38.name:0 "Intercâmbio Cultural em [root.GetName]"
 cc_cleanup_events.38.desc:0 "Os antigos senhores de [root.GetName] estabeleceram um Intercâmbio Cultural em honra de um proeminente xenófilo ativista que era nativo deste planeta. Ele serve para assegurar o legado do ativista e estabelecer a reputação do planeta como um paraíso multiespécies. Devemos permitir que a iniciativa continue a existir?"
