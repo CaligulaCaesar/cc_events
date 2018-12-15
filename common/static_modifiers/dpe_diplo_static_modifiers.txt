@@ -3,7 +3,7 @@
 
 
 dpe_ruler_looks_weak = { #mild version of "humiliated"
-	country_resource_influence_mult = -0.25
+	country_influence_produces_mult = -0.25
 	pop_citizen_happiness = -0.05
 }
 
@@ -93,7 +93,7 @@ dpe_spirmission_planet_xenos_unwelcome = {
 }
 
 dpe_spirmission_succeeded_country = { 
-	country_resource_unity_mult = 0.3
+	country_unity_produces_mult = 0.3
 	pop_ethic_spiritualist_attraction_mult = 0.5
 }
 
@@ -185,8 +185,8 @@ dpe_contraband_stop_and_search_faction = {
 dpe_raids_worry = { pop_ethic_egalitarian_attraction_mult = 1 }
 
 dpe_cowardly_empire = {
-	country_resource_unity_mult = -0.25
-	country_resource_influence_mult = -0.25
+	country_unity_produces_mult = -0.25
+	country_influence_produces_mult = -0.25
 }
 
 dpe_cowardly_empire_faction = {
@@ -195,14 +195,14 @@ dpe_cowardly_empire_faction = {
 
 
 dpe_honour_restored = {
-	country_resource_unity_mult = 0.33
-	country_resource_influence_mult = 0.33
+	country_unity_produces_mult = 0.33
+	country_influence_produces_mult = 0.33
 	pop_ethic_militarist_attraction_mult = 0.5
 }
 
 dpe_honour_restored1 = {
-	country_resource_unity_mult = 0.33
-	country_resource_influence_mult = 0.33
+	country_unity_produces_mult = 0.33
+	country_influence_produces_mult = 0.33
 	pop_ethic_militarist_attraction_mult = 0.5
 }
 
@@ -211,13 +211,13 @@ dpe_honour_restored_faction = {
 }
 
 dpe_duel_disgraced = {
-	country_resource_unity_mult = -0.25
-	country_resource_influence_mult = -0.25
+	country_unity_produces_mult = -0.25
+	country_influence_produces_mult = -0.25
 }
 
 dpe_duel_disgraced1 = {
-	country_resource_unity_mult = -0.25
-	country_resource_influence_mult = -0.25
+	country_unity_produces_mult = -0.25
+	country_influence_produces_mult = -0.25
 }
 
 
@@ -241,7 +241,7 @@ dpe_electoral_experiment_faction = { faction_approval = 0.15 }
 dpe_electoral_experiment_faction_negative = { faction_approval = -0.1 }
 
 dpe_paying_foreign_country = {
-	country_resource_minerals_add = -125
+	country_minerals_produces_add = -125
 }
 
 dpe_auth_held_successful_election = {

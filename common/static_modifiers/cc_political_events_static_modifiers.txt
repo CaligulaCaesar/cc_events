@@ -1,7 +1,7 @@
 
 cc_ruler_humiliated = {
 	pop_government_ethic_attraction = -0.3
-	country_resource_unity_mult = -0.2
+	country_unity_produces_mult = -0.2
 }
 
 cc_xenophobic_offence_1 = {
@@ -30,12 +30,12 @@ cc_ruler_cult_offended = {
 
 cc_ruler_revered = {
 	pop_citizen_happiness = 0.1
-	country_resource_unity_mult = 0.2
+	country_unity_produces_mult = 0.2
 	pop_ethic_authoritarian_attraction_mult = 0.5
 }
 
 cc_ruler_cult = {
-	country_resource_unity_mult = 0.2
+	country_unity_produces_mult = 0.2
 	pop_ethic_authoritarian_attraction_mult = 0.5
 	pop_ethic_spiritualist_attraction_mult = 0.5
 }
@@ -129,7 +129,7 @@ cc_recent_sex_scandal_friendly1 = {
 }
 
 cc_ruler_humiliated1 = {
-	country_resource_influence_mult = -0.33
+	country_influence_produces_mult = -0.33
 }
 
 cc_defiance_of_law = {
@@ -160,8 +160,8 @@ cc_defiance_of_law_egal_mega = {
 }
 
 cc_paid_blackmail = {
-	country_resource_minerals_mult = -0.5
-	country_resource_energy_mult = -0.25
+	country_minerals_produces_mult = -0.5
+	country_energy_produces_mult = -0.25
 }
 
 cc_outrage_at_corruption = {
@@ -446,7 +446,7 @@ dpe_unbelief_faction = {
 }
 
 dpe_unbelief_empire = {
-	country_resource_influence_mult = -0.25
+	country_influence_produces_mult = -0.25
 }
 
 dpe_damned_to_hell_faction = {
@@ -455,15 +455,16 @@ dpe_damned_to_hell_faction = {
 
 dpe_damned_to_hell_empire = {
 	pop_citizen_happiness = -0.1
-	country_resource_influence_mult = -0.35
+	country_influence_produces_mult = -0.35
 	tile_resource_unity_mult = -0.25
 }
 
 
 dpe_state_in_lockdown = {
 	pop_citizen_happiness = -0.1
-	country_resource_minerals_mult = -0.33
-	country_resource_influence_add = -1
+	country_minerals_produces_mult = -0.25
+	country_consumer_goods_produces_mult = -0.25
+	country_influence_produces_add = -1
 	pop_migration_speed = -1
 }
 
@@ -503,8 +504,8 @@ dpe_military_coup_faction = {
 }
 
 dpe_navy_RandD = {
-	country_resource_energy_mult = -0.05
-	country_resource_minerals_mult = -0.1
+	country_alloys_produces_mult = -0.15
+	country_minerals_produces_mult = -0.05
 	country_engineering_tech_research_speed = 0.1
 	country_physics_tech_research_speed = 0.1
 }
@@ -528,7 +529,7 @@ dpe_navy_privileges_cut_faction = {
 }
 
 dpe_encouraged_competition = {
-	country_resource_energy_mult = 0.05
+	country_consumer_goods_produces_mult = 0.1
 }
 
 dpe_disgruntled_CEO = {
@@ -597,12 +598,12 @@ dpe_negminerals_planet = {
 
 dpe_persuasive_leader = {
 	pop_government_ethic_attraction = 0.33
-	country_resource_influence_mult = 0.25
+	country_influence_produces_mult = 0.25
 }
 
 dpe_unpersuasive_leader = {
 	pop_government_ethic_attraction = -0.25
-	country_resource_influence_mult = -0.25
+	country_influence_produces_mult = -0.25
 }
 
 
@@ -682,26 +683,26 @@ dpe_talented_captain = {
 
 
 dpe_paying_spirFE = {
-	country_resource_unity_mult = -0.33
+	country_unity_produces_mult = -0.33
 }
 dpe_paying_friendly_spirFE = {
-	country_resource_unity_mult = -0.15
+	country_unity_produces_mult = -0.15
 }
 dpe_paying_xenoFE = {
-	country_resource_minerals_mult = -0.25
+	country_minerals_produces_mult = -0.25
 }
 dpe_paying_friendly_xenoFE = {
-	country_resource_minerals_mult = -0.1
+	country_minerals_produces_mult = -0.1
 }
 dpe_paying_matFE = {
-	country_resource_physics_research_mult = -0.25
-	country_resource_society_research_mult = -0.25
-	country_resource_engineering_research_mult = -0.25
+	country_physics_research_produces_mult = -0.25
+	country_society_research_produces_mult = -0.25
+	country_engineering_research_produces_mult = -0.25
 }
 dpe_paying_friendly_matFE = {
-	country_resource_physics_research_mult = -0.1
-	country_resource_society_research_mult = -0.1
-	country_resource_engineering_research_mult = -0.1
+	country_physics_research_produces_mult = -0.1
+	country_society_research_produces_mult = -0.1
+	country_engineering_research_produces_mult = -0.1
 }
 
 cc_antiluddite = {
@@ -727,14 +728,14 @@ dpe_cultist_scandal_empire = {
 
 
 dpe_defector_scientist_from = {
-	country_resource_physics_research_mult = -0.15
-	country_resource_society_research_mult = -0.15
-	country_resource_engineering_research_mult = -0.15
+	country_physics_research_produces_mult = -0.15
+	country_society_research_produces_mult = -0.15
+	country_engineering_research_produces_mult = -0.15
 }
 
 dpe_defector_governor_from = {
-	country_resource_energy_mult = -0.33
-	country_resource_minerals_mult = -0.33
+	country_energy_produces_mult = -0.33
+	country_minerals_produces_mult = -0.33
 }
 
 dpe_defector_military_receive = {
