@@ -9,12 +9,16 @@
 @EdictDuration = 4800
 
 
-country_edict = {
-	name = "cc_thought_police"
-	
+
+cc_thought_police = {
 	length = @EdictDuration
-	cost = { influence = @Edict3Cost }
-	
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict3Cost
+		}
+	}
+
 	modifier = {
 		pop_government_ethic_attraction = 0.2
 	}
@@ -50,11 +54,7 @@ country_edict = {
 		modifier = {
 			factor = 2
 			any_owned_planet = { planet_stability < @dpe_somewhat_unrest_value }
-		}	
-		modifier = {
-			factor = 0.5
-			NOT = { any_owned_planet = { planet_stability < @dpe_bit_unrest_value } }
-		}	
+		}
 		modifier = {
 			factor = 0
 			NOT = { any_owned_planet = { planet_stability < @dpe_normal_unrest_value } }
@@ -73,6 +73,5 @@ country_edict = {
 				}
 			}
 		}
-	}	
+	}
 }
-

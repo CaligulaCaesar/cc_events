@@ -30,13 +30,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_good_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_good_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -88,13 +88,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_good_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_good_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -145,13 +145,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_decent_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_decent_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -203,13 +203,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_decent_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 				has_decent_habitability = yes
-				NOT = { has_country_edict = cc_thought_police }
+				NOT = { has_edict = cc_thought_police }
 			}
 				random_owned_planet = {
 					limit = {
@@ -260,13 +260,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_some_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_some_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -318,13 +318,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_some_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_some_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -375,13 +375,13 @@ TP_refugee_pop_effect = {
 			limit = {
 				any_relation = {
 					has_any_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 			}
 			random_relation = {
 				limit = {
 					has_any_habitability_and_housing = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {
@@ -437,7 +437,7 @@ TP_refugee_pop_effect = {
 			random_relation = {
 				limit = {
 					has_any_habitability = yes
-					NOT = { has_country_edict = cc_thought_police }
+					NOT = { has_edict = cc_thought_police }
 				}
 				random_owned_planet = {
 					limit = {

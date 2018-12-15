@@ -473,7 +473,10 @@ country_event = {
 			factor = 2.5
 			modifier = {
 				factor = 0.5
-				influence < 200
+				resource_stockpile_compare = {
+					resource = influence
+					value < 200
+				}
 			}
 			modifier = {
 				factor = 0.8
@@ -513,7 +516,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				influence > 300
+				resource_stockpile_compare = {
+					resource = influence
+					value > 300
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -753,7 +759,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				influence > 300
+				resource_stockpile_compare = {
+					resource = influence
+					value > 300
+				}
 			}
 			modifier = {
 				factor = 2
@@ -802,7 +811,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				influence < 200
+				resource_stockpile_compare = {
+					resource = influence
+					value < 200
+				}
 			}
 			modifier = {
 				factor = 2

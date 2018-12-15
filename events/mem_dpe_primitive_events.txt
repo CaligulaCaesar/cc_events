@@ -1553,11 +1553,9 @@ country_event = {
 		event_target:mem_dpe_primitive_planet = {
 			set_owner = root
 			hidden_effect = {
-				every_owned_pop = {
-					add_modifier = {
-						modifier = culture_shock_early_space_age
-						years = 5
-					}
+				add_modifier = {
+					modifier = culture_shock_early_space_age
+					years = 10
 				}
 			}
 		}

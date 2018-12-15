@@ -1789,9 +1789,10 @@ ethic_xenophile = {
 			factor = 0.25
 			is_same_species = root
 			any_relation = {
-				reverse_has_opinion_modifier = { 
+				has_opinion_modifier = { 
 					who = root 
 					modifier = opinion_genocidal_our_species 
+					is_reverse = yes
 				} 
 			}
 		}
@@ -3735,10 +3736,6 @@ ethic_materialist = {
 			capital_scope = { has_building = building_institute }
 		}
 		modifier = {
-			factor = 1.2
-			is_pop_category = worker
-		}
-		modifier = {
 			factor = 1.25
 			any_relation = {
 				OR = {
@@ -3816,6 +3813,10 @@ ethic_materialist = {
 				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_materialist }
 			}
+		}
+		modifier = {
+			factor = 1.2
+			is_pop_category = worker
 		}
 		modifier = {
 			factor = 0.7
