@@ -3409,7 +3409,11 @@ ethic_spiritualist = {
 		modifier = {
 			factor = 0.75
 			from = {
-				has_building = building_capital_3
+				OR = {
+					has_building = building_system_capital
+					has_building = building_major_capital
+					has_building = building_hab_major_capital
+				}
 				NOR = {
 					has_building = building_temple
 					has_building = building_holotemple				
@@ -3421,11 +3425,11 @@ ethic_spiritualist = {
 		modifier = {
 			factor = 1.25
 			years_passed > 40
-			from = { has_building = building_capital_1 }
+			from = { has_building = building_capital }
 		}
 		modifier = {
 			factor = 1.33
-			years_passed > 35
+			years_passed > 30
 			from = { has_building = building_colony_shelter }
 		}
 		modifier = {
