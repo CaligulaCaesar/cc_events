@@ -265,7 +265,7 @@
  cc_colony_events.451.name:0 "Kulturelle Expo auf [root.GetName] eingeweiht"
  cc_colony_events.451.desc:0 "Die "Kulturelle Expo" zu [cc_colony_leader.GetName]s Ehre ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. [cc_colony_leader.GetName]s Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
 
- cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophile_institute$§! hinzu:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+ cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophile_institute$§! hinzu:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
 
  cc_founder_xenophile:0 "Xenophilischer Mediator"
@@ -429,7 +429,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_betrayed_us_ally:0 "Verrat"
  cc_ignored_ally:0 "Ignorierte unser Bedenken"
 
- cc_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Reinheitsinstituts beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophobe_institute$§! hinzu:\n$tile_resource_unity_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+ cc_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Reinheitsinstituts beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophobe_institute$§! hinzu:\n$mod_country_unity_produces_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
 
  cc_minor_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Hegemoneninstituts beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_xenophobe_institute$§! hinzu:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
 
@@ -524,7 +524,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer anti-Spiritualist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die spiritualistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [spiritualist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Spiritualisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Mausoleum zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird."
 
  cc_colony_events.642.A:0 "$cc_colony_events.342.A$"
- cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$tile_resource_unity_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+ cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$mod_country_unity_produces_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
  cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.643.name:0 "Mausoleum auf [root.GetName] eröffnet"
@@ -538,7 +538,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_colony_events.65.C.tooltip:0 "$cc_colony_events.35.C.tooltip$"
 
- cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_mausoleum$§! hinzu:\n$tile_resource_unity_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+ cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_mausoleum$§! hinzu:\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
  cc_colony_events.651.desc:0 "Das Mausoleum zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
  
 #General random spiritualist guru
@@ -661,7 +661,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.751.name:0 "Universität auf [root.GetName] eröffnet"
  cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an dem technologischen Fortschritt."
 
- cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$mod_country_society_research_produces_mult$: §G+33%§!\n$mod_country_engineering_research_produces_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
 
  cc_founder_materialist:0 "Angesehener Intellektueller"
@@ -851,7 +851,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_cleanup_events.11.name:0 "Universität auf [root.GetName]"
  cc_cleanup_events.11.desc:0 ""Die alten Herrscher von [root.GetName] waren dabei, eine große Universität auf [root.GetName] zu errichten. Falls es fertiggestellt wird, wird es zur Mittelpunkt des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist, werden. Sollten wir die Universität weiterbauen?"
- cc_cleanup_events.11.tooltip:0 "\nNach der Fertigstellung wird die Universität den Modifikator §Y$cc_university$§! hinzufügen:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.11.tooltip:0 "\nNach der Fertigstellung wird die Universität den Modifikator §Y$cc_university$§! hinzufügen:\n$mod_country_physics_research_produces_mult$: §G+33%§!\n$mod_country_society_research_produces_mult$: §G+33%§!\n$mod_country_engineering_research_produces_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
 
  cc_cleanup_events.12.name:0 "Universität auf [root.GetName]"
  cc_cleanup_events.12.desc:0 "Die alten Herrscher von [root.GetName] hatten eine große Universität auf [root.GetName] errichtet. Es steht im Zentrum des Netzwerks von Intellektuellen, das auf dem Planeten einflussreich ist. Sollten wir es von Vernichtung verschonen?"
@@ -949,7 +949,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_cleanup_events.37.name:0 "Kulturelle Expo auf [root.GetName]"
  cc_cleanup_events.37.desc:0 "Die alten Herrscher von [root.GetName] waren dabei, eine kulturelle Expo zur Ehre eines angesehenen Aktivisten auf [root.GetName] zu erstellen. Falls fertiggestellt, wird es dem Planeten den Ruf geben, ein freier Hafen für alle Spezies zu sein. Sollen wir es weiterhin unterstützen?"
- cc_cleanup_events.37.tooltip:0 "Nach der Fertigstellung wird die kulturelle Expo den Modifikator §Y$cc_xenophile_institute$§! hinzufügen:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+ cc_cleanup_events.37.tooltip:0 "Nach der Fertigstellung wird die kulturelle Expo den Modifikator §Y$cc_xenophile_institute$§! hinzufügen:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
 
  cc_cleanup_events.38.name:0 "Kulturelle Expo auf [root.GetName]"
  cc_cleanup_events.38.desc:0 "Die alten Herrscher von [root.GetName] hatten eine kulturelle Expo zur Ehre eines angesehenen Aktivisten auf [root.GetName] unterstützt. Es stellt sicher, dass das Gedächtnis an ihm erhalten bleibt, und gibt dem Planeten den Ruf, ein freier Hafen für alle Spezies zu sein. Soll es weiter existieren dürfen?"

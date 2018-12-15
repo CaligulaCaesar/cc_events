@@ -222,7 +222,7 @@ cc_ship_designs_compromised = {
 cc_emancipation_movement = {
 	planet_stability_add = -20
 	pop_ethic_egalitarian_attraction_mult = 1
-	pop_slave_resource_output = -0.25
+	planet_jobs_slave_produces_mult = -0.25
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_slave_riots.dds"
 }
@@ -264,7 +264,7 @@ cc_luddite_celebration = {
 cc_luddite_movement = {
 	planet_stability_add = -20
 	pop_ethic_spiritualist_attraction_mult = 1
-	pop_robot_production_output = -0.15
+	planet_jobs_robotic_produces_mult = -0.25
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_luddite.dds"
 }
@@ -362,12 +362,7 @@ cc_feels_unwelcome = {
 }
 
 cc_disrupted_government = {
-	tile_resource_energy_mult = -0.67
-	tile_resource_minerals_mult = -0.67
-	tile_resource_unity_mult = -0.67
-	tile_resource_physics_research_mult = -0.67
-	tile_resource_society_research_mult = -0.67
-	tile_resource_engineering_research_mult = -0.67
+	planet_jobs_produces_mult = -0.67
 	planet_stability_add = -10
 	
 	icon_frame = 3
@@ -399,12 +394,8 @@ cc_xenos_encouraged = {
 }
 
 cc_martial_law = {
-	tile_resource_unity_mult = -0.33
-	tile_resource_minerals_mult = -0.33
-	tile_resource_energy_mult = -0.33
-	tile_resource_physics_research_mult = -0.33
-	tile_resource_society_research_mult = -0.3
-	tile_resource_engineering_research_mult = -0.33
+	planet_jobs_produces_mult = -0.33
+	planet_crime_mult = -0.33
 	planet_stability_add = 10
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
@@ -433,7 +424,7 @@ cc_ruled_in_our_favour_pops = {
 
 dpe_charity_unpopular_ruler = {
 	pop_citizen_happiness = -0.05
-	tile_resource_unity_mult = -0.25
+	country_unity_produces_mult = -0.25
 }
 
 dpe_charity_faction_undeserving = {
@@ -488,11 +479,11 @@ dpe_lost_control_faction = {
 
 
 dpe_extra_naval_expenses = {
-	ship_upkeep_mult = 0.1
+	ships_upkeep_mult = 0.1
 }
 
 dpe_extra_naval_expenses_2 = {
-	ship_upkeep_mult = 0.2
+	ships_upkeep_mult = 0.2
 }
 
 dpe_military_petition_rejected = {
@@ -635,16 +626,16 @@ dpe_planet_talented_biologist = {
 
 dpe_planet_talented_compscientist = {
 	tile_resource_society_research_mult = 0.2
-	pop_robot_build_speed_mult = 0.1
-	pop_robot_production_output = 0.1
-	
+	planet_pops_robotics_upkeep_mult = -0.10
+	planet_pop_assembly_mult = 0.25
+
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_computer_science.dds"
 }
 
 dpe_planet_talented_socscientist = {
 	tile_resource_society_research_mult = 0.2
-	mod_distance_to_capital_static_modifier_efficiency_mult = -0.15
+	planet_crime_mult = -0.15
 	planet_immigration_pull_add = 5
 
 	icon_frame = 1
@@ -652,7 +643,7 @@ dpe_planet_talented_socscientist = {
 }
 
 dpe_planet_talented_general = {
-	planet_army_build_cost_mult = -0.15
+	army_starting_experience_add = 100
 	planet_army_build_speed_mult = 0.33
 	planet_orbital_bombardment_damage = -0.2
 
@@ -661,7 +652,7 @@ dpe_planet_talented_general = {
 }
 
 dpe_planet_talented_governor = {
-	planet_building_cost_mult = -0.1
+	planet_buildings_cost_mult = -0.1
 	pop_citizen_happiness = 0.1
 
 	icon_frame = 1

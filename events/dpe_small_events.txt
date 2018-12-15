@@ -1700,16 +1700,16 @@ planet_event = {
 				}
 				count > 8
 			}
-			else = {
-				count_pops = {
-					limit = {
-						pop_produces_resource = {
-							type = energy
-							amount > 3.5
-						}
+		}
+		else = {
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = energy
+						amount > 3.5
 					}
-					count > 11
 				}
+				count > 11
 			}
 		}
 
@@ -1796,16 +1796,16 @@ planet_event = {
 				}
 				count > 8
 			}
-			else = {
-				count_pops = {
-					limit = {
-						pop_produces_resource = {
-							type = energy
-							amount > 3.5
-						}
+		}
+		else = {
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = energy
+						amount > 3.5
 					}
-					count > 11
 				}
+				count > 11
 			}
 		}
 
@@ -1893,16 +1893,16 @@ planet_event = {
 				}
 				count > 8
 			}
-			else = {
-				count_pops = {
-					limit = {
-						pop_produces_resource = {
-							type = minerals
-							amount > 3.5
-						}
+		}
+		else = {
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = minerals
+						amount > 3.5
 					}
-					count > 11
 				}
+				count > 11
 			}
 		}
 
@@ -1989,16 +1989,16 @@ planet_event = {
 				}
 				count > 8
 			}
-			else = {
-				count_pops = {
-					limit = {
-						pop_produces_resource = {
-							type = minerals
-							amount > 3.5
-						}
+		}
+		else = {
+			count_pops = {
+				limit = {
+					pop_produces_resource = {
+						type = minerals
+						amount > 3.5
 					}
-					count > 11
 				}
+				count > 11
 			}
 		}
 

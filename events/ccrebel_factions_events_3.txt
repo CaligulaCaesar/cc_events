@@ -1832,186 +1832,180 @@ country_event = {
 		if = {
 			limit = { num_owned_planets < 7 }
 			any_owned_planet = { is_faction_stronghold = yes }
-			
-			else = {
-				if = {
-					limit = { num_owned_planets < 11 }
+		}
+		else_if = {
+			limit = { num_owned_planets < 11 }
+			any_owned_planet = {
+				is_faction_stronghold = yes
+				root = {
 					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
+						is_faction_stronghold = yes
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { num_owned_planets < 20 }
+			any_owned_planet = {
+				is_faction_stronghold = yes
+				root = {
+					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
 						is_faction_stronghold = yes
 						root = {
 							any_owned_planet = {
-								NOT = { is_same_value = prevprev }
+								NOR = {
+									is_same_value = prevprev
+									is_same_value = prevprevprevprev
+								}
 								is_faction_stronghold = yes
 							}
 						}
 					}
-					
-					else = {
-						if = {
-							limit = { num_owned_planets < 20 }
-							any_owned_planet = {
-								is_faction_stronghold = yes
-								root = {
-									any_owned_planet = {
-										NOT = { is_same_value = prevprev }
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOR = {
-													is_same_value = prevprev
-													is_same_value = prevprevprevprev
-												}
-												is_faction_stronghold = yes
+				}
+			}
+		}
+		else = {
+			OR = {
+				any_owned_planet = {
+					has_planet_flag = ccrebel_red
+					is_faction_stronghold = yes
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							is_faction_stronghold = yes
+							root = {
+								any_owned_planet = {
+									NOR = {
+										is_same_value = prevprev
+										is_same_value = prevprevprevprev
+									}
+									is_faction_stronghold = yes
+									root = {
+										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_red }
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
+											is_faction_stronghold = yes
 										}
 									}
 								}
 							}
-							else = {
-								OR = {
-									any_owned_planet = {
-										has_planet_flag = ccrebel_red
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOT = { is_same_value = prevprev }
-												is_faction_stronghold = yes
-												root = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-														is_faction_stronghold = yes
-														root = {
-															any_owned_planet = {
-																NOT = { has_planet_flag = ccrebel_red }
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																}
-																is_faction_stronghold = yes
-															}
-														}
-													}
-												}
+						}
+					}
+				}
+				any_owned_planet = {
+					has_planet_flag = ccrebel_green
+					is_faction_stronghold = yes
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							is_faction_stronghold = yes
+							root = {
+								any_owned_planet = {
+									NOR = {
+										is_same_value = prevprev
+										is_same_value = prevprevprevprev
+									}
+									is_faction_stronghold = yes
+									root = {
+										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_green }
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
+											is_faction_stronghold = yes
 										}
 									}
-									any_owned_planet = {
-										has_planet_flag = ccrebel_green
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOT = { is_same_value = prevprev }
-												is_faction_stronghold = yes
-												root = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-														is_faction_stronghold = yes
-														root = {
-															any_owned_planet = {
-																NOT = { has_planet_flag = ccrebel_green }
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																}
-																is_faction_stronghold = yes
-															}
-														}
-													}
-												}
+								}
+							}
+						}
+					}
+				}
+				any_owned_planet = {
+					has_planet_flag = ccrebel_blue
+					is_faction_stronghold = yes
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							is_faction_stronghold = yes
+							root = {
+								any_owned_planet = {
+									NOR = {
+										is_same_value = prevprev
+										is_same_value = prevprevprevprev
+									}
+									is_faction_stronghold = yes
+									root = {
+										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_blue }
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
+											is_faction_stronghold = yes
 										}
 									}
-									any_owned_planet = {
-										has_planet_flag = ccrebel_blue
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOT = { is_same_value = prevprev }
-												is_faction_stronghold = yes
-												root = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-														is_faction_stronghold = yes
-														root = {
-															any_owned_planet = {
-																NOT = { has_planet_flag = ccrebel_blue }
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																}
-																is_faction_stronghold = yes
-															}
-														}
-													}
-												}
+								}
+							}
+						}
+					}
+				}
+				any_owned_planet = {
+					has_planet_flag = ccrebel_yellow
+					is_faction_stronghold = yes
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							is_faction_stronghold = yes
+							root = {
+								any_owned_planet = {
+									NOR = {
+										is_same_value = prevprev
+										is_same_value = prevprevprevprev
+									}
+									is_faction_stronghold = yes
+									root = {
+										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_yellow }
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
+											is_faction_stronghold = yes
 										}
 									}
-									any_owned_planet = {
-										has_planet_flag = ccrebel_yellow
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOT = { is_same_value = prevprev }
-												is_faction_stronghold = yes
-												root = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-														is_faction_stronghold = yes
-														root = {
-															any_owned_planet = {
-																NOT = { has_planet_flag = ccrebel_yellow }
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																}
-																is_faction_stronghold = yes
-															}
-														}
-													}
-												}
-											}
-										}
+								}
+							}
+						}
+					}
+				}
+				any_owned_planet = {
+					has_planet_flag = ccrebel_white
+					is_faction_stronghold = yes
+					root = {
+						any_owned_planet = {
+							NOT = { is_same_value = prevprev }
+							is_faction_stronghold = yes
+							root = {
+								any_owned_planet = {
+									NOR = {
+										is_same_value = prevprev
+										is_same_value = prevprevprevprev
 									}
-									any_owned_planet = {
-										has_planet_flag = ccrebel_white
-										is_faction_stronghold = yes
-										root = {
-											any_owned_planet = {
-												NOT = { is_same_value = prevprev }
-												is_faction_stronghold = yes
-												root = {
-													any_owned_planet = {
-														NOR = {
-															is_same_value = prevprev
-															is_same_value = prevprevprevprev
-														}
-														is_faction_stronghold = yes
-														root = {
-															any_owned_planet = {
-																NOT = { has_planet_flag = ccrebel_white }
-																NOR = {
-																	is_same_value = prevprev
-																	is_same_value = prevprevprevprev
-																}
-																is_faction_stronghold = yes
-															}
-														}
-													}
-												}
+									is_faction_stronghold = yes
+									root = {
+										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_white }
+											NOR = {
+												is_same_value = prevprev
+												is_same_value = prevprevprevprev
 											}
+											is_faction_stronghold = yes
 										}
 									}
 								}

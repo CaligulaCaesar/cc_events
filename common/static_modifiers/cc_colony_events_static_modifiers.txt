@@ -230,23 +230,11 @@ cc_underground_spiritualist_movement_2 = {
 
 
 cc_lingering_oppression = {
-	tile_resource_unity_mult = -0.25
-	tile_resource_minerals_mult = -0.25
-	tile_resource_food_mult = -0.25
-	tile_resource_energy_mult = -0.25
-	tile_resource_physics_research_mult = -0.25
-	tile_resource_society_research_mult = -0.25
-	tile_resource_engineering_research_mult = -0.25
+	planet_jobs_produces_mult = -0.25
 }
 
 cc_oppression = {
-	tile_resource_unity_mult = -0.5
-	tile_resource_minerals_mult = -0.5
-	tile_resource_food_mult = -0.5
-	tile_resource_energy_mult = -0.5
-	tile_resource_physics_research_mult = -0.5
-	tile_resource_society_research_mult = -0.5
-	tile_resource_engineering_research_mult = -0.5
+	planet_jobs_produces_mult = -0.5
 }
 
 
@@ -440,7 +428,7 @@ cc_underground_authoritarian_movement_2 = {
 cc_founder_militarist = {
 	planet_orbital_bombardment_damage = -0.15
 	planet_army_build_speed_mult = 0.25
-	planet_army_build_cost_mult = -0.1
+	army_starting_experience_add = 100
 	pop_citizen_happiness = 0.05
 	pop_ethic_militarist_attraction_mult = 1.5
 	icon_frame = 1
@@ -450,7 +438,7 @@ cc_founder_militarist = {
 cc_militarist_influence = {
 	planet_orbital_bombardment_damage = -0.1
 	planet_army_build_speed_mult = 0.15
-	planet_army_build_cost_mult = -0.05
+	army_starting_experience_add = 50
 	pop_ethic_militarist_attraction_mult = 0.8
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_legate.dds"
@@ -505,7 +493,7 @@ cc_building_milacademy = {
 cc_milacademy = {
 	planet_orbital_bombardment_damage = -0.2
 	planet_army_build_speed_mult = 0.5
-	planet_army_build_cost_mult = -0.15
+	army_starting_experience_add = 100
 	pop_citizen_happiness = 0.1
 	pop_ethic_militarist_attraction_mult = 1.5
 	icon_frame = 1

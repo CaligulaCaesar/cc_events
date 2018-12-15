@@ -7971,32 +7971,32 @@ country_event = {
 					}
 				}
 			}
-			else = {
-				any_owned_planet = {
-					has_planet_flag = ccrebel_perf_spiritualists_2
-					NOT = { has_planet_flag = cc_colony_story }
-					has_orbital_bombardment = no
-					exists = controller
-					controller = { is_same_value = root }
-					root = {
+		}
+		else = {
+			any_owned_planet = {
+				has_planet_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_planet_flag = cc_colony_story }
+				has_orbital_bombardment = no
+				exists = controller
+				controller = { is_same_value = root }
+				root = {
+					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
+						distance = {
+							source = prevprev
+							min_distance >= 0
+							max_distance <= 75
+						}
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+					}	
+					NOT = {
 						any_owned_planet = {
-							NOT = { is_same_value = prevprev }
 							distance = {
 								source = prevprev
 								min_distance >= 0
-								max_distance <= 75
+								max_distance <= 120
 							}
-							any_owned_pop = { has_ethic = ethic_spiritualist }
-						}	
-						NOT = {
-							any_owned_planet = {
-								distance = {
-									source = prevprev
-									min_distance >= 0
-									max_distance <= 120
-								}
-								has_modifier = cc_religious_centre
-							}
+							has_modifier = cc_religious_centre
 						}
 					}
 				}
