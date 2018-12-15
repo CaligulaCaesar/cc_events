@@ -415,8 +415,8 @@ cc_xeno_reconciliation = {
 }
 
 cc_investment_package = {
-	planet_resource_energy_add = -30
-	planet_resource_minerals_add = -30
+	planets_energy_produces_add = -30
+	planets_minerals_produces_add = -30
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_gold_pile.dds"
 }
@@ -554,7 +554,7 @@ dpe_innovative_CEO = {
 
 
 dpe_unity_planet = {
-	planet_resource_unity_add = 2
+	planets_unity_produces_add = 2
 
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_unity.dds"

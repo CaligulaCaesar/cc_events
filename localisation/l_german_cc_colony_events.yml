@@ -150,7 +150,7 @@
  cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer Imperialist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die pazifistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [pacifist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Pazifisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Denkmal zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird." 
 
  cc_colony_events.342.A:0 "Macht es. [cc_colony_leader.GetSheHeCap] hat es verdient."
- cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+ cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$mod_country_unity_produces_mult$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
  cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.343.name:0 "Pazifistisches Versammlungszentrum auf [root.GetName] eröffnet"
@@ -164,7 +164,7 @@
 
  cc_colony_events.35.C.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
 
- cc_minor_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_pacmonument$§! hinzu:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+ cc_minor_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_pacmonument$§! hinzu:\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
  cc_colony_events.351.desc:0 "Das Denkmal zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
 
  cc_pacifists_offended:0 "Beleidigte Pazifisten"
@@ -524,7 +524,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer anti-Spiritualist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die spiritualistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [spiritualist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Spiritualisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Mausoleum zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird."
 
  cc_colony_events.642.A:0 "$cc_colony_events.342.A$"
- cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+ cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$tile_resource_unity_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
  cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.643.name:0 "Mausoleum auf [root.GetName] eröffnet"
@@ -538,7 +538,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_colony_events.65.C.tooltip:0 "$cc_colony_events.35.C.tooltip$"
 
- cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_mausoleum$§! hinzu:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+ cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_mausoleum$§! hinzu:\n$tile_resource_unity_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
  cc_colony_events.651.desc:0 "Das Mausoleum zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
  
 #General random spiritualist guru

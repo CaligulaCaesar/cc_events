@@ -151,7 +151,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] terminou de visitar os m
 cc_colony_events.342.name:0 "A visita de [cc_colony_leader.GetName] pelos mundos terminou em tragédia"
 cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] estava se reunindo com apoiadores em [random_visit_planet.GetName] quando uma imperialista fanática disparou contra [cc_colony_leader.GetHimHer] antes que os guardas pudessem reagir na proteção [cc_colony_leader.GetHisHer]. Infelizmente, a multidão destruiu a assassina antes que ela pudesse ser detida. O acontecido tem alimentado teorias da conspiração, que afirmam que pessoas - ligadas até mesmo ao alto governo de [root.owner.GetSpeciesAdj] - estão por trás do assassinato. Há também alegações de que as autoridades [root.owner.GetSpeciesAdj] em [random_visit_planet.GetName] falharam em prover [cc_colony_leader.GetName] com uma força de segurança adequada, facilitando assim que a tragédia ocorresse. Como resultado, a comunidade pacifista em [root.owner.GetName] está pegando em armas. A liderança da [pacifist_faction.GetName] reuniu-se com agentes do alto governo em meio ao caos e expuseram o seu aborrecimento, mas também sugeriu que, para acalmar os ânimos dos pacifistas, [cc_colony_leader.GetName] deveria receber um funeral estatal e um grande funeral deveria ser construído em sua honra [cc_colony_leader.GetHisHer] em [root.GetName]."
 cc_colony_events.342.A:0 "Faça! [cc_colony_leader.GetSheHeCap] merece."
-cc_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para ficar pronto. Será adicionada a seguinte modificação §Y$cc_pacifist_centre$§!, granting:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+cc_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para ficar pronto. Será adicionada a seguinte modificação §Y$cc_pacifist_centre$§!, granting:\n$mod_country_unity_produces_mult$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.343.name:0 "Centro Congregacional abre em [root.GetName]"
@@ -165,7 +165,7 @@ cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] foi apenas um agitador. 
 
 cc_colony_events.35.C.tooltip:0 "[root.GetName] estará livre da influência de [cc_colony_leader.GetName] em 30 anos."
 
-cc_minor_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para terminar. O seguinte efeito será aplicado §Y$cc_minor_pacmonument$§!, granting:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+cc_minor_pacmonument_will_be_built:0 "\nO Monumento vai levar 5 anos para terminar. O seguinte efeito será aplicado §Y$cc_minor_pacmonument$§!, granting:\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
 cc_colony_events.351.desc:0 "O Monumento em honra de [cc_colony_leader.GetName] está pronto. A população em [root.GetName] agora tem um lugar para lembrar-se dos ensinamentos e conquistas [cc_colony_leader.GetHisHer]."
 
 
@@ -528,7 +528,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "Turnê em Outros Mundos [cc_colony_leader.GetName] Termina em Tragédia"
 cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] reuniu-se com apoiadores em [random_visit_planet.GetName] quando um anti-espiritualista fanático atirou contra [cc_colony_leader.GetHimHer] antes que os guardas [cc_colony_leader.GetHisHer] pudessem reagir em sua defesa. Infelizmente, a multidão destruiu o assassino antes que ele pudesse ser detido. Teorias da conspiração tem se alimentado do caso, teorias que afirmam que pessoas - até mesmo do alto escalão do governo [root.owner.GetSpeciesAdj] - estão por trás do assassinato. Há também alegações de que as autoridades [root.owner.GetSpeciesAdj] em [random_visit_planet.GetName] falharam em prover a [cc_colony_leader.GetName] com uma força de segurança adequada, permitindo que a infeliz tragédia acontecesse. Como resultado, a comunidade espiritualista em [root.owner.GetName] está em armas. As lideranças de [spiritualist_faction.GetName] tem se reunido com autoridades de alto escalão do governo em meio ao caos e deixado claro o seu aborrecimento, mas sugeriram que, para aliviar os ânimos dos espiritualistas, [cc_colony_leader.GetName] deve receber um funeral estatal e um grande Mausoléu deve ser construído em honra [cc_colony_leader.GetHisHer] em [root.GetName]."
 cc_colony_events.642.A:0 "Faça isso. [cc_colony_leader.GetSheHeCap] merece."
-cc_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 5 anos para ficar pronto. O seguinte modificador será adicionado §Y$cc_religious_centre$§!, granting:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 5 anos para ficar pronto. O seguinte modificador será adicionado §Y$cc_religious_centre$§!, granting:\n$tile_resource_unity_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "Mausoléu abre em [root.GetName]"
@@ -542,7 +542,7 @@ cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap] foi só um[cc_colony_lea
 
 cc_colony_events.65.C.tooltip:0 "[root.GetName] vai estar livre da influência de [cc_colony_leader.GetName] em 30 anos."
 
-cc_minor_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 30 anos para ficar pronto. Adicionará os seguintes efeitos §Y$cc_minor_mausoleum$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+cc_minor_mausoleum_will_be_built:0 "\nO Mausoléu vai levar 30 anos para ficar pronto. Adicionará os seguintes efeitos §Y$cc_minor_mausoleum$§!, granting:\n$tile_resource_unity_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
 cc_colony_events.651.desc:0 "O Mausoléu em honra de [cc_colony_leader.GetName] está pronto. O povo em [root.GetName] agora tem um lugar para se lembrar dos ensinamentos e conquistas [cc_colony_leader.GetHisHer]."
 
 #General random spiritualist guru

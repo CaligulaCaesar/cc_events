@@ -152,7 +152,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]已经完成了对自己�
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]的星际旅程以悲剧告终"
 cc_colony_events.342.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的帝国主义者在安保人员作出反应之前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的人群当场将凶手杀死，我们无法对其展开审讯。阴谋论大行其道，声称一些人 - 甚至包括[root.owner.GetSpeciesAdj]政府的高层--是此次暗杀的幕后黑手。还有一些声音认为[random_visit_planet.GetName]上的[root.owner.GetSpeciesAdj]官员没有给[cc_colony_leader.GetName]提供足够的安保措施，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的和平主义团体激愤难平。和平主义派系领导人[pacifist_faction.GetName]在一片混乱中与政府官员进行了会面，表达了他们的震怒，但同时也提议为了平息和平主义者们的怒火，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为他建立一座纪念碑。"
 cc_colony_events.342.A:0 "照做。[cc_colony_leader.GetSheHeCap]配得上这样的荣誉"
-cc_pacmonument_will_be_built:0 "\n纪念碑会在5年后完成。 将会添加如下调整值：T §Y$cc_pacifist_centre$§!，效果：\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+cc_pacmonument_will_be_built:0 "\n纪念碑会在5年后完成。 将会添加如下调整值：T §Y$cc_pacifist_centre$§!，效果：\n$mod_country_unity_produces_mult$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.343.name:0 "[root.GetName]上的纪念碑揭幕"
@@ -166,7 +166,7 @@ cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap]只是个麻烦人物。�
 
 cc_colony_events.35.C.tooltip:0 "[root.GetName]将会在30年内摆脱[cc_colony_leader.GetName]的影响。"
 
-cc_minor_pacmonument_will_be_built:0 "\n纪念碑会在5年后完成。 将会添加如下调整值： §Y$cc_minor_pacmonument$§!，效果:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+cc_minor_pacmonument_will_be_built:0 "\n纪念碑会在5年后完成。 将会添加如下调整值： §Y$cc_minor_pacmonument$§!，效果:\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
 cc_colony_events.351.desc:0 "为悼念[cc_colony_leader.GetName]而建的纪念碑已经完工。[root.GetName]上的民众现在有了缅怀其教导与成就的地方。"
 
 
@@ -524,7 +524,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "[cc_colony_leader.GetName]的星际旅行以悲剧收场"
 cc_colony_events.642.desc:0 "当[cc_colony_leader.GetName]在[random_visit_planet.GetName]上会见支持者时，一名狂热的反唯心主义者在保镖作出反应前将[cc_colony_leader.GetHimHer]射杀。不幸的是，狂怒的现场群众在我们有机会前审讯凶手前就将他撕碎。阴谋论大行其道，声称有人--甚至可能是[root.owner.GetSpeciesAdj]政府中的高层--暗中策划了刺杀。也有声音指责[random_visit_planet.GetName]上的当地政府没有给[cc_colony_leader.GetName]配备足够的安保力量，间接导致了悲剧的发生。此事导致[root.owner.GetName]上的唯心主义团体奋起抗议。唯心主义派系领导[spiritualist_faction.GetName]在动乱中与政府官员会面，明确表达了他们的愤怒，但同时也表示，为平息唯心主义者们的伤痛，应该为[cc_colony_leader.GetName]举行国葬，并在[root.GetName]上为[cc_colony_leader.GetHimHer]建起一座陵墓。"
 cc_colony_events.642.A:0 "批准。[cc_colony_leader.GetSheHeCap]值得如此纪念"
-cc_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_religious_centre$§!，效果:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_religious_centre$§!，效果:\n$tile_resource_unity_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "[root.GetName]上的陵墓揭幕"
@@ -538,7 +538,7 @@ cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap]只是个麻烦制造者�
 
 cc_colony_events.65.C.tooltip:0 "[root.GetName]将会在30年内摆脱[cc_colony_leader.GetName]的影响。"
 
-cc_minor_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_minor_mausoleum$§!，效果:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+cc_minor_mausoleum_will_be_built:0 "\n陵墓会在5年后完成。将添加如下调整值： §Y$cc_minor_mausoleum$§!，效果:\n$tile_resource_unity_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
 cc_colony_events.651.desc:0 "[cc_colony_leader.GetName]的陵墓已经完工。[root.GetName]上的民众现在有了缅怀其教导与成就的地方。"
 
 #General random spiritualist guru
