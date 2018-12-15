@@ -3916,51 +3916,13 @@ country_event = {
 		}
 
 		event_target:dpe_mission_host_planet = {
-			if = {
-				limit = { free_pop_tiles = 0 }
-				hidden_effect = {
-					if = {
-						limit = {
-							any_pop = {
-								prev = {
-									any_owned_pop = {
-										NOT = { is_same_value = prevprev }
-										is_same_species = prevprev
-									}
-								}
-							}
-						}
-						random_pop = {
-							limit = {
-								prev = {
-									any_owned_pop = {
-										NOT = { is_same_value = prevprev }
-										is_same_species = prevprev
-									}
-								}
-							}
-							kill_pop = yes
-						}
+			while = {
+				count = 3
+				create_pop = {
+					species = from
+					ethos = {
+						ethic = "ethic_spiritualist"			
 					}
-					else = {
-						random_pop = {
-							limit = {
-								root = {
-									any_owned_pop = {
-										NOT = { is_same_value = prevprev }
-										is_same_species = prevprev
-									}
-								}
-							}
-							kill_pop = yes
-						}
-					}
-				}
-			}
-			create_pop = {
-				species = from
-				ethos = {
-					ethic = "ethic_spiritualist"			
 				}
 			}
 			add_modifier = {
@@ -4797,83 +4759,42 @@ country_event = {
 	option = {
 		name = dpe_spiritualist_mission.991.A
 		
-		if = {
-			limit = {
-				event_target:dpe_mission_host_planet = { free_pop_tiles > 1 }
-			}
-			event_target:dpe_mission_host_planet = {
-				while = {
-					count = 2
-					create_pop = {
-						species = from
-						ethos = {
-							ethic = "ethic_spiritualist"			
-						}
+		event_target:dpe_mission_host_planet = {
+			while = {
+				count = 3
+				create_pop = {
+					species = from
+					ethos = {
+						ethic = "ethic_spiritualist"			
 					}
 				}
-				add_modifier = {
-					modifier = dpe_missionary_planet
-					days = -1
-				}
 			}
-		}
-		else = {
-			random_owned_planet = {
-				limit = { free_pop_tiles > 1 }
-				while = {
-					count = 2
-					create_pop = {
-						species = from
-						ethos = {
-							ethic = "ethic_spiritualist"			
-						}
-					}
-				}
-				add_modifier = {
-					modifier = dpe_missionary_planet
-					days = -1
-				}
+			add_modifier = {
+				modifier = dpe_missionary_planet
+				days = -1
 			}
 		}
 			
 		trigger = {
 			NOR = {
+				allows_slavery = yes
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
 			}
 		}
-		allow = { any_owned_planet = { free_pop_tiles > 1 } }
+		
 		ai_chance = { factor = 10 }
 	}
 	option = {
 		name = dpe_spiritualist_mission.991.B
 		
-		if = {
-			limit = {
-				event_target:dpe_mission_host_planet = { free_pop_tiles > 1 }
-			}
-			event_target:dpe_mission_host_planet = {
-				while = {
-					count = 2
-					create_pop = {
-						species = from
-						ethos = {
-							ethic = "ethic_spiritualist"			
-						}
-					}
-				}
-			}
-		}
-		else = {
-			random_owned_planet = {
-				limit = { free_pop_tiles > 1 }
-				while = {
-					count = 2
-					create_pop = {
-						species = from
-						ethos = {
-							ethic = "ethic_spiritualist"			
-						}
+		event_target:dpe_mission_host_planet = {
+			while = {
+				count = 3
+				create_pop = {
+					species = from
+					ethos = {
+						ethic = "ethic_spiritualist"			
 					}
 				}
 			}
@@ -4887,7 +4808,6 @@ country_event = {
 			}
 			NOT = { allows_purge = yes }
 		}
-		allow = { any_owned_planet = { free_pop_tiles > 1 } }
 		ai_chance = { factor = 10 }
 	}
 	option = {

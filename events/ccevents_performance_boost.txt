@@ -64,60 +64,17 @@ event = {
 		
 		every_country = {
 			every_owned_planet = {
-				limit = { has_building = building_capital_3 }
-				if = {
-					limit = {
-						OR = {
-							AND = {
-								has_building = building_physics_lab_3
-								has_building = building_engineering_facility_3
-								has_building = building_biolab_4
-							}
-							AND = {
-								has_building = building_physics_lab_3
-								has_building = building_engineering_facility_4
-								has_building = building_biolab_3
-							}
-							AND = {
-								has_building = building_physics_lab_4
-								has_building = building_engineering_facility_3
-								has_building = building_biolab_3
-							}
-						}
+				limit = {
+					has_building = building_major_capital
+					planet_stability > 60
+					num_pops > 65
+					NOT = {
+						any_owned_pop = { has_job = unemployed }
 					}
-					set_timed_planet_flag = {
-						flag = cc_eventperf_developed_planet
-						days = 365
-					}
-					if = {
-						limit = {
-							OR = {
-								AND = {
-									has_building = building_power_plant_4
-									has_building = building_hydroponics_farm_3
-									has_building = building_mining_network_3
-								}
-								AND = {
-									has_building = building_power_plant_3
-									has_building = building_hydroponics_farm_4
-									has_building = building_mining_network_3
-								}
-								AND = {
-									has_building = building_power_plant_3
-									has_building = building_hydroponics_farm_3
-									has_building = building_mining_network_4
-								}
-							}
-							OR = {
-								has_building = building_mineral_processing_plant_2
-								has_building = building_power_hub_2
-							}
-						}
-						set_timed_planet_flag = {
-							flag = cc_eventperf_highly_developed_planet
-							days = 365
-						}
-					}
+				}
+				set_timed_planet_flag = {
+					flag = cc_eventperf_developed_planet
+					days = 365
 				}
 			}
 			if = {
