@@ -86,7 +86,7 @@ dpe_spirmission_killed_faction1 = { faction_approval = -0.1 }
 
 dpe_spirmission_planet_xenos_unwelcome = {
 	pop_ethic_xenophobe_attraction_mult = 2
-	planet_migration_xeno_pull = -0.5
+	planet_immigration_pull_mult = -0.5
 
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_hate_speech.dds"
@@ -144,13 +144,13 @@ dpe_xenomission_imprisoned_citizens_phobe_faction = {
 #Contraband 
 
 dpe_drug_cartels_crackdown = {
-	tile_resource_energy_mult = -0.1
-	tile_resource_minerals_mult = -0.1
+	country_energy_produces_mult = -0.1
+	country_minerals_produces_mult = -0.1
 }
 
 dpe_taxing_drugs = {
-	tile_resource_energy_mult = 0.05
-	tile_resource_minerals_mult = -0.05
+	country_energy_produces_mult = 0.05
+	planet_amenities_mult = -0.1
 }
 
 dpe_taxing_drugs_faction = {
@@ -159,7 +159,8 @@ dpe_taxing_drugs_faction = {
 
 dpe_contraband_crisis = {
 	pop_citizen_happiness = -0.1
-	tile_resource_minerals_mult = -0.05
+	country_minerals_produces_mult = -0.05
+	planet_amenities_mult = -0.05
 }
 
 dpe_taking_action_drugs_faction = {
@@ -167,15 +168,15 @@ dpe_taking_action_drugs_faction = {
 }
 
 dpe_drug_cartels_tolerate = {
-	tile_resource_energy_mult = 0.05
+	country_energy_produces_mult = 0.05
 }
 
 dpe_drug_cartels_extort = {
-	tile_resource_energy_mult = 0.1
+	country_energy_produces_mult = 0.1
 }
 
 dpe_drug_trade_legit = {
-	tile_resource_energy_mult = 0.05
+	country_energy_produces_mult = 0.05
 }
 
 dpe_contraband_stop_and_search_faction = {

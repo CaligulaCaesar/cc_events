@@ -1,17 +1,17 @@
 
 cc_pacifist_protectorate = {
 	pop_ethic_pacifist_attraction_mult = 1.5
-	planet_resource_unity_add = 2
+	planets_unity_produces_add = 2
 	pop_happiness = 0.05
-	tile_resource_minerals_mult = -0.25
-	tile_resource_energy_mult = -0.25
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_energy_produces_mult = -0.25
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_pacifist.dds"
 }
 	
 cc_pacifists_offended = {
 	pop_happiness = -0.2
-	tile_resource_unity_mult = -0.5
+	planet_jobs_unity_produces_mult = -0.5
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_pacifist.dds"
 }
@@ -54,15 +54,15 @@ cc_mourning_and_angry_pacifist = {
 }
 
 cc_building_pacmonument = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
 }
 
 cc_minor_pacmonument = {
-	planet_resource_unity_add = 2
+	planets_unity_produces_add = 2
 	pop_happiness = 0.05
 	pop_ethic_pacifist_attraction_mult = 1.5
 	icon_frame = 1
@@ -70,7 +70,7 @@ cc_minor_pacmonument = {
 }
 
 cc_pacifist_centre = {
-	planet_resource_unity_add = 5
+	planets_unity_produces_add = 5
 	pop_happiness = 0.1
 	pop_ethic_pacifist_attraction_mult = 2.5
 	icon_frame = 1
@@ -91,8 +91,8 @@ cc_founders_memory_disrespected_2_pacifist = {
 
 cc_underground_pacifist_movement_1 = {
 	pop_ethic_pacifist_attraction_mult = 1.5
-	tile_resource_minerals_mult = -0.25
-	tile_resource_energy_mult = -0.25
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_energy_produces_mult = -0.25
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_pacifist.dds"
 }
@@ -100,8 +100,8 @@ cc_underground_pacifist_movement_1 = {
 cc_underground_pacifist_movement_2 = {
 	pop_ethic_pacifist_attraction_mult = 1.5
 	planet_stability_add = -15
-	tile_resource_minerals_mult = -0.25
-	tile_resource_energy_mult = -0.25
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_energy_produces_mult = -0.25
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_interior_battle.dds"
 }
@@ -110,7 +110,7 @@ cc_underground_pacifist_movement_2 = {
 
 cc_founder_spiritualist = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
-	tile_resource_unity_mult = 0.25
+	planet_jobs_unity_produces_mult = 0.25
 	
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_prophet.dds"
@@ -118,7 +118,7 @@ cc_founder_spiritualist = {
 
 cc_famous_guru = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
-	tile_resource_unity_mult = 0.25
+	planet_jobs_unity_produces_mult = 0.25
 	
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_prophet.dds"
@@ -141,16 +141,16 @@ cc_mourning_and_angry_spiritualist = {
 }
 
 cc_building_mausoleum = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
 }
 
 cc_minor_mausoleum = {
-	tile_resource_unity_mult = 0.25
-	planet_resource_unity_add = 1
+	planet_jobs_unity_produces_mult = 0.25
+	planets_unity_produces_add = 1
 	pop_happiness = 0.05
 	pop_ethic_spiritualist_attraction_mult = 1.5
 	icon_frame = 1
@@ -158,8 +158,8 @@ cc_minor_mausoleum = {
 }
 
 cc_religious_centre = {
-	tile_resource_unity_mult = 0.5
-	planet_resource_unity_add = 2
+	planet_jobs_unity_produces_mult = 0.5
+	planets_unity_produces_add = 2
 	pop_happiness = 0.1
 	planet_immigration_pull_add = 20
 	pop_ethic_spiritualist_attraction_mult = 2.5
@@ -169,16 +169,16 @@ cc_religious_centre = {
 
 cc_spiritualist_protectorate = {
 	pop_ethic_spiritualist_attraction_mult = 1.5
-	tile_resource_unity_mult = 0.25
-	tile_resource_minerals_mult = -0.25
-	tile_resource_energy_mult = -0.25
+	planet_jobs_unity_produces_mult = 0.25
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_energy_produces_mult = -0.25
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_spiritualist.dds"
 }
 	
 cc_spiritualists_offended = {
 	pop_happiness = -0.2
-	tile_resource_unity_mult = -0.5
+	planet_jobs_unity_produces_mult = -0.5
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_spiritualist.dds"
 }
@@ -253,9 +253,9 @@ cc_arrested_guru = {
 cc_colony_direct_democracy = {
 	pop_ethic_egalitarian_attraction_mult = 1.5
 	pop_citizen_happiness = 0.1
-	planet_resource_influence_add = 0.33
-	tile_resource_energy_mult = -0.1
-	tile_resource_minerals_mult = -0.1
+	planets_influence_produces_add = 0.33
+	planet_jobs_energy_produces_mult = -0.1
+	planet_jobs_minerals_produces_mult = -0.1
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_egalitarian.dds"
@@ -303,7 +303,7 @@ cc_underground_egalitarian_movement_2 = {
 cc_founder_materialist = {
 	pop_ethic_materialist_attraction_mult = 1.5
 	pop_growth_speed = 0.1
-	planet_building_cost_mult = -0.2
+	planet_buildings_cost_mult = -0.2
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_good_materialist.dds"
 }
@@ -322,17 +322,17 @@ cc_major_protests_materialist = {
 }
 
 cc_building_university = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_university.dds"
 }
 
 cc_university = {
-	tile_resource_physics_research_mult = 0.33
-	tile_resource_society_research_mult = 0.33
-	tile_resource_engineering_research_mult = 0.33
+	planet_jobs_physics_research_produces_mult = 0.33
+	planet_jobs_society_research_produces_mult = 0.33
+	planet_jobs_engineering_research_produces_mult = 0.33
 	planet_immigration_pull_add = 10
 	pop_ethic_materialist_attraction_mult = 1.5
 	icon_frame = 1
@@ -365,9 +365,9 @@ cc_founders_memory_disrespected_1_materialist = {
 
 cc_materialists_offended = {
 	pop_happiness = -0.2
-	tile_resource_physics_research_mult = -0.33
-	tile_resource_society_research_mult = -0.33
-	tile_resource_engineering_research_mult = -0.33
+	planet_jobs_physics_research_produces_mult = -0.33
+	planet_jobs_society_research_produces_mult = -0.33
+	planet_jobs_engineering_research_produces_mult = -0.33
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_materialist.dds"
 }
@@ -378,9 +378,9 @@ cc_materialists_offended = {
 cc_colony_monarchy = {
 	pop_ethic_authoritarian_attraction_mult = 1.5
 	pop_citizen_happiness = 0.1
-	planet_resource_influence_add = 0.33
-	tile_resource_energy_mult = -0.1
-	tile_resource_minerals_mult = -0.1
+	planets_influence_produces_add = 0.33
+	planet_jobs_energy_produces_mult = -0.1
+	planet_jobs_minerals_produces_mult = -0.1
 
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_monarchy.dds"
@@ -388,7 +388,7 @@ cc_colony_monarchy = {
 
 cc_colony_monarchy_unhappy = {
 	pop_citizen_happiness = -0.2
-	tile_resource_unity_mult = -0.5
+	planet_jobs_unity_produces_mult = -0.5
 	pop_government_ethic_attraction = -0.35
 	
 	icon_frame = 2
@@ -483,8 +483,8 @@ cc_milacademy_built_faction = {
 }
 
 cc_building_milacademy = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_legate.dds"
@@ -540,8 +540,8 @@ cc_xenophobe_assassinated = {
 }
 
 cc_founder_xenophobe = {
-	planet_migration_same_pull = 0.5
-	planet_migration_xeno_pull = -0.5
+	planet_immigration_pull_mult = -0.5
+	planet_emigration_push_mult = -0.5
 	pop_citizen_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	icon_frame = 1
@@ -588,26 +588,26 @@ cc_xenophobe_institute_built_faction = {
 }
 
 cc_building_xenophobe_institute = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
 }
 
 cc_xenophobe_institute = {
-	tile_resource_unity_mult = 0.25
-	planet_migration_same_pull = 0.5
-	planet_migration_xeno_pull = -1
-	pop_happiness = 0.1
+	planet_jobs_unity_produces_mult = 0.25
+	planet_immigration_pull_mult = -0.5
+	planet_emigration_push_mult = -0.5
+	pop_citizen_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 2.5
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
 }
 
 cc_minor_xenophobe_institute = {
-	planet_migration_same_pull = 0.5
-	planet_migration_xeno_pull = -1
+	planet_immigration_pull_mult = -0.5
+	planet_emigration_push_mult = -0.5
 	pop_happiness = 0.05
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	icon_frame = 1
@@ -627,7 +627,8 @@ cc_founders_memory_disrespected_2_xenophobe = {
 }
 
 cc_hostile_towards_xenos = {
-	pop_other_species_happiness	= -0.1
+	pop_citizen_happiness	= 0.1
+	pop_happiness	= -0.1
 	pop_ethic_xenophobe_attraction_mult = 1
 }
 
@@ -651,7 +652,7 @@ cc_xenophobe_hero_1 = {
 
 #Xenophiles
 cc_founder_xenophile = {
-	planet_migration_xeno_pull = 1
+	planet_immigration_pull_mult = 1
 	pop_happiness = 0.05
 	pop_ethic_xenophile_attraction_mult = 1.5
 	icon_frame = 1
@@ -694,16 +695,16 @@ cc_xenophiles_offended = {
 }
 
 cc_building_xenophile_institute = {
-	tile_resource_minerals_mult = -0.5
-	tile_resource_energy_mult = -0.5
+	planet_jobs_minerals_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.5
 	
 	icon_frame = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
 }
 
 cc_xenophile_institute = {
-	tile_resource_unity_mult = 0.25
-	planet_migration_xeno_pull = 1
+	planet_jobs_unity_produces_mult = 0.25
+	planet_immigration_pull_mult = 1
 	pop_happiness = 0.05
 	pop_ethic_xenophile_attraction_mult = 2.5
 	icon_frame = 1

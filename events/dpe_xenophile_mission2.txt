@@ -86,7 +86,7 @@ event = {
 										limit = {
 											is_pop_faction_type = xenoist
 											support > 0.15
-											faction_approval > @cc_faction_happy_number
+											any_pop = { faction_approval > @cc_faction_happy_number }
 										}
 										count = 1
 									}
@@ -189,7 +189,7 @@ country_event = {
 				limit = {
 					is_pop_faction_type = xenoist
 					support > 0.15
-					faction_approval > @cc_faction_happy_number
+					any_pop = { faction_approval > @cc_faction_happy_number }
 				}
 				count = 1
 			}
@@ -1274,7 +1274,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.1
-						faction_approval < @cc_faction_danger_number
+						any_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count > 0
 				}
@@ -1467,7 +1467,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.12
-						faction_approval < @cc_faction_danger_number
+						any_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count > 0
 				}
@@ -1620,7 +1620,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						faction_approval < @cc_faction_danger_number
+						any_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count = 0
 				}
@@ -1739,7 +1739,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						faction_approval < @cc_faction_danger_number
+						any_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count = 0
 				}

@@ -836,7 +836,7 @@ country_event = {
 			count_pop_factions = {
 				limit = {
 					is_pop_faction_type = imperialist
-					faction_approval < @cc_faction_danger_number
+					any_pop = { faction_approval < @cc_faction_danger_number }
 				}
 				count = 1
 			}
@@ -918,7 +918,7 @@ country_event = {
 			count_pop_factions = {
 				limit = {
 					is_pop_faction_type = imperialist
-					faction_approval < @cc_faction_danger_number
+					any_pop = { faction_approval < @cc_faction_danger_number }
 				}
 				count = 1
 			}
@@ -1136,7 +1136,7 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				faction_approval < @cc_faction_danger_number
+				any_pop = { faction_approval < @cc_faction_danger_number }
 			}
 			count = 1
 		}
@@ -1178,7 +1178,7 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				faction_approval < @cc_faction_danger_number
+				any_pop = { faction_approval < @cc_faction_danger_number }
 			}
 			count = 1
 		}
@@ -1337,7 +1337,7 @@ country_event = {
 						count_pop_factions = {
 							limit = {
 								is_pop_faction_type = imperialist
-								faction_approval < 45
+								any_pop = { faction_approval < 45 }
 							}
 							count = 1
 						}
@@ -1388,7 +1388,7 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				faction_approval < 45
+				any_pop = { faction_approval < 45 }
 			}
 			count = 1
 		}
