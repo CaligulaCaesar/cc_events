@@ -1093,3 +1093,83 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = cctest.800
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_pop_factions = {
+					count = 1
+					limit = {
+						is_pop_faction_type = xenoist
+						any_pop = { faction_approval < 1 }
+					}
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_factions_1
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					count = 1
+					limit = {
+						is_pop_faction_type = xenoist
+						any_pop = { faction_approval > 1 }
+					}
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_factions_2
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					count = 1
+					limit = {
+						is_pop_faction_type = xenoist
+						any_pop = { faction_approval < 0.7 }
+					}
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_factions_1
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				count_pop_factions = {
+					count = 1
+					limit = {
+						is_pop_faction_type = xenoist
+						any_pop = { faction_approval > 0.2 }
+						NOT = {
+							any_pop = { faction_approval > 1 }
+						}
+					}
+				}
+			}
+			capital_scope = {
+				change_variable = {
+					which = cctest_factions_1
+					value = 1
+				}
+			}
+		}
+	}
+}

@@ -1337,7 +1337,7 @@ country_event = {
 						count_pop_factions = {
 							limit = {
 								is_pop_faction_type = imperialist
-								any_pop = { faction_approval < 45 }
+								any_pop = { faction_approval < 0.45 }
 							}
 							count = 1
 						}
@@ -1388,7 +1388,7 @@ country_event = {
 		count_pop_factions = {
 			limit = {
 				is_pop_faction_type = imperialist
-				any_pop = { faction_approval < 45 }
+				any_pop = { faction_approval < 0.45 }
 			}
 			count = 1
 		}

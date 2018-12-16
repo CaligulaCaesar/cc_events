@@ -1519,9 +1519,16 @@ country_event = {
 		
 		add_monthly_resource_mult = {
 			resource = physics_research
-			value = @tier3researchreward
-			min = @tier3researchmin
-			max = @tier3researchmax
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
+		}
+
+		add_monthly_resource_mult = {
+			resource = consumer_goods
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
 		}
 
 		random_pop_faction = {
