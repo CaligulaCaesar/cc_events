@@ -397,6 +397,7 @@ country_event = {
 		NOT = {
 			has_country_flag = dpe_recent_election_positive
 		}
+		has_factional_revolt_stage3 = no
 
 		count_pop_factions = {
 			limit = {
@@ -443,6 +444,10 @@ country_event = {
 					remove_all_faction_strongholds = yes
 					remove_all_faction_sympathies = yes
 					remove_all_faction_seditions = yes
+				}
+				set_timed_country_flag = {
+					flag = cc_faction_ended
+					days = 4800
 				}
 			}
 		}

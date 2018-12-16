@@ -1242,7 +1242,7 @@ ethic_xenophobe = {
 			allows_alien_leaders = yes
 		}		
 		modifier = {
-			factor = 3.0
+			factor = 2.0
 			any_war = {
 				any_defender = {
 					is_same_value = prevprev
@@ -1268,7 +1268,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 1.5
 			is_country_type = default
 			is_same_species = root
 			any_relation = {
@@ -1281,7 +1281,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 4.0
+			factor = 3.0
 			is_country_type = default
 			is_same_species = root
 			any_relation = {
@@ -1405,7 +1405,10 @@ ethic_xenophobe = {
 				any_owned_pop = {
 					not = { is_same_species = root }
 					is_robot_pop = no
-					is_enslaved = yes
+					OR = {
+						is_enslaved = yes
+						is_being_purged = yes
+					}
 				}
 			}
 		}
@@ -1914,13 +1917,13 @@ ethic_xenophile = {
 			has_trait = trait_hive_mind
 		}	
 		modifier = {
-			factor = 2
+			factor = 1.35
 			not = { is_same_species = root }
 			has_citizenship_rights = yes
 			is_enslaved = no
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.65
 			has_citizenship_rights = no
 			NOT = { is_same_species = from.owner }
 		}
@@ -1933,6 +1936,7 @@ ethic_xenophile = {
 					is_enslaved = no
 					has_citizenship_rights = yes
 					is_robot_pop = no
+					NOT = { has_ethic = ethic_xenophobe }
 				}
 			}
 		}
@@ -3819,10 +3823,6 @@ ethic_materialist = {
 			}
 		}
 		modifier = {
-			factor = 1.2
-			is_pop_category = worker
-		}
-		modifier = {
 			factor = 0.7
 			from = {
 				planet_stability < @dpe_bit_unrest_value
@@ -3944,7 +3944,14 @@ ethic_materialist = {
 			has_trait = "trait_robot_logic_engines"
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.33
+			is_pop_category = ruler
+			owner = {
+				has_authority = auth_oligarchic
+			}
+		}
+		modifier = {
+			factor = 1.75
 			is_pop_category = specialist
 		}
 		modifier = {

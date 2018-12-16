@@ -842,7 +842,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-	
+		NOT = { has_country_flag = cc_faction_ended }
 		exists = event_target:cc_rebellious_faction
 		count_pop_factions = {
 			limit = {
@@ -1067,7 +1067,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	trigger = { NOT = { has_country_flag = cc_continue_factional_revolt } }
+	trigger = {
+		NOT = { has_country_flag = cc_continue_factional_revolt }
+		NOT = { has_country_flag = cc_faction_ended }
+	}
 	
 	option = {
 		name = CCGOOD
@@ -1096,6 +1099,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = { has_country_flag = cc_faction_ended }
 		count_pop_factions = {
 			limit = {
 				is_a_vanilla_faction = yes
@@ -1829,6 +1833,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = { has_country_flag = cc_faction_ended }
 		if = {
 			limit = { num_owned_planets < 7 }
 			any_owned_planet = { is_faction_stronghold = yes }
