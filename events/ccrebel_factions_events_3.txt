@@ -2482,7 +2482,7 @@ country_event = {
 				}
 				modifier = {
 					factor = 1.5
-					has_country_flag = cc_factional_revolt_attempt_2planets
+					has_country_flag = cc_factional_revolt_attempt_3planets
 				}
 				modifier = {
 					factor = 2
@@ -3041,7 +3041,7 @@ country_event = {
 										}
 									}
 									event_target:deleted_ship = {
-										set_leader = event_target:cc_rebellious_faction_leader
+										assign_leader = event_target:cc_rebellious_faction_leader
 										leader = { exile_leader_as = cc_rebellious_faction_leader }
 										delete_fleet = this
 									}
@@ -3102,7 +3102,7 @@ country_event = {
 										}
 									}
 									event_target:deleted_ship = {
-										set_leader = event_target:cc_new_reb_faction_leader
+										assign_leader = event_target:cc_new_reb_faction_leader
 										leader = { exile_leader_as = cc_new_reb_faction_leader }
 										delete_fleet = this
 									}
@@ -3129,7 +3129,7 @@ country_event = {
 								}
 							}
 							event_target:deleted_ship = {
-								set_leader = event_target:cc_new_reb_faction_leader
+								assign_leader = event_target:cc_new_reb_faction_leader
 								leader = { unassign_leader = this }
 								delete_fleet = this
 							}
@@ -3624,7 +3624,7 @@ country_event = {
 											}
 										}
 										event_target:deleted_ship = {
-											set_leader = event_target:cc_new_reb_faction_leader
+											assign_leader = event_target:cc_new_reb_faction_leader
 											leader = { exile_leader_as = cc_new_reb_faction_leader }
 											delete_fleet = this
 										}

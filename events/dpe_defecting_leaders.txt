@@ -450,7 +450,7 @@ country_event = {
 					}
 				}
 				event_target:deleted_ship = {
-					set_leader = event_target:dpe_defect_leader
+					assign_leader = event_target:dpe_defect_leader
 					leader = { exile_leader_as = dpe_defect_leader }
 					delete_fleet = this
 				}
