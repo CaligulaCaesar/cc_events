@@ -40,6 +40,7 @@ event = {
 			}
 			every_relation = {
 				limit = {
+					has_communications = prev
 					NOT = {
 						has_relation_flag = {
 							who = prev
@@ -662,6 +663,8 @@ country_event = {
 			days = 4000
 		}
 
+		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -704,8 +707,6 @@ country_event = {
 				} 
 			}
 		}
-		
-		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
 	}
 }
 
@@ -3574,13 +3575,6 @@ country_event = {
 	}
 
 	immediate = {
-		from = {
-			set_relation_flag = {
-				flag = dpe_xenophile_mission_ended
-				who = root
-			}
-			set_country_flag = dpe_xenomission_disaster
-		}
 		remove_opinion_modifier = {
 			modifier = dpe_xenophile_mission_opinion
 			who = from
@@ -3589,6 +3583,18 @@ country_event = {
 			remove_opinion_modifier = {
 				modifier = dpe_xenophile_mission_opinion
 				who = root
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			from = {
+				set_relation_flag = {
+					flag = dpe_xenophile_mission_ended
+					who = root
+				}
+				set_country_flag = dpe_xenomission_disaster
 			}
 		}
 	}
@@ -3779,6 +3785,10 @@ country_event = {
 
 	diplomatic = yes
 
+	trigger = {
+		exists = from
+	}
+
 	picture_event_data = {
 		portrait = from
 		planet_background = from
@@ -3791,6 +3801,10 @@ country_event = {
 		name = dpe_xenophile_mission.24.A
 		
 		set_subject_of = { who = from subject_type = tributary }
+
+		from = {
+			country_event = { id = dpe_xenophile_mission.251 }
+		}
 
 		ai_chance = {
 			factor = 1
@@ -3812,6 +3826,10 @@ country_event = {
 		add_modifier = {
 			modifier = dpe_xenomission_abandoned_hostages
 			days = 3600
+		}
+
+		from = {
+			country_event = { id = dpe_xenophile_mission.252 }
 		}
 
 		ai_chance = {
@@ -3839,6 +3857,10 @@ country_event = {
 	is_triggered_only = yes
 
 	diplomatic = yes
+
+	trigger = {
+		exists = from
+	}
 
 	picture_event_data = {
 		portrait = from
@@ -3868,6 +3890,10 @@ country_event = {
 			days = 5400
 		}
 
+		from = {
+			country_event = { id = dpe_xenophile_mission.251 }
+		}
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -3890,6 +3916,10 @@ country_event = {
 			days = 3600
 		}
 
+		from = {
+			country_event = { id = dpe_xenophile_mission.252 }
+		}
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -3903,6 +3933,51 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+
+country_event = {
+	id = dpe_xenophile_mission.251
+	title = dpe_xenophile_mission.251.name 
+	desc = dpe_xenophile_mission.251.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+country_event = {
+	id = dpe_xenophile_mission.252
+	title = dpe_xenophile_mission.252.name 
+	desc = dpe_xenophile_mission.252.desc 
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_xenophile_mission.252.thendie
 	}
 }
 
