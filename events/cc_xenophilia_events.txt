@@ -595,6 +595,9 @@ event = {
 						is_robot_pop = no
 					}
 				}
+				NOT = {
+					has_ascension_perk = ap_xeno_compatibility
+				}
 			}
 			add_modifier = {
 				modifier = cc_literally_xenophile_country
@@ -608,13 +611,16 @@ event = {
 		every_country = {
 			limit = {
 				has_modifier = cc_literally_xenophile_country
-				NOT = {
+				NAND = {
 					pop_percentage = {
 						percentage > 0.15
 						limit = {
 							has_pop_flag = cc_literally_xenophile_manifested
 							is_robot_pop = no
 						}
+					}
+					NOT = {
+						has_ascension_perk = ap_xeno_compatibility
 					}
 				}
 			}

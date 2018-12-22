@@ -38,6 +38,12 @@ ap_xeno_compatibility = {
 	on_enabled = {
 		custom_tooltip = "allow_crossbreeding"
 
+		if = {
+			limit = {
+				has_modifier = cc_literally_xenophile_country
+			}
+			remove_modifier = cc_literally_xenophile_country
+		}
 		hidden_effect = {
 			if = {
 				limit = {

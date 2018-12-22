@@ -475,6 +475,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					any_system_within_border = {
+						exists = starbase
 						starbase = {
 							has_starbase_size >= starbase_starport
 							OR = {
@@ -489,6 +490,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					any_system_within_border = {
+						exists = starbase
 						starbase = {
 							has_starbase_size >= starbase_starport
 						}
@@ -1402,6 +1404,7 @@ country_event = {
 		if = {
 			limit = {
 				any_system_within_border = {
+					exists = starbase
 					starbase = {
 						has_starbase_size >= starbase_starport
 					}
@@ -1426,6 +1429,7 @@ country_event = {
 			}
 			random_system_within_border = {
 				limit = {
+					exists = starbase
 					starbase = {
 						has_starbase_size >= starbase_starport
 					}
@@ -1456,6 +1460,7 @@ country_event = {
 		else_if = {
 			limit = {
 				any_system_within_border = {
+					exists = starbase
 					starbase = {
 						has_starbase_size >= starbase_starport
 						OR = {
@@ -1468,6 +1473,7 @@ country_event = {
 			}
 			random_system_within_border = {
 				limit = {
+					exists = starbase
 					starbase = {
 						has_starbase_size >= starbase_starport
 						OR = {
@@ -1488,6 +1494,7 @@ country_event = {
 		else = {
 			random_system_within_border = {
 				limit = {
+					exists = starbase
 					starbase = {
 						has_starbase_size >= starbase_starport
 					}
