@@ -442,6 +442,19 @@ country_event = {
 				who = root
 			}
 		}
+
+		hidden_effect = {
+			set_relation_flag = {
+				who = from
+				flag = dpe_has_had_xenophile_mission
+			}
+			from = {
+				set_relation_flag = {
+					who = root
+					flag = dpe_has_had_xenophile_mission
+				}
+			}
+		}
 		
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
 
@@ -977,15 +990,9 @@ country_event = {
 							flag = dpe_xenophile_mission_tensions
 						}
 					}
-					has_relation_flag = {
-						who = from
-						flag = dpe_xenophile_mission_caught_spying
-					}
+					has_country_flag = dpe_xenomission_caught_spying
 					from = {
-						has_relation_flag = {
-							who = root
-							flag = dpe_xenophile_mission_caught_spying
-						}
+						has_country_flag = dpe_xenomission_caught_spying
 					}
 				}
 			}
