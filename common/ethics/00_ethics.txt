@@ -1205,7 +1205,7 @@ ethic_xenophobe = {
 			has_valid_civic = civic_fanatic_purifiers
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			is_country_type = default
 			any_neighbor_country = {
 				OR = {
@@ -1220,7 +1220,7 @@ ethic_xenophobe = {
 			is_country_type = default
 			years_passed > 40
 			pop_percentage = {
-				percentage < 0.05
+				percentage < 0.1
 				limit = {
 					NOT = { is_same_species = root }
 					is_enslaved = no
@@ -1231,7 +1231,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.8
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -1242,7 +1242,7 @@ ethic_xenophobe = {
 			allows_alien_leaders = yes
 		}		
 		modifier = {
-			factor = 2.0
+			factor = 1.5
 			any_war = {
 				any_defender = {
 					is_same_value = prevprev
@@ -1760,7 +1760,7 @@ ethic_xenophile = {
 			allows_alien_leaders = yes
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.35
 			any_relation = {
 				NOT = { is_same_species = root }
 				is_subject = no
@@ -1768,17 +1768,17 @@ ethic_xenophile = {
 			}
 		}
 		modifier = {
-			factor = 1.20
+			factor = 1.2
 			is_country_type = default
 			has_country_flag = cc_eventperf_has_minority
 		}
 		modifier = {
-			factor = 1.20
+			factor = 1.2
 			is_country_type = default
 			has_country_flag = cc_eventperf_has_large_minority
 		}
 		modifier = {
-			factor = 1.33
+			factor = 1.25
 			any_relation = {
 				NOT = { is_same_species = root }
 				OR = {
@@ -3724,6 +3724,10 @@ ethic_materialist = {
 			has_policy_flag = ai_full_rights
 		}	
 		modifier = {
+			factor = 1.25
+			has_modifier = galactic_market_founder
+		}	
+		modifier = {
 			factor = 1.33
 			any_relation = {
 				root = { has_research_agreement = prev }
@@ -3733,16 +3737,6 @@ ethic_materialist = {
 				}				
 			}
 		}	
-		modifier = {
-			factor = 1.1
-			is_country_type = default
-			capital_scope = { has_building = building_galactic_stock_exchange }
-		}
-		modifier = {
-			factor = 1.1
-			is_country_type = default
-			capital_scope = { has_building = building_institute }
-		}
 		modifier = {
 			factor = 1.25
 			any_relation = {
@@ -3828,6 +3822,43 @@ ethic_materialist = {
 				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_materialist }
 			}
+		}
+		modifier = {
+			factor = 1.25
+			from = { has_building = building_galactic_stock_exchange }
+		}
+		modifier = {
+			factor = 1.15
+			from = { has_building = building_institute }
+		}
+		modifier = {
+			factor = 1.1
+			from = {
+				has_building = building_commercial_zone
+				NOR = {
+					has_building = building_commercial_forum
+					has_building = building_commercial_megaplex
+				}
+			}
+		}
+		modifier = {
+			factor = 1.15
+			from = {
+				has_building = building_commercial_forum
+				NOT = {
+					has_building = building_commercial_megaplex
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			from = {
+				has_building = building_commercial_megaplex
+			}
+		}
+		modifier = {
+			factor = 2
+			has_job = merchant
 		}
 		modifier = {
 			factor = 0
