@@ -1442,7 +1442,7 @@ country_event = {
 				limit = {
 					is_pop_faction_type = technologist
 					support > 0.15
-					any_pop = { faction_approval > @cc_faction_happy_number }
+					any_owned_pop = { faction_approval > @cc_faction_happy_number }
 				}
 				count = 1
 			}

@@ -87,7 +87,7 @@ event = {
 										limit = {
 											is_pop_faction_type = xenoist
 											support > 0.15
-											any_pop = { faction_approval > @cc_faction_happy_number }
+											any_owned_pop = { faction_approval > @cc_faction_happy_number }
 										}
 										count = 1
 									}
@@ -190,7 +190,7 @@ country_event = {
 				limit = {
 					is_pop_faction_type = xenoist
 					support > 0.15
-					any_pop = { faction_approval > @cc_faction_happy_number }
+					any_owned_pop = { faction_approval > @cc_faction_happy_number }
 				}
 				count = 1
 			}
@@ -1282,7 +1282,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.1
-						any_pop = { faction_approval < @cc_faction_danger_number }
+						any_owned_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count > 0
 				}
@@ -1475,7 +1475,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.12
-						any_pop = { faction_approval < @cc_faction_danger_number }
+						any_owned_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count > 0
 				}
@@ -1628,7 +1628,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						any_pop = { faction_approval < @cc_faction_danger_number }
+						any_owned_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count = 0
 				}
@@ -1747,7 +1747,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						any_pop = { faction_approval < @cc_faction_danger_number }
+						any_owned_pop = { faction_approval < @cc_faction_danger_number }
 					}
 					count = 0
 				}
@@ -4052,8 +4052,8 @@ country_event = {
 		}
 
 		event_target:random_planet = {
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
 		}
 
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.292 } } }
@@ -4100,8 +4100,8 @@ country_event = {
 			}
 		}
 		event_target:random_planet = {
-			random_pop = { kill_pop = yes }
-			random_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
 		}
 
 		ai_chance = {
@@ -4367,7 +4367,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4383,7 +4383,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4395,7 +4395,7 @@ country_event = {
 		}
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4411,7 +4411,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4447,7 +4447,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4463,7 +4463,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4475,7 +4475,7 @@ country_event = {
 		}
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4491,7 +4491,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4535,7 +4535,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4551,7 +4551,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4586,7 +4586,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4602,7 +4602,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4704,7 +4704,7 @@ country_event = {
 		
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4720,7 +4720,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4732,7 +4732,7 @@ country_event = {
 		}
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4748,7 +4748,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -4809,7 +4809,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -4825,7 +4825,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -5014,7 +5014,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -5030,7 +5030,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -5042,7 +5042,7 @@ country_event = {
 		}
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -5058,7 +5058,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {
@@ -5125,7 +5125,7 @@ country_event = {
 
 		random_owned_planet = {
 			limit = {
-				any_pop = { is_same_species = root }
+				any_owned_pop = { is_same_species = root }
 			}
 			create_pop = {
 				species = from
@@ -5141,7 +5141,7 @@ country_event = {
 						days = -1
 					}
 				}
-				random_pop = {
+				random_owned_pop = {
 					limit = { is_same_species = root }
 					set_pop_flag = cc_literally_xenophile_manifested
 					add_modifier = {

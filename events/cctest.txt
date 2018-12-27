@@ -1106,7 +1106,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_pop = { faction_approval < 1 }
+						any_owned_pop = { faction_approval < 1 }
 					}
 				}
 			}
@@ -1123,7 +1123,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_pop = { faction_approval > 1 }
+						any_owned_pop = { faction_approval > 1 }
 					}
 				}
 			}
@@ -1140,7 +1140,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_pop = { faction_approval < 0.7 }
+						any_owned_pop = { faction_approval < 0.7 }
 					}
 				}
 			}
@@ -1157,9 +1157,9 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_pop = { faction_approval > 0.2 }
+						any_owned_pop = { faction_approval > 0.2 }
 						NOT = {
-							any_pop = { faction_approval > 1 }
+							any_owned_pop = { faction_approval > 1 }
 						}
 					}
 				}

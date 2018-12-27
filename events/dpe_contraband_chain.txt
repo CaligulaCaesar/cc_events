@@ -304,7 +304,7 @@ country_event = {
 				count_pop_factions = {
 					limit = {
 						is_pop_faction_type = totalitarian
-						any_pop = { faction_approval < @cc_faction_high_danger_number }
+						any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
 					}
 					count = 1
 				}

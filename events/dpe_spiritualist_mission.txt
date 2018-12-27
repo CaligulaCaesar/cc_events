@@ -1482,7 +1482,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 4
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						cc_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
@@ -2428,7 +2428,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			if = {
 				limit = { num_pops > 1 }
-				random_pop = { kill_pop = yes }
+				random_owned_pop = { kill_pop = yes }
 			}
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
@@ -2476,7 +2476,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			if = {
 				limit = { num_pops > 1 }
-				random_pop = { kill_pop = yes }
+				random_owned_pop = { kill_pop = yes }
 			}
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
@@ -2575,7 +2575,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 2
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						cc_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
@@ -2862,7 +2862,7 @@ country_event = {
 			event_target:dpe_mission_host_planet = {
 				while = {
 					count = 2
-					random_pop = {
+					random_owned_pop = {
 						limit = {
 							cc_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
