@@ -1175,9 +1175,11 @@ country_event = {
 				days = -1
 			}
 		}
-		set_relation_flag = {
-			who = from
-			flag = dpe_spirmission_obstructing
+		hidden_effect = {
+			set_relation_flag = {
+				who = from
+				flag = dpe_spirmission_obstructing
+			}
 		}
 		from = {
 			add_opinion_modifier = {
