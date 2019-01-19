@@ -2673,7 +2673,7 @@ country_event = {
 								limit = {
 									is_within_borders_of = root
 									starbase = { has_starbase_size = starbase_outpost }
-									NOT = { any_planet = { is_colony = yes } }
+									NOT = { any_system_planet = { is_colony = yes } }
 								}
 								starbase = { set_owner = event_target:cc_breakaway_country }
 								
@@ -2689,7 +2689,7 @@ country_event = {
 								limit = {
 									is_within_borders_of = root
 									starbase = { has_starbase_size = starbase_outpost }
-									NOT = { any_planet = { is_colony = yes } }
+									NOT = { any_system_planet = { is_colony = yes } }
 								}
 								starbase = { set_owner = event_target:cc_breakaway_country }
 								
@@ -4107,7 +4107,7 @@ planet_event = {
 				limit = {
 					is_within_borders_of = event_target:dpe_former_owner
 					starbase = { has_starbase_size = starbase_outpost }
-					NOT = { any_planet = { is_colony = yes } }
+					NOT = { any_system_planet = { is_colony = yes } }
 				}
 				starbase = { set_owner = event_target:cc_breakaway_country }
 				
@@ -4701,7 +4701,7 @@ planet_event = {
 				limit = {
 					is_within_borders_of = event_target:cc_old_owner
 					starbase = { has_starbase_size = starbase_outpost }
-					NOT = { any_planet = { is_colony = yes } }
+					NOT = { any_system_planet = { is_colony = yes } }
 				}
 				starbase = { set_owner = root.owner }
 				

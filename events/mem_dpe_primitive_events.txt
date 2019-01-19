@@ -30,7 +30,7 @@ country_event = {
 			NOT = {
 				has_star_flag = mem_lunar_age_system
 			}
-			any_planet = {
+			any_system_planet = {
 				has_owner = yes
 				exists = owner
 				has_ground_combat = no
@@ -479,7 +479,7 @@ country_event = {
 					factor = 0
 					home_planet = {
 						solar_system = {
-							any_planet = {
+							any_system_planet = {
 								is_colony = yes
 								NOT = {
 									is_same_value = prevprev
