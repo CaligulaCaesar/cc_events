@@ -838,9 +838,11 @@ country_event = {
 					}
 				}
 			}
-			change_variable = {
-				which = cctest_habitability_1
-				value = 1
+			capital_scope = {
+				change_variable = {
+					which = cctest_habitability_1
+					value = 1
+				}
 			}
 		}
 		if = {
@@ -857,9 +859,11 @@ country_event = {
 					}
 				}
 			}
-			change_variable = {
-				which = cctest_habitability_2
-				value = 1
+			capital_scope = {
+				change_variable = {
+					which = cctest_habitability_2
+					value = 1
+				}
 			}
 		}
 	}
@@ -1168,6 +1172,139 @@ country_event = {
 				change_variable = {
 					which = cctest_factions_1
 					value = 1
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = cctest.760
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		capital_scope = {
+			solar_system = {
+				random_neighbor_system = {
+					random_system_planet = {
+						change_pc = pc_gaia
+						set_planet_size = 25
+
+						save_event_target_as = planet1
+
+						create_country = {
+							name = "Fallen Empire"
+							type = fallen_empire
+							species = root
+
+							effect = {
+								establish_communications_no_message = root
+								save_event_target_as = test_fe
+								while = {
+									count = 50
+									event_target:planet1 = {
+										create_pop = {
+											species = root
+										}
+									}
+								}
+							}
+						}
+					}
+					random_neighbor_system = {
+						limit = {
+							NOT = {
+								is_same_value = prevprev
+							}
+						}
+						random_system_planet = {
+							change_pc = pc_gaia
+							set_planet_size = 25
+
+							save_event_target_as = planet2
+	
+							create_country = {
+								name = "Vassal"
+								type = default
+								species = root
+	
+								effect = {
+									establish_communications_no_message = root
+									save_event_target_as = test_subject
+									while = {
+										count = 10
+										event_target:planet2 = {
+											create_pop = {
+												species = root
+											}
+										}
+									}
+								}
+							}
+							solar_system = {
+								random_system_planet = {
+									limit = {
+										NOT = {
+											is_same_value = prevprev
+										}
+									}	
+									change_pc = pc_gaia
+									set_planet_size = 25
+									set_owner = event_target:test_subject
+									create_pop = {
+										species = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	after = {
+		event_target:test_fe = {
+			set_country_type = default
+
+		}
+		event_target:test_subject = {
+			set_subject_of = {
+				who = event_target:test_fe
+				subject_type = vassal
+			}
+		}
+	}
+}
+
+
+planet_event = {
+	id = cctest.761
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_pop = {
+			save_event_target_as = planet_pop
+		}
+		create_rebels = {
+			name = random
+			authority = random
+			species = event_target:planet_pop
+			effect = {
+				save_event_target_as = rebels
+				while = {
+					count = 50
+					root = {
+						create_army = {
+							owner = event_target:rebels
+							type = assault_army
+						}
+					}
 				}
 			}
 		}
