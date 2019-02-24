@@ -415,8 +415,14 @@ country_event = {
 			}
 			if = {
 				limit = {
-					owner = { is_ai = yes }
-					event_target:enemy = { is_ai = no }
+					owner = {
+						is_ai = yes
+						NOT = { has_modifier = dpe_indemnity_paid }
+					}
+					event_target:enemy = {
+						is_ai = no
+						NOT = { has_modifier = dpe_indemnity_receive }
+					}
 				}
 				event_target:enemy = { country_event = { id = dpe_diplo.5 days = 90 random = 360 } }
 			}
@@ -550,6 +556,15 @@ planet_event = {
 					planet_stability < 35
 				}
 				modifier = {
+					factor = 0
+					OR = {
+						has_modifier = dpe_indemnity_paid
+						event_target:enemy = {
+							has_modifier = dpe_indemnity_receive
+						}
+					}
+				}
+				modifier = {
 					factor = 2
 					count_pops = {
 						limit = {
@@ -617,11 +632,9 @@ planet_event = {
 		name = dpe_diplo.4.B
 		
 		owner = {
-			capital_scope = {
-				add_modifier = {
-					modifier = dpe_indemnity_paid
-					days = 360
-				}
+			add_modifier = {
+				modifier = dpe_indemnity_paid
+				days = 360
 			}
 			add_modifier = {
 				modifier = humiliated
@@ -635,11 +648,9 @@ planet_event = {
 		}
 		
 		event_target:enemy = {
-			capital_scope = {
-				add_modifier = {
-					modifier = dpe_indemnity_receive
-					days = 360
-				}
+			add_modifier = {
+				modifier = dpe_indemnity_receive
+				days = 360
 			}
 		}
 		
@@ -770,6 +781,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = dpe_recent_militarists_want_war }
+		NOT = { has_modifier = dpe_indemnity_paid }
 		is_at_war = no
 		is_subject = no
 		years_of_peace = {
@@ -809,6 +821,7 @@ country_event = {
 		any_relation = {
 			is_ai = no
 			NOT = { has_country_flag = dpe_recent_militarists_incident }
+			NOT = { has_modifier = dpe_indemnity_receive }
 			has_federation = no
 			has_policy_flag = unrestricted_wars
 
@@ -857,6 +870,7 @@ country_event = {
 			limit = {
 				is_ai = no
 				NOT = { has_country_flag = dpe_recent_militarists_incident }
+				NOT = { has_modifier = dpe_indemnity_receive }
 				prev = {
 					OR = {
 						is_rival = prev
@@ -893,19 +907,15 @@ country_event = { #AI-only event
 	option = { #pay up
 		name = OK
 		
-		capital_scope = {
-			add_modifier = {
-				modifier = dpe_indemnity_paid
-				days = 360
-			}
+		add_modifier = {
+			modifier = dpe_indemnity_paid
+			days = 360
 		}
 		
 		from = {
-			capital_scope = {
-				add_modifier = {
-					modifier = dpe_indemnity_receive
-					days = 360
-				}
+			add_modifier = {
+				modifier = dpe_indemnity_receive
+				days = 360
 			}
 		}
 		
@@ -1094,11 +1104,9 @@ country_event = {
 		name = CCEXCELLENT
 		
 		tooltip = {
-			capital_scope = {
-				add_modifier = {
-					modifier = dpe_indemnity_receive
-					days = 360
-				}
+			add_modifier = {
+				modifier = dpe_indemnity_receive
+				days = 360
 			}
 		}
 	}
@@ -1114,7 +1122,7 @@ country_event = {
 	
 	trigger = {
 		has_modifier = humiliated
-		any_owned_planet = { has_modifier = dpe_indemnity_paid }
+		has_modifier = dpe_indemnity_paid
 	}
 	
 	immediate = {
@@ -1138,13 +1146,11 @@ country_event = {
 							}
 						}
 					}
-					any_owned_planet = { has_modifier = dpe_indemnity_receive }
+					has_modifier = dpe_indemnity_receive
 				}
 			}
-			random_owned_planet = {
-				limit = { has_modifier = dpe_indemnity_paid }
-				remove_modifier = dpe_indemnity_paid
-			}
+			remove_modifier = dpe_indemnity_paid
+
 			random_country = {
 				limit = {
 					has_country_flag = dpe_war_opponent
@@ -1156,12 +1162,9 @@ country_event = {
 							}
 						}
 					}
-					any_owned_planet = { has_modifier = dpe_indemnity_receive }
+					has_modifier = dpe_indemnity_receive
 				}
-				random_owned_planet = {
-					limit = { has_modifier = dpe_indemnity_receive }
-					remove_modifier = dpe_indemnity_receive
-				}
+				remove_modifier = dpe_indemnity_receive
 			}
 		}
 	}

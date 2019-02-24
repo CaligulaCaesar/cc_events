@@ -1309,14 +1309,6 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = { has_modifier = dpe_disgruntled_CEO }
 		remove_modifier = dpe_disgruntled_CEO
 	}
-	if = {
-		limit = { has_modifier = dpe_indemnity_receive }
-		remove_modifier = dpe_indemnity_receive
-	}
-	if = {
-		limit = { has_modifier = dpe_indemnity_paid }
-		remove_modifier = dpe_indemnity_paid
-	}
 	
 	if = {
 		limit = { has_modifier = cc_minor_protests_xenophile }

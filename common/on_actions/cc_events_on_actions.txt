@@ -88,16 +88,16 @@ on_purge_begun = {
 # This = Planet scope
 # From = Country
 # FromFrom = Pop
-on_purge_complete = {
+on_pop_purged = {
 	events = {
 		cc_cleanup_events.9999
 	}
 }
 
-# Planet has reached 0 health
+# Planet has taken damage from orbital bombardment
 # This = Planet
 # From = Bombarder
-on_planet_zero_health = {
+on_planet_bombarded = {
 	events = {
 		cc_cleanup_events.9998
 	}
@@ -133,17 +133,17 @@ on_war_beginning = {
 }
 
 
-
+##No longer exists as an on_action
 
 # A pop has finished migrating to another planet
 # Root = pop
 # From = Tile on the new planet
 # FromFrom = Tile on the old planet
-on_pop_migration_end = {
-	events = {
-		cc_colony_events.552
-	}
-}
+#on_pop_migration_end = {
+#	events = {
+#		cc_colony_events.552
+#	}
+#}
 
 
 # Executed as new ruler has been set

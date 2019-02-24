@@ -68,9 +68,7 @@ event = {
 					has_building = building_major_capital
 					planet_stability > 60
 					num_pops > 65
-					NOT = {
-						any_owned_pop = { has_job = unemployed }
-					}
+					free_amenities > 0
 				}
 				set_timed_planet_flag = {
 					flag = cc_eventperf_developed_planet
@@ -102,14 +100,11 @@ event = {
 			}
 			every_owned_planet = {
 				limit = {
-					count_pops = {
-						count > 2
-						limit = {
-							NOT = { is_same_species = prev }
-							is_enslaved = no
-							has_citizenship_rights = yes
-							is_robot_pop = no
-						}
+					any_owned_pop = {
+						NOT = { is_same_species = prevprev }
+						is_enslaved = no
+						has_citizenship_rights = yes
+						is_robot_pop = no
 					}
 				}
 				set_timed_planet_flag = {
@@ -170,10 +165,7 @@ country_event = {
 					}
 				
 					any_owned_pop = {
-						NOR = {
-							is_subspecies = prev
-							is_same_species = prev
-						}
+						NOT = { is_same_species = prev }
 						is_robot_pop = no
 						cc_has_happiness = yes
 						NOR = {
@@ -195,55 +187,15 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_pop = {
-						NOR = {
-							is_subspecies = prev
-							is_same_species = prev
-						}
-						is_robot_pop = no
-						cc_has_happiness = yes
-						NOR = {
-							is_enslaved = yes
-							is_being_purged = yes
-						}
-						prev = {
-							pop_percentage = {
-								percentage > 0.2
-								limit = { is_same_species = prev }
-							}
-						}
+					pop_percentage = {
+						percentage < 0.4
+						limit = { is_same_species = owner_species }
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_eventperf_has_large_minority
+					flag = cc_eventperf_founder_is_minority
 					days = 365
 				}
-			}
-		}
-		if = {
-			limit = {
-				any_owned_pop = {
-					NOR = {
-						is_subspecies = prev
-						is_same_species = prev
-					}
-					is_robot_pop = no
-					cc_has_happiness = yes
-					NOR = {
-						is_enslaved = yes
-						is_being_purged = yes
-					}
-					owner = {
-						pop_percentage = {
-							percentage > 0.05
-							limit = { is_same_species = prev }
-						}
-					}
-				}
-			}
-			set_timed_country_flag = {
-				flag = cc_eventperf_a_small_minority
-				days = 365
 			}
 			if = {
 				limit = {
@@ -258,43 +210,36 @@ country_event = {
 							is_enslaved = yes
 							is_being_purged = yes
 						}
-						owner = {
+						prev = {
 							pop_percentage = {
-								percentage > 0.2
+								percentage > 0.25
 								limit = { is_same_species = prev }
 							}
 						}
 					}
 				}
 				set_timed_country_flag = {
-					flag = cc_eventperf_has_minority
+					flag = cc_eventperf_has_large_minority
 					days = 365
-				}
-				if = {
-					limit = {
-						pop_percentage = {
-							percentage < 0.4
-							limit = { is_same_species = owner_species }
-						}
-					}
-					set_timed_country_flag = {
-						flag = cc_eventperf_founder_is_minority
-						days = 365
-					}
 				}
 			}
 		}
 		if = {
 			limit = {
-
 				NOR = {
 					has_ethic = ethic_xenophobe
 					has_ethic = ethic_fanatic_xenophobe
 				}
 
-				pop_percentage = {
-					percentage > 0.18
-					limit = { has_ethic = ethic_xenophobe }
+				count_pop_factions = {
+					count = 1
+					limit = {
+						OR = {
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
+						}
+						support > 0.18
+					}
 				}
 			}
 			set_timed_country_flag = {
@@ -302,28 +247,9 @@ country_event = {
 				days = 365
 			}
 		}
-		if = { #best keep this one as referred to in quite a few places
-			limit = {
-				pop_percentage = {
-					percentage > 0.02
-					limit = {
-						NOR = {
-							is_enslaved = yes
-							is_being_purged = yes
-						}
-						has_pop_flag = cc_literally_xenophile_manifested
-					}
-				}
-			}
-			set_timed_country_flag = {
-				flag = cc_eventperf_literally_xenophiles
-				days = 365
-			}
-		}
 
 		if = {
 			limit = {
-
 				count_pop_factions = {
 					limit = {	
 						is_pop_faction_type = traditionalist
@@ -339,7 +265,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-
 				count_pop_factions = {
 					limit = {	
 						is_pop_faction_type = technologist
@@ -370,7 +295,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-
 				count_pop_factions = {
 					limit = {	
 						is_pop_faction_type = progressive
@@ -386,7 +310,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-
 				count_pop_factions = {
 					limit = {	
 						is_pop_faction_type = totalitarian

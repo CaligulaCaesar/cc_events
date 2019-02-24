@@ -1110,7 +1110,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_owned_pop = { faction_approval < 1 }
+						faction_approval < 1
 					}
 				}
 			}
@@ -1127,7 +1127,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_owned_pop = { faction_approval > 1 }
+						faction_approval > 1
 					}
 				}
 			}
@@ -1144,7 +1144,7 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_owned_pop = { faction_approval < 0.7 }
+						faction_approval < 0.7
 					}
 				}
 			}
@@ -1161,9 +1161,9 @@ country_event = {
 					count = 1
 					limit = {
 						is_pop_faction_type = xenoist
-						any_owned_pop = { faction_approval > 0.2 }
+						faction_approval > 0.2
 						NOT = {
-							any_owned_pop = { faction_approval > 1 }
+							faction_approval > 1
 						}
 					}
 				}
@@ -1310,3 +1310,21 @@ planet_event = {
 		}
 	}
 }
+
+
+
+country_event = {
+	id = cctest.801
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		capital_scope = {
+			add_modifier = {
+				modifier = cc_minor_pacmonument
+			}
+		}
+	}
+}
+
+

@@ -184,10 +184,8 @@ planet_event = {
 					factor = 1.5
 					NOT = {
 						any_owned_pop = {
-							NOT = {
-								is_same_species = root.owner
-								cc_has_happiness = yes
-							}
+							NOT = { is_same_species = root.owner }
+							cc_has_happiness = yes
 						}
 					}
 				}
@@ -4951,7 +4949,7 @@ planet_event = {
 	}
 }
 
-#on_pop_migration_end
+#formerly on_pop_migration_end (now completely unused)
 pop_event = {
 	id = cc_colony_events.552
 	hide_window = yes

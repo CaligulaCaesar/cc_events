@@ -27,7 +27,9 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = { years_passed < 75 }
+	trigger = {
+		years_passed < 60
+	}
 	
 	immediate = {
 		every_country = {
@@ -87,7 +89,7 @@ event = {
 										limit = {
 											is_pop_faction_type = xenoist
 											support > 0.15
-											any_owned_pop = { faction_approval > @cc_faction_happy_number }
+											faction_approval > @cc_faction_happy_number
 										}
 										count = 1
 									}
@@ -190,7 +192,7 @@ country_event = {
 				limit = {
 					is_pop_faction_type = xenoist
 					support > 0.15
-					any_owned_pop = { faction_approval > @cc_faction_happy_number }
+					faction_approval > @cc_faction_happy_number
 				}
 				count = 1
 			}
@@ -559,10 +561,12 @@ country_event = {
 			}
 		}
 
-		set_timed_relation_flag = {
-			who = from
-			flag = dpe_xenophile_mission_spying
-			days = 4000
+		hidden_effect = {
+			set_timed_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_spying
+				days = 4000
+			}
 		}
 
 		ai_chance = {
@@ -657,10 +661,12 @@ country_event = {
 			}
 		}
 
-		set_timed_relation_flag = {
-			who = from
-			flag = dpe_xenophile_mission_betraying
-			days = 4000
+		hidden_effect = {
+			set_timed_relation_flag = {
+				who = from
+				flag = dpe_xenophile_mission_betraying
+				days = 4000
+			}
 		}
 
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.6 days = 10 } } }
@@ -1282,7 +1288,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.1
-						any_owned_pop = { faction_approval < @cc_faction_danger_number }
+						faction_approval < @cc_faction_danger_number
 					}
 					count > 0
 				}
@@ -1475,7 +1481,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.12
-						any_owned_pop = { faction_approval < @cc_faction_danger_number }
+						faction_approval < @cc_faction_danger_number
 					}
 					count > 0
 				}
@@ -1628,7 +1634,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						any_owned_pop = { faction_approval < @cc_faction_danger_number }
+						faction_approval < @cc_faction_danger_number
 					}
 					count = 0
 				}
@@ -1747,7 +1753,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 						support > 0.15
-						any_owned_pop = { faction_approval < @cc_faction_danger_number }
+						faction_approval < @cc_faction_danger_number
 					}
 					count = 0
 				}

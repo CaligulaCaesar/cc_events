@@ -3098,7 +3098,9 @@ pop_event = {
 	}
 }
 
-# Colony Bombarded
+# Planet has taken damage from orbital bombardment
+# This = Planet
+# From = Bombarder
 planet_event = {
 	id = cc_cleanup_events.9998
 	hide_window = yes
@@ -3114,6 +3116,7 @@ planet_event = {
 #			has_faction_sedition = yes
 #		}
 		
+		planet_devastation >= 100
 		FROM = {
 			OR = {
 				is_country_type = extradimensional 
@@ -3168,11 +3171,12 @@ planet_event = {
 			}
 			AND = {
 				num_pops = 1 # Last Pop is still alive when this event is fired
-				controller = { is_country_type = "ai_empire" }
-			}
-			AND = {
-				num_pops = 1 # Last Pop is still alive when this event is fired
-				controller = { is_country_type = "swarm" }
+				controller = {
+					OR = {
+						is_country_type = "ai_empire"
+						is_country_type = "swarm"
+					}
+				}
 			}
 		}
 	}

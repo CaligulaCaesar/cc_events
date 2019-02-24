@@ -105,7 +105,7 @@ country_event = {
 			limit = {
 				is_a_vanilla_faction = yes
 				support > 0.15
-				any_owned_pop = { faction_approval < @cc_faction_danger_number }
+				faction_approval < @cc_faction_danger_number
 			}
 			count > 0
 		}
@@ -132,7 +132,7 @@ country_event = {
 						limit = {
 							is_a_vanilla_faction = yes
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count > 0
 					}
@@ -143,7 +143,7 @@ country_event = {
 						limit = {
 							is_a_vanilla_faction = yes
 							support > 0.2
-							any_owned_pop = { faction_approval < @cc_faction_danger_number }
+							faction_approval < @cc_faction_danger_number
 						}
 						count > 0
 					}
@@ -184,7 +184,7 @@ country_event = {
 			limit = {
 				is_a_vanilla_faction = yes
 				support > 0.15
-				any_owned_pop = { faction_approval < @cc_faction_danger_number }
+				faction_approval < @cc_faction_danger_number
 			}
 			count > 0
 		}
@@ -208,7 +208,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = imperialist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -221,7 +221,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = imperialist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -272,7 +272,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = isolationist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -285,7 +285,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = isolationist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -336,7 +336,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = progressive
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -349,7 +349,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = progressive
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -400,7 +400,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = prosperity
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -413,7 +413,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = prosperity
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -464,7 +464,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = supremacist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -477,7 +477,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = supremacist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -528,7 +528,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = technologist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -541,7 +541,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = technologist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -592,7 +592,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = totalitarian
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -605,7 +605,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = totalitarian
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -656,7 +656,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = traditionalist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -669,7 +669,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = traditionalist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -720,7 +720,7 @@ country_event = {
 							limit = {
 								is_pop_faction_type = xenoist
 								support > 0.15
-								any_owned_pop = { faction_approval < @cc_faction_danger_number }
+								faction_approval < @cc_faction_danger_number
 							}
 							count = 1
 						}
@@ -733,7 +733,7 @@ country_event = {
 						limit = {
 							is_pop_faction_type = xenoist
 							support > 0.15
-							any_owned_pop = { faction_approval < @cc_faction_high_danger_number }
+							faction_approval < @cc_faction_high_danger_number
 						}
 						count = 1
 					}
@@ -848,7 +848,7 @@ country_event = {
 			limit = {
 				is_same_value = event_target:cc_rebellious_faction
 				support > 0.15
-				any_owned_pop = { faction_approval < @cc_faction_danger_number }
+				faction_approval < @cc_faction_danger_number
 			}
 			count = 1
 		}
@@ -1160,7 +1160,7 @@ country_event = {
 					}
 					NOT = { is_pop_faction_type = prosperity }
 				}
-				any_owned_pop = { faction_approval < @cc_faction_danger_number }
+				faction_approval < @cc_faction_danger_number
 			}
 			count > 0
 		}
@@ -1184,7 +1184,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = xenoist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1243,7 +1243,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = supremacist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1301,7 +1301,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = isolationist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1359,7 +1359,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = traditionalist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1417,7 +1417,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = technologist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1475,7 +1475,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = totalitarian
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1533,7 +1533,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = progressive
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1591,7 +1591,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = imperialist
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}
@@ -1649,7 +1649,7 @@ country_event = {
 							count_pop_factions = {
 								limit = {
 									is_pop_faction_type = prosperity
-									any_owned_pop = { faction_approval < @cc_faction_danger_number }
+									faction_approval < @cc_faction_danger_number
 								}
 								count = 1
 							}

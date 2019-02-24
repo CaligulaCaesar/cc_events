@@ -48,7 +48,7 @@ country_event = {
 			limit = {
 				is_pop_faction_type = progressive
 				support > 0.1
-				any_owned_pop = { faction_approval > 0.50 }
+				faction_approval > 0.50
 			}
 			count = 0
 		}
@@ -361,15 +361,13 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				AND = {
-					if = {
-						limit = { exists = event_target:cc_first_corrupt }
-						event_target:cc_first_corrupt = { has_skill < 4 }
-					}
-					if = {
-						limit = { exists = event_target:cc_second_corrupt }
-						event_target:cc_second_corrupt = { has_skill < 4 }
-					}
+				if = {
+					limit = { exists = event_target:cc_first_corrupt }
+					event_target:cc_first_corrupt = { has_skill < 4 }
+				}
+				if = {
+					limit = { exists = event_target:cc_second_corrupt }
+					event_target:cc_second_corrupt = { has_skill < 4 }
 				}
 			}
 			modifier = {

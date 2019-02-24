@@ -29,26 +29,28 @@ planet_event = {
 			}
 		}
 
+		num_species > 1
+
 		any_owned_pop = {
 			cc_has_happiness = yes
 			is_enslaved = no
 			is_being_purged = no
 			is_robot_pop = no
-			planet = {
+			root = {
 				count_pops = {
-					limit = { is_same_species = prev }
+					limit = { is_same_species = prev.species }
 					count > 1
 				}
 				any_owned_pop = {
-					NOT = { is_same_species = prevprev }
+					NOT = { is_same_species = prevprev.species }
 					cc_has_happiness = yes
 					is_enslaved = no
 					is_being_purged = no
 					is_robot_pop = no
 					
-					planet = {
+					root = {
 						count_pops = {
-							limit = { is_same_species = prev }
+							limit = { is_same_species = prev.species }
 							count > 1
 						}
 					}
@@ -81,21 +83,21 @@ planet_event = {
 						NOT = { is_robot_pop = yes }
 						is_enslaved = no
 						is_being_purged = no
-						planet = {
+						root = {
 							count_pops = {
-								limit = { is_same_species = prev }
+								limit = { is_same_species = prev.species }
 								count > 3
 							}
 							any_owned_pop = {
-								NOT = { is_same_species = prevprev }
+								NOT = { is_same_species = prevprev.species }
 								cc_has_happiness = yes
 								is_robot_pop = no
 								is_enslaved = no
 								is_being_purged = no
 								
-								planet = {
+								root = {
 									count_pops = {
-										limit = { is_same_species = prev }
+										limit = { is_same_species = prev.species }
 										count > 3
 									}
 								}
@@ -152,22 +154,22 @@ planet_event = {
 							NOT = { is_robot_pop = yes }
 							is_enslaved = no
 							is_being_purged = no
-							planet = {
+							root = {
 								count_pops = {
-									limit = { is_same_species = prev }
+									limit = { is_same_species = prev.species }
 									count > 1
 								}
 								any_owned_pop = {
-									NOT = { is_same_species = prevprev }
+									NOT = { is_same_species = prevprev.species }
 									cc_has_happiness = yes
 									is_robot_pop = no
 									is_same_species = owner_species
 									is_enslaved = no
 									is_being_purged = no
 									
-									planet = {
+									root = {
 										count_pops = {
-											limit = { is_same_species = prev }
+											limit = { is_same_species = prev.species }
 											count > 1
 										}
 									}
@@ -189,9 +191,9 @@ planet_event = {
 							is_enslaved = no
 							is_being_purged = no
 							
-							planet = {
+							root = {
 								count_pops = {
-									limit = { is_same_species = prev }
+									limit = { is_same_species = prev.species }
 									count > 1
 								}
 							}
@@ -208,9 +210,9 @@ planet_event = {
 						NOT = { is_robot_pop = yes }
 						is_enslaved = no
 						is_being_purged = no
-						planet = {
+						root = {
 							count_pops = {
-								limit = { is_same_species = prev }
+								limit = { is_same_species = prev.species }
 								count > 1
 							}
 						}

@@ -23,8 +23,16 @@ country_event = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = { has_country_flag = cc_has_had_interspecies_marriage }
 		
-		#set in cc_events_performance
-		has_country_flag = cc_eventperf_literally_xenophiles
+		pop_percentage = {
+			percentage > 0.02
+			limit = {
+				NOR = {
+					is_enslaved = yes
+					is_being_purged = yes
+				}
+				has_pop_flag = cc_literally_xenophile_manifested
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -547,7 +555,7 @@ pop_event = {
 	
 	immediate = {
 		random_list = {
-			1 = {
+			3 = {
 				remove_pop_flag = cc_literally_xenophile_manifested
 				if = {
 					limit = { has_modifier = cc_practising_xenophile }
@@ -562,14 +570,10 @@ pop_event = {
 					remove_modifier = cc_secret_xenophile
 				}
 			}			
-			1 = {
+			2 = {
 				modifier = {
 					factor = 2
 					owner = { has_policy_flag = allows_im }
-				}
-				modifier = {
-					factor = 0.25
-					owner = { NOT = { has_country_flag = cc_eventperf_a_small_minority } }
 				}
 			}
 		}
@@ -586,32 +590,12 @@ event = {
 	
 	immediate = {
 		every_country = {
-			limit = {
-				NOT = { has_modifier = cc_literally_xenophile_country }
-				pop_percentage = {
-					percentage > 0.15
-					limit = {
-						has_pop_flag = cc_literally_xenophile_manifested
-						is_robot_pop = no
-					}
-				}
-				NOT = {
-					has_ascension_perk = ap_xeno_compatibility
-				}
-			}
-			add_modifier = {
-				modifier = cc_literally_xenophile_country
-				days = -1
-			}
 			if = {
-				limit = { is_ai = no }
-				country_event = { id = cc_events_mod.121 }
-			}
-		}
-		every_country = {
-			limit = {
-				has_modifier = cc_literally_xenophile_country
-				NAND = {
+				limit = {
+					NOT = { has_modifier = cc_literally_xenophile_country }
+					NOT = {
+						has_ascension_perk = ap_xeno_compatibility
+					}
 					pop_percentage = {
 						percentage > 0.15
 						limit = {
@@ -619,14 +603,32 @@ event = {
 							is_robot_pop = no
 						}
 					}
-					NOT = {
-						has_ascension_perk = ap_xeno_compatibility
-					}
+				}
+				add_modifier = {
+					modifier = cc_literally_xenophile_country
+					days = -1
+				}
+				if = {
+					limit = { is_ai = no }
+					country_event = { id = cc_events_mod.121 }
 				}
 			}
-			remove_modifier = cc_literally_xenophile_country
-		}
-		every_country = {
+			if = {
+				limit = {
+					has_modifier = cc_literally_xenophile_country
+					has_ascension_perk = ap_xeno_compatibility
+					NOT = {
+						pop_percentage = {
+							percentage > 0.15
+							limit = {
+								has_pop_flag = cc_literally_xenophile_manifested
+								is_robot_pop = no
+							}
+						}
+					}
+				}
+				remove_modifier = cc_literally_xenophile_country
+			}
 			every_owned_pop = {
 				limit = {
 					cc_has_happiness = no
@@ -659,123 +661,103 @@ event = {
 					remove_modifier = cc_secret_xenophile
 				}
 			}
-		}
-		every_country = {
-			limit = { has_policy_flag = allows_im }
-			every_owned_pop = {
-				limit = {
-					OR = {
-						has_modifier = cc_secretly_practising_xenophile
-						has_modifier = cc_secret_xenophile
-					}
-				}
-				if = {
-					limit = { has_modifier = cc_secretly_practising_xenophile }
-					remove_modifier = cc_secretly_practising_xenophile
-					add_modifier = {
-						modifier = cc_practising_xenophile
-						days = -1
-					}
-				}
-				else = {
-					remove_modifier = cc_secret_xenophile
-					add_modifier = {
-						modifier = cc_practising_xenophile
-						days = -1
-					}
-				}				
-			}
-		}
-		every_country = {
-			limit = {
-				OR = {
-					has_policy_flag = does_not_allow_im
-					NOT = { has_country_flag = cc_has_had_interspecies_marriage }
-				}
-			}
-			every_owned_pop = {
-				limit = {
-					OR = {
-						has_modifier = cc_practising_xenophile
-						has_modifier = cc_secret_xenophile
-					}
-				}
-				if = {
-					limit = { has_modifier = cc_practising_xenophile }
-					remove_modifier = cc_practising_xenophile
-					add_modifier = {
-						modifier = cc_secretly_practising_xenophile
-						days = -1
-					}
-				}
-				else = {
-					remove_modifier = cc_secret_xenophile
-					add_modifier = {
-						modifier = cc_secretly_practising_xenophile
-						days = -1
-					}
-				}				
-			}
-		}
-		every_country = {
-			limit = { has_policy_flag = bans_im_completely }
-			every_owned_pop = {
-				limit = {
-					OR = {
-						has_modifier = cc_practising_xenophile
-						has_modifier = cc_secretly_practising_xenophile
-					}
-				}
-				if = {
-					limit = { has_modifier = cc_practising_xenophile }
-					remove_modifier = cc_practising_xenophile
-					add_modifier = {
-						modifier = cc_secret_xenophile
-						days = -1
-					}
-				}
-				else = {
-					remove_modifier = cc_secretly_practising_xenophile
-					add_modifier = {
-						modifier = cc_secret_xenophile
-						days = -1
-					}
-				}				
-			}
-		}
-		
-		
-
-		every_country = {
-			limit = {
-				has_faction = isolationist
-				has_country_flag = cc_has_had_interspecies_marriage
-				has_policy_flag = allows_im
-				NOT = { has_country_flag = cc_im_isolationists }			
-			}
-			set_country_flag = cc_im_isolationists
-			
-			random_pop_faction = {
-				limit = { is_pop_faction_type = isolationist }
-				add_modifier = {
-					modifier = cc_xeno_marriage_allowed_supremacist
-					days = -1
-				}
-			}
-		}
-		every_country = {
-			limit = {
-				has_faction = supremacist
-				has_country_flag = cc_has_had_interspecies_marriage
-				NOT = { has_country_flag = cc_im_supremacists }			
-			}
-			set_country_flag = cc_im_supremacists
-			
 			if = {
 				limit = { has_policy_flag = allows_im }
+				every_owned_pop = {
+					limit = {
+						OR = {
+							has_modifier = cc_secretly_practising_xenophile
+							has_modifier = cc_secret_xenophile
+						}
+					}
+					if = {
+						limit = { has_modifier = cc_secretly_practising_xenophile }
+						remove_modifier = cc_secretly_practising_xenophile
+						add_modifier = {
+							modifier = cc_practising_xenophile
+							days = -1
+						}
+					}
+					else = {
+						remove_modifier = cc_secret_xenophile
+						add_modifier = {
+							modifier = cc_practising_xenophile
+							days = -1
+						}
+					}				
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_policy_flag = does_not_allow_im
+						NOT = { has_country_flag = cc_has_had_interspecies_marriage }
+					}
+				}
+				every_owned_pop = {
+					limit = {
+						OR = {
+							has_modifier = cc_practising_xenophile
+							has_modifier = cc_secret_xenophile
+						}
+					}
+					if = {
+						limit = { has_modifier = cc_practising_xenophile }
+						remove_modifier = cc_practising_xenophile
+						add_modifier = {
+							modifier = cc_secretly_practising_xenophile
+							days = -1
+						}
+					}
+					else = {
+						remove_modifier = cc_secret_xenophile
+						add_modifier = {
+							modifier = cc_secretly_practising_xenophile
+							days = -1
+						}
+					}				
+				}
+			}
+			if = {
+				limit = { has_policy_flag = bans_im_completely }
+				every_owned_pop = {
+					limit = {
+						OR = {
+							has_modifier = cc_practising_xenophile
+							has_modifier = cc_secretly_practising_xenophile
+						}
+					}
+					if = {
+						limit = { has_modifier = cc_practising_xenophile }
+						remove_modifier = cc_practising_xenophile
+						add_modifier = {
+							modifier = cc_secret_xenophile
+							days = -1
+						}
+					}
+					else = {
+						remove_modifier = cc_secretly_practising_xenophile
+						add_modifier = {
+							modifier = cc_secret_xenophile
+							days = -1
+						}
+					}				
+				}
+			}
+			
+			
 
+			if = {
+				limit = {
+					has_faction = isolationist
+					has_country_flag = cc_has_had_interspecies_marriage
+					has_policy_flag = allows_im
+					NOT = { has_country_flag = cc_im_isolationists }			
+				}
+				set_country_flag = cc_im_isolationists
+				
 				random_pop_faction = {
-					limit = { is_pop_faction_type = supremacist }
+					limit = { is_pop_faction_type = isolationist }
 					add_modifier = {
 						modifier = cc_xeno_marriage_allowed_supremacist
 						days = -1
@@ -783,24 +765,44 @@ event = {
 				}
 			}
 			if = {
-				limit = { has_policy_flag = does_not_allow_im }
+				limit = {
+					has_faction = supremacist
+					has_country_flag = cc_has_had_interspecies_marriage
+					NOT = { has_country_flag = cc_im_supremacists }			
+				}
+				set_country_flag = cc_im_supremacists
+				
+				if = {
+					limit = { has_policy_flag = allows_im }
 
-				random_pop_faction = {
-					limit = { is_pop_faction_type = supremacist }
-					add_modifier = {
-						modifier = cc_xeno_marriage_not_allowed_supremacist
-						days = -1
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = {
+							modifier = cc_xeno_marriage_allowed_supremacist
+							days = -1
+						}
 					}
 				}
-			}
-			if = {
-				limit = { has_policy_flag = bans_im_completely }
+				if = {
+					limit = { has_policy_flag = does_not_allow_im }
 
-				random_pop_faction = {
-					limit = { is_pop_faction_type = supremacist }
-					add_modifier = {
-						modifier = cc_xeno_marriage_banned_supremacist
-						days = -1
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = {
+							modifier = cc_xeno_marriage_not_allowed_supremacist
+							days = -1
+						}
+					}
+				}
+				if = {
+					limit = { has_policy_flag = bans_im_completely }
+
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						add_modifier = {
+							modifier = cc_xeno_marriage_banned_supremacist
+							days = -1
+						}
 					}
 				}
 			}
