@@ -1133,18 +1133,18 @@ country_event = {
 	title = mem_dpe_primitive_events.16.name
 	desc = {
 		trigger = {
-			NOT = {
-				event_target:mem_dpe_primitive_civ = {
-					has_country_flag = mem_dpe_probe_independence_day
-				}
+			event_target:mem_dpe_primitive_civ = {
+				has_country_flag = mem_dpe_probe_independence_day
 			}
 		}
 		text = mem_dpe_primitive_events.16.desc
 	}
 	desc = {
 		trigger = {
-			event_target:mem_dpe_primitive_civ = {
-				has_country_flag = mem_dpe_probe_independence_day
+			NOT = {
+				event_target:mem_dpe_primitive_civ = {
+					has_country_flag = mem_dpe_probe_independence_day
+				}
 			}
 		}
 		text = mem_dpe_primitive_events.16.desc.probe
