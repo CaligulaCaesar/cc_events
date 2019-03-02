@@ -279,6 +279,10 @@ ethic_authoritarian = {
 			}
 		}
 		modifier = {
+			factor = 2
+			has_job = dpe_monarchists
+		}
+		modifier = {
 			factor = 0.7
 			from = {
 				planet_stability < @dpe_bit_unrest_value
@@ -820,6 +824,10 @@ ethic_egalitarian = {
 				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_egalitarian }
 			}
+		}
+		modifier = {
+			factor = 2
+			has_job = dpe_direct_democrats
 		}
 		modifier = {
 			factor = 0
@@ -2908,6 +2916,10 @@ ethic_pacifist = {
 			}
 		}
 		modifier = {
+			factor = 2
+			has_job = dpe_guardian_of_the_peace
+		}
+		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}	
@@ -3393,6 +3405,10 @@ ethic_spiritualist = {
 				planet_stability < @dpe_bit_unrest_value
 				owner = { has_ethic = ethic_fanatic_spiritualist }
 			}
+		}
+		modifier = {
+			factor = 2
+			has_job = dpe_gurus_followers
 		}
 		modifier = {
 			factor = 0
