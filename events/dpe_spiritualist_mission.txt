@@ -66,6 +66,10 @@ country_event = {
 					flag = dpe_spiritualist_mission_received
 					who = prev
 				}
+				has_relation_flag = {
+					flag = dpe_spiritualist_mission_received_ever
+					who = prev
+				}
 			}
 		}
 	}
@@ -110,6 +114,10 @@ country_event = {
 						flag = dpe_spiritualist_mission_received
 						who = prev
 					}
+					has_relation_flag = {
+						flag = dpe_spiritualist_mission_received_ever
+						who = prev
+					}
 				}
 			}
 			save_event_target_as = dpe_neighbour
@@ -129,6 +137,10 @@ country_event = {
 						has_country_flag = dpe_recent_spiritualist_mission_received
 						has_relation_flag = {
 							flag = dpe_spiritualist_mission_received
+							who = prev
+						}
+						has_relation_flag = {
+							flag = dpe_spiritualist_mission_received_ever
 							who = prev
 						}
 					}
@@ -152,6 +164,10 @@ country_event = {
 								flag = dpe_spiritualist_mission_received
 								who = prev
 							}
+							has_relation_flag = {
+								flag = dpe_spiritualist_mission_received_ever
+								who = prev
+							}
 						}
 					}
 				}
@@ -170,6 +186,10 @@ country_event = {
 							has_country_flag = dpe_recent_spiritualist_mission_received
 							has_relation_flag = {
 								flag = dpe_spiritualist_mission_received
+								who = prev
+							}
+							has_relation_flag = {
+								flag = dpe_spiritualist_mission_received_ever
 								who = prev
 							}
 						}
@@ -194,6 +214,10 @@ country_event = {
 							has_country_flag = dpe_recent_spiritualist_mission_received
 							has_relation_flag = {
 								flag = dpe_spiritualist_mission_received
+								who = prev
+							}
+							has_relation_flag = {
+								flag = dpe_spiritualist_mission_received_ever
 								who = prev
 							}
 						}
@@ -222,6 +246,10 @@ country_event = {
 							flag = dpe_spiritualist_mission_received
 							who = prev
 						}
+						has_relation_flag = {
+							flag = dpe_spiritualist_mission_received_ever
+							who = prev
+						}
 					}
 				}
 			}
@@ -242,6 +270,10 @@ country_event = {
 						has_country_flag = dpe_recent_spiritualist_mission_received
 						has_relation_flag = {
 							flag = dpe_spiritualist_mission_received
+							who = prev
+						}
+						has_relation_flag = {
+							flag = dpe_spiritualist_mission_received_ever
 							who = prev
 						}
 					}
@@ -995,6 +1027,10 @@ country_event = {
 						flag = dpe_spiritualist_mission_received
 						who = prev
 					}
+					set_relation_flag = {
+						flag = dpe_spiritualist_mission_received_ever
+						who = prev
+					}
 				}
 				random_list = {
 					1 = {
@@ -1104,6 +1140,10 @@ country_event = {
 						flag = dpe_spiritualist_mission_received
 						who = prev
 					}
+					set_relation_flag = {
+						flag = dpe_spiritualist_mission_received_ever
+						who = prev
+					}
 				}
 				
 				random_list = {
@@ -1192,6 +1232,10 @@ country_event = {
 				root = {
 					set_relation_flag = {
 						flag = dpe_spiritualist_mission_received
+						who = prev
+					}
+					set_relation_flag = {
+						flag = dpe_spiritualist_mission_received_ever
 						who = prev
 					}
 				}
