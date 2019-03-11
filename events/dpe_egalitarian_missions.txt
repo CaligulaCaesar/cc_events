@@ -102,17 +102,20 @@ country_event = {
 			}
 		}
 
-		event_target:dpe_egalitarian = {
-			set_timed_country_flag = {
-				flag = dpe_has_recent_egalitarian_mission
-				years = 60
+		hidden_effect = {
+			event_target:dpe_egalitarian = {
+				set_timed_country_flag = {
+					flag = dpe_has_recent_egalitarian_mission
+					years = 60
+				}
+				set_relation_flag = {
+					flag = dpe_asked_for_egalitarian_mission
+					who = root
+				}
+				country_event = { id = dpe_egalitarian_missions.2 }
 			}
-			set_relation_flag = {
-				flag = dpe_asked_for_egalitarian_mission
-				who = root
-			}
-			hidden_effect = { country_event = { id = dpe_egalitarian_missions.2 } }
 		}
+
 		event_target:dpe_egalitarian = {
 			DPE_Get_Attitude = yes
 		}
@@ -223,7 +226,7 @@ country_event = {
 	option = {
 		name = dpe_egalitarian_missions.2.option
 
-		from = { hidden_effect = { country_event = { id = dpe_egalitarian_missions.3 } } }
+		hidden_effect = { country_event = { id = dpe_egalitarian_missions.3 } }
 	}
 }
 
@@ -248,7 +251,7 @@ country_event = {
 	option = {
 		name = dpe_egalitarian_missions.3.option
 
-		from = { hidden_effect = { country_event = { id = dpe_egalitarian_missions.4 } } }
+		hidden_effect = { country_event = { id = dpe_egalitarian_missions.4 } }
 	}
 }
 
@@ -390,7 +393,7 @@ country_event = {
 country_event = {
 	id = dpe_egalitarian_missions.5
 	title = dpe_egalitarian_missions.5.name
-	desc = dpe_egalitarian_missions.5.desc
+	desc = dpe_egalitarian_missions.6.desc
 
 	diplomatic = yes
 
@@ -412,7 +415,7 @@ country_event = {
 country_event = {
 	id = dpe_egalitarian_missions.6
 	title = dpe_egalitarian_missions.6.name
-	desc = dpe_egalitarian_missions.6.desc
+	desc = dpe_egalitarian_missions.5.desc
 
 	diplomatic = yes
 
