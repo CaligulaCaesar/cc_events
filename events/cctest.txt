@@ -1316,15 +1316,36 @@ planet_event = {
 country_event = {
 	id = cctest.801
 	is_triggered_only = yes
-	hide_window = yes
 
-	immediate = {
+	option = {
+		name = x
+		
 		capital_scope = {
-			add_modifier = {
-				modifier = cc_minor_pacmonument
+			if = {
+				limit = {
+					num_free_districts = {
+						type = district_farming
+						value > 0
+					}
+				}
+				set_variable = {
+					which = cc_test_spare_energy_slots
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					num_free_districts = {
+						type = district_farming
+						value = 0
+					}
+				}
+				set_variable = {
+					which = cc_test_no_energy_slots
+					value = 1
+				}
 			}
 		}
 	}
 }
-
 
