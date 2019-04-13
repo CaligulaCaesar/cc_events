@@ -94,6 +94,14 @@ on_pop_purged = {
 	}
 }
 
+#From = Country scope
+#This = Planet scope
+on_planet_ownerless = {
+	events = {
+		cc_cleanup_events.9993
+	}
+}
+
 # Planet has taken damage from orbital bombardment
 # This = Planet
 # From = Bombarder

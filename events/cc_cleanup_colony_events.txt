@@ -61,7 +61,7 @@ planet_event = {
 				flag = cc_conquered_purge
 				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9992 days = 2000 random = 1000 }
+			planet_event = { id = cc_cleanup_events.9992 days = 1500 random = 500 }
 		}
 		
 		if = {
@@ -3035,6 +3035,32 @@ planet_event = {
 	}
 }
 
+#Planet ownerless
+planet_event = {
+	id = cc_cleanup_events.9993
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		planet_event = { id = cc_cleanup_events.9994 days = 35 }
+	}
+}
+
+planet_event = {
+	id = cc_cleanup_events.9994
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = { exists = owner }
+	}
+	
+	immediate = {
+#		remove_rebel_irrelevant_political_colony_modifiers = yes
+		remove_all_political_colony_modifiers = yes
+	}
+}
+
 
 # Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
 # This = Rebel Country
@@ -3093,7 +3119,7 @@ pop_event = {
 				flag = cc_conquered_purge
 				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9992 days = 2000 random = 1000 }
+			planet_event = { id = cc_cleanup_events.9992 days = 2000 random = 500 }
 		}
 	}
 }

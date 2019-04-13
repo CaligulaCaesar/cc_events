@@ -513,6 +513,17 @@ country_event = {
 						}
 					}
 				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_system_within_border = {
+							starbase = {
+								has_starbase_size >= starbase_starport
+							}
+							NOT = { has_star_flag = dpe_recent_talent_starbase }
+						}
+					}
+				}
 			}
 		}
 	}
