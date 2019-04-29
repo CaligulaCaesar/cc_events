@@ -40,94 +40,92 @@ event = {
 					has_civic = civic_fanatic_purifiers
 				}
 			}
-			every_relation = {
-				limit = {
-					has_communications = prev
-					NOT = {
-						has_relation_flag = {
-							who = prev
-							flag = dpe_comms_established
-						}
-					}
-					is_country_type = default
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						has_civic = civic_fanatic_purifiers
-					}
-				}
-				set_relation_flag = {
-					who = prev
-					flag = dpe_comms_established
-				}
-				set_timed_relation_flag = {
-					who = prev
-					flag = dpe_new_relation
-					days = 1080
-				}
-				save_event_target_as = dpe_new_contact
-				
-				if = {
-					limit = {
-						species = {
-							NOT = { has_species_flag = dpe_met_species@prevprev.species }
-						}
-					}
-					species = { set_species_flag = dpe_met_species@prevprev.species }
-					
-					prev = {
-						if = {
-							limit = {
-                                is_at_war = no
-								is_subject = no
-								NOT = { has_country_flag = dpe_recent_xenophile_mission }
-								NOT = { has_country_flag = dpe_xenomission_disaster }
-								OR = {
-									has_ethic = ethic_xenophile
-									has_ethic = ethic_fanatic_xenophile
-									
-									count_pop_factions = {
-										limit = {
-											is_pop_faction_type = xenoist
-											support > 0.15
-											faction_approval > @cc_faction_happy_number
-										}
-										count = 1
-									}
-                                }
-								
-								event_target:dpe_new_contact = {
-									is_at_war = no
-									is_subject = no
-
-									NOT = { has_country_flag = dpe_recent_xenophile_mission }
-								}
-							}
-							country_event = { id = dpe_xenophile_mission.2 days = 21 }
-						}
-					}
-				}
-			}
-
-			#I put this after to increase the chance of the event chain happening
 			if = {
 				limit = {
-					any_owned_pop = {
-						NOT = { is_same_species = prev }
-						cc_has_happiness = yes
-						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+					any_relation = {
+						has_communications = prev
+						NOT = {
+							has_relation_flag = {
+								who = prev
+								flag = dpe_comms_established
+							}
+						}
+						is_country_type = default
+						NOR = {
+							has_ethic = ethic_gestalt_consciousness
+							has_civic = civic_fanatic_purifiers
+						}
 					}
 				}
-				random_owned_pop = {
+				every_relation = {
 					limit = {
-						NOT = { is_same_species = prev }
-						cc_has_happiness = yes
-						species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+						has_communications = prev
+						NOT = {
+							has_relation_flag = {
+								who = prev
+								flag = dpe_comms_established
+							}
+						}
+						is_country_type = default
+						NOR = {
+							has_ethic = ethic_gestalt_consciousness
+							has_civic = civic_fanatic_purifiers
+						}
 					}
-					species = {
-						set_species_flag = dpe_met_species@prev.species
-						prevprev.species = { set_species_flag = dpe_met_species@prev }
+					set_relation_flag = {
+						who = prev
+						flag = dpe_comms_established
+					}
+					set_timed_relation_flag = {
+						who = prev
+						flag = dpe_new_relation
+						days = 1080
+					}
+					save_event_target_as = dpe_new_contact
+					
+					if = {
+						limit = {
+							species = {
+								NOT = { has_species_flag = dpe_met_species@prevprev.species }
+							}
+						}
+						species = { set_species_flag = dpe_met_species@prevprev.species }
+						
+						prev = {
+							if = {
+								limit = {
+									is_at_war = no
+									is_subject = no
+									NOT = { has_country_flag = dpe_recent_xenophile_mission }
+									NOT = { has_country_flag = dpe_xenomission_disaster }
+									OR = {
+										has_ethic = ethic_xenophile
+										has_ethic = ethic_fanatic_xenophile
+										
+										count_pop_factions = {
+											limit = {
+												is_pop_faction_type = xenoist
+												support > 0.15
+												faction_approval > @cc_faction_happy_number
+											}
+											count = 1
+										}
+									}
+									
+									event_target:dpe_new_contact = {
+										is_at_war = no
+										is_subject = no
+	
+										NOT = { has_country_flag = dpe_recent_xenophile_mission }
+									}
+								}
+								country_event = { id = dpe_xenophile_mission.2 days = 21 }
+							}
+						}
 					}
 				}
+	
+				#I put this after to increase the chance of the event chain happening
 				if = {
 					limit = {
 						any_owned_pop = {
@@ -166,7 +164,27 @@ event = {
 								prevprev.species = { set_species_flag = dpe_met_species@prev }
 							}
 						}
-					} #I'm going to assume that the country won't get more than 3 new species a year
+						if = {
+							limit = {
+								any_owned_pop = {
+									NOT = { is_same_species = prev }
+									cc_has_happiness = yes
+									species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+								}
+							}
+							random_owned_pop = {
+								limit = {
+									NOT = { is_same_species = prev }
+									cc_has_happiness = yes
+									species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+								}
+								species = {
+									set_species_flag = dpe_met_species@prev.species
+									prevprev.species = { set_species_flag = dpe_met_species@prev }
+								}
+							}
+						} #I'm going to assume that the country won't get more than 3 new species a year
+					}
 				}
 			}
 		}
