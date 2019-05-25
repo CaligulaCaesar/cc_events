@@ -1100,6 +1100,12 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_milacademy_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_milacademy
+				days = -1
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.251 days = 1800 } }
 		
@@ -1950,6 +1956,12 @@ planet_event = {
 			days = 1800
 		}
 		custom_tooltip = cc_pacmonument_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_pacifist_centre
+				days = -1
+			}
+		}
 		hidden_effect = { planet_event = { id = cc_colony_events.343 days = 1800 } }
 		
 		ai_chance = {
@@ -2069,8 +2081,22 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_pacmonument_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_pacifist_centre
+					days = -1
+				}
+			}
 		}
-		else = { custom_tooltip = cc_minor_pacmonument_will_be_built }
+		else = {
+			custom_tooltip = cc_minor_pacmonument_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_minor_pacmonument
+					days = -1
+				}
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.351 days = 1800 } }
 		
@@ -2834,6 +2860,12 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_xenophile_institute_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_xenophile_institute
+				days = -1
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.451 days = 1800 } }
 		
@@ -4796,8 +4828,22 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_xenophobe_institute_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_xenophobe_institute
+					days = -1
+				}
+			}
 		}
-		else = { custom_tooltip = cc_minor_xenophobe_institute_will_be_built }
+		else = {
+			custom_tooltip = cc_minor_xenophobe_institute_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_minor_xenophobe_institute
+					days = -1
+				}
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.551 days = 1800 } }
 		
@@ -5740,6 +5786,12 @@ planet_event = {
 			days = 1800
 		}
 		custom_tooltip = cc_mausoleum_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_religious_centre
+				days = -1
+			}
+		}
 		hidden_effect = { planet_event = { id = cc_colony_events.643 days = 1800 } }
 		
 		ai_chance = {
@@ -5859,8 +5911,22 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_religious_centre
+					days = -1
+				}
+			}
 		}
-		else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
+		else = {
+			custom_tooltip = cc_minor_mausoleum_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_minor_mausoleum
+					days = -1
+				}
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.651 days = 1800 } }
 		
@@ -6616,6 +6682,12 @@ planet_event = {
 		}
 		
 		custom_tooltip = cc_university_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_university
+				days = -1
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.751 days = 1800 } }
 		
@@ -8854,6 +8926,12 @@ planet_event = {
 			days = 1800
 		}
 		custom_tooltip = cc_mausoleum_will_be_built
+		tooltip = {
+			add_modifier = {
+				modifier = cc_religious_centre
+				days = -1
+			}
+		}
 		hidden_effect = { planet_event = { id = cc_colony_events.1043 days = 1800 } }
 		
 		ai_chance = {
@@ -8970,8 +9048,22 @@ planet_event = {
 		if = {
 			limit = { has_planet_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_religious_centre
+					days = -1
+				}
+			}
 		}
-		else = { custom_tooltip = cc_minor_mausoleum_will_be_built }
+		else = {
+			custom_tooltip = cc_minor_mausoleum_will_be_built
+			tooltip = {
+				add_modifier = {
+					modifier = cc_minor_mausoleum
+					days = -1
+				}
+			}
+		}
 		
 		hidden_effect = { planet_event = { id = cc_colony_events.1051 days = 1800 } }
 		

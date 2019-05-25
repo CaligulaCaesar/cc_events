@@ -60,7 +60,7 @@
  cc_colony_events.251.name:0 "Militärakademie auf [root.GetName] eröffnet"
  cc_colony_events.251.desc:0 "Die Militärakademie zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Im Innenhof wurde eine Statue des verstorbenen Offiziers enthüllt. Seine Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der militärischen Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Mitglieder und Befürworter der Marine erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an die Menschen, die bereit sind, für dieser großartigen Nation ihr Leben aufzuopfern."
 
- cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_milacademy$§! hinzu:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+ cc_milacademy_will_be_built:0 "\nDie Bauzeit der Militärakademie beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
 
  cc_founder_militarist:0 "Planetares Legat"
  cc_founder_militarist_desc:0 "Diese Kolonie ist von einem pensionierten Marineoffizier, der sich den Titel 'Legat' genommen hat, geleitet."
@@ -150,7 +150,7 @@
  cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer Imperialist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die pazifistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [pacifist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Pazifisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Denkmal zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird." 
 
  cc_colony_events.342.A:0 "Macht es. [cc_colony_leader.GetSheHeCap] hat es verdient."
- cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_pacifist_centre$§! hinzu:\n$mod_country_unity_produces_mult$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+ cc_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
  cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.343.name:0 "Pazifistisches Versammlungszentrum auf [root.GetName] eröffnet"
@@ -164,7 +164,7 @@
 
  cc_colony_events.35.C.tooltip:0 "[cc_colony_leader.GetName]s Einfluss auf [root.GetName] wird nach 30 Jahren nachlassen."
 
- cc_minor_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_pacmonument$§! hinzu:\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+ cc_minor_pacmonument_will_be_built:0 "\nDie Bauzeit des Denkmals beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
  cc_colony_events.351.desc:0 "Das Denkmal zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
 
  cc_pacifists_offended:0 "Beleidigte Pazifisten"
@@ -265,7 +265,7 @@
  cc_colony_events.451.name:0 "Kulturelle Expo auf [root.GetName] eingeweiht"
  cc_colony_events.451.desc:0 "Die "Kulturelle Expo" zu [cc_colony_leader.GetName]s Ehre ist eingeweiht worden. Ihre Eröffnung wurde von den Bürgern der Kolonie sowie von allen Xenos in der [root.owner.GetName] mit Freude aufgenommen. [cc_colony_leader.GetName]s Geist lebt in es weiter, und wird so lange in Erinnerung bleiben, wie die Expo gefeiert ist."
 
- cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophile_institute$§! hinzu:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+ cc_xenophile_institute_will_be_built:0 "\nDie Vorbereitungszeit der Kulturellen Expo beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
 
 
  cc_founder_xenophile:0 "Xenophilischer Mediator"
@@ -429,9 +429,9 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_betrayed_us_ally:0 "Verrat"
  cc_ignored_ally:0 "Ignorierte unser Bedenken"
 
- cc_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Reinheitsinstituts beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_xenophobe_institute$§! hinzu:\n$mod_country_unity_produces_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+ cc_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Reinheitsinstituts beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
 
- cc_minor_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Hegemoneninstituts beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_xenophobe_institute$§! hinzu:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
+ cc_minor_xenophobe_institute_will_be_built:0 "\nDie Bauzeit des Hegemoneninstituts beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
 
 
  cc_founder_xenophobe:0 "Planetarer Hegemon"
@@ -524,7 +524,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] traf sich mit Unterstützern auf [random_visit_planet.GetName], als ein halb-verrückter fanatischer anti-Spiritualist [cc_colony_leader.GetIhnSieDE] erschoss, bevor [cc_colony_leader.GetHisHer]e Wachen reagieren konnte. Leider riss die Menge den Mörder auseinander, bevor man ihr festnehmen und befragen konnte. Dies hat es uns erschwert, Verschwörungstheorien überzeugend zu verneinen. Gerüchten zufolge hat jemand wichtig - vielleicht sogar jemand, der hoch in der [root.owner.GetSpeciesAdj]en Regierung ist - die Ermordung geplant. Es wird auch behauptet, dass die Sicherheit, die die [root.owner.GetSpeciesAdj]e Behörden auf [random_visit_planet.GetName] [cc_colony_leader.GetName] gegeben haben, nicht ausreichend war, und somit die Tragödie zu geschehen erlaubte. Die spiritualistische Gemeinschaft in der [root.owner.GetName] ist entgeistert und verärgert. Die Leitung der [spiritualist_faction.GetName] hat sich während des Chaos mit Regierungsbeamten getroffen und ihre Unzufriedenheit deutlich gemacht, aber auch vorgeschlagen, dass die Schmerzen der Spiritualisten besänftigt werden könnten, wenn [cc_colony_leader.GetName] ein Staatsbegräbnis erhalten würde. Ebenfalls wollen sie, dass ein großes Mausoleum zu [cc_colony_leader.GetHisHer]er Ehre auf [root.GetName] errichtet wird."
 
  cc_colony_events.642.A:0 "$cc_colony_events.342.A$"
- cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_religious_centre$§! hinzu:\n$mod_country_unity_produces_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+ cc_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
  cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
  cc_colony_events.643.name:0 "Mausoleum auf [root.GetName] eröffnet"
@@ -538,7 +538,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
 
  cc_colony_events.65.C.tooltip:0 "$cc_colony_events.35.C.tooltip$"
 
- cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_minor_mausoleum$§! hinzu:\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+ cc_minor_mausoleum_will_be_built:0 "\nDie Bauzeit des Mausoleums beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
  cc_colony_events.651.desc:0 "Das Mausoleum zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Die Bevölkerung [root.GetName]s hat jetzt einen Ort, wo sie sich an [cc_colony_leader.GetHisHer]e Lehren und Leben erinnern können."
  
 #General random spiritualist guru
@@ -661,7 +661,7 @@ cc_colony_events.5421.option:0 "We may have to reassess our opinion of them."
  cc_colony_events.751.name:0 "Universität auf [root.GetName] eröffnet"
  cc_colony_events.751.desc:0 "Die Universität zu [cc_colony_leader.GetName]s Ehre ist fertiggestellt worden. Ihre Eröffnung wurde von den Bürgern der Kolonie mit Freude aufgenommen. Sie sind der Meinung waren, dass [root.GetName] jetzt als wichtiges Zentrum der Lehre innerhalb der [root.owner.GetName] gilt. Darüber hinaus sind landesweit Materialisten erfreut über diesen Beweis der Hingabe [root.owner.leader.GetDesDerDE] [root.owner.GetRulerTitle]s an dem technologischen Fortschritt."
 
- cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Es fügt den Modifikator §Y$cc_university$§! hinzu: §G+33%§!\n$mod_country_society_research_produces_mult$: §G+33%§!\n$mod_country_engineering_research_produces_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+ cc_university_will_be_built:0 "\nDie Bauzeit der Universität beträgt 5 Jahre. Einmal fertiggestellt geschieht folgendes:"
 
 
  cc_founder_materialist:0 "Angesehener Intellektueller"

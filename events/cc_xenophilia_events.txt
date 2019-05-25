@@ -616,13 +616,15 @@ event = {
 			if = {
 				limit = {
 					has_modifier = cc_literally_xenophile_country
-					has_ascension_perk = ap_xeno_compatibility
-					NOT = {
-						pop_percentage = {
-							percentage > 0.15
-							limit = {
-								has_pop_flag = cc_literally_xenophile_manifested
-								is_robot_pop = no
+					OR = {
+						has_ascension_perk = ap_xeno_compatibility
+						NOT = {
+							pop_percentage = {
+								percentage > 0.15
+								limit = {
+									has_pop_flag = cc_literally_xenophile_manifested
+									is_robot_pop = no
+								}
 							}
 						}
 					}

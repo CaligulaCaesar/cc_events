@@ -59,7 +59,7 @@ cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wea
 cc_colony_events.251.name:0 "Academy opens on [root.GetName]"
 cc_colony_events.251.desc:0 "The military academy in [cc_colony_leader.GetName]'s honour has been completed. It features a prominent statue of the now-deceased leader. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of military learning within the [root.owner.GetName]. Furthermore, service members and their supporters across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to the people who serve this great nation."
 
-cc_milacademy_will_be_built:0 "\nThe Military Academy will take 5 years to complete. It will add the modifier §Y$cc_milacademy$§!, granting:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+cc_milacademy_will_be_built:0 "\nThe Military Academy will take 5 years to build. Once it is complete, the following will happen:"
 
 cc_founder_militarist:0 "Planetary Legate"
 cc_founder_militarist_desc:0 "This colony is governed by a retired naval officer who has been given the title of 'Legate'."
@@ -151,7 +151,7 @@ cc_colony_events.341.desc:0 "[cc_colony_leader.GetName] has finished touring the
 cc_colony_events.342.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds ends in Tragedy"
 cc_colony_events.342.desc:0 "[cc_colony_leader.GetName] was meeting with supporters on [random_visit_planet.GetName] when a half-crazed fanatic imperialist shot [cc_colony_leader.GetHimHer] down before [cc_colony_leader.GetHisHer] guards could react. Unfortunately, the crowd tore apart the assassin before she could be questioned. This has fuelled conspiracy theories, which claim that someone - perhaps even someone high in the [root.owner.GetSpeciesAdj] government - was behind the assassination. There are also claims that [root.owner.GetSpeciesAdj] authorities on [random_visit_planet.GetName] failed to provide [cc_colony_leader.GetName] with adequate security, thus allowing the tragedy to happen. As a result, the pacifist community in the [root.owner.GetName] is up in arms. The leadership [pacifist_faction.GetName] has met with government officials amidst the chaos and has made clear their upset, but also suggesting that, to soothe pacifists' hurt, [cc_colony_leader.GetName] should be given a state funeral and a great monument should be built in [cc_colony_leader.GetHisHer] honour on [root.GetName]."
 cc_colony_events.342.A:0 "Do it. [cc_colony_leader.GetSheHeCap] deserve[cc_colony_leader.GetSXX] it."
-cc_pacmonument_will_be_built:0 "\nThe Monument will take 5 years to complete. It will add the modifier §Y$cc_pacifist_centre$§!, granting:\n$mod_country_unity_produces_mult$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+250%§!"	
+cc_pacmonument_will_be_built:0 "\nThe Monument will take 5 years to build. Once it is complete, the following will happen:"
 cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.343.name:0 "Congregational Centre opens on [root.GetName]"
@@ -165,7 +165,7 @@ cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetWas
 
 cc_colony_events.35.C.tooltip:0 "[root.GetName] will be free of [cc_colony_leader.GetName]'s influence in 30 years' time."
 
-cc_minor_pacmonument_will_be_built:0 "\nThe Monument will take 5 years to complete. It will add the modifier §Y$cc_minor_pacmonument$§!, granting:\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+cc_minor_pacmonument_will_be_built:0 "\nThe Monument will take 5 years to build. Once it is complete, the following will happen:"
 cc_colony_events.351.desc:0 "The monument in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
 
@@ -269,7 +269,7 @@ cc_colony_events.451.name:0 "Cultural Exchange on [root.GetName] inaugurated"
 cc_colony_events.451.desc:0 "The Cultural Exchange in [cc_colony_leader.GetName]'s honour is ready. Its opening was generally welcomed both by the planet's populace and by xenos in the broader [root.owner.GetName]. [cc_colony_leader.GetHisHerCap] spirit lives on in it, and will be remembered for as long as it is celebrated."
 
 
-cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to complete. It will add the modifier §Y$cc_xenophile_institute$§!, granting:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+cc_xenophile_institute_will_be_built:0 "\nThe Cultural Exchange will take 5 years to build. Once it is complete, the following will happen:"
 
 
 cc_founder_xenophile:0 "Xenophile Mediator"
@@ -427,9 +427,9 @@ cc_xenophobe_assassinated:0 "Hero Assassinated"
 cc_betrayed_us_ally:0 "Betrayed us"
 cc_ignored_ally:0 "Ignored our concerns"
 
-cc_xenophobe_institute_will_be_built:0 "\nThe Institute of Purity will take 5 years to complete. It will add the modifier §Y$cc_xenophobe_institute$§!, granting:\n$mod_country_unity_produces_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+cc_xenophobe_institute_will_be_built:0 "\nThe Institute of Purity will take 5 years to build. Once it is complete, the following will happen:"
 
-cc_minor_xenophobe_institute_will_be_built:0 "\nThe Hegemon's Institute will take 5 years to complete. It will add the modifier §Y$cc_minor_xenophobe_institute$§!, granting:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
+cc_minor_xenophobe_institute_will_be_built:0 "\nThe Hegemon's Institute will take 5 years to build. Once it is complete, the following will happen:"
 
 
 cc_founder_xenophobe:0 "Planetary Hegemon"
@@ -523,7 +523,7 @@ cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
 cc_colony_events.642.name:0 "[cc_colony_leader.GetName]'s Tour of Worlds ends in Tragedy"
 cc_colony_events.642.desc:0 "[cc_colony_leader.GetName] was meeting with supporters on [random_visit_planet.GetName] when a half-crazed fanatic anti-spiritualist shot [cc_colony_leader.GetHimHer] down before [cc_colony_leader.GetHisHer] guards could react. Unfortunately, the crowd tore apart the assassin before she could be questioned. This has fuelled conspiracy theories, which claim that someone - perhaps even someone high in the [root.owner.GetSpeciesAdj] government - was behind the assassination. There are also claims that [root.owner.GetSpeciesAdj] authorities on [random_visit_planet.GetName] failed to provide [cc_colony_leader.GetName] with adequate security, thus allowing the tragedy to happen. As a result, the spiritualist community in the [root.owner.GetName] is up in arms. The leadership [spiritualist_faction.GetName] has met with government officials amidst the chaos and has made clear their upset, but also suggesting that, to soothe spiritualists' hurt, [cc_colony_leader.GetName] should be given a state funeral and a great mausoleum should be built in [cc_colony_leader.GetHisHer] honour on [root.GetName]."
 cc_colony_events.642.A:0 "Do it. [cc_colony_leader.GetSheHeCap] deserve[cc_colony_leader.GetSXX] it."
-cc_mausoleum_will_be_built:0 "\nThe Mausoleum will take 5 years to complete. It will add the modifier §Y$cc_religious_centre$§!, granting:\n$mod_country_unity_produces_mult$: §G+50%§!\n$mod_country_unity_produces_mult$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+20§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_mausoleum_will_be_built:0 "\nThe Mausoleum will take 5 years to build. Once it is complete, the following will happen:"
 cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
 
 cc_colony_events.643.name:0 "Mausoleum opens on [root.GetName]"
@@ -537,7 +537,7 @@ cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetWas
 
 cc_colony_events.65.C.tooltip:0 "[root.GetName] will be free of [cc_colony_leader.GetName]'s influence in 30 years' time."
 
-cc_minor_mausoleum_will_be_built:0 "\nThe Mausoleum will take 5 years to complete. It will add the modifier §Y$cc_minor_mausoleum$§!, granting:\n$mod_country_unity_produces_mult$: §G+25%§!\n$mod_country_unity_produces_mult$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$mod_pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+cc_minor_mausoleum_will_be_built:0 "\nThe Mausoleum will take 5 years to build. Once it is complete, the following will happen:"
 cc_colony_events.651.desc:0 "The mausoleum in [cc_colony_leader.GetName]'s honour has been completed. The populace on [root.GetName] now have a place to remember [cc_colony_leader.GetHisHer] teachings and achievements."
 
 #General random spiritualist guru
@@ -660,7 +660,7 @@ cc_colony_events.75.B.tooltip:0 "[cc_colony_leader.GetName]'s influence will wea
 cc_colony_events.751.name:0 "University opens on [root.GetName]"
 cc_colony_events.751.desc:0 "The university in [cc_colony_leader.GetName]'s honour has been completed. Its opening was greeted with joy amongst the colony's citizens, who feel that [root.GetName] has been put on the map as an important centre of learning within the [root.owner.GetName]. Furthermore, materialists across the [root.owner.GetName] are pleased at this proof of the [root.owner.GetRulerTitle]'s dedication to scientific progress."
 
-cc_university_will_be_built:0 "\nThe University will take 5 years to complete. It will add the modifier §Y$cc_university$§!, granting:\n$mod_country_physics_research_produces_mult$: §G+33%§!\n$mod_country_society_research_produces_mult$: §G+33%§!\n$mod_country_engineering_research_produces_mult$: §G+33%§!\n$MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+10§!\n$mod_pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+cc_university_will_be_built:0 "\nThe University will take 5 years to build. Once it is complete, the following will happen:"
 
 
 cc_founder_materialist:0 "Prominent Intellectual"
