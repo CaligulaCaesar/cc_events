@@ -6,6 +6,13 @@ dpe_guardian_of_the_peace = {
 	clothes_texture_index = 3
 	icon = bio_trophy
 
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
@@ -112,6 +119,13 @@ dpe_gurus_followers = {
 	clothes_texture_index = 3
 	icon = priest
 
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
@@ -215,6 +229,13 @@ dpe_direct_democrats = {
 	clothes_texture_index = 3
 	icon = administrator
 
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
@@ -256,6 +277,13 @@ dpe_monarchists = {
 	building_icon = building_major_capital
 	clothes_texture_index = 3
 	icon = noble
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
 
 	possible = {
 		complex_specialist_job_check_trigger = yes

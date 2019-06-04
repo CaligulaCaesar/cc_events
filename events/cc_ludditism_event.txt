@@ -9,9 +9,11 @@ planet_event = { #shifted back to a completely normal planet event
 	id = cc_luddite.1000
 	hide_window = yes
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
-		exists = owner
+	}
+	
+	trigger = {
 		owner = {
 			is_country_type = default
 			has_policy_flag = robots_allowed

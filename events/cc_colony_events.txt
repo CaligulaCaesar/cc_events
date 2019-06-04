@@ -8018,6 +8018,7 @@ country_event = {
 	}
 
 	trigger = {
+		num_owned_planets > 3
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		has_faction = traditionalist
 

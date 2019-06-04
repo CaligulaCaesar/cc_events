@@ -6,9 +6,12 @@ planet_event = {
 	id = dpe_smallpos_events.1
 	hide_window = yes
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 15
-		has_owner = yes
 
 		planet_stability > 65
 		NOR = {
@@ -24,7 +27,6 @@ planet_event = {
 			percentage > 0.75
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			NOR = {
@@ -1600,9 +1602,12 @@ planet_event = {
 	}
 	picture = GFX_evt_alien_propaganda
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 30
-		has_owner = yes
 
 		NOR = {
 			has_planet_flag = dpe_unity_planet
@@ -1620,7 +1625,6 @@ planet_event = {
 			percentage > 0.75
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			num_owned_planets > 1
@@ -1693,10 +1697,12 @@ planet_event = {
 	}
 	picture = GFX_evt_metropolis
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 15
-
-		has_owner = yes
 
 		NOR = {
 			has_planet_flag = dpe_posenergy_planet
@@ -1731,7 +1737,6 @@ planet_event = {
 			}
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			NOT = {
@@ -1790,9 +1795,12 @@ planet_event = {
 	}
 	picture = GFX_evt_frozen
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 30
-		has_owner = yes
 
 		NOR = {
 			has_planet_flag = dpe_posenergy_planet
@@ -1827,7 +1835,6 @@ planet_event = {
 			}
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			num_owned_planets > 1
@@ -1887,9 +1894,12 @@ planet_event = {
 	}
 	picture = GFX_evt_mining_operations
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 15
-		has_owner = yes
 
 		NOR = {
 			has_planet_flag = dpe_posminerals_planet
@@ -1924,7 +1934,6 @@ planet_event = {
 			}
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			NOT = {
@@ -1983,9 +1992,12 @@ planet_event = {
 	}
 	picture = GFX_evt_mining_operations
 
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
 	trigger = {
 		years_passed > 30
-		has_owner = yes
 
 		NOR = {
 			has_planet_flag = dpe_posminerals_planet
@@ -2020,7 +2032,6 @@ planet_event = {
 			}
 		}
 
-		exists = owner
 		owner = {
 			is_country_type = default
 			num_owned_planets > 1

@@ -7,10 +7,11 @@ planet_event = { #shifted back to completely normal planet event start.
 	id = cc_emancipation.1000
 	hide_window = yes
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
-		
-		exists = owner
+	}
+	
+	trigger = {
 		owner = {
 			is_country_type = default
 			allows_slavery = yes

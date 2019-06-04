@@ -12,10 +12,10 @@ country_event = {
 	mean_time_to_happen = {
 		years = 100
 	}
-	
+
 	trigger = {
-		years_passed > 60
 		num_owned_planets > 7
+		years_passed > 60
 		NOT = { has_country_flag = cc_has_had_blackmail }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOR = {
