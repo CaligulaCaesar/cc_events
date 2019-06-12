@@ -86,9 +86,11 @@ planet_event = {
 	
 	is_triggered_only = yes
 
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = {
 		exists = owner
-		has_owner = yes
 		owner = {
 			is_country_type = default
 			has_policy_flag = robots_allowed
@@ -499,9 +501,12 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = { 
 		exists = owner
-		has_owner = yes
+		
 		owner = {
 			has_policy_flag = robots_allowed
 			NOR = {
@@ -720,9 +725,12 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = { 
 		exists = owner
-		has_owner = yes
+		
 		owner = {
 			has_policy_flag = robots_allowed
 			NOR = {
@@ -941,9 +949,12 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = { 
 		exists = owner
-		has_owner = yes
+		
 		owner = {
 			has_policy_flag = robots_allowed
 			NOR = {
@@ -1314,9 +1325,12 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = {
 		exists = owner
-		has_owner = yes
+		
 		any_owned_pop = { is_non_sapient_robot = yes }
 		any_owned_pop = {
 			has_ethic = ethic_spiritualist

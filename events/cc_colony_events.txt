@@ -1076,8 +1076,10 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
 		exists = root.owner
 		has_modifier = cc_founder_militarist
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -1793,8 +1795,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = {
+		
 		exists = controller
 		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
@@ -2042,8 +2047,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_founder_pacifist
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -2836,8 +2844,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_founder_xenophile
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -3618,8 +3629,11 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = {
+		
 		exists = controller
 		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
@@ -3759,8 +3773,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = {
+		
 		exists = controller
 		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
@@ -4777,8 +4794,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_founder_xenophobe
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -5623,8 +5643,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = {
+		
 		exists = controller
 		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
@@ -5872,8 +5895,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_founder_spiritualist
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -6658,8 +6684,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_founder_materialist
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -7492,8 +7521,11 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { 
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = { 
+		
 		exists = root.owner
 		has_modifier = cc_colony_monarchy
 		NOT = { has_planet_flag = cc_leader_dead }
@@ -8182,8 +8214,11 @@ planet_event = {
 	
 	is_triggered_only = yes
 
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+	}
+	trigger = {
+		
 		exists = root.owner
 		exists = controller
 		controller = { is_same_value = root.owner }

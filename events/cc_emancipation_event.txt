@@ -95,9 +95,11 @@ planet_event = {
 	
 	is_triggered_only = yes
 
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = {
 		exists = owner
-		has_owner = yes
 		owner = {
 			is_country_type = default
 			allows_slavery = yes

@@ -3570,7 +3570,7 @@ country_event = {
 									}
 								}
 							}
-							prev = { set_leader = cc_rebellious_faction_leader }
+							set_leader = cc_rebellious_faction_leader
 							
 						}
 						else = {
@@ -4068,12 +4068,15 @@ planet_event = {
 	picture = GFX_evt_arguing_senate
 	
 	is_triggered_only = yes
+
+	pre_triggers = {
+		has_ground_combat = no
+	}
 	
 	trigger = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
-		has_ground_combat = no
 		has_orbital_bombardment = no
 	}
 	
@@ -4239,11 +4242,13 @@ planet_event = {
 	
 	location = root
 	
+	pre_triggers = {
+		has_ground_combat = no
+	}
 	trigger = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
-		has_ground_combat = no
 		has_orbital_bombardment = no
 	}
 	
@@ -5767,11 +5772,14 @@ planet_event = {
 	
 	is_triggered_only = yes
 	
+	pre_triggers = {
+		has_ground_combat = no
+	}
 	trigger = {
 		exists = controller
 		controller = { is_same_value = root.owner }
 		has_modifier = cc_breakaway_sympathy
-		has_ground_combat = no
+		
 		has_orbital_bombardment = no
 		planet_stability < @dpe_risk_unrest_value
 		
