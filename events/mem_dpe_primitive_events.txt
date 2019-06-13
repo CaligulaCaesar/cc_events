@@ -1634,6 +1634,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		exists = event_target:mem_dpe_primitive_civ
 		NOT = {
 			event_target:mem_dpe_primitive_civ = {
 				has_country_flag = mem_dpe_fleet_destroyed@root
