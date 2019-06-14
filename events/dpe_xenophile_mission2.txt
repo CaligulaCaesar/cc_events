@@ -371,12 +371,14 @@ country_event = {
 	option = {
 		name = dpe_xenophile_mission.3.A
 		
-		event_target:dpe_new_contact = {
-			set_timed_country_flag = {
-				flag = dpe_recent_xenophile_mission
-				days = 9000
+		hidden_effect = {
+			event_target:dpe_new_contact = {
+				set_timed_country_flag = {
+					flag = dpe_recent_xenophile_mission
+					days = 9000
+				}
+				country_event = { id = dpe_xenophile_mission.4 }
 			}
-			country_event = { id = dpe_xenophile_mission.4 }
 		}
 
 		event_target:dpe_new_contact = {
