@@ -2390,18 +2390,7 @@ country_event = {
 					modifier = dpe_xenomission_spying_deceit
 				}
 			}
-			every_country = {
-				limit = {
-					NOT = { is_same_value = from }
-					NOT = { is_same_value = root }
-					has_communications = root
-					has_communications = from
-				}
-				add_opinion_modifier = {
-					modifier = dpe_deceitful
-					who = root
-				}
-			}
+			custom_tooltip = dpe_deceitful_diplomacy
 		}
 	}
 }
@@ -2430,18 +2419,7 @@ country_event = {
 					modifier = dpe_xenomission_spying_deceit
 				}
 			}
-			every_country = {
-				limit = {
-					NOT = { is_same_value = from }
-					NOT = { is_same_value = root }
-					has_communications = root
-					has_communications = from
-				}
-				add_opinion_modifier = {
-					modifier = dpe_deceitful
-					who = root
-				}
-			}
+			custom_tooltip = dpe_deceitful_diplomacy
 		}
 	}
 }
@@ -2769,6 +2747,7 @@ country_event = {
 			who = from
 			modifier = dpe_xenomission_caught_smuggling
 		}
+		
 		every_country = {
 			limit = {
 				NOT = { is_same_value = from }
@@ -2841,18 +2820,7 @@ country_event = {
 					who = root
 					modifier = dpe_xenomission_caught_smuggling
 				}
-				every_country = {
-					limit = {
-						NOT = { is_same_value = from }
-						NOT = { is_same_value = root }
-						has_communications = root
-						has_communications = from
-					}
-					add_opinion_modifier = {
-						modifier = dpe_deceitful
-						who = root
-					}
-				}
+				custom_tooltip = dpe_from_deceitful_diplomacy
 			}
 		}
 	}
@@ -3635,21 +3603,22 @@ country_event = {
 				who = root
 			}
 		}
-		every_country = {
-			limit = {
-				NOT = { is_same_value = root }
-				NOT = { is_same_value = from }
-				OR = {
-					is_in_federation_with = FROM
-					has_defensive_pact = FROM
-					has_non_aggression_pact = from
+		custom_tooltip = dpe_from_deceitful_diplomacy
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { is_same_value = root }
+					NOT = { is_same_value = from }
+					OR = {
+						is_in_federation_with = FROM
+						has_defensive_pact = FROM
+						has_non_aggression_pact = from
+					}
 				}
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
-			}
-			hidden_effect = {
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 				add_opinion_modifier = {
 					modifier = dpe_deceitful
 					who = root
@@ -3659,25 +3628,25 @@ country_event = {
 					who = root
 				}
 			}
-		}
-		every_country = {
-			limit = {
-				NOT = { is_same_value = root }
-				NOT = { is_same_value = from }
-				NOR = {
-					is_in_federation_with = FROM
-					has_defensive_pact = FROM
-					has_non_aggression_pact = from
-					is_in_federation_with = root
-					has_defensive_pact = root
-					has_non_aggression_pact = root
+			every_country = {
+				limit = {
+					NOT = { is_same_value = root }
+					NOT = { is_same_value = from }
+					NOR = {
+						is_in_federation_with = FROM
+						has_defensive_pact = FROM
+						has_non_aggression_pact = from
+						is_in_federation_with = root
+						has_defensive_pact = root
+						has_non_aggression_pact = root
+					}
+					has_communications = root
+					has_communications = from
 				}
-				has_communications = root
-				has_communications = from
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 			}
 		}
 		hidden_effect = {

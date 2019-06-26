@@ -1311,3 +1311,59 @@ planet_event = {
 	}
 }
 
+
+country_event = {
+	id = cctest.770
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_pop_faction = {
+			limit = { is_pop_faction_type = imperialist }
+			root = {
+				random_pop_faction = {
+					limit = {
+						NOT = { is_same_value = prevprev }
+						is_pop_faction_type = imperialist
+					}
+					root = {
+						capital_scope = {
+							set_variable = {
+								which = cctest_pop_factions_bugged_1
+								value = 1
+							}
+						}
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						is_same_value = prevprev
+						NOT = { is_pop_faction_type = imperialist }
+					}
+					root = {
+						capital_scope = {
+							set_variable = {
+								which = cctest_pop_factions_bugged_2
+								value = 1
+							}
+						}
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						is_same_value = prevprev
+						is_pop_faction_type = imperialist
+					}
+					root = {
+						capital_scope = {
+							set_variable = {
+								which = cctest_pop_factions_not_bugged
+								value = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -107,7 +107,7 @@ cc_bribed_planet_desc:0 "政府给这颗星球提供了巨额财政激励，力�
 
 ###Events
 
-#these go in the place of [cc_rebellious_faction.GetFactionTypeAdj]
+#these go in the place of [root.GetFactionTypeAdj]
 ccloc_xenophilic:0 "亲外主义"
 ccloc_supremacist:0 "霸权主义"
 ccloc_isolationist:0 "孤立主义"
@@ -119,29 +119,29 @@ ccloc_traditionalist:0 "传统主义"
 ccloc_materialistic:0 "唯物主义"
 
 ccfaction.1.name:0 "派系骚乱"
-ccfaction.1.desc:0 "一股针对帝国运转方式的不满浪潮已在民众间扩散开来，要求采取一条更加偏向[cc_rebellious_faction.GetFactionTypeAdj]道路的秘密呼声四处流传。我们相信一群隶属于[cc_rebellious_faction.GetName]派系的死硬分子在背后推波助澜，寻求脱离 [root.GetName],但[cc_rebellious_faction.GetName]对此予以否认。"
+ccfaction.1.desc:0 "一股针对帝国运转方式的不满浪潮已在民众间扩散开来，要求采取一条更加偏向[root.GetFactionTypeAdj]道路的秘密呼声四处流传。我们相信一群隶属于[cc_rebellious_faction.GetName]派系的死硬分子在背后推波助澜，寻求脱离 [root.GetName],但[cc_rebellious_faction.GetName]对此予以否认。"
 
 ccfaction.2.name:0 "[cc_rebellious_faction.GetName]派系巩固其权威"
-ccfaction.2.desc:0 "要求政府更加注重[cc_rebellious_faction.GetFactionTypeAdj]的骚动已经扩散开来，并在[root.GetName]部分区域扎下了根。[cc_rebellious_faction.GetName]派系已经向我们正式呈交了一份列有各项要求的清单，自称代表帝国这一区域民众的呼声，并隐晦的威胁，如果要求得不到满足，他们将谋求分裂。必须采取紧急措施，将帝国重新团结起来！"
+ccfaction.2.desc:0 "要求政府更加注重[root.GetFactionTypeAdj]的骚动已经扩散开来，并在[root.GetName]部分区域扎下了根。[cc_rebellious_faction.GetName]派系已经向我们正式呈交了一份列有各项要求的清单，自称代表帝国这一区域民众的呼声，并隐晦的威胁，如果要求得不到满足，他们将谋求分裂。必须采取紧急措施，将帝国重新团结起来！"
 
 
 ccfaction.21.name:0 "派系骚乱结束"
 ccfaction.21.desc.fail:0 "[cc_rebellious_faction.GetName]派系的秘密骚动徒劳无功，已经逐渐平息下来。"
-ccfaction.21.desc.succeed:0 "[cc_rebellious_faction.GetName]派系的不满与诉求已经得到了[root.GetName]领导阶层的认同，他们计划改革政府，采取一条更加偏向[cc_rebellious_faction.GetFactionTypeAdj]的道路，以满足异见团体。[cc_rebellious_faction.GetName]派系的领导人们对此十分满意，停止了呼吁变革的骚动。"
+ccfaction.21.desc.succeed:0 "[cc_rebellious_faction.GetName]派系的不满与诉求已经得到了[root.GetName]领导阶层的认同，他们计划改革政府，采取一条更加偏向[root.GetFactionTypeAdj]的道路，以满足异见团体。[cc_rebellious_faction.GetName]派系的领导人们对此十分满意，停止了呼吁变革的骚动。"
 
 ccfaction.3.name:0 "[cc_new_reb_faction.GetName]派系已与[cc_rebellious_faction.GetName]派系结盟" 
-ccfaction.3.desc:0 "[cc_new_reb_faction.GetName]一直以来都只是[root.GetName]境内的一个小型异见团体，他们近来决定与[cc_rebellious_faction.GetName]派系结盟,后者正为实现大规模变革而积极抗争。两者认为双方拥有广泛共识，应当共同进退，希望借此能够成为一股不可阻挡的力量，实现建立一个[cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj]国家的愿景--不管是在[root.GetName]内部还是另立门户。"
+ccfaction.3.desc:0 "[cc_new_reb_faction.GetName]一直以来都只是[root.GetName]境内的一个小型异见团体，他们近来决定与[cc_rebellious_faction.GetName]派系结盟,后者正为实现大规模变革而积极抗争。两者认为双方拥有广泛共识，应当共同进退，希望借此能够成为一股不可阻挡的力量，实现建立一个[root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj]国家的愿景--不管是在[root.GetName]内部还是另立门户。"
 
 
 ccfaction.4.name:0 "[cc_rebellious_faction.GetName]计划独立！"
-ccfaction.4.dual.desc:0 "一位来自[cc_rebellious_faction.GetName]派系的投诚者向我们揭露了对手的计划：他们准备与[cc_new_reb_faction.GetName]派系一起从[root.GetName]中分裂出去，以实现其重塑一个[cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj]社会的梦想。他们很可能也已经意识到我们洞悉了他们的计划，因此反叛已经迫在眉睫。我必须立刻采取措施！ "
-ccfaction.4.single.desc:0 "一位来自[cc_rebellious_faction.GetName]派系的投诚者向我们揭露了对手的计划：他们准备从[root.GetName]中分裂出去，以实现其重塑一个[cc_rebellious_faction.GetFactionTypeAdj]社会的梦想。他们很可能也已经意识到我们洞悉了他们的计划，因此反叛已经迫在眉睫。我必须立刻采取措施！"
+ccfaction.4.dual.desc:0 "一位来自[cc_rebellious_faction.GetName]派系的投诚者向我们揭露了对手的计划：他们准备与[cc_new_reb_faction.GetName]派系一起从[root.GetName]中分裂出去，以实现其重塑一个[root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj]社会的梦想。他们很可能也已经意识到我们洞悉了他们的计划，因此反叛已经迫在眉睫。我必须立刻采取措施！ "
+ccfaction.4.single.desc:0 "一位来自[cc_rebellious_faction.GetName]派系的投诚者向我们揭露了对手的计划：他们准备从[root.GetName]中分裂出去，以实现其重塑一个[root.GetFactionTypeAdj]社会的梦想。他们很可能也已经意识到我们洞悉了他们的计划，因此反叛已经迫在眉睫。我必须立刻采取措施！"
 
 ccfaction.41.name:0 "派系骚乱结束"
 ccfaction.41.dual.fail.desc:0 "由[cc_rebellious_faction.GetName]和 [cc_new_reb_faction.GetName]两派谋求变革而引起的骚动已经逐渐平息，没有暴力事件伴生。"
 ccfaction.41.single.fail.desc:0 "由[cc_rebellious_faction.GetName]派系谋求变革而引起的骚动已经逐渐平息，没有暴力事件伴生。"
-ccfaction.41.dual.succeed.desc:0 "由[cc_rebellious_faction.GetName]和 [cc_new_reb_faction.GetName]两派谋求变革而引起的骚动已经靠和平手段取得了成功：政府承诺改革，未来将会以更符合[cc_rebellious_faction.GetFactionTypeAdj]派系及 [cc_new_reb_faction.GetFactionTypeAdj]民众要求的方式进行治理。"
-ccfaction.41.single.succeed.desc:0 "由[cc_rebellious_faction.GetName]派系谋求变革而引起的骚动已经靠和平手段取得了成功：政府承诺改革，未来将会以更符合[cc_rebellious_faction.GetFactionTypeAdj]民众要求的方式进行治理。"
+ccfaction.41.dual.succeed.desc:0 "由[cc_rebellious_faction.GetName]和 [cc_new_reb_faction.GetName]两派谋求变革而引起的骚动已经靠和平手段取得了成功：政府承诺改革，未来将会以更符合[root.GetFactionTypeAdj]派系及 [root.GetSecondFactionTypeAdj]民众要求的方式进行治理。"
+ccfaction.41.single.succeed.desc:0 "由[cc_rebellious_faction.GetName]派系谋求变革而引起的骚动已经靠和平手段取得了成功：政府承诺改革，未来将会以更符合[root.GetFactionTypeAdj]民众要求的方式进行治理。"
 
 ccfaction.42.name:0 "[cc_rebellious_faction.GetName]派系叛乱失败"
 ccfaction.42.dual.fail.desc:0 "[cc_rebellious_faction.GetName]和 [cc_new_reb_faction.GetName]两派为强行达成其诉求，发动了从[root.GetName]独立的计划，现在已惨遭失败。他们根本没有举事叛乱所需的民众支持。[root.GetName]已安然度过风暴，团结依旧。"

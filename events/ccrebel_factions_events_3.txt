@@ -821,8 +821,8 @@ country_event = {
 		}
 		
 		hidden_effect = {
-#			country_event = { id = ccfaction.2 days = 60 }
-#			country_event = { id = ccfaction.21 days = 61 }
+#			country_event = { id = ccfaction.2 days = 10 }
+#			country_event = { id = ccfaction.21 days = 11 }
 			country_event = { id = ccfaction.2 days = 1800 }
 			country_event = { id = ccfaction.21 days = 1801 }
 		}
@@ -892,9 +892,9 @@ country_event = {
 		name = CCWORRYING
 		
 		hidden_effect = {
-#			country_event = { id = ccfaction.3 days = 45 } #faction allies with them
-#			country_event = { id = ccfaction.4 days = 90 } #stage 3
-#			country_event = { id = ccfaction.41 days = 91 } #stage 3 fails
+#			country_event = { id = ccfaction.3 days = 10 } #faction allies with them
+#			country_event = { id = ccfaction.4 days = 15 } #stage 3
+#			country_event = { id = ccfaction.41 days = 16 } #stage 3 fails
 			country_event = { id = ccfaction.3 days = 540 } #faction allies with them
 			country_event = { id = ccfaction.4 days = 1080 } #stage 3
 			country_event = { id = ccfaction.41 days = 1081 } #stage 3 fails
@@ -1104,74 +1104,72 @@ country_event = {
 			limit = {
 				is_a_vanilla_faction = yes
 				NOT = { is_same_value = event_target:cc_rebellious_faction }
-				if = {
-					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = xenoist }
-					}
-					NOR = {
-						is_pop_faction_type = supremacist
-						is_pop_faction_type = isolationist
-					}
-				}
+				faction_approval < @cc_faction_danger_number
 				if = {
 					limit = {
 						event_target:cc_rebellious_faction = {
 							OR = {
+								is_pop_faction_type = xenoist
 								is_pop_faction_type = supremacist
 								is_pop_faction_type = isolationist
 							}
 						}
 					}
-					NOT = { is_pop_faction_type = xenoist }
+					NOR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
+						is_pop_faction_type = xenoist
+					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = progressive }
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = totalitarian
+								is_pop_faction_type = progressive
+							}
+						}
 					}
 					NOT = { is_pop_faction_type = totalitarian }
-				}
-				if = {
-					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = totalitarian }
-					}
 					NOT = { is_pop_faction_type = progressive }
 				}
-				if = {
+				else_if = {
 					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = technologist }
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = traditionalist
+								is_pop_faction_type = technologist
+							}
+						}
 					}
 					NOT = { is_pop_faction_type = traditionalist }
-				}
-				if = {
-					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = traditionalist }
-					}
 					NOT = { is_pop_faction_type = technologist }
 				}
-				if = {
+				else_if = {
 					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = prosperity }
-					}
-					NOT = { is_pop_faction_type = imperialist }
-				}
-				if = {
-					limit = {
-						event_target:cc_rebellious_faction = { is_pop_faction_type = imperialist }
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = prosperity
+								is_pop_faction_type = imperialist
+							}
+						}
 					}
 					NOT = { is_pop_faction_type = prosperity }
+					NOT = { is_pop_faction_type = imperialist }
 				}
-				faction_approval < @cc_faction_danger_number
 			}
 			count > 0
 		}
 	}
 	
 	immediate = {
-		random_list = {
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
+		random_pop_faction = {
+			limit = {
+				is_a_vanilla_faction = yes
+				NOT = { is_same_value = event_target:cc_rebellious_faction }
+				faction_approval < @cc_faction_danger_number
+				if = {
+					limit = {
 						event_target:cc_rebellious_faction = {
 							OR = {
 								is_pop_faction_type = xenoist
@@ -1179,518 +1177,377 @@ country_event = {
 								is_pop_faction_type = isolationist
 							}
 						}
-						NOT = { has_faction = xenoist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
+					}
+					NOR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
+						is_pop_faction_type = xenoist
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = totalitarian
+								is_pop_faction_type = progressive
+							}
+						}
+					}
+					NOT = { is_pop_faction_type = totalitarian }
+					NOT = { is_pop_faction_type = progressive }
+				}
+				else_if = {
+					limit = {
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = traditionalist
+								is_pop_faction_type = technologist
+							}
+						}
+					}
+					NOT = { is_pop_faction_type = traditionalist }
+					NOT = { is_pop_faction_type = technologist }
+				}
+				else_if = {
+					limit = {
+						event_target:cc_rebellious_faction = {
+							OR = {
+								is_pop_faction_type = prosperity
+								is_pop_faction_type = imperialist
+							}
+						}
+					}
+					NOT = { is_pop_faction_type = prosperity }
+					NOT = { is_pop_faction_type = imperialist }
+				}
+				support > 0.15
+			}
+			save_event_target_as = cc_new_reb_faction
+		}
+		if = {
+			limit = { NOT = { exists = event_target:cc_new_reb_faction } }
+			random_pop_faction = {
+				limit = {
+					is_a_vanilla_faction = yes
+					faction_approval < @cc_faction_danger_number
+					NOT = { is_same_value = event_target:cc_rebellious_faction }
+					if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
 									is_pop_faction_type = xenoist
-									faction_approval < @cc_faction_danger_number
-								}
-								count = 1
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = xenoist
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = xenoist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = xenoist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_xenoist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_xenoist_stage2_active
-					days = 540
-				}
-			}
-
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = xenoist
-								is_pop_faction_type = supremacist
-							}
-						}
-						NOT = { has_faction = supremacist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
 									is_pop_faction_type = supremacist
-									faction_approval < @cc_faction_danger_number
-								}
-								count = 1
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = supremacist
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = supremacist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = supremacist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_supremacist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_supremacist_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = xenoist
-								is_pop_faction_type = isolationist
-							}
-						}
-						NOT = { has_faction = isolationist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
 									is_pop_faction_type = isolationist
-									faction_approval < @cc_faction_danger_number
 								}
-								count = 1
 							}
 						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
+						NOR = {
+							is_pop_faction_type = supremacist
 							is_pop_faction_type = isolationist
-							support < 0.15
+							is_pop_faction_type = xenoist
 						}
-						count = 1
 					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
+					else_if = {
 						limit = {
-							is_pop_faction_type = isolationist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = isolationist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_isolationist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_isolationist_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = technologist
-								is_pop_faction_type = traditionalist
-							}
-						}
-						NOT = { has_faction = traditionalist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = traditionalist
-									faction_approval < @cc_faction_danger_number
-								}
-								count = 1
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = traditionalist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_traditionalist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_traditionalist_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = technologist
-								is_pop_faction_type = traditionalist
-							}
-						}
-						NOT = { has_faction = technologist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = technologist
-									faction_approval < @cc_faction_danger_number
-								}
-								count = 1
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = technologist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_technologist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_technologist_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = totalitarian
-								is_pop_faction_type = progressive
-							}
-						}
-						NOT = { has_faction = totalitarian }
-						NOT = {
-							count_pop_factions = {
-								limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
 									is_pop_faction_type = totalitarian
-									faction_approval < @cc_faction_danger_number
-								}
-								count = 1
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = totalitarian
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = totalitarian
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = totalitarian }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_totalitarian_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_totalitarian_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = progressive
-								is_pop_faction_type = totalitarian
-							}
-						}
-						NOT = { has_faction = progressive }
-						NOT = {
-							count_pop_factions = {
-								limit = {
 									is_pop_faction_type = progressive
-									faction_approval < @cc_faction_danger_number
 								}
-								count = 1
 							}
 						}
+						NOT = { is_pop_faction_type = totalitarian }
+						NOT = { is_pop_faction_type = progressive }
 					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
+					else_if = {
 						limit = {
-							is_pop_faction_type = progressive
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = progressive
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = progressive }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_progressive_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_progressive_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = imperialist
-								is_pop_faction_type = prosperity
-							}
-						}
-						NOT = { has_faction = imperialist }
-						NOT = {
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = imperialist
-									faction_approval < @cc_faction_danger_number
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = traditionalist
+									is_pop_faction_type = technologist
 								}
-								count = 1
 							}
 						}
+						NOT = { is_pop_faction_type = traditionalist }
+						NOT = { is_pop_faction_type = technologist }
 					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
+					else_if = {
 						limit = {
-							is_pop_faction_type = imperialist
-							support < 0.15
-						}
-						count = 1
-					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							support < 0.1
-						}
-						count = 1
-					}
-				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = imperialist }
-					save_event_target_as = cc_new_reb_faction
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_imperialist_secondary_revolt_active
-					days = 1080
-				}
-				
-				set_timed_country_flag = {
-					flag = cc_imperialist_stage2_active
-					days = 540
-				}
-			}
-			1 = {
-				modifier = {
-					factor = 0
-					OR = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = imperialist
-								is_pop_faction_type = prosperity
-							}
-						}
-						NOT = { has_faction = prosperity }
-						NOT = {
-							count_pop_factions = {
-								limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
 									is_pop_faction_type = prosperity
-									faction_approval < @cc_faction_danger_number
+									is_pop_faction_type = imperialist
 								}
-								count = 1
 							}
 						}
+						NOT = { is_pop_faction_type = prosperity }
+						NOT = { is_pop_faction_type = imperialist }
 					}
+					support > 0.1
 				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
+				save_event_target_as = cc_new_reb_faction
+			}
+		}
+		if = {
+			limit = { NOT = { exists = event_target:cc_new_reb_faction } }
+			random_pop_faction = {
+				limit = {
+					is_a_vanilla_faction = yes
+					faction_approval < @cc_faction_danger_number
+					NOT = { is_same_value = event_target:cc_rebellious_faction }
+					if = {
 						limit = {
-							is_pop_faction_type = prosperity
-							support < 0.15
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = xenoist
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
 						}
-						count = 1
+						NOR = {
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = xenoist
+						}
 					}
-				}
-				modifier = {
-					factor = 0.5
-					count_pop_factions = {
+					else_if = {
 						limit = {
-							is_pop_faction_type = prosperity
-							support < 0.1
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = totalitarian
+									is_pop_faction_type = progressive
+								}
+							}
 						}
-						count = 1
+						NOT = { is_pop_faction_type = totalitarian }
+						NOT = { is_pop_faction_type = progressive }
+					}
+					else_if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = traditionalist
+									is_pop_faction_type = technologist
+								}
+							}
+						}
+						NOT = { is_pop_faction_type = traditionalist }
+						NOT = { is_pop_faction_type = technologist }
+					}
+					else_if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = prosperity
+									is_pop_faction_type = imperialist
+								}
+							}
+						}
+						NOT = { is_pop_faction_type = prosperity }
+						NOT = { is_pop_faction_type = imperialist }
+					}
+					support > 0.05
+				}
+				save_event_target_as = cc_new_reb_faction
+			}
+		}
+		if = {
+			limit = { NOT = { exists = event_target:cc_new_reb_faction } }
+			random_pop_faction = {
+				limit = {
+					is_a_vanilla_faction = yes
+					faction_approval < @cc_faction_danger_number
+					NOT = { is_same_value = event_target:cc_rebellious_faction }
+					if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = xenoist
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
+								}
+							}
+						}
+						NOR = {
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = xenoist
+						}
+					}
+					else_if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = totalitarian
+									is_pop_faction_type = progressive
+								}
+							}
+						}
+						NOT = { is_pop_faction_type = totalitarian }
+						NOT = { is_pop_faction_type = progressive }
+					}
+					else_if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = traditionalist
+									is_pop_faction_type = technologist
+								}
+							}
+						}
+						NOT = { is_pop_faction_type = traditionalist }
+						NOT = { is_pop_faction_type = technologist }
+					}
+					else_if = {
+						limit = {
+							event_target:cc_rebellious_faction = {
+								OR = {
+									is_pop_faction_type = prosperity
+									is_pop_faction_type = imperialist
+								}
+							}
+						}
+						NOT = { is_pop_faction_type = prosperity }
+						NOT = { is_pop_faction_type = imperialist }
 					}
 				}
-				
-				random_pop_faction = {
-					limit = { is_pop_faction_type = prosperity }
-					save_event_target_as = cc_new_reb_faction
+				save_event_target_as = cc_new_reb_faction
+			}
+		}
+		if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = xenoist
 				}
-				
-				set_timed_country_flag = {
-					flag = cc_prosperity_secondary_revolt_active
-					days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_xenoist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_xenoist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = supremacist
 				}
-				
-				set_timed_country_flag = {
-					flag = cc_prosperity_stage2_active
-					days = 540
+			}
+			set_timed_country_flag = {
+				flag = cc_supremacist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_supremacist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = isolationist
 				}
+			}
+			set_timed_country_flag = {
+				flag = cc_isolationist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_isolationist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = prosperity
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_prosperity_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_prosperity_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = imperialist
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_imperialist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_imperialist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = technologist
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_technologist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_technologist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = traditionalist
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_traditionalist_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_traditionalist_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = progressive
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_progressive_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_progressive_stage2_active
+				days = 540
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:cc_new_reb_faction = {
+					is_pop_faction_type = totalitarian
+				}
+			}
+			set_timed_country_flag = {
+				flag = cc_totalitarian_secondary_revolt_active
+				days = 1080
+			}
+			set_timed_country_flag = {
+				flag = cc_totalitarian_stage2_active
+				days = 540
 			}
 		}
 		every_owned_planet = {

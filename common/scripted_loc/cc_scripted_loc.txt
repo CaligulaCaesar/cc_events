@@ -1,128 +1,124 @@
-############################################
-###   SCRIPTED LOCALIZATION FOR FRENCH   ###
-###     Scripted by Caligula Caesar      ###
-############################################
+###########################################
+###    SCRIPTED LOCALIZATION FOR DPE    ###
+###     Scripted by Caligula Caesar     ###
+###########################################
 
 
-##To apply, use [root.GetFactionTypeAdj]
+##To apply, use [root.GetFactionTypeAdj] where root is a pop faction
 
 #Ex.: "The [xenophilic/supremacist/whatever] faction"
 defined_text = {
 	name = GetFactionTypeAdj
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = xenoist }
+			has_country_flag = cc_xenoist_revolt_active
 		}
 		localization_key = ccloc_xenophilic
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = supremacist }
+			has_country_flag = cc_supremacist_revolt_active
 		}
 		localization_key = ccloc_supremacist
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = isolationist }
+			has_country_flag = cc_isolationist_revolt_active
 		}
 		localization_key = ccloc_isolationist
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = progressive }
+			has_country_flag = cc_progressive_revolt_active
 		}
 		localization_key = ccloc_progressive
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = totalitarian }
+			has_country_flag = cc_totalitarian_revolt_active
 		}
 		localization_key = ccloc_totalitarian
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = imperialist }
+			has_country_flag = cc_imperialist_revolt_active
 		}
 		localization_key = ccloc_imperialist
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = prosperity }
+			has_country_flag = cc_prosperity_revolt_active
 		}
 		localization_key = ccloc_pacifistic
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = traditionalist }
+			has_country_flag = cc_traditionalist_revolt_active
 		}
 		localization_key = ccloc_traditionalist
 	}
 	text = {
 		trigger = {
-			exists = root
-			owner = {
-				count_pop_factions = {
-					limit = { is_same_value = root }
-					count = 1	
-				}
-			}
-			root = { is_pop_faction_type = technologist }
+			has_country_flag = cc_technologist_revolt_active
+		}
+		localization_key = ccloc_materialistic
+	}
+}
+
+#Ex.: "The [xenophilic/supremacist/whatever] faction"
+defined_text = {
+	name = GetSecondFactionTypeAdj
+	text = {
+		trigger = {
+			has_country_flag = cc_xenoist_secondary_revolt_active
+		}
+		localization_key = ccloc_xenophilic
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_supremacist_secondary_revolt_active
+		}
+		localization_key = ccloc_supremacist
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_isolationist_secondary_revolt_active
+		}
+		localization_key = ccloc_isolationist
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_progressive_secondary_revolt_active
+		}
+		localization_key = ccloc_progressive
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_totalitarian_secondary_revolt_active
+		}
+		localization_key = ccloc_totalitarian
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_imperialist_secondary_revolt_active
+		}
+		localization_key = ccloc_imperialist
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_prosperity_secondary_revolt_active
+		}
+		localization_key = ccloc_pacifistic
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_traditionalist_secondary_revolt_active
+		}
+		localization_key = ccloc_traditionalist
+	}
+	text = {
+		trigger = {
+			has_country_flag = cc_technologist_secondary_revolt_active
 		}
 		localization_key = ccloc_materialistic
 	}

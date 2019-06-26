@@ -105,7 +105,7 @@ cc_bribed_planet_desc:0 "O governo deu a este planeta incentivos financeiros gra
 
 ###Events
 
-#these go in the place of [cc_rebellious_faction.GetFactionTypeAdj]
+#these go in the place of [root.GetFactionTypeAdj]
 ccloc_xenophilic:0 "Xenófilo"
 ccloc_supremacist:0 "Supremacista"
 ccloc_isolationist:0 "Isolacionista"
@@ -117,29 +117,29 @@ ccloc_traditionalist:0 "Tradicionalista"
 ccloc_materialistic:0 "Materialista"
 
 ccfaction.1.name:0 "Facção Subversiva"
-ccfaction.1.desc:0 "Uma onda de insatisfação na forma como o Império está sendo governado espalhou-se pela população, com apelos ilícitos para uma perspectiva mais [cc_rebellious_faction.GetFactionTypeAdj]. Acreditamos que um grupo fanático de ativistas afiliados ao [cc_rebellious_faction.GetName] estão por trás dessa agitação e estão planejando tentar fugir de [root.GetName], mas o [cc_rebellious_faction.GetName] nega estas acusações."
+ccfaction.1.desc:0 "Uma onda de insatisfação na forma como o Império está sendo governado espalhou-se pela população, com apelos ilícitos para uma perspectiva mais [root.GetFactionTypeAdj]. Acreditamos que um grupo fanático de ativistas afiliados ao [cc_rebellious_faction.GetName] estão por trás dessa agitação e estão planejando tentar fugir de [root.GetName], mas o [cc_rebellious_faction.GetName] nega estas acusações."
 
 ccfaction.2.name:0 "O [cc_rebellious_faction.GetName] Consolidou-se no Poder"
-ccfaction.2.desc:0 "As agitações para um foco mais [cc_rebellious_faction.GetFactionTypeAdj] do governo se espalharam e chegaram em muitas partes de [root.GetName]. A [cc_rebellious_faction.GetName] nos apresentou uma lista oficial de exigências, alegando ter um poder popular para representar essa parte do Império e emitiu ameaças veladas de separatismo se suas demandas não forem atendidas. É necessária uma ação urgente para que o Império se una!"
+ccfaction.2.desc:0 "As agitações para um foco mais [root.GetFactionTypeAdj] do governo se espalharam e chegaram em muitas partes de [root.GetName]. A [cc_rebellious_faction.GetName] nos apresentou uma lista oficial de exigências, alegando ter um poder popular para representar essa parte do Império e emitiu ameaças veladas de separatismo se suas demandas não forem atendidas. É necessária uma ação urgente para que o Império se una!"
 
 
 ccfaction.21.name:0 "Agitação de Facções Terminou"
 ccfaction.21.desc.fail:0 "As agitações ilegais em [cc_rebellious_faction.GetName] não levaram a nada e terminaram pacificamente."
-ccfaction.21.desc.succeed:0 "As agitações do [cc_rebellious_faction.GetName] tem convencido a liderança de [root.GetName] a reformar o governo para ter um foco mais [cc_rebellious_faction.GetFactionTypeAdj] que é aceitável pelos grupos subversivos. A liderança de [cc_rebellious_faction.GetName] está satisfeita com as mudanças, e cessou as suas agitações."
+ccfaction.21.desc.succeed:0 "As agitações do [cc_rebellious_faction.GetName] tem convencido a liderança de [root.GetName] a reformar o governo para ter um foco mais [root.GetFactionTypeAdj] que é aceitável pelos grupos subversivos. A liderança de [cc_rebellious_faction.GetName] está satisfeita com as mudanças, e cessou as suas agitações."
 
 ccfaction.3.name:0 "A [cc_new_reb_faction.GetName] aliou-se com [cc_rebellious_faction.GetName]"
-ccfaction.3.desc:0 "Os [cc_new_reb_faction.GetName], que até agora eram um pequeno grupo dissidente dentro de [root.GetName], concluiu uma aliança com [cc_rebellious_faction.GetName], que tem estimulado agitações ativamente levando a mudanças importantes. Eles encontraram um terreno comum o suficiente para juntar suas vozes em uma só, o que eles esperam que lhes permita formar uma força imparável para verem suas visões de um estado [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] realiadas - com ou sem os [root.GetName]."
+ccfaction.3.desc:0 "Os [cc_new_reb_faction.GetName], que até agora eram um pequeno grupo dissidente dentro de [root.GetName], concluiu uma aliança com [cc_rebellious_faction.GetName], que tem estimulado agitações ativamente levando a mudanças importantes. Eles encontraram um terreno comum o suficiente para juntar suas vozes em uma só, o que eles esperam que lhes permita formar uma força imparável para verem suas visões de um estado [root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj] realiadas - com ou sem os [root.GetName]."
 
 
 ccfaction.4.name:0 "Os [cc_rebellious_faction.GetName] estão tentando se separar!"
-ccfaction.4.dual.desc:0 "Um desertor de [cc_rebellious_faction.GetName] revelou as intenções de nossos oponentes: Eles, juntamente com os [cc_new_reb_faction.GetName], planejam realizar seu sonho de remodelar a sociedade para uma perspectiva [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] separando-se de [root.GetName]. Eles provavelmente já sabem que nós descobrimos seus planos, então a revolta pode acontecer a qualquer momento. Devemos tomar medidas urgentes!"
-ccfaction.4.single.desc:0 "Um desertor de [cc_rebellious_faction.GetName] revelou as intenções de nossos oponentes: Eles planejam realizar seu sonho de remodelar a sociedade para uma perspectiva [cc_rebellious_faction.GetFactionTypeAdj] separando-se de [root.GetName]. Eles provavelmente já sabem que nós descobrimos seus planos, então a revolta pode acontecer a qualquer momento. Devemos tomar medidas urgentes!"
+ccfaction.4.dual.desc:0 "Um desertor de [cc_rebellious_faction.GetName] revelou as intenções de nossos oponentes: Eles, juntamente com os [cc_new_reb_faction.GetName], planejam realizar seu sonho de remodelar a sociedade para uma perspectiva [root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj] separando-se de [root.GetName]. Eles provavelmente já sabem que nós descobrimos seus planos, então a revolta pode acontecer a qualquer momento. Devemos tomar medidas urgentes!"
+ccfaction.4.single.desc:0 "Um desertor de [cc_rebellious_faction.GetName] revelou as intenções de nossos oponentes: Eles planejam realizar seu sonho de remodelar a sociedade para uma perspectiva [root.GetFactionTypeAdj] separando-se de [root.GetName]. Eles provavelmente já sabem que nós descobrimos seus planos, então a revolta pode acontecer a qualquer momento. Devemos tomar medidas urgentes!"
 
 ccfaction.41.name:0 "Agitação de Facções Terminou"
 ccfaction.41.dual.fail.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] e [cc_new_reb_faction.GetName] para forçar mudanças em [root.GetName] foram dispersadas sem o uso de violência."
 ccfaction.41.single.fail.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] para forçar mudanças em [root.GetName] foram dispersadas sem o uso de violência."
-ccfaction.41.dual.succeed.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] e [cc_new_reb_faction.GetName] para forçar mudanças em [root.GetName] tiveram sucesso sem violência: o governo prometeu reformar e governar de forma mais aceitável para [cc_rebellious_faction.GetFactionTypeAdj] e [cc_new_reb_faction.GetFactionTypeAdj]-cidadãos no futuro."
-ccfaction.41.single.succeed.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] para forçar mudanças em [root.GetName] tiveram sucesso sem violência: o governo prometeu reformar e governar de forma mais aceitável para [cc_rebellious_faction.GetFactionTypeAdj]-cidadãos no futuro."
+ccfaction.41.dual.succeed.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] e [cc_new_reb_faction.GetName] para forçar mudanças em [root.GetName] tiveram sucesso sem violência: o governo prometeu reformar e governar de forma mais aceitável para [root.GetFactionTypeAdj] e [root.GetSecondFactionTypeAdj]-cidadãos no futuro."
+ccfaction.41.single.succeed.desc:0 "As agitações provocadas por [cc_rebellious_faction.GetName] para forçar mudanças em [root.GetName] tiveram sucesso sem violência: o governo prometeu reformar e governar de forma mais aceitável para [root.GetFactionTypeAdj]-cidadãos no futuro."
 
 ccfaction.42.name:0 "Revoltas de [cc_rebellious_faction.GetName] falharam"
 ccfaction.42.dual.fail.desc:0 "As tentativas de [cc_rebellious_faction.GetName] e [cc_new_reb_faction.GetName] para forçar suas exigências recebendo a independência de [root.GetName] falharam. Eles simplesmente não tiveram o apoio necessário para que a revolta tivesse sucesso, então [root.GetName] resistiu à tempestade e permaneceu unido."

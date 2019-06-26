@@ -2728,17 +2728,19 @@ country_event = {
 				}
 			}
 		}
-		every_relation = {
-			limit = {
-				is_country_type = default
-				OR = {
-					has_ethic = ethic_fanatic_militarist
-					has_ethic = ethic_militarist
+		custom_tooltip = dpe_better_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_fanatic_militarist
+						has_ethic = ethic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_valourous
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_valourous
+				}
 			}
 		}
 		hidden_effect = {
@@ -3440,16 +3442,19 @@ country_event = {
 			modifier = dpe_duel_disgraced
 			days = 3600
 		}
-		every_relation = {
-			limit = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+		custom_tooltip = dpe_worse_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_pitiful_warriors
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_pitiful_warriors
+				}
 			}
 		}
 		hidden_effect = { from = { country_event = { id = dpe_hw_duel.76 } } }
@@ -3574,16 +3579,19 @@ country_event = {
 			modifier = dpe_duel_disgraced
 			days = 3600
 		}
-		every_relation = {
-			limit = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+		custom_tooltip = dpe_worse_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_pitiful_warriors
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_pitiful_warriors
+				}
 			}
 		}
 		hidden_effect = { from = { country_event = { id = dpe_hw_duel.77 } } }
@@ -3684,16 +3692,19 @@ country_event = {
 			days = 3600
 		}
 
-		every_relation = {
-			limit = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+		custom_tooltip = dpe_worse_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_pitiful_warriors
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_pitiful_warriors
+				}
 			}
 		}
 
@@ -3785,16 +3796,19 @@ country_event = {
 				has_ethic = ethic_militarist
 			}
 		}
-		every_relation = {
-			limit = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+		custom_tooltip = dpe_worse_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_pitiful_warriors
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_pitiful_warriors
+				}
 			}
 		}
 	}
@@ -3843,16 +3857,19 @@ country_event = {
 			modifier = dpe_duel_disgraced1
 			days = 3600
 		}
-		every_relation = {
-			limit = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+		custom_tooltip = dpe_worse_relations_with_militarists
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
-			}
-			add_opinion_modifier = {
-				who = root
-				modifier = dpe_pitiful_warriors
+				add_opinion_modifier = {
+					who = root
+					modifier = dpe_pitiful_warriors
+				}
 			}
 		}
 	}
@@ -4460,16 +4477,19 @@ country_event = {
 				who = root
 			}
 		}
-		every_relation = {
-			limit = {
-				NOR = {
-					is_same_value = from
-					has_ethic = ethic_gestalt_consciousness
+		custom_tooltip = dpe_worse_relations_from_deceit
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					NOR = {
+						is_same_value = from
+						has_ethic = ethic_gestalt_consciousness
+					}
 				}
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 			}
 		}
 	}
@@ -4488,16 +4508,19 @@ country_event = {
 				who = root
 			}
 		}
-		every_relation = {
-			limit = {
-				NOR = {
-					is_same_value = from
-					has_ethic = ethic_gestalt_consciousness
+		custom_tooltip = dpe_worse_relations_from_deceit
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					NOR = {
+						is_same_value = from
+						has_ethic = ethic_gestalt_consciousness
+					}
 				}
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 			}
 		}
 		add_modifier = {
@@ -4939,16 +4962,19 @@ country_event = {
 				who = root
 			}
 		}
-		every_relation = {
-			limit = {
-				NOR = {
-					is_same_value = from
-					has_ethic = ethic_gestalt_consciousness
+		custom_tooltip = dpe_worse_relations_from_deceit
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					NOR = {
+						is_same_value = from
+						has_ethic = ethic_gestalt_consciousness
+					}
 				}
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 			}
 		}
 	}
@@ -4967,16 +4993,19 @@ country_event = {
 				who = root
 			}
 		}
-		every_relation = {
-			limit = {
-				NOR = {
-					is_same_value = from
-					has_ethic = ethic_gestalt_consciousness
+		custom_tooltip = dpe_worse_relations_from_deceit
+		hidden_effect = {
+			every_relation = {
+				limit = {
+					NOR = {
+						is_same_value = from
+						has_ethic = ethic_gestalt_consciousness
+					}
 				}
-			}
-			add_opinion_modifier = {
-				modifier = dpe_deceitful
-				who = root
+				add_opinion_modifier = {
+					modifier = dpe_deceitful
+					who = root
+				}
 			}
 		}
 		add_modifier = {

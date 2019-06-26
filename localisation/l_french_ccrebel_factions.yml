@@ -2,7 +2,7 @@
 
 ###Modifiers
 
-#these go in the place of [cc_rebellious_faction.GetFactionTypeAdj]
+#these go in the place of [root.GetFactionTypeAdj]
 ccloc_xenophilic:0 "xénophile"
 ccloc_supremacist:0 "suprémaciste"
 ccloc_isolationist:0 "isolationniste"
@@ -117,29 +117,29 @@ cc_bribed_planet_desc:0 "L'état a accordé des incitations fiscales massive à 
 ###Events
 
 ccfaction.1.name:0 "Sédition de Faction"
-ccfaction.1.desc:0 "Une vague de mécontentement de la manière dont l'empire est gouverné s'est répandue dans la population, avec des appels clandestins à une politique plus [cc_rebellious_faction.GetFactionTypeAdj]. Nous pensons qu'un groupe d'activistes extrémistes affiliés à la [cc_rebellious_faction.GetName] sont derrière cette agitation et prévoient de faire sécession avec le [root.GetName], mais la [cc_rebellious_faction.GetName] dénie ces accusations."
+ccfaction.1.desc:0 "Une vague de mécontentement de la manière dont l'empire est gouverné s'est répandue dans la population, avec des appels clandestins à une politique plus [root.GetFactionTypeAdj]. Nous pensons qu'un groupe d'activistes extrémistes affiliés à la [cc_rebellious_faction.GetName] sont derrière cette agitation et prévoient de faire sécession avec le [root.GetName], mais la [cc_rebellious_faction.GetName] dénie ces accusations."
 
 ccfaction.2.name:0 "La [cc_rebellious_faction.GetName] consolide son pouvoir"
-ccfaction.2.desc:0 "Les contestations pour une politique plus [cc_rebellious_faction.GetFactionTypeAdj] se sont étendues et ont pris racine dans certaines parties de la [root.GetName]. La [cc_rebellious_faction.GetName] nous a présenté une liste officielle de d'exigences, affirmant avoir un mandat populaire pour représenter ces parties de l'empire et proférant des menaces à peine voilées de séparatisme si leur exigences n'étaient pas satisfaites. Une intervention urgente est nécessaire pour rétablir l'empire !"
+ccfaction.2.desc:0 "Les contestations pour une politique plus [root.GetFactionTypeAdj] se sont étendues et ont pris racine dans certaines parties de la [root.GetName]. La [cc_rebellious_faction.GetName] nous a présenté une liste officielle de d'exigences, affirmant avoir un mandat populaire pour représenter ces parties de l'empire et proférant des menaces à peine voilées de séparatisme si leur exigences n'étaient pas satisfaites. Une intervention urgente est nécessaire pour rétablir l'empire !"
 
 
 ccfaction.21.name:0 "Fin des contestations des factions"
 ccfaction.21.desc.fail:0 "Les contestations clandestines de la [cc_rebellious_faction.GetName] n'ont mené nul part et se sont résolues pacifiquement"
-ccfaction.21.desc.succeed:0 "Les contestations de la [cc_rebellious_faction.GetName] ont convaincu les dirigeants de [root.GetName] d'entreprendre des réformes plus [cc_rebellious_faction.GetFactionTypeAdj], modelées selon la vision du groupe dissident. Les dirigeants de la [cc_rebellious_faction.GetName] sont satisfaits avec ces changements, et one cessés leur contestations."
+ccfaction.21.desc.succeed:0 "Les contestations de la [cc_rebellious_faction.GetName] ont convaincu les dirigeants de [root.GetName] d'entreprendre des réformes plus [root.GetFactionTypeAdj], modelées selon la vision du groupe dissident. Les dirigeants de la [cc_rebellious_faction.GetName] sont satisfaits avec ces changements, et one cessés leur contestations."
 
 ccfaction.3.name:0 "La [cc_new_reb_faction.GetName] s'est alliée avec la [cc_rebellious_faction.GetName]" 
-ccfaction.3.desc:0 "La [cc_new_reb_faction.GetName], qui était jusque récemment un petit élément dissident du [root.GetName], a conclu une alliance avec la [cc_rebellious_faction.GetName], qui militait activement pour des changements majeurs. Ils ont trouvé suffisamment de points communs pour atteindre un compromis, qui ils espèrent leur permettra de devenir une force inarrêtable et de faire de leur vision d'un empire [cc_rebellious_faction.GetFactionTypeAdj] et [cc_new_reb_faction.GetFactionTypeAdj] une réalité - dans la [root.GetName] ou en-dehors."
+ccfaction.3.desc:0 "La [cc_new_reb_faction.GetName], qui était jusque récemment un petit élément dissident du [root.GetName], a conclu une alliance avec la [cc_rebellious_faction.GetName], qui militait activement pour des changements majeurs. Ils ont trouvé suffisamment de points communs pour atteindre un compromis, qui ils espèrent leur permettra de devenir une force inarrêtable et de faire de leur vision d'un empire [root.GetFactionTypeAdj] et [root.GetSecondFactionTypeAdj] une réalité - dans la [root.GetName] ou en-dehors."
 
 
 ccfaction.4.name:0 "La [cc_rebellious_faction.GetName] essaye de se séparer de l'empire"
-ccfaction.4.dual.desc:0 "Un déserteur de la [cc_rebellious_faction.GetName] a révélé les intentions de nos ennemis : Ils veulent, avec l'aide de la [cc_new_reb_faction.GetName], réformer la société sur des vues [cc_rebellious_faction.GetFactionTypeAdj]s et [cc_new_reb_faction.GetFactionTypeAdj]s en se séparant de la [root.GetName]. Ils savent sans doute que nous connaissons leur plans, la révolte pourrait donc se produire à n'importe quel moment. Nous devons intervenir maintenant !"
-ccfaction.4.single.desc:0 "Un déserteur de la [cc_rebellious_faction.GetName] a révélé les intentions de nos ennemis : Ils veulent réformer la société sur des vues [cc_rebellious_faction.GetFactionTypeAdj]s en se séparant de la [root.GetName]. Ils savent sans-doute que nous connaissons leur plans, la révolte pourrait donc se produire à n'importe quel moment. Nous devons intervenir maintenant !"
+ccfaction.4.dual.desc:0 "Un déserteur de la [cc_rebellious_faction.GetName] a révélé les intentions de nos ennemis : Ils veulent, avec l'aide de la [cc_new_reb_faction.GetName], réformer la société sur des vues [root.GetFactionTypeAdj]s et [root.GetSecondFactionTypeAdj]s en se séparant de la [root.GetName]. Ils savent sans doute que nous connaissons leur plans, la révolte pourrait donc se produire à n'importe quel moment. Nous devons intervenir maintenant !"
+ccfaction.4.single.desc:0 "Un déserteur de la [cc_rebellious_faction.GetName] a révélé les intentions de nos ennemis : Ils veulent réformer la société sur des vues [root.GetFactionTypeAdj]s en se séparant de la [root.GetName]. Ils savent sans-doute que nous connaissons leur plans, la révolte pourrait donc se produire à n'importe quel moment. Nous devons intervenir maintenant !"
 
 ccfaction.41.name:0 "Fin des contestations des factions"
 ccfaction.41.dual.fail.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] et la [cc_new_reb_faction.GetName] pour forcer des changements dans la [root.GetName] n'ont rien donné et se sont dispersées sans violence."
 ccfaction.41.single.fail.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] pour forcer des changements dans la [root.GetName] n'ont rien donné et se sont dispersées sans violence."
-ccfaction.41.dual.succeed.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] et la [cc_new_reb_faction.GetName] pour forcer des changements dans la [root.GetName] ont réussi sans verser le sang : Le gouvernement a promis de réformer et gouverner dans le futur de manière plus [cc_rebellious_faction.GetFactionTypeAdj] et [cc_new_reb_faction.GetFactionTypeAdj]."
-ccfaction.41.single.succeed.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] pour forcer des changements dans la [root.GetName] ont réussi sans verser le sang : Le gouvernement a promis de réformer et gouverner dans le futur de manière plus [cc_rebellious_faction.GetFactionTypeAdj]."
+ccfaction.41.dual.succeed.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] et la [cc_new_reb_faction.GetName] pour forcer des changements dans la [root.GetName] ont réussi sans verser le sang : Le gouvernement a promis de réformer et gouverner dans le futur de manière plus [root.GetFactionTypeAdj] et [root.GetSecondFactionTypeAdj]."
+ccfaction.41.single.succeed.desc:0 "Les contestations de la [cc_rebellious_faction.GetName] pour forcer des changements dans la [root.GetName] ont réussi sans verser le sang : Le gouvernement a promis de réformer et gouverner dans le futur de manière plus [root.GetFactionTypeAdj]."
 
 ccfaction.42.name:0 "La révolte de la [cc_rebellious_faction.GetName] échoue"
 ccfaction.42.dual.fail.desc:0 "Les tentatives de la [cc_rebellious_faction.GetName] et la [cc_new_reb_faction.GetName] de forcer leurs exigences en devenant indépendant de la [root.GetName] ont échoué. Ils n'avaient tout simplement pas le soutien nécessaire pour que la révolte réussisse, donc la [root.GetName] a attendu que la tempête passe et est restée unie."

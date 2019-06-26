@@ -105,7 +105,7 @@ cc_bribed_planet_desc:0 "The state has given this planet massive financial incen
 
 ###Events
 
-#these go in the place of [cc_rebellious_faction.GetFactionTypeAdj]
+#these go in the place of [root.GetFactionTypeAdj]
 ccloc_xenophilic:0 "xenophilic"
 ccloc_supremacist:0 "supremacist"
 ccloc_isolationist:0 "isolationist"
@@ -117,29 +117,29 @@ ccloc_traditionalist:0 "traditionalist"
 ccloc_materialistic:0 "materialistic"
 
 ccfaction.1.name:0 "Factional Sedition"
-ccfaction.1.desc:0 "A wave of dissatisfaction at the way the Empire is being governed has spread across the population, with clandestine calls for a more [cc_rebellious_faction.GetFactionTypeAdj] outlook. We believe that a hardcore group of activists affiliated to the [cc_rebellious_faction.GetName] are behind this agitation and are plotting to seek to break away from the [root.GetName], but the [cc_rebellious_faction.GetName] denies these accusations."
+ccfaction.1.desc:0 "A wave of dissatisfaction at the way the Empire is being governed has spread across the population, with clandestine calls for a more [root.GetFactionTypeAdj] outlook. We believe that a hardcore group of activists affiliated to the [cc_rebellious_faction.GetName] are behind this agitation and are plotting to seek to break away from the [root.GetName], but the [cc_rebellious_faction.GetName] denies these accusations."
 
 ccfaction.2.name:0 "The [cc_rebellious_faction.GetName] consolidates its Power"
-ccfaction.2.desc:0 "The agitations for a more [cc_rebellious_faction.GetFactionTypeAdj] focus to the government have spread and taken root in parts of the [root.GetName]. The [cc_rebellious_faction.GetName] has presented us with an official list of demands, claiming to have a popular mandate to represent these parts of the Empire and issuing veiled threats of separatism if their demands are not met. Urgent action is required to bring the Empire back together!"
+ccfaction.2.desc:0 "The agitations for a more [root.GetFactionTypeAdj] focus to the government have spread and taken root in parts of the [root.GetName]. The [cc_rebellious_faction.GetName] has presented us with an official list of demands, claiming to have a popular mandate to represent these parts of the Empire and issuing veiled threats of separatism if their demands are not met. Urgent action is required to bring the Empire back together!"
 
 
 ccfaction.21.name:0 "Factional Agitations Over"
 ccfaction.21.desc.fail:0 "The clandestine agitations of the [cc_rebellious_faction.GetName] have come to nothing and petered out peacefully."
-ccfaction.21.desc.succeed:0 "The agitations of the [cc_rebellious_faction.GetName] have convinced the leadership of the [root.GetName] to reform the government to have a more [cc_rebellious_faction.GetFactionTypeAdj] outlook that is more acceptable to the dissident group. The [cc_rebellious_faction.GetName]'s leaders are satisfied with the changes, and have ceased to agitate for change."
+ccfaction.21.desc.succeed:0 "The agitations of the [cc_rebellious_faction.GetName] have convinced the leadership of the [root.GetName] to reform the government to have a more [root.GetFactionTypeAdj] outlook that is more acceptable to the dissident group. The [cc_rebellious_faction.GetName]'s leaders are satisfied with the changes, and have ceased to agitate for change."
 
 ccfaction.3.name:0 "The [cc_new_reb_faction.GetName] has allied with the [cc_rebellious_faction.GetName]" 
-ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has until now been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
+ccfaction.3.desc:0 "The [cc_new_reb_faction.GetName], which has until now been a small dissident element within the [root.GetName], has concluded an alliance with the [cc_rebellious_faction.GetName], which has been actively agitating for major change. They have found sufficient common ground to join their voices together, which they hope will allow them to form an unstoppable force with which to see their vision of a [root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj] state realised - within the [root.GetName] or outside of it."
 
 
 ccfaction.4.name:0 "The [cc_rebellious_faction.GetName] is attempting to secede!"
-ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [cc_rebellious_faction.GetFactionTypeAdj]-[cc_new_reb_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
-ccfaction.4.single.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They plan to realise their dream of reshaping society towards a more [cc_rebellious_faction.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
+ccfaction.4.dual.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They, together with the [cc_new_reb_faction.GetName], plan to realise their dream of reshaping society towards a [root.GetFactionTypeAdj]-[root.GetSecondFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
+ccfaction.4.single.desc:0 "A deserter from the [cc_rebellious_faction.GetName] has revealed our opponents' intentions: They plan to realise their dream of reshaping society towards a more [root.GetFactionTypeAdj] outlook by splitting from the [root.GetName]. They likely know that we have learnt of their plans, so the revolt could come at any moment. We must take urgent action!"
 
 ccfaction.41.name:0 "Factional Agitations Over"
 ccfaction.41.dual.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
 ccfaction.41.single.fail.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have petered out without violence breaking out."
-ccfaction.41.dual.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj] and [cc_new_reb_faction.GetFactionTypeAdj]-minded citizens in future."
-ccfaction.41.single.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [cc_rebellious_faction.GetFactionTypeAdj]-minded citizens in future."
+ccfaction.41.dual.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [root.GetFactionTypeAdj] and [root.GetSecondFactionTypeAdj]-minded citizens in future."
+ccfaction.41.single.succeed.desc:0 "The agitations by the [cc_rebellious_faction.GetName] to force changes in the [root.GetName] have resulted in success without the need for violence: The government has promised to reform and govern in a manner more acceptable to [root.GetFactionTypeAdj]-minded citizens in future."
 
 ccfaction.42.name:0 "Revolt by the [cc_rebellious_faction.GetName] fails"
 ccfaction.42.dual.fail.desc:0 "The attempts by the [cc_rebellious_faction.GetName] and the [cc_new_reb_faction.GetName] to force through their demands by gaining independence from the [root.GetName] have failed. They simply didn't have the support necessary for the revolt to succeed, so the [root.GetName] has weathered the storm and remained united."
