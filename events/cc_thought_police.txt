@@ -9,14 +9,11 @@ pop_event = {
 	hide_window = yes
 	mean_time_to_happen = { years = 30 }
 
-	pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-	}
-	
 	trigger = {
-		owner = { has_edict = cc_thought_police }
+		is_enslaved = no
 		happiness < 0.4
+		exists = owner
+		owner = { has_edict = cc_thought_police }
 		if = {
 			limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
 			NOT = { has_ethic = ethic_authoritarian }

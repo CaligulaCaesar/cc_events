@@ -462,13 +462,11 @@ pop_event = {
 	
 	mean_time_to_happen = { years = 20 }
 	
-	pre_triggers = {
-		has_owner = yes
-	}
 	trigger = {
 		has_pop_flag = cc_literally_xenophile
 		cc_has_happiness = yes
 		NOT = { has_pop_flag = cc_literally_xenophile_manifested }
+		exists = owner
 		owner = {
 			pop_percentage = {
 				percentage > 0.2
@@ -548,11 +546,9 @@ pop_event = {
 	
 	mean_time_to_happen = { years = 25 }
 
-	pre_triggers = {
-		has_owner = yes
-	}
 	trigger = {
 		has_pop_flag = cc_literally_xenophile_manifested
+		exists = owner
 		cc_has_happiness = yes
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minority } }
 	}
@@ -842,10 +838,8 @@ pop_event = {
 	id = cc_events_mod.1300
 	hide_window = yes
 	
-	pre_triggers = {
-		has_owner = yes
-	}
 	trigger = {
+		exists = owner
 		owner = { has_policy_flag = bans_im_completely }
 		is_valid_xenophilia_refugee_pop = yes
 	}
@@ -914,11 +908,9 @@ pop_event = {
 	hide_window = yes
 	mean_time_to_happen = { years = 38 }
 
-	pre_triggers = {
-		has_owner = yes
-	}
 	trigger = {
 		has_modifier = cc_secret_xenophile
+		exists = owner
 		owner = {
 			is_country_type = default
 			has_policy_flag = bans_im_completely
