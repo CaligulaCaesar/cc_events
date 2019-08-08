@@ -2580,63 +2580,63 @@ country_event = {
 									}
 								}
 							}
-						}
-						random_country = {
-							limit = {
-								NOT = { is_country_type = fallen_empire }
-								NOR = {
-									has_valid_civic = civic_fanatic_purifiers
-									has_valid_civic = civic_hive_devouring_swarm
-									has_valid_civic = civic_machine_terminator
-									has_valid_civic = civic_barbaric_despoilers
-								}
-								any_owned_planet = {
-									distance = {
-										source = prevprev
-										max_distance <= 150
+							random_country = {
+								limit = {
+									NOT = { is_country_type = fallen_empire }
+									NOR = {
+										has_valid_civic = civic_fanatic_purifiers
+										has_valid_civic = civic_hive_devouring_swarm
+										has_valid_civic = civic_machine_terminator
+										has_valid_civic = civic_barbaric_despoilers
+									}
+									any_owned_planet = {
+										distance = {
+											source = prevprev
+											max_distance <= 150
+										}
+									}
+									
+	#								opinion = {
+	#									who = event_target:old_owner
+	#									value < -50
+	#								}
+									OR = {
+										is_hostile_to = event_target:old_owner
+										is_angry_to = event_target:old_owner
+										is_rival = event_target:old_owner
+										is_disloyal_to = event_target:old_owner
+										is_domineering_to = event_target:old_owner
+									}
+									OR = {
+										has_country_resource = {
+											type = minerals
+											amount > 2000
+										}
+										has_monthly_income = {
+											resource = minerals
+											value > 100
+										}
+									}
+									OR = {
+										has_monthly_income = {
+											resource = energy
+											value > 100
+										}
+										has_country_resource = {
+											type = energy
+											amount > 2000
+										}
 									}
 								}
-								
-#								opinion = {
-#									who = event_target:old_owner
-#									value < -50
-#								}
-								OR = {
-									is_hostile_to = event_target:old_owner
-									is_angry_to = event_target:old_owner
-									is_rival = event_target:old_owner
-									is_disloyal_to = event_target:old_owner
-									is_domineering_to = event_target:old_owner
-								}
-								OR = {
-									has_country_resource = {
-										type = minerals
-										amount > 2000
-									}
-									has_monthly_income = {
-										resource = minerals
-										value > 100
+								prevprev = {
+									set_timed_relation_flag = {
+										flag = ccrebel_may_support_rebels
+										who = prev
+										days = 15
 									}
 								}
-								OR = {
-									has_monthly_income = {
-										resource = energy
-										value > 100
-									}
-									has_country_resource = {
-										type = energy
-										amount > 2000
-									}
-								}
+								country_event = { id = ccrebel_sow_unrest.4 days = 14 }
 							}
-							prevprev = {
-								set_timed_relation_flag = {
-									flag = ccrebel_may_support_rebels
-									who = prev
-									days = 15
-								}
-							}
-							country_event = { id = ccrebel_sow_unrest.4 days = 14 }
 						}
 					}
 				

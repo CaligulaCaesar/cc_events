@@ -2814,13 +2814,13 @@ country_event = {
 		name = UNFORTUNATE
 		custom_tooltip = dpe_xenophile_mission_ends
 		
+		custom_tooltip = dpe_deceitful_diplomacy
 		tooltip = {
 			from = {
 				add_opinion_modifier = {
 					who = root
 					modifier = dpe_xenomission_caught_smuggling
 				}
-				custom_tooltip = dpe_from_deceitful_diplomacy
 			}
 		}
 	}
@@ -3603,7 +3603,7 @@ country_event = {
 				who = root
 			}
 		}
-		custom_tooltip = dpe_from_deceitful_diplomacy
+		custom_tooltip = dpe_deceitful_diplomacy
 		hidden_effect = {
 			every_country = {
 				limit = {
