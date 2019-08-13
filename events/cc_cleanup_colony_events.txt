@@ -58,7 +58,8 @@ planet_event = {
 				flag = cc_conquered_purge
 				years = 25
 			}
-			planet_event = { id = cc_cleanup_events.9992 days = 1500 random = 500 }
+			remove_all_political_colony_modifiers = yes
+#			planet_event = { id = cc_cleanup_events.9992 days = 1500 random = 500 }
 		}
 		
 		if = {
