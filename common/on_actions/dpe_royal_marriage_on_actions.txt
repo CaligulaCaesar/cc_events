@@ -1,0 +1,27 @@
+
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		dpe_royal_marriages_events.900
+	}
+}
+
+#From = Country scope
+#This = Planet scope
+on_planet_ownerless = {
+	events = {
+		dpe_royal_marriages_events.906
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		dpe_royal_marriages_events.906
+	}
+}

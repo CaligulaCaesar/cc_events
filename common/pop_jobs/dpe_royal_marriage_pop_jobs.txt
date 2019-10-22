@@ -1,0 +1,83 @@
+
+dpe_entourage = {	
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_system_capital
+	icon = noble
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		entertainer_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 4
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 20
+			has_pop_flag = royal_entourage_pops
+		}
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_trait = trait_traditional
+				has_trait = trait_robot_propaganda_machines
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_quarrelsome
+		} 
+		modifier = {
+			factor = 1.5
+			has_job = entertainer
+		}		
+		modifier = {
+			factor = 1.25
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+	}
+}

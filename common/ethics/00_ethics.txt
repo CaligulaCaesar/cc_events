@@ -1636,6 +1636,19 @@ ethic_xenophile = {
 	}	
 
 	pop_attraction_tag = {
+		desc = POP_ATTRACTION_ROYAL_MARRIAGE_POS
+		trigger = {
+			any_relation = {
+				NOT = { is_same_species = root }
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}				
+			}
+		}
+	}
+
+	pop_attraction_tag = {
 		desc = POP_ATTRACTION_MIGRATION_TREATIES_POS
 		trigger = {
 			any_relation = {
@@ -1793,6 +1806,16 @@ ethic_xenophile = {
 					is_in_federation_with = root
 					has_defensive_pact = root
 					has_commercial_pact = root
+				}				
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_relation = {
+				NOT = { is_same_species = root }
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
 				}				
 			}
 		}

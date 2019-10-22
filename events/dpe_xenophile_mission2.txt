@@ -356,7 +356,7 @@ country_event = {
 	title = dpe_xenophile_mission.3.name
 	desc = dpe_xenophile_mission.3.desc
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	is_triggered_only = yes
 	
@@ -872,7 +872,7 @@ country_event = {
 	desc = dpe_xenophile_mission.7.desc
 	is_triggered_only = yes
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	immediate = {
 		from = { country_event = { id = dpe_xenophile_mission.71 } }
@@ -923,7 +923,7 @@ country_event = {
 	desc = dpe_xenophile_mission.7.desc
 	is_triggered_only = yes
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		#continuation of main event chain
@@ -1042,7 +1042,7 @@ country_event = {
 	desc = dpe_xenophile_mission.73.desc
 	is_triggered_only = yes
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		from = { country_event = { id = dpe_xenophile_mission.74 } }
@@ -1078,7 +1078,7 @@ country_event = {
 		text = dpe_xenophile_mission.74.desc.spying
 	}
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -1831,7 +1831,7 @@ country_event = {
 	id = dpe_xenophile_mission.95
 	title = dpe_xenophile_mission.95.name
 	desc = dpe_xenophile_mission.95.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	is_triggered_only = yes
 
 	trigger = {
@@ -1858,7 +1858,7 @@ country_event = {
 	id = dpe_xenophile_mission.951
 	title = dpe_xenophile_mission.951.name
 	desc = dpe_xenophile_mission.951.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	is_triggered_only = yes
 
 	option = { name = CCGOODGOOD }
@@ -4337,7 +4337,7 @@ country_event = {
 	id = dpe_xenophile_mission.150
 	title = dpe_xenophile_mission.150.title
 	desc = dpe_xenophile_mission.150.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -4425,7 +4425,7 @@ country_event = {
 	id = dpe_xenophile_mission.1501
 	title = dpe_xenophile_mission.150.title
 	desc = dpe_xenophile_mission.150.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -4505,7 +4505,7 @@ country_event = {
 	id = dpe_xenophile_mission.151
 	title = dpe_xenophile_mission.151.title
 	desc = dpe_xenophile_mission.151.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -4564,7 +4564,7 @@ country_event = {
 	id = dpe_xenophile_mission.1511
 	title = dpe_xenophile_mission.151.title
 	desc = dpe_xenophile_mission.151.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -4617,7 +4617,7 @@ country_event = {
 	id = dpe_xenophile_mission.152
 	title = dpe_xenophile_mission.152.title
 	desc = dpe_xenophile_mission.152.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 	immediate = {
@@ -4953,7 +4953,7 @@ country_event = {
 	id = dpe_xenophile_mission.1521
 	title = dpe_xenophile_mission.152.title
 	desc = dpe_xenophile_mission.152.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 	immediate = {
@@ -5276,7 +5276,7 @@ country_event = {
 	id = dpe_xenophile_mission.154
 	title = dpe_xenophile_mission.154.title
 	desc = dpe_xenophile_mission.154.desc
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	is_triggered_only = yes
 
@@ -5332,7 +5332,7 @@ country_event = {
 	title = dpe_xenophile_mission.101.name
 	desc = dpe_xenophile_mission.101.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		remove_opinion_modifier = {
@@ -5378,7 +5378,7 @@ country_event = {
 	title = dpe_xenophile_mission.101.name
 	desc = dpe_xenophile_mission.101.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	option = {
 		name = EXCELLENT
@@ -5429,7 +5429,7 @@ country_event = {
 		}
 	}
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		remove_opinion_modifier = {
@@ -5506,7 +5506,7 @@ country_event = {
 	title = dpe_xenophile_mission.102.name
 	desc = dpe_xenophile_mission.102.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	option = {
 		name = CCGOODGOOD
@@ -5534,7 +5534,7 @@ country_event = {
 	title = dpe_xenophile_mission.103.name
 	desc = dpe_xenophile_mission.103.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		remove_opinion_modifier = {
@@ -5576,7 +5576,7 @@ country_event = {
 	title = dpe_xenophile_mission.103.name
 	desc = dpe_xenophile_mission.103.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	option = {
 		name = UNFORTUNATE
@@ -5605,7 +5605,7 @@ country_event = {
 	title = dpe_xenophile_mission.104.name
 	desc = dpe_xenophile_mission.104.desc
 
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 
 	immediate = {
 		remove_relation_flag = {

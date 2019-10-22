@@ -1,0 +1,2880 @@
+namespace = dpe_royal_marriages_events
+
+country_event = { #test event, use to reset flags so the chain can run again
+	id = dpe_royal_marriages_events.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = recent_royal_marriage_timer
+		every_country = {
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						who = root
+						modifier = opinion_royal_marriage
+					}
+				}
+				remove_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = root
+						flag = initiated_royal_marriage_with_them
+					}
+				}
+				remove_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = root
+						flag = rejected_royal_marriage
+					}
+				}
+				remove_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+				}
+			}
+			root = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = prev
+							modifier = opinion_royal_marriage
+						}
+					}
+					remove_opinion_modifier = {
+						who = prev
+						modifier = opinion_royal_marriage
+					}
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = prev
+							flag = initiated_royal_marriage_with_them
+						}
+					}
+					remove_relation_flag = {
+						who = prev
+						flag = initiated_royal_marriage_with_them
+					}
+				}
+				if = {
+					limit = {
+						has_relation_flag = {
+							who = prev
+							flag = rejected_royal_marriage
+						}
+					}
+					remove_relation_flag = {
+						who = prev
+						flag = rejected_royal_marriage
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_content_couple@root
+				}
+				remove_country_flag = royal_marriage_content_couple@root
+			}
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_happy_couple@root
+				}
+				remove_country_flag = royal_marriage_happy_couple@root
+			}
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_unhappy_couple@root
+				}
+				remove_country_flag = royal_marriage_unhappy_couple@root
+			}
+			root = {
+				if = {
+					limit = {
+						has_country_flag = royal_marriage_content_couple@prev
+					}
+					remove_country_flag = royal_marriage_content_couple@prev
+				}
+				if = {
+					limit = {
+						has_country_flag = royal_marriage_happy_couple@prev
+					}
+					remove_country_flag = royal_marriage_happy_couple@prev
+				}
+				if = {
+					limit = {
+						has_country_flag = royal_marriage_unhappy_couple@prev
+					}
+					remove_country_flag = royal_marriage_unhappy_couple@prev
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = root
+						flag = receiving_entourage_from
+					}
+				}
+				hidden_effect = {
+					remove_relation_flag = {
+						who = root
+						flag = receiving_entourage_from
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						has_deposit = d_dpe_royal_entourage
+					}
+					remove_deposit = d_dpe_royal_entourage
+				}
+			}
+			remove_country_flag = recent_royal_marriage_timer
+		}
+	}
+}
+
+country_event = { #test event, use to make the other country xenophobic
+	id = dpe_royal_marriages_events.1001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+				OR = {
+					has_defensive_pact = root
+					is_in_federation_with = root
+				}
+				has_authority = auth_imperial
+				NOR = {
+					has_relation_flag = {
+						who = root
+						flag = initiated_royal_marriage_with_them
+					}
+					reverse_has_relation_flag = {
+						who = root
+						flag = initiated_royal_marriage_with_them
+					}
+					has_relation_flag = {
+						who = root
+						flag = rejected_royal_marriage
+					}
+					reverse_has_relation_flag = {
+						who = root
+						flag = rejected_royal_marriage
+					}
+				}
+				exists = ruler
+				ruler = {
+					OR = {
+						gender = male
+						gender = female
+					}
+					NOT = { is_same_species = root }
+				}
+				NOT = { is_same_species = root }
+				NOT = { has_country_flag = never_do_dpe_royal_marriages }
+				NOT = { has_country_flag = recent_royal_marriage_timer }
+			}
+			shift_ethic = ethic_xenophobe
+			while = {
+				limit = {
+					pop_percentage = {
+						percentage < 0.25
+						limit = { has_ethic = ethic_xenophobe }
+					}
+				}
+				random_owned_pop = {
+					pop_change_ethic = ethic_xenophobe
+				}
+			}
+			add_opinion_modifier = { #make sure the alliance doesn't break :)
+				who = root
+				modifier = opinion_enlightened_us
+			}
+		}
+	}
+}
+
+
+
+#A few things to note:
+# - I used the FROM scope basically all the time so that I didn't have to remember which event target was which and stuff. But I have commented before each event which scope it is in
+# - Proposer country = the one that gets dpe_royal_marriages_events.1. Proposed to country = the other one.
+# - It looks like a lot (particularly in the localisation file) as I tried to add as many versions as possible so that it stays interesting and relevant over multiple play-throughs.
+#   But it's a lot less daunting to play through it.
+
+#Start of the chain
+country_event = {
+	id = dpe_royal_marriages_events.1
+	title = dpe_royal_marriages_events.1.name
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_chain_happened }
+			NOT = { has_ascension_perk = ap_xeno_compatibility }
+			NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+		}
+		text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing #first time without gene_splicing unused for now
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_chain_happened }
+			OR = {
+				has_ascension_perk = ap_xeno_compatibility
+				event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+			}
+		}
+		text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_chain_happened
+			NOT = { has_country_flag = royal_marriage_chain_succeeded }
+			NOT = {
+				event_target:empire_proposed_to = {
+					has_relation_flag = {
+						who = root
+						flag = royal_marriage_asked_us_before
+					}
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.1.desc.try_again_never_succeeded
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_chain_happened
+			event_target:empire_proposed_to = {
+				has_relation_flag = {
+					who = root
+					flag = royal_marriage_asked_us_before
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.1.desc.try_again
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_chain_happened
+			has_country_flag = royal_marriage_chain_succeeded
+		}
+		text = dpe_royal_marriages_events.1.desc.lets_do_this_again
+	}
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	trigger = {
+		has_authority = auth_imperial
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		has_faction = xenoist
+		exists = ruler #should always be true, but just in case
+		ruler = {
+			OR = { #To stop confusing localisation with fungoids.
+				gender = male
+				gender = female
+			}
+		}
+
+		NOT = { has_country_flag = never_do_dpe_royal_marriages }
+		NOT = { has_country_flag = recent_royal_marriage_timer } #it's weird when such events happen twice in quick succession
+
+		any_relation = {
+			is_country_type = default
+			has_communications = root
+			OR = {
+				has_defensive_pact = root
+				is_in_federation_with = root
+			}
+			has_authority = auth_imperial
+			NOR = {
+				has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+				reverse_has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+				has_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+				}
+				reverse_has_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+				}
+			}
+			exists = ruler
+			ruler = {
+				OR = {
+					gender = male
+					gender = female
+				}
+				NOT = { is_same_species = root }
+			}
+			NOT = { is_same_species = root }
+			NOT = { has_country_flag = never_do_dpe_royal_marriages }
+			NOT = { has_country_flag = recent_royal_marriage_timer }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 30 #A reasonable middling number
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = recent_royal_marriage_timer
+			years = 10
+		}
+		save_event_target_as = proposing_country
+		random_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+				OR = {
+					has_defensive_pact = root
+					is_in_federation_with = root
+				}
+				has_authority = auth_imperial
+				NOR = {
+					has_relation_flag = {
+						who = root
+						flag = initiated_royal_marriage_with_them
+					}
+					reverse_has_relation_flag = {
+						who = root
+						flag = initiated_royal_marriage_with_them
+					}
+				}
+				exists = ruler
+				ruler = {
+					OR = {
+						gender = male
+						gender = female
+					}
+					NOT = { is_same_species = root }
+				}
+				NOT = { is_same_species = root }
+				NOT = { has_country_flag = never_do_dpe_royal_marriages }
+				NOT = { has_country_flag = recent_royal_marriage_timer }
+			}
+			save_event_target_as = empire_proposed_to
+			create_leader = {
+				class = scientist
+				gender = male
+				effect = {
+					save_event_target_as = royal_marriage_prince
+					exile_leader_as = royal_marriage_prince
+				}
+			}
+		}
+
+		create_leader = {
+			class = scientist
+			gender = female
+			effect = {
+				save_event_target_as = royal_marriage_princess
+				exile_leader_as = royal_marriage_princess
+			}
+		}
+	}
+
+	option = { #Sure, go ahead
+		name = dpe_royal_marriages_events.1.A
+		
+		custom_tooltip = dpe_royal_marriages_events.1.A.tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = royal_marriage_chain_first_time_yes }
+				}
+				set_country_flag = royal_marriage_chain_first_time_yes
+			}
+			event_target:empire_proposed_to = {
+				country_event = { id = dpe_royal_marriages_events.2 days = 5 }
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = xenophile_diplomacy
+				days = 3600
+			}
+		}
+
+		every_pop_faction = {
+			limit = {
+				OR = {
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = isolationist
+				}
+			}
+			add_modifier = {
+				modifier = xenophile_diplomacy_negative
+				days = 3600
+			}
+		}
+
+		hidden_effect = { set_country_flag = cc_has_had_interspecies_marriage }
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = allow_im
+			cooldown = yes
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.25
+				event_target:empire_proposed_to = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:empire_proposed_to = {
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+			}
+		}
+	}
+	option = { #Not now.
+		name = dpe_royal_marriages_events.1.B
+		
+		if = { #They really want it the first time. Once it is normal, they are more accepting of you saying no for diplomatic reasons.
+			limit = {
+				NOT = {
+					has_country_flag = royal_marriage_chain_first_time_yes
+				}
+			}
+			random_pop_faction = {
+				limit = {
+					is_pop_faction_type = xenoist
+				}
+				add_modifier = {
+					modifier = closed_mindedness
+					days = 3600
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_timed_relation_flag = {
+				who = event_target:empire_proposed_to
+				flag = rejected_royal_marriage
+				years = 30
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	option = { #QoL answer: Never ask me this again.
+		name = dpe_royal_marriages_events.1.Z
+		custom_tooltip = never_again_dpe_royal_marriages_propose
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_chain_first_time_yes }
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = xenoist
+			}
+			add_modifier = {
+				modifier = closed_mindedness
+				days = 7200
+			}
+		}
+		hidden_effect = {
+			set_country_flag = never_do_dpe_royal_marriages
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = { #QoL answer: Never ask me this again.
+		name = dpe_royal_marriages_events.1.Z2
+		custom_tooltip = never_again_dpe_royal_marriages_propose
+		trigger = {
+			has_country_flag = royal_marriage_chain_first_time_yes
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = xenoist
+			}
+			add_modifier = {
+				modifier = closed_mindedness
+				days = 7200
+			}
+		}
+		hidden_effect = {
+			set_country_flag = never_do_dpe_royal_marriages
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+				}
+				set_country_flag = royal_marriage_chain_happened
+			}
+		}
+	}
+}
+
+
+#Yes/No for proposed to country
+country_event = {
+	id = dpe_royal_marriages_events.2
+	title = dpe_royal_marriages_events.2.name
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_chain_happened }
+			NOT = { has_ascension_perk = ap_xeno_compatibility }
+			NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+		}
+		text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing #first time without gene_splicing unused for now
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_chain_happened }
+			OR = {
+				has_ascension_perk = ap_xeno_compatibility
+				event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+			}
+		}
+		text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_chain_happened
+			NOT = {
+				has_relation_flag = {
+					who = from
+					flag = royal_marriage_asked_us_before
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.2.desc.subsequent_time
+	}
+	desc = {
+		trigger = {
+			has_relation_flag = {
+				who = from
+				flag = royal_marriage_asked_us_before
+			}
+		}
+		text = dpe_royal_marriages_events.2.desc.try_again
+	}
+	trigger = {
+		exists = from
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = recent_royal_marriage_timer
+			years = 10
+		}
+	}
+
+	option = { #Yes
+		name = dpe_royal_marriages_events.2.A
+		if = {
+			limit = {
+				NOT = {
+					any_relation = {
+						has_opinion_modifier = {
+							who = root
+							modifier = opinion_royal_marriage
+						}
+					}
+				}
+			}
+			custom_tooltip = accepting_will_increase_xenophile_attraction
+		}
+		custom_tooltip = royal_wedding_preparations_begin
+		
+		from = {
+			hidden_effect = {
+				set_relation_flag = { #this lets me identify which was the proposer country if needed
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+				set_country_flag = royal_marriage_chain_succeeded
+				country_event = { id = dpe_royal_marriages_events.4 }
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = from
+						flag = royal_marriage_asked_us_before
+					}
+				}
+				remove_relation_flag = {
+					who = from
+					flag = royal_marriage_asked_us_before
+				}
+			}
+		}
+
+		random_pop_faction = {
+			limit = { is_pop_faction_type = xenoist }
+			add_modifier = {
+				modifier = xenophile_diplomacy
+				days = 3600
+			}
+		}
+
+		every_pop_faction = {
+			limit = {
+				OR = {
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = isolationist
+				}
+			}
+			add_modifier = {
+				modifier = xenophile_diplomacy_negative
+				days = 3600
+			}
+		}
+
+		hidden_effect = { set_country_flag = cc_has_had_interspecies_marriage }
+		set_policy = {
+			policy = cc_interspecies_marriage
+			option = allow_im
+			cooldown = yes
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_faction = xenoist }
+				OR = {
+					has_faction = supremacist
+					has_faction = isolationist
+				}
+			}
+			modifier = { #it would increase attraction for a faction that doesn't like you
+				factor = 0.5
+				has_faction = xenoist
+				count_pop_factions = {
+					count = 1
+					limit = {
+						is_pop_faction_type = xenoist
+						faction_approval < 0.35
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.5
+				relative_power = {
+					who = from
+					value = overwhelming
+				}
+			}
+			modifier = {
+				factor = 2
+				relative_power = {
+					who = from
+					value = pathetic
+				}
+			}
+		}
+	}
+	option = { #No
+		name = dpe_royal_marriages_events.2.B
+
+		custom_tooltip = the_from_will_be_displeased
+		
+		hidden_effect = {
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_rejected_marriage_proposal
+				}
+				set_timed_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+					years = 30
+				}
+				country_event = { id = dpe_royal_marriages_events.3 }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_relation_flag = {
+							who = from
+							flag = royal_marriage_asked_us_before
+						}
+					}
+				}
+				set_relation_flag = {
+					who = from
+					flag = royal_marriage_asked_us_before
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_faction = xenoist
+				NOT = { has_faction = supremacist }
+				NOT = { has_faction = isolationist }
+			}
+		}
+	}
+	option = { #No way most certainly not (spiritualist)
+		name = dpe_royal_marriages_events.2.C1
+		custom_tooltip = never_again_dpe_royal_marriages_propose_to
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		custom_tooltip = the_from_will_be_insulted
+		
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = traditionalist
+			}
+			add_modifier = {
+				modifier = sacred_genes_protected
+				days = 3600
+			}
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = xenoist
+			}
+			add_modifier = {
+				modifier = closed_mindedness
+				days = 3600
+			}
+		}
+		hidden_effect = {
+			set_country_flag = never_do_dpe_royal_marriages
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_harshly_rejected_marriage_proposal
+				}
+				country_event = { id = dpe_royal_marriages_events.31 }
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_ethic = ethic_xenophobe }
+				NOT = { has_ethic = ethic_fanatic_xenophobe }
+			}
+		}
+	}
+	option = { #No way most certainly not (xenophobe)
+		name = dpe_royal_marriages_events.2.C2
+		custom_tooltip = never_again_dpe_royal_marriages_propose_to
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		custom_tooltip = the_from_will_be_insulted
+		
+		random_pop_faction = {
+			limit = {
+				OR = {
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = supremacist
+				}
+			}
+			add_modifier = {
+				modifier = a_fine_insult
+				days = 3600
+			}
+		}
+		random_pop_faction = {
+			limit = {
+				is_pop_faction_type = xenoist
+			}
+			add_modifier = {
+				modifier = closed_mindedness
+				days = 3600
+			}
+		}
+		hidden_effect = {
+			set_country_flag = never_do_dpe_royal_marriages
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_harshly_rejected_marriage_proposal
+				}
+				country_event = { id = dpe_royal_marriages_events.31 }
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = royal_marriage_chain_happened } }
+				set_country_flag = royal_marriage_chain_happened
+			}
+		}
+	}
+}
+
+#They said no
+country_event = {
+	id = dpe_royal_marriages_events.3
+	title = dpe_royal_marriages_events.3.name
+	desc = dpe_royal_marriages_events.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#They said no way
+country_event = {
+	id = dpe_royal_marriages_events.31
+	title = dpe_royal_marriages_events.31.name
+	desc = {
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.31.desc.spiritualist
+	}
+	desc = {
+		trigger = {
+			from = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.31.desc.xenophobe
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.31.A
+		custom_tooltip = royal_wedding_preparations_begin
+	}
+}
+
+#They said yes!
+country_event = {
+	id = dpe_royal_marriages_events.4
+	title = dpe_royal_marriages_events.4.name
+	desc = dpe_royal_marriages_events.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.4.A
+
+		hidden_effect = {
+			from = {
+				country_event = { id = dpe_royal_marriages_events.5 days = 90 }
+			}
+		}
+	}
+}
+
+#Proposed to empire: Preparations under way
+country_event = {
+	id = dpe_royal_marriages_events.5
+	title = dpe_royal_marriages_events.5.name
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_preparation_before }
+		}
+		text = dpe_royal_marriages_events.5.desc
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_preparation_before
+		}
+		text = dpe_royal_marriages_events.5.desc.second_time
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	trigger = {
+		exists = from
+	}
+
+	option = { #sure thing
+		name = dpe_royal_marriages_events.5.A
+		allow = {
+			NOR = { #they could not be set as citizens
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		capital_scope = {
+			add_deposit = d_dpe_royal_entourage
+			create_pop = {
+				species = from
+			}
+			hidden_effect = {
+				last_created_pop = {
+					set_pop_flag = royal_entourage_pops
+					set_citizenship_type = {
+						type = citizenship_full
+						cooldown = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = dpe_royal_marriages_events.5.A.tooltip
+		hidden_effect = {
+			set_relation_flag = {
+				who = from
+				flag = receiving_entourage_from
+			}
+			from = { country_event = { id = dpe_royal_marriages_events.6 days = 45 } }
+		}
+
+		ai_chance = {
+			factor = 3
+		}
+	}
+	option = { #this is too much
+		name = dpe_royal_marriages_events.5.B
+		custom_tooltip = dpe_royal_marriages_events.5.B.tooltip
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.51 } } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 2
+				NOT = { has_faction = xenoist }
+				OR = {
+					has_faction = supremacist
+					has_faction = isolationist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				relative_power = {
+					who = from
+					value = inferior
+				}
+			}
+			modifier = {
+				factor = 0.25
+				relative_power = {
+					who = from
+					value = pathetic
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = royal_marriage_preparation_before }
+				}
+				set_country_flag = royal_marriage_preparation_before
+			}
+		}
+	}
+}
+
+#Proposer country: Outrageous Demands
+country_event = {
+	id = dpe_royal_marriages_events.51
+	title = dpe_royal_marriages_events.51.name
+	desc = dpe_royal_marriages_events.51.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = { #the marriage is off
+		name = dpe_royal_marriages_events.51.A
+		custom_tooltip = the_from_will_be_displeased
+		hidden_effect = {
+			remove_relation_flag = {
+				who = from
+				flag = initiated_royal_marriage_with_them
+			}
+			set_timed_relation_flag = {
+				who = from
+				flag = rejected_royal_marriage
+				years = 30
+			}
+			add_opinion_modifier = {
+				who = from
+				modifier = opinion_outrageous_demands
+			}
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_cancelled_wedding
+				}
+			}
+			from = { country_event = { id = dpe_royal_marriages_events.52 days = 5 } }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				from = {
+					relative_power = {
+						who = root
+						value = pathetic
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				from = {
+					relative_power = {
+						who = root
+						value = inferior
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				from = {
+					relative_power = {
+						who = root
+						value = superior
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				from = {
+					relative_power = {
+						who = root
+						value = overwhelming
+					}
+				}
+			}
+		}
+	}
+	option = { #we'll go through with it anyway
+		name = dpe_royal_marriages_events.51.B
+		custom_tooltip = dpe_royal_marriages_events.51.B.tooltip
+		add_resource = {
+			influence = -50
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				who = from
+				modifier = opinion_outrageous_demands_weaker
+			}
+			from = { country_event = { id = dpe_royal_marriages_events.53 days = 5 } }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Proposed to country: They cancelled
+country_event = {
+	id = dpe_royal_marriages_events.52
+	title = dpe_royal_marriages_events.52.name
+	desc = dpe_royal_marriages_events.52.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		exists = from
+	}
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#Proposed to country: They keep going, begrudgingly
+country_event = {
+	id = dpe_royal_marriages_events.53
+	title = dpe_royal_marriages_events.53.name
+	desc = dpe_royal_marriages_events.53.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		exists = from
+	}
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.53.A
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.6 days = 45 } } }
+	}
+}
+
+#Proposer empire: Final preparations, wedding imminent. Event for the mood.
+country_event = {
+	id = dpe_royal_marriages_events.6
+	title = dpe_royal_marriages_events.6.name
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_enthusiastic@root }
+		}
+		text = dpe_royal_marriages_events.6.desc.enthusiastic
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_normal@root }
+		}
+		text = dpe_royal_marriages_events.6.desc.normal
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_troubles@root }
+		}
+		text = dpe_royal_marriages_events.6.desc.troubles
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_hostile@root }
+		}
+		text = dpe_royal_marriages_events.6.desc.hostile
+	}
+	is_triggered_only = yes
+
+	picture = {
+		picture = GFX_evt_dpe_alien_wedding
+		trigger = {
+			from = {
+				NOR = {
+					has_country_flag = royal_marriage_troubles@root
+					has_country_flag = royal_marriage_hostile@root
+				}
+			}
+		}
+	}
+	picture = {
+		picture = GFX_evt_alien_segregation
+		trigger = {
+			from = {
+				OR = {
+					has_country_flag = royal_marriage_troubles@root
+					has_country_flag = royal_marriage_hostile@root
+				}
+			}
+		}
+	}
+
+	trigger = {
+		exists = from
+	}
+
+	immediate = {
+		#how is the mood?
+		from = {
+			random_list = {
+				1 = { #wholly enthusiastic
+					set_timed_country_flag = {
+						flag = royal_marriage_enthusiastic@root
+						days = 180
+					}
+					modifier = {
+						factor = 0.25
+						NOT = { has_faction = xenoist }
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
+							count_pop_factions = {
+								count = 1
+								limit = {
+									is_pop_faction_type = xenoist
+									support > 0.2
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 3
+						OR = {
+							has_ethic = ethic_fanatic_xenophile
+							count_pop_factions = {
+								count = 1
+								limit = {
+									is_pop_faction_type = xenoist
+									support > 0.3
+								}
+							}
+						}
+					}
+				}
+				1 = { #somewhat enthusiastic
+					set_timed_country_flag = {
+						flag = royal_marriage_normal@root
+						days = 180
+					}
+					modifier = {
+						factor = 0.75
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}	
+					}
+				}
+				1 = { #could be troubles
+					set_timed_country_flag = {
+						flag = royal_marriage_troubles@root
+						days = 180
+					}
+					modifier = {
+						factor = 0 #I need these factions for later events if you get this modifier
+						NOR = {
+							has_faction = supremacist
+							has_faction = isolationist
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+							count_pop_factions = {
+								count = 1
+								limit = {
+									OR = {
+										is_pop_faction_type = supremacist
+										is_pop_faction_type = isolationist
+									}
+									support > 0.2
+								}
+							}
+						}
+					}
+				}
+				1 = { #hostile public opinion
+					set_timed_country_flag = {
+						flag = royal_marriage_hostile@root
+						days = 180
+					}
+					modifier = {
+						factor = 0 #I need these factions for later events if you get this modifier
+						OR = {
+							AND = {
+								NOT = { has_faction = supremacist }
+								NOT = { has_faction = isolationist }
+							}
+							has_faction = xenoist
+						}
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+							count_pop_factions = {
+								count = 1
+								limit = {
+									OR = {
+										is_pop_faction_type = supremacist
+										is_pop_faction_type = isolationist
+									}
+									support > 0.2
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 3
+						OR = {
+							has_ethic = ethic_fanatic_xenophobe
+							count_pop_factions = {
+								count = 1
+								limit = {
+									OR = {
+										is_pop_faction_type = supremacist
+										is_pop_faction_type = isolationist
+									}
+									support > 0.3
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		from = { country_event = { id = dpe_royal_marriages_events.7 } }
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.6.opt.good
+		trigger = {
+			NOT = { from = { has_country_flag = royal_marriage_troubles@root } }
+			NOT = { from = { has_country_flag = royal_marriage_hostile@root } }
+		}
+	}
+	option = {
+		name = dpe_royal_marriages_events.6.opt.worrying
+		trigger = {
+			from = {
+				OR = {
+					has_country_flag = royal_marriage_troubles@root
+					has_country_flag = royal_marriage_hostile@root
+				}
+			}
+		}
+	}
+}
+
+#Proposed to empire: Final preparations, wedding imminent. Event for the mood.
+country_event = {
+	id = dpe_royal_marriages_events.7
+	title = dpe_royal_marriages_events.7.name
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_enthusiastic@from
+		}
+		text = dpe_royal_marriages_events.7.desc.enthusiastic
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_normal@from
+		}
+		text = dpe_royal_marriages_events.7.desc.normal
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_troubles@from
+		}
+		text = dpe_royal_marriages_events.7.desc.troubles
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_hostile@from
+		}
+		text = dpe_royal_marriages_events.7.desc.hostile
+	}
+	is_triggered_only = yes
+
+	picture = {
+		picture = GFX_evt_dpe_alien_wedding
+		trigger = {
+			NOR = {
+				has_country_flag = royal_marriage_troubles@from
+				has_country_flag = royal_marriage_hostile@from
+			}
+		}
+	}
+	picture = {
+		picture = GFX_evt_alien_segregation
+		trigger = {
+			OR = {
+				has_country_flag = royal_marriage_troubles@from
+				has_country_flag = royal_marriage_hostile@from
+			}
+		}
+	}
+
+	immediate = {
+		from = { country_event = { id = dpe_royal_marriages_events.8 days = 25 } }
+	}
+	option = {
+		name = dpe_royal_marriages_events.7.opt.good
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_troubles@from }
+			NOT = { has_country_flag = royal_marriage_hostile@from }
+		}
+		add_modifier = {
+			modifier = optimism_at_wedding
+			days = 360
+		}
+	}
+	option = {
+		name = dpe_royal_marriages_events.7.opt.worrying
+		trigger = {
+			OR = {
+				has_country_flag = royal_marriage_troubles@from
+				has_country_flag = royal_marriage_hostile@from
+			}
+		}
+		add_modifier = {
+			modifier = hostility_towards_wedding
+			days = 360
+		}
+	}
+}
+
+#Proposer Country: Wedding
+country_event = {
+	id = dpe_royal_marriages_events.8
+	title = dpe_royal_marriages_events.8.name
+	desc = {
+		trigger = {
+			from = { NOT = { has_modifier = hostility_towards_wedding } }
+		}
+		text = dpe_royal_marriages_events.8.desc.friendly
+	}
+	desc = {
+		trigger = {
+			from = { has_modifier = hostility_towards_wedding }
+		}
+		text = dpe_royal_marriages_events.8.desc.hostile
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	trigger = {
+		exists = from
+	}
+
+	immediate = {
+		add_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_marriage
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_royal_marriage
+			}
+			if = {
+				limit = {
+					has_modifier = hostility_towards_wedding
+				}
+				if = {
+					limit = { has_faction = supremacist }
+					random_pop_faction = {
+						limit = { is_pop_faction_type = supremacist }
+						save_event_target_as = xenophobe_faction
+					}
+				}
+				else = {
+					random_pop_faction = {
+						limit = { is_pop_faction_type = isolationist }
+						save_event_target_as = xenophobe_faction
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.8.A
+		custom_tooltip = relations_with_from_have_improved
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.9 } } }
+	}
+}
+
+#Proposed to Country: Wedding
+country_event = {
+	id = dpe_royal_marriages_events.9
+	title = dpe_royal_marriages_events.9.name
+	desc = {
+		trigger = {
+			NOT = { has_modifier = hostility_towards_wedding }
+		}
+		text = dpe_royal_marriages_events.9.desc.friendly
+	}
+	desc = {
+		trigger = {
+			has_modifier = hostility_towards_wedding
+		}
+		text = dpe_royal_marriages_events.9.desc.hostile
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	option = {
+		name = dpe_royal_marriages_events.9.A
+		custom_tooltip = relations_with_from_have_improved
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.10 days = 180 } } }
+	}
+}
+
+
+
+#Proposer Country: Honeymoon Event
+country_event = {
+	id = dpe_royal_marriages_events.10
+	title = dpe_royal_marriages_events.10.name
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = royal_marriage_happy_couple@root
+				OR = {
+					has_country_flag = repeat_marriage@root
+					has_modifier = optimism_at_wedding
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.10.desc.happy
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = royal_marriage_happy_couple@root
+				OR = {
+					has_country_flag = repeat_marriage@root
+					has_modifier = hostility_towards_wedding
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.10.desc.happy_despite
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_content_couple@root }
+		}
+		text = dpe_royal_marriages_events.10.desc.normal
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = royal_marriage_unhappy_couple@root
+				OR = {
+					has_country_flag = repeat_marriage@root
+					has_modifier = hostility_towards_wedding
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.10.desc.unhappy
+	}
+	desc = {
+		trigger = {
+			from = {
+				has_country_flag = royal_marriage_unhappy_couple@root
+				OR = {
+					has_country_flag = repeat_marriage@root
+					has_modifier = optimism_at_wedding
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.10.desc.unhappy_despite
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	trigger = {
+		exists = from
+	}
+
+	immediate = {
+		#are they a happy couple?
+		from = {
+			random_list = {
+				2 = { #very happy
+					set_timed_country_flag = {
+						flag = royal_marriage_happy_couple@root
+						days = 480
+					}
+					modifier = {
+						factor = 2
+						ruler.species = {
+							has_trait = trait_charismatic
+						}
+					}
+					modifier = {
+						factor = 2
+						from.ruler.species = {
+							has_trait = trait_charismatic
+						}
+					}
+					modifier = {
+						factor = 0.5
+						ruler.species = {
+							has_trait = trait_repugnant
+						}
+					}
+					modifier = {
+						factor = 0.5
+						from.ruler.species = {
+							has_trait = trait_repugnant
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_relation_flag = {
+							who = root
+							flag = receiving_entourage_from
+						}
+					}
+					modifier = {
+						factor = 2
+						has_modifier = optimism_at_wedding
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { has_faction = xenoist }
+					}
+					modifier = {
+						factor = 1.5
+						has_country_flag = repeat_marriage@root
+					}
+				}
+				3 = { #tolerable
+					set_timed_country_flag = {
+						flag = royal_marriage_content_couple@root
+						days = 480
+					}
+				}
+				2 = { #not a great couple
+					set_timed_country_flag = {
+						flag = royal_marriage_unhappy_couple@root
+						days = 480
+					}
+					modifier = {
+						factor = 0.5
+						ruler.species = {
+							has_trait = trait_charismatic
+						}
+					}
+					modifier = {
+						factor = 0.5
+						from.ruler.species = {
+							has_trait = trait_charismatic
+						}
+					}
+					modifier = {
+						factor = 2
+						NOT = {
+							has_relation_flag = {
+								who = root
+								flag = receiving_entourage_from
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						ruler.species = {
+							has_trait = trait_repugnant
+						}
+					}
+					modifier = {
+						factor = 2
+						from.ruler.species = {
+							has_trait = trait_repugnant
+						}
+					}
+					modifier = {
+						factor = 2
+						has_modifier = hostility_towards_wedding
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { has_faction = supremacist }
+						NOT = { has_faction = isolationist }
+					}
+					modifier = {
+						factor = 0.5
+						has_country_flag = repeat_marriage@root
+					}
+				}
+			}
+		}
+		from = { country_event = { id = dpe_royal_marriages_events.11 } }
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.10.A
+		trigger = {
+			NOT = { from = { has_country_flag = royal_marriage_unhappy_couple@root } }
+		}
+	}
+	option = {
+		name = dpe_royal_marriages_events.10.B
+		trigger = {
+			from = { has_country_flag = royal_marriage_unhappy_couple@root }
+		}
+	}
+}
+
+#Proposed to Country: Honeymoon Event
+country_event = {
+	id = dpe_royal_marriages_events.11
+	title = dpe_royal_marriages_events.11.name
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_happy_couple@from
+			OR = {
+				has_country_flag = repeat_marriage@from
+				has_modifier = optimism_at_wedding
+			}
+		}
+		text = dpe_royal_marriages_events.11.desc.happy
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_happy_couple@from
+			OR = {
+				has_country_flag = repeat_marriage@from
+				has_modifier = hostility_towards_wedding
+			}
+		}
+		text = dpe_royal_marriages_events.11.desc.happy_despite
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_content_couple@from
+		}
+		text = dpe_royal_marriages_events.11.desc.normal
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_unhappy_couple@from
+			OR = {
+				has_country_flag = repeat_marriage@from
+				has_modifier = hostility_towards_wedding
+			}
+		}
+		text = dpe_royal_marriages_events.11.desc.unhappy
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_unhappy_couple@from
+			OR = {
+				has_country_flag = repeat_marriage@from
+				has_modifier = optimism_at_wedding
+			}
+		}
+		text = dpe_royal_marriages_events.11.desc.unhappy_despite
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_dpe_alien_wedding
+
+	option = {
+		name = dpe_royal_marriages_events.11.A
+		trigger = {
+			NOT = { has_country_flag = royal_marriage_unhappy_couple@from }
+		}
+#		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.12 days = 180 } } } #test numbers - uncomment out this line to see this event in a timely manner.
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.12 days = 9000 random = 14400 } } } #Death doth part (min 25, max 65 years later)
+	}
+	option = {
+		name = dpe_royal_marriages_events.11.B
+		trigger = {
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		hidden_effect = {
+			from = {
+				random_list = {
+					1 = { country_event = { id = dpe_royal_marriages_events.24 days = 180 random = 180 } }
+					1 = { country_event = { id = dpe_royal_marriages_events.26 days = 180 random = 180 } }
+				}
+			}
+		}
+	}
+}
+
+#Proposer Country: Min 25, max 65 years later: One of those wed will die, renew the marriage with a fresh couple?
+country_event = {
+	id = dpe_royal_marriages_events.12
+	title = dpe_royal_marriages_events.12.name
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_princess_died
+			from = { NOT = { has_country_flag = royal_marriage_unhappy_couple@root } } 
+		}
+		text = dpe_royal_marriages_events.12.desc.positive.princess
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_princess_died
+			from = { has_country_flag = royal_marriage_unhappy_couple@root }
+		}
+		text = dpe_royal_marriages_events.12.desc.less_positive.princess
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_prince_died
+			from = { NOT = { has_country_flag = royal_marriage_unhappy_couple@root } } 
+		}
+		text = dpe_royal_marriages_events.12.desc.positive.prince
+	}
+	desc = {
+		trigger = {
+			has_country_flag = royal_marriage_prince_died
+			from = { has_country_flag = royal_marriage_unhappy_couple@root }
+		}
+		text = dpe_royal_marriages_events.12.desc.less_positive.prince
+	}
+	is_triggered_only = yes
+
+	picture = GFX_evt_space_funeral
+
+	trigger = {
+		exists = from
+		has_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_marriage
+		}
+		#all these cases are covered elsewhere
+		has_authority = auth_imperial
+		from = { has_authority = auth_imperial }
+		OR = {
+			has_defensive_pact = from
+			is_in_federation_with = from
+			has_overlord = from
+			is_overlord_to = from
+		}
+	}
+
+	immediate = {
+		random_list = { #who died?
+			1 = {
+				set_timed_country_flag = {
+					flag = royal_marriage_princess_died
+					days = 100
+				}
+			}
+			1 = {
+				set_timed_country_flag = {
+					flag = royal_marriage_prince_died
+					days = 100
+				}
+			}
+		}
+	}
+
+	option = { #let's do it again
+		name = dpe_royal_marriages_events.12.A
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.14 days = 5 } } }
+
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0.67
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = { #no
+		name = dpe_royal_marriages_events.12.B
+		custom_tooltip = dpe_royal_marriages_opinions_removed_from
+
+		hidden_effect = {
+			remove_opinion_modifier = {
+				who = from
+				modifier = opinion_royal_marriage
+			}
+			from = {
+				remove_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+			}
+			set_timed_relation_flag = {
+				who = event_target:empire_proposed_to
+				flag = from
+				years = 30
+			}
+	
+			from = { country_event = { id = dpe_royal_marriages_events.13 } }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					opinion = {
+						who = from
+						value = 100
+					}
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				from = { NOT = { has_country_flag = royal_marriage_unhappy_couple@root } }
+			}
+		}
+	}
+}
+
+#Proposed to country: It's over
+country_event = {
+	id = dpe_royal_marriages_events.13
+	title = dpe_royal_marriages_events.13.name
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_princess_died }
+			NOT = { has_country_flag = royal_marriage_unhappy_couple@from }
+		}
+		text = dpe_royal_marriages_events.13.desc.positive.princess
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_prince_died }
+			NOT = { has_country_flag = royal_marriage_unhappy_couple@from }
+		}
+		text = dpe_royal_marriages_events.13.desc.positive.prince
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_princess_died }
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		text = dpe_royal_marriages_events.13.desc.less_positive.princess
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_prince_died }
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		text = dpe_royal_marriages_events.13.desc.less_positive.prince
+	}
+	trigger = {
+		exists = from
+	}
+	is_triggered_only = yes
+	
+	picture = GFX_evt_space_funeral
+
+	immediate = {
+		dpe_royal_marriage_cleanup_effect = yes
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.13.A
+		custom_tooltip = relations_with_from_have_worsened
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+		}
+	}
+}
+
+#Proposed to country: Death happened, they wish another union
+country_event = {
+	id = dpe_royal_marriages_events.14
+	title = dpe_royal_marriages_events.14.name
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_princess_died }
+			NOT = { has_country_flag = royal_marriage_unhappy_couple@from }
+		}
+		text = dpe_royal_marriages_events.14.desc.positive.princess
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_prince_died }
+			NOT = { has_country_flag = royal_marriage_unhappy_couple@from }
+		}
+		text = dpe_royal_marriages_events.14.desc.positive.prince
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_princess_died }
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		text = dpe_royal_marriages_events.14.desc.less_positive.princess
+	}
+	desc = {
+		trigger = {
+			from = { has_country_flag = royal_marriage_prince_died }
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		text = dpe_royal_marriages_events.14.desc.less_positive.prince
+	}
+	is_triggered_only = yes
+	
+	picture = GFX_evt_space_funeral
+
+	option = { #yes
+		name = dpe_royal_marriages_events.14.A
+		custom_tooltip = dpe_royal_marriages_wedding_in_three_months
+		hidden_effect = {
+			#new potential couple
+			create_leader = {
+				class = scientist
+				gender = male
+				effect = {
+					save_event_target_as = royal_marriage_prince
+					exile_leader_as = royal_marriage_prince
+				}
+			}
+			from = {
+				create_leader = {
+					class = scientist
+					gender = female
+					effect = {
+						save_event_target_as = royal_marriage_princess
+						exile_leader_as = royal_marriage_princess
+					}
+				}
+			}
+			from = { country_event = { id = dpe_royal_marriages_events.16 } }
+		}
+
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0.67
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = { #no
+		name = dpe_royal_marriages_events.14.B
+		custom_tooltip = dpe_royal_marriages_opinions_removed_from
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+				from = {
+					set_timed_relation_flag = {
+						who = event_target:empire_proposed_to
+						flag = root
+						years = 30
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+		}
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.15 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					opinion = {
+						who = from
+						value = 100
+					}
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				NOT = { has_country_flag = royal_marriage_unhappy_couple@root }
+			}
+		}
+	}
+}
+
+#Proposer country: They said no
+country_event = {
+	id = dpe_royal_marriages_events.15
+	title = dpe_royal_marriages_events.15.name
+	desc = dpe_royal_marriages_events.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	immediate = {
+		dpe_royal_marriage_cleanup_effect = yes
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.15.A
+		custom_tooltip = relations_with_from_have_worsened
+	}
+}
+
+#Proposer country: They said yes
+country_event = {
+	id = dpe_royal_marriages_events.16
+	title = dpe_royal_marriages_events.16.name
+	desc = dpe_royal_marriages_events.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from.ruler
+	}
+
+	immediate = { #Reset for the new couple
+		from = {
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_content_couple@root
+				}
+				remove_country_flag = royal_marriage_content_couple@root
+			}
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_happy_couple@root
+				}
+				remove_country_flag = royal_marriage_happy_couple@root
+			}
+			if = {
+				limit = {
+					has_country_flag = royal_marriage_unhappy_couple@root
+				}
+				remove_country_flag = royal_marriage_unhappy_couple@root
+			}
+		}
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.16.A
+		custom_tooltip = dpe_royal_marriages_wedding_in_three_months
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.17 days = 90 } } }
+	}
+}
+
+#Straight to the wedding this time (no need for being surprised at the scale of the preparations...)
+#Proposed to country
+country_event = {
+	id = dpe_royal_marriages_events.17
+	title = dpe_royal_marriages_events.17.name
+	desc = dpe_royal_marriages_events.17.desc
+	picture = GFX_evt_dpe_alien_wedding
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		has_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_marriage
+		}
+	}
+
+	immediate = {
+		add_opinion_modifier = {
+			who = from
+			modifier = opinion_recent_royal_wedding
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_recent_royal_wedding
+			}
+		}
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.17.A
+		custom_tooltip = relations_with_from_have_improved
+		add_modifier = {
+			modifier = recent_royal_wedding
+			days = 3600
+		}
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.18 } } }
+	}
+}
+
+#Proposer country
+country_event = {
+	id = dpe_royal_marriages_events.18
+	title = dpe_royal_marriages_events.18.name
+	desc = dpe_royal_marriages_events.18.desc
+	picture = GFX_evt_dpe_alien_wedding
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_royal_marriages_events.18.A
+		custom_tooltip = relations_with_from_have_improved
+		add_modifier = {
+			modifier = recent_royal_wedding
+			days = 3600
+		}
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.19 days = 180 } } }
+	}
+}
+
+#Dummy event to trigger .10 again (needed to get it back to the right country and have FROM as the right scope)
+country_event = {
+	id = dpe_royal_marriages_events.19
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = repeat_marriage@from
+			days = 360
+		}
+		from = { country_event = { id = dpe_royal_marriages_events.10 } }
+	}
+}
+
+
+#Proposer country: Divorce happens
+country_event = {
+	id = dpe_royal_marriages_events.24
+	title = dpe_royal_marriages_events.24.name
+	desc = dpe_royal_marriages_events.24.desc
+	picture = GFX_evt_alien_segregation
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		has_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_marriage
+		}
+	}
+
+	immediate = {
+		dpe_royal_marriage_cleanup_effect = yes
+
+		add_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_divorce
+		}
+		from = {
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_royal_divorce
+			}
+		}
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.24.A
+		custom_tooltip = relations_with_from_have_worsened
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.25 } } }
+	}
+}
+
+#Proposed to country: Divorce happens
+country_event = {
+	id = dpe_royal_marriages_events.25
+	title = dpe_royal_marriages_events.25.name
+	desc = dpe_royal_marriages_events.25.desc
+	picture = GFX_evt_alien_segregation
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_royal_marriages_events.25.A
+		custom_tooltip = relations_with_from_have_worsened
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+		}
+	}
+}
+
+
+#Proposer country: Divorce Averted
+country_event = {
+	id = dpe_royal_marriages_events.26
+	title = dpe_royal_marriages_events.26.name
+	desc = dpe_royal_marriages_events.26.desc
+	picture = GFX_evt_dpe_alien_wedding
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		has_opinion_modifier = {
+			who = from
+			modifier = opinion_royal_marriage
+		}
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.26.A
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.27 } } }
+	}
+}
+
+#Proposed to country: Divorce Averted
+country_event = {
+	id = dpe_royal_marriages_events.27
+	title = dpe_royal_marriages_events.27.name
+	desc = dpe_royal_marriages_events.27.desc
+	picture = GFX_evt_dpe_alien_wedding
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_royal_marriages_events.27.A
+		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.12 days = 9000 random = 14400 } } } #Death doth part (min 25, max 65 years later)
+	}
+}
+
+
+###Various contingencies
+
+#on_country_destroyed
+#Proposed to country destroyed, tell the other that the royal couple escaped.
+country_event = {
+	id = dpe_royal_marriages_events.900
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			has_opinion_modifier = {
+				who = root
+				modifier = opinion_royal_marriage
+			}
+			reverse_has_relation_flag = {
+				who = root
+				flag = initiated_royal_marriage_with_them
+			}
+		}
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+				reverse_has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+			}
+			country_event = { id = dpe_royal_marriages_events.901 }
+		}
+	}
+}
+
+#Other country, get told that the royal couple escaped. (Only for the proposer country, see 9011 for other way around)
+country_event = {
+	id = dpe_royal_marriages_events.901
+	title = dpe_royal_marriages_events.901.name
+	desc = dpe_royal_marriages_events.901.desc
+	picture = GFX_evt_hangar_bay
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_royal_marriages_events.901.A
+	}
+}
+
+#Princess dies, her homeland is no more
+country_event = {
+	id = dpe_royal_marriages_events.9011
+	title = dpe_royal_marriages_events.9011.name
+	desc = dpe_royal_marriages_events.9011.desc
+	picture = GFX_evt_galactic_senate
+
+	trigger = {
+		any_owned_planet = { #it is removed on planets being transferred, so this should work so long as you don't still have an active royal marriage (so if you end up with two but lose one through the country dying, it will be problematic)
+			has_deposit = d_dpe_royal_entourage
+		}
+		NOT = {
+			any_country = {
+				reverse_has_relation_flag = {
+					who = root
+					flag = receiving_entourage_from
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_deposit = d_dpe_royal_entourage
+			}
+			save_event_target_as = entourage_planet
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.9011.A
+		
+		random_owned_planet = {
+			limit = {
+				has_deposit = d_dpe_royal_entourage
+			}
+			remove_deposit = d_dpe_royal_entourage
+		}
+	}
+}
+
+#Alliance Broken
+country_event = {
+	id = dpe_royal_marriages_events.902
+	title = dpe_royal_marriages_events.902.name
+	desc = {
+		trigger = {
+			has_relation_flag = {
+				who = event_target:other_empire
+				flag = initiated_royal_marriage_with_them
+			}
+		}
+		text = dpe_royal_marriages_events.902.desc.proposer
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = event_target:other_empire
+					flag = initiated_royal_marriage_with_them
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.902.desc.proposed
+	}
+	picture = GFX_evt_news_room
+
+	mean_time_to_happen = {
+		months = 2 #suitably short but not too short as don't want to affect performance
+	}
+
+	trigger = {
+		any_country = {
+			has_opinion_modifier = {
+				who = root
+				modifier = opinion_royal_marriage
+			}
+			NOT = { has_defensive_pact = root }
+			NOT = { is_in_federation_with = root }
+			NOT = { has_overlord = root }
+			NOT = { is_overlord_to = root }
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+				NOT = { has_defensive_pact = root }
+				NOT = { is_in_federation_with = root }
+				NOT = { has_overlord = root }
+				NOT = { is_overlord_to = root }
+			}
+			save_event_target_as = other_empire
+			country_event = { id = dpe_royal_marriages_events.903 }
+		}
+	}
+	option = {
+		name = dpe_royal_marriages_events.902.A
+		custom_tooltip = dpe_royal_marriages_opinions_removed
+
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = event_target:other_empire
+					flag = receiving_entourage_from
+				}
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = event_target:other_empire
+					flag = receiving_entourage_from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+		}
+	}
+}
+
+#Alliance Broken
+country_event = {
+	id = dpe_royal_marriages_events.903
+	title = dpe_royal_marriages_events.902.name
+	desc = {
+		trigger = {
+			has_relation_flag = {
+				who = event_target:other_empire
+				flag = initiated_royal_marriage_with_them
+			}
+		}
+		text = dpe_royal_marriages_events.902.desc.proposer
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = event_target:other_empire
+					flag = initiated_royal_marriage_with_them
+				}
+			}
+		}
+		text = dpe_royal_marriages_events.902.desc.proposed
+	}
+	picture = GFX_evt_news_room
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dpe_royal_marriages_events.902.A
+		custom_tooltip = relations_with_from_have_worsened
+
+		hidden_effect = {
+			add_opinion_modifier = {
+				who = from
+				modifier = opinion_royal_marriage_broken
+			}
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage_broken
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			dpe_royal_marriage_cleanup_effect = yes
+		}
+	}
+}
+
+#No longer a monarchy
+country_event = {
+	id = dpe_royal_marriages_events.904
+	title = dpe_royal_marriages_events.904.name
+	desc = dpe_royal_marriages_events.904.desc
+	picture = GFX_evt_arguing_senate
+	
+	mean_time_to_happen = {
+		months = 2 #suitably short but not too short as don't want to affect performance
+	}
+
+	trigger = {
+		NOT = { has_authority = auth_imperial }
+		any_country = {
+			has_opinion_modifier = {
+				who = root
+				modifier = opinion_royal_marriage
+			}
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+			}
+			save_event_target_as = other_empire
+		}
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_royal_marriage
+				}
+			}
+			country_event = { id = dpe_royal_marriages_events.905 }
+		}
+	}
+	option = {
+		name = dpe_royal_marriages_events.904.A
+		custom_tooltip = dpe_royal_marriages_opinions_removed
+		custom_tooltip = any_other_royal_marriage_also_broken
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_dpe_royal_entourage
+			}
+			tooltip = { remove_deposit = d_dpe_royal_entourage }
+			hidden_effect = {
+				while = {
+					limit = {
+						has_deposit = d_dpe_royal_entourage
+					}
+					remove_deposit = d_dpe_royal_entourage
+				}
+			}
+		}
+	}
+}
+
+#They are longer a monarchy
+country_event = {
+	id = dpe_royal_marriages_events.905
+	title = dpe_royal_marriages_events.905.name
+	desc = dpe_royal_marriages_events.905.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+
+	immediate = {
+		dpe_royal_marriage_cleanup_effect = yes
+	}
+
+	option = {
+		name = dpe_royal_marriages_events.905.A
+		custom_tooltip = relations_with_from_have_worsened
+		hidden_effect = {
+			add_opinion_modifier = {
+				who = from
+				modifier = opinion_royal_marriage_broken
+			}
+		}
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_dpe_royal_entourage
+				}
+				remove_deposit = d_dpe_royal_entourage
+			}
+			hidden_effect = {
+				remove_relation_flag = {
+					who = from
+					flag = receiving_entourage_from
+				}
+			}
+		}
+	}
+}
+
+#on_planet_ownerless, on_planet_transfer
+#Planet uninhabitable or ceded
+planet_event = {
+	id = dpe_royal_marriages_events.906
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_deposit = d_dpe_royal_entourage
+	}
+	immediate = {
+		remove_deposit = d_dpe_royal_entourage
+	}
+}

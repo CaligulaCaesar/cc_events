@@ -1,0 +1,49 @@
+
+
+
+#"Their system of government is a [monarchy/dictatorship/oligarchy/republic/hive mind/machine intelligence]"
+defined_text = { # Country scope
+	name = GovernmentName
+	text = {
+		trigger = {
+			has_authority = auth_corporate
+		}
+		localization_key = corporation_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_imperial
+		}
+		localization_key = monarchy_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_dictatorial
+		}
+		localization_key = dictatorship_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_oligarchic
+		}
+		localization_key = oligarchy_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_democratic
+		}
+		localization_key = democracy_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		localization_key = hive_mind_string
+	}
+	text = {
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		localization_key = machine_intelligence_string
+	}
+}

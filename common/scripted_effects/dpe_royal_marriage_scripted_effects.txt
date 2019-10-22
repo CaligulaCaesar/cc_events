@@ -1,0 +1,76 @@
+
+#Needs FROM to be the other empire. Does not clean up the entourage business, only all the other flags and opinions.
+dpe_royal_marriage_cleanup_effect = {
+	remove_opinion_modifier = {
+		who = from
+		modifier = opinion_royal_marriage
+	}
+	if = {
+		limit = {
+			has_relation_flag = {
+				who = from
+				flag = initiated_royal_marriage_with_them
+			}
+		}
+		remove_relation_flag = {
+			who = from
+			flag = initiated_royal_marriage_with_them
+		}
+	}
+	from = {
+		remove_opinion_modifier = {
+			who = root
+			modifier = opinion_royal_marriage
+		}
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+			}
+			remove_relation_flag = {
+				who = root
+				flag = initiated_royal_marriage_with_them
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = royal_marriage_content_couple@from
+		}
+		remove_country_flag = royal_marriage_content_couple@from
+	}
+	if = {
+		limit = {
+			has_country_flag = royal_marriage_happy_couple@from
+		}
+		remove_country_flag = royal_marriage_happy_couple@from
+	}
+	if = {
+		limit = {
+			has_country_flag = royal_marriage_unhappy_couple@from
+		}
+		remove_country_flag = royal_marriage_unhappy_couple@from
+	}
+	from = {
+		if = {
+			limit = {
+				has_country_flag = royal_marriage_content_couple@root
+			}
+			remove_country_flag = royal_marriage_content_couple@root
+		}
+		if = {
+			limit = {
+				has_country_flag = royal_marriage_happy_couple@root
+			}
+			remove_country_flag = royal_marriage_happy_couple@root
+		}
+		if = {
+			limit = {
+				has_country_flag = royal_marriage_unhappy_couple@root
+			}
+			remove_country_flag = royal_marriage_unhappy_couple@root
+		}
+	}
+}

@@ -2289,7 +2289,7 @@ planet_event = {
 		}
 		text = cc_colony_events.4.desc.neg
 	}
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	is_triggered_only = yes
 	location = root
@@ -2966,7 +2966,7 @@ planet_event = {
 	
 	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	is_triggered_only = yes
 	location = root

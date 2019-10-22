@@ -2588,7 +2588,7 @@ planet_event = {
 	
 	is_triggered_only = yes
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	location = root
 	
@@ -2652,7 +2652,7 @@ planet_event = {
 	
 	is_triggered_only = yes
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	location = root
 	
@@ -2724,7 +2724,7 @@ planet_event = {
 	
 	is_triggered_only = yes
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	location = root
 	
@@ -2788,7 +2788,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	trigger = {
 		NOT = { has_planet_flag = cc_conquered_purge }
@@ -2921,7 +2921,7 @@ planet_event = {
 	
 	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
 	
-	picture = GFX_evt_cc_alien_union
+	picture = GFX_evt_dpe_alien_wedding
 	
 	is_triggered_only = yes
 	
