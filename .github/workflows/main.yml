@@ -1,0 +1,14 @@
+name: CWTools CI
+
+on: [pull_request] # also works with push
+
+jobs:
+  cwtools_job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: cwtools/CWTools-action@master
+      with:
+        game: stellaris
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
