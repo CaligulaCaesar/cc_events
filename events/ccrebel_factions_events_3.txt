@@ -255,11 +255,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = imperialist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = imperialist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 
@@ -319,11 +315,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = isolationist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 
@@ -383,11 +375,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = progressive }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = progressive }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -447,11 +435,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = prosperity }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = prosperity }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -511,11 +495,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = supremacist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -575,11 +555,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = technologist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = technologist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -639,11 +615,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = totalitarian }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = totalitarian }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -703,11 +675,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = traditionalist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 			
@@ -767,11 +735,7 @@ country_event = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = xenoist }
 					save_event_target_as = cc_rebellious_faction
-				}
-				
-				random_owned_leader = {
-					limit = { leader_of_faction = xenoist }
-					save_event_target_as = cc_rebellious_faction_leader
+					leader = { save_event_target_as = cc_rebellious_faction_leader }
 				}
 			}
 		}
