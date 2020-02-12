@@ -113,32 +113,9 @@ country_event = {
 		
 		shift_ethic = ethic_authoritarian
 
-		if = {
-			limit = { has_civic = civic_mechanists }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_mechanists
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-		else_if = {
-			limit = { has_civic = civic_syncretic_evolution }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_syncretic_evolution
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-				
-		else = {
-			change_government = {
-				authority = auth_dictatorial
-				civics = random
-			}
+		change_government = {
+			authority = auth_dictatorial
+			civics = random
 		}
 
 		random_pop_faction = {
@@ -362,32 +339,9 @@ country_event = {
 		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
 		
 		shift_ethic = ethic_authoritarian
-		if = {
-			limit = { has_civic = civic_mechanists }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_mechanists
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-		else_if = {
-			limit = { has_civic = civic_syncretic_evolution }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_syncretic_evolution
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-					
-		else = {
-			change_government = {
-				authority = auth_dictatorial
-				civics = random
-			}
+		change_government = {
+			authority = auth_dictatorial
+			civics = random
 		}
 		
 		set_leader = dpe_authoritarian_conspirator
@@ -611,32 +565,9 @@ country_event = {
 		custom_tooltip = dpe_conspiracy.27.A.tooltip
 		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
 		shift_ethic = ethic_authoritarian
-		if = {
-			limit = { has_civic = civic_mechanists }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_mechanists
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-		else_if = {
-			limit = { has_civic = civic_syncretic_evolution }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_syncretic_evolution
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-					
-		else = {
-			change_government = {
-				authority = auth_dictatorial
-				civics = random
-			}
+		change_government = {
+			authority = auth_dictatorial
+			civics = random
 		}
 
 		set_leader = dpe_authoritarian_conspirator
@@ -677,33 +608,9 @@ country_event = {
 			days = 4800
 		}
 		shift_ethic = ethic_authoritarian
-		if = {
-			limit = { has_civic = civic_mechanists }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_mechanists
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-			
-		else_if = {
-			limit = { has_civic = civic_syncretic_evolution }
-			change_government = {
-				authority = auth_dictatorial
-				civics = {
-					civic = civic_syncretic_evolution
-					civic = civic_cutthroat_politics
-				}
-			}
-		}
-				
-		else = {
-			change_government = {
-				authority = auth_dictatorial
-				civics = random
-			}
+		change_government = {
+			authority = auth_dictatorial
+			civics = random
 		}
 
 		set_leader = dpe_authoritarian_conspirator
