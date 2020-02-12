@@ -1,0 +1,139 @@
+
+namespace = ccrebel_perf
+
+@dpe_pops_small_cluster = 5
+@dpe_pops_medium_cluster = 11
+@dpe_pops_large_cluster = 24
+
+#biannual
+event = {
+	id = ccrebel_perf.3
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						limit = { has_ethic = ethic_spiritualist }
+						count > @dpe_pops_medium_cluster
+					}
+				}
+				set_timed_planet_flag = {
+					flag = ccrebel_perf_spiritualists_2
+					days = 721
+				}
+			}
+			
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						limit = { has_ethic = ethic_xenophile }
+						count > @dpe_pops_small_cluster
+					}
+				}
+				set_timed_planet_flag = {
+					flag = ccrebel_perf_xenophiles_1
+					days = 721
+				}
+				if = {
+					limit = {
+						count_pops = {
+							limit = { has_ethic = ethic_xenophile }
+							count > @dpe_pops_medium_cluster
+						}
+					}
+					set_timed_planet_flag = {
+						flag = ccrebel_perf_xenophiles_2
+						days = 721
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 721
+						}
+					}
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_xenophile }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_xenophiles_3
+							days = 721
+						}
+					}
+				}
+			}
+			
+			every_owned_planet = {
+				limit = {
+					count_pops = {
+						limit = { has_ethic = ethic_xenophobe }
+						count > @dpe_pops_small_cluster
+					}
+				}
+				set_timed_planet_flag = {
+					flag = ccrebel_perf_xenophobes_1
+					days = 721
+				}
+				if = {
+					limit = {
+						count_pops = {
+							limit = { has_ethic = ethic_xenophobe }
+							count > @dpe_pops_medium_cluster
+						}
+					}
+					set_timed_planet_flag = {
+						flag = ccrebel_perf_xenophobes_2
+						days = 721
+					}
+					if = {
+						limit = {
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+								}
+							}
+						}
+						set_timed_planet_flag = {
+							flag = cc_opposite_ethic_to_ruler
+							days = 721
+						}
+					}
+					if = {
+						limit = {
+							count_pops = {
+								limit = { has_ethic = ethic_xenophobe }
+								count > @dpe_pops_large_cluster
+							}
+						}
+						set_timed_planet_flag = {
+							flag = ccrebel_perf_xenophobes_3
+							days = 721
+						}
+					}
+				}
+			}
+		}
+	}
+}
