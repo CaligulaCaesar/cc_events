@@ -50,12 +50,9 @@ country_event = {
 				has_ethic = ethic_gestalt_consciousness
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support > 0.2
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support > 0.2
 				}
 				
 				is_hostile_to = prev
@@ -98,12 +95,9 @@ country_event = {
 					has_ethic = ethic_gestalt_consciousness
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.2
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support > 0.2
 					}
 					
 					is_hostile_to = prev
@@ -887,29 +881,17 @@ country_event = {
 				factor = 2
 				OR = {
 					NOT = { has_faction = traditionalist }
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						faction_approval < 0.4
 					}
 				}
 			}
 			modifier = {
 				factor = 5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						pop_percentage = {
-							limit = { happiness < 0.3 }
-							percentage > 0.75
-						}
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					faction_approval < 0.3
 				}
 			}
 			modifier = {

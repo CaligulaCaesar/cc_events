@@ -170,7 +170,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						is_pop_faction_type = progressive
 						support > 0.1
@@ -180,7 +180,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						is_pop_faction_type = progressive
 						support > 0.05
@@ -190,12 +190,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
@@ -620,32 +617,23 @@ country_event = {
 						
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.6
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.6
 							}
 						}
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.4
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.4
 							}
 						}
 						modifier = {
 							factor = 0.5
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support < 0.25
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support < 0.25
 							}
 						}
 					}
@@ -660,22 +648,16 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						faction_approval < @cc_faction_danger_number
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					faction_approval < @cc_faction_danger_number
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.5
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.5
 				}
 			}
 			modifier = {
@@ -724,32 +706,23 @@ country_event = {
 
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.6
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.6
 							}
 						}
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.4
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.4
 							}
 						}
 						modifier = {
 							factor = 0.5
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support < 0.25
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support < 0.25
 							}
 						}
 					}
@@ -1279,7 +1252,7 @@ country_event = {
 			factor = 3
 			modifier = {
 				factor = 0
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						is_pop_faction_type = progressive
 						support > 0.05
@@ -1289,12 +1262,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
@@ -1533,7 +1503,7 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 2
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						is_pop_faction_type = progressive
 						support > 0.05
@@ -1543,12 +1513,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
@@ -1659,7 +1626,7 @@ country_event = {
 			factor = 3
 			modifier = {
 				factor = 2
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						is_pop_faction_type = progressive
 						support > 0.05
@@ -1669,12 +1636,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
@@ -2076,32 +2040,23 @@ country_event = {
 						
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.6
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.6
 							}
 						}
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support > 0.4
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support > 0.4
 							}
 						}
 						modifier = {
 							factor = 0.5
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = totalitarian
-									support < 0.25
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = totalitarian
+								support < 0.25
 							}
 						}
 					}
