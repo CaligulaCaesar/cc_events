@@ -2120,22 +2120,16 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						faction_approval < @cc_faction_danger_number
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					faction_approval < @cc_faction_danger_number
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.5
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.5
 				}
 			}
 			modifier = {

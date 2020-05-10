@@ -42,7 +42,7 @@ country_event = {
 		exists = ruler
 		ruler = { NOT = { leader_of_faction = totalitarian } }
 
-		count_pop_factions = {
+		count_pop_faction = {
 			limit = {
 				is_pop_faction_type = progressive
 				support > 0.1
@@ -98,12 +98,9 @@ country_event = {
 			factor = 1.5
 			modifier = {
 				factor = 0.25
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = technologist
-						support > 0.3
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = technologist
+					support > 0.3
 				}
 			}
 		}
@@ -153,12 +150,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
@@ -177,12 +171,9 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = technologist
-						support > 0.3
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = technologist
+					support > 0.3
 				}
 			}
 		}
@@ -415,12 +406,9 @@ country_event = {
 		has_faction = traditionalist
 		has_faction = technologist
 		
-		count_pop_factions = {
-			limit = {
-				is_pop_faction_type = traditionalist
-				support > 0.3
-			}
-			count = 1
+		any_pop_faction = {
+			is_pop_faction_type = traditionalist
+			support > 0.3
 		}
 	}
 
@@ -435,12 +423,9 @@ country_event = {
 
 				modifier = {
 					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support < 0.07
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support < 0.07
 					}
 				}
 			}
@@ -505,20 +490,14 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.5
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support > 0.5
 					}
 					NOT = { 
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = technologist
-								support > 0.15
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = technologist
+							support > 0.15
 						}
 					}
 				}
@@ -548,20 +527,14 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				OR = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.5
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support > 0.5
 					}
 					NOT = { 
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = technologist
-								support > 0.15
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = technologist
+							support > 0.15
 						}
 					}
 				}
@@ -591,12 +564,9 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support > 0.5
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support > 0.5
 				}
 			}
 			modifier = {
@@ -711,12 +681,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = progressive
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = progressive
+						support > 0.15
 					}
 				}
 			}
@@ -735,12 +702,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support > 0.15
 					}
 				}
 			}
@@ -759,12 +723,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = imperialist
+						support > 0.15
 					}
 				}
 			}
@@ -783,12 +744,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = prosperity
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = prosperity
+						support > 0.15
 					}
 				}
 			}
@@ -807,12 +765,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support > 0.15
 					}
 				}
 			}
@@ -833,12 +788,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = supremacist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = supremacist
+						support > 0.15
 					}
 				}
 			}
@@ -857,12 +809,9 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = xenoist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = xenoist
+						support > 0.15
 					}
 				}
 			}
@@ -1237,30 +1186,21 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support > 0.5
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support > 0.5
 					}
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.12
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support < 0.12
 					}
 				}
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support > 0.18
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support > 0.18
 				}
 			}
 		}
@@ -1283,19 +1223,13 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				OR = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support > 0.5
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support > 0.5
 					}
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.12
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support < 0.12
 					}
 				}
 			}
@@ -1324,12 +1258,9 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = technologist
-						support > 0.5
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = technologist
+					support > 0.5
 				}
 			}
 			modifier = {
@@ -1371,12 +1302,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = technologist
-						has_modifier = dpe_charity_faction_undeserving
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = technologist
+					has_modifier = dpe_charity_faction_undeserving
 				}
 			}
 			random_pop_faction = {
@@ -1392,12 +1320,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = xenoist
-						has_modifier = cc_xenophobic_offence_1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = xenoist
+					has_modifier = cc_xenophobic_offence_1
 				}
 			}
 			random_pop_faction = {
@@ -1408,12 +1333,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = xenoist
-						has_modifier = cc_xenophobic_offence_2
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = xenoist
+					has_modifier = cc_xenophobic_offence_2
 				}
 			}
 			random_pop_faction = {
@@ -1430,12 +1352,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						has_modifier = dpe_unbelief_faction
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					has_modifier = dpe_unbelief_faction
 				}
 			}
 			random_pop_faction = {
@@ -1451,12 +1370,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						has_modifier = dpe_damned_to_hell_faction
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					has_modifier = dpe_damned_to_hell_faction
 				}
 			}
 			random_pop_faction = {
