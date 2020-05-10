@@ -1,1369 +1,1369 @@
 
-namespace = cctest
+# namespace = cctest
 
 
-country_event = {
-	id = cctest.1
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.1
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		remove_country_flag = dpe_xenomission_disaster
-	}
-}
+# 	immediate = {
+# 		remove_country_flag = dpe_xenomission_disaster
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.3
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.3
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_system_within_border = {
-			random_fleet_in_system = {
-				limit = {
-					any_owned_ship = {
-						is_ship_class = shipclass_starbase
-					}
-				}
-				add_modifier = {
-					modifier = dpe_starbase_talented_admiral
-					days = 10800
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		random_system_within_border = {
+# 			random_fleet_in_system = {
+# 				limit = {
+# 					any_owned_ship = {
+# 						is_ship_class = shipclass_starbase
+# 					}
+# 				}
+# 				add_modifier = {
+# 					modifier = dpe_starbase_talented_admiral
+# 					days = 10800
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 
 
-country_event = {
-	id = cctest.4
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.4
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = {
-				has_federation = yes
-				is_country_type = default
-			}
-			join_war = root
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				has_federation = yes
+# 				is_country_type = default
+# 			}
+# 			join_war = root
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.5
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.5
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = { 
-				is_country_type = default
-			}
-			join_alliance = {
-				who = root
-				name = NAME_League_of_Non-Aligned_Powers
-				override_requirements = yes
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = { 
+# 				is_country_type = default
+# 			}
+# 			join_alliance = {
+# 				who = root
+# 				name = NAME_League_of_Non-Aligned_Powers
+# 				override_requirements = yes
+# 			}
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.6
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.6
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = { 
-				is_country_type = default
-				is_at_war = yes
-			}
-			root = { join_war = prev }
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = { 
+# 				is_country_type = default
+# 				is_at_war = yes
+# 			}
+# 			root = { join_war = prev }
+# 		}
+# 	}
+# }
 
 
 
-country_event = {
-	id = cctest.65
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.65
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = {
-				opinion = {
-					who = root
-					value < 100
-				}
-			}
-			root = { country_event = { id = cctest.10 } }
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				opinion = {
+# 					who = root
+# 					value < 100
+# 				}
+# 			}
+# 			root = { country_event = { id = cctest.10 } }
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.7
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.7
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = {
-				opinion = {
-					who = root
-					value < -1
-				}
-			}
-			root = { country_event = { id = cctest.10 } }
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				opinion = {
+# 					who = root
+# 					value < -1
+# 				}
+# 			}
+# 			root = { country_event = { id = cctest.10 } }
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.8
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		random_country = {
-			limit = {
-				opinion = {
-					who = root
-					value < -50
-				}
-			}
-			root = { country_event = { id = cctest.10 } }
-		}
-	}
-}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				opinion = {
+# 					who = root
+# 					value < -50
+# 				}
+# 			}
+# 			root = { country_event = { id = cctest.10 } }
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.10
-	title = OK
-	desc = OK
+# country_event = {
+# 	id = cctest.10
+# 	title = OK
+# 	desc = OK
 	
-	picture = GFX_evt_arguing_senate
+# 	picture = GFX_evt_arguing_senate
 	
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = OK
+# 	option = {
+# 		name = OK
 		
-		trigger = { is_ai = no }
-		allow = { is_ai = no }
-	}
-	option = {
-		name = GOOD
+# 		trigger = { is_ai = no }
+# 		allow = { is_ai = no }
+# 	}
+# 	option = {
+# 		name = GOOD
 		
-		trigger = { is_ai = yes }
-		allow = { is_ai = yes }
-	}
-	option = {
-		name = UNFORTUNATE
+# 		trigger = { is_ai = yes }
+# 		allow = { is_ai = yes }
+# 	}
+# 	option = {
+# 		name = UNFORTUNATE
 		
-		allow = { is_ai = no }
-	}
-	option = {
-		name = EXCELLENT
+# 		allow = { is_ai = no }
+# 	}
+# 	option = {
+# 		name = EXCELLENT
 		
-		allow = { is_ai = yes }
-	}
-}
+# 		allow = { is_ai = yes }
+# 	}
+# }
 
 
 
-country_event = {
-	id = cctest.20
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.20
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
+# 	immediate = {
 
-		create_leader = {
-			class = scientist
-			species = owner_main_species
-			name = random
-			skill = 5
-			traits = {
-				trait = leader_trait_maniacal
-				trait = dpe_leader_trait_ancient_knowledge
-			}
-		}
-		last_created_leader = {
-			save_event_target_as = dpe_escaped_scientist
-			if = {
-				limit = {
-					species = { NOT = { has_trait = trait_erudite } }
-				}
-				modify_species = {
-					add_trait = trait_erudite
-				}
-				add_trait = leader_trait_scientist_erudite
-				add_ruler_trait = leader_trait_ruler_erudite
-			}
-		}
-	}
-}
+# 		create_leader = {
+# 			class = scientist
+# 			species = owner_main_species
+# 			name = random
+# 			skill = 5
+# 			traits = {
+# 				trait = leader_trait_maniacal
+# 				trait = dpe_leader_trait_ancient_knowledge
+# 			}
+# 		}
+# 		last_created_leader = {
+# 			save_event_target_as = dpe_escaped_scientist
+# 			if = {
+# 				limit = {
+# 					species = { NOT = { has_trait = trait_erudite } }
+# 				}
+# 				modify_species = {
+# 					add_trait = trait_erudite
+# 				}
+# 				add_trait = leader_trait_scientist_erudite
+# 				add_ruler_trait = leader_trait_ruler_erudite
+# 			}
+# 		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.21
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = cctest.21
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		country_event = { id = cctest.22 days = 10 }
-	}
-}
-country_event = {
-	id = cctest.22
-	title = OK
-	desc = OK
-	is_triggered_only = yes
-	picture = GFX_evt_arguing_senate
+# 	immediate = {
+# 		country_event = { id = cctest.22 days = 10 }
+# 	}
+# }
+# country_event = {
+# 	id = cctest.22
+# 	title = OK
+# 	desc = OK
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_arguing_senate
 	
-	option = {
-		name = OK
+# 	option = {
+# 		name = OK
 		
-	}
-	option = {
-		name = OK
-		allow = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
-		
-		
-		country_event = { id = cctest.10 days = 10 }
-	}
-}
-
-
-
-
-
-country_event = {
-	id = cctest.35
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		capital_scope = {
-			set_variable = {
-				which = cc_opinion_test
-				value = 0
-			}
-			set_variable = {
-				which = cc_opinion_bug_test
-				value = 0
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value < 100
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value < 50
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value < 0
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value < -50
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value < -100
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						NOT = {
-							opinion = {
-								who = root
-								value > -50
-							}
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value > -50
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_bug_test
-					value = 10
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						is_country_type = default
-						NOT = { is_same_value = root }
-						opinion = {
-							who = root
-							value > 100
-						}
-					}
-				}
-				change_variable = {
-					which = cc_opinion_bug_test
-					value = 10
-				}
-			}
-		}
-	}
-}
-
-
-
-country_event = {
-	id = cctest.40
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		while = {
-			count = 100
-			country_event = { id = cctest.10 days = 10 random = 9 }
-		}
-	}
-}
-
-
-country_event = {
-	id = cctest.50
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		root.capital_scope = {
-			set_variable = {
-				which = cctest_factions_variable
-				value = 1
-			}
-		}
-		random_pop_faction = {
-			limit = { is_pop_faction_type = prosperity }
-			save_event_target_as = prosperity_faction
-		}
-#		random_owned_leader = {
-#			limit = { leader_of_faction = prosperity }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_factions_variable
-#					value = 1
-#				}
-#			}
-#		}
-#		random_owned_leader = {
-#			limit = { leader_of_faction = yes }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_factions_variable
-#					value = 1
-#				}
-#			}
-#		}
-#		random_owned_leader = {
-#			limit = { leader_of_faction = no }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_factions_variable
-#					value = 1
-#				}
-#			}
-#		}
-#		random_owned_leader = {
-#			limit = { leader_of_faction = event_target:prosperity_faction }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_factions_variable
-#					value = 1
-#				}
-#			}
-#		}
-	}
-}
-
-
-country_event = {
-	id = cctest.55
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		if = {
-			limit = { 
-				any_war = { is_war_participant = { who = root } }
-			}
-			root.capital_scope = {
-				set_variable = {
-					which = cctest_war_variable
-					value = 10
-				}
-			}
-		}
-	}
-}
-
-
-
-country_event = {
-	id = cctest.60
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		root.capital_scope = {
-			set_variable = {
-				which = cctest_member_faction_variable
-				value = 1
-			}
-		}
-		random_pop_faction = {
-			limit = { is_pop_faction_type = prosperity }
-			save_event_target_as = prosperity_faction
-		}
-#		random_owned_pop = {
-#			limit = { member_of_faction = prosperity }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_member_faction_variable
-#					value = 1
-#				}
-#			}
-#		}
-		random_owned_pop = {
-			limit = { member_of_faction = yes }
-			root.capital_scope = {
-				change_variable = {
-					which = cctest_member_faction_variable
-					value = 1
-				}
-			}
-		}
-		random_owned_pop = {
-			limit = { member_of_faction = no }
-			root.capital_scope = {
-				change_variable = {
-					which = cctest_member_faction_variable
-					value = 1
-				}
-			}
-		}
-#		random_owned_pop = {
-#			limit = { member_of_faction = event_target:prosperity_faction }
-#			root.capital_scope = {
-#				change_variable = {
-#					which = cctest_member_faction_variable
-#					value = 1
-#				}
-#			}
-#		}
-	}
-}
-
-
-planet_event = {
-	id = cctest.70
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		owner = {
-			create_leader = {
-				class = general
-				species = root.owner_species
-				name = random
-				skill = 1
-			}
-		}
-		root.owner_species = {
-			mutate_species = yes
-		}
-	}
-}
-
-
-
-
-country_event = {
-	id = cctest.90
-	hide_window = yes
-	is_triggered_only = yes
-	
-	
-	immediate = {
-		if = {
-			limit = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-					}
-					count = 1
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_count_faction_variable
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				count_pop_factions = {
-					limit = {
-						pop_percentage = {
-							percentage > 0
-							limit = { is_same_species = root }
-						}
-						is_pop_faction_type = progressive
-					}
-					count = 1
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_count_faction_variable
-					value = 1
-				}
-			}
-		}
-	}
-}
-
-
-country_event = {
-	id = cctest.95
-	hide_window = yes
-	is_triggered_only = yes
-	
-	
-	immediate = {
-		if = {
-			limit = {
-				any_owned_pop = {
-					is_robot_pop = yes
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_robot_pop_yes
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_owned_pop = {
-					is_robot_pop = no
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_robot_pop_no
-					value = 1
-				}
-			}
-		}
-	}
-}
-
-
-country_event = {
-	id = cctest.200
-	is_triggered_only = yes
-	hide_window = yes
-	
-	immediate = {
-		random_playable_country = {
-			country_event = { id = cctest.201 }
-		}
-	}
-}
-
-
-country_event = {
-	id = cctest.201
-	is_triggered_only = yes
-	hide_window = yes	
-	immediate = {
-		capital_scope = {
-			change_variable = {
-				which = dpe_froms_test
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				capital_scope = {
-					check_variable = {
-						which = dpe_froms_test
-						value = 1000
-					}
-				}
-			}
-			break = yes
-		}
-		from = { country_event = { id = cctest.201 } }
-	}
-}
+# 	}
+# 	option = {
+# 		name = OK
+# 		allow = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
 		
 		
+# 		country_event = { id = cctest.10 days = 10 }
+# 	}
+# }
 
-country_event = {
-	id = cctest.300
-	is_triggered_only = yes
-	hide_window = yes
+
+
+
+
+# country_event = {
+# 	id = cctest.35
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		if = {
-			limit = {
-				any_country = {
-					has_relation_flag = {
-						flag = dpe_test
-						who = root
-					}
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		capital_scope = {
+# 			set_variable = {
+# 				which = cc_opinion_test
+# 				value = 0
+# 			}
+# 			set_variable = {
+# 				which = cc_opinion_bug_test
+# 				value = 0
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value < 100
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value < 50
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value < 0
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value < -50
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value < -100
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						NOT = {
+# 							opinion = {
+# 								who = root
+# 								value > -50
+# 							}
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value > -50
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_bug_test
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						is_country_type = default
+# 						NOT = { is_same_value = root }
+# 						opinion = {
+# 							who = root
+# 							value > 100
+# 						}
+# 					}
+# 				}
+# 				change_variable = {
+# 					which = cc_opinion_bug_test
+# 					value = 10
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.301
-	is_triggered_only = yes
-	hide_window = yes
+
+
+# country_event = {
+# 	id = cctest.40
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		if = {
-			limit = {
-				any_country = {
-					has_relation_flag = {
-						flag = dpe_test
-						who = from
-					}
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		while = {
+# 			count = 100
+# 			country_event = { id = cctest.10 days = 10 random = 9 }
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.302
-	is_triggered_only = yes
-	hide_window = yes
+
+# country_event = {
+# 	id = cctest.50
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		set_country_flag = dpe_test@prevprevprevprev
-	}
-}
+# 	immediate = {
+# 		root.capital_scope = {
+# 			set_variable = {
+# 				which = cctest_factions_variable
+# 				value = 1
+# 			}
+# 		}
+# 		random_pop_faction = {
+# 			limit = { is_pop_faction_type = prosperity }
+# 			save_event_target_as = prosperity_faction
+# 		}
+# #		random_owned_leader = {
+# #			limit = { leader_of_faction = prosperity }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_factions_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# #		random_owned_leader = {
+# #			limit = { leader_of_faction = yes }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_factions_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# #		random_owned_leader = {
+# #			limit = { leader_of_faction = no }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_factions_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# #		random_owned_leader = {
+# #			limit = { leader_of_faction = event_target:prosperity_faction }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_factions_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.303
-	is_triggered_only = yes
-	hide_window = yes
+
+# country_event = {
+# 	id = cctest.55
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		set_relation_flag = {
-			flag = dpe_test
-			who = prevprevprevprev
-		}
-	}
-}
+# 	immediate = {
+# 		if = {
+# 			limit = { 
+# 				any_war = { is_war_participant = { who = root } }
+# 			}
+# 			root.capital_scope = {
+# 				set_variable = {
+# 					which = cctest_war_variable
+# 					value = 10
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-country_event = {
-	id = cctest.304
-	is_triggered_only = yes
-	hide_window = yes
+
+
+# country_event = {
+# 	id = cctest.60
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		set_relation_flag = {
-			flag = dpe_test
-			who = event_target:doesnt_exist
-		}
-	}
-}
+# 	immediate = {
+# 		root.capital_scope = {
+# 			set_variable = {
+# 				which = cctest_member_faction_variable
+# 				value = 1
+# 			}
+# 		}
+# 		random_pop_faction = {
+# 			limit = { is_pop_faction_type = prosperity }
+# 			save_event_target_as = prosperity_faction
+# 		}
+# #		random_owned_pop = {
+# #			limit = { member_of_faction = prosperity }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_member_faction_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# 		random_owned_pop = {
+# 			limit = { member_of_faction = yes }
+# 			root.capital_scope = {
+# 				change_variable = {
+# 					which = cctest_member_faction_variable
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		random_owned_pop = {
+# 			limit = { member_of_faction = no }
+# 			root.capital_scope = {
+# 				change_variable = {
+# 					which = cctest_member_faction_variable
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# #		random_owned_pop = {
+# #			limit = { member_of_faction = event_target:prosperity_faction }
+# #			root.capital_scope = {
+# #				change_variable = {
+# #					which = cctest_member_faction_variable
+# #					value = 1
+# #				}
+# #			}
+# #		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.306
-	is_triggered_only = yes
-	hide_window = yes
+# planet_event = {
+# 	id = cctest.70
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		set_relation_flag = {
-			flag = dpe_test
-			who = root
-		}
-		if = {
-			limit = {
-				any_country = {
-					has_relation_flag = {
-						flag = dpe_test
-						who = root
-					}
-				}
-			}
-			log = "Idiot"
-		}
-	}
-}
+# 	immediate = {
+# 		owner = {
+# 			create_leader = {
+# 				class = general
+# 				species = root.owner_species
+# 				name = random
+# 				skill = 1
+# 			}
+# 		}
+# 		root.owner_species = {
+# 			mutate_species = yes
+# 		}
+# 	}
+# }
 
 
 
 
-country_event = {
-	id = cctest.400
-	is_triggered_only = yes
-	hide_window = yes
+# country_event = {
+# 	id = cctest.90
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		create_fleet = {
-			effect = {
-				set_owner = root
-				set_location = root.capital_scope
-				create_ship = {
-					name = random
-					design = "NAME_Pirate_Hideout"
-					graphical_culture = "pirate_01"
-				}
-				create_ship = {
-					name = random
-					design = "Small Crystal Entity Blue"
-					graphical_culture = "pirate_01"
-				}
-			}
-		}
-	}
-}
-
-
-
-
-country_event = {
-	id = cctest.500
-	is_triggered_only = yes
-	hide_window = yes
 	
-	immediate = {
-		if = {
-			limit = {
-				capital_scope = {
-					habitability = {
-						who = root
-						value > 0.6
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_habitability_1
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					any_playable_country = {
-						NOT = { has_ethic = ethic_gestalt_consciousness }
-						capital_scope = {
-							habitability = {
-								who = root
-								value < 0.95
-							}
-						}
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_habitability_2
-					value = 1
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					limit = {
+# 						is_pop_faction_type = progressive
+# 					}
+# 					count = 1
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_count_faction_variable
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					limit = {
+# 						pop_percentage = {
+# 							percentage > 0
+# 							limit = { is_same_species = root }
+# 						}
+# 						is_pop_faction_type = progressive
+# 					}
+# 					count = 1
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_count_faction_variable
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.600
-	is_triggered_only = yes
-	hide_window = yes
+# country_event = {
+# 	id = cctest.95
+# 	hide_window = yes
+# 	is_triggered_only = yes
 	
-	immediate = {
-		capital_scope.solar_system = {
-			spawn_megastructure = {
-				type = lgate_base
-				orbit_angle = 0
-				orbit_distance = 100
-			}
+	
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_owned_pop = {
+# 					is_robot_pop = yes
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_robot_pop_yes
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_owned_pop = {
+# 					is_robot_pop = no
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_robot_pop_no
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.200
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		random_playable_country = {
+# 			country_event = { id = cctest.201 }
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.201
+# 	is_triggered_only = yes
+# 	hide_window = yes	
+# 	immediate = {
+# 		capital_scope = {
+# 			change_variable = {
+# 				which = dpe_froms_test
+# 				value = 1
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				capital_scope = {
+# 					check_variable = {
+# 						which = dpe_froms_test
+# 						value = 1000
+# 					}
+# 				}
+# 			}
+# 			break = yes
+# 		}
+# 		from = { country_event = { id = cctest.201 } }
+# 	}
+# }
+		
+		
+
+# country_event = {
+# 	id = cctest.300
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_country = {
+# 					has_relation_flag = {
+# 						flag = dpe_test
+# 						who = root
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = cctest.301
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_country = {
+# 					has_relation_flag = {
+# 						flag = dpe_test
+# 						who = from
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = cctest.302
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		set_country_flag = dpe_test@prevprevprevprev
+# 	}
+# }
+
+# country_event = {
+# 	id = cctest.303
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		set_relation_flag = {
+# 			flag = dpe_test
+# 			who = prevprevprevprev
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = cctest.304
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		set_relation_flag = {
+# 			flag = dpe_test
+# 			who = event_target:doesnt_exist
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.306
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		set_relation_flag = {
+# 			flag = dpe_test
+# 			who = root
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_country = {
+# 					has_relation_flag = {
+# 						flag = dpe_test
+# 						who = root
+# 					}
+# 				}
+# 			}
+# 			log = "Idiot"
+# 		}
+# 	}
+# }
+
+
+
+
+# country_event = {
+# 	id = cctest.400
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		create_fleet = {
+# 			effect = {
+# 				set_owner = root
+# 				set_location = root.capital_scope
+# 				create_ship = {
+# 					name = random
+# 					design = "NAME_Pirate_Hideout"
+# 					graphical_culture = "pirate_01"
+# 				}
+# 				create_ship = {
+# 					name = random
+# 					design = "Small Crystal Entity Blue"
+# 					graphical_culture = "pirate_01"
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+
+
+# country_event = {
+# 	id = cctest.500
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				capital_scope = {
+# 					habitability = {
+# 						who = root
+# 						value > 0.6
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_habitability_1
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					any_playable_country = {
+# 						NOT = { has_ethic = ethic_gestalt_consciousness }
+# 						capital_scope = {
+# 							habitability = {
+# 								who = root
+# 								value < 0.95
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_habitability_2
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.600
+# 	is_triggered_only = yes
+# 	hide_window = yes
+	
+# 	immediate = {
+# 		capital_scope.solar_system = {
+# 			spawn_megastructure = {
+# 				type = lgate_base
+# 				orbit_angle = 0
+# 				orbit_distance = 100
+# 			}
 			
-			spawn_megastructure = {
-				type = lgate_base
-				random_pos = yes
-			}
-		}
-	}
-}
+# 			spawn_megastructure = {
+# 				type = lgate_base
+# 				random_pos = yes
+# 			}
+# 		}
+# 	}
+# }
 
 
-###This works perfectly :)
-country_event = {
-	id = cctest.700
-	is_triggered_only = yes
-	hide_window = yes
+# ###This works perfectly :)
+# country_event = {
+# 	id = cctest.700
+# 	is_triggered_only = yes
+# 	hide_window = yes
 	
-	immediate = {
-		random_playable_country = {
-			limit = {
-				NOT = {
-					is_same_value = root
-				}
-			}
-			save_event_target_as = cctest_country
-			log = [this.GetName]
-		}
+# 	immediate = {
+# 		random_playable_country = {
+# 			limit = {
+# 				NOT = {
+# 					is_same_value = root
+# 				}
+# 			}
+# 			save_event_target_as = cctest_country
+# 			log = [this.GetName]
+# 		}
 		
-		while = {
-			count = 10
-			random_owned_leader = {
-				save_event_target_as = dpe_defect_leader
-			}
-			create_fleet = {
-				name = "NAME_Other_Science_Ship"
-				effect = {
-					set_owner = root
-					create_ship_design = {
-						design = "NAME_Prototype"
-					}
-					create_ship = {
-						name = "NAME_From_Beyond"
-						design = last_created_design
-						graphical_culture = "extra_dimensional_01"
-						prefix = no
-						upgradable = no
-					}
-					set_location = root.capital_scope
-					save_event_target_as = deleted_ship
-				}
-			}
-			event_target:deleted_ship = {
-				set_leader = event_target:dpe_defect_leader
-				leader = { exile_leader_as = dpe_defect_leader }
-				delete_fleet = this
-			}
+# 		while = {
+# 			count = 10
+# 			random_owned_leader = {
+# 				save_event_target_as = dpe_defect_leader
+# 			}
+# 			create_fleet = {
+# 				name = "NAME_Other_Science_Ship"
+# 				effect = {
+# 					set_owner = root
+# 					create_ship_design = {
+# 						design = "NAME_Prototype"
+# 					}
+# 					create_ship = {
+# 						name = "NAME_From_Beyond"
+# 						design = last_created_design
+# 						graphical_culture = "extra_dimensional_01"
+# 						prefix = no
+# 						upgradable = no
+# 					}
+# 					set_location = root.capital_scope
+# 					save_event_target_as = deleted_ship
+# 				}
+# 			}
+# 			event_target:deleted_ship = {
+# 				set_leader = event_target:dpe_defect_leader
+# 				leader = { exile_leader_as = dpe_defect_leader }
+# 				delete_fleet = this
+# 			}
 			
-			create_fleet = {
-				name = "NAME_Other_Science_Ship"
-				effect = {
-					set_owner = event_target:cctest_country
-					create_ship_design = {
-						design = "NAME_Prototype"
-					}
-					create_ship = {
-						name = "NAME_From_Beyond"
-						design = last_created_design
-						graphical_culture = "extra_dimensional_01"
-						prefix = no
-						upgradable = no
-					}
-					set_location = event_target:cctest_country.capital_scope
-					save_event_target_as = deleted_ship
-				}
-			}
-			event_target:deleted_ship = {
-				set_leader = dpe_defect_leader
-				leader = { unassign_leader = this }
-				delete_fleet = this
-			}
-		}
-	}
-}
+# 			create_fleet = {
+# 				name = "NAME_Other_Science_Ship"
+# 				effect = {
+# 					set_owner = event_target:cctest_country
+# 					create_ship_design = {
+# 						design = "NAME_Prototype"
+# 					}
+# 					create_ship = {
+# 						name = "NAME_From_Beyond"
+# 						design = last_created_design
+# 						graphical_culture = "extra_dimensional_01"
+# 						prefix = no
+# 						upgradable = no
+# 					}
+# 					set_location = event_target:cctest_country.capital_scope
+# 					save_event_target_as = deleted_ship
+# 				}
+# 			}
+# 			event_target:deleted_ship = {
+# 				set_leader = dpe_defect_leader
+# 				leader = { unassign_leader = this }
+# 				delete_fleet = this
+# 			}
+# 		}
+# 	}
+# }
 
 
 
 
 
-country_event = {
-	id = cctest.750
-	is_triggered_only = yes
-	hide_window = yes
+# country_event = {
+# 	id = cctest.750
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	immediate = {
-		if = {
-			limit = {
-				any_war = {
-					is_war_participant = {
-						who = root
-					}
-					defender_war_exhaustion > 0
-				}
-			}
-			capital_scope = {
-				set_variable = {
-					which = ccwarexhtest1
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_war = {
-					is_war_participant = {
-						who = root
-					}
-					defender_war_exhaustion > 1
-				}
-			}
-			capital_scope = {
-				set_variable = {
-					which = ccwarexhtest2
-					value = 1
-				}
-			}
-		}
-	}
-}
-
-
-country_event = {
-	id = cctest.751
-	is_triggered_only = yes
-	title = OK
-	desc = OK
-	picture = GFX_evt_aggressive_flora
-
-	immediate = {
-		random_playable_country = {
-			establish_communications_no_message = root
-			save_event_target_as = cctest_country
-		}
-
-		create_leader = {
-			name = random
-			class = scientist
-			species = event_target:cctest_country.species
-		}
-		event_target:cctest_country = {
-			set_player = root
-		}
-		country_event = { id = dpe_defect_leader.1 days = 2 }
-		country_event = { id = cctest.752 days = 2 }
-	}
-	option = {
-		name = OUR_SIDE
-	}
-	option = {
-		name = THEIR_SIDE
-		event_target:cctest_country = {
-			set_player = root
-		}
-	}
-}
-
-country_event = {
-	id = cctest.752
-	is_triggered_only = yes
-	hide_window = yes
-
-	immediate = {
-		remove_country_flag = dpe_recent_defect_leader
-		event_target:cctest_country = {
-			remove_country_flag = dpe_recent_defect_leader
-		}
-	}
-}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_war = {
+# 					is_war_participant = {
+# 						who = root
+# 					}
+# 					defender_war_exhaustion > 0
+# 				}
+# 			}
+# 			capital_scope = {
+# 				set_variable = {
+# 					which = ccwarexhtest1
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_war = {
+# 					is_war_participant = {
+# 						who = root
+# 					}
+# 					defender_war_exhaustion > 1
+# 				}
+# 			}
+# 			capital_scope = {
+# 				set_variable = {
+# 					which = ccwarexhtest2
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.753
-	is_triggered_only = yes
-	hide_window = yes
+# country_event = {
+# 	id = cctest.751
+# 	is_triggered_only = yes
+# 	title = OK
+# 	desc = OK
+# 	picture = GFX_evt_aggressive_flora
 
-	immediate = {
-		random_country = {
-			limit = {
-				is_primitive = yes
-				has_country_flag = early_space_age
+# 	immediate = {
+# 		random_playable_country = {
+# 			establish_communications_no_message = root
+# 			save_event_target_as = cctest_country
+# 		}
+
+# 		create_leader = {
+# 			name = random
+# 			class = scientist
+# 			species = event_target:cctest_country.species
+# 		}
+# 		event_target:cctest_country = {
+# 			set_player = root
+# 		}
+# 		country_event = { id = dpe_defect_leader.1 days = 2 }
+# 		country_event = { id = cctest.752 days = 2 }
+# 	}
+# 	option = {
+# 		name = OUR_SIDE
+# 	}
+# 	option = {
+# 		name = THEIR_SIDE
+# 		event_target:cctest_country = {
+# 			set_player = root
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = cctest.752
+# 	is_triggered_only = yes
+# 	hide_window = yes
+
+# 	immediate = {
+# 		remove_country_flag = dpe_recent_defect_leader
+# 		event_target:cctest_country = {
+# 			remove_country_flag = dpe_recent_defect_leader
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.753
+# 	is_triggered_only = yes
+# 	hide_window = yes
+
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				is_primitive = yes
+# 				has_country_flag = early_space_age
 		
-				NOR = {
-					has_country_flag = mem_dpe_has_discovered_aliens
-					has_ethic = ethic_gestalt_consciousness
-				}
+# 				NOR = {
+# 					has_country_flag = mem_dpe_has_discovered_aliens
+# 					has_ethic = ethic_gestalt_consciousness
+# 				}
 				
-				home_planet = {
+# 				home_planet = {
 		
-					solar_system = {
-						exists = starbase
+# 					solar_system = {
+# 						exists = starbase
 						
-						starbase.owner = {
-							is_same_value = root
-						}
-					}
-				}
-			}
-			log = [this.GetName]
-			log = [home_planet.GetName]
-			log = [home_planet.solar_system.GetName]
-			log = [capital_scope.GetName]
-			log = [capital_scope.solar_system.GetName]
-			country_event = { id = mem_dpe_primitive_events.299 }
-		}
-	}
-}
+# 						starbase.owner = {
+# 							is_same_value = root
+# 						}
+# 					}
+# 				}
+# 			}
+# 			log = [this.GetName]
+# 			log = [home_planet.GetName]
+# 			log = [home_planet.solar_system.GetName]
+# 			log = [capital_scope.GetName]
+# 			log = [capital_scope.solar_system.GetName]
+# 			country_event = { id = mem_dpe_primitive_events.299 }
+# 		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.800
-	is_triggered_only = yes
-	hide_window = yes
+# country_event = {
+# 	id = cctest.800
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	immediate = {
-		if = {
-			limit = {
-				count_pop_factions = {
-					count = 1
-					limit = {
-						is_pop_faction_type = xenoist
-						faction_approval < 1
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_factions_1
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				count_pop_factions = {
-					count = 1
-					limit = {
-						is_pop_faction_type = xenoist
-						faction_approval > 1
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_factions_2
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				count_pop_factions = {
-					count = 1
-					limit = {
-						is_pop_faction_type = xenoist
-						faction_approval < 0.7
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_factions_1
-					value = 1
-				}
-			}
-		}
-		if = {
-			limit = {
-				count_pop_factions = {
-					count = 1
-					limit = {
-						is_pop_faction_type = xenoist
-						faction_approval > 0.2
-						NOT = {
-							faction_approval > 1
-						}
-					}
-				}
-			}
-			capital_scope = {
-				change_variable = {
-					which = cctest_factions_1
-					value = 1
-				}
-			}
-		}
-	}
-}
-
-
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					count = 1
+# 					limit = {
+# 						is_pop_faction_type = xenoist
+# 						faction_approval < 1
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_factions_1
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					count = 1
+# 					limit = {
+# 						is_pop_faction_type = xenoist
+# 						faction_approval > 1
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_factions_2
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					count = 1
+# 					limit = {
+# 						is_pop_faction_type = xenoist
+# 						faction_approval < 0.7
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_factions_1
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				count_pop_faction = {
+# 					count = 1
+# 					limit = {
+# 						is_pop_faction_type = xenoist
+# 						faction_approval > 0.2
+# 						NOT = {
+# 							faction_approval > 1
+# 						}
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				change_variable = {
+# 					which = cctest_factions_1
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 
 
-country_event = {
-	id = cctest.760
-	is_triggered_only = yes
-	hide_window = yes
 
-	immediate = {
-		capital_scope = {
-			solar_system = {
-				random_neighbor_system = {
-					random_system_planet = {
-						change_pc = pc_gaia
-						set_planet_size = 25
 
-						save_event_target_as = planet1
+# country_event = {
+# 	id = cctest.760
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-						create_country = {
-							name = "Fallen Empire"
-							type = fallen_empire
-							species = root
+# 	immediate = {
+# 		capital_scope = {
+# 			solar_system = {
+# 				random_neighbor_system = {
+# 					random_system_planet = {
+# 						change_pc = pc_gaia
+# 						set_planet_size = 25
 
-							effect = {
-								establish_communications_no_message = root
-								save_event_target_as = test_fe
-								while = {
-									count = 50
-									event_target:planet1 = {
-										create_pop = {
-											species = root
-										}
-									}
-								}
-							}
-						}
-					}
-					random_neighbor_system = {
-						limit = {
-							NOT = {
-								is_same_value = prevprev
-							}
-						}
-						random_system_planet = {
-							change_pc = pc_gaia
-							set_planet_size = 25
+# 						save_event_target_as = planet1
 
-							save_event_target_as = planet2
+# 						create_country = {
+# 							name = "Fallen Empire"
+# 							type = fallen_empire
+# 							species = root
+
+# 							effect = {
+# 								establish_communications_no_message = root
+# 								save_event_target_as = test_fe
+# 								while = {
+# 									count = 50
+# 									event_target:planet1 = {
+# 										create_pop = {
+# 											species = root
+# 										}
+# 									}
+# 								}
+# 							}
+# 						}
+# 					}
+# 					random_neighbor_system = {
+# 						limit = {
+# 							NOT = {
+# 								is_same_value = prevprev
+# 							}
+# 						}
+# 						random_system_planet = {
+# 							change_pc = pc_gaia
+# 							set_planet_size = 25
+
+# 							save_event_target_as = planet2
 	
-							create_country = {
-								name = "Vassal"
-								type = default
-								species = root
+# 							create_country = {
+# 								name = "Vassal"
+# 								type = default
+# 								species = root
 	
-								effect = {
-									establish_communications_no_message = root
-									save_event_target_as = test_subject
-									while = {
-										count = 10
-										event_target:planet2 = {
-											create_pop = {
-												species = root
-											}
-										}
-									}
-								}
-							}
-							solar_system = {
-								random_system_planet = {
-									limit = {
-										NOT = {
-											is_same_value = prevprev
-										}
-									}	
-									change_pc = pc_gaia
-									set_planet_size = 25
-									set_owner = event_target:test_subject
-									create_pop = {
-										species = root
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	after = {
-		event_target:test_fe = {
-			set_country_type = default
+# 								effect = {
+# 									establish_communications_no_message = root
+# 									save_event_target_as = test_subject
+# 									while = {
+# 										count = 10
+# 										event_target:planet2 = {
+# 											create_pop = {
+# 												species = root
+# 											}
+# 										}
+# 									}
+# 								}
+# 							}
+# 							solar_system = {
+# 								random_system_planet = {
+# 									limit = {
+# 										NOT = {
+# 											is_same_value = prevprev
+# 										}
+# 									}	
+# 									change_pc = pc_gaia
+# 									set_planet_size = 25
+# 									set_owner = event_target:test_subject
+# 									create_pop = {
+# 										species = root
+# 									}
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	after = {
+# 		event_target:test_fe = {
+# 			set_country_type = default
 
-		}
-		event_target:test_subject = {
-			set_subject_of = {
-				who = event_target:test_fe
-				subject_type = vassal
-			}
-		}
-	}
-}
-
-
-planet_event = {
-	id = cctest.761
-	is_triggered_only = yes
-	hide_window = yes
-
-	immediate = {
-		random_pop = {
-			save_event_target_as = planet_pop
-		}
-		create_rebels = {
-			name = random
-			authority = random
-			species = event_target:planet_pop
-			effect = {
-				save_event_target_as = rebels
-				while = {
-					count = 50
-					root = {
-						create_army = {
-							owner = event_target:rebels
-							type = assault_army
-						}
-					}
-				}
-			}
-		}
-	}
-}
+# 		}
+# 		event_target:test_subject = {
+# 			set_subject_of = {
+# 				who = event_target:test_fe
+# 				subject_type = vassal
+# 			}
+# 		}
+# 	}
+# }
 
 
-country_event = {
-	id = cctest.770
-	is_triggered_only = yes
-	hide_window = yes
+# planet_event = {
+# 	id = cctest.761
+# 	is_triggered_only = yes
+# 	hide_window = yes
 
-	immediate = {
-		random_pop_faction = {
-			limit = { is_pop_faction_type = imperialist }
-			root = {
-				random_pop_faction = {
-					limit = {
-						NOT = { is_same_value = prevprev }
-						is_pop_faction_type = imperialist
-					}
-					root = {
-						capital_scope = {
-							set_variable = {
-								which = cctest_pop_factions_bugged_1
-								value = 1
-							}
-						}
-					}
-				}
-				random_pop_faction = {
-					limit = {
-						is_same_value = prevprev
-						NOT = { is_pop_faction_type = imperialist }
-					}
-					root = {
-						capital_scope = {
-							set_variable = {
-								which = cctest_pop_factions_bugged_2
-								value = 1
-							}
-						}
-					}
-				}
-				random_pop_faction = {
-					limit = {
-						is_same_value = prevprev
-						is_pop_faction_type = imperialist
-					}
-					root = {
-						capital_scope = {
-							set_variable = {
-								which = cctest_pop_factions_not_bugged
-								value = 1
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		random_pop = {
+# 			save_event_target_as = planet_pop
+# 		}
+# 		create_rebels = {
+# 			name = random
+# 			authority = random
+# 			species = event_target:planet_pop
+# 			effect = {
+# 				save_event_target_as = rebels
+# 				while = {
+# 					count = 50
+# 					root = {
+# 						create_army = {
+# 							owner = event_target:rebels
+# 							type = assault_army
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = cctest.770
+# 	is_triggered_only = yes
+# 	hide_window = yes
+
+# 	immediate = {
+# 		random_pop_faction = {
+# 			limit = { is_pop_faction_type = imperialist }
+# 			root = {
+# 				random_pop_faction = {
+# 					limit = {
+# 						NOT = { is_same_value = prevprev }
+# 						is_pop_faction_type = imperialist
+# 					}
+# 					root = {
+# 						capital_scope = {
+# 							set_variable = {
+# 								which = cctest_pop_factions_bugged_1
+# 								value = 1
+# 							}
+# 						}
+# 					}
+# 				}
+# 				random_pop_faction = {
+# 					limit = {
+# 						is_same_value = prevprev
+# 						NOT = { is_pop_faction_type = imperialist }
+# 					}
+# 					root = {
+# 						capital_scope = {
+# 							set_variable = {
+# 								which = cctest_pop_factions_bugged_2
+# 								value = 1
+# 							}
+# 						}
+# 					}
+# 				}
+# 				random_pop_faction = {
+# 					limit = {
+# 						is_same_value = prevprev
+# 						is_pop_faction_type = imperialist
+# 					}
+# 					root = {
+# 						capital_scope = {
+# 							set_variable = {
+# 								which = cctest_pop_factions_not_bugged
+# 								value = 1
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }

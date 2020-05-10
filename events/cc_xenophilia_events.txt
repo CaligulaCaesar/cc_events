@@ -276,15 +276,16 @@ event = {
 	immediate = {
 		every_playable_country = {
 			limit = {
-				any_owned_pop = {
+				any_owned_species = {
 					NOT = { is_same_species = prev }
-					cc_has_happiness = yes
+					species_has_happiness_with_owner = prev
 				}
 			}
 			every_owned_planet = {
 				limit = {
-					any_owned_pop = {
-						cc_has_happiness = yes
+					any_owned_species = {
+						NOT = { is_same_species = prevprev }
+						species_has_happiness_with_owner = prevprev
 					}
 				}
 				planet_event = { id = cc_events_mod.81 days = 1 random = 15 }
@@ -300,7 +301,7 @@ planet_event = {
 
 	immediate = {
 		every_owned_pop = {
-			limit = { cc_has_happiness = yes }
+			limit = { pop_has_happiness = yes }
 			pop_event = { id = cc_events_mod.9 }
 		}
 	}
@@ -332,9 +333,9 @@ pop_event = {
 					modifier = {
 						factor = 1.5
 						planet = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = root }
-								cc_has_happiness = yes
+								species_has_happiness_with_owner = prev.owner
 							}
 						}
 					}
@@ -349,9 +350,9 @@ pop_event = {
 				OR = {
 					owner = { has_policy_flag = allows_im }
 					planet = {
-						any_owned_pop = {
+						any_owned_species = {
 							NOT = { is_same_species = root }
-							cc_has_happiness = yes
+							species_has_happiness_with_owner = prev.owner
 						}
 					}
 				}
@@ -368,9 +369,9 @@ pop_event = {
 					modifier = {
 						factor = 1.5
 						planet = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = root }
-								cc_has_happiness = yes
+								species_has_happiness_with_owner = prev.owner
 							}
 						}
 					}
@@ -393,9 +394,9 @@ pop_event = {
 						}
 					}
 					planet = {
-						any_owned_pop = {
+						any_owned_species = {
 							NOT = { is_same_species = root }
-							cc_has_happiness = yes
+							species_has_happiness_with_owner = prev.owner
 						}
 					}
 				}
@@ -412,9 +413,9 @@ pop_event = {
 					modifier = {
 						factor = 1.5
 						planet = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = root }
-								cc_has_happiness = yes
+								species_has_happiness_with_owner = prev.owner
 							}
 						}
 					}
@@ -442,9 +443,9 @@ pop_event = {
 					modifier = {
 						factor = 1.5
 						planet = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = root }
-								cc_has_happiness = yes
+								species_has_happiness_with_owner = prev.owner
 							}
 						}
 					}
@@ -464,7 +465,7 @@ pop_event = {
 	
 	trigger = {
 		has_pop_flag = cc_literally_xenophile
-		cc_has_happiness = yes
+		pop_has_happiness = yes
 		NOT = { has_pop_flag = cc_literally_xenophile_manifested }
 		exists = owner
 		owner = {
@@ -472,7 +473,7 @@ pop_event = {
 				percentage > 0.2
 				limit = {
 					NOT = { is_same_species = root }
-					cc_has_happiness = yes
+					pop_has_happiness = yes
 					NOR = {
 						is_enslaved = yes
 						is_being_purged = yes
@@ -549,7 +550,7 @@ pop_event = {
 	trigger = {
 		has_pop_flag = cc_literally_xenophile_manifested
 		exists = owner
-		cc_has_happiness = yes
+		pop_has_happiness = yes
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minority } }
 	}
 	
@@ -633,7 +634,7 @@ event = {
 			}
 			every_owned_pop = {
 				limit = {
-					cc_has_happiness = no
+					pop_has_happiness = no
 					OR = {
 						has_pop_flag = cc_literally_xenophile
 						has_pop_flag = cc_literally_xenophile_manifested
@@ -1085,11 +1086,8 @@ country_event = {
 			if = {
 				limit = {
 					has_faction = isolationist
-					count_pop_factions = {
-						limit = {
-							has_modifier = cc_xeno_marriage_allowed_isolationist
-						}
-						count = 1
+					any_pop_faction = {
+						has_modifier = cc_xeno_marriage_allowed_isolationist
 					}
 				}
 				random_pop_faction = {
@@ -1159,11 +1157,8 @@ country_event = {
 			if = {
 				limit = {
 					has_faction = isolationist
-					count_pop_factions = {
-						limit = {
-							has_modifier = cc_xeno_marriage_allowed_isolationist
-						}
-						count = 1
+					any_pop_faction = {
+						has_modifier = cc_xeno_marriage_allowed_isolationist
 					}
 				}
 				random_pop_faction = {
@@ -1212,13 +1207,14 @@ country_event = {
 		NOT = { has_country_flag = cc_recent_prominent_IM }
 		has_policy_flag = allows_im
 		
-		any_owned_pop = {
+		any_owned_species = {
 			NOT = { is_same_species = root }
-			cc_has_happiness = yes
-			has_citizenship_rights = yes
-			NOR = {
-				is_enslaved = yes
-				is_being_purged = yes
+			species_has_happiness_with_owner = root
+			OR = {
+				has_citizenship_type = { country = root type = citizenship_full }
+				has_citizenship_type = { country = root type = citizenship_limited }
+				has_citizenship_type = { country = root type = citizenship_caste_system }
+				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 			}
 		}
 		any_owned_leader = {
@@ -1250,7 +1246,7 @@ country_event = {
 		random_owned_pop = {
 			limit = {
 				NOT = { is_same_species = root }
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }

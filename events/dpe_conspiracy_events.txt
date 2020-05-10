@@ -141,12 +141,9 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = dpe_tot_faction_15
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support > 0.15
 				}
 			}
 		}
@@ -155,12 +152,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = totalitarian
-							support > 0.2
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = totalitarian
+						support > 0.2
 					}
 				}
 			}
@@ -373,12 +367,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = totalitarian
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = totalitarian
+						support > 0.15
 					}
 				}
 			}
@@ -740,12 +731,9 @@ country_event = {
 		OR = {
 			has_ethic = ethic_pacifist
 			has_ethic = ethic_fanatic_pacifist
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = imperialist
-					faction_approval < @cc_faction_danger_number
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = imperialist
+				faction_approval < @cc_faction_danger_number
 			}
 		}
 		NOT = {
@@ -822,12 +810,9 @@ country_event = {
 		OR = {
 			has_ethic = ethic_pacifist
 			has_ethic = ethic_fanatic_pacifist
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = imperialist
-					faction_approval < @cc_faction_danger_number
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = imperialist
+				faction_approval < @cc_faction_danger_number
 			}
 		}
 		NOT = {
@@ -886,24 +871,18 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							support > 0.15
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = imperialist
+						support > 0.15
 					}
 				}
 			}
 			modifier = {
 				factor = 2.5
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							support > 0.2
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = imperialist
+						support > 0.2
 					}
 				}
 			}
@@ -912,12 +891,9 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = dpe_imp_fac_7
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						support > 0.07
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.07
 				}
 			}
 		}
@@ -1040,12 +1016,9 @@ country_event = {
 		is_at_war = no
 		is_subject = no
 		has_faction = imperialist
-		count_pop_factions = {
-			limit = {
-				is_pop_faction_type = imperialist
-				faction_approval < @cc_faction_danger_number
-			}
-			count = 1
+		any_pop_faction = {
+			is_pop_faction_type = imperialist
+			faction_approval < @cc_faction_danger_number
 		}
 		used_naval_capacity_percent > 1
 		
@@ -1082,12 +1055,9 @@ country_event = {
 		is_at_war = no
 		is_subject = no
 		has_faction = imperialist
-		count_pop_factions = {
-			limit = {
-				is_pop_faction_type = imperialist
-				faction_approval < @cc_faction_danger_number
-			}
-			count = 1
+		any_pop_faction = {
+			is_pop_faction_type = imperialist
+			faction_approval < @cc_faction_danger_number
 		}
 		used_naval_capacity_percent > 1
 		
@@ -1241,12 +1211,9 @@ country_event = {
 						}
 						is_at_war = no
 						has_faction = imperialist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = imperialist
-								faction_approval < 0.45
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = imperialist
+							faction_approval < 0.45
 						}
 						any_owned_leader = {
 							NOT = { is_same_value = root.ruler }
@@ -1292,12 +1259,9 @@ country_event = {
 		is_at_war = no
 		is_subject = no
 		has_faction = imperialist
-		count_pop_factions = {
-			limit = {
-				is_pop_faction_type = imperialist
-				faction_approval < 0.45
-			}
-			count = 1
+		any_pop_faction = {
+			is_pop_faction_type = imperialist
+			faction_approval < 0.45
 		}
 		used_naval_capacity_percent > 1
 		

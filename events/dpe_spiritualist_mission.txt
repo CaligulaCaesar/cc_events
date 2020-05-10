@@ -19,7 +19,7 @@ country_event = {
 		OR = {
 			has_ethic = ethic_spiritualist
 			has_ethic = ethic_fanatic_spiritualist
-#			count_pop_factions = {
+#			count_pop_faction = {
 #				limit = {
 #					is_pop_faction_type = traditionalist
 #					support > 0.15
@@ -840,7 +840,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					pop_percentage = {
 						percentage > 0.75
-						limit = { cc_has_happiness = yes }
+						limit = { pop_has_happiness = yes }
 					}
 					pop_percentage = {
 						percentage > 0.5
@@ -858,7 +858,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					pop_percentage = {
 						percentage > 0.75
-						limit = { cc_has_happiness = yes }
+						limit = { pop_has_happiness = yes }
 					}
 					pop_percentage = {
 						percentage > 0.5
@@ -1259,12 +1259,9 @@ country_event = {
 						}
 						modifier = {
 							factor = 2
-							count_pop_factions = {
-								limit = {
-									is_pop_faction_type = traditionalist
-									support > 0.1
-								}
-								count = 1
+							any_pop_faction = {
+								is_pop_faction_type = traditionalist
+								support > 0.1
 							}							
 						}
 					}
@@ -1279,15 +1276,12 @@ country_event = {
 				factor = 2
 				OR = {
 					NOT = { has_faction = traditionalist }
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						pop_percentage = {
+							limit = { happiness < 0.4 }
+							percentage > 0.75
 						}
-						count = 1
 					}
 				}
 			}
@@ -1530,7 +1524,7 @@ country_event = {
 				count = 4
 				random_owned_pop = {
 					limit = {
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
 					pop_change_ethic = ethic_spiritualist
@@ -2417,34 +2411,22 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						OR = {
-							is_pop_faction_type = supremacist
-							is_pop_faction_type = isolationist
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
 					}
-					count > 0
+					faction_approval < 0.4
 				}
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						OR = {
-							is_pop_faction_type = supremacist
-							is_pop_faction_type = isolationist
-							pop_percentage = {
-								limit = { happiness > 0.59 }
-								percentage > 0.75
-							}
-						}
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
 					}
-					count > 0
+					faction_approval > 0.6
 				}
 			}
 		}
@@ -2623,7 +2605,7 @@ country_event = {
 				count = 2
 				random_owned_pop = {
 					limit = {
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
 					pop_change_ethic = ethic_spiritualist
@@ -2910,7 +2892,7 @@ country_event = {
 					count = 2
 					random_owned_pop = {
 						limit = {
-							cc_has_happiness = yes
+							pop_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
 						}
 						pop_change_ethic = ethic_spiritualist
@@ -3260,16 +3242,14 @@ country_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 				OR = {
-					count_pop_factions = {
-						limit = { is_pop_faction_type = traditionalist }
-						count = 0
-					}
-					count_pop_factions = {
-						limit = {
+					NOT = {
+						any_pop_faction = {
 							is_pop_faction_type = traditionalist
-							support < 0.08
 						}
-						count = 1
+					}
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
 					}
 				}
 			}
@@ -3284,20 +3264,14 @@ country_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.08
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support < 0.08
 					}
 				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.18
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.18
 				}
 			}
 		}
@@ -3311,19 +3285,13 @@ country_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 				NOT = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support < 0.18
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support < 0.18
 					}
 				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
 				}
 			}
 		}
@@ -3438,16 +3406,14 @@ country_event = {
 				factor = 2
 				from = {
 					OR = {
-						count_pop_factions = {
-							limit = { is_pop_faction_type = traditionalist }
-							count = 0
-						}
-						count_pop_factions = {
-							limit = {
+						NOT = {
+							any_pop_faction = {
 								is_pop_faction_type = traditionalist
-								support < 0.08
 							}
-							count = 1
+						}
+						any_pop_faction = {
+							is_pop_faction_type = traditionalist
+							support < 0.08
 						}
 					}
 				}
@@ -3539,16 +3505,13 @@ country_event = {
 	desc = {
 		trigger = {
 			OR = {
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
 					count = 0
 				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
 				}
 			}
 		}
@@ -3557,20 +3520,14 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
 				}
 			}
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = traditionalist
-					support < 0.18
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = traditionalist
+				support < 0.18
 			}
 		}
 		text = dpe_spiritualist_mission.101.desc.mid
@@ -3578,19 +3535,13 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.18
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.18
 				}
 			}
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = traditionalist
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = traditionalist
 			}
 		}
 		text = dpe_spiritualist_mission.101.desc.high
@@ -3811,16 +3762,13 @@ country_event = {
 	desc = {
 		trigger = {
 			OR = {
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
 					count = 0
 				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
 				}
 			}
 		}
@@ -3829,20 +3777,14 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = traditionalist
-						support < 0.08
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support < 0.08
 				}
 			}
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = traditionalist
-					support < 0.18
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = traditionalist
+				support < 0.18
 			}
 		}
 		text = dpe_spiritualist_mission.102.desc.mid
@@ -4669,23 +4611,17 @@ country_event = {
 			modifier = {
 				factor = 0.75
 				has_faction = totalitarian
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support > 0.1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support > 0.1
 				}
 			}
 			modifier = {
 				factor = 0.75
 				has_faction = imperialist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						support > 0.1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.1
 				}
 			}
 			modifier = {

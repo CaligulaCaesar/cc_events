@@ -301,42 +301,30 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						faction_approval < @cc_faction_high_danger_number
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					faction_approval < @cc_faction_high_danger_number
 				}
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support < 0.05
-					}
-					count = 1
+				count_popany_pop_factionfactions = {
+					is_pop_faction_type = totalitarian
+					support < 0.05
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support > 0.1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support < 0.1
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support < 0.15
 				}
 			}
 		}
@@ -390,22 +378,16 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support < 0.05
-					}
-					count = 1
+				count_popany_pop_factionfactions = {
+					is_pop_faction_type = totalitarian
+					support < 0.05
 				}
 			}
 			modifier = {
 				factor = 1.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = totalitarian
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support < 0.15
 				}
 			}
 		}
@@ -486,7 +468,7 @@ country_event = {
 					limit = {
 						has_citizenship_rights = yes
 						NOT = { has_ethic = ethic_authoritarian }
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 					}
 					pop_event = { id = dpe_contraband_event.46 }
 				}
@@ -512,22 +494,16 @@ country_event = {
 					has_ethic = ethic_egalitarian
 					has_ethic = ethic_fanatic_egalitarian
 				}
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.33
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.33
 				}
 			}
 		}
@@ -545,12 +521,9 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.33
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support < 0.08
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support < 0.08
 				}
 			}
 		}
@@ -581,7 +554,7 @@ country_event = {
 				limit = {
 					has_citizenship_rights = yes
 					NOT = { has_ethic = ethic_authoritarian }
-					cc_has_happiness = yes
+					pop_has_happiness = yes
 				}
 				pop_event = { id = dpe_contraband_event.46 }
 			}

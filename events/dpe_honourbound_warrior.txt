@@ -572,9 +572,8 @@ country_event = {
 
 		if = {
 			limit = {
-				count_pop_factions = {
-					count = 1
-					limit = { is_pop_faction_type = imperialist }
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
 				}
 			}
 			random_pop_faction = {
@@ -604,9 +603,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				NOT = {
-					count_pop_factions = {
-						count > 0
-						limit = { is_pop_faction_type = imperialist }
+					any_pop_faction = {
+						is_pop_faction_type = imperialist
 					}
 				}
 			}

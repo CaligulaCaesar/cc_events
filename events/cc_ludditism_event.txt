@@ -1867,12 +1867,9 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 			modifier = {
@@ -2239,7 +2236,7 @@ country_event = {
 		every_owned_pop = {
 			limit = {
 				is_enslaved = no
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 			}
 			pop_event = { id = cc_luddite.21 }
 		}

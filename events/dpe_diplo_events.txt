@@ -24,12 +24,9 @@ country_event = {
 			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						support > 0.22
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.22
 				}
 			}
 		}
@@ -142,12 +139,9 @@ country_event = {
 			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						support > 0.22
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.22
 				}
 			}
 		}
@@ -793,12 +787,9 @@ country_event = {
 			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = imperialist
-						support > 0.22
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.22
 				}
 			}
 		}

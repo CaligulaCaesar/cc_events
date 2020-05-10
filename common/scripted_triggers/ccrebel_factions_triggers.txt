@@ -127,13 +127,9 @@ has_factional_revolt_stage3 = {
 #necessary as pop_percentage = { limit = { member_of_faction = x } } appears to default to 'yes' if no pop is a member of a faction
 valid_factional_revolt_target = {
 	any_owned_pop = {
-		cc_has_happiness = yes
 		member_of_faction = yes
+		pop_has_happiness = yes
 	}
-}
-
-any_pop_has_happiness_gauge = {
-	any_owned_pop = { cc_has_happiness = yes }
 }
 
 

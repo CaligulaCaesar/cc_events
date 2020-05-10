@@ -861,7 +861,7 @@ country_event = {
 		hidden_effect = {
 			every_owned_pop = {
 				limit = {
-					cc_has_happiness = yes
+					pop_has_happiness = yes
 					NOT = { is_same_species = root }
 				}
 				add_modifier = {

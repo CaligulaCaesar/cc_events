@@ -52,7 +52,7 @@ country_event = {
 			has_country_flag = dpe_recent_election_scandal
 		}
 
-		count_pop_factions = {
+		count_pop_faction = {
 			count > 2
 		}
 	}
@@ -399,12 +399,9 @@ country_event = {
 		}
 		has_factional_revolt_stage3 = no
 
-		count_pop_factions = {
-			limit = {
-				support > 0.1
-				faction_approval < @cc_faction_danger_number
-			}
-			count > 0
+		any_pop_faction = {
+			support > 0.1
+			faction_approval < @cc_faction_danger_number
 		}
 	}
 

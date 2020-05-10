@@ -19,7 +19,7 @@ planet_event = {
 			has_planet_flag = dpe_dissent_planet
 		}
 		count_pops = {
-			limit = { cc_has_happiness = yes }
+			limit = { pop_has_happiness = yes }
 			count > 18
 		}
 		pop_percentage = {
@@ -87,17 +87,11 @@ country_event = {
 		}
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
 		exists = ruler
-		count_pop_factions = {
-			limit = {
-				is_a_vanilla_faction = yes
-				exists = leader
-				leader = { not = { is_same_value = root.ruler } }
-				pop_percentage = {
-					limit = { happiness < 0.4 }
-					percentage > 0.75
-				}
-			}
-			count > 0
+		any_pop_faction = {
+			is_a_vanilla_faction = yes
+			exists = leader
+			leader = { not = { is_same_value = root.ruler } }
+			faction_approval < 0.4
 		}
 	}
 	
@@ -112,49 +106,31 @@ country_event = {
 				}
 				NOT = { has_country_flag = dpe_recent_ruler_debate }
 				exists = ruler
-				count_pop_factions = {
-					limit = {
-						exists = leader
-
-						is_a_vanilla_faction = yes
-						leader = { not = { is_same_value = root.ruler } }
-
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
-					}
-					count > 0
+				any_pop_faction = {
+					is_a_vanilla_faction = yes
+					exists = leader
+					leader = { not = { is_same_value = root.ruler } }
+					faction_approval < 0.4
 				}
 			}
 		
 			if = {
 				limit = {
-					count_pop_factions = {
-						limit = {
-							exists = leader
-
-							is_a_vanilla_faction = yes
-							support > 0.15
-							leader = { not = { is_same_value = root.ruler } }
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-						count > 0
-					}
-				}
-				random_pop_faction = {
-					limit = {
-						exists = leader
+					any_pop_faction = {
 						is_a_vanilla_faction = yes
+						exists = leader
+						leader = { not = { is_same_value = root.ruler } }
+						faction_approval < 0.4
 						support > 0.15
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						is_a_vanilla_faction = yes
+						exists = leader
 						leader = { not = { is_same_value = root.ruler } }
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
+						faction_approval < 0.4
+						support > 0.15
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -162,32 +138,21 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					count_pop_factions = {
-						limit = {
-							exists = leader
-
-							is_a_vanilla_faction = yes
-							support > 0.10
-							leader = { not = { is_same_value = root.ruler } }
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-						count > 0
+					any_pop_faction = {
+						is_a_vanilla_faction = yes
+						exists = leader
+						leader = { not = { is_same_value = root.ruler } }
+						faction_approval < 0.4
+						support > 0.1
 					}
 				}
 				random_pop_faction = {
 					limit = {
-						exists = leader
-
 						is_a_vanilla_faction = yes
-						support > 0.10
+						exists = leader
 						leader = { not = { is_same_value = root.ruler } }
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
+						faction_approval < 0.4
+						support > 0.1
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -195,32 +160,21 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					count_pop_factions = {
-						limit = {
-							exists = leader
-
-							is_a_vanilla_faction = yes
-							support > 0.05
-							leader = { not = { is_same_value = root.ruler } }
-							pop_percentage = {
-								limit = { happiness < 0.4 }
-								percentage > 0.75
-							}
-						}
-						count > 0
-					}
-				}
-				random_pop_faction = {
-					limit = {
-						exists = leader
-
+					any_pop_faction = {
 						is_a_vanilla_faction = yes
+						exists = leader
+						leader = { not = { is_same_value = root.ruler } }
+						faction_approval < 0.4
 						support > 0.05
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						is_a_vanilla_faction = yes
+						exists = leader
 						leader = { not = { is_same_value = root.ruler } }
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
+						faction_approval < 0.4
+						support > 0.05
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -229,14 +183,10 @@ country_event = {
 			else = {
 				random_pop_faction = {
 					limit = {
-						exists = leader
-
 						is_a_vanilla_faction = yes
+						exists = leader
 						leader = { not = { is_same_value = root.ruler } }
-						pop_percentage = {
-							limit = { happiness < 0.4 }
-							percentage > 0.75
-						}
+						faction_approval < 0.4
 					}
 					save_event_target_as = dpe_dissident_faction
 					leader = { save_event_target_as = dpe_dissident_faction_leader }
@@ -319,10 +269,14 @@ country_event = {
 		any_owned_planet = {
 			NOT = { has_planet_flag = dpe_recent_talent_planet }
 			controller = { is_same_value = root }
-			any_owned_pop = {
-				cc_has_happiness = yes
-				has_citizenship_rights = yes
-				is_enslaved = no
+			any_owned_species = {
+				species_has_happiness_with_owner = root
+				OR = {
+					has_citizenship_type = { country = root type = citizenship_full }
+					has_citizenship_type = { country = root type = citizenship_limited }
+					has_citizenship_type = { country = root type = citizenship_caste_system }
+					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+				}
 			}
 		}
 	}
@@ -685,7 +639,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1116,7 +1070,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1331,7 +1285,7 @@ country_event = {
 			event_target:dpe_talent_planet = {
 				random_owned_pop = {
 					limit = {
-						cc_has_happiness = yes
+						pop_has_happiness = yes
 						OR = {
 							has_citizenship_type = {
 								type = citizenship_full
@@ -1615,7 +1569,7 @@ planet_event = {
 		}
 		count_pops = {
 			limit = {
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 				has_citizenship_rights = yes
 			}
 			count > 18

@@ -14,7 +14,7 @@ planet_event = {
 		}
 		NOT = { has_planet_flag = cc_colony_story }
 		any_owned_pop = {
-			cc_has_happiness = yes
+			pop_has_happiness = yes
 			is_enslaved = no
 			has_citizenship_rights = yes
 		}
@@ -41,7 +41,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = imperialist }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				modifier = {
@@ -76,7 +76,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = prosperity }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -105,12 +105,12 @@ planet_event = {
 				}
 				modifier = {
 					factor = 1.35
-					any_owned_pop = {
-						cc_has_happiness = yes
+					any_owned_species = {
+						species_has_happiness_with_owner = root.owner
 						root = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = prevprev }
-								cc_has_happiness = yes
+								species_has_happiness_with_owner = root.owner
 							}
 						}
 					}
@@ -121,7 +121,7 @@ planet_event = {
 						pop_percentage = {
 							limit = {
 								NOT = { is_same_species = root.owner }
-								cc_has_happiness = yes
+								pop_has_happiness = yes
 							}
 							percentage < 0.1
 						}
@@ -135,7 +135,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = xenoist }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -173,19 +173,19 @@ planet_event = {
 							has_faction = supremacist
 							has_faction = isolationist
 						}
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				modifier = {
 					factor = 0
-					NOT = { any_owned_pop = { is_same_species = root.owner } }	#this would break it badly
+					NOT = { any_owned_species = { is_same_species = root.owner } }	#this would break it badly
 				}
 				modifier = {  #makes up for that
 					factor = 1.5
 					NOT = {
-						any_owned_pop = {
+						any_owned_species = {
 							NOT = { is_same_species = root.owner }
-							cc_has_happiness = yes
+							species_has_happiness_with_owner = root.owner
 						}
 					}
 				}
@@ -221,7 +221,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = traditionalist }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -256,7 +256,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = technologist }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -291,7 +291,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = totalitarian }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -330,7 +330,7 @@ planet_event = {
 					factor = 0.5
 					owner = {
 						NOT = { has_faction = progressive }
-						count_pop_factions = { count > 2 }
+						count_pop_faction = { count > 2 }
 					}
 				}
 				
@@ -454,7 +454,7 @@ planet_event = {
 		}
 		else = {
 			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
+				limit = { pop_has_happiness = yes }
 				save_event_target_as = cc_leader_pop
 			}
 			owner = {
@@ -1258,14 +1258,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}
@@ -2320,14 +2320,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}
@@ -3988,17 +3988,14 @@ planet_event = {
 				factor = 2
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -4045,17 +4042,14 @@ planet_event = {
 				factor = 0.5
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -4194,17 +4188,14 @@ planet_event = {
 				factor = 0.5
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -4295,17 +4286,14 @@ planet_event = {
 				factor = 2
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -4522,17 +4510,14 @@ planet_event = {
 				factor = 0.5
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -4637,17 +4622,14 @@ planet_event = {
 				factor = 2
 				owner = {
 					OR = {
-						count_pop_factions = {
-							limit = {
-								support > 0.2
-								OR = {
-									is_pop_faction_type = supremacist
-									is_pop_faction_type = isolationist
-								}
+						any_pop_faction = {
+							support > 0.2
+							OR = {
+								is_pop_faction_type = supremacist
+								is_pop_faction_type = isolationist
 							}
-							count > 0
 						}
-						count_pop_factions = {
+						count_pop_faction = {
 							limit = {
 								support > 0.1
 								OR = {
@@ -5106,14 +5088,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}
@@ -6164,14 +6146,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}
@@ -6909,14 +6891,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}
@@ -8285,14 +8267,14 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
-				limit = { cc_has_happiness = yes }
-				save_event_target_as = cc_leader_pop
+			random_owned_species = {
+				limit = { species_has_happiness_with_owner = root.owner }
+				save_event_target_as = cc_leader_species
 			}
 			owner = {
 				create_leader = {
 					class = general
-					species = event_target:cc_leader_pop.species
+					species = event_target:cc_leader_species
 					name = random
 					skill = 1
 				}

@@ -102,13 +102,10 @@ event = {
 										has_ethic = ethic_xenophile
 										has_ethic = ethic_fanatic_xenophile
 										
-										count_pop_factions = {
-											limit = {
-												is_pop_faction_type = xenoist
-												support > 0.15
-												faction_approval > @cc_faction_happy_number
-											}
-											count = 1
+										any_pop_faction = {
+											is_pop_faction_type = xenoist
+											support > 0.15
+											faction_approval > @cc_faction_happy_number
 										}
 									}
 									
@@ -128,60 +125,54 @@ event = {
 				#I put this after to increase the chance of the event chain happening
 				if = {
 					limit = {
-						any_owned_pop = {
+						any_owned_species = {
 							NOT = { is_same_species = prev }
-							cc_has_happiness = yes
-							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+							species_has_happiness_with_owner = prev
+							NOT = { has_species_flag = dpe_met_species@prev.species }
 						}
 					}
-					random_owned_pop = {
+					random_owned_species = {
 						limit = {
 							NOT = { is_same_species = prev }
-							cc_has_happiness = yes
-							species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+							species_has_happiness_with_owner = prev
+							NOT = { has_species_flag = dpe_met_species@prev.species }
 						}
-						species = {
-							set_species_flag = dpe_met_species@prev.species
-							prevprev.species = { set_species_flag = dpe_met_species@prev }
-						}
+						set_species_flag = dpe_met_species@prev.species
+						prev.species = { set_species_flag = dpe_met_species@prev }
 					}
 					if = {
 						limit = {
-							any_owned_pop = {
+							any_owned_species = {
 								NOT = { is_same_species = prev }
-								cc_has_happiness = yes
-								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+								species_has_happiness_with_owner = prev
+								NOT = { has_species_flag = dpe_met_species@prev.species }
 							}
 						}
-						random_owned_pop = {
+						random_owned_species = {
 							limit = {
 								NOT = { is_same_species = prev }
-								cc_has_happiness = yes
-								species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+								species_has_happiness_with_owner = prev
+								NOT = { has_species_flag = dpe_met_species@prev.species }
 							}
-							species = {
-								set_species_flag = dpe_met_species@prev.species
-								prevprev.species = { set_species_flag = dpe_met_species@prev }
-							}
+							set_species_flag = dpe_met_species@prev.species
+							prev.species = { set_species_flag = dpe_met_species@prev }
 						}
 						if = {
 							limit = {
-								any_owned_pop = {
+								any_owned_species = {
 									NOT = { is_same_species = prev }
-									cc_has_happiness = yes
-									species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+									species_has_happiness_with_owner = prev
+									NOT = { has_species_flag = dpe_met_species@prev.species }
 								}
 							}
-							random_owned_pop = {
+							random_owned_species = {
 								limit = {
 									NOT = { is_same_species = prev }
-									cc_has_happiness = yes
-									species = { NOT = { has_species_flag = dpe_met_species@prev.species } }
+									species_has_happiness_with_owner = prev
+									NOT = { has_species_flag = dpe_met_species@prev.species }
 								}
-								species = {
-									set_species_flag = dpe_met_species@prev.species
-									prevprev.species = { set_species_flag = dpe_met_species@prev }
-								}
+								set_species_flag = dpe_met_species@prev.species
+								prev.species = { set_species_flag = dpe_met_species@prev }
 							}
 						} #I'm going to assume that the country won't get more than 3 new species a year
 					}
@@ -206,13 +197,10 @@ country_event = {
 			has_ethic = ethic_xenophile
 			has_ethic = ethic_fanatic_xenophile
 			
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = xenoist
-					support > 0.15
-					faction_approval > @cc_faction_happy_number
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = xenoist
+				support > 0.15
+				faction_approval > @cc_faction_happy_number
 			}
 		}
 		NOR = {
@@ -845,15 +833,12 @@ country_event = {
 			if = {
 				limit = {
 					from = {
-						count_pop_factions = {
-							limit = {
-								OR = {
-									is_pop_faction_type = isolationist
-									is_pop_faction_type = supremacist
-								}
-								support > 0.05
+						any_pop_faction = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
 							}
-							count > 0
+							support > 0.05
 						}
 					}
 				}
@@ -1102,15 +1087,12 @@ country_event = {
 				}
 			}
 		}
-		count_pop_factions = {
-			limit = {
-				OR = {
-					is_pop_faction_type = isolationist
-					is_pop_faction_type = supremacist
-				}
-				support > 0.05
+		any_pop_faction = {
+			OR = {
+				is_pop_faction_type = isolationist
+				is_pop_faction_type = supremacist
 			}
-			count > 0
+			support > 0.05
 		}
 	}
 	immediate = {
@@ -1128,41 +1110,32 @@ country_event = {
 			1 = { #nothing
 				modifier = {
 					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							OR = {
-								is_pop_faction_type = isolationist
-								is_pop_faction_type = supremacist
-							}
-							support > 0.1
+					any_pop_faction = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
 						}
-						count > 0
+						support > 0.1
 					}
 				}
 				modifier = {
 					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							OR = {
-								is_pop_faction_type = isolationist
-								is_pop_faction_type = supremacist
-							}
-							support > 0.15
+					any_pop_faction = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
 						}
-						count > 0
+						support > 0.15
 					}
 				}
 				modifier = {
 					factor = 0
-					count_pop_factions = {
-						limit = {
-							OR = {
-								is_pop_faction_type = isolationist
-								is_pop_faction_type = supremacist
-							}
-							support > 0.2
+					any_pop_faction = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
 						}
-						count > 0
+						support > 0.2
 					}
 				}
 			}
@@ -1188,15 +1161,12 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				from = {
-					count_pop_factions = {
-						limit = {
-							OR = {
-								is_pop_faction_type = isolationist
-								is_pop_faction_type = supremacist
-							}
-							support > 0.15
+					any_pop_faction = {
+						OR = {
+							is_pop_faction_type = isolationist
+							is_pop_faction_type = supremacist
 						}
-						count > 0
+						support > 0.15
 					}
 				}
 			}
@@ -1288,29 +1258,23 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						OR = {
-							is_pop_faction_type = isolationist
-							is_pop_faction_type = supremacist
-						}
-						support > 0.15
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = isolationist
+						is_pop_faction_type = supremacist
 					}
-					count > 0
+					support > 0.15
 				}
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						OR = {
-							is_pop_faction_type = isolationist
-							is_pop_faction_type = supremacist
-						}
-						support > 0.1
-						faction_approval < @cc_faction_danger_number
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = isolationist
+						is_pop_faction_type = supremacist
 					}
-					count > 0
+					support > 0.1
+					faction_approval < @cc_faction_danger_number
 				}
 			}
 		}
@@ -1390,60 +1354,48 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					event_target:dpe_new_contact = {
-						count_pop_factions = {
-							limit = {
-								OR = {
-									is_pop_faction_type = isolationist
-									is_pop_faction_type = supremacist
-								}
-								support > 0.1
+						any_pop_faction = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
 							}
-							count > 0
+							support > 0.1
 						}
 					}
 				}
 				modifier = {
 					factor = 1.5
 					event_target:dpe_new_contact = {
-						count_pop_factions = {
-							limit = {
-								OR = {
-									is_pop_faction_type = isolationist
-									is_pop_faction_type = supremacist
-								}
-								support > 0.12
+						any_pop_faction = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
 							}
-							count > 0
+							support > 0.12
 						}
 					}
 				}
 				modifier = {
 					factor = 1.5
 					event_target:dpe_new_contact = {
-						count_pop_factions = {
-							limit = {
-								OR = {
-									is_pop_faction_type = isolationist
-									is_pop_faction_type = supremacist
-								}
-								support > 0.15
+						any_pop_faction = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
 							}
-							count > 0
+							support > 0.15
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					event_target:dpe_new_contact = {
-						count_pop_factions = {
-							limit = {
-								OR = {
-									is_pop_faction_type = isolationist
-									is_pop_faction_type = supremacist
-								}
-								support > 0.2
+						any_pop_faction = {
+							OR = {
+								is_pop_faction_type = isolationist
+								is_pop_faction_type = supremacist
 							}
-							count > 0
+							support > 0.2
 						}
 					}
 				}
@@ -1494,16 +1446,13 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						OR = {
-							is_pop_faction_type = isolationist
-							is_pop_faction_type = supremacist
-						}
-						support > 0.12
-						faction_approval < @cc_faction_danger_number
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = isolationist
+						is_pop_faction_type = supremacist
 					}
-					count > 0
+					support > 0.12
+					faction_approval < @cc_faction_danger_number
 				}
 			}
 		}
@@ -1647,7 +1596,7 @@ country_event = {
 			
 			modifier = {
 				factor = 0
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						OR = {
 							is_pop_faction_type = isolationist
@@ -1766,7 +1715,7 @@ country_event = {
 			
 			modifier = {
 				factor = 0
-				count_pop_factions = {
+				count_pop_faction = {
 					limit = {
 						OR = {
 							is_pop_faction_type = isolationist

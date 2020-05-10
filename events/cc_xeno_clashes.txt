@@ -36,33 +36,39 @@ planet_event = {
 
 		num_species > 1
 
-		any_owned_pop = {
-			cc_has_happiness = yes
-			is_enslaved = no
-			is_being_purged = no
-			is_robot_pop = no
+		any_owned_species = {
+			species_has_happiness_with_owner = root.owner
+			is_robotic_species = no
+			OR = {
+				has_citizenship_type = { country = root.owner type = citizenship_full }
+				has_citizenship_type = { country = root.owner type = citizenship_limited }
+				has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+				has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+			}
 			root = {
 				count_pops = {
-					limit = { is_same_species = prev.species }
+					limit = { is_same_species = prev }
 					count > 4
 				}
-				any_owned_pop = {
-					NOT = { is_same_species = prevprev.species }
-					cc_has_happiness = yes
-					is_enslaved = no
-					is_being_purged = no
-					is_robot_pop = no
-					
+				any_owned_species = {
+					NOT = { is_same_species = prevprev }
+					species_has_happiness_with_owner = root.owner
+					is_robotic_species = no
+					OR = {
+						has_citizenship_type = { country = root.owner type = citizenship_full }
+						has_citizenship_type = { country = root.owner type = citizenship_limited }
+						has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+						has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+					}
 					root = {
 						count_pops = {
-							limit = { is_same_species = prev.species }
+							limit = { is_same_species = prev }
 							count > 4
 						}
 					}
 				}
 			}
 		}
-		
 	}
 	
 	mean_time_to_happen = {
@@ -83,26 +89,33 @@ planet_event = {
 				modifier = {
 					factor = 0.75
 					
-					any_owned_pop = {
-						cc_has_happiness = yes
-						NOT = { is_robot_pop = yes }
-						is_enslaved = no
-						is_being_purged = no
+					any_owned_species = {
+						species_has_happiness_with_owner = root.owner
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = root.owner type = citizenship_full }
+							has_citizenship_type = { country = root.owner type = citizenship_limited }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+						}
 						root = {
 							count_pops = {
-								limit = { is_same_species = prev.species }
+								limit = { is_same_species = prev }
 								count > 10
 							}
-							any_owned_pop = {
-								NOT = { is_same_species = prevprev.species }
-								cc_has_happiness = yes
-								is_robot_pop = no
-								is_enslaved = no
-								is_being_purged = no
-								
+							any_owned_species = {
+								NOT = { is_same_species = prevprev }
+								species_has_happiness_with_owner = root.owner
+								is_robotic_species = no
+								OR = {
+									has_citizenship_type = { country = root.owner type = citizenship_full }
+									has_citizenship_type = { country = root.owner type = citizenship_limited }
+									has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+									has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+								}
 								root = {
 									count_pops = {
-										limit = { is_same_species = prev.species }
+										limit = { is_same_species = prev }
 										count > 10
 									}
 								}
@@ -154,27 +167,34 @@ planet_event = {
 				}
 				if = {
 					limit = {
-						any_owned_pop = {
-							cc_has_happiness = yes
-							NOT = { is_robot_pop = yes }
-							is_enslaved = no
-							is_being_purged = no
+						any_owned_species = {
+							species_has_happiness_with_owner = root.owner
+							is_robotic_species = no
+							OR = {
+								has_citizenship_type = { country = root.owner type = citizenship_full }
+								has_citizenship_type = { country = root.owner type = citizenship_limited }
+								has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+								has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+							}
 							root = {
 								count_pops = {
-									limit = { is_same_species = prev.species }
+									limit = { is_same_species = prev }
 									count > 4
 								}
-								any_owned_pop = {
-									NOT = { is_same_species = prevprev.species }
-									cc_has_happiness = yes
-									is_robot_pop = no
-									is_same_species = owner_species
-									is_enslaved = no
-									is_being_purged = no
-									
+								any_owned_species = {
+									NOT = { is_same_species = prevprev }
+									species_has_happiness_with_owner = root.owner
+									is_robotic_species = no
+									is_same_species = root.owner_species
+									OR = {
+										has_citizenship_type = { country = root.owner type = citizenship_full }
+										has_citizenship_type = { country = root.owner type = citizenship_limited }
+										has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+										has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+									}
 									root = {
 										count_pops = {
-											limit = { is_same_species = prev.species }
+											limit = { is_same_species = prev }
 											count > 4
 										}
 									}
@@ -189,42 +209,45 @@ planet_event = {
 					owner.species = { save_event_target_as = species1 }
 				}
 				else = {
-					random_owned_pop = {
+					random_owned_species = {
 						limit = {
-							cc_has_happiness = yes
-							NOT = { is_robot_pop = yes }
-							is_enslaved = no
-							is_being_purged = no
-							
+							species_has_happiness_with_owner = root.owner
+							is_robotic_species = no
+							OR = {
+								has_citizenship_type = { country = root.owner type = citizenship_full }
+								has_citizenship_type = { country = root.owner type = citizenship_limited }
+								has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+								has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+							}
 							root = {
 								count_pops = {
-									limit = { is_same_species = prev.species }
+									limit = { is_same_species = prev }
 									count > 4
 								}
 							}
 						}
-						species = {
-							save_event_target_as = species1
-						}
+						save_event_target_as = species1
 					}
 				}
-				random_owned_pop = {
+				random_owned_species = {
 					limit = {
-						species = { NOT = { is_same_value = event_target:species1 } }
-						cc_has_happiness = yes
-						NOT = { is_robot_pop = yes }
-						is_enslaved = no
-						is_being_purged = no
+						NOT = { is_same_value = event_target:species1 }
+						species_has_happiness_with_owner = root.owner
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = root.owner type = citizenship_full }
+							has_citizenship_type = { country = root.owner type = citizenship_limited }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+						}
 						root = {
 							count_pops = {
-								limit = { is_same_species = prev.species }
+								limit = { is_same_species = prev }
 								count > 4
 							}
 						}
 					}
-					species = {
-						save_event_target_as = species2
-					}
+					save_event_target_as = species2
 				}
 					
 					
@@ -1397,12 +1420,9 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = supremacist
-							support > 0.2
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = supremacist
+						support > 0.2
 					}
 				}
 			}
@@ -2008,12 +2028,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = supremacist
-						support > 0.2
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = supremacist
+					support > 0.2
 				}
 			}
 		}
@@ -2065,12 +2082,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = xenoist
-							NOT = { has_modifier = cc_xenos_disparaged }
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = xenoist
+						NOT = { has_modifier = cc_xenos_disparaged }
 					}
 				}
 				random_pop_faction = {

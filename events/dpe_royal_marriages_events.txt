@@ -713,12 +713,9 @@ country_event = {
 			modifier = { #it would increase attraction for a faction that doesn't like you
 				factor = 0.5
 				has_faction = xenoist
-				count_pop_factions = {
-					count = 1
-					limit = {
-						is_pop_faction_type = xenoist
-						faction_approval < 0.35
-					}
+				any_pop_faction = {
+					is_pop_faction_type = xenoist
+					faction_approval < 0.35
 				}
 			}
 			modifier = {
@@ -1328,12 +1325,9 @@ country_event = {
 						OR = {
 							has_ethic = ethic_xenophile
 							has_ethic = ethic_fanatic_xenophile
-							count_pop_factions = {
-								count = 1
-								limit = {
-									is_pop_faction_type = xenoist
-									support > 0.2
-								}
+							any_pop_faction = {
+								is_pop_faction_type = xenoist
+								support > 0.2
 							}
 						}
 					}
@@ -1341,12 +1335,9 @@ country_event = {
 						factor = 3
 						OR = {
 							has_ethic = ethic_fanatic_xenophile
-							count_pop_factions = {
-								count = 1
-								limit = {
-									is_pop_faction_type = xenoist
-									support > 0.3
-								}
+							any_pop_faction = {
+								is_pop_faction_type = xenoist
+								support > 0.3
 							}
 						}
 					}
@@ -1381,15 +1372,12 @@ country_event = {
 						OR = {
 							has_ethic = ethic_xenophobe
 							has_ethic = ethic_fanatic_xenophobe
-							count_pop_factions = {
-								count = 1
-								limit = {
-									OR = {
-										is_pop_faction_type = supremacist
-										is_pop_faction_type = isolationist
-									}
-									support > 0.2
+							any_pop_faction = {
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
 								}
+								support > 0.2
 							}
 						}
 					}
@@ -1414,15 +1402,12 @@ country_event = {
 						OR = {
 							has_ethic = ethic_xenophobe
 							has_ethic = ethic_fanatic_xenophobe
-							count_pop_factions = {
-								count = 1
-								limit = {
-									OR = {
-										is_pop_faction_type = supremacist
-										is_pop_faction_type = isolationist
-									}
-									support > 0.2
+							any_pop_faction = {
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
 								}
+								support > 0.2
 							}
 						}
 					}
@@ -1430,15 +1415,12 @@ country_event = {
 						factor = 3
 						OR = {
 							has_ethic = ethic_fanatic_xenophobe
-							count_pop_factions = {
-								count = 1
-								limit = {
-									OR = {
-										is_pop_faction_type = supremacist
-										is_pop_faction_type = isolationist
-									}
-									support > 0.3
+							any_pop_faction = {
+								OR = {
+									is_pop_faction_type = supremacist
+									is_pop_faction_type = isolationist
 								}
+								support > 0.3
 							}
 						}
 					}

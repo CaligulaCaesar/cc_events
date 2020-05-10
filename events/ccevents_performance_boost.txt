@@ -82,24 +82,28 @@ country_event = {
 							percentage < 0.4
 							limit = { is_same_species = root }
 						}
-						any_owned_pop = {
-							NOT = { is_same_species = root }
-							is_robot_pop = no
-							cc_has_happiness = yes
-							NOR = {
-								is_enslaved = yes
-								is_being_purged = yes
+						any_owned_species = {
+							NOT = { is_same_species = prev }
+							species_has_happiness_with_owner = prev
+							is_robotic_species = no
+							OR = {
+								has_citizenship_type = { country = prev type = citizenship_full }
+								has_citizenship_type = { country = prev type = citizenship_limited }
+								has_citizenship_type = { country = prev type = citizenship_caste_system }
+								has_citizenship_type = { country = prev type = citizenship_caste_system_limited }
 							}
 						}
 					}
 				
-					any_owned_pop = {
+					any_owned_species = {
 						NOT = { is_same_species = prev }
-						is_robot_pop = no
-						cc_has_happiness = yes
-						NOR = {
-							is_enslaved = yes
-							is_being_purged = yes
+						species_has_happiness_with_owner = prev
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = prev type = citizenship_full }
+							has_citizenship_type = { country = prev type = citizenship_limited }
+							has_citizenship_type = { country = prev type = citizenship_caste_system }
+							has_citizenship_type = { country = prev type = citizenship_caste_system_limited }
 						}
 						root = {
 							pop_percentage = {
@@ -128,16 +132,18 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_pop = {
+					any_owned_species = {
 						NOR = {
 							is_subspecies = prev
 							is_same_species = prev
 						}
-						is_robot_pop = no
-						cc_has_happiness = yes
-						NOR = {
-							is_enslaved = yes
-							is_being_purged = yes
+						species_has_happiness_with_owner = prev
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = prev type = citizenship_full }
+							has_citizenship_type = { country = prev type = citizenship_limited }
+							has_citizenship_type = { country = prev type = citizenship_caste_system }
+							has_citizenship_type = { country = prev type = citizenship_caste_system_limited }
 						}
 						prev = {
 							pop_percentage = {
@@ -160,15 +166,12 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophobe
 				}
 
-				count_pop_factions = {
-					count = 1
-					limit = {
-						OR = {
-							is_pop_faction_type = supremacist
-							is_pop_faction_type = isolationist
-						}
-						support > 0.18
+				any_pop_faction = {
+					OR = {
+						is_pop_faction_type = supremacist
+						is_pop_faction_type = isolationist
 					}
+					support > 0.18
 				}
 			}
 			set_timed_country_flag = {
@@ -179,12 +182,9 @@ country_event = {
 
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {	
-						is_pop_faction_type = traditionalist
-						support > 0.1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support > 0.1
 				}
 			}
 			set_timed_country_flag = {
@@ -194,12 +194,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {	
-						is_pop_faction_type = technologist
-						support > 0.33
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = technologist
+					support > 0.33
 				}
 			}
 			set_timed_country_flag = {
@@ -208,12 +205,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					count_pop_factions = {
-						limit = {	
-							is_pop_faction_type = technologist
-							support > 0.5
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support > 0.5
 					}
 				}
 				set_timed_country_flag = {
@@ -224,12 +218,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {	
-						is_pop_faction_type = progressive
-						support > 0.1
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.1
 				}
 			}
 			set_timed_country_flag = {
@@ -239,12 +230,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				count_pop_factions = {
-					limit = {	
-						is_pop_faction_type = totalitarian
-						support > 0.4
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = totalitarian
+					support > 0.4
 				}
 			}
 			set_timed_country_flag = {

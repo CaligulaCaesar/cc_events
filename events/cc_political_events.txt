@@ -121,7 +121,7 @@ country_event = {
 
 		any_owned_pop = {
 			NOT = { is_same_species = root }
-			cc_has_happiness = yes
+			pop_has_happiness = yes
 			is_robot_pop = no
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
@@ -160,7 +160,7 @@ country_event = {
 			limit = {
 				NOT = { is_same_species = root }
 				is_robot_pop = no
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
@@ -390,10 +390,10 @@ country_event = {
 		NOT = { ruler = { leader_of_faction = xenoist } }
 
 		
-		any_owned_pop = {
+		any_owned_species = {
 			NOT = { is_same_species = root }
-			is_robot_pop = no
-			cc_has_happiness = yes
+			is_robotic_species = no
+			species_has_happiness_with_owner = root
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
@@ -432,11 +432,11 @@ country_event = {
 			flag = recent_xenophobic_comments
 			years = 65
 		}
-		random_owned_pop = {
+		random_owned_species = {
 			limit = {
 				NOT = { is_same_species = root }
-				is_robot_pop = no
-				cc_has_happiness = yes
+				is_robotic_species = no
+				species_has_happiness_with_owner = root
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
@@ -853,13 +853,13 @@ country_event = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 
-		any_owned_pop = {
+		any_owned_species = {
 			NOR = {
 				is_subspecies = prev
 				is_same_species = prev
-				is_robot_pop = no
+				is_robotic_species = no
 			}
-			cc_has_happiness = yes
+			species_has_happiness_with_owner = root
 		}
 	}
 	
@@ -959,12 +959,12 @@ country_event = {
 		
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		
-		any_owned_pop = {
+		any_owned_species = {
 			NOR = {
 				is_same_species = root
-				is_robot_pop = no
+				is_robotic_species = yes
 			}
-			cc_has_happiness = yes
+			species_has_happiness_with_owner = root
 		}
 	}
 	
@@ -981,11 +981,11 @@ country_event = {
 		
 		random_owned_pop = {
 			limit = {
-				NOR = {
+				NOT = {
 					is_same_species = root
 				}
 				is_robot_pop = no
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 			}
 			save_event_target_as = xeno
 		}
@@ -1247,12 +1247,12 @@ country_event = {
 	
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	
-		any_owned_pop = {
+		any_owned_species = {
 			NOR = {
 				is_same_species = root
 			}
-			is_robot_pop = no
-			cc_has_happiness = yes
+			is_robotic_species = no
+			species_has_happiness_with_owner = root
 		}
 	}
 	
@@ -1268,7 +1268,7 @@ country_event = {
 					is_same_species = root
 				}
 				is_robot_pop = no
-				cc_has_happiness = yes
+				pop_has_happiness = yes
 			}
 			save_event_target_as = xeno
 		}
@@ -1438,13 +1438,10 @@ country_event = {
 		OR = {
 			has_ethic = ethic_materialist
 			has_ethic = ethic_fanatic_materialist
-			count_pop_factions = {
-				limit = {
-					is_pop_faction_type = technologist
-					support > 0.15
-					faction_approval > @cc_faction_happy_number
-				}
-				count = 1
+			any_pop_faction = {
+				is_pop_faction_type = technologist
+				support > 0.15
+				faction_approval > @cc_faction_happy_number
 			}
 		}
 		any_owned_planet = {

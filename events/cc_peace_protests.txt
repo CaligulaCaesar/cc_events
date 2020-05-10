@@ -12,12 +12,9 @@ country_event = {
 		is_at_war = yes
 		is_war_leader = yes
 		has_faction = prosperity
-		count_pop_factions = {
-			count = 1
-			limit = {
-				is_pop_faction_type = prosperity
-				support > 0.1
-			}
+		any_pop_faction = {
+			is_pop_faction_type = prosperity
+			support > 0.1
 		}
 		any_owned_planet = {
 			count_pops = {
@@ -369,12 +366,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_pop_factions = {
-					limit = {
-						is_pop_faction_type = progressive
-						support > 0.15
-					}
-					count = 1
+				any_pop_faction = {
+					is_pop_faction_type = progressive
+					support > 0.15
 				}
 			}
 		}
