@@ -101,13 +101,10 @@ country_event = {
 		num_owned_planets > 5
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		has_a_factional_revolt_active = no
-		count_pop_factions = {
-			limit = {
-				is_a_vanilla_faction = yes
-				support > 0.15
-				faction_approval < @cc_faction_danger_number
-			}
-			count > 0
+		any_pop_faction = {
+			is_a_vanilla_faction = yes
+			support > 0.15
+			faction_approval < @cc_faction_danger_number
 		}
 	}
 	
@@ -128,24 +125,18 @@ country_event = {
 				
 				modifier = {
 					factor = 0.5
-					count_pop_factions = {
-						limit = {
-							is_a_vanilla_faction = yes
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count > 0
+					any_pop_faction = {
+						is_a_vanilla_faction = yes
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
 					factor = 0
-					count_pop_factions = {
-						limit = {
-							is_a_vanilla_faction = yes
-							support > 0.2
-							faction_approval < @cc_faction_danger_number
-						}
-						count > 0
+					any_pop_faction = {
+						is_a_vanilla_faction = yes
+						support > 0.2
+						faction_approval < @cc_faction_danger_number
 					}
 				}
 			}
@@ -180,13 +171,10 @@ country_event = {
 		
 		has_a_factional_revolt_active = no
 
-		count_pop_factions = {
-			limit = {
-				is_a_vanilla_faction = yes
-				support > 0.15
-				faction_approval < @cc_faction_danger_number
-			}
-			count > 0
+		any_pop_faction = {
+			is_a_vanilla_faction = yes
+			support > 0.15
+			faction_approval < @cc_faction_danger_number
 		}
 	}
 	
@@ -204,26 +192,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = imperialist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = imperialist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = imperialist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = imperialist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = imperialist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = imperialist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -264,26 +246,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = isolationist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = isolationist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = isolationist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = isolationist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = isolationist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = isolationist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -324,26 +300,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = progressive
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = progressive
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = progressive
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = progressive
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = progressive
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = progressive
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -384,26 +354,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = prosperity
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = prosperity
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = prosperity
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = prosperity
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = prosperity
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = prosperity
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -444,26 +408,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = supremacist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = supremacist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = supremacist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = supremacist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = supremacist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = supremacist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -504,26 +462,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = technologist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = technologist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = technologist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = technologist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = technologist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = technologist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -564,26 +516,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = totalitarian
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = totalitarian
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = totalitarian
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = totalitarian
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = totalitarian
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = totalitarian
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -624,26 +570,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = traditionalist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = traditionalist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = traditionalist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = traditionalist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = traditionalist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = traditionalist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -684,26 +624,20 @@ country_event = {
 					factor = 0
 					NAND = {
 						has_faction = xenoist
-						count_pop_factions = {
-							limit = {
-								is_pop_faction_type = xenoist
-								support > 0.15
-								faction_approval < @cc_faction_danger_number
-							}
-							count = 1
+						any_pop_faction = {
+							is_pop_faction_type = xenoist
+							support > 0.15
+							faction_approval < @cc_faction_danger_number
 						}
 					}
 				}
 				modifier = {
 					factor = 2
 					has_faction = xenoist
-					count_pop_factions = {
-						limit = {
-							is_pop_faction_type = xenoist
-							support > 0.15
-							faction_approval < @cc_faction_high_danger_number
-						}
-						count = 1
+					any_pop_faction = {
+						is_pop_faction_type = xenoist
+						support > 0.15
+						faction_approval < @cc_faction_high_danger_number
 					}
 				}
 				modifier = {
@@ -808,13 +742,10 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = cc_faction_ended }
 		exists = event_target:cc_rebellious_faction
-		count_pop_factions = {
-			limit = {
-				is_same_value = event_target:cc_rebellious_faction
-				support > 0.15
-				faction_approval < @cc_faction_danger_number
-			}
-			count = 1
+		any_pop_faction = {
+			is_same_value = event_target:cc_rebellious_faction
+			support > 0.15
+			faction_approval < @cc_faction_danger_number
 		}
 		
 		any_owned_planet = {
@@ -1064,65 +995,62 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_country_flag = cc_faction_ended }
-		count_pop_factions = {
-			limit = {
-				is_a_vanilla_faction = yes
-				NOT = { is_same_value = event_target:cc_rebellious_faction }
-				faction_approval < @cc_faction_danger_number
-				if = {
-					limit = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = xenoist
-								is_pop_faction_type = supremacist
-								is_pop_faction_type = isolationist
-							}
+		any_pop_faction = {
+			is_a_vanilla_faction = yes
+			NOT = { is_same_value = event_target:cc_rebellious_faction }
+			faction_approval < @cc_faction_danger_number
+			if = {
+				limit = {
+					event_target:cc_rebellious_faction = {
+						OR = {
+							is_pop_faction_type = xenoist
+							is_pop_faction_type = supremacist
+							is_pop_faction_type = isolationist
 						}
-					}
-					NOR = {
-						is_pop_faction_type = supremacist
-						is_pop_faction_type = isolationist
-						is_pop_faction_type = xenoist
 					}
 				}
-				else_if = {
-					limit = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = totalitarian
-								is_pop_faction_type = progressive
-							}
-						}
-					}
-					NOT = { is_pop_faction_type = totalitarian }
-					NOT = { is_pop_faction_type = progressive }
-				}
-				else_if = {
-					limit = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = traditionalist
-								is_pop_faction_type = technologist
-							}
-						}
-					}
-					NOT = { is_pop_faction_type = traditionalist }
-					NOT = { is_pop_faction_type = technologist }
-				}
-				else_if = {
-					limit = {
-						event_target:cc_rebellious_faction = {
-							OR = {
-								is_pop_faction_type = prosperity
-								is_pop_faction_type = imperialist
-							}
-						}
-					}
-					NOT = { is_pop_faction_type = prosperity }
-					NOT = { is_pop_faction_type = imperialist }
+				NOR = {
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = xenoist
 				}
 			}
-			count > 0
+			else_if = {
+				limit = {
+					event_target:cc_rebellious_faction = {
+						OR = {
+							is_pop_faction_type = totalitarian
+							is_pop_faction_type = progressive
+						}
+					}
+				}
+				NOT = { is_pop_faction_type = totalitarian }
+				NOT = { is_pop_faction_type = progressive }
+			}
+			else_if = {
+				limit = {
+					event_target:cc_rebellious_faction = {
+						OR = {
+							is_pop_faction_type = traditionalist
+							is_pop_faction_type = technologist
+						}
+					}
+				}
+				NOT = { is_pop_faction_type = traditionalist }
+				NOT = { is_pop_faction_type = technologist }
+			}
+			else_if = {
+				limit = {
+					event_target:cc_rebellious_faction = {
+						OR = {
+							is_pop_faction_type = prosperity
+							is_pop_faction_type = imperialist
+						}
+					}
+				}
+				NOT = { is_pop_faction_type = prosperity }
+				NOT = { is_pop_faction_type = imperialist }
+			}
 		}
 	}
 	
