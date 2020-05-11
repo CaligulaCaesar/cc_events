@@ -308,7 +308,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				count_popany_pop_factionfactions = {
+				any_pop_faction = {
 					is_pop_faction_type = totalitarian
 					support < 0.05
 				}
@@ -378,7 +378,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				count_popany_pop_factionfactions = {
+				any_pop_faction = {
 					is_pop_faction_type = totalitarian
 					support < 0.05
 				}
