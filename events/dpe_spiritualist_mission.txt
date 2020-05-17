@@ -4582,6 +4582,12 @@ country_event = {
 	picture = GFX_evt_city_ruins
 
 	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			has_modifier = dpe_hosting_spiritualist_mission_planet
+		}
+	}
 	
 	immediate = {
 		random_owned_planet = {

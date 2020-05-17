@@ -6,7 +6,7 @@ country_event = {
 	id = cc_events_mod.7
 	title = cc_events_mod.7.name
 	desc = {
-		trigger = { has_faction = supremacist }
+		trigger = { NOT = { has_faction = supremacist } }
 		text = cc_events_mod.7.desc_nophobe
 	}
 	desc = {
