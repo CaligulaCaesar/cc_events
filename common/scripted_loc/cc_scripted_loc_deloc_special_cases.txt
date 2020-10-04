@@ -10,11 +10,11 @@
 defined_text = {
 	name = GetXEReverse
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = DELOC_e
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = DELOC_X
 	}
 }
@@ -22,11 +22,11 @@ defined_text = {
 defined_text = {
 	name = GetEmErReverse
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = DELOC_er
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = DELOC_em
 	}
 }

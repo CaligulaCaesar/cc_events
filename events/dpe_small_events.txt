@@ -1665,29 +1665,33 @@ planet_event = {
 
 		num_pops > 20
 		
+		habitable_structure = no
+		
 		if = {
 			limit = {
 				years_passed < 50
 			}
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = energy
-						amount > 2.5
-					}
-				}
-				count > 8
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 20
+			}
+		}
+		else_if = {
+			limit = {
+				years_passed < 75
+			}
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 30
 			}
 		}
 		else = {
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = energy
-						amount > 3.5
-					}
-				}
-				count > 11
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 40
 			}
 		}
 
@@ -1762,30 +1766,34 @@ planet_event = {
 		}
 
 		num_pops > 20
+
+		habitable_structure = no
 		
 		if = {
 			limit = {
 				years_passed < 50
 			}
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = energy
-						amount > 2.5
-					}
-				}
-				count > 8
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 20
+			}
+		}
+		else_if = {
+			limit = {
+				years_passed < 75
+			}
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 30
 			}
 		}
 		else = {
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = energy
-						amount > 3.5
-					}
-				}
-				count > 11
+			planet_resource_compare = {
+				type = produces
+				resource = energy
+				value >= 40
 			}
 		}
 
@@ -1862,29 +1870,33 @@ planet_event = {
 
 		num_pops > 20
 		
+		habitable_structure = no
+		
 		if = {
 			limit = {
 				years_passed < 50
 			}
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = minerals
-						amount > 2.5
-					}
-				}
-				count > 8
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 20
+			}
+		}
+		else_if = {
+			limit = {
+				years_passed < 75
+			}
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 30
 			}
 		}
 		else = {
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = minerals
-						amount > 3.5
-					}
-				}
-				count > 11
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 40
 			}
 		}
 
@@ -1960,29 +1972,33 @@ planet_event = {
 
 		num_pops > 20
 		
+		habitable_structure = no
+		
 		if = {
 			limit = {
 				years_passed < 50
 			}
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = minerals
-						amount > 2.5
-					}
-				}
-				count > 8
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 20
+			}
+		}
+		else_if = {
+			limit = {
+				years_passed < 75
+			}
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 30
 			}
 		}
 		else = {
-			count_pops = {
-				limit = {
-					pop_produces_resource = {
-						type = minerals
-						amount > 3.5
-					}
-				}
-				count > 11
+			planet_resource_compare = {
+				type = produces
+				resource = minerals
+				value >= 40
 			}
 		}
 

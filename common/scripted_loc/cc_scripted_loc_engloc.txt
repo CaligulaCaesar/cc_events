@@ -11,11 +11,11 @@
 defined_text = {
 	name = GetIsAre
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_is
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_are
 	}
 }
@@ -24,11 +24,11 @@ defined_text = {
 defined_text = {
 	name = GetHasHave
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_has
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_have
 	}
 }
@@ -37,11 +37,11 @@ defined_text = {
 defined_text = {
 	name = GetDoesDo
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_does
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_do
 	}
 }
@@ -50,11 +50,11 @@ defined_text = {
 defined_text = {
 	name = GetWasWere
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_was
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_were
 	}
 }
@@ -63,11 +63,11 @@ defined_text = {
 defined_text = {
 	name = GetFVes
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_f
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_ves
 	}
 }
@@ -76,11 +76,11 @@ defined_text = {
 defined_text = {
 	name = GetSXX
 	text = {
-		trigger = { cc_loc_leader_genders = yes }
+		trigger = { OR = { gender = male gender = female } }
 		localization_key = ENGLOC_s
 	}
 	text = {
-		trigger = { cc_loc_leader_nogenders = yes }
+		trigger = { OR = { gender = indeterminable } }
 		localization_key = ENGLOC_xx
 	}
 }

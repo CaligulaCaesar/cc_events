@@ -9,11 +9,11 @@
 defined_text = {
 	name = GetOALead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_o
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_a
 	}
 }
@@ -22,11 +22,11 @@ defined_text = {
 defined_text = {
 	name = GetOALeadCap
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_O
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_A
 	}
 }
@@ -36,11 +36,11 @@ defined_text = {
 defined_text = {
 	name = GetUmUmaLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_um
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_uma
 	}
 }
@@ -48,11 +48,11 @@ defined_text = {
 defined_text = {
 	name = GetUmUmaLeadCap
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_Um
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_Uma
 	}
 }
@@ -60,11 +60,11 @@ defined_text = {
 defined_text = {
 	name = GetUnsUmasLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_uns
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_umas
 	}
 }
@@ -72,11 +72,11 @@ defined_text = {
 defined_text = {
 	name = GetUnsUmasLeadCap
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_Uns
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_Umas
 	}
 }
@@ -86,11 +86,11 @@ defined_text = {
 defined_text = {
 	name = GetOsAsLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_os
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_as
 	}
 }
@@ -99,11 +99,11 @@ defined_text = {
 defined_text = {
 	name = GetEsEsaLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_ees
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_esa
 	}
 }
@@ -112,11 +112,11 @@ defined_text = {
 defined_text = {
 	name = GetEsAsLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_es
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_as
 	}
 }
@@ -125,11 +125,11 @@ defined_text = {
 defined_text = {
 	name = GetOrRizLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_or
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_riz
 	}
 }
@@ -138,11 +138,11 @@ defined_text = {
 defined_text = {
 	name = GetOresRizesLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_ores
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_rizes
 	}
 }
@@ -151,11 +151,11 @@ defined_text = {
 defined_text = {
 	name = GetAoOnaLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_ao
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_ona
 	}
 }
@@ -164,11 +164,11 @@ defined_text = {
 defined_text = {
 	name = GetOesOnasLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_oes
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_onas
 	}
 }
@@ -179,11 +179,11 @@ defined_text = {
 defined_text = {
 	name = GetEuEiaLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_eu
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_eia
 	}
 }
@@ -192,11 +192,11 @@ defined_text = {
 defined_text = {
 	name = GetEusEiasLead
 	text = {
-		trigger = { cc_loc_leader_masc = yes }
+		trigger = { gender = male }
 		localization_key = PORLOC_eus
 	}
 	text = {
-		trigger = { cc_loc_leader_fem = yes }
+		trigger = { NOT = { gender = male } }
 		localization_key = PORLOC_eias
 	}
 }
