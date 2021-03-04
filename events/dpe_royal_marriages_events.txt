@@ -222,23 +222,42 @@ country_event = { #test event, use to make the other country xenophobic
 country_event = {
 	id = dpe_royal_marriages_events.1
 	title = dpe_royal_marriages_events.1.name
+	# desc = {
+	# 	trigger = {
+	# 		NOT = { has_country_flag = royal_marriage_chain_happened }
+	# 		NOT = { has_ascension_perk = ap_xeno_compatibility }
+	# 		NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+	# 	}
+	# 	text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing #first time without gene_splicing unused for now
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = { has_country_flag = royal_marriage_chain_happened }
+	# 		OR = {
+	# 			has_ascension_perk = ap_xeno_compatibility
+	# 			event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+	# 		}
+	# 	}
+	# 	text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing
+	# }
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = royal_marriage_chain_happened }
-			NOT = { has_ascension_perk = ap_xeno_compatibility }
-			NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
-		}
-		text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing #first time without gene_splicing unused for now
-	}
-	desc = {
-		trigger = {
-			NOT = { has_country_flag = royal_marriage_chain_happened }
 			OR = {
-				has_ascension_perk = ap_xeno_compatibility
-				event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+				AND = {
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					NOT = { has_ascension_perk = ap_xeno_compatibility }
+					NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+				}
+				AND = {
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					OR = {
+						has_ascension_perk = ap_xeno_compatibility
+						event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+					}
+				}
 			}
 		}
-		text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing
+		text = dpe_royal_marriages_events.1.desc.first_time.gene_splicing #first time without gene_splicing unused for now
 	}
 	desc = {
 		trigger = {
@@ -561,23 +580,42 @@ country_event = {
 country_event = {
 	id = dpe_royal_marriages_events.2
 	title = dpe_royal_marriages_events.2.name
+	# desc = {
+	# 	trigger = {
+	# 		NOT = { has_country_flag = royal_marriage_chain_happened }
+	# 		NOT = { has_ascension_perk = ap_xeno_compatibility }
+	# 		NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+	# 	}
+	# 	text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing #first time without gene_splicing unused for now
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = { has_country_flag = royal_marriage_chain_happened }
+	# 		OR = {
+	# 			has_ascension_perk = ap_xeno_compatibility
+	# 			event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+	# 		}
+	# 	}
+	# 	text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing
+	# }
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = royal_marriage_chain_happened }
-			NOT = { has_ascension_perk = ap_xeno_compatibility }
-			NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
-		}
-		text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing #first time without gene_splicing unused for now
-	}
-	desc = {
-		trigger = {
-			NOT = { has_country_flag = royal_marriage_chain_happened }
 			OR = {
-				has_ascension_perk = ap_xeno_compatibility
-				event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+				AND = {
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					NOT = { has_ascension_perk = ap_xeno_compatibility }
+					NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
+				}
+				AND = {
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					OR = {
+						has_ascension_perk = ap_xeno_compatibility
+						event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility }
+					}
+				}
 			}
 		}
-		text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing
+		text = dpe_royal_marriages_events.2.desc.first_time.gene_splicing #first time without gene_splicing unused for now
 	}
 	desc = {
 		trigger = {
