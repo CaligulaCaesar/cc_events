@@ -1,7 +1,7 @@
 ﻿l_english:
 
  dpe_fe.1.name:0 "Seeking the Help of the Ancients?"
- dpe_fe.1.desc:0 "Despite the massive progress that has been made over the last few centuries, there are some illnesses that the best [root.GetSpeciesAdj] doctors cannot heal. It is [root.GetRulerTitle] [root.GetRulerName]'s misfortune to have been diagnosed with one such disease. The doctors are stumped by the sudden onset of [root.leader.GetHisHer] rare degenerative brain condition, which has left [root.leader.GetHimHer] with mere months left to live. There are however societies so advanced that what would be a miracle to our people is a commonplace fact of life there - societies where even diseases such as this are extinct. However, drawing their attention upon oneself can be risky, for their mood is unpredictable and their wrath terrible. Nevertheless, perhaps the Ancients would be willing to save [root.GetRulerName], if offered the right price?"
+ dpe_fe.1.desc:0 "Despite the massive progress that has been made over the last few centuries, there are some illnesses that the best [root.GetAdj] doctors cannot heal. It is [root.GetRulerTitle] [root.GetRulerName]'s misfortune to have been diagnosed with one such disease. The doctors are stumped by the sudden onset of [root.leader.GetHisHer] rare degenerative brain condition, which has left [root.leader.GetHimHer] with mere months left to live. There are however societies so advanced that what would be a miracle to our people is a commonplace fact of life there - societies where even diseases such as this are extinct. However, drawing their attention upon oneself can be risky, for their mood is unpredictable and their wrath terrible. Nevertheless, perhaps the Ancients would be willing to save [root.GetRulerName], if offered the right price?"
  dpe_fe.1.materialist:0 "Approach the [dpe_materialist_fe.GetSpeciesNamePlural]."
  dpe_fe.1.spiritualist:0 "Approach the [dpe_spiritualist_fe.GetSpeciesNamePlural]."
  dpe_fe.1.xenophile:0 "Approach the [dpe_xenophile_fe.GetSpeciesNamePlural]."
@@ -25,20 +25,20 @@
  
  dpe_fe.2.name:0 "The [dpe_fe.GetName] responds"
  dpe_fe.2.desc.friendly:0 "We will help our friends, for a small price."
- dpe_fe.2.desc.angry:0 "We do not help lesser mortals like you, [root.GetSpeciesName]."
- dpe_fe.2.desc.change:0 "We will help you if you change your ways, [root.GetSpeciesName]."
- dpe_fe.2.desc.pay:0 "We will help you, [root.GetSpeciesName], at a price."
+ dpe_fe.2.desc.angry:0 "We do not help lesser mortals like you, [root.ruler.GetSpeciesName]."
+ dpe_fe.2.desc.change:0 "We will help you if you change your ways, [root.ruler.GetSpeciesName]."
+ dpe_fe.2.desc.pay:0 "We will help you, [root.ruler.GetSpeciesName], at a price."
  dpe_fe.2.change:0 "I will do what must be done."
  dpe_fe.2.pay:0 "I will gladly pay this price for survival."
  dpe_fe.2.friendly:0 "$dpe_fe.2.pay$"
  dpe_fe.2.nopay:0 "The price is too high - I will die a mortal death."
 
-dpe_paying_spirFE:0 "Paying Fallen Empire"
-dpe_paying_friendly_spirFE:0 "$dpe_paying_spirFE$"
-dpe_paying_xenoFE:0 "$dpe_paying_spirFE$"
-dpe_paying_friendly_xenoFE:0 "$dpe_paying_spirFE$"
-dpe_paying_matFE:0 "$dpe_paying_spirFE$"
-dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
+ dpe_paying_spirFE:0 "Paying Fallen Empire"
+ dpe_paying_friendly_spirFE:0 "$dpe_paying_spirFE$"
+ dpe_paying_xenoFE:0 "$dpe_paying_spirFE$"
+ dpe_paying_friendly_xenoFE:0 "$dpe_paying_spirFE$"
+ dpe_paying_matFE:0 "$dpe_paying_spirFE$"
+ dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
 
  dpe_fe.3.name:0 "[root.GetRulerTitle] [root.GetRulerName] is healed"
  dpe_fe.3.desc:0 "We have healed your leader. As a sign of our favour for you, we have added a small addition to [root.leader.GetHisHer] abilities. May [root.leader.GetSheHe] use it well!"
@@ -47,17 +47,17 @@ dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
  dpe_fe.3.option.materialist:0 "The trait $leader_trait_ruler_cyborg$ is added to [root.leader.GetName]."
  dpe_fe.3.option:0 "Thank you for your help. We are forever in your debt."
  
-dpe_fe_disturbed_us:0 "Disturbed us"
-dpe_spurned_our_help:0 "Spurned our help"
-dpe_sought_our_help:0 "Sought our help"
+ dpe_fe_disturbed_us:0 "Disturbed us"
+ dpe_spurned_our_help:0 "Spurned our help"
+ dpe_sought_our_help:0 "Sought our help"
 
-dpe_fe.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] dies"
-dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative brain condition suddenly deteriorated before the [dpe_fe.GetName]'s healers could look at [root.Leader.GetHimHer]."
+ dpe_fe.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] dies"
+ dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative brain condition suddenly deteriorated before the [dpe_fe.GetName]'s healers could look at [root.Leader.GetHimHer]."
  
-dpe_leader_trait_reinvigorated:0 "Reinvigorated"
-dpe_leader_trait_reinvigorated_desc:0 "This leader feels young and fresh again, having been healed by the Ancients."
- 
-dpe_leader_die_soon:0 "[root.GetRulerTitle] [root.GetRulerName] will die soon."
+ dpe_leader_trait_reinvigorated:0 "Reinvigorated"
+ dpe_leader_trait_reinvigorated_desc:0 "This leader feels young and fresh again, having been healed by the Ancients."
+  
+ dpe_leader_die_soon:0 "[root.GetRulerTitle] [root.GetRulerName] will die soon."
 
 #Second chain
  dpe_fe.20.name:0 "Escapee of a Fallen Empire"
@@ -66,17 +66,17 @@ dpe_leader_die_soon:0 "[root.GetRulerTitle] [root.GetRulerName] will die soon."
  dpe_fe.20.tooltip:0 "[dpe_escaped_scientist.GetName], a level 5 scientist with the traits $leader_trait_scientist_erudite$, $leader_trait_maniacal$ and $dpe_leader_trait_ancient_knowledge$ is added to the leader pool."
  
  dpe_fe.22.name:0 "[dpe_escaped_scientist.GetName] is Wanted"
- dpe_fe.22.desc:0 "Dear [root.GetSpeciesName]. It has come to our attention that you are harbouring the deranged criminal, [dpe_escaped_scientist.GetName]. [dpe_escaped_scientist.GetSheHeCap] committed unspeakable atrocities whilst escaping from our authorities with a large cache of dangerous technology. It is imperative that [dpe_escaped_scientist.GetSheHe] is returned to us so that [dpe_escaped_scientist.GetSheHe] can face trial for [dpe_escaped_scientist.GetHisHer] crimes... and that you surrender [dpe_escaped_scientist.GetHisHer] cache to us - for your own safety, it cannot be left in the hands of an immature race."
+ dpe_fe.22.desc:0 "Dear [root.ruler.GetSpeciesName]. It has come to our attention that you are harbouring the deranged criminal, [dpe_escaped_scientist.GetName]. [dpe_escaped_scientist.GetSheHeCap] committed unspeakable atrocities whilst escaping from our authorities with a large cache of dangerous technology. It is imperative that [dpe_escaped_scientist.GetSheHe] is returned to us so that [dpe_escaped_scientist.GetSheHe] can face trial for [dpe_escaped_scientist.GetHisHer] crimes... and that you surrender [dpe_escaped_scientist.GetHisHer] cache to us - for your own safety, it cannot be left in the hands of an immature race."
  dpe_fe.22.A:0 "[dpe_escaped_scientist.GetSheHeCap] will find a refuge with us."
- dpe_fe.22.A.response:0 "You will live to regret this, [root.GetSpeciesName]."
+ dpe_fe.22.A.response:0 "You will live to regret this, [root.ruler.GetSpeciesName]."
  dpe_fe.22.B:0 "We will return [dpe_escaped_scientist.GetHimHer] and [dpe_escaped_scientist.GetHisHer] cache to you."
  dpe_fe.22.B.tooltip:0 "[dpe_escaped_scientist.GetName] is removed from the leader pool."
- dpe_fe.22.B.response:0 "You have made the right choice, [root.GetSpeciesName]."
+ dpe_fe.22.B.response:0 "You have made the right choice, [root.ruler.GetSpeciesName]."
  dpe_fe.22.C:0 "(Lie) We will return [dpe_escaped_scientist.GetHimHer] to you. But what cache?"
  dpe_fe.22.C.tooltip:0 "$dpe_fe.22.B.tooltip$ The [root.GetName] will secretly seize [dpe_escaped_scientist.GetName]'s cache of technologies:"
- dpe_fe.22.C.response:0 "Be careful, [root.GetSpeciesName]. You are playing with fire."
+ dpe_fe.22.C.response:0 "Be careful, [root.ruler.GetSpeciesName]. You are playing with fire."
  
 
-dpe_leader_trait_ancient_knowledge:0 "Ancient Knowledge"
-dpe_leader_trait_ancient_knowledge_desc:0 "This scientist has seen the workings of a Fallen Empire first-hand and has a cache of ancient technologies they are bent on reproducing."
+ dpe_leader_trait_ancient_knowledge:0 "Ancient Knowledge"
+ dpe_leader_trait_ancient_knowledge_desc:0 "This scientist has seen the workings of a Fallen Empire first-hand and has a cache of ancient technologies they are bent on reproducing."
  

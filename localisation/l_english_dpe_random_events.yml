@@ -24,25 +24,33 @@ revolutionary_mobilisation_0_5_desc:0 "$revolutionary_mobilisation_desc$"
 
 
 cc_events_mod.57.name:0 "Start-up on the Rise"
-cc_events_mod.57.desc:0 "A privately owned Merchant Corporation on [dpe_merchant_planet.GetName] has been gaining popularity among your people. The company's scientists have developed several original uses of modern computing technology that make feats that were until recently beyond the general populace's wildest dreams possible! The CEO of the company, [dpe_CEO.GetName], is quickly becoming one of the richest individuals in the [root.GetName]. [dpe_CEO.GetSheHeCap] has asked for a patent to this product to secure [dpe_CEO.GetHisHer] new position."
+cc_events_mod.57.desc:0 "A high-tech start-up on [dpe_merchant_planet.GetName] has been gaining popularity among the people. The group's scientists have developed several original uses of modern computing technology that make possible feats that were until recently beyond the general populace's wildest dreams! The lead innovator, [dpe_CEO.GetName], is quickly becoming one of the most popular and powerful individuals in the [root.GetName]. [dpe_CEO.GetSheHeCap] has asked for exclusive rights to develop the technology, to secure [dpe_CEO.GetHisHer] new position."
+#cc_events_mod.57.desc:0 "A privately owned Merchant Corporation on [dpe_merchant_planet.GetName] has been gaining popularity among your people. The company's scientists have developed several original uses of modern computing technology that make feats that were until recently beyond the general populace's wildest dreams possible! The CEO of the company, [dpe_CEO.GetName], is quickly becoming one of the richest individuals in the [root.GetName]. [dpe_CEO.GetSheHeCap] has asked for a patent to this product to secure [dpe_CEO.GetHisHer] new position."
 
-cc_events_mod.57.A:0 "[dpe_CEO.GetSheHeCap] will have [dpe_CEO.GetHisHer] patent."
+cc_events_mod.57.A:0 "[dpe_CEO.GetSheHeCap] will have [dpe_CEO.GetHisHer] patents."
 cc_events_mod.57.B:0 "Seize the research - it's crucial to the national interest."
-cc_events_mod.57.C:0 "Deny the patent and encourage competition."
+cc_events_mod.57.C:0 "Deny the patents and encourage competition."
 
 dpe_encouraged_competition:0 "Encouraged Competition"
-dpe_disgruntled_CEO:0 "Disgruntled CEO"
-dpe_disgruntled_CEO_desc:0 "An important local businessman had his request for patents turned down by the government."
+
+dpe_disgruntled_CEO:0 "Disgruntled Innovator"
+dpe_disgruntled_CEO_desc:0 "An important local innovator had their request for patents turned down by the government."
+#dpe_disgruntled_CEO:0 "Disgruntled CEO"
+#dpe_disgruntled_CEO_desc:0 "An important local businessman had his request for patents turned down by the government."
+
 dpe_patents_national_interest:0 "Protected the National Interest"
-dpe_patents_denied_faction:0 "Patent Denied"
-dpe_innovative_CEO:0 "Innovative CEO"
-dpe_innovative_CEO_desc:0 "An innovative CEO has put the planet on the map in terms of business opportunities."
+dpe_patents_denied_faction:0 "Patents Denied"
+
+dpe_innovative_CEO:0 "Technological Innovator"
+dpe_innovative_CEO_desc:0 "A popular innovator has put the planet on the galactic map in terms of high-tech opportunities."
+#dpe_innovative_CEO:0 "Innovative CEO"
+#dpe_innovative_CEO_desc:0 "An innovative CEO has put the planet on the map in terms of business opportunities."
 dpe_innovative_CEO_faction:0 "$dpe_innovative_CEO$"
 
 
 #Unity Planet
 dpe_smallpos_events.2.name:0 "[root.GetName] salutes [root.owner.GetRulerTitle] [root.owner.GetRulerName]"
-dpe_smallpos_events.2.desc:0 "[root.GetName] has for some time been one of the strongest supporters of the [root.owner.GetName]'s government. Today, their planetary major unveiled a statue to [root.owner.GetRulerTitle] [root.owner.GetRulerName] to honour [root.owner.leader.GetHisHer] services to the planet and the state and to prove the planet's dedication to the [root.owner.GetName]."
+dpe_smallpos_events.2.desc:0 "[root.GetName] has for some time been one of the strongest supporters of the [root.owner.GetAdj] government. Today, its planetary administration unveiled a statue to [root.owner.GetRulerTitle] [root.owner.GetRulerName] to honour [root.owner.leader.GetHisHer] services to the planet and the state, and to prove the planet's dedication to the [root.owner.GetName]."
 
 dpe_unity_planet:0 "Government Supporters"
 dpe_unity_planet_desc:0 "The citizens of this planet count as some of the government's strongest supporters."
@@ -50,11 +58,11 @@ dpe_unity_planet_desc:0 "The citizens of this planet count as some of the govern
 
 #Leader Debate
 dpe_smallpos_events.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] is persuasive!"
-dpe_smallpos_events.4.desc:0 "The [dpe_dissident_faction.GetName], led by [dpe_dissident_faction_leader.GetName] has for some time been highly critical of government policy, creating disunity within the state. Today, in a debate broadcast to the entire [root.GetSpeciesAdj] population, [root.GetRulerTitle] [root.GetRulerName] faced [dpe_dissident_faction_leader.GetName] in a debate and was able to convincingly rebuff all of the latter's criticisms, in the process articulating a positive vision for the future behind which all [root.GetSpeciesNamePlural] can unite."
+dpe_smallpos_events.4.desc:0 "The [dpe_dissident_faction.GetName], led by [dpe_dissident_faction_leader.GetName], has for some time been highly critical of government policy, creating disunity within the state. Today, in a debate broadcast to the entire [root.GetAdj] population, [root.GetRulerTitle] [root.GetRulerName] faced [dpe_dissident_faction_leader.GetName] in a debate and was able to convincingly rebuff all of the latter's criticisms, in the process articulating a positive vision for the future behind which all [root.GetAdj] citizens can unite."
 dpe_smallpos_events.4.option:0 "We can all move forwards with renewed optimism!"
 
 dpe_smallpos_events.5.name:0 "[root.GetRulerTitle] [root.GetRulerName] fails to persuade!"
-dpe_smallpos_events.5.desc:0 "The [dpe_dissident_faction.GetName], led by [dpe_dissident_faction_leader.GetName] has for some time been highly critical of government policy, creating disunity within the state. Today, in a debate broadcast to the entire [root.GetSpeciesAdj] population, [root.GetRulerTitle] [root.GetRulerName] faced [dpe_dissident_faction_leader.GetName] in a debate in an attempt to rebuff the latter's criticisms. However, the attempt backfired, and [dpe_dissident_faction_leader.GetName] was able to come across as the more convincing. This has further weakened the power of the ruling faction."
+dpe_smallpos_events.5.desc:0 "The [dpe_dissident_faction.GetName], led by [dpe_dissident_faction_leader.GetName], has for some time been highly critical of government policy, creating disunity within the state. Today, in a debate broadcast to the entire [root.GetAdj] population, [root.GetRulerTitle] [root.GetRulerName] faced [dpe_dissident_faction_leader.GetName] in a debate in an attempt to rebuff the latter's criticisms. However, the attempt backfired, and [dpe_dissident_faction_leader.GetName] was able to come across as the more convincing. This has further weakened the power of the ruling faction."
 
 dpe_persuasive_leader:0 "Persuasive Ruler"
 dpe_unpersuasive_leader:0 "Unconvincing Ruler"
@@ -85,7 +93,7 @@ dpe_planet_talented_socscientist_desc:0 "This planet benefits from the services 
 
 
 dpe_smallpos_events.12.name:0 "Talented General Uncovered"
-dpe_smallpos_events.12.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], has impressed visiting [root.GetSpeciesAdj] Army Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made a General of the Army. However, [dpe_talent_planet.GetName] are equally keen on keeping [dpe_talent_leader.GetHimHer] and putting [dpe_talent_leader.GetHimHer] in charge of the defence of the planet."
+dpe_smallpos_events.12.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], has impressed visiting [root.GetAdj] Army Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made a General of the Army. However, [dpe_talent_planet.GetName] are equally keen on keeping [dpe_talent_leader.GetHimHer] and putting [dpe_talent_leader.GetHimHer] in charge of the defence of the planet."
 dpe_smallpos_events.12.A:0 "Hire [dpe_talent_leader.GetHimHer]."
 dpe_smallpos_events.12.A.tooltip:0 "[dpe_talent_leader.GetName], a level 2 general with the traits $leader_trait_dpe_talented$ and $leader_trait_charismatic$, is added to the leader pool."
 dpe_smallpos_events.12.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] of more use to [dpe_talent_planet.GetName]."
@@ -95,7 +103,7 @@ dpe_planet_talented_general_desc:0 "This planet benefits from the services of a 
 
 
 dpe_smallpos_events.13.name:0 "Talented Official Uncovered"
-dpe_smallpos_events.13.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], has impressed visiting [root.GetSpeciesAdj] Officials with [dpe_talent_leader.GetHisHer] leadership abilities and good governance record. They have put [dpe_talent_leader.GetHisHer] name forward to be given higher responsibilities within the [root.GetName]'s governance structure. However, [dpe_talent_leader.GetSheHe] is beloved by [dpe_talent_planet.GetName]'s population, who would be sad to see [dpe_talent_leader.GetHimHer] go."
+dpe_smallpos_events.13.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], has impressed visiting [root.GetAdj] Officials with [dpe_talent_leader.GetHisHer] leadership abilities and good governance record. They have put [dpe_talent_leader.GetHisHer] name forward to be given higher responsibilities within the [root.GetName]'s governance structure. However, [dpe_talent_leader.GetSheHe] is beloved by [dpe_talent_planet.GetName]'s population, who would be sad to see [dpe_talent_leader.GetHimHer] go."
 dpe_smallpos_events.13.A:0 "Hire [dpe_talent_leader.GetHimHer]."
 dpe_smallpos_events.13.A.tooltip:0 "[dpe_talent_leader.GetName], a level 2 governor with the traits $leader_trait_dpe_talented$ and $leader_trait_intellectual$, is added to the leader pool."
 dpe_smallpos_events.13.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] of more use to [dpe_talent_planet.GetName]."
@@ -105,7 +113,7 @@ dpe_planet_talented_governor_desc:0 "This planet benefits from the services of a
 
 
 dpe_smallpos_events.14.name:0 "Talented Naval Officer Uncovered"
-dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], the naval officer in charge of [dpe_talent_starport_system.GetName] Starbase, has impressed visiting [root.GetSpeciesAdj] Navy Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made an Admiral of the Fleet."
+dpe_smallpos_events.14.desc:0 "[dpe_talent_leader.GetName], the naval officer in charge of [dpe_talent_starport_system.GetName] Starbase, has impressed visiting [root.GetAdj] Navy Officers with [dpe_talent_leader.GetHisHer] leadership abilities - so much so that they have suggested that [dpe_talent_leader.GetSheHe] be made an Admiral of the Fleet."
 dpe_smallpos_events.14.A:0 "Hire [dpe_talent_leader.GetHimHer]."
 dpe_smallpos_events.14.A.tooltip:0 "[dpe_talent_leader.GetName], a level 2 admiral with the traits $leader_trait_dpe_talented$ and $leader_trait_aggressive$, is added to the leader pool."
 dpe_smallpos_events.14.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] of more use where [dpe_talent_leader.GetSheHe] [dpe_talent_leader.GetIsAre]."
@@ -176,7 +184,7 @@ dpe_talented_captain:0 "Skilled Captain"
 
 
 cc_luddite.30.name:0 "Celebrating Robotic Workers"
-cc_luddite.30.desc:0 "Following the introduction of robotic workers into the [root.GetName], a wave of enthusiasm about AI and robotics has spread through the [root.GetSpeciesAdj] population. Naysayers that worry about the impact and potential risks of the large-scale usage of robots are being marginalised, their doubts swept away by the significant improvement in standard of living robots have brought. The robots are now extremely sought after by the general populace, and dozens of robotics-related start-ups are launched every day."
+cc_luddite.30.desc:0 "Following the introduction of robotic workers into the [root.GetName], a wave of enthusiasm about AI and robotics has spread through the [root.GetAdj] population. Naysayers that worry about the impact and potential risks of the large-scale usage of robots are being marginalised, their doubts swept away by the significant improvement in standard of living robots have brought. The robots are now extremely sought after by the general populace, and dozens of robotics-related start-ups are launched every day."
 cc_antiluddite:0 "Celebrating Robotic Workers"
 
 
@@ -225,17 +233,17 @@ cc_antiluddite:0 "Celebrating Robotic Workers"
  dpe_defects_scientist_tooltip:0 "The [root.GetName] gains a lump sum of research.\n"
  dpe_defects_governor_tooltip:0 "The [root.GetName] gains a lump sum of energy and minerals.\n"
  dpe_defect_leader.2.B:0 "We will not take in traitors."
- dpe_defect_leader.2.B.tooltip:0 "Hand [dpe_defect_leader.GetHimHer] over to the [dpe_defected_country.GetSpeciesNamePlural]. They will be pleased."
+ dpe_defect_leader.2.B.tooltip:0 "Hand [dpe_defect_leader.GetHimHer] over to the [dpe_defected_country.GetAdj] authorities. They will be pleased."
 
  dpe_defect_leader.3.name:0 "Defecting [dpe_defect_leader.GetTitle]!"
  dpe_defect_leader.3.desc.military:0 "[dpe_defect_leader.GetName] has hacked into our military secrets and defected to the [from.GetName]. This is a terrible breach of trust from an officer in our armed forces. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
  dpe_defect_leader.3.desc.civilian:0 "[dpe_defect_leader.GetName] has gathered a stash of [dpe_defect_leader.GetDPEDefectorText] and defected to the [from.GetName]. This is a terrible breach of trust from a government official. Elements of society are holding this up as the ultimate proof that xenos are not to be trusted, and demand that the government become a truly [root.GetSpeciesAdj] government."
  dpe_defect_leader.3.A:0 "Maybe they are right!"
- dpe_defect_leader.3.B:0 "Merely lodge a complaint with the [from.GetSpeciesNamePlural]."
+ dpe_defect_leader.3.B:0 "Merely lodge a complaint with the [from.GetName]."
 
  dpe_defect_leader.4.name:0 "Incoming Transmission"
- dpe_defect_leader.4.desc.military:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect and hand over your military secrets to us. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
- dpe_defect_leader.4.desc.civilian:0 "Greetings, [root.GetSpeciesName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect with a stash of your [dpe_defect_leader.GetDPEDefectorText]. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.desc.military:0 "Greetings, [root.GetRulerTitle]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect and hand over your military secrets to us. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
+ dpe_defect_leader.4.desc.civilian:0 "Greetings, [root.GetRulerName]. [dpe_defect_leader.GetName], one of your [dpe_defect_leader.GetTitle]s, has contacted us, proposing to defect with a stash of your [dpe_defect_leader.GetDPEDefectorText]. Valuing our relationship with you, we have rejected [dpe_defect_leader.GetHisHer] offer. We leave the choice of what further actions are to be taken to you."
  dpe_defect_leader.4.A:0 "Many thanks. Arrest [dpe_defect_leader.GetHimHer]!"
  dpe_defect_leader.4.B:0 "This is why we shouldn't have xenos in positions of authority!"
 
@@ -259,22 +267,22 @@ cc_antiluddite:0 "Celebrating Robotic Workers"
  dpe_defect_leader.5.C.caught_investigating_not_guilty:0 "[dpe_defect_leader.GetName] uncovers our suspicions and resigns in protest."
 
  dpe_defect_leader.7.name:0 "Trust Well Deserved"
- dpe_defect_leader.7.desc:0 "It appears that our confidence in [dpe_defect_leader.GetName] was not misplaced. Not only has [dpe_defect_leader.GetSheHe] not defected, but [dpe_defect_leader.GetSheHe] has managed to restore public confidence in [dpe_defect_leader.GetHimHer]self, and is now seen as a model of xeno integration into [root.GetSpeciesAdj] society."
+ dpe_defect_leader.7.desc:0 "It appears that our confidence in [dpe_defect_leader.GetName] was not misplaced. Not only has [dpe_defect_leader.GetSheHe] not defected, but [dpe_defect_leader.GetSheHe] has managed to restore public confidence in [dpe_defect_leader.GetHimHer]self, and is now seen as a model of xeno integration into [root.GetAdj] society."
 
  dpe_defect_leader.8.name:0 "[dpe_defect_leader.GetName] is a Traitor"
  dpe_defect_leader.8.desc:0 "Our investigation into [dpe_defect_leader.GetName] has turned up clear evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetIsAre] planning to defect. We must take immediate action!"
  dpe_defect_leader.8.A:0 "Arrest [dpe_defect_leader.GetHimHer]!"
- dpe_defect_leader.8.B:0 "Let's test the [dpe_defect_to_country.GetSpeciesNamePlural]."
- dpe_defect_leader.8.B.tooltip:0 " We will keep [dpe_defect_leader.GetName] under surveillance and will arrest [dpe_defect_leader.GetHimHer] as soon as we know whether the [dpe_defect_to_country.GetSpeciesNamePlural] would take [dpe_defect_leader.GetHimHer] in."
+ dpe_defect_leader.8.B:0 "Let's test the [dpe_defect_to_country.GetName]."
+ dpe_defect_leader.8.B.tooltip:0 "We will keep [dpe_defect_leader.GetName] under surveillance and will arrest [dpe_defect_leader.GetHimHer] as soon as we know whether the [dpe_defect_to_country.GetName] would take [dpe_defect_leader.GetHimHer] in."
 
  dpe_defect_leader.9.name:0 "No Evidence of Wrongdoing"
  dpe_defect_leader.9.desc:0 "Our investigation into [dpe_defect_leader.GetName] has turned up no evidence that [dpe_defect_leader.GetSheHe] [dpe_defect_leader.GetWasWere] planning to defect. Having publicly stated our confidence in [dpe_defect_leader.GetName], we can breathe a sigh of relief and consider the matter closed."
 
  dpe_defect_leader.10.name:0 "Resignation Letter"
- dpe_defect_leader.10.desc:0 "My [root.GetRulerTitle], it has come to my notice that you are investigating me for my supposed disloyalty to the [root.GetName]. As one who has always considered [dpe_defect_leader.GetHimHer]sel[dpe_defect_leader.GetFVes] a [root.GetSpeciesName] citizen as much as a [dpe_defect_leader.GetSpeciesName], I am most disappointed in this lack of confidence in me. It is therefore with regret that I must tender my resignation. I cannot serve a government in which I am not welcome."
+ dpe_defect_leader.10.desc:0 "My [root.GetRulerTitle], it has come to my notice that you are investigating me for my supposed disloyalty to the [root.GetName]. As one who has always considered [dpe_defect_leader.GetHimHer]sel[dpe_defect_leader.GetFVes] a [root.GetAdj] citizen as much as a [dpe_defect_leader.GetSpeciesName], I am most disappointed in this lack of confidence in me. It is therefore with regret that I must tender my resignation. I cannot serve a government in which I am not welcome."
 
  dpe_defect_leader.11.name:0 "National Incarcerated"
- dpe_defect_leader.11.desc:0 "It has come to our attention that [dpe_defect_leader.GetName], a [root.GetSpeciesAdj] who had been a high government official in the [from.GetName], faces persecution on account of [dpe_defect_leader.GetHisHer] species. Taking up [dpe_defect_leader.GetHisHer] case could be a good opportunity to embarrass the [from.GetSpeciesNamePlural] while furthering the [root.GetSpeciesAdj] cause."
+ dpe_defect_leader.11.desc:0 "It has come to our attention that [dpe_defect_leader.GetName], a [dpe_defect_leader.GetSpeciesName] who had been a high government official in the [from.GetName], faces persecution on account of [dpe_defect_leader.GetHisHer] species. Taking up [dpe_defect_leader.GetHisHer] case could be a good opportunity to embarrass the [from.GetName] while furthering the [root.GetAdj] cause."
  dpe_defect_leader.11.A:0 "Lodge a complaint."
  dpe_defect_leader.11.B:0 "The fate of this sell-out is of no concern to us."
 
