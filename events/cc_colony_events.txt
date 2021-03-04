@@ -8233,7 +8233,7 @@ planet_event = {
 		has_orbital_bombardment = no
 	
 		NOT = { has_planet_flag = cc_colony_story }
-		count_pops = {
+		count_owned_pop = {
 			count > 9
 			limit = { has_ethic = ethic_spiritualist }
 		}

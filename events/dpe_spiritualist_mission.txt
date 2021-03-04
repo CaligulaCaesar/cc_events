@@ -2231,7 +2231,7 @@ country_event = {
 				modifier = {
 					factor = 0.5
 					event_target:dpe_mission_host_planet = {
-						count_pops = {
+						count_owned_pop = {
 							limit = { has_ethic = ethic_xenophobe }
 							count < 4
 						}
@@ -2240,7 +2240,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					event_target:dpe_mission_host_planet = {
-						count_pops = {
+						count_owned_pop = {
 							limit = { has_ethic = ethic_xenophobe }
 							count > 8
 						}
@@ -2249,7 +2249,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					event_target:dpe_mission_host_planet = {
-						count_pops = {
+						count_owned_pop = {
 							limit = { has_ethic = ethic_xenophobe }
 							count > 15
 						}

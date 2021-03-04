@@ -3188,7 +3188,7 @@ planet_event = {
 		OR = {
 			AND = {
 				has_planet_flag = cc_conquered_purge
-				count_pops = {
+				count_owned_pop = {
 					limit = { is_being_purged = yes }
 					count = 1 # Since the crisis ones go with the last pop being alive, I presume there is a reason
 				}

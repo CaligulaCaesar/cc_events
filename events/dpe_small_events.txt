@@ -18,7 +18,7 @@ planet_event = {
 			has_planet_flag = dpe_unity_planet
 			has_planet_flag = dpe_dissent_planet
 		}
-		count_pops = {
+		count_owned_pop = {
 			limit = { pop_has_happiness = yes }
 			count > 18
 		}
@@ -1567,7 +1567,7 @@ planet_event = {
 			has_planet_flag = dpe_unity_planet
 			has_planet_flag = dpe_dissent_planet
 		}
-		count_pops = {
+		count_owned_pop = {
 			limit = {
 				pop_has_happiness = yes
 				has_citizenship_rights = yes

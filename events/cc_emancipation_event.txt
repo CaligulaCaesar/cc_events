@@ -45,7 +45,7 @@ planet_event = { #shifted back to completely normal planet event start.
 			10 = {
 				modifier = {
 					factor = 1.35
-					count_pops = {
+					count_owned_pop = {
 						count > 8
 						limit = {
 							is_enslaved = no

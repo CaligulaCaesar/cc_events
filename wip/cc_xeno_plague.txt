@@ -335,7 +335,7 @@ pop_event = {
 		modifier = {
 			factor = 0.5
 			planet = {
-				any_pop = {
+				any_owned_pop = {
 					NOT = { is_same_species = root }
 					is_robot_pop = no
 				}

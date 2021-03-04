@@ -48,7 +48,7 @@ planet_event = { #shifted back to a completely normal planet event
 				
 				modifier = {
 					factor = 1.5
-					count_pops = {
+					count_owned_pop = {
 						count > 8
 						limit = {
 							has_citizenship_rights = yes

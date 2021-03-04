@@ -391,7 +391,7 @@ country_event = {
 			every_owned_planet = {
 				limit = {
 					is_neighbor_of = event_target:enemy
-					count_pops = {
+					count_owned_pop = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
@@ -474,7 +474,7 @@ country_event = {
 			every_owned_planet = {
 				limit = {
 					is_neighbor_of = event_target:enemy
-					count_pops = {
+					count_owned_pop = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
@@ -527,7 +527,7 @@ planet_event = {
 				}
 			}
 		}
-		count_pops = {
+		count_owned_pop = {
 			limit = {
 				has_ethic = ethic_militarist
 				has_citizenship_rights = yes
@@ -560,7 +560,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 2
-					count_pops = {
+					count_owned_pop = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
