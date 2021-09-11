@@ -15,6 +15,11 @@ wg_dpe_faction_revolt = {
 	possible = {
 		always = yes
 	}
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
 	
 	ai_weight = {
 		weight = 100

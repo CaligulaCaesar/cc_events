@@ -3935,6 +3935,37 @@ country_event = {
 	picture = GFX_evt_nuclear_explosion
 
 	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					any_owned_planet = {
+						num_pops > 15
+						any_owned_pop = { is_same_species = prevprev }
+						is_neighbor_of = root
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						num_pops > 15
+						any_owned_pop = { is_same_species = prevprev }
+						is_neighbor_of = root
+					}
+					save_event_target_as = random_planet
+				}
+			}
+			else = {
+				random_owned_planet = {
+					limit = {
+						num_pops > 15
+						any_owned_pop = { is_same_species = prevprev }
+					}
+					save_event_target_as = random_planet
+				}
+			}
+		}
+	}
 	
 	option = {
 		name = dpe_xenophile_mission.29.option 
@@ -3957,35 +3988,6 @@ country_event = {
 	location = event_target:random_planet
 
 	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				any_owned_planet = {
-					num_pops > 15
-					any_owned_pop = { is_same_species = root }
-					is_neighbor_of = from
-				}
-			}
-			random_owned_planet = {
-				limit = {
-					num_pops > 15
-					any_owned_pop = { is_same_species = root }
-					is_neighbor_of = from
-				}
-				save_event_target_as = random_planet
-			}
-		}
-		else = {
-			random_owned_planet = {
-				limit = {
-					num_pops > 15
-					any_owned_pop = { is_same_species = root }
-				}
-				save_event_target_as = random_planet
-			}
-		}
-	}
 
 	option = {
 		name = dpe_xenophile_mission.291.A
