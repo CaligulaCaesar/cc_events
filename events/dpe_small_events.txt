@@ -473,6 +473,7 @@ country_event = {
 					factor = 0
 					NOT = {
 						any_system_within_border = {
+							exists = starbase
 							starbase = {
 								has_starbase_size >= starbase_starport
 							}
