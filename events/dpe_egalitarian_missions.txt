@@ -17,7 +17,7 @@ country_event = {
 			has_country_flag = dpe_has_recent_egalitarian_mission
 			has_country_flag = dpe_provided_with_egalitarian_mission
 			has_ethic = ethic_gestalt_consciousness
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_ethic = ethic_egalitarian
 			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_fanatic_authoritarian
@@ -27,7 +27,7 @@ country_event = {
 		any_relation = {
 			is_country_type = default
 			
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_faction = progressive
 #			OR = {
 #				has_ethic = ethic_egalitarian
@@ -58,7 +58,7 @@ country_event = {
 			limit = {
 				is_country_type = default
 				
-				has_authority = auth_democratic
+				is_democracy = yes
 				has_faction = progressive
 #				OR = {
 #					has_ethic = ethic_egalitarian
@@ -916,7 +916,7 @@ country_event = {
 		}
 		every_relation = {
 			limit = {
-				has_authority = auth_democratic
+				is_democracy = yes
 				OR = {
 					has_ethic = ethic_egalitarian
 					has_ethic = ethic_fanatic_egalitarian
@@ -1116,7 +1116,7 @@ country_event = {
 		}
 		every_relation = {
 			limit = {
-				has_authority = auth_democratic
+				is_democracy = yes
 				OR = {
 					has_ethic = ethic_egalitarian
 					has_ethic = ethic_fanatic_egalitarian
@@ -1173,11 +1173,7 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			from = {
-				NOT = {
-					has_authority = auth_democratic
-				}
-			}
+			from = { is_democracy = no }
 		}
 		text = dpe_egalitarian_missions.20.no_more_nodemo
 	}
@@ -1201,7 +1197,7 @@ country_event = {
 	
 	trigger = {
 		NOR = {
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_ethic = ethic_egalitarian
 			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_fanatic_authoritarian
@@ -1215,11 +1211,7 @@ country_event = {
 			OR = {
 				NOT = { exists = from }
 				from = {
-					NOT = {
-						has_authority = auth_democratic
-					}
-				}
-				from = {
+					is_democracy = no
 					NOR = {
 						is_in_federation_with = root
 						has_defensive_pact = root

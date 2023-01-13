@@ -173,7 +173,7 @@ country_event = {
 					country_event = { id = cc_events_blackmail.205 days = 15 }
 					modifier = {
 						factor = 0
-						NOT = { has_authority = auth_democratic }
+						is_democracy = no
 					}
 					modifier = {
 						factor = 0.25

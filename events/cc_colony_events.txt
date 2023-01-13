@@ -7755,7 +7755,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0.75
-				owner = { has_authority = auth_democratic }
+				owner = { is_democracy = yes }
 			}
 		}
 	}
@@ -7872,7 +7872,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0.25
-				owner = { has_authority = auth_democratic }
+				owner = { is_democracy = yes }
 			}
 			modifier = {
 				factor = 2
