@@ -633,7 +633,7 @@ country_event = {
 		
 		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
 		
-		NOT = { has_authority = auth_imperial }
+		is_imperial = no
 		NOT = { has_ascension_perk = ap_transcendence }
 
 		exists = ruler
@@ -676,7 +676,7 @@ country_event = {
 						has_ethic = ethic_egalitarian
 						has_ethic = ethic_fanatic_egalitarian
 						NOT = { has_faction = progressive }
-						has_authority = auth_democratic
+						is_democracy = yes
 					}
 				}
 				modifier = {
@@ -1288,10 +1288,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOR = {
-			has_authority = auth_imperial
-			has_authority = auth_dictatorial
-		}
+		is_imp_or_dict = no
 	}			
 	
 	immediate = {

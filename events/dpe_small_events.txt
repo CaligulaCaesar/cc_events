@@ -82,7 +82,7 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		OR = {
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_authority = auth_oligarchic
 		}
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
@@ -101,7 +101,7 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_authority = auth_democratic
+					is_democracy = yes
 					has_authority = auth_oligarchic
 				}
 				NOT = { has_country_flag = dpe_recent_ruler_debate }
@@ -220,12 +220,12 @@ country_event = {
 		name = dpe_smallpos_events.4.option
 
 		
-#		add_monthly_resource_mult = {
-#			resource = unity
-#			value = 3
-#			min = 30
-#			max = 10000
-#		}
+		# add_monthly_resource_mult = {
+		# 	resource = unity
+		# 	value = 3
+		# 	min = 30
+		# 	max = 10000
+		# }
 
 		add_modifier = {
 			modifier = dpe_persuasive_leader

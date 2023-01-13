@@ -15,15 +15,15 @@ planet_event = {
 		NOT = { has_planet_flag = cc_just_conquered }
 	}
 	
-#	trigger = {  
-#		OR = {
-#			has_political_colony_modifier = yes
-#			has_seditious_talk = yes
-#			is_faction_stronghold = yes
-#			has_faction_sympathies = yes
-#			has_faction_sedition = yes
-#		}
-#	}
+	# trigger = {  
+	# 	OR = {
+	# 		has_political_colony_modifier = yes
+	# 		has_seditious_talk = yes
+	# 		is_faction_stronghold = yes
+	# 		has_faction_sympathies = yes
+	# 		has_faction_sedition = yes
+	# 	}
+	# }
 	
 	immediate = {
 		if = {
@@ -32,9 +32,7 @@ planet_event = {
 				NOT = { any_owned_pop = { is_being_purged = yes } }
 			}
 			remove_planet_flag = cc_conquered_purge
-		}
-			
-			
+		}	
 			
 		set_timed_planet_flag = { #this is because someone said the same event happened 3 times and I can only see why it would happen twice...
 			flag = cc_just_conquered
@@ -59,7 +57,7 @@ planet_event = {
 				years = 25
 			}
 			remove_all_political_colony_modifiers = yes
-#			planet_event = { id = cc_cleanup_events.9992 days = 1500 random = 500 }
+			# planet_event = { id = cc_cleanup_events.9992 days = 1500 random = 500 }
 		}
 		
 		if = {
@@ -137,7 +135,6 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.10 days = 5 random = 20 }
 		}
 		
-		
 		if = {
 			limit = { has_modifier = cc_building_university }
 			planet_event = { id = cc_cleanup_events.11 days = 5 }
@@ -171,7 +168,6 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.15 days = 5 random = 20 }
 		}
 		
-		
 
 		if = {
 			limit = { has_modifier = cc_colony_monarchy }
@@ -191,8 +187,6 @@ planet_event = {
 			limit = { has_modifier = cc_colony_monarchy_unhappy }
 			planet_event = { id = cc_cleanup_events.18 days = 5 random = 20 }
 		}
-		
-		
 
 		if = {
 			limit = { has_modifier = cc_milacademy }
@@ -226,7 +220,6 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.24 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
-		
 
 		if = {
 			limit = {
@@ -281,7 +274,6 @@ planet_event = {
 		
 		
 		#Xenophobes (I treat them a bit differently...)
-		
 		if = {
 			limit = {
 				has_modifier = cc_founder_xenophobe
@@ -334,7 +326,6 @@ planet_event = {
 			planet_event = { id = cc_cleanup_events.33 days = 5 }
 			planet_event = { id = cc_cleanup_events.999 days = 3 }
 		}
-		
 		if = {
 			limit = {
 				OR = {
@@ -363,7 +354,6 @@ planet_event = {
 			}
 			planet_event = { id = cc_cleanup_events.34 days = 5 random = 20 }			
 		}
-		
 		if = {
 			limit = {
 				OR = {
@@ -392,7 +382,6 @@ planet_event = {
 			}
 			planet_event = { id = cc_cleanup_events.35 days = 5 random = 20 }			
 		}
-		
 		
 		#Xenophiles
 		if = {
@@ -992,7 +981,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				owner = { has_authority = auth_democratic }
+				owner = { is_democracy = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1043,10 +1032,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_authority = auth_imperial
-						has_authority = auth_dictatorial
-					}
+					is_imp_or_dict = yes
 				}
 			}
 			modifier = {
@@ -1062,7 +1048,7 @@ planet_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				owner = { has_authority = auth_democratic }
+				owner = { is_democracy = yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
@@ -1554,7 +1540,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				owner = { has_authority = auth_imperial }
+				owner = { is_imperial = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1604,7 +1590,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				owner = { has_authority = auth_democratic }
+				owner = { is_democracy = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1619,7 +1605,7 @@ planet_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				owner = { has_authority = auth_imperial }
+				owner = { is_imperial = yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}

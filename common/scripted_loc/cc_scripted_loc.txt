@@ -131,7 +131,7 @@ defined_text = {
 defined_text = {
 	name = GetGovtBuilding
 	text = {
-		trigger = { has_authority = auth_democratic }
+		trigger = { is_democracy = yes }
 		localization_key = ccloc_democracy_building
 	}
 	text = {
@@ -141,7 +141,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOR = {
-				has_authority = auth_democratic
+				is_democracy = yes
 				has_authority = auth_oligarchic
 			}
 		}
@@ -305,11 +305,11 @@ defined_text = {
 	name = GetSubroutineDrone
 	
 	text = {
-		trigger = { root = { has_authority = auth_machine_intelligence } }
+		trigger = { root = { is_machine_empire = yes } }
 		localization_key = dpe_subroutine
 	}
 	text = {
-		trigger = { root = { has_authority = auth_hive_mind } }
+		trigger = { root = { is_hive_empire = yes } }
 		localization_key = dpe_drone
 	}
 }
