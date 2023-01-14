@@ -4,7 +4,10 @@
 triggered_opinion_cc_thought_police = {
 
 	trigger = {
-		is_egalitarian = yes
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
 		
 		FROM = {
 			has_edict = cc_thought_police

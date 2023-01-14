@@ -232,7 +232,10 @@ planet_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -290,8 +293,10 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					is_egalitarian = yes
-					is_spiritualist = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -371,7 +376,12 @@ planet_event = {
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -431,10 +441,8 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOR = {
-							is_same_empire = root.owner
-							has_ai_personality_behaviour = purger
-						}
+						NOT = { is_country = root.owner }
+						NOT = { has_ai_personality_behaviour = purger }
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -1426,7 +1434,10 @@ planet_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -1462,8 +1473,10 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					is_egalitarian = yes
-					is_spiritualist = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -1519,7 +1532,12 @@ planet_event = {
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -1579,10 +1597,8 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOR = {
-							is_same_empire = root.owner
-							has_ai_personality_behaviour = purger
-						}
+						NOT = { is_country = root.owner }
+						NOT = { has_ai_personality_behaviour = purger }
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -1751,7 +1767,8 @@ country_event = {
 			modifier = {
 				factor = 5
 				OR = {
-					is_spiritualist = yes
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -1789,8 +1806,10 @@ country_event = {
 		
 		allow = {
 			NOR = {
-				is_egalitarian = yes
-				is_spiritualist = yes
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
 			}
 		}
 		
@@ -1915,7 +1934,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 	}
@@ -1975,10 +1997,8 @@ country_event = {
 			every_country = {
 				limit = {
 					has_communications = root.owner
-					NOR = {
-						is_same_empire = root.owner
-						has_ai_personality_behaviour = purger
-					}
+					NOT = { is_country = root.owner }
+					NOT = { has_ai_personality_behaviour = purger }
 					NOT = {
 						OR = {
 							has_ethic = ethic_fanatic_authoritarian

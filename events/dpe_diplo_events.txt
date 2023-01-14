@@ -20,7 +20,8 @@ country_event = {
 			delay = 20
 		}
 		OR = {
-			is_militarist = yes
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
 				any_pop_faction = {
@@ -134,7 +135,8 @@ country_event = {
 			}
 		}
 		OR = {
-			is_militarist = yes
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
 				any_pop_faction = {
@@ -686,10 +688,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOR = {
-			is_at_war_with = from
-			has_country_flag = dpe_recent_militarists_incident
-		}
+		NOT = { is_at_war_with = from }
+		NOT = { has_country_flag = dpe_recent_militarists_incident }
 		has_federation = no
 		has_policy_flag = unrestricted_wars
 			
@@ -759,7 +759,11 @@ country_event = {
 			days = 3600
 		}
 		allow = {
-			is_homicidal = no
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
 		}
 	}
 }
@@ -770,10 +774,8 @@ country_event = {
 	hide_window = yes
 
 	trigger = {
-		NOR = {
-			has_country_flag = dpe_recent_militarists_want_war
-			has_modifier = dpe_indemnity_paid
-		}
+		NOT = { has_country_flag = dpe_recent_militarists_want_war }
+		NOT = { has_modifier = dpe_indemnity_paid }
 		is_at_war = no
 		is_subject = no
 		years_of_peace = {
@@ -781,7 +783,8 @@ country_event = {
 			delay = 20
 		}
 		OR = {
-			is_militarist = yes
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
 			AND = {
 				has_faction = imperialist
 				any_pop_faction = {
@@ -808,10 +811,8 @@ country_event = {
 		
 		any_relation = {
 			is_ai = no
-			NOR = {
-				has_country_flag = dpe_recent_militarists_incident
-				has_modifier = dpe_indemnity_receive
-			}
+			NOT = { has_country_flag = dpe_recent_militarists_incident }
+			NOT = { has_modifier = dpe_indemnity_receive }
 			has_federation = no
 			has_policy_flag = unrestricted_wars
 
@@ -859,10 +860,8 @@ country_event = {
 		random_relation = {
 			limit = {
 				is_ai = no
-				NOR = {
-					has_country_flag = dpe_recent_militarists_incident
-					has_modifier = dpe_indemnity_receive
-				}
+				NOT = { has_country_flag = dpe_recent_militarists_incident }
+				NOT = { has_modifier = dpe_indemnity_receive }
 				prev = {
 					OR = {
 						is_rival = prev
@@ -1181,10 +1180,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOR = { 
 					is_same_species = FROM
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_hostile_to = FROM
@@ -1198,10 +1198,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOR = { 
 					is_same_species = FROM
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_neutral_to = FROM
@@ -1214,10 +1215,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOR = { 
 					is_same_species = FROM
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_friendly_to = FROM
@@ -1231,12 +1233,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
-					is_same_species = FROM
-				}
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_same_species = FROM }
 				OR = {
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_hostile_to = FROM
@@ -1250,12 +1251,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
-					is_same_species = FROM
-				}
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_same_species = FROM }
 				OR = {
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_neutral_to = FROM
@@ -1268,12 +1268,11 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy = {
-				NOR = {
-					has_ethic = ethic_gestalt_consciousness
-					is_same_species = FROM
-				}
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_same_species = FROM }
 				OR = {
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 				OR = {
 					is_friendly_to = FROM
@@ -1290,7 +1289,8 @@ country_event = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				is_same_species = FROM
 				OR = {
-					is_pacifist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 			}
 		}
@@ -1417,7 +1417,8 @@ country_event = {
 						is_fallen_machine_empire = no
 						NOR = {
 							has_ethic = ethic_gestalt_consciousness
-							is_xenophobe = yes
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
 							has_ai_personality = honorbound_warriors
 							has_ai_personality = evangelising_zealots
 							has_ai_personality = democratic_crusaders
@@ -1441,7 +1442,10 @@ country_event = {
 							has_ai_personality = democratic_crusaders
 						}
 						NOT = {
-							is_xenophobe = yes
+							OR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
 						}
 					}
 					NOT = { has_authority = auth_hive_mind }
@@ -1466,7 +1470,10 @@ country_event = {
 		trigger = {
 			FROM = {
 				is_fallen_machine_empire = no
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 				NOT = { has_ai_personality = fanatic_purifiers }
 			}
 			NOR = {
@@ -1481,7 +1488,10 @@ country_event = {
 			FROM = {
 				has_ai_personality = honorbound_warriors
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			ROOT = {
@@ -1501,7 +1511,10 @@ country_event = {
 					has_ai_personality = democratic_crusaders
 				}
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -1513,7 +1526,10 @@ country_event = {
 			FROM = {
 				has_ai_personality = hegemonic_imperialists
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			ROOT = {
@@ -1544,7 +1560,10 @@ country_event = {
 			FROM = {
 				has_ai_personality = erudite_explorers
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			ROOT = {
@@ -1561,7 +1580,10 @@ country_event = {
 			FROM = {
 				has_ai_personality = migrating_flock
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			ROOT = {
@@ -1578,7 +1600,10 @@ country_event = {
 			FROM = {
 				has_ai_personality = ruthless_capitalists
 				NOT = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			ROOT = {

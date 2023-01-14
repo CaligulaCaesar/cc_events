@@ -161,7 +161,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 
 				any_pop_faction = {
 					OR = {

@@ -205,7 +205,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				any_playable_country = {
+				any_country = {
+					is_country_type = default
 					OR = {
 						is_hostile_to = root
 						is_rival = root
@@ -213,12 +214,14 @@ country_event = {
 					}
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_xenophobe = yes
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
 					}
 				}
 			}
-			random_playable_country = {
+			random_country = {
 				limit = {
+					is_country_type = default
 					OR = {
 						is_hostile_to = root
 						is_rival = root
@@ -226,7 +229,8 @@ country_event = {
 					}
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_xenophobe = yes
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
 					}
 				}
 				save_event_target_as = rival
@@ -234,8 +238,9 @@ country_event = {
 		}
 			
 		else = {
-			random_playable_country = {
+			random_country = {
 				limit = {
+					is_country_type = default
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
 						has_ethic = ethic_fanatic_xenophobe
@@ -653,7 +658,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				any_playable_country = {
+				any_country = {
+					is_country_type = default
 					OR = {
 						is_hostile_to = root
 						is_rival = root
@@ -661,12 +667,14 @@ country_event = {
 					}
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_xenophobe = yes
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
 					}
 				}
 			}
-			random_playable_country = {
+			random_country = {
 				limit = {
+					is_country_type = default
 					OR = {
 						is_hostile_to = root
 						is_rival = root
@@ -674,7 +682,8 @@ country_event = {
 					}
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_xenophobe = yes
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
 					}
 				}
 				save_event_target_as = rival
@@ -682,8 +691,9 @@ country_event = {
 		}
 			
 		else = {
-			random_playable_country = {
+			random_country = {
 				limit = {
+					is_country_type = default
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
 						has_ethic = ethic_fanatic_xenophobe
@@ -713,12 +723,14 @@ country_event = {
 
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 		}
 		is_at_war = no
 		has_faction = imperialist
 		OR = {
-			is_pacifist = yes
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
 			any_pop_faction = {
 				is_pop_faction_type = imperialist
 				faction_approval < @cc_faction_danger_number
@@ -787,7 +799,8 @@ country_event = {
 		is_country_type = default
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		is_at_war = no
@@ -795,7 +808,8 @@ country_event = {
 		has_faction = imperialist
 
 		OR = {
-			is_pacifist = yes
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
 			any_pop_faction = {
 				is_pop_faction_type = imperialist
 				faction_approval < @cc_faction_danger_number
@@ -995,7 +1009,8 @@ country_event = {
 	
 	trigger = {
 		NOR = {
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		is_at_war = no
@@ -1033,7 +1048,8 @@ country_event = {
 	
 	trigger = {
 		NOR = {
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		is_at_war = no
@@ -1076,7 +1092,8 @@ country_event = {
 	
 	trigger = { #just in case
 		NOR = {
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		any_owned_leader = {
@@ -1188,7 +1205,8 @@ country_event = {
 					factor = 0
 					NAND = {
 						NOR = {
-							is_militarist = yes
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
 							has_ethic = ethic_fanatic_egalitarian
 						}
 						is_at_war = no
@@ -1207,7 +1225,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					is_ai = yes
-					is_materialist = no
+					NOR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 		}
@@ -1231,7 +1252,8 @@ country_event = {
 	
 	trigger = {
 		NOR = {
-			is_militarist = yes
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		is_at_war = no
@@ -1288,7 +1310,10 @@ country_event = {
 		name = dpe_conspiracy.4.C
 		
 		allow = {
-			is_materialist = yes
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
 		}
 		
 		hidden_effect = { country_event = { id = dpe_conspiracy.5 } }

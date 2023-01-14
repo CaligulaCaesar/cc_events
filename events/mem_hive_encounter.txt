@@ -23,11 +23,13 @@ event = {
     immediate = {
         IF = {
             limit = {
-                any_playable_country = {
+                any_country = {
+                    is_country_type = default
                     has_authority = auth_hive_mind
                     is_ai = no
-                    any_playable_country = {
+                    any_country = {
                         has_communications = PREV 
+                        is_country_type = default
                         NOT = {
 							has_ethic = ethic_gestalt_consciousness
 						}
@@ -46,8 +48,9 @@ event = {
                 # the event starts
                 1 = {
                     set_global_flag = mem_hive_encounter_happened
-                    random_playable_country = {
+                    random_country = {
                         limit = {
+                            is_country_type = default
                             has_authority = auth_hive_mind
                             is_ai = no
                             any_country = {
@@ -64,9 +67,10 @@ event = {
 						save_event_target_as = mem_hive_encounter_hive_country
 						if = {
 							limit = {
-								any_playable_country = {
+								any_country = {
 									is_ai = no
 									has_communications = PREV 
+									is_country_type = default
 									NOT = {
 										has_ethic = ethic_gestalt_consciousness
 									}
@@ -78,7 +82,7 @@ event = {
 									}
 								}
 							}
-							random_playable_country = {
+							random_country = {
 								limit = {
 									is_ai = no
 									has_communications = PREV 
@@ -124,13 +128,15 @@ event = {
         }
         ELSE_IF = {
             limit = {
-                any_playable_country = {
-                    NOT = {
+                any_country = {
+                    is_country_type = default
+					NOT = {
 						has_ethic = ethic_gestalt_consciousness
 					}
                     is_ai = no
-                    any_playable_country = {
+                    any_country = {
                         has_communications = PREV 
+                        is_country_type = default
                         has_authority = auth_hive_mind
                         OR = {
                             is_neutral_to = PREV
@@ -147,14 +153,16 @@ event = {
                 # the event starts
                 1 = {
                     set_global_flag = mem_hive_encounter_happened
-                    random_playable_country = {
+                    random_country = {
                         limit = {
-                            NOT = {
+                            is_country_type = default
+							NOT = {
 								has_ethic = ethic_gestalt_consciousness
 							}
                             is_ai = no
-                            any_playable_country = {
+                            any_country = {
                                 has_communications = PREV 
+                                is_country_type = default
                                 has_authority = auth_hive_mind
                                 OR = {
                                     is_neutral_to = PREV
@@ -258,7 +266,8 @@ country_event = {
             IF = {
                 limit = {
                     OR = {
-                        is_xenophobe = yes
+                        has_ethic = ethic_fanatic_xenophobe
+                        has_ethic = ethic_xenophobe
                         AND = {
                             OR = {
                                 has_faction = supremacist
@@ -293,7 +302,10 @@ country_event = {
     option = {
         name = mem_hive_encounter.3.b
         trigger = {
-            is_egalitarian = no
+            NOR = {
+                has_ethic = ethic_egalitarian
+                has_ethic = ethic_fanatic_egalitarian
+            }
         }
         IF = {
             limit = {
@@ -477,7 +489,10 @@ country_event = {
     option = {
         name = mem_hive_encounter.3.b
         trigger = {
-            is_egalitarian = no
+            NOR = {
+                has_ethic = ethic_egalitarian
+                has_ethic = ethic_fanatic_egalitarian
+            }
         }
         IF = {
             limit = {

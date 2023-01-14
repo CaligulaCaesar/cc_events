@@ -39,7 +39,7 @@ dpe_cede_borders = {
 					
 					controller = {
 						OR = {
-							is_same_empire = fromfromfrom
+							is_country = fromfromfrom
 							fromfrom = {
 								is_war_participant = {
 									who = prev
@@ -61,7 +61,7 @@ dpe_cede_borders = {
 					is_neighbor_of = fromfromfrom
 					controller = {
 						OR = {
-							is_same_empire = fromfromfrom
+							is_country = fromfromfrom
 							fromfrom = {
 								is_war_participant = {
 									who = prev

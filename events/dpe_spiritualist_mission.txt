@@ -17,7 +17,8 @@ country_event = {
 		NOT = { has_country_flag = dpe_recent_spiritualist_mission }
 		
 		OR = {
-			is_spiritualist = yes
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
 #			count_pop_faction = {
 #				limit = {
 #					is_pop_faction_type = traditionalist
@@ -28,7 +29,8 @@ country_event = {
 #			}
 		}
 		NOR = { #just in case
-			is_materialist = yes
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
 		}
 		
 		any_neighbor_country = {
@@ -43,7 +45,8 @@ country_event = {
 				is_in_federation_with = prev
 				
 				has_ethic = ethic_gestalt_consciousness
-				is_spiritualist = yes
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
 				any_pop_faction = {
 					is_pop_faction_type = traditionalist
 					support > 0.2
@@ -87,7 +90,8 @@ country_event = {
 					is_in_federation_with = prev
 					
 					has_ethic = ethic_gestalt_consciousness
-					is_spiritualist = yes
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
 					any_pop_faction = {
 						is_pop_faction_type = traditionalist
 						support > 0.2
@@ -225,7 +229,8 @@ country_event = {
 					
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_spiritualist = yes
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
 						
 						has_country_flag = dpe_recent_spiritualist_mission_received
 						has_relation_flag = {
@@ -250,7 +255,8 @@ country_event = {
 					
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_spiritualist = yes
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
 						
 						has_country_flag = dpe_recent_spiritualist_mission_received
 						has_relation_flag = {
@@ -338,7 +344,10 @@ country_event = {
 		name = dpe_spiritualist_mission.2.C
 	
 		trigger = {
-			is_spiritualist = no
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
 		}
 
 		random_pop_faction = {
@@ -884,7 +893,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 2.5
-				is_materialist = yes
+				OR = {
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_materialist
+				}
 			}
 			modifier = {
 				factor = 2
@@ -1010,8 +1022,10 @@ country_event = {
 						modifier = {
 							factor = 0.5
 							OR = {
-								is_materialist = yes
-								is_xenophobe = yes
+								has_ethic = ethic_fanatic_materialist
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_xenophobe
+								has_ethic = ethic_xenophobe
 							}
 						}
 						modifier = {
@@ -1113,8 +1127,10 @@ country_event = {
 						modifier = {
 							factor = 0.5
 							OR = {
-								is_materialist = yes
-								is_xenophobe = yes
+								has_ethic = ethic_fanatic_materialist
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_xenophobe
+								has_ethic = ethic_xenophobe
 							}
 						}
 						modifier = {
@@ -1196,8 +1212,10 @@ country_event = {
 						modifier = {
 							factor = 0.5
 							OR = {
-								is_materialist = yes
-								is_xenophobe = yes
+								has_ethic = ethic_fanatic_materialist
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_xenophobe
+								has_ethic = ethic_xenophobe
 							}
 						}
 						modifier = {
@@ -1617,7 +1635,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 3
-				is_materialist = yes
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
 			}
 			modifier = {
 				factor = 2
@@ -1743,7 +1764,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 3
-				is_materialist = yes
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2820,7 +2844,8 @@ country_event = {
 				factor = 0.5
 				from = {
 					OR = {
-						is_materialist = yes
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
 						NOT = { has_faction = traditionalist }
 					}
 				}
@@ -2857,7 +2882,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				OR = {
 					count_pop_faction = {
 						limit = { is_pop_faction_type = traditionalist }
@@ -2875,7 +2903,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				NOT = {
 					any_pop_faction = {
 						is_pop_faction_type = traditionalist
@@ -2893,7 +2924,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				NOT = {
 					any_pop_faction = {
 						is_pop_faction_type = traditionalist
@@ -2910,7 +2944,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = dpe_spiritualist_mission.10.desc.success
@@ -2932,7 +2969,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.continue
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 
@@ -2947,7 +2987,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.cancel
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 
@@ -3012,7 +3055,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 5
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -3021,7 +3067,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.success
 		trigger = {
 			from = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		add_opinion_modifier = {
@@ -3086,7 +3135,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				OR = {
 					NOT = {
 						any_pop_faction = {
@@ -3105,7 +3157,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				NOT = {
 					any_pop_faction = {
 						is_pop_faction_type = traditionalist
@@ -3123,7 +3178,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				NOT = {
 					any_pop_faction = {
 						is_pop_faction_type = traditionalist
@@ -3140,7 +3198,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = dpe_spiritualist_mission.11.desc.success
@@ -3162,7 +3223,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.continue
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 
@@ -3177,7 +3241,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.cancel
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 
@@ -3251,7 +3318,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 5
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -3260,7 +3330,10 @@ country_event = {
 		name = dpe_spiritualist_mission.10.option.success
 		trigger = {
 			from = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		add_opinion_modifier = {
@@ -3545,7 +3618,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = dpe_spiritualist_mission.102.desc.uninterested
@@ -3707,7 +3783,10 @@ country_event = {
 		}
 
 		allow = {
-			is_xenophobe = no
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
 		}
 		ai_chance = {
 			factor = 1
@@ -4547,7 +4626,8 @@ country_event = {
 		trigger = {
 			NOR = {
 				allows_slavery = yes
-				is_xenophobe = yes
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
 			}
 		}
 		
@@ -4571,9 +4651,10 @@ country_event = {
 		trigger = {
 			allows_slavery = yes
 			OR = {
-				is_xenophobe = yes
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
 			}
-			allows_purge = no
+			NOT = { allows_purge = yes }
 		}
 		ai_chance = { factor = 10 }
 	}

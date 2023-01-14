@@ -16,10 +16,8 @@ country_event = {
 	trigger = {
 		num_owned_planets > 7
 		years_passed > 60
-		NOR = {
-			has_country_flag = cc_has_had_blackmail
-			has_ethic = ethic_gestalt_consciousness
-		}
+		NOT = { has_country_flag = cc_has_had_blackmail }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOR = {
 			has_country_flag = cc_eventperf_has_overwhelming_rival
 			has_country_flag = cc_eventperf_has_superior_rival
@@ -80,7 +78,10 @@ country_event = {
 					country_event = { id = cc_events_blackmail.202 days = 15 }
 					modifier = {
 						factor = 0
-						is_egalitarian = yes
+						OR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
 					}
 					modifier = {
 						factor = 0.5
@@ -90,7 +91,10 @@ country_event = {
 							has_ethic = ethic_fanatic_xenophile
 							has_ethic = ethic_fanatic_pacifist
 						}
-						is_authoritarian = no
+						NOR = {
+							has_ethic = ethic_authoritarian
+							has_ethic = ethic_fanatic_authoritarian
+						}
 					}
 					modifier = {
 						factor = 1.5
@@ -106,7 +110,10 @@ country_event = {
 					country_event = { id = cc_events_blackmail.203 days = 15 }
 					modifier = {
 						factor = 0
-						is_materialist = yes
+						OR = {
+							has_ethic = ethic_materialist
+							has_ethic = ethic_fanatic_materialist
+						}
 					}
 					modifier = {
 						factor = 0
@@ -114,7 +121,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.5
-						is_spiritualist = no
+						NOR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_fanatic_spiritualist
+						}
 					}
 					modifier = {
 						factor = 1.5
@@ -132,10 +142,13 @@ country_event = {
 						factor = 0
 						OR = {
 							NOR = {
-								is_militarist = yes
-								is_xenophobe = yes
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
 							}
-							is_pacifist = yes
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
 						}
 					}
 					modifier = {
@@ -145,7 +158,10 @@ country_event = {
 					modifier = {
 						factor = 1.5
 						has_ethic = ethic_fanatic_xenophobe
-						is_pacifist = no
+						NOR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
 					}
 					modifier = { #wouldn't make sense
 						factor = 0
@@ -181,11 +197,17 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						is_spiritualist = yes
+						OR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_fanatic_spiritualist
+						}
 					}
 					modifier = {
 						factor = 0.5
-						is_materialist = no
+						NOR = {
+							has_ethic = ethic_materialist
+							has_ethic = ethic_fanatic_materialist
+						}
 					}
 					modifier = {
 						factor = 1.5
@@ -246,7 +268,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						is_xenophobe = yes
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
 					}
 					modifier = {
 						factor = 0
@@ -268,7 +293,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.5
-						is_xenophile = no
+						NOR = {
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
+						}
 					}
 					modifier = {
 						factor = 1.25
@@ -318,10 +346,15 @@ country_event = {
 					modifier = {
 						factor = 0
 						OR = {
-							is_pacifist = yes
-							is_xenophile = yes
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
 						}
-						is_xenophobe = no
+						NOR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
 					}
 					modifier = {
 						factor = 2
@@ -594,7 +627,11 @@ country_event = {
 			limit = {
 				is_country_type = default
 				has_communications = root
-				is_homicidal = no
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_hive_devouring_swarm
+				}
 			}
 			add_opinion_modifier = {
 				who = root
@@ -706,7 +743,11 @@ country_event = {
 			limit = {
 				is_country_type = default
 				has_communications = root
-				is_homicidal = no
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_hive_devouring_swarm
+				}
 			}
 			add_opinion_modifier = {
 				who = root
@@ -726,8 +767,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					is_militarist = yes
-					is_xenophobe = yes
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 			modifier = {
@@ -776,8 +819,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					is_pacifist = yes
-					is_xenophile = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 				}
 			}
 			modifier = {

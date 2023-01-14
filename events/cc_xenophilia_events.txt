@@ -20,10 +20,8 @@ country_event = {
 		
 		has_faction = xenoist
 		
-		NOR = {
-			has_ethic = ethic_gestalt_consciousness
-			has_country_flag = cc_has_had_interspecies_marriage
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = cc_has_had_interspecies_marriage }
 		
 		pop_percentage = {
 			percentage > 0.02
@@ -128,12 +126,16 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 100
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 			modifier = {
 				factor = 0
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 					NOT = { has_faction = xenoist }
 				}
 			}
@@ -245,12 +247,16 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 100
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 			modifier = {
 				factor = 0
 				OR = {
-					is_xenophile = yes
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 					NOR = {
 						has_faction = supremacist
 						has_faction = isolationist
@@ -381,7 +387,8 @@ pop_event = {
 					has_ethic = ethic_xenophile
 					owner = {
 						OR = {
-							is_xenophile = yes
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
 							has_policy_flag = does_not_allow_im
 							has_policy_flag = allows_im
 						}
@@ -586,8 +593,8 @@ event = {
 		every_country = {
 			if = {
 				limit = {
-					NOR = {
-						has_modifier = cc_literally_xenophile_country
+					NOT = { has_modifier = cc_literally_xenophile_country }
+					NOT = {
 						has_ascension_perk = ap_xeno_compatibility
 					}
 					pop_percentage = {

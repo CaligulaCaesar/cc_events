@@ -206,7 +206,7 @@ planet_event = {
 						flag = cc_eventperf_xeno_clashes_own_species_planet
 						days = 360
 					}
-					owner_species = { save_event_target_as = species1 }
+					owner.species = { save_event_target_as = species1 }
 				}
 				else = {
 					random_owned_species = {
@@ -284,7 +284,10 @@ planet_event = {
 			OR = {
 				has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
 				owner = {
-					is_xenophile = no
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 		}
@@ -294,7 +297,10 @@ planet_event = {
 		trigger = {
 			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		text = cc_xeno_clashes.2.desc.phile
@@ -329,7 +335,10 @@ planet_event = {
 		}
 		allow = {
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 	}
@@ -347,7 +356,10 @@ planet_event = {
 		}
 		allow = {
 			owner = {
-				is_xenophobe = yes
+					OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -366,8 +378,10 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					is_xenophobe = yes
-					is_xenophile = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 				}
 			}
 		}
@@ -386,7 +400,10 @@ planet_event = {
 		}
 		allow = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -404,7 +421,10 @@ planet_event = {
 		}
 		allow = {
 			owner = {
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -430,7 +450,7 @@ planet_event = {
 
 	trigger = {
 		planet_stability < @dpe_normal_unrest_value
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 		count_owned_pop = {
 			count > 4
 			limit = { species = { is_same_value = event_target:species1 } }
@@ -454,7 +474,10 @@ planet_event = {
 		
 		allow = {
 			owner = {
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		
@@ -472,7 +495,8 @@ planet_event = {
 				factor = 0
 				owner = { 
 					OR = {
-						is_xenophile = yes
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
 						
 						any_owned_pop = {
 							NOT = { is_same_species = prev }
@@ -493,7 +517,10 @@ planet_event = {
 		owner = {
 			if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				shift_ethic = ethic_xenophobe
 					
@@ -658,7 +685,10 @@ planet_event = {
 		
 		allow = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		
@@ -851,7 +881,7 @@ planet_event = {
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		NOT = { has_planet_flag = cc_interspecies_incident }
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 	}
 	
 	immediate = {
@@ -1252,7 +1282,7 @@ planet_event = {
 					limit = {
 						NOT = { species = { is_same_value = event_target:species2 } }
 						has_communications = root.owner
-						NOT = { is_same_empire = root.owner }
+						NOT = { is_country = root.owner }
 						NOT = { has_ai_personality_behaviour = purger }
 						NOT = {
 							OR = {
@@ -1299,7 +1329,7 @@ planet_event = {
 			}
 			every_country = {
 				limit = {
-					NOT = { is_same_empire = root.owner } #should be impossible, but just making sure
+					NOT = { is_same_value = root.owner } #should be impossible, but just making sure
 					species = { is_same_value = event_target:species2 }
 				}
 				add_opinion_modifier = {
@@ -1344,7 +1374,10 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					is_xenophile = no
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 		}
@@ -1374,7 +1407,10 @@ planet_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
@@ -1533,7 +1569,7 @@ planet_event = {
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		NOT = { has_planet_flag = cc_interspecies_incident }
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 	}
 	
 	immediate = {
@@ -1724,7 +1760,7 @@ planet_event = {
 			count > 4
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 		
 		NOR = {
 			has_modifier = cc_planet_interspecies_tensions
@@ -1883,7 +1919,7 @@ planet_event = {
 			count > 4
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 		
 		NOR = {
 			has_modifier = cc_planet_interspecies_tensions
@@ -1980,7 +2016,10 @@ country_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
@@ -2077,7 +2116,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					is_xenophile = no
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 		}
@@ -2114,7 +2156,7 @@ planet_event = {
 
 	trigger = {
 		planet_stability < @dpe_normal_unrest_value
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 		count_owned_pop = {
 			count > 4
 			limit = { species = { is_same_value = event_target:species1 } }
@@ -2320,7 +2362,10 @@ planet_event = {
 		
 		allow = {
 			owner = {
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		
@@ -2338,7 +2383,8 @@ planet_event = {
 				factor = 0
 				owner = { 
 					OR = {
-						is_xenophile = yes
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
 						
 						any_owned_pop = {
 							NOT = { is_same_species = prev }
@@ -2359,7 +2405,10 @@ planet_event = {
 		owner = {
 			if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				shift_ethic = ethic_xenophobe
 					
@@ -2644,7 +2693,7 @@ planet_event = {
 			}
 		}
 		NOT = { has_planet_flag = cc_interspecies_incident }
-		is_owned_by = event_target:cc_owner
+		owner = { is_same_value = event_target:cc_owner }
 	}
 	
 	immediate = {
@@ -2879,14 +2928,14 @@ planet_event = {
 		while = {
 			limit = {
 				count_owned_pop = {
-					limit = { species = { is_same_empire = root.owner } }
+					limit = { species = { is_same_value = root.owner } }
 					count > 1
 				}
 			}
 			count = 6
 			
 			random_owned_pop = {
-				limit = { species = { is_same_empire = root.owner } }
+				limit = { species = { is_same_value = root.owner } }
 				kill_pop = yes
 			}
 		}

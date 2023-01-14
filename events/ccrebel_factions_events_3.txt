@@ -210,11 +210,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 				
 				set_timed_country_flag = {
@@ -258,11 +264,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 				
 				set_timed_country_flag = {
@@ -306,11 +318,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_egalitarian = yes
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_authoritarian = yes
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
 				}
 				
 				set_timed_country_flag = {
@@ -354,11 +372,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 			
 				set_timed_country_flag = {
@@ -402,11 +426,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			
 				set_timed_country_flag = {
@@ -450,11 +480,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			
 				set_timed_country_flag = {
@@ -498,11 +534,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_authoritarian = yes
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_egalitarian = yes
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
 				}
 				
 				set_timed_country_flag = {
@@ -546,11 +588,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 				
 				set_timed_country_flag = {
@@ -594,11 +642,17 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 
 				set_timed_country_flag = {
@@ -909,10 +963,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOR = {
-			has_country_flag = cc_continue_factional_revolt
-			has_country_flag = cc_faction_ended
-		}
+		NOT = { has_country_flag = cc_continue_factional_revolt }
+		NOT = { has_country_flag = cc_faction_ended }
 	}
 	
 	option = {
@@ -1586,8 +1638,8 @@ country_event = {
 									is_faction_stronghold = yes
 									root = {
 										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_red }
 											NOR = {
-												has_planet_flag = ccrebel_red
 												is_same_value = prevprev
 												is_same_value = prevprevprevprev
 											}
@@ -1615,8 +1667,8 @@ country_event = {
 									is_faction_stronghold = yes
 									root = {
 										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_green }
 											NOR = {
-												has_planet_flag = ccrebel_green
 												is_same_value = prevprev
 												is_same_value = prevprevprevprev
 											}
@@ -1644,8 +1696,8 @@ country_event = {
 									is_faction_stronghold = yes
 									root = {
 										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_blue }
 											NOR = {
-												has_planet_flag = ccrebel_blue
 												is_same_value = prevprev
 												is_same_value = prevprevprevprev
 											}
@@ -1673,8 +1725,8 @@ country_event = {
 									is_faction_stronghold = yes
 									root = {
 										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_yellow }
 											NOR = {
-												has_planet_flag = ccrebel_yellow
 												is_same_value = prevprev
 												is_same_value = prevprevprevprev
 											}
@@ -1702,8 +1754,8 @@ country_event = {
 									is_faction_stronghold = yes
 									root = {
 										any_owned_planet = {
+											NOT = { has_planet_flag = ccrebel_white }
 											NOR = {
-												has_planet_flag = ccrebel_white
 												is_same_value = prevprev
 												is_same_value = prevprevprevprev
 											}
@@ -2029,7 +2081,7 @@ country_event = {
 			planet_stability < @dpe_risk_unrest_value
 			has_ground_combat = no
 			exists = controller
-			controller = { is_same_empire = prev.owner }
+			controller = { is_same_value = prev.owner }
 			has_modifier = cc_faction_acute_unrest
 		}
 	}
@@ -2051,7 +2103,7 @@ country_event = {
 						planet_stability < @dpe_risk_unrest_value
 						has_ground_combat = no
 						exists = controller
-						controller = { is_same_empire = prev.owner }
+						controller = { is_same_value = prev.owner }
 						has_modifier = cc_faction_acute_unrest
 						
 						owner = {
@@ -2061,7 +2113,7 @@ country_event = {
 								planet_stability < @dpe_risk_unrest_value
 								has_ground_combat = no
 								exists = controller
-								controller = { is_same_empire = prev.owner }
+								controller = { is_same_value = prev.owner }
 								has_modifier = cc_faction_acute_unrest
 								
 								owner = {
@@ -2074,7 +2126,7 @@ country_event = {
 										planet_stability < @dpe_risk_unrest_value
 										has_ground_combat = no
 										exists = controller
-										controller = { is_same_empire = prev.owner }
+										controller = { is_same_value = prev.owner }
 										has_modifier = cc_faction_acute_unrest
 									}
 								}
@@ -2093,7 +2145,7 @@ country_event = {
 							planet_stability < @dpe_risk_unrest_value
 							has_ground_combat = no
 							exists = controller
-							controller = { is_same_empire = prev.owner }
+							controller = { is_same_value = prev.owner }
 							has_modifier = cc_faction_acute_unrest
 							
 							owner = {
@@ -2103,7 +2155,7 @@ country_event = {
 									planet_stability < @dpe_risk_unrest_value
 									has_ground_combat = no
 									exists = controller
-									controller = { is_same_empire = prev.owner }
+									controller = { is_same_value = prev.owner }
 									has_modifier = cc_faction_acute_unrest
 									
 									owner = {
@@ -2116,7 +2168,7 @@ country_event = {
 											planet_stability < @dpe_risk_unrest_value
 											has_ground_combat = no
 											exists = controller
-											controller = { is_same_empire = prev.owner }
+											controller = { is_same_value = prev.owner }
 											has_modifier = cc_faction_acute_unrest
 											owner = {
 												any_owned_planet = {
@@ -2129,7 +2181,7 @@ country_event = {
 													planet_stability < @dpe_risk_unrest_value
 													has_ground_combat = no
 													exists = controller
-													controller = { is_same_empire = prev.owner }
+													controller = { is_same_value = prev.owner }
 													has_modifier = cc_faction_acute_unrest
 													owner = {
 														any_owned_planet = {
@@ -2143,7 +2195,7 @@ country_event = {
 															planet_stability < @dpe_risk_unrest_value
 															has_ground_combat = no
 															exists = controller
-															controller = { is_same_empire = prev.owner }
+															controller = { is_same_value = prev.owner }
 															has_modifier = cc_faction_acute_unrest
 														}
 													}
@@ -2173,7 +2225,7 @@ country_event = {
 						planet_stability < @dpe_acute_unrest_value
 						has_ground_combat = no
 						exists = controller
-						controller = { is_same_empire = prev.owner }
+						controller = { is_same_value = prev.owner }
 						has_modifier = cc_faction_acute_unrest
 					}
 				}
@@ -2357,7 +2409,7 @@ country_event = {
 							every_fleet_in_system = {
 								limit = {
 									exists = owner
-									is_owned_by = root
+									owner = { is_same_value = root }
 									any_owned_ship = { is_ship_class = shipclass_military_station }
 								}
 								set_owner = event_target:cc_breakaway_country
@@ -2405,8 +2457,8 @@ country_event = {
 						if = {
 							limit = {
 								any_country = {
+									NOT = { is_country_type = fallen_empire }
 									NOR = {
-										is_country_type = fallen_empire
 										has_valid_civic = civic_fanatic_purifiers
 										has_valid_civic = civic_hive_devouring_swarm
 										has_valid_civic = civic_machine_terminator
@@ -2422,8 +2474,8 @@ country_event = {
 							}
 							random_country = {
 								limit = {
+									NOT = { is_country_type = fallen_empire }
 									NOR = {
-										is_country_type = fallen_empire
 										has_valid_civic = civic_fanatic_purifiers
 										has_valid_civic = civic_hive_devouring_swarm
 										has_valid_civic = civic_machine_terminator
@@ -2539,7 +2591,10 @@ country_event = {
 										has_ethic = ethic_fanatic_authoritarian
 										has_ethic = ethic_fanatic_egalitarian
 										root = {
-											is_authoritarian = yes
+											OR = {
+												has_ethic = ethic_fanatic_authoritarian
+												has_ethic = ethic_authoritarian
+											}
 										}
 									}
 								}
@@ -2553,7 +2608,10 @@ country_event = {
 										has_ethic = ethic_fanatic_authoritarian
 										has_ethic = ethic_fanatic_egalitarian
 										root = {
-											is_egalitarian = yes
+											OR = {
+												has_ethic = ethic_fanatic_egalitarian
+												has_ethic = ethic_egalitarian
+											}
 										}
 									}
 								}
@@ -2567,7 +2625,10 @@ country_event = {
 										has_ethic = ethic_fanatic_xenophile
 										has_ethic = ethic_fanatic_xenophobe
 										root = {
-											is_xenophile = yes
+											OR = {
+												has_ethic = ethic_fanatic_xenophile
+												has_ethic = ethic_xenophile
+											}
 										}
 									}
 								}
@@ -2581,7 +2642,10 @@ country_event = {
 										has_ethic = ethic_fanatic_xenophile
 										has_ethic = ethic_fanatic_xenophobe
 										root = {
-											is_xenophobe = yes
+											OR = {
+												has_ethic = ethic_fanatic_xenophobe
+												has_ethic = ethic_xenophobe
+											}
 										}
 									}
 								}
@@ -2595,7 +2659,10 @@ country_event = {
 										has_ethic = ethic_fanatic_spiritualist
 										has_ethic = ethic_fanatic_materialist
 										root = {
-											is_spiritualist = yes
+											OR = {
+												has_ethic = ethic_fanatic_spiritualist
+												has_ethic = ethic_spiritualist
+											}
 										}
 									}
 								}
@@ -2609,7 +2676,10 @@ country_event = {
 										has_ethic = ethic_fanatic_spiritualist
 										has_ethic = ethic_fanatic_materialist
 										root = {
-											is_materialist = yes
+											OR = {
+												has_ethic = ethic_fanatic_materialist
+												has_ethic = ethic_materialist
+											}
 										}
 									}
 								}
@@ -2623,7 +2693,10 @@ country_event = {
 										has_ethic = ethic_fanatic_pacifist
 										has_ethic = ethic_fanatic_militarist
 										root = {
-											is_militarist = yes
+											OR = {
+												has_ethic = ethic_fanatic_militarist
+												has_ethic = ethic_militarist
+											}
 										}
 									}
 								}
@@ -2637,7 +2710,10 @@ country_event = {
 										has_ethic = ethic_fanatic_pacifist
 										has_ethic = ethic_fanatic_militarist
 										root = {
-											is_pacifist = yes
+											OR = {
+												has_ethic = ethic_fanatic_pacifist
+												has_ethic = ethic_pacifist
+											}
 										}
 									}
 								}
@@ -3036,7 +3112,10 @@ country_event = {
 											has_ethic = ethic_fanatic_authoritarian
 											has_ethic = ethic_fanatic_egalitarian
 											root = {
-												is_authoritarian = yes
+												OR = {
+													has_ethic = ethic_fanatic_authoritarian
+													has_ethic = ethic_authoritarian
+												}
 											}
 										}
 									}
@@ -3050,7 +3129,10 @@ country_event = {
 											has_ethic = ethic_fanatic_authoritarian
 											has_ethic = ethic_fanatic_egalitarian
 											root = {
-												is_egalitarian = yes
+												OR = {
+													has_ethic = ethic_fanatic_egalitarian
+													has_ethic = ethic_egalitarian
+												}
 											}
 										}
 									}
@@ -3064,7 +3146,10 @@ country_event = {
 											has_ethic = ethic_fanatic_xenophile
 											has_ethic = ethic_fanatic_xenophobe
 											root = {
-												is_xenophile = yes
+												OR = {
+													has_ethic = ethic_fanatic_xenophile
+													has_ethic = ethic_xenophile
+												}
 											}
 										}
 									}
@@ -3078,7 +3163,10 @@ country_event = {
 											has_ethic = ethic_fanatic_xenophile
 											has_ethic = ethic_fanatic_xenophobe
 											root = {
-												is_xenophobe = yes
+												OR = {
+													has_ethic = ethic_fanatic_xenophobe
+													has_ethic = ethic_xenophobe
+												}
 											}
 										}
 									}
@@ -3092,7 +3180,10 @@ country_event = {
 											has_ethic = ethic_fanatic_spiritualist
 											has_ethic = ethic_fanatic_materialist
 											root = {
-												is_spiritualist = yes
+												OR = {
+													has_ethic = ethic_fanatic_spiritualist
+													has_ethic = ethic_spiritualist
+												}
 											}
 										}
 									}
@@ -3106,7 +3197,10 @@ country_event = {
 											has_ethic = ethic_fanatic_spiritualist
 											has_ethic = ethic_fanatic_materialist
 											root = {
-												is_materialist = yes
+												OR = {
+													has_ethic = ethic_fanatic_materialist
+													has_ethic = ethic_materialist
+												}
 											}
 										}
 									}
@@ -3120,7 +3214,10 @@ country_event = {
 											has_ethic = ethic_fanatic_pacifist
 											has_ethic = ethic_fanatic_militarist
 											root = {
-												is_militarist = yes
+												OR = {
+													has_ethic = ethic_fanatic_militarist
+													has_ethic = ethic_militarist
+												}
 											}
 										}
 									}
@@ -3134,7 +3231,10 @@ country_event = {
 											has_ethic = ethic_fanatic_pacifist
 											has_ethic = ethic_fanatic_militarist
 											root = {
-												is_pacifist = yes
+												OR = {
+													has_ethic = ethic_fanatic_pacifist
+													has_ethic = ethic_pacifist
+												}
 											}
 										}
 									}
@@ -3433,7 +3533,10 @@ country_event = {
 								has_culture_shock = no
 								
 								owner = {
-									is_pacifist = no
+									NOR = {
+										has_ethic = ethic_pacifist
+										has_ethic = ethic_fanatic_pacifist
+									}
 								}
 								is_same_species = owner_species
 								#member_of_faction = supremacist
@@ -3455,7 +3558,10 @@ country_event = {
 								OR = {
 									NOT = { is_same_species = owner_species }
 									owner = {
-										is_pacifist = yes
+										OR = {
+											has_ethic = ethic_pacifist
+											has_ethic = ethic_fanatic_pacifist
+										}
 									}
 								}
 								#member_of_faction = isolationist
@@ -3718,7 +3824,7 @@ planet_event = {
 	
 	trigger = {
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_orbital_bombardment = no
 	}
@@ -3737,7 +3843,7 @@ planet_event = {
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
-					is_owned_by = event_target:dpe_former_owner
+					owner = { is_same_value = event_target:dpe_former_owner }
 					any_owned_ship = { is_ship_class = shipclass_military_station }
 				}
 				set_owner = event_target:cc_breakaway_country
@@ -3890,7 +3996,7 @@ planet_event = {
 	}
 	trigger = {
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		is_faction_stronghold = yes
 		has_orbital_bombardment = no
 	}
@@ -4686,10 +4792,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4732,10 +4836,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4778,10 +4880,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4824,10 +4924,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4870,10 +4968,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4916,10 +5012,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -4962,10 +5056,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -5010,10 +5102,8 @@ country_event = {
 						every_country = {
 							limit = {
 								has_communications = root
-								NOR = {
-									is_same_empire = root
-									has_ai_personality_behaviour = purger
-								}
+								NOT = { is_country = root }
+								NOT = { has_ai_personality_behaviour = purger }
 								NOT = {
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -5079,10 +5169,8 @@ country_event = {
 				factor = 0.35
 				any_relation = {
 					has_communications = root
-					NOR = {
-						is_same_empire = root
-						has_ai_personality_behaviour = purger
-					}
+					NOT = { is_country = root }
+					NOT = { has_ai_personality_behaviour = purger }
 					NOT = {
 						OR = {
 							has_ethic = ethic_fanatic_authoritarian
@@ -5301,14 +5389,20 @@ country_event = {
 		}
 		
 		allow = {
-			is_egalitarian = no
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
 		}
 		
 		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 1.5
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 	}
@@ -5399,7 +5493,7 @@ planet_event = {
 					factor = 0
 					NAND = {
 						exists = controller
-						controller = { is_same_empire = root.owner }
+						controller = { is_same_value = root.owner }
 						has_ground_combat = no
 						has_orbital_bombardment = no
 						planet_stability < @dpe_risk_unrest_value
@@ -5432,7 +5526,7 @@ planet_event = {
 	}
 	trigger = {
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		has_modifier = cc_breakaway_sympathy
 		
 		has_orbital_bombardment = no
@@ -5619,7 +5713,10 @@ planet_event = {
 						has_culture_shock = no
 						
 						owner = {
-							is_pacifist = no
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
 						}
 						is_same_species = owner_species
 						#member_of_faction = supremacist
@@ -5641,7 +5738,10 @@ planet_event = {
 						OR = {
 							NOT = { is_same_species = owner_species }
 							owner = {
-								is_pacifist = yes
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
 							}
 						}
 						#member_of_faction = isolationist

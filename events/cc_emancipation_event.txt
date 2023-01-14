@@ -130,7 +130,12 @@ planet_event = {
 		}
 		owner = {
 			random_neighbor_country = {
-				limit = { is_egalitarian = yes }
+				limit = {
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
 				save_event_target_as = neighbour_that_is_egalitarian
 			}
 			set_timed_country_flag = {
@@ -361,10 +366,8 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOR = {
-							is_same_empire = root.owner
-							has_ai_personality_behaviour = purger
-						}
+						NOT = { is_country = root.owner }
+						NOT = { has_ai_personality_behaviour = purger }
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -928,10 +931,8 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOR = {
-							is_same_empire = root.owner
-							has_ai_personality_behaviour = purger
-						}
+						NOT = { is_country = root.owner }
+						NOT = { has_ai_personality_behaviour = purger }
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -1219,8 +1220,10 @@ country_event = {
 		allow = {
 			owner = {
 				NOR = {
-					is_egalitarian = yes
-					is_pacifist = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
 			}
 		}
@@ -1274,10 +1277,8 @@ country_event = {
 					every_country = {
 						limit = {
 							has_communications = root
-							NOR = {
-								is_same_empire = root
-								has_ai_personality_behaviour = purger
-							}
+							NOT = { is_country = root }
+							NOT = { has_ai_personality_behaviour = purger }
 							NOT = {
 								OR = {
 									has_ethic = ethic_fanatic_authoritarian

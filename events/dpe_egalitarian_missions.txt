@@ -18,7 +18,8 @@ country_event = {
 			has_country_flag = dpe_provided_with_egalitarian_mission
 			has_ethic = ethic_gestalt_consciousness
 			is_democracy = yes
-			is_egalitarian = yes
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_fanatic_authoritarian
 		}
 		has_faction = progressive
@@ -916,7 +917,10 @@ country_event = {
 		every_relation = {
 			limit = {
 				is_democracy = yes
-				is_egalitarian = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
 			}
 			add_opinion_modifier = {
 				who = root
@@ -1113,7 +1117,10 @@ country_event = {
 		every_relation = {
 			limit = {
 				is_democracy = yes
-				is_egalitarian = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
 			}
 			add_opinion_modifier = {
 				who = root
@@ -1191,7 +1198,8 @@ country_event = {
 	trigger = {
 		NOR = {
 			is_democracy = yes
-			is_egalitarian = yes
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
 			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
@@ -1281,37 +1289,55 @@ country_event = {
 				OR = {
 					AND = {
 						root = {
-							is_pacifist = no
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
 						}
 						is_pop_faction_type = prosperity
 					}
 					AND = {
 						root = {
-							is_militarist = no
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
 						}
 						is_pop_faction_type = imperialist
 					}
 					AND = {
 						root = {
-							is_materialist = no
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
 						}
 						is_pop_faction_type = technologist
 					}
 					AND = {
 						root = {
-							is_spiritualist = no
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
 						}
 						is_pop_faction_type = traditionalist
 					}
 					AND = {
 						root = {
-							is_xenophile = no
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
 						}
 						is_pop_faction_type = xenoist
 					}
 					AND = {
 						root = {
-							is_xenophobe = no
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
 						}
 						OR = {
 							is_pop_faction_type = supremacist
@@ -1403,37 +1429,55 @@ country_event = {
 				OR = {
 					AND = {
 						root = {
-							is_pacifist = no
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
 						}
 						is_pop_faction_type = prosperity
 					}
 					AND = {
 						root = {
-							is_militarist = no
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
 						}
 						is_pop_faction_type = imperialist
 					}
 					AND = {
 						root = {
-							is_materialist = no
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
 						}
 						is_pop_faction_type = technologist
 					}
 					AND = {
 						root = {
-							is_spiritualist = no
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
 						}
 						is_pop_faction_type = traditionalist
 					}
 					AND = {
 						root = {
-							is_xenophile = no
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
 						}
 						is_pop_faction_type = xenoist
 					}
 					AND = {
 						root = {
-							is_xenophobe = no
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
 						}
 						OR = {
 							is_pop_faction_type = supremacist
@@ -1508,37 +1552,55 @@ country_event = {
 				OR = {
 					AND = {
 						root = {
-							is_pacifist = no
+							NOR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
 						}
 						is_pop_faction_type = prosperity
 					}
 					AND = {
 						root = {
-							is_militarist = no
+							NOR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
 						}
 						is_pop_faction_type = imperialist
 					}
 					AND = {
 						root = {
-							is_materialist = no
+							NOR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
 						}
 						is_pop_faction_type = technologist
 					}
 					AND = {
 						root = {
-							is_spiritualist = no
+							NOR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
 						}
 						is_pop_faction_type = traditionalist
 					}
 					AND = {
 						root = {
-							is_xenophile = no
+							NOR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
 						}
 						is_pop_faction_type = xenoist
 					}
 					AND = {
 						root = {
-							is_xenophobe = no
+							NOR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
 						}
 						OR = {
 							is_pop_faction_type = supremacist

@@ -292,7 +292,10 @@ has_same_faction_as_faction = {
 			has_culture_shock = no
 			
 			owner = {
-				is_pacifist = no
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 			is_same_species = owner_species
 		}
@@ -307,7 +310,10 @@ has_same_faction_as_faction = {
 			OR = {
 				NOT = { is_same_species = owner_species }
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 		}
@@ -378,7 +384,10 @@ has_same_faction_as_2nd_faction = {
 			has_culture_shock = no
 			
 			owner = {
-				is_pacifist = no
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 			is_same_species = owner_species
 		}
@@ -393,7 +402,10 @@ has_same_faction_as_2nd_faction = {
 			OR = {
 				NOT = { is_same_species = owner_species }
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 		}

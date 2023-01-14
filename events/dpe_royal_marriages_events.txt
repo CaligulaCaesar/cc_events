@@ -244,10 +244,8 @@ country_event = {
 		trigger = {
 			OR = {
 				AND = {
-					NOR = {
-						has_country_flag = royal_marriage_chain_happened
-						has_ascension_perk = ap_xeno_compatibility
-					}
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					NOT = { has_ascension_perk = ap_xeno_compatibility }
 					NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
 				}
 				AND = {
@@ -300,7 +298,10 @@ country_event = {
 
 	trigger = {
 		is_imperial = yes
-		is_xenophile = yes
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
 		has_faction = xenoist
 		exists = ruler #should always be true, but just in case
 		ruler = {
@@ -466,13 +467,19 @@ country_event = {
 			modifier = {
 				factor = 0.25
 				event_target:empire_proposed_to = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
 				factor = 2
 				event_target:empire_proposed_to = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 		}
@@ -597,10 +604,8 @@ country_event = {
 		trigger = {
 			OR = {
 				AND = {
-					NOR = {
-						has_country_flag = royal_marriage_chain_happened
-						has_ascension_perk = ap_xeno_compatibility
-					}
+					NOT = { has_country_flag = royal_marriage_chain_happened }
+					NOT = { has_ascension_perk = ap_xeno_compatibility }
 					NOT = { event_target:empire_proposed_to = { has_ascension_perk = ap_xeno_compatibility } }
 				}
 				AND = {
@@ -816,10 +821,8 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				has_faction = xenoist
-				NOR = {
-					has_faction = supremacist
-					has_faction = isolationist
-				}
+				NOT = { has_faction = supremacist }
+				NOT = { has_faction = isolationist }
 			}
 		}
 	}
@@ -827,8 +830,14 @@ country_event = {
 		name = dpe_royal_marriages_events.2.C1
 		custom_tooltip = never_again_dpe_royal_marriages_propose_to
 		trigger = {
-			is_spiritualist = yes
-			is_xenophile = no
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
 		}
 		custom_tooltip = the_from_will_be_insulted
 		
@@ -865,10 +874,8 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				NOT = { has_ethic = ethic_xenophobe }
+				NOT = { has_ethic = ethic_fanatic_xenophobe }
 			}
 		}
 	}
@@ -876,7 +883,10 @@ country_event = {
 		name = dpe_royal_marriages_events.2.C2
 		custom_tooltip = never_again_dpe_royal_marriages_propose_to
 		trigger = {
-			is_xenophobe = yes
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
 		}
 		custom_tooltip = the_from_will_be_insulted
 		
@@ -955,7 +965,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = dpe_royal_marriages_events.31.desc.spiritualist
@@ -963,7 +976,10 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		text = dpe_royal_marriages_events.31.desc.xenophobe
@@ -1040,7 +1056,8 @@ country_event = {
 		name = dpe_royal_marriages_events.5.A
 		allow = {
 			NOR = { #they could not be set as citizens
-				is_xenophobe = yes
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
 			}
 		}
 		capital_scope = {
@@ -1346,7 +1363,8 @@ country_event = {
 					modifier = {
 						factor = 1.5
 						OR = {
-							is_xenophile = yes
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_fanatic_xenophile
 							any_pop_faction = {
 								is_pop_faction_type = xenoist
 								support > 0.2
@@ -1371,7 +1389,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.75
-						is_xenophobe = yes	
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}	
 					}
 				}
 				1 = { #could be troubles
@@ -1389,7 +1410,8 @@ country_event = {
 					modifier = {
 						factor = 2
 						OR = {
-							is_xenophobe = yes
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
 							any_pop_faction = {
 								OR = {
 									is_pop_faction_type = supremacist
@@ -1408,9 +1430,9 @@ country_event = {
 					modifier = {
 						factor = 0 #I need these factions for later events if you get this modifier
 						OR = {
-							NOR = {
-								has_faction = supremacist 
-								has_faction = isolationist 
+							AND = {
+								NOT = { has_faction = supremacist }
+								NOT = { has_faction = isolationist }
 							}
 							has_faction = xenoist
 						}
@@ -1418,7 +1440,8 @@ country_event = {
 					modifier = {
 						factor = 1.5
 						OR = {
-							is_xenophobe = yes
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
 							any_pop_faction = {
 								OR = {
 									is_pop_faction_type = supremacist
@@ -1522,10 +1545,8 @@ country_event = {
 	option = {
 		name = dpe_royal_marriages_events.7.opt.good
 		trigger = {
-			NOR = {
-				has_country_flag = royal_marriage_troubles@from
-				has_country_flag = royal_marriage_hostile@from
-			}
+			NOT = { has_country_flag = royal_marriage_troubles@from }
+			NOT = { has_country_flag = royal_marriage_hostile@from }
 		}
 		add_modifier = {
 			modifier = optimism_at_wedding
@@ -1807,10 +1828,8 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.5
-						NOR = {
-							has_faction = supremacist
-							has_faction = isolationist
-						}
+						NOT = { has_faction = supremacist }
+						NOT = { has_faction = isolationist }
 					}
 					modifier = {
 						factor = 0.5
@@ -1992,11 +2011,17 @@ country_event = {
 			factor = 3
 			modifier = {
 				factor = 0.67
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 			modifier = {
 				factor = 0
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2032,7 +2057,8 @@ country_event = {
 						who = from
 						value = 100
 					}
-					is_xenophile = yes
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 				}
 				from = { NOT = { has_country_flag = royal_marriage_unhappy_couple@root } }
 			}
@@ -2175,11 +2201,17 @@ country_event = {
 			factor = 3
 			modifier = {
 				factor = 0.67
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 			modifier = {
 				factor = 0
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2223,7 +2255,8 @@ country_event = {
 						who = from
 						value = 100
 					}
-					is_xenophile = yes
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 				}
 				NOT = { has_country_flag = royal_marriage_unhappy_couple@root }
 			}
@@ -2759,7 +2792,7 @@ country_event = {
 	}
 
 	trigger = {
-		is_imperial = no
+		NOT = { is_imperial = yes }
 		any_country = {
 			has_opinion_modifier = {
 				who = root

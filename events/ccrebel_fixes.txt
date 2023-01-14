@@ -120,7 +120,10 @@ country_event = {
 						}
 					}
 				}
-				is_egalitarian = no
+				NOR = { 
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_egalitarian
+				}
 			}
 			country_add_ethic = ethic_authoritarian
 		}
@@ -138,7 +141,10 @@ country_event = {
 						}
 					}
 				}
-				is_authoritarian = no
+				NOR = { 
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+				}
 			}
 			country_add_ethic = ethic_egalitarian
 		}
@@ -156,7 +162,10 @@ country_event = {
 						}
 					}
 				}
-				is_militarist = no
+				NOR = { 
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+				}
 			}
 			country_add_ethic = ethic_pacifist
 		}
@@ -174,7 +183,10 @@ country_event = {
 						}
 					}
 				}
-				is_pacifist = no
+				NOR = { 
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_pacifist
+				}
 			}
 			country_add_ethic = ethic_militarist
 		}
@@ -192,7 +204,10 @@ country_event = {
 						}
 					}
 				}
-				is_xenophobe = no
+				NOR = { 
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
 			}
 			country_add_ethic = ethic_xenophile
 		}
@@ -210,7 +225,10 @@ country_event = {
 						}
 					}
 				}
-				is_xenophile = no
+				NOR = { 
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_xenophile
+				}
 			}
 			country_add_ethic = ethic_xenophobe
 		}
@@ -228,7 +246,10 @@ country_event = {
 						}
 					}
 				}
-				is_materialist = no
+				NOR = { 
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_materialist
+				}
 			}
 			country_add_ethic = ethic_spiritualist
 		}
@@ -246,7 +267,10 @@ country_event = {
 						}
 					}
 				}
-				is_spiritualist = no
+				NOR = { 
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_spiritualist
+				}
 			}
 			country_add_ethic = ethic_materialist
 		}
@@ -1218,8 +1242,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_authoritarian = yes
-									is_egalitarian = yes
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
 								}
 								NOT = {
 										pop_percentage = {
@@ -1236,8 +1262,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_pacifist = yes
-									is_militarist = yes
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
 								}
 								NOT = {
 										pop_percentage = {
@@ -1254,8 +1282,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_xenophile = yes
-									is_xenophobe = yes
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
 								}
 								NOT = {
 										pop_percentage = {
@@ -1272,8 +1302,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_authoritarian = yes
-									is_egalitarian = yes
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
 								}
 								NOT = {
 										pop_percentage = {
@@ -1290,8 +1322,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_xenophile = yes
-									is_xenophobe = yes
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
 								}
 								NOT = {
 										pop_percentage = {
@@ -1308,8 +1342,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_pacifist = yes
-									is_militarist = yes
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
 								}
 								NOT = {
 										pop_percentage = {
@@ -1326,8 +1362,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_materialist = yes
-									is_spiritualist = yes
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
 								}
 								NOT = {
 										pop_percentage = {
@@ -1344,8 +1382,10 @@ country_event = {
 							factor = 0
 							OR = {
 								NOR = {
-									is_materialist = yes
-									is_spiritualist = yes
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
 								}
 								NOT = {
 										pop_percentage = {
@@ -1365,8 +1405,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_authoritarian = yes
-								is_egalitarian = yes
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
 							}
 						}
 						modifier = {
@@ -1383,8 +1425,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_authoritarian = yes
-								is_egalitarian = yes
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
 							}
 						}
 						modifier = {
@@ -1401,8 +1445,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_xenophile = yes
-								is_xenophobe = yes
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
 							}
 						}
 						modifier = {
@@ -1419,8 +1465,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_xenophile = yes
-								is_xenophobe = yes
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
 							}
 						}
 						modifier = {
@@ -1437,8 +1485,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_militarist = yes
-								is_pacifist = yes
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
 							}
 						}
 						modifier = {
@@ -1455,8 +1505,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_militarist = yes
-								is_pacifist = yes
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
 							}
 						}
 						modifier = {
@@ -1473,8 +1525,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_spiritualist = yes
-								is_materialist = yes
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
 							}
 						}
 						modifier = {
@@ -1491,8 +1545,10 @@ country_event = {
 						modifier = {
 							factor = 0
 							OR = {
-								is_spiritualist = yes
-								is_materialist = yes
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
 							}
 						}
 						modifier = {
@@ -1856,8 +1912,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_authoritarian = yes
-						is_egalitarian = yes
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
 					}
 				}
 				modifier = {
@@ -1874,8 +1932,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_authoritarian = yes
-						is_egalitarian = yes
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
 					}
 				}
 				modifier = {
@@ -1892,8 +1952,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_xenophile = yes
-						is_xenophobe = yes
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
 				modifier = {
@@ -1910,8 +1972,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_xenophile = yes
-						is_xenophobe = yes
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
 				modifier = {
@@ -1928,8 +1992,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_militarist = yes
-						is_pacifist = yes
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
 					}
 				}
 				modifier = {
@@ -1946,8 +2012,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_militarist = yes
-						is_pacifist = yes
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
 					}
 				}
 				modifier = {
@@ -1964,8 +2032,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_spiritualist = yes
-						is_materialist = yes
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
 					}
 				}
 				modifier = {
@@ -1982,8 +2052,10 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						is_spiritualist = yes
-						is_materialist = yes
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
 					}
 				}
 				modifier = {

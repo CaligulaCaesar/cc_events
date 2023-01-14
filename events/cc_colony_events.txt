@@ -18,7 +18,7 @@ planet_event = {
 			is_enslaved = no
 			has_citizenship_rights = yes
 		}
-		is_capital = no
+		NOT = { is_capital = yes }
 	}
 	
 	immediate = {
@@ -389,7 +389,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_militarist = yes
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		text = cc_colony_events.2.desc.pos
@@ -398,8 +401,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_pacifist = yes
-					is_militarist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
 				}
 			}
 		}
@@ -408,7 +413,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_pacifist = yes
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		text = cc_colony_events.2.desc.neg
@@ -478,7 +486,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_militarist = yes
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 	}
@@ -494,7 +505,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_militarist = yes
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		ai_chance = {
@@ -528,7 +542,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_militarist = yes
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		
@@ -551,7 +568,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_militarist = no
+				NOR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		ai_chance = {
@@ -610,7 +630,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_militarist = no
+				NOR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		
@@ -681,12 +704,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -726,7 +757,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -789,12 +820,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -824,9 +863,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_pacifist = yes
-					is_egalitarian = no
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
 				}
 			}
 		}
@@ -859,12 +903,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -928,7 +980,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.231.option #deliberate
@@ -955,7 +1007,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -986,7 +1038,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -1064,7 +1116,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 			}
 		}
@@ -1140,7 +1195,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_pacifist = yes
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		text = cc_colony_events.3.desc.pos
@@ -1149,8 +1207,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_pacifist = yes
-					is_militarist = yes
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
 				}
 			}
 		}
@@ -1159,7 +1219,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_militarist = yes
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		text = cc_colony_events.3.desc.neg
@@ -1232,7 +1295,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_pacifist = yes
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 	}
@@ -1255,7 +1321,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_pacifist = no
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		ai_chance = {
@@ -1314,7 +1383,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_pacifist = no
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		
@@ -1385,12 +1457,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -1434,7 +1514,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -1501,12 +1581,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -1536,9 +1624,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_militarist = yes
-					is_egalitarian = no					
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}					
 				}
 			}
 		}
@@ -1563,12 +1656,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_militarist = yes
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -1632,7 +1733,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.331.option #deliberate
@@ -1659,7 +1760,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -1700,7 +1801,7 @@ planet_event = {
 	trigger = {
 		
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_pacifist
@@ -1873,7 +1974,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 		}
@@ -2009,7 +2113,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_pacifist = yes
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 		}
@@ -2062,7 +2169,10 @@ planet_event = {
 		trigger = {
 			NOT = { has_planet_flag = cc_famous_leader }
 			owner = {
-				is_pacifist = no
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		
@@ -2147,7 +2257,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		text = cc_colony_events.4.desc.pos
@@ -2156,8 +2269,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_xenophile = yes
-					is_xenophobe = yes
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -2167,7 +2282,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -2237,7 +2353,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 	}
@@ -2256,7 +2375,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		ai_chance = {
@@ -2319,7 +2441,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		
@@ -2392,12 +2517,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2437,7 +2570,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -2500,12 +2633,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2535,9 +2676,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_xenophobe = yes
-					is_egalitarian = no					
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}					
 				}
 			}
 		}
@@ -2562,12 +2708,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2631,7 +2785,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.431.option #deliberate
@@ -2658,7 +2812,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -2731,7 +2885,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 		}
@@ -2771,7 +2928,10 @@ planet_event = {
 		trigger = {
 			NOT = { has_planet_flag = cc_famous_leader }
 			owner = {
-				is_xenophile = no
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		
@@ -2834,7 +2994,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -2844,8 +3005,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_xenophobe = yes
-					is_xenophile = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
 				}
 			}
 		}
@@ -2854,7 +3017,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		text = cc_colony_events.5.desc.neg
@@ -2914,7 +3080,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -2950,7 +3117,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		ai_chance = {
@@ -3019,7 +3189,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		
@@ -3095,12 +3268,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -3158,7 +3339,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -3236,12 +3417,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -3274,9 +3463,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_xenophile = yes
-					is_egalitarian = no					
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}					
 				}
 			}
 		}
@@ -3301,12 +3495,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -3373,7 +3575,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.531.option #deliberate
@@ -3400,7 +3602,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -3433,7 +3635,7 @@ planet_event = {
 	trigger = {
 		
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
@@ -3458,7 +3660,10 @@ planet_event = {
 			
 			if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				NOT = { has_country_flag = cc_recent_xenophobe_incident }
 				any_relation = {
@@ -3479,7 +3684,10 @@ planet_event = {
 		if = {
 			limit = {
 				owner = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			planet_event = { id = cc_colony_events.5400 }
@@ -3541,7 +3749,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}		
@@ -3550,7 +3759,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		text = cc_colony_events.54.desc.neg
@@ -3567,7 +3779,7 @@ planet_event = {
 	trigger = {
 		
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
@@ -3591,7 +3803,10 @@ planet_event = {
 			
 			if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 				NOT = { has_country_flag = cc_recent_xenophobe_incident }
 				any_relation = {
@@ -3619,7 +3834,10 @@ planet_event = {
 
 			if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 
 				set_timed_country_flag = {
@@ -3656,7 +3874,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -3744,7 +3963,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		ai_chance = {
@@ -3752,7 +3974,10 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
@@ -3805,7 +4030,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		ai_chance = {
@@ -3878,7 +4106,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		ai_chance = {
@@ -3886,7 +4117,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_egalitarian = yes
+					OR = {
+						has_ethic = ethic_fanatic_egalitarian
+						has_ethic = ethic_egalitarian
+					}
 				}
 			}
 		}
@@ -4038,7 +4272,10 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
@@ -4371,7 +4608,10 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					is_xenophile = yes
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
 				}
 			}
 			modifier = {
@@ -4614,7 +4854,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 		}
@@ -4678,7 +4921,10 @@ planet_event = {
 		trigger = {
 			NOT = { has_planet_flag = cc_famous_leader }
 			owner = {
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 		
@@ -4779,7 +5025,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = cc_colony_events.6.desc.pos
@@ -4788,8 +5037,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_spiritualist = yes
-					is_materialist = yes
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -4799,7 +5050,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_materialist = yes
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -4873,7 +5125,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -4896,7 +5151,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		ai_chance = {
@@ -4955,7 +5213,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		
@@ -5026,12 +5287,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -5075,7 +5344,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -5142,12 +5411,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -5177,9 +5454,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_materialist = yes
-					is_egalitarian = no					
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}					
 				}
 			}
 		}
@@ -5204,12 +5486,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -5273,7 +5563,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.631.option #deliberate
@@ -5300,7 +5590,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -5341,7 +5631,7 @@ planet_event = {
 	trigger = {
 		
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_spiritualist
@@ -5514,7 +5804,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -5650,7 +5943,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -5702,7 +5998,10 @@ planet_event = {
 		trigger = {
 			NOT = { has_planet_flag = cc_famous_leader }
 			owner = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		
@@ -5785,7 +6084,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_materialist = yes
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -5795,8 +6095,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_spiritualist = yes
-					is_materialist = yes
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -5805,7 +6107,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = cc_colony_events.7.desc.neg
@@ -5875,7 +6180,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_materialist = yes
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -5895,7 +6201,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_materialist = no
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
 			}
 		}
 		ai_chance = {
@@ -5954,7 +6263,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_materialist = no
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
 			}
 		}
 		
@@ -6025,12 +6337,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -6070,7 +6390,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -6133,12 +6453,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -6168,9 +6496,14 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_authoritarian = yes
-					is_spiritualist = yes
-					is_egalitarian = no
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
 				}
 			}
 		}
@@ -6195,12 +6528,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -6264,7 +6605,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.731.option #deliberate
@@ -6291,7 +6632,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -6366,7 +6707,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 		}
@@ -6443,7 +6787,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 			NOT = { event_target:cc_colony_leader = { gender = female } }
 		}
@@ -6452,7 +6799,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 			event_target:cc_colony_leader = { gender = female }
 		}
@@ -6462,8 +6812,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_authoritarian = yes
-					is_egalitarian = yes
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 			NOT = { event_target:cc_colony_leader = { gender = female } }
@@ -6474,8 +6826,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_authoritarian = yes
-					is_egalitarian = yes
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 			event_target:cc_colony_leader = { gender = female }
@@ -6486,7 +6840,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_egalitarian = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 			NOT = { event_target:cc_colony_leader = { gender = female } }
@@ -6497,7 +6852,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_egalitarian = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 			event_target:cc_colony_leader = { gender = female }
@@ -6568,7 +6924,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 			NOT = { event_target:cc_colony_leader = { gender = female } }
 		}
@@ -6588,7 +6947,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 			event_target:cc_colony_leader = { gender = female }
 		}
@@ -6620,7 +6982,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		
@@ -6643,7 +7008,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_authoritarian = no
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		ai_chance = {
@@ -6702,7 +7070,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_authoritarian = no
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		
@@ -6772,11 +7143,21 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 2.5
-				owner = { is_egalitarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -6842,7 +7223,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -6904,11 +7285,21 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 2.5
-				owner = { is_egalitarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -6938,8 +7329,10 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					is_authoritarian = yes
-					is_egalitarian = yes
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
@@ -6963,11 +7356,21 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 2.5
-				owner = { is_egalitarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -7031,7 +7434,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.831.option #deliberate
@@ -7058,7 +7461,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -7121,7 +7524,12 @@ planet_event = {
 			factor = 10
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 		}
 	}
@@ -7202,7 +7610,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_egalitarian = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
@@ -7212,8 +7621,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_egalitarian = yes
-					is_authoritarian = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
 				}
 			}
 		}
@@ -7222,7 +7633,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		text = cc_colony_events.9.desc.neg
@@ -7250,7 +7664,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_egalitarian = yes
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
@@ -7263,7 +7678,10 @@ planet_event = {
 		name = cc_colony_events.9.B
 		trigger = {
 			owner = {
-				is_egalitarian = no
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
 			}
 		}
 		add_modifier = {
@@ -7275,7 +7693,12 @@ planet_event = {
 			factor = 3
 			modifier = {
 				factor = 0
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 		}
 	}
@@ -7283,7 +7706,10 @@ planet_event = {
 		name = cc_colony_events.9.C
 		trigger = {
 			owner = {
-				is_egalitarian = no
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
 			}
 		}
 		custom_tooltip = cc_colony_events.9.C.tooltip
@@ -7383,7 +7809,10 @@ planet_event = {
 		
 		allow = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		
@@ -7434,7 +7863,12 @@ planet_event = {
 			factor = 2
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 0.25
@@ -7464,7 +7898,12 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 		}
 	}
@@ -7480,7 +7919,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = CC_GOODIGUESS
@@ -7510,7 +7949,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -7542,7 +7981,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -7563,7 +8002,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -7720,7 +8159,10 @@ planet_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		text = cc_colony_events.100.desc.pos
@@ -7729,8 +8171,10 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_spiritualist = yes
-					is_materialist = yes
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -7740,7 +8184,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				OR = {
-					is_materialist = yes
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}
@@ -7758,7 +8203,7 @@ planet_event = {
 		
 		exists = root.owner
 		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller = { is_same_value = root.owner }
 		owner = {
 			NOT = { has_country_flag = cc_recent_spiritualist_story }
 			is_country_type = default
@@ -7893,7 +8338,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -7910,7 +8358,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		
@@ -8020,7 +8471,10 @@ planet_event = {
 		
 		trigger = {
 			owner = {
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		
@@ -8091,12 +8545,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -8142,7 +8604,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -8206,12 +8668,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -8240,7 +8710,10 @@ planet_event = {
 		
 		allow = {
 			owner = {
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 		
@@ -8264,12 +8737,20 @@ planet_event = {
 			modifier = {
 				factor = 2.5
 				owner = {
-					is_materialist = yes
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
 				}
 			}
 			modifier = {
 				factor = 2
-				owner = { is_authoritarian = yes }
+				owner = {
+					OR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
+				}
 			}
 			modifier = {
 				factor = 2
@@ -8333,7 +8814,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = cc_colony_events.631.option #deliberate
@@ -8360,7 +8841,7 @@ planet_event = {
 	is_triggered_only = yes
 	location = root
 	
-	trigger = { is_owned_by = event_target:cc_owner }
+	trigger = { owner = { is_same_value = event_target:cc_owner } }
 	
 	option = {
 		name = UNFORTUNATE
@@ -8476,7 +8957,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -8606,7 +9090,10 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					is_spiritualist = yes
+					OR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
 				}
 			}
 		}
@@ -8654,7 +9141,8 @@ planet_event = {
 		allow = {
 			owner = {
 				OR = {
-					is_materialist = yes
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
 				}
 			}
 		}

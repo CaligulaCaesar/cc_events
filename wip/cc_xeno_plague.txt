@@ -7,14 +7,20 @@ country_event = {
 	title = cc_xeno_plague.1.name
 	desc = {
 		trigger = {
-			is_xenophobe = no
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
 		text = cc_xeno_plague.1.desc
 	}
 	desc = {
 		trigger = {
-			is_xenophobe = yes
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
 		text = cc_xeno_plague.1.desc.phobe

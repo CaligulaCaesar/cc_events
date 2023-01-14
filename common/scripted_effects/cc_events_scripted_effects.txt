@@ -1322,7 +1322,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_xenophile_movement_1
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		remove_modifier = cc_underground_xenophile_movement_1
@@ -1331,7 +1334,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_xenophile_movement_2
 			owner = {
-				is_xenophile = yes
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
 			}
 		}
 		remove_modifier = cc_underground_xenophile_movement_2
@@ -1453,7 +1459,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_pacifist_movement_1
 			owner = {
-				is_pacifist = yes
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		remove_modifier = cc_underground_pacifist_movement_1
@@ -1462,7 +1471,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_pacifist_movement_2
 			owner = {
-				is_pacifist = yes
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		remove_modifier = cc_underground_pacifist_movement_2
@@ -1535,7 +1547,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_spiritualist_movement_1
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		remove_modifier = cc_underground_spiritualist_movement_1
@@ -1544,7 +1559,10 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 		limit = {
 			has_modifier = cc_underground_spiritualist_movement_2
 			owner = {
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 		remove_modifier = cc_underground_spiritualist_movement_2

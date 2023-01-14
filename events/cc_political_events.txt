@@ -54,7 +54,10 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					is_xenophobe = yes
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
 				}
 			}
 			2 = {
@@ -212,7 +215,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					is_xenophobe = yes
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
 					is_dictatorial = yes
 				}
 			}
@@ -280,7 +284,10 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
 				}
 				shift_ethic = "ethic_xenophobe"
 			}
@@ -304,7 +311,10 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				is_xenophobe = no
+				NOR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}
@@ -332,7 +342,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 10
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}
@@ -369,10 +382,8 @@ country_event = {
 		
 		has_faction = xenoist
 		is_imperial = yes
-		NOR = {
-			has_country_flag = recent_xenophobic_comments
-			has_ethic = ethic_gestalt_consciousness
-		}
+		NOT = { has_country_flag = recent_xenophobic_comments }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
 		NOT = { has_ethic = ethic_fanatic_xenophile }
 		
 		exists = ruler
@@ -476,7 +487,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}
@@ -566,7 +580,10 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					is_xenophobe = no
+					NOR = {
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophobe
+					}
 				}
 				shift_ethic = "ethic_xenophobe"
 			}
@@ -593,7 +610,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
-				is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}
@@ -615,13 +635,14 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		is_imp_or_dict = yes
-		is_materialist = no
+		NOR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
 		has_faction	= traditionalist
 		
-		NOR = {
-			has_civic = civic_imperial_cult
-			has_modifier = cc_ruler_cult
-		}
+		NOT = { has_civic = civic_imperial_cult }
+		NOT = { has_modifier = cc_ruler_cult }
 		NOT = { leader = { has_leader_flag = cc_leader_revered_event } }
 		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 	}
@@ -645,7 +666,10 @@ country_event = {
 	
 	trigger = {
 		is_imp_or_dict = yes
-		is_materialist = no
+		NOR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
 		has_faction	= traditionalist
 
 		NOT = { has_ascension_perk = ap_transcendence }
@@ -667,7 +691,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -684,7 +711,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -761,7 +791,10 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				is_spiritualist = no
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 			}
 		}
 	}
@@ -775,7 +808,10 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 0
-				is_spiritualist = yes
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
 				NOT = {
 					any_owned_planet = {
 						planet_stability < @dpe_somewhat_unrest_value
@@ -801,14 +837,13 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		
-		NOR = {
-			has_ethic = ethic_gestalt_consciousness
-			has_country_flag = cc_recent_sex_scandal
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = cc_recent_sex_scandal }
 
 		OR = {
 			has_policy_flag = bans_im_completely
-			is_xenophobe = yes
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
 		}
 
 		any_owned_species = {
@@ -911,7 +946,8 @@ country_event = {
 		
 		OR = {
 			has_policy_flag = bans_im_completely
-			is_xenophobe = yes
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
 		}
 		
 		NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -1145,7 +1181,10 @@ country_event = {
 		}
 		
 		allow = {
-			is_authoritarian = yes
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
 		}
 		
 		ai_chance = {
@@ -1184,7 +1223,8 @@ country_event = {
 	
 		OR = {
 			has_policy_flag = bans_im_completely
-			is_xenophobe = yes
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
 		}
 	
 		NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -1378,7 +1418,8 @@ country_event = {
 		NOT = { has_country_flag = dpe_has_had_patents_event }
 		num_owned_planets > 1
 		OR = {
-			is_materialist = yes
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
 			any_pop_faction = {
 				is_pop_faction_type = technologist
 				support > 0.15
@@ -1386,7 +1427,7 @@ country_event = {
 			}
 		}
 		any_owned_planet = {
-			is_capital = no
+			NOT = { is_capital = yes }
 			colony_age > 25
 			NOR = {
 				has_modifier = dpe_innovative_CEO
@@ -1401,7 +1442,7 @@ country_event = {
 		set_country_flag = dpe_has_had_patents_event
 		random_owned_planet = {
 			limit = {
-				is_capital = no
+				NOT = { is_capital = yes }
 				colony_age > 25
 			}
 			save_event_target_as = dpe_merchant_planet
@@ -1442,7 +1483,10 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				is_materialist = yes
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
 			}
 		}
 	}
@@ -1493,7 +1537,10 @@ country_event = {
 			factor = 2
 			modifier = {
 				factor = 2
-				is_authoritarian = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 	}
