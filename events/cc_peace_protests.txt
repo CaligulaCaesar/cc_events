@@ -79,11 +79,7 @@ country_event = {
 					any_war = {
 						is_war_participant = { who = root side = attackers }
 						any_defender = {
-							OR = {
-								has_valid_civic = civic_fanatic_purifiers
-								has_valid_civic = civic_hive_devouring_swarm
-								has_valid_civic = civic_machine_terminator
-							}
+							is_homicidal = yes
 						}
 					}
 				}
@@ -422,8 +418,10 @@ country_event = {
 					every_country = {
 						limit = {
 							has_communications = root
-							NOT = { is_country = root }
-							NOT = { has_ai_personality_behaviour = purger }
+							NOR = {
+								is_same_empire = root
+								has_ai_personality_behaviour = purger
+							}
 							NOT = {
 								OR = {
 									has_ethic = ethic_fanatic_authoritarian

@@ -458,10 +458,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -492,10 +489,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -528,10 +522,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -568,10 +559,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -605,10 +593,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -633,8 +618,7 @@ planet_event = {
 				factor = 0
 				NOR = {
 					owner = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
+						is_materialist = yes
 					}
 					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
 				}
@@ -684,10 +668,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -704,10 +685,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -785,10 +763,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -827,10 +802,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 			modifier = {
@@ -854,10 +826,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -888,12 +857,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
-				}
+				owner = { is_authoritarian = yes }
 			}
 			modifier = {
 				factor = 0
@@ -923,12 +887,7 @@ planet_event = {
 			factor = 0.33
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
+				owner = { is_egalitarian = yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
@@ -972,12 +931,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 5
-				owner = {
-					OR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
+				owner = { is_egalitarian = yes }
 			}
 			modifier = {
 				factor = 5
@@ -985,12 +939,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
-				}
+				owner = { is_authoritarian = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1080,10 +1029,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 			modifier = {
@@ -1117,10 +1063,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -1152,10 +1095,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 			modifier = {
@@ -1180,8 +1120,7 @@ planet_event = {
 				factor = 0
 				NOR = {
 					owner = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
+						is_spiritualist = yes
 					}
 					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
 				}
@@ -1214,10 +1153,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 			modifier = {
@@ -1241,10 +1177,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -1289,10 +1222,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 			modifier = {
@@ -1308,10 +1238,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -1352,10 +1279,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 			modifier = {
@@ -1372,10 +1296,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -1447,12 +1368,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
+				owner = { is_egalitarian = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1482,12 +1398,7 @@ planet_event = {
 			factor = 0.33
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
-				}
+				owner = { is_authoritarian = yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
@@ -1531,12 +1442,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 5
-				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
-				}
+				owner = { is_authoritarian = yes }
 			}
 			modifier = {
 				factor = 5
@@ -1544,12 +1450,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				owner = {
-					OR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-					}
-				}
+				owner = { is_egalitarian = yes }
 			}
 			modifier = {
 				factor = 0
@@ -1639,10 +1540,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 			modifier = {
@@ -1667,8 +1565,7 @@ planet_event = {
 				factor = 0
 				NOR = {
 					owner = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
 				}
@@ -1701,10 +1598,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 			modifier = {
@@ -1729,8 +1623,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
@@ -1776,10 +1669,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 			modifier = {
@@ -1796,8 +1686,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
@@ -1839,10 +1728,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 			modifier = {
@@ -1860,8 +1746,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
@@ -1935,10 +1820,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 			modifier = {
@@ -1973,8 +1855,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
@@ -2011,8 +1892,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2037,10 +1917,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2074,8 +1951,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2110,10 +1986,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2151,8 +2024,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2185,8 +2057,7 @@ planet_event = {
 				factor = 0
 				NOR = {
 					owner = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
 				}
@@ -2237,8 +2108,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2256,10 +2126,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2328,8 +2195,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2370,8 +2236,7 @@ planet_event = {
 				factor = 0
 				owner = {
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 					}
 				}
 			}
@@ -2396,10 +2261,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2522,10 +2384,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = no
 				}
 			}			
 		}
@@ -2592,10 +2451,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			modifier = {
@@ -2619,10 +2475,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2656,10 +2509,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			modifier = {
@@ -2692,10 +2542,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2728,10 +2575,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			modifier = {
@@ -2756,8 +2600,7 @@ planet_event = {
 				factor = 0
 				NOR = {
 					owner = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
 					}
 					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
 				}
@@ -2807,10 +2650,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			modifier = {
@@ -2827,10 +2667,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
@@ -2881,10 +2718,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			modifier = {

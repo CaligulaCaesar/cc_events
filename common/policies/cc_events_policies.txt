@@ -84,10 +84,8 @@ cc_interspecies_marriage = {
 			modifier = {
 				factor = 1.2
 				NOR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
+					is_xenophile = yes
+					is_xenophobe = yes
 				}
 			}
 		}
@@ -109,10 +107,7 @@ cc_interspecies_marriage = {
 		AI_weight = {
 			modifier = {
 				factor = 0.5
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 			modifier = {
 				factor = 20

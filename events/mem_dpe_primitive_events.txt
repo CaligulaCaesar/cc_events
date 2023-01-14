@@ -330,18 +330,13 @@ country_event = {
 
 		trigger = {
 			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
+				is_xenophile = yes
+				is_materialist = yes
 				event_target:mem_dpe_primitive_civ = {
 					has_country_flag = early_space_age
 				}
 			}
-			NOR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = no
 		}
 	}
 
@@ -350,12 +345,9 @@ country_event = {
 
 		trigger = {
 			NOR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+				is_xenophile = yes
+				is_materialist = yes
+				is_xenophobe = yes
 				has_valid_civic = civic_machine_terminator
 				has_valid_civic = civic_hive_devouring_swarm
 				event_target:mem_dpe_primitive_civ = {
@@ -369,10 +361,7 @@ country_event = {
 		name = mem_dpe_primitive_events.2.irrelevant
 
 		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = yes
 		}
 	}
 	
@@ -500,11 +489,7 @@ country_event = {
 	title = mem_dpe_primitive_events.3.name
 	desc = {
 		trigger = {
-			OR = {
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_machine_terminator
-			}
+			is_homicidal = yes
 		}
 		text = mem_dpe_primitive_events.3.desc.evil
 	}
@@ -556,11 +541,7 @@ country_event = {
 		}
 
 		trigger = {
-			NOR = {
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_machine_terminator
-			}
+			is_homicidal = no
 		}
 	}
 
@@ -574,11 +555,7 @@ country_event = {
 		}
 
 		trigger = {
-			OR = {
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_machine_terminator
-			}
+			is_homicidal = yes
 		}
 	}
 }
@@ -595,10 +572,8 @@ country_event = {
 			limit = {
 				event_target:mem_dpe_primitive_civ = {
 					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_xenophobe = yes
+						is_militarist = yes
 						has_ethic = ethic_fanatic_authoritarian
 					}
 				}
@@ -618,10 +593,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:mem_dpe_primitive_civ = {
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				is_spiritualist = yes
 			}
 		}
 		text = mem_dpe_primitive_events.5.desc.spiritualist
@@ -629,10 +601,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:mem_dpe_primitive_civ = {
-				NOR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				is_spiritualist = no
 			}
 		}
 		text = mem_dpe_primitive_events.5.desc.else
@@ -668,10 +637,7 @@ country_event = {
 		}
 
 		allow = {
-			NOR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = no
 		}
 
 		mem_dpe_become_protectorate = yes
@@ -724,10 +690,8 @@ country_event = {
 
 		allow = {
 			NOR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
+				is_xenophile = yes
+				is_pacifist = yes
 			}
 		}
 
@@ -781,11 +745,7 @@ country_event = {
 				has_ground_combat = no
 			}
 		}
-		event_target:mem_dpe_primitive_system = {
-			owner = {
-				is_same_value = root
-			}
-		}
+		event_target:mem_dpe_primitive_system = { is_owned_by = root }
 	}
 
 	option = { #Destroy it
@@ -823,10 +783,7 @@ country_event = {
 		}
 
 		allow = {
-			NOR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = no
 		}
 
 		trigger = {
@@ -887,10 +844,8 @@ country_event = {
 
 		allow = {
 			NOR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
+				is_xenophile = yes
+				is_pacifist = yes
 			}
 		}
 
@@ -1080,10 +1035,7 @@ country_event = {
 		}
 
 		allow = {
-			NOR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = no
 		}
 
 		ai_chance = {
@@ -1107,11 +1059,7 @@ country_event = {
 				has_ground_combat = no
 			}
 		}
-		event_target:mem_dpe_primitive_system = {
-			owner = {
-				is_same_value = root
-			}
-		}
+		event_target:mem_dpe_primitive_system = { is_owned_by = root }
 	}
 
 	immediate = {
@@ -1195,11 +1143,7 @@ country_event = {
 				has_ground_combat = no
 			}
 		}
-		event_target:mem_dpe_primitive_system = {
-			owner = {
-				is_same_value = root
-			}
-		}
+		event_target:mem_dpe_primitive_system = { is_owned_by = root }
 	}
 
 	immediate = {
@@ -1436,11 +1380,7 @@ country_event = {
 					}
 					modifier = {
 						factor = 10
-						OR = {
-							has_valid_civic = civic_fanatic_purifiers
-							has_valid_civic = civic_hive_devouring_swarm
-							has_valid_civic = civic_machine_terminator
-						}
+						is_homicidal = yes
 					}
 				}
 				2 = { #Surrender
@@ -1732,7 +1672,7 @@ country_event = {
 					else_if = {
 						limit = {
 							starbase = {
-								NOT = { owner = { is_same_value = event_target:mem_dpe_primitive_civ } }
+								NOT = { is_owned_by = event_target:mem_dpe_primitive_civ }
 							}
 						}	
 						starbase = {
@@ -1838,11 +1778,7 @@ country_event = {
 		}
 		
 		trigger = {
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
-			}
+			is_homicidal = no
 			event_target:mem_dpe_primitive_civ = {
 				has_country_flag = mem_dpe_hostile_contact
 			}
@@ -1862,11 +1798,7 @@ country_event = {
 		}
 		
 		trigger = {
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
-			}
+			is_homicidal = no
 			event_target:mem_dpe_primitive_civ = {
 				NOT = { has_country_flag = mem_dpe_hostile_contact }
 			}
