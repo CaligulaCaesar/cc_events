@@ -345,8 +345,7 @@ country_event = {
 
 		trigger = {
 			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 				has_ethic = ethic_fanatic_xenophobe
 				has_valid_civic = civic_hive_devouring_swarm
 				has_authority = auth_hive_mind
@@ -403,10 +402,8 @@ country_event = {
 		}
 
 		trigger = {
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			
+				is_fallen_empire = yes
 		}
 	}
 	
@@ -492,18 +489,14 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 			}
 		}
 
 		trigger = {
 			NOR = {
 				AND = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
+					is_militarist = yes
 					any_owned_leader = {
 						NOR = {
 							leader_class = scientist
@@ -512,8 +505,7 @@ country_event = {
 					}
 				}
 				has_authority = auth_machine_intelligence
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
@@ -549,10 +541,7 @@ country_event = {
 		}
 
 		trigger = {
-			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-			}
+			is_militarist = yes
 			any_owned_leader = {
 				NOR = {
 					leader_class = scientist
@@ -614,8 +603,7 @@ country_event = {
 			NOR = {
 				has_ai_personality = honorbound_warriors
 				has_ethic = ethic_fanatic_militarist
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
@@ -754,8 +742,7 @@ country_event = {
 		trigger = {
 			from = {
 				NOR = {
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
+					is_fallen_empire = yes
 					has_ethic = ethic_fanatic_xenophobe
 					has_valid_civic = civic_hive_devouring_swarm
 					has_authority = auth_hive_mind
@@ -768,10 +755,8 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				OR = {
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
-				}
+				
+					is_fallen_empire = yes
 			}
 		}
 		text = dpe_hw_duel.4.desc.FE
@@ -2730,10 +2715,7 @@ country_event = {
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_fanatic_militarist
-						has_ethic = ethic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -2882,10 +2864,7 @@ country_event = {
 		from = {
 			if = {
 				limit = {
-					OR = {
-						has_ethic = ethic_fanatic_militarist
-						has_ethic = ethic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3006,10 +2985,7 @@ country_event = {
 		from = {
 			if = {
 				limit = {
-					OR = {
-						has_ethic = ethic_fanatic_militarist
-						has_ethic = ethic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3444,10 +3420,7 @@ country_event = {
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3581,10 +3554,7 @@ country_event = {
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3694,10 +3664,7 @@ country_event = {
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3789,19 +3756,13 @@ country_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		custom_tooltip = dpe_worse_relations_with_militarists
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3814,10 +3775,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.70.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		if = {
@@ -3859,10 +3817,7 @@ country_event = {
 		hidden_effect = {
 			every_relation = {
 				limit = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 				add_opinion_modifier = {
 					who = root
@@ -3948,20 +3903,14 @@ country_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 	}
 
 	option = {
 		name = dpe_hw_duel.71.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		if = {
@@ -4028,20 +3977,14 @@ country_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 	}
 
 	option = {
 		name = dpe_hw_duel.72.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		add_modifier = {
@@ -4158,10 +4101,7 @@ country_event = {
 	option = {
 		name = GOOD
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4174,10 +4114,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.73.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		from = {
@@ -4311,10 +4248,7 @@ country_event = {
 	option = {
 		name = GOOD
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4327,10 +4261,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.74.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		add_modifier = {
@@ -4464,10 +4395,7 @@ country_event = {
 	option = {
 		name = GOOD
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4495,10 +4423,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.75.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4645,10 +4570,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4661,10 +4583,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.76.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		add_modifier = {
@@ -4797,10 +4716,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4813,10 +4729,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.77.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		
 		add_modifier = {
@@ -4949,10 +4862,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			NOR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = no
 		}
 		from = {
 			add_opinion_modifier = {
@@ -4980,10 +4890,7 @@ country_event = {
 	option = {
 		name = dpe_hw_duel.78.option
 		trigger = {
-			OR = {
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_militarist
-			}
+			is_militarist = yes
 		}
 		from = {
 			add_opinion_modifier = {

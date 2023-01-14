@@ -29,16 +29,12 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		OR = {
-			has_ethic = ethic_fanatic_materialist
-			has_ethic = ethic_materialist
+		is_materialist = yes
+		is_authoritarian = yes
+		NOR = {
+			has_civic = civic_shared_burden
+			has_country_flag = dpe_recent_charity_scandal
 		}
-		OR = {
-			has_ethic = ethic_fanatic_authoritarian
-			has_ethic = ethic_authoritarian
-		}
-		NOT = { has_civic = civic_shared_burden }
-		NOT = { has_country_flag = dpe_recent_charity_scandal }
 		exists = ruler
 		ruler = { NOT = { leader_of_faction = totalitarian } }
 
@@ -188,8 +184,10 @@ country_event = {
 
 	trigger = {
 		is_country_type = default
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = dpe_recent_corruption_scandal }
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = dpe_recent_corruption_scandal
+		}
 		is_at_war = no
 		
 		OR = {
@@ -211,10 +209,7 @@ country_event = {
 			1 = { #nothing
 				modifier = {
 					factor = 0.8
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 				modifier = {
 					factor = 0.8
@@ -385,16 +380,16 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+		is_spiritualist = yes
+		NOR = {
+			has_ascension_perk = ap_transcendence
+			has_country_flag = dpe_recent_disbelief_scandal
 		}
-		NOT = { has_ascension_perk = ap_transcendence }
-
-		NOT = { has_country_flag = dpe_recent_disbelief_scandal }
 		
-		NOT = { has_civic = civic_imperial_cult }
-		NOT = { has_modifier = cc_ruler_cult }
+		NOR = {
+			has_civic = civic_imperial_cult
+			has_modifier = cc_ruler_cult
+		}
 		exists = ruler
 		ruler = {
 			NOR = {
@@ -673,8 +668,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
+						is_egalitarian = yes
 						NOT = { has_faction = progressive }
 						is_democracy = yes
 					}
@@ -695,8 +689,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
+						is_spiritualist = yes
 						NOT = { has_faction = traditionalist }
 					}
 				}
@@ -716,8 +709,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
+						is_militarist = yes
 						NOT = { has_faction = imperialist }
 					}
 				}
@@ -737,8 +729,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
+						is_pacifist = yes
 						NOT = { has_faction = prosperity }
 					}
 				}
@@ -758,8 +749,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
+						is_materialist = yes
 						NOT = { has_faction = technologist }
 					}
 				}
@@ -779,8 +769,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
 						NOT = {
 							has_faction = supremacist
 						}
@@ -802,8 +791,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
+						is_xenophile = yes
 						NOT = { has_faction = xenoist }
 					}
 				}
@@ -1109,14 +1097,12 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		OR = {
-			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
-		}
+		is_materialist = yes
 		has_faction = traditionalist
-		NOT = { has_country_flag = dpe_recent_cultist_scandal }
-
-		NOT = { has_modifier = cc_ruler_cult }
+		NOR = {
+			has_country_flag = dpe_recent_cultist_scandal
+			has_modifier = cc_ruler_cult
+		}
 		
 		exists = ruler
 		ruler = { NOT = { leader_of_faction = technologist } }

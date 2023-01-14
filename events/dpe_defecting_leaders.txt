@@ -11,8 +11,10 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		NOT = { exists = overlord }
-		NOT = { has_country_flag = dpe_recent_defect_leader }
+		NOR = {
+			exists = overlord
+			has_country_flag = dpe_recent_defect_leader
+		}
 		any_owned_leader = {
 			NOR = {
 				is_same_species = root
@@ -20,8 +22,7 @@ country_event = {
 				has_leader_flag = dpe_defect_leader
 			}
 			
-			any_country = {
-				is_country_type = default
+			any_playable_country = {
 				is_same_species = prev
 				
 				NOR = {
@@ -44,11 +45,12 @@ country_event = {
 		
 		random_owned_leader = {
 			limit = {
-				NOT = { is_same_species = root }
-				NOT = { is_same_value = root.ruler}
+				NOR = {
+					is_same_species = root
+					is_same_value = root.ruler
+				}
 				
-				any_country = {
-					is_country_type = default
+				any_playable_country = {
 					is_same_species = prev
 					
 					NOR = {
@@ -64,9 +66,8 @@ country_event = {
 			
 			set_leader_flag = dpe_defect_leader
 			
-			random_country = {
+			random_playable_country = {
 				limit = {
-					is_country_type = default
 					is_same_species = prev
 					
 					NOR = {
@@ -94,10 +95,7 @@ country_event = {
 				
 				modifier = {
 					factor = 0.5
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = no
 				}
 				modifier = {
 					factor = 0.5
@@ -663,10 +661,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 			shift_ethic = ethic_xenophobe
 		}
@@ -856,10 +851,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				is_xenophile = yes
 			}
 		}
 	}
@@ -1203,10 +1195,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1234,10 +1223,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1323,10 +1309,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 2
@@ -1357,10 +1340,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1390,10 +1370,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1608,10 +1585,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 2
@@ -1630,10 +1604,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1692,10 +1663,7 @@ country_event = {
 			
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5

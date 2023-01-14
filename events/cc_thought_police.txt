@@ -33,10 +33,7 @@ pop_event = {
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 			NOT = { has_ethic = ethic_militarist }
@@ -48,10 +45,7 @@ pop_event = {
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 			NOT = { has_ethic = ethic_xenophobe }
