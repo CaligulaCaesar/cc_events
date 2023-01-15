@@ -45,14 +45,14 @@ country_event = {
 		}
 		
 		#Unity
-		add_100_unity_per_year_passed = yes
+		add_500_unity_per_year_passed = yes
 		
 		
 		
 		#Booster Modifier
 		add_modifier = {
 			modifier = "revolutionary_mobilisation"
-			days = 5400
+			years = 15
 		}
 		country_event = { id = rebellionscript.1999 days = 5401 }
 			
@@ -115,7 +115,7 @@ country_event = {
 	immediate = {
 		add_modifier = {
 			modifier = "revolutionary_mobilisation_0_5"
-			days = 3600
+			years = 10
 		}
 	}
 }

@@ -89,7 +89,7 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_electoral_experiment_faction
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -97,7 +97,7 @@ country_event = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_electoral_experiment_faction_negative
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -146,7 +146,7 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_denied_elections
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -161,7 +161,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_denied_a_say
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -427,7 +427,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_electoral_experiment
-			days = 3600
+			years = 10
 		}
 
 		hidden_effect = { from = { country_event = { id = dpe_egalitarian_missions.8 days = 90 } } }
@@ -457,12 +457,12 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_paying_foreign_country
-			days = 240
+			months = 8
 		}
 
 		add_modifier = {
 			modifier = dpe_electoral_experiment
-			days = 360
+			years = 1
 		}
 
 		hidden_effect = {
@@ -757,7 +757,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_successful_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {
@@ -810,7 +810,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_auth_elections_positive_outcome
-					days = 4500
+					months = 150
 				}
 				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
 			}
@@ -837,7 +837,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_election
-			days = 1800
+			years = 5
 		}
 		random_pop_faction = {
 			limit = {
@@ -845,7 +845,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_sham_elections
-				days = 1800
+				years = 5
 			}
 		}
 		hidden_effect = {
@@ -873,7 +873,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_betrayed_democracy_faction
-				days = 3600
+				years = 10
 			}
 		}
 		from = {
@@ -908,7 +908,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_auth_elections_positive_outcome_risk
-					days = 4500
+					months = 150
 				}
 				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
 			}
@@ -945,7 +945,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_successful_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {
@@ -1007,7 +1007,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_auth_elections_positive_outcome_cheat
-					days = 4500
+					months = 150
 				}
 				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
 			}
@@ -1034,7 +1034,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {
@@ -1070,7 +1070,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_promoted_democracy_faction
-				days = 3600
+				years = 10
 			}
 		}
 		from = {
@@ -1105,7 +1105,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_auth_elections_negative_outcome
-					days = 4500
+					months = 150
 				}
 				country_event = { id = dpe_egalitarian_missions.20 days = 3600 }
 			}
@@ -1269,7 +1269,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled_1
-				days = 3600
+				years = 10
 			}
 		}
 		every_pop_faction = {
@@ -1322,7 +1322,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled
-				days = 1800
+				years = 5
 			}
 		}
 		ai_chance = {
@@ -1391,7 +1391,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled_1
-				days = 3600
+				years = 10
 			}
 		}
 		every_pop_faction = {
@@ -1444,7 +1444,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled
-				days = 1800
+				years = 5
 			}
 		}
 		ai_chance = {
@@ -1496,7 +1496,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled_1
-				days = 3600
+				years = 10
 			}
 		}
 		every_pop_faction = {
@@ -1549,7 +1549,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_elections_cancelled
-				days = 1800
+				years = 5
 			}
 		}
 		ai_chance = {
@@ -1774,7 +1774,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_upcoming_elections
-			days = 90
+			months = 3
 		}
 		hidden_effect = {
 			from = {
@@ -1808,12 +1808,12 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_paying_foreign_country
-			days = 240
+			months = 8
 		}
 
 		add_modifier = {
 			modifier = dpe_upcoming_elections
-			days = 90
+			months = 3
 		}
 
 		hidden_effect = {
@@ -2124,7 +2124,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_successful_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {
@@ -2152,7 +2152,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_election
-			days = 1800
+			years = 5
 		}
 		random_pop_faction = {
 			limit = {
@@ -2160,7 +2160,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_sham_elections
-				days = 1800
+				years = 5
 			}
 		}
 		hidden_effect = {
@@ -2189,7 +2189,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_successful_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {
@@ -2218,7 +2218,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_auth_held_election
-			days = 1800
+			years = 5
 		}
 		hidden_effect = {
 			from = {

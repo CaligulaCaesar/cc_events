@@ -13,8 +13,8 @@ country_event = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_civic = civic_fanatic_purifiers
+			has_country_flag = dpe_has_had_contraband_crisis
 		}
-		NOT = { has_country_flag = dpe_has_had_contraband_crisis }
 		
 		any_neighbor_country = {
 			is_country_type = default
@@ -25,8 +25,6 @@ country_event = {
 			NOR = {
 				is_same_species = root
 				has_closed_borders = root
-			}
-			NOR = {
 				has_ethic = ethic_gestalt_consciousness
 				has_civic = civic_fanatic_purifiers
 			}
@@ -55,8 +53,6 @@ country_event = {
 				NOR = {
 					is_same_species = root
 					has_closed_borders = root
-				}
-				NOR = {
 					has_ethic = ethic_gestalt_consciousness
 					has_civic = civic_fanatic_purifiers
 				}
@@ -85,7 +81,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_crackdown
-			days = 1800
+			years = 5
 		}
 		
 		event_target:dpe_neighbor = {
@@ -237,8 +233,8 @@ country_event = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_civic = civic_fanatic_purifiers
+			has_country_flag = dpe_has_had_contraband_crisis
 		}
-		NOT = { has_country_flag = dpe_has_had_contraband_crisis }
 		
 		any_neighbor_country = {
 			is_country_type = default
@@ -249,8 +245,6 @@ country_event = {
 			NOR = {
 				is_same_species = root
 				has_closed_borders = root
-			}
-			NOR = {
 				has_ethic = ethic_gestalt_consciousness
 				has_civic = civic_fanatic_purifiers
 			}
@@ -303,7 +297,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_crackdown
-			days = 1800
+			years = 5
 		}
 		
 		event_target:dpe_neighbor = {
@@ -484,14 +478,14 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_taxing_drugs
-			days = 4800
+			months = 160
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_taxing_drugs_faction
-				days = 4800
+				months = 160
 			}
 		}
 		
@@ -559,7 +553,7 @@ country_event = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_taking_action_drugs_faction
-				days = 4800
+				months = 160
 			}
 		}
 		
@@ -638,7 +632,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_drug_trade_legit
-			days = 4800
+			months = 160
 		}
 	}
 }
@@ -664,7 +658,7 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_contraband_stop_and_search_faction
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -774,7 +768,7 @@ country_event = {
 				limit = { is_pop_faction_type = progressive }
 				add_modifier = {
 					modifier = dpe_contraband_stop_and_search_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -795,7 +789,7 @@ pop_event = {
 			1 = {
 				add_modifier = {
 					modifier = dpe_raids_worry
-					days = 1800
+					years = 5
 				}
 			}
 			4 = { }
@@ -2182,7 +2176,7 @@ country_event = {
 		remove_country_flag = dpe_has_had_contraband_crisis
 		set_timed_country_flag = {
 			flag = dpe_has_had_contraband_crisis
-			days = 3600
+			years = 10
 		}
 	}
 

@@ -24,7 +24,7 @@ country_event = {
 		NOR = {
 			has_ethic = ethic_fanatic_xenophobe
 			has_ethic = ethic_gestalt_consciousness
-			has_ascension_perk = ap_transcendence
+			has_tradition = tr_psionics_psionic_assimilation
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_ascension_perk = ap_synthetic_evolution
 			has_ascension_perk = ap_evolutionary_mastery
@@ -765,7 +765,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_spiritualist } }
 			add_modifier = {
 				modifier = dpe_paying_spirFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -773,7 +773,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
 			add_modifier = {
 				modifier = dpe_paying_xenoFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -781,7 +781,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
 			add_modifier = {
 				modifier = dpe_paying_matFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -893,7 +893,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_spiritualist } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_spirFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -901,7 +901,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_xenoFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -909,7 +909,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_matFE
-				days = 1800
+				years = 5
 			}
 		}
 

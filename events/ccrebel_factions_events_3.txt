@@ -746,7 +746,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_xenoist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -755,7 +755,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_supremacist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -764,7 +764,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_isolationist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -773,7 +773,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_progressive_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -782,7 +782,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_totalitarian_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -791,7 +791,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_imperialist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -800,7 +800,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_prosperity_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -809,7 +809,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_traditionalist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			if = {
@@ -818,7 +818,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_technologist_stage2_active
-					days = 1080
+					years = 3
 				}
 			}
 			
@@ -1263,11 +1263,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_xenoist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_xenoist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1278,11 +1278,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_supremacist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_supremacist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1293,11 +1293,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_isolationist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_isolationist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1308,11 +1308,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_prosperity_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_prosperity_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1323,11 +1323,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_imperialist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_imperialist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1338,11 +1338,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_technologist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_technologist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1353,11 +1353,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_traditionalist_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_traditionalist_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1368,11 +1368,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_progressive_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_progressive_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		else_if = {
@@ -1383,11 +1383,11 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_totalitarian_secondary_revolt_active
-				days = 1080
+				years = 3
 			}
 			set_timed_country_flag = {
 				flag = cc_totalitarian_stage2_active
-				days = 540
+				months = 18
 			}
 		}
 		every_owned_planet = {
@@ -1741,7 +1741,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_imperialist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1753,7 +1753,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_prosperity_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1765,7 +1765,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_totalitarian_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1777,7 +1777,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_progressive_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1789,7 +1789,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_technologist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1801,7 +1801,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_traditionalist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1813,7 +1813,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_xenoist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1825,7 +1825,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_supremacist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 		if = {
@@ -1837,7 +1837,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_isolationist_stage3_active
-				days = 2520
+				years = 7
 			}
 		}
 
@@ -1854,12 +1854,12 @@ country_event = {
 			limit = { is_faction_stronghold = yes }
 			add_modifier = {
 				modifier = cc_faction_acute_unrest
-				days = 540
+				months = 18
 			}
 			hidden_effect = {
 				set_timed_planet_flag = {
 					flag = recent_unrest_event
-					days = 540
+					months = 18
 				}
 			}
 		}
@@ -2084,7 +2084,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_factional_revolt_attempt_3planets
-					days = 31
+					months = 1
 				}
 				if = {
 					limit = {
@@ -2157,7 +2157,7 @@ country_event = {
 					}
 					set_timed_country_flag = {
 						flag = cc_factional_revolt_attempt_5planets
-						days = 31
+						months = 1
 					}
 				}
 			}
@@ -2312,7 +2312,7 @@ country_event = {
 
 				set_timed_planet_flag = {
 					flag = cc_faction_revolt_capital
-					days = 3600
+					years = 10
 				}
 				
 				if = {
@@ -2370,7 +2370,7 @@ country_event = {
 								limit = {
 									is_within_borders_of = root
 									starbase = { has_starbase_size = starbase_outpost }
-									NOT = { any_system_planet = { is_colony = yes } }
+									NOT = { any_system_colony = { } }
 								}
 								starbase = { set_owner = event_target:cc_breakaway_country }
 								
@@ -2386,7 +2386,7 @@ country_event = {
 								limit = {
 									is_within_borders_of = root
 									starbase = { has_starbase_size = starbase_outpost }
-									NOT = { any_system_planet = { is_colony = yes } }
+									NOT = { any_system_colony = { } }
 								}
 								starbase = { set_owner = event_target:cc_breakaway_country }
 								
@@ -2946,7 +2946,7 @@ country_event = {
 			
 				set_timed_planet_flag = {
 					flag = cc_faction_revolt_capital
-					days = 3600
+					years = 10
 				}
 			
 				set_planet_flag = revolt_in_progress
@@ -3476,11 +3476,11 @@ country_event = {
 				
 				set_timed_planet_flag = {
 					flag = recent_unrest_event
-					days = 720
+					years = 2
 				}
 				set_timed_planet_flag = {
 					flag = cc_faction_revolt_cappital
-					days = 720
+					years = 2
 				}
 			}
 		}
@@ -3640,14 +3640,14 @@ country_event = {
 		}
 		
 		#Unity
-		add_100_unity_per_year_passed = yes
+		add_500_unity_per_year_passed = yes
 		
 		capital_scope = { save_event_target_as = cc_rebels_capital }
 		
 		#Booster Modifier
 		add_modifier = {
 			modifier = "revolutionary_mobilisation"
-			days = 5400
+			years = 15
 		}
 		country_event = { id = rebellionscript.1999 days = 5401 }
 			
@@ -3753,7 +3753,7 @@ planet_event = {
 				limit = {
 					is_within_borders_of = event_target:dpe_former_owner
 					starbase = { has_starbase_size = starbase_outpost }
-					NOT = { any_system_planet = { is_colony = yes } }
+					NOT = { any_system_colony = { } }
 				}
 				starbase = { set_owner = event_target:cc_breakaway_country }
 				
@@ -3900,7 +3900,7 @@ planet_event = {
 	immediate = {
 		set_timed_planet_flag = {
 			flag = cc_revolution
-			days = 60
+			months = 2
 		}
 
 		set_planet_flag = revolt_in_progress
@@ -4058,11 +4058,11 @@ planet_event = {
 		
 		set_timed_planet_flag = {
 			flag = recent_unrest_event
-			days = 720
+			years = 2
 		}
 		set_timed_planet_flag = {
 			flag = cc_faction_revolt_planet
-			days = 720
+			years = 2
 		}
 	}
 	option = { name = UNFORTUNATE }
@@ -4349,7 +4349,7 @@ planet_event = {
 				limit = {
 					is_within_borders_of = event_target:cc_old_owner
 					starbase = { has_starbase_size = starbase_outpost }
-					NOT = { any_system_planet = { is_colony = yes } }
+					NOT = { any_system_colony = { } }
 				}
 				starbase = { set_owner = root.owner }
 				
@@ -4467,7 +4467,7 @@ country_event = {
 		FromFrom = { 
 			add_modifier = {
 				modifier = cc_failed_factional_revolt
-				days = 3600
+				years = 10
 			}
 			if = {
 				limit = { has_modifier = cc_faction_acute_unrest }
@@ -5451,11 +5451,11 @@ planet_event = {
 	immediate = {
 		set_timed_planet_flag = {
 			flag = cc_revolution
-			days = 60
+			months = 2
 		}
 		set_timed_planet_flag = {
 			flag = cc_has_tried_sympathy_revolt
-			days = 2400
+			months = 80
 		}
 
 		random_country = {
@@ -5662,11 +5662,11 @@ planet_event = {
 		
 		set_timed_planet_flag = {
 			flag = recent_unrest_event
-			days = 720
+			years = 2
 		}
 		set_timed_planet_flag = {
 			flag = cc_faction_revolt_planet
-			days = 720
+			years = 2
 		}
 	}
 	option = { name = UNFORTUNATE }
@@ -5932,11 +5932,11 @@ event = {
 						}
 						add_modifier = {
 							modifier = cc_faction_acute_unrest
-							days = 540
+							months = 18
 						}
 						set_timed_planet_flag = {
 							flag = recent_unrest_event
-							days = 540
+							months = 18
 						}
 					}
 					owner = {
@@ -6082,11 +6082,11 @@ event = {
 							}
 							add_modifier = {
 								modifier = cc_faction_acute_unrest
-								days = 540
+								months = 18
 							}
 							set_timed_planet_flag = {
 								flag = recent_unrest_event
-								days = 540
+								months = 18
 							}
 						}
 						owner = {
@@ -6254,7 +6254,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_faction_acute_unrest
-					days = 540
+					months = 18
 				}
 			}
 		}
@@ -6283,7 +6283,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_faction_acute_unrest
-					days = 540
+					months = 18
 				}
 			}
 		}

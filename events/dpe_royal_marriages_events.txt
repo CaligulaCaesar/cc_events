@@ -437,7 +437,7 @@ country_event = {
 			limit = { is_pop_faction_type = xenoist }
 			add_modifier = {
 				modifier = xenophile_diplomacy
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -450,7 +450,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = xenophile_diplomacy_negative
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -492,7 +492,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = closed_mindedness
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -525,7 +525,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = closed_mindedness
-				days = 7200
+				years = 20
 			}
 		}
 		hidden_effect = {
@@ -547,7 +547,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = closed_mindedness
-				days = 7200
+				years = 20
 			}
 		}
 		hidden_effect = {
@@ -703,7 +703,7 @@ country_event = {
 			limit = { is_pop_faction_type = xenoist }
 			add_modifier = {
 				modifier = xenophile_diplomacy
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -716,7 +716,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = xenophile_diplomacy_negative
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -838,7 +838,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = sacred_genes_protected
-				days = 3600
+				years = 10
 			}
 		}
 		random_pop_faction = {
@@ -847,7 +847,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = closed_mindedness
-				days = 3600
+				years = 10
 			}
 		}
 		hidden_effect = {
@@ -865,10 +865,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 		}
 	}
@@ -889,7 +886,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = a_fine_insult
-				days = 3600
+				years = 10
 			}
 		}
 		random_pop_faction = {
@@ -898,7 +895,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = closed_mindedness
-				days = 3600
+				years = 10
 			}
 		}
 		hidden_effect = {
@@ -1529,7 +1526,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = optimism_at_wedding
-			days = 360
+			years = 1
 		}
 	}
 	option = {
@@ -1542,7 +1539,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = hostility_towards_wedding
-			days = 360
+			years = 1
 		}
 	}
 }
@@ -2338,7 +2335,7 @@ country_event = {
 		custom_tooltip = relations_with_from_have_improved
 		add_modifier = {
 			modifier = recent_royal_wedding
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.18 } } }
 	}
@@ -2357,7 +2354,7 @@ country_event = {
 		custom_tooltip = relations_with_from_have_improved
 		add_modifier = {
 			modifier = recent_royal_wedding
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { from = { country_event = { id = dpe_royal_marriages_events.19 days = 180 } } }
 	}

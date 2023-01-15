@@ -93,13 +93,13 @@ mem_dpe_become_protectorate = {
 				}
 				set_subject_of = {
 					who = root
-					subject_type = tributary
+					preset = preset_tributary
 				}
 			}			
 			else = {
 				set_subject_of = {
 					who = root
-					subject_type = protectorate
+					preset = preset_protectorate
 				}						
 			}
 		}

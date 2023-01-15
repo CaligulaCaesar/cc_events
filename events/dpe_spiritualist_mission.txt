@@ -70,7 +70,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_spiritualist_mission
-			days = 10800
+			years = 30
 		}
 		save_event_target_as = dpe_missionary_country
 		
@@ -274,12 +274,12 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction
-				days = 3600
+				years = 10
 			}
 		}
 		add_modifier = {
 			modifier = dpe_missionary_country
-			days = 3600
+			years = 10
 		}
 
 		event_target:dpe_neighbour = {
@@ -328,7 +328,7 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction_rejected
-				days = 3600
+				years = 10
 			}
 		}
 		ai_chance = { factor = 1 }
@@ -345,12 +345,12 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction_rejected1
-				days = 3600
+				years = 10
 			}
 		}
 		add_modifier = {
 			modifier = dpe_missionary_country_rejected
-			days = 3600
+			years = 10
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -364,12 +364,12 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction
-				days = 3600
+				years = 10
 			}
 		}
 		add_modifier = {
 			modifier = dpe_missionary_country
-			days = 3600
+			years = 10
 		}
 
 		event_target:dpe_ally = {
@@ -403,12 +403,12 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction
-				days = 3600
+				years = 10
 			}
 		}
 		add_modifier = {
 			modifier = dpe_missionary_country
-			days = 3600
+			years = 10
 		}
 
 		event_target:dpe_hive = {
@@ -451,12 +451,12 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_missionary_faction
-				days = 3600
+				years = 10
 			}
 		}
 		add_modifier = {
 			modifier = dpe_missionary_country
-			days = 3600
+			years = 10
 		}
 
 		event_target:dpe_machines = {
@@ -513,7 +513,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_spiritualist_mission_received
-			days = 7200
+			years = 20
 		}
 	}
 	
@@ -809,7 +809,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_spiritualist_mission_received
-			days = 7200
+			years = 20
 		}
 		if = {
 			limit = {
@@ -1295,7 +1295,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_missionary_twice
-			days = 3600
+			years = 10
 		}
 	}
 
@@ -2051,7 +2051,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			add_modifier = {
 				modifier = dpe_hosting_spirmission_planet_turbulence
-				days = 360
+				years = 1
 			}
 			hidden_effect = {
 				set_timed_planet_flag = {
@@ -2267,7 +2267,7 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_spirmission_killed_faction
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -2287,7 +2287,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_spirmission_killed_xenophobia
-			days = 3600
+			years = 10
 		}
 		add_opinion_modifier = {
 			who = event_target:dpe_neighbour
@@ -2359,7 +2359,7 @@ country_event = {
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
 				modifier = dpe_spirmission_planet_xenos_unwelcome
-				days = 5400
+				years = 15
 			}
 		}
 		if = {
@@ -2370,7 +2370,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				add_modifier = {
 					modifier = dpe_spirmission_killed_faction1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -2404,7 +2404,7 @@ country_event = {
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
 				modifier = dpe_spirmission_planet_xenos_unwelcome
-				days = 5400
+				years = 15
 			}
 		}
 		if = {
@@ -2415,7 +2415,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				add_modifier = {
 					modifier = dpe_spirmission_killed_faction1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -3037,14 +3037,14 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_spirmission_succeeded_country
-			days = 3600
+			years = 10
 		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_spirmission_succeeded_faction
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -3276,14 +3276,14 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_spirmission_succeeded_country
-			days = 3600
+			years = 10
 		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_spirmission_succeeded_faction
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -3453,7 +3453,7 @@ country_event = {
 			limit = { is_pop_faction_type = traditionalist }
 			add_modifier = {
 				modifier = dpe_spirmission_sent_home_faction
-				days = 1800
+				years = 5
 			}
 		}
 		ai_chance = {
@@ -4224,7 +4224,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				add_modifier = {
 					modifier = dpe_killed_missionaries_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -4234,7 +4234,7 @@ country_event = {
 				limit = { is_pop_faction_type = imperialist }
 				add_modifier = {
 					modifier = dpe_killed_missionaries_faction1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -4244,7 +4244,7 @@ country_event = {
 				limit = { is_pop_faction_type = totalitarian }
 				add_modifier = {
 					modifier = dpe_killed_missionaries_faction1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -4363,7 +4363,7 @@ country_event = {
 				limit = { is_pop_faction_type = imperialist }
 				add_modifier = {
 					modifier = dpe_not_killed_missionaries_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -4373,7 +4373,7 @@ country_event = {
 				limit = { is_pop_faction_type = totalitarian }
 				add_modifier = {
 					modifier = dpe_not_killed_missionaries_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}

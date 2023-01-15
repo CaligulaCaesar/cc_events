@@ -163,13 +163,13 @@ planet_event = {
 			}
 			add_modifier = {
 				modifier = cc_emancipated
-				days = 3600
+				years = 10
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
@@ -178,14 +178,14 @@ planet_event = {
 									is_pop_faction_type = totalitarian
 								}
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = { modifier = cc_emancipation_furious days = 3600 }
+				add_modifier = { modifier = cc_emancipation_furious years = 10 }
 			}
 		}
 		
@@ -782,7 +782,7 @@ planet_event = {
 			}
 			add_modifier = {
 				modifier = cc_emancipated
-				days = 3600
+				years = 10
 			}
 			every_owned_planet = {
 				limit = { has_modifier = cc_emancipation_movement }
@@ -794,9 +794,9 @@ planet_event = {
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
@@ -805,14 +805,14 @@ planet_event = {
 									is_pop_faction_type = totalitarian
 								}
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = { modifier = cc_emancipation_furious days = 3600 }
+				add_modifier = { modifier = cc_emancipation_furious years = 10 }
 			}
 		}
 		
@@ -1013,7 +1013,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = cc_emancipated
-			days = 3600
+			years = 10
 		}
 		every_owned_planet = {
 			limit = { has_modifier = cc_emancipation_movement }
@@ -1025,9 +1025,9 @@ country_event = {
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = progressive }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
@@ -1036,14 +1036,14 @@ country_event = {
 								is_pop_faction_type = totalitarian
 							}
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
-			add_modifier = { modifier = cc_emancipation_furious days = 3600 }
+			add_modifier = { modifier = cc_emancipation_furious years = 10 }
 		}
 		
 		
@@ -1135,7 +1135,7 @@ country_event = {
 				limit = { is_pop_faction_type = progressive }
 				add_modifier = {
 					modifier = cc_faction_oppressed
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1541,7 +1541,7 @@ pop_event = {
 				chance = 33
 				add_modifier = {
 					modifier = cc_worried_about_slaves
-					days = 5400
+					years = 15
 				}
 			}
 		}
@@ -1550,7 +1550,7 @@ pop_event = {
 				chance = 25
 				add_modifier = {
 					modifier = cc_worried_about_slaves
-					days = 5400
+					years = 15
 				}
 			}
 		}

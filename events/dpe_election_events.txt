@@ -20,7 +20,7 @@ country_event = {
 		ruler = {
 			set_timed_leader_flag = {
 				flag = dpe_incumbent_ruler
-				days = 360
+				years = 1
 			}
 		}
 	}
@@ -569,7 +569,7 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = dpe_election_scandal_upset_faction
-						days = 1800
+						years = 5
 					}
 				}
 			}
@@ -616,7 +616,7 @@ country_event = {
 						}
 						add_modifier = {
 							modifier = dpe_election_scandal_upset_faction
-							days = 1800
+							years = 5
 						}
 					}
 				}
@@ -676,7 +676,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_election_positive
-			days = 144000
+			years = 400
 		}
 		if = {
 			limit = {
@@ -691,7 +691,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_election_unifying_candidate
-			days = 1800
+			years = 5
 		}
 		
 
@@ -712,7 +712,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_faction_ended
-					days = 4800
+					months = 160
 				}
 			}
 		}
@@ -723,7 +723,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_election_unifying_candidate_faction
-				days = 1800
+				years = 5
 			}
 		}
 	}

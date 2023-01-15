@@ -107,7 +107,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = cc_recent_pacifist_protests
-			days = 5400
+			years = 15
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = prosperity }
@@ -150,7 +150,7 @@ country_event = {
 			country_event = { id = cc_peace.2 days = 360 }
 			set_timed_country_flag = {
 				flag = cc_promised_peace
-				days = 370
+				years = 1
 			}
 		}
 		
@@ -180,13 +180,13 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = cc_peace_protests
-				days = 1800
+				years = 5
 			}
 		}
 		event_target:peace_faction = {
 			add_modifier = {
 				modifier = cc_faction_peace_protests
-				days = 1800
+				years = 5
 			}
 		}
 		
@@ -213,7 +213,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = cc_country_peace_protests
-				days = 1800
+				years = 5
 			}
 		}
 		ai_chance = {
@@ -235,7 +235,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = cc_peace_protests
-				days = 1800
+				years = 5
 			}
 			add_modifier = {
 				modifier = cc_planet_oppression
@@ -259,7 +259,7 @@ country_event = {
 		event_target:peace_faction = {
 			add_modifier = {
 				modifier = cc_faction_oppressed
-				days = 3600
+				years = 10
 			}
 		}	
 		
@@ -286,7 +286,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = cc_country_peace_protests
-				days = 1800
+				years = 5
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
@@ -505,7 +505,7 @@ country_event = {
 		event_target:peace_faction = {
 			add_modifier = {
 				modifier = cc_peace_faction_betrayed
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -521,11 +521,11 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = cc_peace_protests
-				days = 1800
+				years = 5
 			}
 			add_modifier = {
 				modifier = cc_colony_distrusts
-				days = 5400
+				years = 15
 			}
 		}
 	}
@@ -565,13 +565,13 @@ country_event = {
 		hidden_effect = { remove_modifier = cc_promises_to_pacifists }
 		add_modifier = {
 			modifier = cc_made_peace
-			days = 1800
+			years = 5
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = prosperity }
 			add_modifier = {
 				modifier = cc_faction_peace_celebration
-				days = 1800
+				years = 5
 			}
 		}
 		every_owned_planet = {
@@ -579,7 +579,7 @@ country_event = {
 			hidden_effect = { remove_modifier = cc_peace_protests }
 			add_modifier = {
 				modifier = cc_peace_celebrations
-				days = 1800
+				years = 5
 			}
 		}
 		
@@ -588,7 +588,7 @@ country_event = {
 		hidden_effect = {
 			set_timed_country_flag = {
 				flag = cc_promised_peace_continues
-				days = 1800
+				years = 5
 			}
 		}
 	}
@@ -625,7 +625,7 @@ country_event = {
 			remove_modifier = cc_faction_peace_celebration
 			add_modifier = {
 				modifier = cc_peace_faction_betrayed
-				days = 3600
+				years = 10
 			}
 		}
 		every_owned_planet = {
@@ -633,11 +633,11 @@ country_event = {
 			remove_modifier = cc_peace_protests
 			add_modifier = {
 				modifier = cc_peace_protests
-				days = 1800
+				years = 5
 			}
 			add_modifier = {
 				modifier = cc_colony_distrusts
-				days = 5400
+				years = 15
 			}
 		}
 	}

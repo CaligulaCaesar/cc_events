@@ -32,10 +32,7 @@ country_event = {
 			country_event = { id = dpe_conspiracy.20 }
 		}
 		else = {
-			random_list = {
-				2 = { country_event = { id = dpe_conspiracy.20 } }
-				2 = { }
-			}
+			random = { chance = 50 country_event = { id = dpe_conspiracy.20 } }
 		}
 	}
 }
@@ -120,13 +117,13 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = { NOT = { is_same_value = prevprev } }
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -166,7 +163,7 @@ country_event = {
 		hidden_effect = {
 			set_timed_country_flag = {
 				flag = dpe_didnt_bother_on_conspiracy
-				days = 361
+				years = 1
 			}
 			country_event = { id = dpe_conspiracy.27 days = 360 }
 		}
@@ -260,7 +257,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_uncovered_authoritarian_conspiracy
-			days = 3600
+			years = 10
 		}
 		random_list = {
 			1 = { country_event = { id = dpe_conspiracy.25 days = 180 } }
@@ -304,7 +301,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_uncovered_authoritarian_conspiracy
-			days = 3600
+			years = 10
 		}
 	}
 
@@ -337,13 +334,13 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = { NOT = { is_same_value = prevprev } }
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -399,20 +396,20 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_state_in_lockdown
-			days = 180
+			months = 6
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_state_in_lockdown_faction
-				days = 180
+				months = 6
 			}
 		}
 
 		set_timed_country_flag = {
 			flag = dpe_uncovered_authoritarian_conspiracy
-			days = 3600
+			years = 10
 		}
 			
 		
@@ -493,7 +490,7 @@ country_event = {
 			country_event = { id = dpe_conspiracy.28 days = 46 }
 			set_timed_country_flag = {
 				flag = dpe_authoritarian_conspiracy_chain_extended
-				days = 30
+				months = 1
 			}
 		}
 	}
@@ -561,10 +558,10 @@ country_event = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_seized_control_faction
-				days = 3600
+				years = 10
 			}
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
@@ -573,7 +570,7 @@ country_event = {
 								is_pop_faction_type = progressive
 							}
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -582,7 +579,7 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_lost_control_faction
-				days = 3600
+				years = 10
 			}
 		}
 	}
@@ -591,7 +588,7 @@ country_event = {
 		kill_leader = { type = ruler show_notification = no }
 		add_modifier = {
 			modifier = dpe_illegitimate_regime
-			days = 4800
+			months = 160
 		}
 		shift_ethic = ethic_authoritarian
 		change_government = {
@@ -604,10 +601,10 @@ country_event = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_seized_control_faction
-				days = 3600
+				years = 10
 			}
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
@@ -616,7 +613,7 @@ country_event = {
 								is_pop_faction_type = progressive
 							}
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -625,7 +622,7 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_lost_control_faction
-				days = 3600
+				years = 10
 			}
 		}
 	}
@@ -649,7 +646,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_authoritarian_conspiracy_chain_ended
-			days = 3600
+			years = 10
 		}
 		if = {
 			limit = {
@@ -758,10 +755,7 @@ country_event = {
 			country_event = { id = dpe_conspiracy.1 }
 		}
 		else = {
-			random_list = {
-				1 = { country_event = { id = dpe_conspiracy.1 } }
-				3 = { }
-			}
+			random = { chance = 25 country_event = { id = dpe_conspiracy.1 } }
 		}
 	}
 }
@@ -842,12 +836,12 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = imperialist }
-			add_modifier = { modifier = embraced_faction days = 3600 }
-			hidden_effect = { add_modifier = { modifier = embraced_faction_timer days = 3600 } }
+			add_modifier = { modifier = embraced_faction years = 10 }
+			hidden_effect = { add_modifier = { modifier = embraced_faction_timer years = 10 } }
 			owner = {
 				every_pop_faction = {
 					limit = { NOT = { is_same_value = prevprev } }
-					add_modifier = { modifier = embraced_another_faction days = 3600 }
+					add_modifier = { modifier = embraced_another_faction years = 10 }
 				}
 			}
 		}
@@ -897,7 +891,7 @@ country_event = {
 			country_event = { id = dpe_conspiracy.4 days = 5400 }
 			set_timed_country_flag = {
 				flag = dpe_navy_might_demand_more
-				days = 18000
+				years = 50
 			}
 		}
 		
@@ -977,7 +971,7 @@ country_event = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_military_petition_rejected
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1119,12 +1113,12 @@ country_event = {
 			
 			add_modifier = {
 				modifier = dpe_seized_control_faction
-				days = 3600
+				years = 10
 			}
 		
 			hidden_effect = { 
 				remove_modifier = dpe_military_petition_rejected
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
@@ -1134,7 +1128,7 @@ country_event = {
 								is_pop_faction_type = prosperity
 							}
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -1146,7 +1140,7 @@ country_event = {
 				
 				add_modifier = {
 					modifier = dpe_military_coup_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1157,7 +1151,7 @@ country_event = {
 				
 				add_modifier = {
 					modifier = dpe_military_coup_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1276,7 +1270,7 @@ country_event = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_military_petition_rejected
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1319,7 +1313,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_navy_RandD
-			days = 10800
+			years = 30
 		}
 	}		
 		
@@ -1332,7 +1326,7 @@ country_event = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_military_petition_rejected
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1439,7 +1433,7 @@ country_event = {
 			remove_modifier = dpe_extra_naval_expenses
 			add_modifier = {
 				modifier = dpe_rebuilding_fleet
-				days = 5400
+				years = 15
 			}
 		}
 		if = {
@@ -1447,7 +1441,7 @@ country_event = {
 			remove_modifier = dpe_extra_naval_expenses_2
 			add_modifier = {
 				modifier = dpe_rebuilding_fleet_2
-				days = 5400
+				years = 15
 			}
 		}
 		
@@ -1456,7 +1450,7 @@ country_event = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_naval_pay_cut_faction
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1481,7 +1475,7 @@ country_event = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_navy_privileges_cut_faction
-				days = 3600
+				years = 10
 			}
 		}
 		

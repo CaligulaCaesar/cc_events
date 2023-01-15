@@ -650,7 +650,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_mausoleum
-			days = 1800
+			years = 5
 		}
 		if = {
 			limit = { has_modifier = cc_founders_memory_disrespected_1_spiritualist }
@@ -874,7 +874,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_colony_democracy_unhappy
-			days = 5400
+			years = 15
 		}
 		
 		hidden_effect = {
@@ -1275,7 +1275,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_university
-			days = 1800
+			years = 5
 		}
 		remove_modifier = cc_founders_memory_disrespected_1_materialist
 
@@ -1393,7 +1393,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_colony_monarchy_unhappy
-			days = 5400
+			years = 15
 		}
 		
 		hidden_effect = {
@@ -1732,7 +1732,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_milacademy
-			days = 1800
+			years = 5
 		}
 		remove_modifier = cc_founders_memory_disrespected_1_militarist
 
@@ -2105,7 +2105,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_pacmonument
-			days = 1800
+			years = 5
 		}
 		if = {
 			limit = { has_modifier = cc_founders_memory_disrespected_1_pacifist }
@@ -2648,7 +2648,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_xenophile_institute
-			days = 1800
+			years = 5
 		}
 		if = {
 			limit = { has_modifier = cc_founders_memory_disrespected_1_xenophile }
@@ -2723,7 +2723,7 @@ planet_event = {
 
 		add_modifier = {
 			modifier = cc_building_xenophile_institute
-			days = 1800
+			years = 5
 		}
 		custom_tooltip = cc_xenophile_institute_will_be_built
 

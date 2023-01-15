@@ -426,7 +426,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_militarist_story
-				days = 3600
+				years = 10
 			}
 		}
 			
@@ -488,7 +488,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_militarist_influence
-			days = 7200
+			years = 20
 		}
 		
 		
@@ -1052,7 +1052,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_milacademy
-			days = 1800
+			years = 5
 		}
 		
 		custom_tooltip = cc_milacademy_will_be_built
@@ -1183,7 +1183,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_pacifist_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1869,7 +1869,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = cc_building_pacmonument
-			days = 1800
+			years = 5
 		}
 		custom_tooltip = cc_pacmonument_will_be_built
 		tooltip = {
@@ -1991,7 +1991,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_pacmonument
-			days = 1800
+			years = 5
 		}
 		
 		if = {
@@ -2198,7 +2198,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_xenophile_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -2731,7 +2731,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_xenophile_institute
-			days = 1800
+			years = 5
 		}
 		
 		custom_tooltip = cc_xenophile_institute_will_be_built
@@ -2890,7 +2890,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_xenophobe_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -3673,7 +3673,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero
-					days = 5400
+					years = 15
 				}
 			}
 		}
@@ -3704,7 +3704,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero
-					days = 5400
+					years = 15
 				}
 			}
 			event_target:ally = {
@@ -3723,9 +3723,9 @@ planet_event = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -3734,7 +3734,7 @@ planet_event = {
 										is_pop_faction_type = isolationist
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -3743,13 +3743,13 @@ planet_event = {
 			else = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = { NOT = { is_same_value = prevprev } }
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -3880,7 +3880,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero
-					days = 5400
+					years = 15
 				}
 			}
 			event_target:ally = {
@@ -3945,7 +3945,7 @@ planet_event = {
 					limit = { is_pop_faction_type = supremacist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated
-						days = 5400
+						years = 15
 					}
 				}
 			}
@@ -3954,14 +3954,14 @@ planet_event = {
 					limit = { is_pop_faction_type = isolationist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated
-						days = 5400
+						years = 15
 					}
 				}
 			}
 		}
 		add_modifier = {
 			modifier = cc_xenophobe_martyr
-			days = 9000
+			years = 25
 		}
 		add_modifier = {
 			modifier = cc_colony_distrusts
@@ -4015,9 +4015,9 @@ planet_event = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -4026,7 +4026,7 @@ planet_event = {
 										is_pop_faction_type = isolationist
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -4035,13 +4035,13 @@ planet_event = {
 			else = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = { NOT = { is_same_value = prevprev } }
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -4055,7 +4055,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = cc_xenophobe_martyr
-			days = 9000
+			years = 25
 		}
 		ai_chance = {
 			factor = 1
@@ -4242,7 +4242,7 @@ planet_event = {
 		owner = {
 			add_modifier = {
 				modifier = cc_widespread_xenophobic_unrest
-				days = 3600
+				years = 10
 			}
 			if = {
 				limit = { has_faction = supremacist }
@@ -4250,7 +4250,7 @@ planet_event = {
 					limit = { is_pop_faction_type = supremacist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated_attempt
-						days = 5400
+						years = 15
 					}
 				}
 			}
@@ -4259,7 +4259,7 @@ planet_event = {
 					limit = { is_pop_faction_type = isolationist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated_attempt
-						days = 5400
+						years = 15
 					}
 				}
 			}
@@ -4278,13 +4278,13 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero_1
-					days = 5400
+					years = 15
 				}
 			}
 		}
 		add_modifier = {
 			modifier = cc_colony_distrusts
-			days = 3600
+			years = 10
 		}
 		hidden_effect = {
 			event_target:ally = {
@@ -4334,9 +4334,9 @@ planet_event = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -4345,7 +4345,7 @@ planet_event = {
 										is_pop_faction_type = isolationist
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -4354,13 +4354,13 @@ planet_event = {
 			else = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = { NOT = { is_same_value = prevprev } }
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -4381,7 +4381,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero
-					days = 5400
+					years = 15
 				}
 			}
 		}
@@ -4447,7 +4447,7 @@ planet_event = {
 					limit = { is_pop_faction_type = supremacist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated_attempt
-						days = 5400
+						years = 15
 					}
 				}
 			}
@@ -4456,7 +4456,7 @@ planet_event = {
 					limit = { is_pop_faction_type = isolationist }
 					add_modifier = {
 						modifier = cc_xenophobe_assassinated_attempt
-						days = 5400
+						years = 15
 					}
 				}
 			}
@@ -4475,7 +4475,7 @@ planet_event = {
 				}
 				add_modifier = {
 					modifier = cc_xenophobe_hero_1
-					days = 5400
+					years = 15
 				}
 			}
 		}
@@ -4608,7 +4608,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_xenophobe_institute
-			days = 1800
+			years = 5
 		}
 		
 		if = {
@@ -4842,7 +4842,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_spiritualist_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -5528,7 +5528,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = cc_building_mausoleum
-			days = 1800
+			years = 5
 		}
 		custom_tooltip = cc_mausoleum_will_be_built
 		tooltip = {
@@ -5650,7 +5650,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_mausoleum
-			days = 1800
+			years = 5
 		}
 		
 		if = {
@@ -5853,7 +5853,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_materialist_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -6384,7 +6384,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_university
-			days = 1800
+			years = 5
 		}
 		
 		custom_tooltip = cc_university_will_be_built
@@ -6553,7 +6553,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_authoritarian_story
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -7290,7 +7290,7 @@ planet_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_recent_egalitarian_story
-				days = 3600
+				years = 10
 			}
 		}
 	}
@@ -7421,13 +7421,13 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_planet_oppression
-			days = 720
+			years = 2
 		}
 		every_owned_pop = {
 			limit = { has_ethic = ethic_egalitarian }
 			add_modifier = {
 				modifier = cc_oppression
-				days = 720
+				years = 2
 			}
 		}
 		
@@ -7470,7 +7470,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_major_protests_egalitarian
-			days = 1800
+			years = 5
 		}
 		
 		hidden_effect = {
@@ -7861,7 +7861,7 @@ planet_event = {
 		owner = {
 			set_timed_country_flag = {
 				flag = cc_recent_spiritualist_story
-				days = 10800
+				years = 30
 			}
 		}
 		if = {
@@ -8037,7 +8037,7 @@ planet_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				add_modifier = {
 					modifier = cc_arrested_guru
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -8522,7 +8522,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = cc_building_mausoleum
-			days = 1800
+			years = 5
 		}
 		custom_tooltip = cc_mausoleum_will_be_built
 		tooltip = {
@@ -8638,7 +8638,7 @@ planet_event = {
 		
 		add_modifier = {
 			modifier = cc_building_mausoleum
-			days = 1800
+			years = 5
 		}
 		
 		if = {

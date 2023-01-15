@@ -56,13 +56,13 @@ country_event = {
 					}
 					set_timed_country_flag = {
 						flag = dpe_recent_HW_event
-						days = 9000
+						years = 25
 					}
 				}
 				
 				set_timed_country_flag = {
 					flag = dpe_recent_HW_event
-					days = 7200
+					years = 20
 				}
 				save_event_target_as = dpe_honourbound_country
 				set_country_flag = dpe_has_had_HW_chain
@@ -194,7 +194,7 @@ country_event = {
 		hidden_effect = {
 			set_timed_country_flag = {
 				flag = dpe_hw_duel_leader
-				days = 60
+				months = 2
 			}
 		}
 		
@@ -236,14 +236,14 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_cowardly_empire
-			days = 3600
+			years = 10
 		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_cowardly_empire_faction
-				days = 3600
+				years = 10
 			}
 		}
 		ai_chance = {
@@ -275,14 +275,14 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_cowardly_empire
-			days = 3600
+			years = 10
 		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_cowardly_empire_faction
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -556,7 +556,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_cowardly_empire
-			days = 3600
+			years = 10
 		}
 
 		if = {
@@ -569,7 +569,7 @@ country_event = {
 				limit = { is_pop_faction_type = imperialist }
 				add_modifier = {
 					modifier = dpe_cowardly_empire_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -720,7 +720,7 @@ country_event = {
 		hidden_effect = {
 			set_timed_country_flag = {
 				flag = dpe_hw_duel_leader
-				days = 60
+				months = 2
 			}
 		}
 		hidden_effect = { fromfrom = { country_event = { id = dpe_hw_duel.5 days = 2 } } }
@@ -2667,7 +2667,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_honour_restored
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -2675,7 +2675,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -2817,7 +2817,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_honour_restored
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -2825,7 +2825,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -2938,7 +2938,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_honour_restored
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -2946,7 +2946,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -3094,7 +3094,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { from = { country_event = { id = dpe_hw_duel.73 } } }
 	}
@@ -3216,7 +3216,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { from = { country_event = { id = dpe_hw_duel.74 } } }
 	}
@@ -3313,7 +3313,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { from = { country_event = { id = dpe_hw_duel.75 } } }
 	}
@@ -3414,7 +3414,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 		custom_tooltip = dpe_worse_relations_with_militarists
 		hidden_effect = {
@@ -3548,7 +3548,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 		custom_tooltip = dpe_worse_relations_with_militarists
 		hidden_effect = {
@@ -3657,7 +3657,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced
-			days = 3600
+			years = 10
 		}
 
 		custom_tooltip = dpe_worse_relations_with_militarists
@@ -3811,7 +3811,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced1
-			days = 3600
+			years = 10
 		}
 		custom_tooltip = dpe_worse_relations_with_militarists
 		hidden_effect = {
@@ -3923,7 +3923,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_duel_disgraced1
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -3989,7 +3989,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_duel_disgraced1
-			days = 3600
+			years = 10
 		}
 		if = {
 			limit = { has_country_flag = dpe_hw_duel_leader }
@@ -4125,7 +4125,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4133,7 +4133,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -4266,7 +4266,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4274,7 +4274,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -4448,7 +4448,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4456,7 +4456,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -4588,7 +4588,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4596,7 +4596,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -4734,7 +4734,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4742,7 +4742,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -4915,7 +4915,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_honour_restored1
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = {
@@ -4923,7 +4923,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_honour_restored_faction
-				days = 3600
+				years = 10
 			}
 		}
 		if = {

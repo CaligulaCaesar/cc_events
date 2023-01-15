@@ -26,7 +26,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_has_overwhelming_rival
-					days = 31
+					months = 1
 				}
 			}
 			if = {
@@ -46,7 +46,7 @@ event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_has_superior_rival
-					days = 31
+					months = 1
 				}
 			}
 		}
@@ -116,7 +116,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_eventperf_has_minority
-				days = 365
+				years = 1
 			}
 			if = {
 				limit = {
@@ -127,7 +127,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_founder_is_minority
-					days = 365
+					years = 1
 				}
 			}
 			if = {
@@ -155,7 +155,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_eventperf_has_large_minority
-					days = 365
+					years = 1
 				}
 			}
 		}
@@ -173,7 +173,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_eventperf_has_lots_of_xenophobes_min
-				days = 365
+				years = 1
 			}
 		}
 
@@ -186,7 +186,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_enough_spiritualists
-				days = 365
+				years = 1
 			}
 		}
 		if = {
@@ -198,7 +198,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_many_materialists
-				days = 365
+				years = 1
 			}
 			if = {
 				limit = {
@@ -209,7 +209,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = cc_lots_materialists
-					days = 365
+					years = 1
 				}
 			}
 		}
@@ -222,7 +222,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_enough_egalitarians
-				days = 365
+				years = 1
 			}
 		}
 		if = {
@@ -234,7 +234,7 @@ country_event = {
 			}
 			set_timed_country_flag = {
 				flag = cc_many2_authoritarians
-				days = 365
+				years = 1
 			}
 		}
 	}

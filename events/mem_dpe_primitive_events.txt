@@ -30,9 +30,8 @@ country_event = {
 			NOT = {
 				has_star_flag = mem_lunar_age_system
 			}
-			any_system_planet = {
+			any_system_colony = {
 				has_owner = yes
-				exists = owner
 				has_ground_combat = no
 				has_orbital_bombardment = no
 				owner = {
@@ -76,9 +75,8 @@ country_event = {
 				}
 			}
 			save_event_target_as = mem_dpe_primitive_system
-			random_system_planet = {
+			random_system_colony = {
 				limit = {
-					has_owner = yes
 					exists = owner
 					owner = {
 						is_country_type = primitive
@@ -468,8 +466,7 @@ country_event = {
 					factor = 0
 					home_planet = {
 						solar_system = {
-							any_system_planet = {
-								is_colony = yes
+							any_system_colony = {
 								NOT = {
 									is_same_value = prevprev
 								}
@@ -1699,7 +1696,7 @@ country_event = {
 			create_fleet_from_naval_cap = 1.5
 			add_modifier = {
 				modifier = mem_dpe_primitives_boost
-				days = 7200
+				years = 20
 			}
 			
 			add_resource = {

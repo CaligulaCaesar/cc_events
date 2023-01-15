@@ -201,7 +201,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = cc_acceeded_to_demands_xenophile
-			days = 3600
+			years = 10
 		}
 		ai_chance = {
 			factor = 1
@@ -233,9 +233,9 @@ country_event = {
 					limit = { has_faction = supremacist }
 					random_pop_faction = {
 						limit = { is_pop_faction_type = supremacist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
+						add_modifier = { modifier = embraced_faction years = 10 }
 						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							add_modifier = { modifier = embraced_faction_timer years = 10 }
 							owner = {
 								every_pop_faction = {
 									limit = {
@@ -245,7 +245,7 @@ country_event = {
 											is_pop_faction_type = isolationist
 										}
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
+									add_modifier = { modifier = embraced_another_faction years = 10 }
 								}
 							}
 						}
@@ -254,9 +254,9 @@ country_event = {
 				else = {
 					random_pop_faction = {
 						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
+						add_modifier = { modifier = embraced_faction years = 10 }
 						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							add_modifier = { modifier = embraced_faction_timer years = 10 }
 							owner = {
 								every_pop_faction = {
 									limit = {
@@ -265,7 +265,7 @@ country_event = {
 											is_pop_faction_type = xenoist
 										}
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
+									add_modifier = { modifier = embraced_another_faction years = 10 }
 								}
 							}
 						}
@@ -289,14 +289,14 @@ country_event = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_2
-					days = 3600
+					years = 10
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = xenoist }
 				add_modifier = {
 					modifier = cc_xenophobic_offence_2
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -317,14 +317,14 @@ country_event = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_1
-					days = 3600
+					years = 10
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = xenoist }
 				add_modifier = {
 					modifier = cc_xenophobic_offence_1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -372,8 +372,8 @@ country_event = {
 		NOR = {
 			has_country_flag = recent_xenophobic_comments
 			has_ethic = ethic_gestalt_consciousness
+			has_ethic = ethic_fanatic_xenophile
 		}
-		NOT = { has_ethic = ethic_fanatic_xenophile }
 		
 		exists = ruler
 		NOT = { ruler = { leader_of_faction = xenoist } }
@@ -466,7 +466,7 @@ country_event = {
 		name = cc_events_mod.2.A
 		add_modifier = {
 			modifier = cc_ruler_humiliated
-			days = 3600
+			years = 10
 		}
 		ai_chance = {
 			factor = 1
@@ -489,14 +489,14 @@ country_event = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_1
-					days = 3600
+					years = 10
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = xenoist }
 				add_modifier = {
 					modifier = cc_xenophobic_offence_1
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -519,9 +519,9 @@ country_event = {
 					limit = { has_faction = supremacist }
 					random_pop_faction = {
 						limit = { is_pop_faction_type = supremacist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
+						add_modifier = { modifier = embraced_faction years = 10 }
 						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							add_modifier = { modifier = embraced_faction_timer years = 10 }
 							owner = {
 								every_pop_faction = {
 									limit = {
@@ -531,7 +531,7 @@ country_event = {
 											is_pop_faction_type = isolationist
 										}
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
+									add_modifier = { modifier = embraced_another_faction years = 10 }
 								}
 							}
 						}
@@ -540,9 +540,9 @@ country_event = {
 				else = {
 					random_pop_faction = {
 						limit = { is_pop_faction_type = isolationist }
-						add_modifier = { modifier = embraced_faction days = 3600 }
+						add_modifier = { modifier = embraced_faction years = 10 }
 						hidden_effect = { 
-							add_modifier = { modifier = embraced_faction_timer days = 3600 }
+							add_modifier = { modifier = embraced_faction_timer years = 10 }
 							owner = {
 								every_pop_faction = {
 									limit = {
@@ -551,7 +551,7 @@ country_event = {
 											is_pop_faction_type = xenoist
 										}
 									}
-									add_modifier = { modifier = embraced_another_faction days = 3600 }
+									add_modifier = { modifier = embraced_another_faction years = 10 }
 								}
 							}
 						}
@@ -574,14 +574,14 @@ country_event = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_2
-					days = 3600
+					years = 10
 				}
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = xenoist }
 				add_modifier = {
 					modifier = cc_xenophobic_offence_2
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -648,7 +648,7 @@ country_event = {
 		is_materialist = no
 		has_faction	= traditionalist
 
-		NOT = { has_ascension_perk = ap_transcendence }
+		NOT = { has_tradition = tr_psionics_psionic_assimilation }
 		
 		exists = ruler
 		leader = { has_leader_flag = cc_leader_revered_event }
@@ -660,7 +660,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = cc_ruler_revered
-			days = 5400
+			years = 15
 		}
 		
 		ai_chance = {
@@ -752,7 +752,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				add_modifier = {
 					modifier = cc_ruler_cult_offended
-					days = 1800
+					years = 5
 				}
 			}
 		}
@@ -957,8 +957,8 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = xenoist }
-			add_modifier = { modifier = embraced_faction days = 3600 }
-			add_modifier = { modifier = embraced_faction_timer days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
+			add_modifier = { modifier = embraced_faction_timer years = 10 }
 			owner = {
 				every_pop_faction = {
 					limit = {
@@ -967,7 +967,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 					}
-					add_modifier = { modifier = embraced_another_faction days = 3600 }
+					add_modifier = { modifier = embraced_another_faction years = 10 }
 				}
 			}
 		}
@@ -975,7 +975,7 @@ country_event = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_hostile
-				days = 3600
+				years = 10
 			}
 		}
 		ai_chance = {
@@ -1004,7 +1004,7 @@ country_event = {
 			limit = { is_imp_or_dict = yes }
 			add_modifier = {
 				modifier = cc_ruler_humiliated1
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -1012,7 +1012,7 @@ country_event = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_friendly
-				days = 3600
+				years = 10
 			}
 		}
 		ai_chance = {
@@ -1047,13 +1047,13 @@ country_event = {
 		
 		add_modifier = {
 			modifier = cc_defiance_of_law
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_unfriendly
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -1062,7 +1062,7 @@ country_event = {
 				limit = { is_pop_faction_type = progressive }
 				add_modifier = {
 					modifier = cc_defiance_of_law_egals
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1102,9 +1102,9 @@ country_event = {
 			shift_ethic = ethic_fanatic_authoritarian
 			random_pop_faction = {
 				limit = { is_pop_faction_type = totalitarian }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
@@ -1114,7 +1114,7 @@ country_event = {
 									is_pop_faction_type = progressive
 								}
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -1124,13 +1124,13 @@ country_event = {
 
 		add_modifier = {
 			modifier = cc_defiance_of_law_mega
-			days = 3600
+			years = 10
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_unfriendly1
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -1139,7 +1139,7 @@ country_event = {
 				limit = { is_pop_faction_type = progressive }
 				add_modifier = {
 					modifier = cc_defiance_of_law_egal_mega
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1240,8 +1240,8 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = xenoist }
-			add_modifier = { modifier = embraced_faction days = 3600 }
-			add_modifier = { modifier = embraced_faction_timer days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
+			add_modifier = { modifier = embraced_faction_timer years = 10 }
 			owner = {
 				every_pop_faction = {
 					limit = {
@@ -1250,7 +1250,7 @@ country_event = {
 							is_pop_faction_type = supremacist
 						}
 					}
-					add_modifier = { modifier = embraced_another_faction days = 3600 }
+					add_modifier = { modifier = embraced_another_faction years = 10 }
 				}
 			}
 		}
@@ -1258,7 +1258,7 @@ country_event = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_hostile1
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -1287,7 +1287,7 @@ country_event = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_sex_scandal_friendly1
-				days = 3600
+				years = 10
 			}
 		}
 
@@ -1319,13 +1319,13 @@ country_event = {
 		
 			add_modifier = {
 				modifier = cc_defiance_of_law1
-				days = 3600
+				years = 10
 			}
 			random_pop_faction = {
 				limit = { is_pop_faction_type = supremacist }
 				add_modifier = {
 					modifier = cc_recent_sex_scandal_unfriendly1
-					days = 3600
+					years = 10
 				}
 			}
 			if = {
@@ -1334,7 +1334,7 @@ country_event = {
 					limit = { is_pop_faction_type = progressive }
 					add_modifier = {
 						modifier = cc_defiance_of_law_egals1
-						days = 3600
+						years = 10
 					}
 				}
 			}

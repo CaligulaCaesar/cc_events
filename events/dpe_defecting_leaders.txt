@@ -39,7 +39,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_defect_leader
-			days = 9000
+			years = 25
 		}
 		save_event_target_as = dpe_defected_country
 		
@@ -79,7 +79,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_recent_defect_leader
-					days = 4800
+					months = 160
 				}
 				
 				save_event_target_as = dpe_defect_to_country
@@ -317,7 +317,7 @@ country_event = {
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_scientist_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -383,7 +383,7 @@ country_event = {
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_governor_from
-							days = 360
+							years = 1
 						}
 					}
 				}
@@ -391,13 +391,13 @@ country_event = {
 					root = {
 						add_modifier = {
 							modifier = dpe_defector_military_receive
-							days = 3600
+							years = 10
 						}
 					}
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_military_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -405,13 +405,13 @@ country_event = {
 					root = {
 						add_modifier = {
 							modifier = dpe_defector_military_receive
-							days = 3600
+							years = 10
 						}
 					}
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_military_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -749,7 +749,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -812,7 +812,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -820,13 +820,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -834,13 +834,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -869,7 +869,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_xenophobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -883,14 +883,14 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_xenophobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
 		
 		add_modifier = {
 			modifier = dpe_defector_xenophobia
-			days = 3600
+			years = 10
 		}
 		
 		tooltip = {
@@ -976,7 +976,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1039,7 +1039,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -1047,13 +1047,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1061,13 +1061,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1256,7 +1256,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_arbitrary_detention
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1270,7 +1270,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_arbitrary_detention
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1422,7 +1422,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_defect_trust_in_xenos
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1963,7 +1963,7 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -2026,7 +2026,7 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -2034,13 +2034,13 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -2048,13 +2048,13 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}

@@ -68,7 +68,7 @@ planet_event = {
 		name = CCEXCELLENT
 		add_modifier = {
 			modifier = dpe_unity_planet
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -196,7 +196,7 @@ country_event = {
 		
 			set_timed_country_flag = {
 				flag = dpe_recent_ruler_debate
-				days = 7200
+				years = 20
 			}
 			random_list = {
 				2 = { country_event = { id = dpe_smallpos_events.4 } }
@@ -229,7 +229,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_persuasive_leader
-			days = 1080
+			years = 3
 		}
 	}
 }
@@ -248,7 +248,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_unpersuasive_leader
-			days = 1080
+			years = 3
 		}
 	}
 }
@@ -879,7 +879,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_planet_talented_engineer
-					days = 10800
+					years = 30
 				}
 			}
 			if = {
@@ -893,7 +893,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_planet_talented_physicist
-					days = 10800
+					years = 30
 				}
 			}
 			if = {
@@ -904,7 +904,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_planet_talented_compscientist
-					days = 10800
+					years = 30
 				}
 			}
 			if = {
@@ -919,7 +919,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_planet_talented_socscientist
-					days = 10800
+					years = 30
 				}
 			}
 			if = {
@@ -930,7 +930,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_planet_talented_biologist
-					days = 10800
+					years = 30
 				}
 			}
 		}
@@ -1134,7 +1134,7 @@ country_event = {
 		event_target:dpe_talent_planet = {
 			add_modifier = {
 				modifier = dpe_planet_talented_general
-				days = 10800
+				years = 30
 			}
 		}
 	}
@@ -1349,7 +1349,7 @@ country_event = {
 		event_target:dpe_talent_planet = {
 			add_modifier = {
 				modifier = dpe_planet_talented_governor
-				days = 10800
+				years = 30
 			}
 		}
 	}
@@ -1528,7 +1528,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_starbase_talented_admiral
-					days = 10800
+					years = 30
 				}
 			}
 		}
@@ -1625,7 +1625,7 @@ planet_event = {
 		name = UNFORTUNATE
 		add_modifier = {
 			modifier = dpe_dissent_planet
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1725,7 +1725,7 @@ planet_event = {
 		name = EXCELLENT
 		add_modifier = {
 			modifier = dpe_posenergy_planet
-			days = 1080
+			years = 3
 		}
 	}
 }
@@ -1828,7 +1828,7 @@ planet_event = {
 		name = UNFORTUNATE
 		add_modifier = {
 			modifier = dpe_negenergy_planet
-			days = 1080
+			years = 3
 		}
 	}
 }
@@ -1930,7 +1930,7 @@ planet_event = {
 		name = EXCELLENT
 		add_modifier = {
 			modifier = dpe_posminerals_planet
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -2033,7 +2033,7 @@ planet_event = {
 		name = UNFORTUNATE
 		add_modifier = {
 			modifier = dpe_negminerals_planet
-			days = 3600
+			years = 10
 		}
 	}
 }

@@ -19,8 +19,6 @@ country_event = {
 		NOR = {
 			has_country_flag = cc_has_had_blackmail
 			has_ethic = ethic_gestalt_consciousness
-		}
-		NOR = {
 			has_country_flag = cc_eventperf_has_overwhelming_rival
 			has_country_flag = cc_eventperf_has_superior_rival
 		}
@@ -38,7 +36,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = cc_paid_blackmail
-			days = 360
+			years = 1
 		}
 		ai_chance = {
 			factor = 2

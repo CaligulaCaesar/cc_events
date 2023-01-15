@@ -344,7 +344,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_xenophile_mission
-			days = 5400
+			years = 15
 		}
 		save_event_target_as = dpe_xenophile_country
 	}
@@ -356,7 +356,7 @@ country_event = {
 			event_target:dpe_new_contact = {
 				set_timed_country_flag = {
 					flag = dpe_recent_xenophile_mission
-					days = 9000
+					years = 25
 				}
 				country_event = { id = dpe_xenophile_mission.4 }
 			}
@@ -387,7 +387,7 @@ country_event = {
 			limit = { is_pop_faction_type = xenoist }
 			add_modifier = {
 				modifier = dpe_rejected_xenophile_mission_faction
-				days = 3600
+				years = 10
 			}
 		}
 		ai_chance = {
@@ -1215,7 +1215,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_xenomission_xenophobia
-			days = 720
+			years = 2
 		}
 
 		hidden_effect = {
@@ -1303,7 +1303,7 @@ country_event = {
 				country_event = { id = dpe_xenophile_mission.91 }
 				set_timed_country_flag = {
 					flag = dpe_xenomission_tensions_explode
-					days = 720
+					years = 2
 				}
 				set_relation_flag = {
 					who = event_target:dpe_new_contact
@@ -1390,7 +1390,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_xenomission_disaster_upset
-			days = 4800
+			months = 160
 		}
 
 		event_target:dpe_new_contact = {
@@ -1510,9 +1510,9 @@ country_event = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -1521,7 +1521,7 @@ country_event = {
 										is_pop_faction_type = isolationist
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -1530,9 +1530,9 @@ country_event = {
 			else = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -1540,7 +1540,7 @@ country_event = {
 										is_same_value = prevprev
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -1623,9 +1623,9 @@ country_event = {
 				limit = { has_faction = supremacist }
 				random_pop_faction = {
 					limit = { is_pop_faction_type = supremacist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -1634,7 +1634,7 @@ country_event = {
 										is_pop_faction_type = isolationist
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -1643,9 +1643,9 @@ country_event = {
 			else = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = isolationist }
-					add_modifier = { modifier = embraced_faction days = 3600 }
+					add_modifier = { modifier = embraced_faction years = 10 }
 					hidden_effect = { 
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = { modifier = embraced_faction_timer years = 10 }
 						owner = {
 							every_pop_faction = {
 								limit = {
@@ -1653,7 +1653,7 @@ country_event = {
 										is_same_value = prevprev
 									}
 								}
-								add_modifier = { modifier = embraced_another_faction days = 3600 }
+								add_modifier = { modifier = embraced_another_faction years = 10 }
 							}
 						}
 					}
@@ -1755,7 +1755,7 @@ country_event = {
 		from = { country_event = { id = dpe_xenophile_mission.951 } }
 		set_timed_country_flag = {
 			flag = dpe_xenomission_tensions_over
-			days = 60
+			months = 2
 		}
 	}
 	option = { name = CCGOODGOOD }
@@ -1811,7 +1811,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_spying_first_time
-			days = 3600
+			years = 10
 		}
 	}
 
@@ -2042,7 +2042,7 @@ country_event = {
 		from = {
 			set_timed_country_flag = {
 				flag = dpe_xenomission_caught_spying
-				days = 3600
+				years = 10
 			}
 		}
 		add_opinion_modifier = {
@@ -2215,7 +2215,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = dpe_xenomission_imprisoned_citizens
-				days = 3600
+				years = 10
 			}
 		}
 		if = {
@@ -2224,7 +2224,7 @@ country_event = {
 				limit = { is_pop_faction_type = totalitarian }
 				add_modifier = {
 					modifier = dpe_xenomission_imprisoned_citizens_auth_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -2234,7 +2234,7 @@ country_event = {
 				limit = { is_pop_faction_type = supremacist }
 				add_modifier = {
 					modifier = dpe_xenomission_imprisoned_citizens_phobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -2244,7 +2244,7 @@ country_event = {
 				limit = { is_pop_faction_type = isolationist }
 				add_modifier = {
 					modifier = dpe_xenomission_imprisoned_citizens_phobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -2313,7 +2313,7 @@ country_event = {
 		tooltip = {
 			add_modifier = {
 				modifier = dpe_xenomission_imprisoned_citizens
-				days = 3600
+				years = 10
 			}
 			from = {
 				add_opinion_modifier = {
@@ -3307,7 +3307,7 @@ country_event = {
 		}
 		set_timed_country_flag = {
 			flag = dpe_xenomission_caught_smuggling
-			days = 3600
+			years = 10
 		}
 	}
 
@@ -3539,8 +3539,6 @@ country_event = {
 					NOR = {
 						is_same_value = root
 						is_same_value = from
-					}
-					NOR = {
 						is_in_federation_with = FROM
 						has_defensive_pact = FROM
 						has_non_aggression_pact = from
@@ -3641,7 +3639,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_xenomission_disaster_upset
-			days = 5400
+			years = 15
 		}
 
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.23 } } }
@@ -3703,7 +3701,7 @@ country_event = {
 	option = {
 		name = dpe_xenophile_mission.24.A
 		
-		set_subject_of = { who = from subject_type = tributary }
+		set_subject_of = { who = from preset = preset_tributary }
 
 		from = {
 			country_event = { id = dpe_xenophile_mission.251 }
@@ -3728,7 +3726,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_xenomission_abandoned_hostages
-			days = 3600
+			years = 10
 		}
 
 		from = {
@@ -3782,15 +3780,12 @@ country_event = {
 				limit = {
 					is_ship_class = shipclass_military
 				}
-				random_list = {
-					1 = { delete_ship = this }
-					2 = { }
-				}
+				random = { chance = 33 delete_ship = this }
 			}
 		}
 		add_modifier = {
 			modifier = dpe_xenomission_disbanding_fleet
-			days = 5400
+			years = 15
 		}
 
 		from = {
@@ -3816,7 +3811,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_xenomission_abandoned_hostages
-			days = 3600
+			years = 10
 		}
 
 		from = {
@@ -3931,7 +3926,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_xenomission_disaster_upset
-			days = 5400
+			years = 15
 		}
 		hidden_effect = { from = { country_event = { id = dpe_xenophile_mission.291 days = 10 } } }
 	}
@@ -4558,7 +4553,7 @@ country_event = {
 		
 		set_timed_country_flag = {
 			flag = recent_im_first_decision
-			days = 360
+			years = 1
 		}
 	}
 
@@ -4871,7 +4866,7 @@ country_event = {
 		
 		set_timed_country_flag = {
 			flag = recent_im_first_decision
-			days = 360
+			years = 1
 		}
 	}
 
@@ -5173,7 +5168,7 @@ country_event = {
 
 		add_modifier = {
 			modifier = dpe_xenomission_xenophilia_torn
-			days = 4800
+			months = 160
 		}
 	}
 }
@@ -5253,7 +5248,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_successful_xenomission
-			days = 4800
+			months = 160
 		}
 		from = { add_trust = { amount = 50 who = root } }
 	}
@@ -5284,7 +5279,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_successful_xenomission
-			days = 4800
+			months = 160
 		}
 		from = { add_trust = { amount = 50 who = root } }
 	}

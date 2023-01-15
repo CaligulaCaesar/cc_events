@@ -79,14 +79,14 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_charity_unpopular_ruler
-			days = 3600
+			years = 10
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = technologist }
 			add_modifier = {
 				modifier = dpe_charity_faction_undeserving
-				days = 3600
+				years = 10
 			}
 		}
 		
@@ -110,16 +110,16 @@ country_event = {
 			limit = { is_pop_faction_type = technologist }
 			add_modifier = {
 				modifier = dpe_charity_faction_undeserving
-				days = 3600
+				years = 10
 			}
 		}
 		
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = progressive }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
@@ -128,7 +128,7 @@ country_event = {
 								is_pop_faction_type = technologist
 							}
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -382,11 +382,8 @@ country_event = {
 	trigger = {
 		is_spiritualist = yes
 		NOR = {
-			has_ascension_perk = ap_transcendence
+			has_tradition = tr_psionics_psionic_assimilation
 			has_country_flag = dpe_recent_disbelief_scandal
-		}
-		
-		NOR = {
 			has_civic = civic_imperial_cult
 			has_modifier = cc_ruler_cult
 		}
@@ -459,16 +456,16 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = technologist }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
 							NOR = { is_same_value = prevprev }
 							is_pop_faction_type = traditionalist
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -509,12 +506,12 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_unbelief_empire
-			days = 3600
+			years = 10
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = traditionalist }
-			add_modifier = { modifier = dpe_unbelief_faction days = 3600 }
+			add_modifier = { modifier = dpe_unbelief_faction years = 10 }
 		}
 		
 		ai_chance = {
@@ -596,12 +593,12 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_damned_to_hell_empire
-			days = 3600
+			years = 10
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = traditionalist }
-			add_modifier = { modifier = dpe_damned_to_hell_faction days = 3600 }
+			add_modifier = { modifier = dpe_damned_to_hell_faction years = 10 }
 		}
 	}
 }
@@ -629,7 +626,7 @@ country_event = {
 		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
 		
 		is_imperial = no
-		NOT = { has_ascension_perk = ap_transcendence }
+		NOT = { has_tradition = tr_psionics_psionic_assimilation }
 
 		exists = ruler
 		
@@ -657,13 +654,13 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_generic
-					days = 30
+					months = 1
 				}
 			}
 			2 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_egal
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -684,7 +681,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_spir
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -704,7 +701,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_mil
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -724,7 +721,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_pac
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -744,7 +741,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_mat
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -764,7 +761,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_phobe
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -786,7 +783,7 @@ country_event = {
 			1 = {
 				set_timed_country_flag = {
 					flag = dpe_escaped_slave_ruler_phile
-					days = 30
+					months = 1
 				}
 				modifier = {
 					factor = 0
@@ -922,7 +919,7 @@ country_event = {
 
 			add_modifier = {
 				modifier = cc_paid_blackmail
-				days = 360
+				years = 1
 			}
 		}
 		
@@ -937,15 +934,15 @@ country_event = {
 			
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -957,15 +954,15 @@ country_event = {
 			shift_ethic = ethic_xenophile
 			random_pop_faction = {
 				limit = { is_pop_faction_type = xenoist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -977,15 +974,15 @@ country_event = {
 			shift_ethic = ethic_xenophobe
 			random_pop_faction = {
 				limit = { is_pop_faction_type = supremacist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -997,15 +994,15 @@ country_event = {
 			shift_ethic = ethic_materialist
 			random_pop_faction = {
 				limit = { is_pop_faction_type = technologist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -1017,15 +1014,15 @@ country_event = {
 			shift_ethic = ethic_pacifist
 			random_pop_faction = {
 				limit = { is_pop_faction_type = progressive }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -1037,15 +1034,15 @@ country_event = {
 			shift_ethic = ethic_spiritualist
 			random_pop_faction = {
 				limit = { is_pop_faction_type = traditionalist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -1057,15 +1054,15 @@ country_event = {
 			shift_ethic = ethic_militarist
 			random_pop_faction = {
 				limit = { is_pop_faction_type = imperialist }
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction years = 10 }
 				hidden_effect = { 
-					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					add_modifier = { modifier = embraced_faction_timer years = 10 }
 					owner = {
 						every_pop_faction = {
 							limit = {
 								NOT = { is_same_value = prevprev }
 							}
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							add_modifier = { modifier = embraced_another_faction years = 10 }
 						}
 					}
 				}
@@ -1147,21 +1144,21 @@ country_event = {
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = technologist }
-			add_modifier = { modifier = dpe_cultist_embraced days = 3600 }
+			add_modifier = { modifier = dpe_cultist_embraced years = 10 }
 		}
 
 		random_pop_faction = {
 			limit = { is_pop_faction_type = traditionalist }
-			add_modifier = { modifier = embraced_faction days = 3600 }
+			add_modifier = { modifier = embraced_faction years = 10 }
 			hidden_effect = { 
-				add_modifier = { modifier = embraced_faction_timer days = 3600 }
+				add_modifier = { modifier = embraced_faction_timer years = 10 }
 				owner = {
 					every_pop_faction = {
 						limit = {
 							NOR = { is_same_value = prevprev }
 							is_pop_faction_type = technologist
 						}
-						add_modifier = { modifier = embraced_another_faction days = 3600 }
+						add_modifier = { modifier = embraced_another_faction years = 10 }
 					}
 				}
 			}
@@ -1196,12 +1193,12 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_cultist_scandal_empire
-			days = 3600
+			years = 10
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = technologist }
-			add_modifier = { modifier = dpe_cultist_faction days = 3600 }
+			add_modifier = { modifier = dpe_cultist_faction years = 10 }
 		}
 		
 		ai_chance = {

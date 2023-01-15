@@ -60,7 +60,7 @@ country_event = {
 		
 		set_timed_country_flag = {
 			flag = recent_im_first_decision
-			days = 360
+			years = 1
 		}
 	}
 	
@@ -1265,7 +1265,7 @@ country_event = {
 		
 		set_timed_country_flag = {
 			flag = cc_recent_prominent_IM
-			days = 5400
+			years = 15
 		}
 	}
 	option = {
@@ -1273,20 +1273,20 @@ country_event = {
 		
 		add_modifier = {
 			modifier = cc_recent_xenophile_wedding
-			days = 1800
+			years = 5
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = xenoist }
 			add_modifier = {
 				modifier = cc_recent_xenophile_wedding_xenophile
-				days = 1800
+				years = 5
 			}
 		}
 		random_pop_faction = {
 			limit = { is_pop_faction_type = supremacist }
 			add_modifier = {
 				modifier = cc_recent_xenophile_wedding_xenophobe
-				days = 1800
+				years = 5
 			}
 		}
 	}

@@ -88,10 +88,7 @@ country_event = {
 			country_event = { id = dpe_diplo.1 }
 		}
 		else = {
-			random_list = {
-				2 = { country_event = { id = dpe_diplo.1 } }
-				3 = { }
-			}
+			random = { chance = 40 country_event = { id = dpe_diplo.1 } }
 		}
 	}
 }
@@ -374,14 +371,14 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_ruler_looks_weak
-			days = 360
+			years = 1
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_ruler_looks_weak_faction
-				days = 360
+				years = 1
 			}
 		}
 		
@@ -457,14 +454,14 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_ruler_looks_weak
-			days = 360
+			years = 1
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = imperialist }
 			add_modifier = {
 				modifier = dpe_ruler_looks_weak_and_breaks_promises_faction
-				days = 360
+				years = 1
 			}
 		}
 		
@@ -586,7 +583,7 @@ planet_event = {
 		owner = {
 			set_timed_country_flag = {
 				flag = dpe_recent_militarists_hijack
-				days = 720
+				years = 2
 			}
 		}
 	}
@@ -626,23 +623,23 @@ planet_event = {
 		owner = {
 			add_modifier = {
 				modifier = dpe_indemnity_paid
-				days = 360
+				years = 1
 			}
 			add_modifier = {
 				modifier = humiliated
-				days = 3600
+				years = 10
 			}
 		}
 		
 		add_modifier = {
 			modifier = dpe_militarist_unrest
-			days = 360
+			years = 1
 		}
 		
 		event_target:enemy = {
 			add_modifier = {
 				modifier = dpe_indemnity_receive
-				days = 360
+				years = 1
 			}
 		}
 		
@@ -756,7 +753,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_ruler_looks_weak
-			days = 3600
+			years = 10
 		}
 		allow = {
 			is_homicidal = no
@@ -901,19 +898,19 @@ country_event = { #AI-only event
 		
 		add_modifier = {
 			modifier = dpe_indemnity_paid
-			days = 360
+			years = 1
 		}
 		
 		from = {
 			add_modifier = {
 				modifier = dpe_indemnity_receive
-				days = 360
+				years = 1
 			}
 		}
 		
 		add_modifier = {
 			modifier = humiliated
-			days = 3600
+			years = 10
 		}
 		hidden_effect = { remove_modifier = dpe_ruler_looks_weak }
 		
@@ -1098,7 +1095,7 @@ country_event = {
 		tooltip = {
 			add_modifier = {
 				modifier = dpe_indemnity_receive
-				days = 360
+				years = 1
 			}
 		}
 	}
