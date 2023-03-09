@@ -12,7 +12,7 @@ country_event = {
 	desc = dpe_fe.1.desc
 	picture = GFX_evt_cc_throne_room
 	
-	mean_time_to_happen = { years = 120 }
+	# mean_time_to_happen = { years = 120 }
 	
 	trigger = {
 		is_country_type = default
@@ -1300,7 +1300,7 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 60 }
+	# mean_time_to_happen = { years = 60 }
 
 	immediate = {
 		set_country_flag = dpe_has_had_escaped_fe_pop

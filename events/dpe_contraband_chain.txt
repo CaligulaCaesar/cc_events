@@ -217,14 +217,14 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { # This event has no localisation. What is it?
 	id = dpe_contraband_event.1100
 	title = dpe_contraband_event.1100.name
 	desc = dpe_contraband_event.1100.desc
 	
 	picture = GFX_evt_smugglers_in_bar
 	
-	mean_time_to_happen = { years = 80 }
+	# mean_time_to_happen = { years = 80 }
 	
 	trigger = {
 		years_passed > 30

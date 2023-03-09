@@ -353,9 +353,9 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		years = 30 #A reasonable middling number
-	}
+	# mean_time_to_happen = {
+	# 	years = 30 #A reasonable middling number
+	# }
 
 	immediate = {
 		set_timed_country_flag = {
@@ -2571,9 +2571,9 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		years = 20
-	}
+	# mean_time_to_happen = {
+	# 	years = 20
+	# }
 
 	option = {
 		name = dpe_royal_marriages_events.9011.A
@@ -2613,9 +2613,9 @@ country_event = {
 	}
 	picture = GFX_evt_news_room
 
-	mean_time_to_happen = {
-		months = 2 #suitably short but not too short as don't want to affect performance
-	}
+	# mean_time_to_happen = {
+	# 	months = 2 #suitably short but not too short as don't want to affect performance
+	# }
 
 	trigger = {
 		any_country = {
@@ -2751,9 +2751,9 @@ country_event = {
 	desc = dpe_royal_marriages_events.904.desc
 	picture = GFX_evt_arguing_senate
 	
-	mean_time_to_happen = {
-		months = 2 #suitably short but not too short as don't want to affect performance
-	}
+	# mean_time_to_happen = {
+	# 	months = 2 #suitably short but not too short as don't want to affect performance
+	# }
 
 	trigger = {
 		is_imperial = no

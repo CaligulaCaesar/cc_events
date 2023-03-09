@@ -1,0 +1,1720 @@
+
+namespace = dpe_init
+
+country_event = { # Blackmail Crisis
+	id = dpe_init.1000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_owned_planets > 7
+		years_passed > 60
+		NOR = {
+			has_country_flag = cc_has_had_blackmail
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = cc_eventperf_has_overwhelming_rival
+			has_country_flag = cc_eventperf_has_superior_rival
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_events_blackmail.20 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Spiritualist Guru
+	id = dpe_init.1001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_owned_planets > 3
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_faction = traditionalist
+
+		if = {
+			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
+			any_owned_planet = {
+				has_planet_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_planet_flag = cc_colony_story }
+				has_orbital_bombardment = no
+				exists = controller
+				controller = { is_same_value = root }
+				root = {
+					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
+						distance = {
+							source = prevprev
+							min_distance >= 0
+							max_distance <= 75
+						}
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+					}
+				}
+			}
+		}
+		else = {
+			any_owned_planet = {
+				has_planet_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_planet_flag = cc_colony_story }
+				has_orbital_bombardment = no
+				exists = controller
+				controller = { is_same_value = root }
+				root = {
+					any_owned_planet = {
+						NOT = { is_same_value = prevprev }
+						distance = {
+							source = prevprev
+							min_distance >= 0
+							max_distance <= 75
+						}
+						any_owned_pop = { has_ethic = ethic_spiritualist }
+					}	
+					NOT = {
+						any_owned_planet = {
+							distance = {
+								source = prevprev
+								min_distance >= 0
+								max_distance <= 120
+							}
+							has_modifier = cc_religious_centre
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = cc_colony_events.10001 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Emancipation Crisis
+	id = dpe_init.1002
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		allows_slavery = yes
+		has_faction = progressive
+		NOR = {
+			has_country_flag = cc_emancipation_movement
+			has_country_flag = cc_recent_emancipation_movement
+			has_country_flag = cc_emancipation_first_strike
+		}
+		any_owned_planet = {
+
+			planet_stability < @dpe_normal_unrest_value
+			NOT = { has_planet_flag = cc_emancipation_movement }
+			any_owned_pop = {
+				is_enslaved = yes
+				pop_has_happiness = yes
+				happiness < 0.4
+			}
+			any_owned_pop = {
+				has_ethic = ethic_egalitarian
+				is_enslaved = no
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = cc_emancipation.1000 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ludditism Crisis
+	id = dpe_init.1003
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		has_policy_flag = robots_allowed
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_synthetic_empire = yes
+			is_mechanical_empire = yes
+			has_country_flag = cc_luddite_movement
+			has_country_flag = cc_recent_luddite_movement
+			has_country_flag = cc_first_luddite_strike
+			has_country_flag = cc_recent_antiluddite_event
+		}
+		any_owned_planet = {
+			planet_stability < @dpe_normal_unrest_value
+			NOT = { has_planet_flag = cc_luddite_strike }
+			any_owned_pop = { is_non_sapient_robot = yes }
+			any_owned_pop = {
+				has_ethic = ethic_spiritualist
+				has_citizenship_rights = yes
+				happiness < 0.4
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = cc_luddite.1000 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Peace Protests
+	id = dpe_init.1004
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOT = { has_country_flag = cc_recent_pacifist_protests }
+		is_at_war = yes
+		is_war_leader = yes
+		has_faction = prosperity
+		any_pop_faction = {
+			is_pop_faction_type = prosperity
+			support > 0.1
+		}
+		any_owned_planet = {
+			count_owned_pop = {
+				limit = {
+					has_ethic = ethic_pacifist
+					has_citizenship_rights = yes
+				}
+				count > 7
+			}
+		}
+		any_war = {
+			is_war_participant = { who = root side = attackers }
+			defender_war_exhaustion > 60
+
+			NOT = {
+				root = {
+					any_war = {
+						NOT = { is_same_value = prevprev }
+						OR = {
+							is_war_participant = { who = root side = attackers }
+							is_war_participant = { who = root side = defenders }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 35
+			country_event = { id = cc_peace.500 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Xeno Sex Scandal
+	id = dpe_init.1005
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = cc_recent_sex_scandal
+		}
+
+		OR = {
+			has_policy_flag = bans_im_completely
+			is_xenophobe = yes
+		}
+
+		any_owned_species = {
+			NOR = {
+				is_subspecies = prev
+				is_same_species = prev
+				is_robotic_species = no
+			}
+			species_has_happiness_with_owner = root
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_events_mod.17018 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Materialists Patent
+	id = dpe_init.1006
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		years_passed > 25
+		NOT = { has_country_flag = dpe_has_had_patents_event }
+		num_owned_planets > 1
+		OR = {
+			is_materialist = yes
+			any_pop_faction = {
+				is_pop_faction_type = technologist
+				support > 0.15
+				faction_approval > @cc_faction_happy_number
+			}
+		}
+		any_owned_planet = {
+			is_capital = no
+			colony_age > 25
+			NOR = {
+				has_modifier = dpe_innovative_CEO
+				has_modifier = dpe_disgruntled_CEO
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_events_mod.57 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Thought Police
+	id = dpe_init.1007
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_pop = {
+			is_enslaved = no
+			happiness < 0.4
+			exists = owner
+			owner = { has_edict = cc_thought_police }
+			if = {
+				limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
+				NOT = { has_ethic = ethic_authoritarian }
+			}
+			if = {
+				limit = { owner = { has_ethic = ethic_spiritualist } }
+				NOT = { has_ethic = ethic_spiritualist }
+			}
+			if = {
+				limit = { owner = { has_ethic = ethic_materialist } }
+				NOT = { has_ethic = ethic_materialist }
+			}
+			if = {
+				limit = { owner = { has_ethic = ethic_pacifist } }
+				NOT = { has_ethic = ethic_pacifist }
+			}
+			if = {
+				limit = { owner = { is_militarist = yes } }
+				NOT = { has_ethic = ethic_militarist }
+			}
+			if = {
+				limit = { owner = { has_ethic = ethic_xenophile } }
+				NOT = { has_ethic = ethic_xenophile }
+			}
+			if = {
+				limit = { owner = { is_xenophobe = yes } }
+				NOT = { has_ethic = ethic_xenophobe }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_thought_police.10 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Xeno Clashes
+	id = dpe_init.1008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		any_owned_planet = {
+			num_pops > 10
+			
+			any_owned_pop = { has_ethic = ethic_xenophobe }
+			pop_percentage = {
+				percentage > 0.2
+				limit = { has_ethic = ethic_xenophobe }
+			}
+
+			NOR = {
+				has_planet_flag = cc_xeno_clashes
+				# has_planet_flag = pop_modification
+				owner = {
+					OR = {
+						has_country_flag = cc_recent_xeno_empire_clashes
+						has_country_flag = cc_recent_first_xeno_clashes
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+			}
+
+			num_species > 1
+
+			any_owned_species = {
+				species_has_happiness_with_owner = root.owner
+				is_robotic_species = no
+				OR = {
+					has_citizenship_type = { country = root.owner type = citizenship_full }
+					has_citizenship_type = { country = root.owner type = citizenship_limited }
+					has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+					has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+				}
+				root = {
+					count_owned_pop = {
+						limit = { is_same_species = prev }
+						count > 4
+					}
+					any_owned_species = {
+						NOT = { is_same_species = prevprev }
+						species_has_happiness_with_owner = root.owner
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = root.owner type = citizenship_full }
+							has_citizenship_type = { country = root.owner type = citizenship_limited }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
+							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
+						}
+						root = {
+							count_owned_pop = {
+								limit = { is_same_species = prev }
+								count > 4
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_xeno_clashes.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Interspecies Marriage
+	id = dpe_init.1009
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		
+		has_faction = xenoist
+		
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = cc_has_had_interspecies_marriage
+		}
+		
+		pop_percentage = {
+			percentage > 0.02
+			limit = {
+				NOR = {
+					is_enslaved = yes
+					is_being_purged = yes
+				}
+				has_pop_flag = cc_literally_xenophile_manifested
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = cc_events_mod.7 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Prominent Interspecies Marriage
+	id = dpe_init.1010
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		
+		NOT = { has_country_flag = cc_recent_prominent_IM }
+		has_policy_flag = allows_im
+		
+		any_owned_species = {
+			NOT = { is_same_species = root }
+			species_has_happiness_with_owner = root
+			OR = {
+				has_citizenship_type = { country = root type = citizenship_full }
+				has_citizenship_type = { country = root type = citizenship_limited }
+				has_citizenship_type = { country = root type = citizenship_caste_system }
+				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+			}
+		}
+		any_owned_leader = {
+			NOR = {
+				is_same_value = root.ruler
+				leader_of_faction = supremacist
+				leader_of_faction = isolationist
+				has_leader_flag = cc_married
+			}
+			is_same_species = root
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_events_mod.16 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Xenophobic Comments
+	id = dpe_init.1011
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		has_faction = xenoist
+		
+		has_country_flag = cc_eventperf_has_minority
+		
+		NOR = {
+			has_country_flag = recent_xenophobic_comments
+			has_ethic = ethic_gestalt_consciousness
+			has_ethic = ethic_fanatic_xenophile
+		}
+		
+		exists = ruler
+		NOT = { ruler = { leader_of_faction = xenoist } }
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = cc_events_mod.1009 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Corruption Scandal
+	id = dpe_init.1012
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = dpe_recent_corruption_scandal
+		}
+		is_at_war = no
+
+		OR = {
+			has_monthly_income = { resource = minerals value > 250 }
+			has_monthly_income = { resource = energy value > 250 }
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_scandal.2002 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Military Coup
+	id = dpe_init.1013
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_militarist = yes
+		}
+		is_at_war = no
+		has_faction = imperialist
+		OR = {
+			is_pacifist = yes
+			any_pop_faction = {
+				is_pop_faction_type = imperialist
+				faction_approval < @cc_faction_danger_number
+			}
+		}
+		NOT = {
+			any_country = {
+				OR = {
+					is_hostile_to = root
+					is_rival = root
+					is_domineering_to = root
+				}
+				relative_power = {
+					who = root
+					value = overwhelming
+					category = fleet
+				}
+			}
+		}
+		used_naval_capacity_percent > 1
+
+		exists = ruler
+
+		any_owned_leader = {
+			leader_of_faction = totalitarian
+			NOT = {
+				is_same_value = root.ruler
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = dpe_conspiracy.1001 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Militarists Hijack
+	id = dpe_init.1014
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_country_flag = dpe_recent_militarists_want_war
+			has_modifier = dpe_indemnity_paid
+		}
+		is_at_war = no
+		is_subject = no
+		years_of_peace = {
+			value > 10
+			delay = 20
+		}
+		OR = {
+			is_militarist = yes
+			AND = {
+				has_faction = imperialist
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.22
+				}
+			}
+		}
+		has_federation = no
+		
+		is_ai = yes
+		
+		NOT = {
+			any_country = {
+				OR = {
+					is_country_type = extradimensional 
+					is_country_type = extradimensional_2
+					is_country_type = extradimensional_3
+					is_country_type = ai_empire
+					is_country_type = swarm
+				}
+			}
+		}
+		
+		any_relation = {
+			is_ai = no
+			NOR = {
+				has_country_flag = dpe_recent_militarists_incident
+				has_modifier = dpe_indemnity_receive
+			}
+			has_federation = no
+			has_policy_flag = unrestricted_wars
+
+			root = {
+				OR = {
+					is_rival = prev
+					is_hostile_to = prev
+					is_domineering_to = prev
+				}
+				NOT = { has_truce = prev }
+			}
+			any_owned_planet = {
+				is_neighbor_of = root
+			}
+			NOT = {
+				relative_power = {
+					who = root
+					category = fleet
+					value > equivalent
+				}
+			}
+			NOT = {
+				count_potential_war_participants = {
+					attacker = root
+					defender = this
+					side = this
+					limit = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value > equivalent
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = dpe_diplo.5005 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Runaway Scientist
+	id = dpe_init.1015
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = fe_xenophile_asked_pop
+		NOR = {
+			has_country_flag = dpe_has_had_escaped_fe_pop
+			has_ascension_perk = ap_synthetic_evolution
+			has_ethic = ethic_gestalt_consciousness
+			end_game_years_passed > 0
+		}
+
+		any_neighbor_country = {
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_xenophile
+
+			any_owned_planet = {
+				has_planet_flag = fe_the_preserve
+				any_owned_pop = { is_same_species = root }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_fe.20 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Leader Debates
+	id = dpe_init.1016
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		OR = {
+			is_democracy = yes
+			has_authority = auth_oligarchic
+		}
+		NOT = { has_country_flag = dpe_recent_ruler_debate }
+		exists = ruler
+		any_pop_faction = {
+			is_a_vanilla_faction = yes
+			exists = leader
+			leader = { not = { is_same_value = root.ruler } }
+			faction_approval < 0.4
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = dpe_smallpos_events.3 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Talent Uncovered
+	id = dpe_init.1017
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = dpe_recent_talent_leader
+		}
+
+		any_owned_planet = {
+			NOT = { has_planet_flag = dpe_recent_talent_planet }
+			controller = { is_same_value = root }
+			any_owned_species = {
+				species_has_happiness_with_owner = root
+				OR = {
+					has_citizenship_type = { country = root type = citizenship_full }
+					has_citizenship_type = { country = root type = citizenship_limited }
+					has_citizenship_type = { country = root type = citizenship_caste_system }
+					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = dpe_smallpos_events.10 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Dissent
+	id = dpe_init.1018
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 30
+		is_country_type = default
+		num_owned_planets > 1
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = dpe_recent_dissent_planet
+		}
+
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = dpe_unity_planet
+				has_planet_flag = dpe_dissent_planet
+			}
+			count_owned_pop = {
+				limit = {
+					pop_has_happiness = yes
+					has_citizenship_rights = yes
+				}
+				count > 18
+			}
+			pop_percentage = {
+				limit = { happiness < 0.75 }
+				percentage > 0.75
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			random_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = dpe_unity_planet
+						has_planet_flag = dpe_dissent_planet
+					}
+					count_owned_pop = {
+						limit = {
+							pop_has_happiness = yes
+							has_citizenship_rights = yes
+						}
+						count > 18
+					}
+					pop_percentage = {
+						limit = { happiness < 0.75 }
+						percentage > 0.75
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.20 days = 0 random = 359 }
+			}
+		}
+	}
+}
+
+country_event = { # Positive Energy
+	id = dpe_init.1019
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 15
+		is_country_type = default
+		NOT = { has_country_flag = dpe_recent_posenergy_planet }
+
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = dpe_posenergy_planet
+				has_planet_flag = dpe_negenergy_planet
+			}
+
+			num_pops > 20
+			habitable_structure = no
+			
+			if = {
+				limit = { years_passed < 50 }
+				planet_resource_compare = { type = produces resource = energy value >= 20 }
+			}
+			else_if = {
+				limit = { years_passed < 75 }
+				planet_resource_compare = { type = produces resource = energy value >= 30 }
+			}
+			else = {
+				planet_resource_compare = { type = produces resource = energy value >= 40 }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			random_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = dpe_posenergy_planet
+						has_planet_flag = dpe_negenergy_planet
+					}
+
+					num_pops > 20
+					habitable_structure = no
+					
+					if = {
+						limit = { years_passed < 50 }
+						planet_resource_compare = { type = produces resource = energy value >= 20 }
+					}
+					else_if = {
+						limit = { years_passed < 75 }
+						planet_resource_compare = { type = produces resource = energy value >= 30 }
+					}
+					else = {
+						planet_resource_compare = { type = produces resource = energy value >= 40 }
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.21 days = 0 random = 359 }
+			}
+		}
+	}
+}
+
+country_event = { # Negative Energy
+	id = dpe_init.1020
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 30
+		is_country_type = default
+		num_owned_planets > 1
+		NOT = { has_country_flag = dpe_recent_negenergy_planet }
+
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = dpe_posenergy_planet
+				has_planet_flag = dpe_negenergy_planet
+			}
+
+			num_pops > 20
+			habitable_structure = no
+			
+			if = {
+				limit = { years_passed < 50 }
+				planet_resource_compare = { type = produces resource = energy value >= 20 }
+			}
+			else_if = {
+				limit = { years_passed < 75 }
+				planet_resource_compare = { type = produces resource = energy value >= 30 }
+			}
+			else = {
+				planet_resource_compare = { type = produces resource = energy value >= 40 }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			random_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = dpe_posenergy_planet
+						has_planet_flag = dpe_negenergy_planet
+					}
+
+					num_pops > 20
+					habitable_structure = no
+					
+					if = {
+						limit = { years_passed < 50 }
+						planet_resource_compare = { type = produces resource = energy value >= 20 }
+					}
+					else_if = {
+						limit = { years_passed < 75 }
+						planet_resource_compare = { type = produces resource = energy value >= 30 }
+					}
+					else = {
+						planet_resource_compare = { type = produces resource = energy value >= 40 }
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.22 days = 0 random = 359 }
+			}
+		}
+	}
+}
+
+country_event = { # Positive Minerals
+	id = dpe_init.1021
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 15
+		is_country_type = default
+		NOT = { has_country_flag = dpe_recent_posminerals_planet }
+
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = dpe_posminerals_planet
+				has_planet_flag = dpe_negminerals_planet
+			}
+
+			num_pops > 20
+			habitable_structure = no
+			
+			if = {
+				limit = { years_passed < 50 }
+				planet_resource_compare = { type = produces resource = minerals value >= 20 }
+			}
+			else_if = {
+				limit = { years_passed < 75 }
+				planet_resource_compare = { type = produces resource = minerals value >= 30 }
+			}
+			else = {
+				planet_resource_compare = { type = produces resource = minerals value >= 40 }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			random_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = dpe_posminerals_planet
+						has_planet_flag = dpe_negminerals_planet
+					}
+
+					num_pops > 20
+					habitable_structure = no
+					
+					if = {
+						limit = { years_passed < 50 }
+						planet_resource_compare = { type = produces resource = minerals value >= 20 }
+					}
+					else_if = {
+						limit = { years_passed < 75 }
+						planet_resource_compare = { type = produces resource = minerals value >= 30 }
+					}
+					else = {
+						planet_resource_compare = { type = produces resource = minerals value >= 40 }
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.23 days = 0 random = 359 }
+			}
+		}
+	}
+}
+
+country_event = { # Negative Minerals
+	id = dpe_init.1022
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 30
+		is_country_type = default
+		num_owned_planets > 1
+		NOT = { has_country_flag = dpe_recent_negminerals_planet }
+
+		any_owned_planet = {
+			NOR = {
+				has_planet_flag = dpe_posminerals_planet
+				has_planet_flag = dpe_negminerals_planet
+			}
+
+			num_pops > 20
+			habitable_structure = no
+			
+			if = {
+				limit = { years_passed < 50 }
+				planet_resource_compare = { type = produces resource = minerals value >= 20 }
+			}
+			else_if = {
+				limit = { years_passed < 75 }
+				planet_resource_compare = { type = produces resource = minerals value >= 30 }
+			}
+			else = {
+				planet_resource_compare = { type = produces resource = minerals value >= 40 }
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			random_owned_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = dpe_posminerals_planet
+						has_planet_flag = dpe_negminerals_planet
+					}
+
+					num_pops > 20
+					habitable_structure = no
+					
+					if = {
+						limit = { years_passed < 50 }
+						planet_resource_compare = { type = produces resource = minerals value >= 20 }
+					}
+					else_if = {
+						limit = { years_passed < 75 }
+						planet_resource_compare = { type = produces resource = minerals value >= 30 }
+					}
+					else = {
+						planet_resource_compare = { type = produces resource = minerals value >= 40 }
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.24 days = 0 random = 359 }
+			}
+		}
+	}
+}
+
+country_event = { # Royal Marriage
+	id = dpe_init.1023
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_imperial = yes
+		is_xenophile = yes
+		has_faction = xenoist
+		exists = ruler #should always be true, but just in case
+		ruler = {
+			OR = { #To stop confusing localisation with fungoids.
+				gender = male
+				gender = female
+			}
+		}
+
+		NOT = { has_country_flag = never_do_dpe_royal_marriages }
+		NOT = { has_country_flag = recent_royal_marriage_timer } #it's weird when such events happen twice in quick succession
+
+		any_relation = {
+			is_country_type = default
+			has_communications = root
+			OR = {
+				has_defensive_pact = root
+				is_in_federation_with = root
+			}
+			is_imperial = yes
+			NOR = {
+				has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+				reverse_has_relation_flag = {
+					who = root
+					flag = initiated_royal_marriage_with_them
+				}
+				has_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+				}
+				reverse_has_relation_flag = {
+					who = root
+					flag = rejected_royal_marriage
+				}
+			}
+			exists = ruler
+			ruler = {
+				OR = {
+					gender = male
+					gender = female
+				}
+				NOT = { is_same_species = root }
+			}
+			NOT = { is_same_species = root }
+			NOT = { has_country_flag = never_do_dpe_royal_marriages }
+			NOT = { has_country_flag = recent_royal_marriage_timer }
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = dpe_royal_marriages_events.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Anti-Luddite event
+	id = dpe_init.1024
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		has_policy_flag = robots_allowed
+		NOR = {
+			is_synthetic_empire = yes
+			is_mechanical_empire = yes
+			has_ethic = ethic_gestalt_consciousness
+			
+			has_country_flag = machine_uprising_originator
+			has_country_flag = cc_preluddite_event
+			has_country_flag = cc_luddite_movement
+			has_country_flag = cc_recent_luddite_movement
+			has_country_flag = cc_antiluddite_event
+		}
+		has_faction = technologist
+		
+		any_owned_pop = { is_non_sapient_robot = yes }
+		NOT = {
+			any_owned_pop = {
+				is_robot_pop = yes
+				is_non_sapient_robot = no
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = cc_luddite.30 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Spiritualist Mission
+	id = dpe_init.1025
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		years_passed > 20
+		
+		NOT = { has_country_flag = dpe_recent_spiritualist_mission }
+		
+		OR = {
+			is_spiritualist = yes
+			count_pop_faction = {
+				limit = {
+					is_pop_faction_type = traditionalist
+					support > 0.15
+					faction_approval > 0.6
+				}
+				count = 1
+			}
+		}
+		is_materialist = no #just in case
+		
+		any_neighbor_country = {
+			is_country_type = default
+			has_communications = prev
+			NOR = {
+				is_same_species = prev
+				is_at_war_with = prev
+				has_civic = civic_fanatic_purifiers
+
+				has_defensive_pact = prev
+				is_in_federation_with = prev
+				
+				has_ethic = ethic_gestalt_consciousness
+				is_spiritualist = yes
+				any_pop_faction = {
+					is_pop_faction_type = traditionalist
+					support > 0.2
+				}
+				
+				is_hostile_to = prev
+				is_rival = prev
+				
+				has_country_flag = dpe_recent_spiritualist_mission_received
+				has_relation_flag = {
+					flag = dpe_spiritualist_mission_received
+					who = prev
+				}
+				has_relation_flag = {
+					flag = dpe_spiritualist_mission_received_ever
+					who = prev
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_spiritualist_mission.2 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Government Support Statue
+	id = dpe_init.1026
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 15
+		is_country_type = default
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = dpe_recent_unity_planet
+		}
+
+		any_owned_planet = {
+			planet_stability > 65
+			NOR = {
+				has_planet_flag = dpe_unity_planet
+				has_planet_flag = dpe_dissent_planet
+			}
+			count_owned_pop = {
+				limit = { pop_has_happiness = yes }
+				count > 18
+			}
+			pop_percentage = {
+				limit = { happiness > 0.55 }
+				percentage > 0.75
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_smallpos_events.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Charity Scandal
+	id = dpe_init.1027
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		is_materialist = yes
+		is_authoritarian = yes
+		NOR = {
+			has_civic = civic_shared_burden
+			has_country_flag = dpe_recent_charity_scandal
+		}
+		exists = ruler
+		ruler = { NOT = { leader_of_faction = totalitarian } }
+
+		count_pop_faction = {
+			limit = {
+				is_pop_faction_type = progressive
+				support > 0.1
+				faction_approval > 0.50
+			}
+			count = 0
+		}
+
+		any_owned_pop = {
+			is_enslaved = no
+			is_being_purged = no
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOR = {
+				has_living_standard = {
+					type = living_standard_academic_privilege
+				}
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = dpe_scandal.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Belief Scandal
+	id = dpe_init.1028
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_spiritualist = yes
+		NOR = {
+			has_tradition = tr_psionics_psionic_assimilation
+			has_country_flag = dpe_recent_disbelief_scandal
+			has_civic = civic_imperial_cult
+			has_modifier = cc_ruler_cult
+		}
+		exists = ruler
+		ruler = {
+			NOR = {
+				leader_of_faction = traditionalist
+				has_leader_flag = mem_neochadanus
+			}
+		}
+		
+		has_faction = traditionalist
+		has_faction = technologist
+		
+		any_pop_faction = {
+			is_pop_faction_type = traditionalist
+			support > 0.3
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = dpe_scandal.299 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Ex-Slave Scandal
+	id = dpe_init.1029
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		years_passed > 25
+		allows_slavery = yes
+		
+		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
+		
+		is_imperial = no
+		NOT = { has_tradition = tr_psionics_psionic_assimilation }
+
+		exists = ruler
+		
+		any_owned_pop = {
+			is_same_species = root.ruler
+			is_enslaved = yes
+		}
+
+		ruler = { NOT = { has_ruler_trait = leader_trait_ruler_chosen } }
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_scandal.10 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Cultist Scandal
+	id = dpe_init.1030
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		is_materialist = yes
+		has_faction = traditionalist
+		NOR = {
+			has_country_flag = dpe_recent_cultist_scandal
+			has_modifier = cc_ruler_cult
+		}
+		
+		exists = ruler
+		ruler = { NOT = { leader_of_faction = technologist } }
+	}
+	
+	immediate = {
+		random = {
+			chance = 5
+			country_event = { id = dpe_scandal.16 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Extra Emancipation Start Event
+	id = dpe_init.1031
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		allows_slavery = yes
+		NOR = {
+			has_country_flag = cc_emancipation_movement
+			has_country_flag = cc_recent_emancipation_movement
+			has_country_flag = cc_recent_preemancipation_event
+		}
+		
+		OR = {
+			any_relation = { has_country_flag = slave_rebels }
+			any_neighbor_country = { has_ethic = ethic_fanatic_egalitarian }
+		}
+		
+		any_enslaved_species = { species_has_happiness_with_owner = root }
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = cc_emancipation.2000 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Extra Ludditism Start Event
+	id = dpe_init.1032
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		has_policy_flag = robots_allowed
+		NOR = {
+			is_synthetic_empire = yes
+			is_mechanical_empire = yes
+			has_ethic = ethic_gestalt_consciousness
+			
+			has_country_flag = machine_uprising_originator
+			has_country_flag = cc_preluddite_event
+			has_country_flag = cc_luddite_movement
+			has_country_flag = cc_recent_luddite_movement
+			has_country_flag = cc_antiluddite_event
+		}
+		OR = {
+			any_neighbor_country = { has_valid_civic = civic_machine_terminator }
+			any_relation = { has_country_flag = machine_uprising_country }
+		}
+		
+		any_owned_pop = { is_non_sapient_robot = yes }
+	}
+	
+	immediate = {
+		random = {
+			chance = 1
+			country_event = { id = cc_luddite.2000 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Ruler Terminally Ill
+	id = dpe_init.1033
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOR = {
+			has_country_flag = dpe_has_had_terminally_ill_ruler
+			end_game_years_passed >= 0
+		}
+		is_imp_or_dict = yes
+		NOR = {
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_gestalt_consciousness
+			has_tradition = tr_psionics_psionic_assimilation
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_synthetic_evolution
+			has_ascension_perk = ap_evolutionary_mastery
+		}
+		exists = ruler
+		ruler = {
+			NOR = {
+				has_ruler_trait = leader_trait_ruler_chosen
+				has_ruler_trait = leader_trait_ruler_cyborg
+				has_leader_flag = mem_neochadanus
+			}
+		}
+		any_neighbor_country = {
+			is_country_type = fallen_empire
+			OR = { #has to be a Vanilla FE 
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_xenophobe
+				has_authority = auth_machine_intelligence
+			}
+		}
+		NOT = { any_neighbor_country = { is_country_type = awakened_fallen_empire } }
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_fe.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Egalitarian Mission
+	id = dpe_init.1034
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		NOR = {
+			has_country_flag = dpe_has_recent_egalitarian_mission
+			has_country_flag = dpe_provided_with_egalitarian_mission
+			has_ethic = ethic_gestalt_consciousness
+			is_democracy = yes
+			is_egalitarian = yes
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		has_faction = progressive
+
+		any_relation = {
+			is_country_type = default
+			
+			is_democracy = yes
+			has_faction = progressive
+			# is_egalitarian = yes
+			OR = {
+				is_in_federation_with = root
+				has_defensive_pact = root
+				has_non_aggression_pact = root
+				is_overlord_to = root
+			}
+			NOR = {
+				has_country_flag = dpe_has_recent_egalitarian_mission
+				has_country_flag = dpe_has_provided_egalitarian_mission@root
+				has_relation_flag = {
+					flag = dpe_asked_for_egalitarian_mission
+					who = root
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 2
+			country_event = { id = dpe_egalitarian_missions.1 days = 0 random = 359 }
+		}
+	}
+}
+
+country_event = { # Militarist Protests
+	id = dpe_init.1035
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = dpe_recent_militarists_want_war }
+		is_at_war = no
+		is_subject = no
+		years_of_peace = {
+			value > 10
+			delay = 20
+		}
+		OR = {
+			is_militarist = yes
+			AND = {
+				has_faction = imperialist
+				any_pop_faction = {
+					is_pop_faction_type = imperialist
+					support > 0.22
+				}
+			}
+		}
+		has_federation = no
+		
+		NOT = {
+			any_country = {
+				OR = {
+					is_country_type = extradimensional 
+					is_country_type = extradimensional_2
+					is_country_type = extradimensional_3
+					is_country_type = ai_empire
+					is_country_type = swarm
+				}
+			}
+		}
+		
+		any_relation = {
+			root = {
+				OR = {
+					is_rival = prev
+					is_hostile_to = prev
+					is_domineering_to = prev
+				}
+				NOT = { has_truce = prev }
+			}
+			any_owned_planet = { is_neighbor_of = root }
+			NOT = {
+				relative_power = {
+					who = root
+					category = fleet
+					value > equivalent
+				}
+			}
+			NOT = {
+				count_potential_war_participants = {
+					attacker = root
+					defender = this
+					side = this
+					limit = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value > equivalent
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			country_event = { id = dpe_diplo.1001 days = 0 random = 359 }
+		}
+	}
+}
+
+#############

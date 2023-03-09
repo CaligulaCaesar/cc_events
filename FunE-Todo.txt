@@ -1,7 +1,45 @@
 
 Cleanup = {
-	- Change all "has_authority = xxx" into "is_xxx = yes/no" 		- DONE
-	- Convert all "mean_time_to_happen" into "on_actions"?			- Haven't Started
+	- Change all things that can be to scripted triggers	 	- DONE
+	- Convert all "mean_time_to_happen" into "on_actions"		- IN PROGRESS
+	- Review Primitive Events after First Contact 				- NOT STARTED
+	- Review Faction Events and CW interactions 				- NOT STARTED
+	- 
+}
+
+Mean_time_to_happen events = {
+	- Blackmail
+	- Ludditism Crisis
+	- Peace Protests
+	- Materialists Patent
+	- Thought Police
+	- Xeno Clashes
+	- Interspecies Marriage
+	- Prominent Interspecies Marriage
+	- Ruler Xenophobic Comments
+	- Ruler Corruption Scandal
+	- Military Coup
+	- Militarist Protests
+	- Militarists Hijack
+	- Runaway Scientist
+	- Leader Debates
+	- Talent Uncovered
+	- Positive Energy
+	- Negative Energy
+	- Positive Minerals
+	- Negative Minerals
+	- Dissent
+	- Ruler Sedition Scandal = {
+		- Damn me, unsure exactly which event this was.
+	}
+	- Royal Marriage = {
+		- Alter to make not only xenophile, and possible w/ same species
+		- Currently requires Def. Pact or Fed = {
+			- Make it such that instead/also, this creates a Defensive Pact or Federation.
+		}
+		- With new tradable actions, might be worth a look at implementation there
+	}
+
 }
 
 Organization = {
@@ -20,6 +58,12 @@ Organization = {
 			- Scientists wants to do illegal/unethical research
 			- Different Ruler Species
 			- Collaborators
+			- Military = {
+				- Exercises in subject space
+				- Joint exercises
+					- Subject
+					- Ally
+			}
 		}
 
 		Authorities = {
@@ -35,7 +79,11 @@ Organization = {
 				}
 				- Coups against immortal leaders
 				- Violent Xenophobic backlash to xeno leader if phobic
-				- Royal Family Events
+				- Royal Family Events = {
+					- Weddings to other country's rulers = {
+						- Tradeable, functions as lifelong defense pact and opinion boost 
+					}
+				}
 				- Governor rivalries = {
 					- Factional, 
 				}
@@ -52,7 +100,6 @@ Organization = {
 			Democratic = {
 				- Leader wins 3+ elections = {
 					- Term Limits
-						- DPE?
 					- Authoritarian Reform = {
 						- Monarchical Reform = {
 							- Via unsolved pressures, corruption
@@ -157,6 +204,7 @@ Situations = {
 			- Spiritual Schism = {
 				- Schisms within the established religion
 			}
+			- If join spritiualist war in heaven Fallen Empire and lose, protests, potential coup/changing of government
 		}
 	}
 
