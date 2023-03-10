@@ -145,72 +145,6 @@ country_event = { #test event, use to reset flags so the chain can run again
 	}
 }
 
-country_event = { #test event, use to make the other country xenophobic
-	id = dpe_royal_marriages_events.1001
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		random_relation = {
-			limit = {
-				is_country_type = default
-				has_communications = root
-				OR = {
-					has_defensive_pact = root
-					is_in_federation_with = root
-				}
-				is_imperial = yes
-				NOR = {
-					has_relation_flag = {
-						who = root
-						flag = initiated_royal_marriage_with_them
-					}
-					reverse_has_relation_flag = {
-						who = root
-						flag = initiated_royal_marriage_with_them
-					}
-					has_relation_flag = {
-						who = root
-						flag = rejected_royal_marriage
-					}
-					reverse_has_relation_flag = {
-						who = root
-						flag = rejected_royal_marriage
-					}
-				}
-				exists = ruler
-				ruler = {
-					OR = {
-						gender = male
-						gender = female
-					}
-					NOT = { is_same_species = root }
-				}
-				NOT = { is_same_species = root }
-				NOT = { has_country_flag = never_do_dpe_royal_marriages }
-				NOT = { has_country_flag = recent_royal_marriage_timer }
-			}
-			shift_ethic = ethic_xenophobe
-			while = {
-				limit = {
-					pop_percentage = {
-						percentage < 0.25
-						limit = { has_ethic = ethic_xenophobe }
-					}
-				}
-				random_owned_pop = {
-					pop_change_ethic = ethic_xenophobe
-				}
-			}
-			add_opinion_modifier = { #make sure the alliance doesn't break :)
-				who = root
-				modifier = opinion_enlightened_us
-			}
-		}
-	}
-}
-
-
 
 #A few things to note:
 # - I used the FROM scope basically all the time so that I didn't have to remember which event target was which and stuff. But I have commented before each event which scope it is in
@@ -300,8 +234,8 @@ country_event = {
 
 	trigger = {
 		is_imperial = yes
-		is_xenophile = yes
-		has_faction = xenoist
+		# is_xenophile = yes
+		# has_faction = xenoist
 		exists = ruler #should always be true, but just in case
 		ruler = {
 			OR = { #To stop confusing localisation with fungoids.
@@ -347,7 +281,14 @@ country_event = {
 				}
 				NOT = { is_same_species = root }
 			}
-			NOT = { is_same_species = root }
+			OR = {
+				AND = {
+					is_xenophobe = no
+					root = { is_xenophobe = no }
+				}
+				is_same_species = root
+			}
+			# NOT = { is_same_species = root }
 			NOT = { has_country_flag = never_do_dpe_royal_marriages }
 			NOT = { has_country_flag = recent_royal_marriage_timer }
 		}
@@ -2571,9 +2512,9 @@ country_event = {
 		}
 	}
 	
-	# mean_time_to_happen = {
-	# 	years = 20
-	# }
+	mean_time_to_happen = {
+		years = 20
+	}
 
 	option = {
 		name = dpe_royal_marriages_events.9011.A
@@ -2613,9 +2554,9 @@ country_event = {
 	}
 	picture = GFX_evt_news_room
 
-	# mean_time_to_happen = {
-	# 	months = 2 #suitably short but not too short as don't want to affect performance
-	# }
+	mean_time_to_happen = {
+		months = 2 #suitably short but not too short as don't want to affect performance
+	}
 
 	trigger = {
 		any_country = {
@@ -2751,9 +2692,9 @@ country_event = {
 	desc = dpe_royal_marriages_events.904.desc
 	picture = GFX_evt_arguing_senate
 	
-	# mean_time_to_happen = {
-	# 	months = 2 #suitably short but not too short as don't want to affect performance
-	# }
+	mean_time_to_happen = {
+		months = 2 #suitably short but not too short as don't want to affect performance
+	}
 
 	trigger = {
 		is_imperial = no
