@@ -380,8 +380,6 @@ country_event = { # Xeno Clashes
 				OR = {
 					has_citizenship_type = { country = root.owner type = citizenship_full }
 					has_citizenship_type = { country = root.owner type = citizenship_limited }
-					has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-					has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 				}
 				root = {
 					count_owned_pop = {
@@ -395,8 +393,6 @@ country_event = { # Xeno Clashes
 						OR = {
 							has_citizenship_type = { country = root.owner type = citizenship_full }
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 						}
 						root = {
 							count_owned_pop = {
@@ -470,8 +466,6 @@ country_event = { # Prominent Interspecies Marriage
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
-				has_citizenship_type = { country = root type = citizenship_caste_system }
-				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 			}
 		}
 		any_owned_leader = {
@@ -781,8 +775,6 @@ country_event = { # Talent Uncovered
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
-					has_citizenship_type = { country = root type = citizenship_caste_system }
-					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 				}
 			}
 		}
