@@ -7,6 +7,8 @@ country_event = { # This event has no localisation. What is it?
 	desc = dpe_contraband_event.1.desc
 	
 	picture = GFX_evt_smugglers_in_bar
+
+	is_triggered_only = yes
 	
 	# mean_time_to_happen = { years = 80 }
 	
@@ -77,7 +79,7 @@ country_event = { # This event has no localisation. What is it?
 	}
 	
 	option = {
-		name = dpe_contraband_event.1100.A
+		name = dpe_contraband_event.1.A
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_crackdown
@@ -134,9 +136,9 @@ country_event = { # This event has no localisation. What is it?
 	}
 	
 	option = {
-		name = dpe_contraband_event.1100.B
+		name = dpe_contraband_event.1.B
 		
-		custom_tooltip = dpe_contraband_event.1100.B.tooltip
+		custom_tooltip = dpe_contraband_event.1.B.tooltip
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_tolerate
@@ -163,9 +165,9 @@ country_event = { # This event has no localisation. What is it?
 	}
 	
 	option = {
-		name = dpe_contraband_event.1100.C
+		name = dpe_contraband_event.1.C
 		
-		custom_tooltip = dpe_contraband_event.1100.C.tooltip
+		custom_tooltip = dpe_contraband_event.1.C.tooltip
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_extort
