@@ -67,10 +67,7 @@ cc_thought_police = {
 			factor = 0.75
 			any_relation = {
 				has_defensive_pact = root
-				OR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				is_egalitarian = yes
 			}
 		}
 	}

@@ -1,0 +1,221 @@
+
+Cleanup = {
+	- Change all things that can be to scripted triggers	 	- DONE
+	- Convert all "mean_time_to_happen" into "on_actions"		- MOSTLY DONE
+	- Review Primitive Events after First Contact 				- NOT STARTED
+	- Review Faction Events and CW interactions 				- NOT STARTED
+}
+
+Events = {
+	- Royal Marriage = {
+		- Alter to make not only xenophile, and possible w/ same species
+		- Currently requires Def. Pact or Fed = {
+			- Make it such that instead/also, this creates a Defensive Pact or Federation.
+		}
+		- With new tradable actions, might be worth a look at implementation there
+	}
+
+}
+
+Organization = {
+
+	Events = {
+		All = {
+			- Pandemics					# Mostly Complete, dont know if I want to implement
+			- Leader rivalries - {
+				- Admirals - On lost battle together
+			}
+			- Assassinations (rare without mitigating circumstances)
+			- Defections (rare without mitigating circumstances) = {
+				- Leaders of parties that are small and/or never win elections
+				- Being at war, leaders have higher chance to defect
+			}
+			- Scientists wants to do illegal/unethical research
+			- Different Ruler Species
+			- Collaborators
+			- Military = {
+				- Exercises in subject space
+				- Joint exercises
+					- Subject
+					- Ally
+			}
+		}
+
+		Authorities = {
+
+			Imperial/Dictatorial = {
+				- Authority Reform = {
+					- Democratic reform = {
+						- Triggered through pressures
+					}
+					- Oligarchic reform = {
+						- Triggered by ambitious leaders, feudal, aristocratic, etc.
+					}
+				}
+				- Coups against immortal leaders
+				- Violent Xenophobic backlash to xeno leader if phobic
+				- Royal Family Events = {
+					- Weddings to other country's rulers = {
+						- Tradeable, functions as lifelong defense pact and opinion boost 
+					}
+				}
+				- Governor rivalries = {
+					- Factional, 
+				}
+
+				- Important Characters & Families: = {
+					- Dynasties = {
+						- Events that create siblings for ruler; create potential succession issues
+						- Events that create children of politicians in Democratic states.
+					}
+					- Feudal/Aristocratic family Governorships
+				}
+			}
+
+			Democratic = {
+				- Leader wins 3+ elections = {
+					- Term Limits
+					- Authoritarian Reform = {
+						- Monarchical Reform = {
+							- Via unsolved pressures, corruption
+						}
+						- Dictatorial Reform = {
+							- Via unsolved pressures, corruption
+						}
+						- Oligarchic Reform = {
+							- Via ambitious leaders
+						}
+					}
+				}
+				- Political Family Events
+				- Election Mandates = {
+					- Nationalist (Militarist/Xenopbobe) leader of Xenophobes promises to invade neighboring country.
+					- Pacifist leader promises to end war, stop rivarly, hostilities
+					- Xenophilic leader promises to engage in trade/migration deals
+				}
+			}
+
+			Corporate = {
+				- Authority Reform = {
+					- Democratic reform
+					- Monarchical Reform
+					- Dictatorial Reform
+					- Oligarchic reform
+				}
+				- Corporate Family Events
+			}
+		}
+
+		Ethics = {
+
+			Spiritualist = {
+				- Religious Schism
+			}
+		}
+	}
+}
+
+Situations = {
+
+	Multi-Empire = {
+		- Outcomes can become situations for other countries. Ex - {
+			- Government reform = {
+				- Maybe neighbors form a coalition with other neighbors to revert a democracy back to a monarchy, or vice versa.
+			}
+		}
+	}
+
+	Empire-Wide = {
+		- Imperial: = {
+			- Democratic reform
+			- Assassinations
+			- Successions crises = {
+				- Dying without an heir
+			}
+			- Feudal = {
+				- War between governors = {
+					- Overlord able to join a side, or to let them settle it themselves
+					- Mechanics: = {
+						- Warring governor sectors temporarily become vassals of your nation whom are at total war with each other.
+						- War goal is to place a member of their family on the seat of the other governorship. 
+					}
+				}
+			}
+		}
+		- Democratic = {
+			- Authoritarian reform
+			- Assassinations
+			- Faction leaders have a high chance of being replaced after each unsuccessful election.
+			- Disputed elections = {
+				- The longer a country goes without a disputed election, the less likely a disputed election is to trigger Civil War pressure.
+			}
+			- Election Mandates to resolve situations (!!!) = {
+				- This would allow for much more dynamic-feeling elections, without mandates ever getting stale. Additionally, losing an election could be a pressure point towards a civil war.
+			}
+		}
+		- Food shortages = {
+			- Could planet/sectors that are exporting food to revolt such that they are not exporting the food that they need, further exacerbating your crisis.
+		}
+	}
+
+	Sector/Planet: = {
+		- High Crime/Instability 
+		- Slavery
+		- Religious
+		- Ethic
+		- Policy protests
+		# - Pandemic = {
+		# 	- Affected by pops = {
+		# 		- Give some pops on the planet a flag, and if any flagged pops leave they can infect other planets.
+		# 		- can_resettle_planet - game_rules
+		# 	}
+		# }- Desire to conquer neighbor
+		}
+	}
+
+	Ethics = {
+
+		- Spiritualist = {
+			- Spiritual Schism = {
+				- Schisms within the established religion
+			}
+			- If join spritiualist war in heaven Fallen Empire and lose, protests, potential coup/changing of government
+		}
+	}
+
+	Admiral: = {
+		- The admiral will progressively offer to pay for more and more the the upkeep of their fleet personally, in exchange for favors and other concessions from the state. This will save you resources (potentially a ton), but comes with the increased threat that the fleet will by loyal to the admiral and that they may rebel.
+		- Rival Admirals: = {
+			- Two admirals that, when in combat together, actually lower the damage of both of their fleets.
+			- This can occur: = {
+				- After both admirals are in combat together and lose
+				- With faction leader admirals
+				- Potentially randomly = {
+					- More common in imperial/feudal/aristocratic societies
+				}
+			}
+		}
+	}
+
+	Governor: = {
+		- 
+	}
+
+	General: = {
+		-  
+	}
+
+	Scientist: = {
+		- Secretly giving research to an enemy
+		- Wants to do dangerous/illegal research = {
+			- You can let them
+			- You can deny them = {
+				- They might do it behind your back, try to get funding from another empire more sympathetic to their research
+			}
+		}
+	}
+
+	Subjects = {
+		- 
+	}
+}

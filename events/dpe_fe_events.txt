@@ -12,20 +12,19 @@ country_event = {
 	desc = dpe_fe.1.desc
 	picture = GFX_evt_cc_throne_room
 	
-	mean_time_to_happen = { years = 120 }
+	# mean_time_to_happen = { years = 120 }
 	
 	trigger = {
 		is_country_type = default
-		NOT = { has_country_flag = dpe_has_had_terminally_ill_ruler }
-		NOT = { end_game_years_passed >= 0 }
-		OR = {
-			has_authority = auth_imperial
-			has_authority = auth_dictatorial
+		NOR = {
+			has_country_flag = dpe_has_had_terminally_ill_ruler
+			end_game_years_passed >= 0
 		}
+		is_imp_or_dict = yes
 		NOR = {
 			has_ethic = ethic_fanatic_xenophobe
 			has_ethic = ethic_gestalt_consciousness
-			has_ascension_perk = ap_transcendence
+			has_tradition = tr_psionics_psionic_assimilation
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_ascension_perk = ap_synthetic_evolution
 			has_ascension_perk = ap_evolutionary_mastery
@@ -606,28 +605,19 @@ country_event = {
 				if = {
 					limit = { has_ethic = ethic_fanatic_xenophile }
 					root = {
-						NOR = {
-							has_ethic = ethic_xenophile
-							has_ethic = ethic_fanatic_xenophile
-						}
+						is_xenophile = no
 					}
 				}
 				else_if = {
 					limit = { has_ethic = ethic_fanatic_spiritualist }
 					root = {
-						NOR = {
-							has_ethic = ethic_spiritualist
-							has_ethic = ethic_fanatic_spiritualist
-						}
+						is_spiritualist = no
 					}
 				}
 				else_if = {
 					limit = { has_ethic = ethic_fanatic_materialist }
 					root = {
-						NOR = {
-							has_ethic = ethic_materialist
-							has_ethic = ethic_fanatic_materialist
-						}
+						is_materialist = no
 					}
 				}
 			}
@@ -648,10 +638,7 @@ country_event = {
 						has_ethic = ethic_fanatic_xenophile
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_xenophile
-							has_ethic = ethic_fanatic_xenophile
-						}
+						is_xenophile = yes
 					}
 				}
 				else_if = {
@@ -659,10 +646,7 @@ country_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_spiritualist
-							has_ethic = ethic_fanatic_spiritualist
-						}
+						is_spiritualist = yes
 					}
 				}
 				else_if = {
@@ -670,10 +654,7 @@ country_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_materialist
-							has_ethic = ethic_fanatic_materialist
-						}
+						is_materialist = yes
 					}
 				}
 			}
@@ -726,10 +707,7 @@ country_event = {
 						has_ethic = ethic_fanatic_xenophile
 					}
 					root = {
-						NOR = {
-							has_ethic = ethic_xenophile
-							has_ethic = ethic_fanatic_xenophile
-						}
+						is_xenophile = no
 					}
 				}
 				else_if = {
@@ -737,10 +715,7 @@ country_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 					root = {
-						NOR = {
-							has_ethic = ethic_spiritualist
-							has_ethic = ethic_fanatic_spiritualist
-						}
+						is_spiritualist = no
 					}
 				}
 				else_if = {
@@ -748,10 +723,7 @@ country_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 					root = {
-						NOR = {
-							has_ethic = ethic_materialist
-							has_ethic = ethic_fanatic_materialist
-						}
+						is_materialist = no
 					}
 				}
 			}
@@ -793,7 +765,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_spiritualist } }
 			add_modifier = {
 				modifier = dpe_paying_spirFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -801,7 +773,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
 			add_modifier = {
 				modifier = dpe_paying_xenoFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -809,7 +781,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
 			add_modifier = {
 				modifier = dpe_paying_matFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -835,10 +807,7 @@ country_event = {
 						has_ethic = ethic_fanatic_xenophile
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_xenophile
-							has_ethic = ethic_fanatic_xenophile
-						}
+						is_xenophile = yes
 					}
 				}
 				else_if = {
@@ -846,10 +815,7 @@ country_event = {
 						has_ethic = ethic_fanatic_spiritualist
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_spiritualist
-							has_ethic = ethic_fanatic_spiritualist
-						}
+						is_spiritualist = yes
 					}
 				}
 				else_if = {
@@ -857,10 +823,7 @@ country_event = {
 						has_ethic = ethic_fanatic_materialist
 					}
 					root = {
-						OR = {
-							has_ethic = ethic_materialist
-							has_ethic = ethic_fanatic_materialist
-						}
+						is_materialist = yes
 					}
 				}
 			}
@@ -930,7 +893,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_spiritualist } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_spirFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -938,7 +901,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_xenophile } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_xenoFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -946,7 +909,7 @@ country_event = {
 			limit = { event_target:dpe_fe = { has_ethic = ethic_fanatic_materialist } }
 			add_modifier = {
 				modifier = dpe_paying_friendly_matFE
-				days = 1800
+				years = 5
 			}
 		}
 
@@ -1323,8 +1286,8 @@ country_event = {
 			has_country_flag = dpe_has_had_escaped_fe_pop
 			has_ascension_perk = ap_synthetic_evolution
 			has_ethic = ethic_gestalt_consciousness
+			end_game_years_passed > 0
 		}
-		NOT = { end_game_years_passed > 0 }
 
 		any_neighbor_country = {
 			is_country_type = fallen_empire
@@ -1337,7 +1300,7 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = { years = 60 }
+	# mean_time_to_happen = { years = 60 }
 
 	immediate = {
 		set_country_flag = dpe_has_had_escaped_fe_pop

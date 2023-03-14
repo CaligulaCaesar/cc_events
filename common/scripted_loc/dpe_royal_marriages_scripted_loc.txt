@@ -12,13 +12,13 @@ defined_text = { # Country scope
 	}
 	text = {
 		trigger = {
-			has_authority = auth_imperial
+			is_imperial = yes
 		}
 		localization_key = monarchy_string
 	}
 	text = {
 		trigger = {
-			has_authority = auth_dictatorial
+			is_dictatorial = yes
 		}
 		localization_key = dictatorship_string
 	}
@@ -30,19 +30,19 @@ defined_text = { # Country scope
 	}
 	text = {
 		trigger = {
-			has_authority = auth_democratic
+			is_democracy = yes
 		}
 		localization_key = democracy_string
 	}
 	text = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		localization_key = hive_mind_string
 	}
 	text = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 		localization_key = machine_intelligence_string
 	}

@@ -156,7 +156,7 @@ war_name_format = {
 			}
 			attacker = {
 				has_ethic = ethic_fanatic_authoritarian
-				NOT = { has_authority = auth_imperial }
+				is_imperial = no
 			}
 		}
 	}
@@ -173,7 +173,7 @@ war_name_format = {
 			}
 			attacker = {
 				has_ethic = ethic_fanatic_authoritarian
-				has_authority = auth_imperial
+				is_imperial = yes
 			}
 		}
 	}

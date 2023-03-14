@@ -38,7 +38,7 @@ planet_event = { #shifted back to a completely normal planet event
 		}
 	}
 	
-	mean_time_to_happen = { years = 80 }
+	# mean_time_to_happen = { years = 80 }
 	
 	immediate = {
 		random_list = {
@@ -232,10 +232,7 @@ planet_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -293,10 +290,8 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					is_egalitarian = yes
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -377,10 +372,7 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
+					is_authoritarian = yes
 				}
 			}
 			modifier = {
@@ -441,8 +433,10 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOT = { is_country = root.owner }
-						NOT = { has_ai_personality_behaviour = purger }
+						NOR = {
+							is_same_empire = root.owner
+							has_ai_personality_behaviour = purger
+						}
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -588,10 +582,7 @@ planet_event = {
 			
 				if = {
 					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
-					random_list = {
-						15 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
-						85 = { }
-					}
+					random = { chance = 15 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
 		}
@@ -812,10 +803,7 @@ planet_event = {
 				
 				if = {
 					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
-					random_list = {
-						8 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
-						92 = { }
-					}
+					random = { chance = 8 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
 		}
@@ -1030,10 +1018,7 @@ planet_event = {
 				
 				if = {
 					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
-					random_list = {
-						2 = { planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
-						98 = { }
-					}
+					random = { chance = 2 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
 		}
@@ -1176,7 +1161,7 @@ pop_faction_event = {
 		
 		add_modifier = {
 			modifier = cc_luddite_faction_displeasure
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1195,7 +1180,7 @@ pop_faction_event = {
 		
 		add_modifier = {
 			modifier = cc_luddite_oppress_faction_displeasure
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1434,10 +1419,7 @@ planet_event = {
 			modifier = {
 				factor = 5
 				owner = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -1473,10 +1455,8 @@ planet_event = {
 		allow = {
 			owner = {
 				NOR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					is_egalitarian = yes
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -1533,10 +1513,7 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
+					is_authoritarian = yes
 				}
 			}
 			modifier = {
@@ -1597,8 +1574,10 @@ planet_event = {
 				every_country = {
 					limit = {
 						has_communications = root.owner
-						NOT = { is_country = root.owner }
-						NOT = { has_ai_personality_behaviour = purger }
+						NOR = {
+							is_same_empire = root.owner
+							has_ai_personality_behaviour = purger
+						}
 						NOT = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -1674,7 +1653,7 @@ country_event = {
 		}
 		set_timed_country_flag = {
 			flag = cc_luddite_movement
-			days = 3600
+			years = 10
 		}
 		country_event = { id = cc_luddite.999 days = 3601 }
 		set_timed_country_flag = {
@@ -1728,7 +1707,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = cc_bowed_to_luddism
-			days = 3600
+			years = 10
 		}
 		every_owned_planet = {
 			limit = { has_modifier = cc_luddite_movement }
@@ -1742,14 +1721,14 @@ country_event = {
 			limit = { has_faction = technologist }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = technologist }
-				add_modifier = { modifier = cc_bowed_to_luddism_faction_neg days = 3600 }
+				add_modifier = { modifier = cc_bowed_to_luddism_faction_neg years = 10 }
 			}
 		}
 		if = {
 			limit = { has_faction = traditionalist }
 			random_pop_faction = {
 				limit = { is_pop_faction_type = traditionalist }
-				add_modifier = { modifier = cc_bowed_to_luddism_faction_pos days = 3600 }
+				add_modifier = { modifier = cc_bowed_to_luddism_faction_pos years = 10 }
 			}
 		}
 		
@@ -1767,8 +1746,7 @@ country_event = {
 			modifier = {
 				factor = 5
 				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -1806,10 +1784,8 @@ country_event = {
 		
 		allow = {
 			NOR = {
-				has_ethic = ethic_egalitarian
-				has_ethic = ethic_fanatic_egalitarian
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
+				is_egalitarian = yes
+				is_spiritualist = yes
 			}
 		}
 		
@@ -1846,7 +1822,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				if = {
 					limit = { NOT = { has_modifier = cc_luddite_oppress_faction_displeasure } }
-					add_modifier = { modifier = cc_luddite_oppress_faction_displeasure days = 3600 }
+					add_modifier = { modifier = cc_luddite_oppress_faction_displeasure years = 10 }
 				}
 			}
 		}
@@ -1934,10 +1910,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}
+				is_authoritarian = yes
 			}
 		}
 	}
@@ -1997,8 +1970,10 @@ country_event = {
 			every_country = {
 				limit = {
 					has_communications = root.owner
-					NOT = { is_country = root.owner }
-					NOT = { has_ai_personality_behaviour = purger }
+					NOR = {
+						is_same_empire = root.owner
+						has_ai_personality_behaviour = purger
+					}
 					NOT = {
 						OR = {
 							has_ethic = ethic_fanatic_authoritarian
@@ -2029,7 +2004,7 @@ country_event = {
 				limit = { is_pop_faction_type = traditionalist }
 				if = {
 					limit = { NOT = { has_modifier = cc_luddite_oppress_faction_displeasure } }
-					add_modifier = { modifier = cc_luddite_oppress_faction_displeasure days = 3600 }
+					add_modifier = { modifier = cc_luddite_oppress_faction_displeasure years = 10 }
 				}
 			}
 		}
@@ -2174,7 +2149,7 @@ country_event = {
 		any_owned_pop = { is_non_sapient_robot = yes }
 	}
 	
-	mean_time_to_happen = { months = 78 }
+	# mean_time_to_happen = { months = 78 }
 	
 	immediate = {
 		random_list = {
@@ -2272,7 +2247,7 @@ pop_event = {
 			chance = 33
 			add_modifier = {
 				modifier = cc_worried_about_machines
-				days = 5400
+				years = 15
 			}
 		}
 	}
@@ -2314,7 +2289,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { years = 15 }
+	# mean_time_to_happen = { years = 15 }
 	
 	immediate = {
 		set_country_flag = cc_antiluddite_event

@@ -11,8 +11,10 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		NOT = { exists = overlord }
-		NOT = { has_country_flag = dpe_recent_defect_leader }
+		NOR = {
+			exists = overlord
+			has_country_flag = dpe_recent_defect_leader
+		}
 		any_owned_leader = {
 			NOR = {
 				is_same_species = root
@@ -20,8 +22,7 @@ country_event = {
 				has_leader_flag = dpe_defect_leader
 			}
 			
-			any_country = {
-				is_country_type = default
+			any_playable_country = {
 				is_same_species = prev
 				
 				NOR = {
@@ -38,17 +39,18 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = dpe_recent_defect_leader
-			days = 9000
+			years = 25
 		}
 		save_event_target_as = dpe_defected_country
 		
 		random_owned_leader = {
 			limit = {
-				NOT = { is_same_species = root }
-				NOT = { is_same_value = root.ruler}
+				NOR = {
+					is_same_species = root
+					is_same_value = root.ruler
+				}
 				
-				any_country = {
-					is_country_type = default
+				any_playable_country = {
 					is_same_species = prev
 					
 					NOR = {
@@ -64,9 +66,8 @@ country_event = {
 			
 			set_leader_flag = dpe_defect_leader
 			
-			random_country = {
+			random_playable_country = {
 				limit = {
-					is_country_type = default
 					is_same_species = prev
 					
 					NOR = {
@@ -78,7 +79,7 @@ country_event = {
 				}
 				set_timed_country_flag = {
 					flag = dpe_recent_defect_leader
-					days = 4800
+					months = 160
 				}
 				
 				save_event_target_as = dpe_defect_to_country
@@ -94,10 +95,7 @@ country_event = {
 				
 				modifier = {
 					factor = 0.5
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = no
 				}
 				modifier = {
 					factor = 0.5
@@ -319,7 +317,7 @@ country_event = {
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_scientist_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -385,7 +383,7 @@ country_event = {
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_governor_from
-							days = 360
+							years = 1
 						}
 					}
 				}
@@ -393,13 +391,13 @@ country_event = {
 					root = {
 						add_modifier = {
 							modifier = dpe_defector_military_receive
-							days = 3600
+							years = 10
 						}
 					}
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_military_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -407,13 +405,13 @@ country_event = {
 					root = {
 						add_modifier = {
 							modifier = dpe_defector_military_receive
-							days = 3600
+							years = 10
 						}
 					}
 					from = {
 						add_modifier = {
 							modifier = dpe_defector_military_from
-							days = 3600
+							years = 10
 						}
 					}
 				}
@@ -663,10 +661,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 			shift_ethic = ethic_xenophobe
 		}
@@ -754,7 +749,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -817,7 +812,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -825,13 +820,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -839,13 +834,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -856,10 +851,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				is_xenophile = yes
 			}
 		}
 	}
@@ -877,7 +869,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_xenophobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -891,14 +883,14 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_xenophobe_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
 		
 		add_modifier = {
 			modifier = dpe_defector_xenophobia
-			days = 3600
+			years = 10
 		}
 		
 		tooltip = {
@@ -984,7 +976,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1047,7 +1039,7 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -1055,13 +1047,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1069,13 +1061,13 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -1203,10 +1195,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1234,10 +1223,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1270,7 +1256,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_arbitrary_detention
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1284,7 +1270,7 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dpe_defector_arbitrary_detention
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -1323,10 +1309,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 2
@@ -1357,10 +1340,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1390,10 +1370,7 @@ country_event = {
 				
 				modifier = {
 					factor = 2
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 				modifier = {
 					factor = 2
@@ -1445,7 +1422,7 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_defect_trust_in_xenos
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1608,10 +1585,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 2
@@ -1630,10 +1604,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1692,10 +1663,7 @@ country_event = {
 			
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1995,7 +1963,7 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_scientist_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -2058,7 +2026,7 @@ country_event = {
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_governor_from
-								days = 360
+								years = 1
 							}
 						}
 					}
@@ -2066,13 +2034,13 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}
@@ -2080,13 +2048,13 @@ country_event = {
 						root = {
 							add_modifier = {
 								modifier = dpe_defector_military_receive
-								days = 3600
+								years = 10
 							}
 						}
 						from = {
 							add_modifier = {
 								modifier = dpe_defector_military_from
-								days = 3600
+								years = 10
 							}
 						}
 					}

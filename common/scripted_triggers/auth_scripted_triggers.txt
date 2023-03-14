@@ -1,0 +1,71 @@
+
+is_megacorp = {
+	OR = {
+		has_authority = auth_corporate
+		has_government = gov_imperial_domain_megacorp
+		# Other Mods
+		has_authority = auth_corporate_imperial
+		has_authority = auth_corporate_democratic
+		has_authority = auth_bugged_corporate_democratic
+		has_authority = auth_cooperative
+		has_authority = auth_corporate_fiefdom
+		has_authority = auth_tec_patrocorporate
+		has_authority = auth_tec_ai_corporate
+		has_authority = auth_private
+	}
+}
+
+is_dictatorial = {
+	OR = {
+		has_authority = auth_dictatorial
+		# Other Mods
+		AND = {
+			has_authority = auth_democratic_dictatorship
+			is_egalitarian = no
+		}
+	}
+}
+
+is_imperial = { #Has Heir
+	OR = {
+		has_authority = auth_imperial
+		# Other Mods
+		has_authority = auth_corporate_imperial
+		has_authority = auth_corporate_fiefdom
+		has_authority = auth_tec_patrocorporate
+		has_authority = auth_bugged_corporate_imperial
+		has_authority = auth_private
+	}
+}
+
+is_autocracy = { #Power of one
+	OR = {
+		is_gestalt = yes
+		is_imperial = yes
+		is_dictatorial = yes
+	}
+}
+
+is_imp_or_dict = { #Power of one
+	OR = {
+		is_imperial = yes
+		is_dictatorial = yes
+	}
+}
+
+is_democracy = { #Power of many
+	OR = {
+		has_authority = auth_democratic
+		# Other Mods
+		has_authority = auth_direct_democratic
+		has_authority = auth_bugged_direct_democratic
+		has_authority = auth_bugged_corporate_democratic
+		has_authority = auth_corporate_democratic
+		has_authority = auth_cooperative
+		has_authority = auth_strict_democratic
+		AND = {
+			has_authority = auth_democratic_dictatorship
+			is_egalitarian = yes
+		}
+	}
+}

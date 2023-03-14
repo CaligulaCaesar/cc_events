@@ -14,10 +14,7 @@ event = {
 	immediate = {
 		every_country = {
 			limit = {
-				OR = {
-					is_country_type = default
-					is_country_type = awakened_fallen_empire
-				}
+				is_country_type_with_subjects = yes
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 			}
 			every_owned_planet = {
@@ -29,7 +26,7 @@ event = {
 				}
 				set_timed_planet_flag = {
 					flag = ccrebel_perf_spiritualists_2
-					days = 721
+					years = 2
 				}
 			}
 			
@@ -42,7 +39,7 @@ event = {
 				}
 				set_timed_planet_flag = {
 					flag = ccrebel_perf_xenophiles_1
-					days = 721
+					years = 2
 				}
 				if = {
 					limit = {
@@ -53,20 +50,17 @@ event = {
 					}
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_xenophiles_2
-						days = 721
+						years = 2
 					}
 					if = {
 						limit = {
 							owner = {
-								OR = {
-									has_ethic = ethic_xenophobe
-									has_ethic = ethic_fanatic_xenophobe
-								}
+								is_xenophobe = yes
 							}
 						}
 						set_timed_planet_flag = {
 							flag = cc_opposite_ethic_to_ruler
-							days = 721
+							years = 2
 						}
 					}
 					if = {
@@ -78,7 +72,7 @@ event = {
 						}
 						set_timed_planet_flag = {
 							flag = ccrebel_perf_xenophiles_3
-							days = 721
+							years = 2
 						}
 					}
 				}
@@ -93,7 +87,7 @@ event = {
 				}
 				set_timed_planet_flag = {
 					flag = ccrebel_perf_xenophobes_1
-					days = 721
+					years = 2
 				}
 				if = {
 					limit = {
@@ -104,20 +98,17 @@ event = {
 					}
 					set_timed_planet_flag = {
 						flag = ccrebel_perf_xenophobes_2
-						days = 721
+						years = 2
 					}
 					if = {
 						limit = {
 							owner = {
-								OR = {
-									has_ethic = ethic_xenophile
-									has_ethic = ethic_fanatic_xenophile
-								}
+								is_xenophile = yes
 							}
 						}
 						set_timed_planet_flag = {
 							flag = cc_opposite_ethic_to_ruler
-							days = 721
+							years = 2
 						}
 					}
 					if = {
@@ -129,7 +120,7 @@ event = {
 						}
 						set_timed_planet_flag = {
 							flag = ccrebel_perf_xenophobes_3
-							days = 721
+							years = 2
 						}
 					}
 				}

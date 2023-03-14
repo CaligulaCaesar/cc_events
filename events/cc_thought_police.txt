@@ -7,7 +7,7 @@ namespace = cc_thought_police
 pop_event = {
 	id = cc_thought_police.10
 	hide_window = yes
-	mean_time_to_happen = { years = 30 }
+	# mean_time_to_happen = { years = 30 }
 
 	trigger = {
 		is_enslaved = no
@@ -31,14 +31,7 @@ pop_event = {
 			NOT = { has_ethic = ethic_pacifist }
 		}
 		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
-				}
-			}
+			limit = { owner = { is_militarist = yes } }
 			NOT = { has_ethic = ethic_militarist }
 		}
 		if = {
@@ -46,14 +39,7 @@ pop_event = {
 			NOT = { has_ethic = ethic_xenophile }
 		}
 		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-				}
-			}
+			limit = { owner = { is_xenophobe = yes } }
 			NOT = { has_ethic = ethic_xenophobe }
 		}
 	}

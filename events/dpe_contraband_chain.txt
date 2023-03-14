@@ -2,38 +2,32 @@
 namespace = dpe_contraband_event
 
 country_event = {
-	id = dpe_contraband_event.1
-	title = dpe_contraband_event.1.name
-	desc = dpe_contraband_event.1.desc
-	
-	picture = GFX_evt_smugglers_in_bar
-	
-	mean_time_to_happen = { years = 80 }
-	
+	id = dpe_contraband_event.1000
+	is_triggered_only = yes
+	hide_window = yes
+
 	trigger = {
 		years_passed > 30
 		is_country_type = default
+		is_authoritarian = no
 		NOR = {
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
 			has_ethic = ethic_gestalt_consciousness
 			has_civic = civic_fanatic_purifiers
+			has_country_flag = dpe_has_had_contraband_crisis
 		}
-		NOT = { has_country_flag = dpe_has_had_contraband_crisis }
 		
 		any_neighbor_country = {
 			is_country_type = default
 			has_faction = totalitarian
+			is_materialist = no
+			is_egalitarian = no
+			is_synthetic_empire = no
 			NOR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-				has_ethic = ethic_egalitarian
-				has_ethic = ethic_fanatic_egalitarian
+				is_same_species = root
+				has_closed_borders = root
 				has_ethic = ethic_gestalt_consciousness
 				has_civic = civic_fanatic_purifiers
-				is_same_species = root
 			}
-			is_synthetic_empire = no
 			has_relation_flag = {
 				who = root
 				flag = dpe_comms_established
@@ -44,7 +38,6 @@ country_event = {
 					flag = dpe_new_relation
 				}
 			}
-			NOT = { has_closed_borders = root }
 			NOT = { has_country_flag = dpe_has_had_contraband_crisis }
 		}
 	}
@@ -53,11 +46,13 @@ country_event = {
 		random_neighbor_country = {
 			limit = {
 				is_country_type = default
+				has_faction = totalitarian
+				is_materialist = no
+				is_egalitarian = no
+				is_synthetic_empire = no
 				NOR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
+					is_same_species = root
+					has_closed_borders = root
 					has_ethic = ethic_gestalt_consciousness
 					has_civic = civic_fanatic_purifiers
 				}
@@ -82,11 +77,11 @@ country_event = {
 	}
 	
 	option = {
-		name = dpe_contraband_event.1.A
+		name = dpe_contraband_event.1100.A
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_crackdown
-			days = 1800
+			years = 5
 		}
 		
 		event_target:dpe_neighbor = {
@@ -139,9 +134,9 @@ country_event = {
 	}
 	
 	option = {
-		name = dpe_contraband_event.1.B
+		name = dpe_contraband_event.1100.B
 		
-		custom_tooltip = dpe_contraband_event.1.B.tooltip
+		custom_tooltip = dpe_contraband_event.1100.B.tooltip
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_tolerate
@@ -168,9 +163,225 @@ country_event = {
 	}
 	
 	option = {
-		name = dpe_contraband_event.1.C
+		name = dpe_contraband_event.1100.C
 		
-		custom_tooltip = dpe_contraband_event.1.C.tooltip
+		custom_tooltip = dpe_contraband_event.1100.C.tooltip
+		
+		add_modifier = {
+			modifier = dpe_drug_cartels_extort
+			days = -1
+		}
+		
+		hidden_effect = {
+			save_event_target_as = dpe_drugs_country
+			
+			set_timed_relation_flag = {
+				flag = dpe_drug_cartels_extort
+				who = event_target:dpe_neighbor
+				days = 4800
+			}
+			event_target:dpe_neighbor = { country_event = { id = dpe_contraband_event.2 days = 180 } }
+		}
+
+		event_target:dpe_neighbor = {
+			DPE_Get_Attitude = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				event_target:dpe_neighbor = {
+					OR = {
+						has_defensive_pact = root
+						is_in_federation_with = root
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				event_target:dpe_neighbor = {
+					has_non_aggression_pact = root
+				}
+			}
+			modifier = {
+				factor = 0.5
+				event_target:dpe_neighbor = {
+					relative_power = {
+						who = root
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # This event has no localisation. What is it?
+	id = dpe_contraband_event.1100
+	title = dpe_contraband_event.1100.name
+	desc = dpe_contraband_event.1100.desc
+	
+	picture = GFX_evt_smugglers_in_bar
+	
+	# mean_time_to_happen = { years = 80 }
+	
+	trigger = {
+		years_passed > 30
+		is_country_type = default
+		is_authoritarian = no
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_civic = civic_fanatic_purifiers
+			has_country_flag = dpe_has_had_contraband_crisis
+		}
+		
+		any_neighbor_country = {
+			is_country_type = default
+			has_faction = totalitarian
+			is_materialist = no
+			is_egalitarian = no
+			is_synthetic_empire = no
+			NOR = {
+				is_same_species = root
+				has_closed_borders = root
+				has_ethic = ethic_gestalt_consciousness
+				has_civic = civic_fanatic_purifiers
+			}
+			has_relation_flag = {
+				who = root
+				flag = dpe_comms_established
+			}
+			NOT = {
+				has_relation_flag = {
+					who = root
+					flag = dpe_new_relation
+				}
+			}
+			NOT = { has_country_flag = dpe_has_had_contraband_crisis }
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_country_type = default
+				NOR = {
+					is_materialist = yes
+					is_egalitarian = yes
+					has_ethic = ethic_gestalt_consciousness
+					has_civic = civic_fanatic_purifiers
+				}
+				has_relation_flag = {
+					who = root
+					flag = dpe_comms_established
+				}
+				NOT = {
+					has_relation_flag = {
+						who = root
+						flag = dpe_new_relation
+					}
+				}
+				NOT = { has_country_flag = dpe_has_had_contraband_crisis }
+			}
+			save_event_target_as = dpe_neighbor
+		}
+		set_timed_country_flag = {
+			flag = dpe_has_had_contraband_crisis
+			years = 120
+		}
+	}
+	
+	option = {
+		name = dpe_contraband_event.1100.A
+		
+		add_modifier = {
+			modifier = dpe_drug_cartels_crackdown
+			years = 5
+		}
+		
+		event_target:dpe_neighbor = {
+			add_opinion_modifier = {
+				modifier = dpe_cracked_down_on_drugs_opinion
+				who = root
+			}
+
+			DPE_Get_Attitude = yes
+		}
+		
+		hidden_effect = {
+			event_target:dpe_neighbor = { country_event = { id = dpe_contraband_event.90 } }
+			
+			remove_country_flag = dpe_has_had_contraband_crisis
+			set_timed_country_flag = {
+				flag = dpe_has_had_contraband_crisis
+				years = 40
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				event_target:dpe_neighbor = {
+					OR = {
+						has_defensive_pact = root
+						is_in_federation_with = root
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:dpe_neighbor = {
+					has_non_aggression_pact = root
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:dpe_neighbor = {
+					relative_power = {
+						who = root
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = dpe_contraband_event.1100.B
+		
+		custom_tooltip = dpe_contraband_event.1100.B.tooltip
+		
+		add_modifier = {
+			modifier = dpe_drug_cartels_tolerate
+			days = -1
+		}
+		
+		hidden_effect = {
+			save_event_target_as = dpe_drugs_country
+			
+			event_target:dpe_neighbor = {
+				set_timed_relation_flag = {
+					flag = dpe_drug_cartels_ignore
+					who = prev
+					days = 4800
+				}
+				country_event = { id = dpe_contraband_event.2 days = 180 }
+			}
+		}
+
+		event_target:dpe_neighbor = {
+			DPE_Get_Attitude = yes
+		}
+		ai_chance = { factor = 1.5 }
+	}
+	
+	option = {
+		name = dpe_contraband_event.1100.C
+		
+		custom_tooltip = dpe_contraband_event.1100.C.tooltip
 		
 		add_modifier = {
 			modifier = dpe_drug_cartels_extort
@@ -267,14 +478,14 @@ country_event = {
 		
 		add_modifier = {
 			modifier = dpe_taxing_drugs
-			days = 4800
+			months = 160
 		}
 		
 		random_pop_faction = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_taxing_drugs_faction
-				days = 4800
+				months = 160
 			}
 		}
 		
@@ -342,7 +553,7 @@ country_event = {
 			limit = { is_pop_faction_type = totalitarian }
 			add_modifier = {
 				modifier = dpe_taking_action_drugs_faction
-				days = 4800
+				months = 160
 			}
 		}
 		
@@ -355,10 +566,7 @@ country_event = {
 
 			if = {
 				limit = {
-					NOR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
+					is_authoritarian = no
 					has_faction = progressive
 				}
 				country_event = { id = dpe_contraband_event.4 days = 270 random = 180 }
@@ -424,7 +632,7 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = dpe_drug_trade_legit
-			days = 4800
+			months = 160
 		}
 	}
 }
@@ -450,16 +658,13 @@ country_event = {
 			limit = { is_pop_faction_type = progressive }
 			add_modifier = {
 				modifier = dpe_contraband_stop_and_search_faction
-				days = 3600
+				years = 10
 			}
 		}
 
 		if = {
 			limit = {
-				NOR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				is_egalitarian = no
 			}
 			custom_tooltip = dpe_contraband_event.45.tooltip
 	
@@ -490,10 +695,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				is_egalitarian = no
 				any_pop_faction = {
 					is_pop_faction_type = progressive
 					support > 0.15
@@ -566,7 +768,7 @@ country_event = {
 				limit = { is_pop_faction_type = progressive }
 				add_modifier = {
 					modifier = dpe_contraband_stop_and_search_faction
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -587,7 +789,7 @@ pop_event = {
 			1 = {
 				add_modifier = {
 					modifier = dpe_raids_worry
-					days = 1800
+					years = 5
 				}
 			}
 			4 = { }
@@ -728,10 +930,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -776,10 +975,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_pacifist = yes
+					is_xenophile = yes
 				}
 			}
 		}
@@ -876,10 +1073,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -965,10 +1159,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_pacifist = yes
+					is_xenophile = yes
 				}
 			}
 		}
@@ -1045,10 +1237,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1094,10 +1283,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_pacifist = yes
+					is_xenophile = yes
 				}
 			}
 		}
@@ -1167,10 +1354,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1215,10 +1399,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_pacifist = yes
+					is_xenophile = yes
 				}
 			}
 		}
@@ -1994,7 +2176,7 @@ country_event = {
 		remove_country_flag = dpe_has_had_contraband_crisis
 		set_timed_country_flag = {
 			flag = dpe_has_had_contraband_crisis
-			days = 3600
+			years = 10
 		}
 	}
 
