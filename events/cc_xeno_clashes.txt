@@ -42,8 +42,6 @@ planet_event = {
 			OR = {
 				has_citizenship_type = { country = root.owner type = citizenship_full }
 				has_citizenship_type = { country = root.owner type = citizenship_limited }
-				has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-				has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 			}
 			root = {
 				count_owned_pop = {
@@ -57,8 +55,6 @@ planet_event = {
 					OR = {
 						has_citizenship_type = { country = root.owner type = citizenship_full }
 						has_citizenship_type = { country = root.owner type = citizenship_limited }
-						has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-						has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 					}
 					root = {
 						count_owned_pop = {
@@ -95,8 +91,6 @@ planet_event = {
 						OR = {
 							has_citizenship_type = { country = root.owner type = citizenship_full }
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 						}
 						root = {
 							count_owned_pop = {
@@ -110,8 +104,6 @@ planet_event = {
 								OR = {
 									has_citizenship_type = { country = root.owner type = citizenship_full }
 									has_citizenship_type = { country = root.owner type = citizenship_limited }
-									has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-									has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 								}
 								root = {
 									count_owned_pop = {
@@ -173,8 +165,6 @@ planet_event = {
 							OR = {
 								has_citizenship_type = { country = root.owner type = citizenship_full }
 								has_citizenship_type = { country = root.owner type = citizenship_limited }
-								has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-								has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 							}
 							root = {
 								count_owned_pop = {
@@ -189,8 +179,6 @@ planet_event = {
 									OR = {
 										has_citizenship_type = { country = root.owner type = citizenship_full }
 										has_citizenship_type = { country = root.owner type = citizenship_limited }
-										has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-										has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 									}
 									root = {
 										count_owned_pop = {
@@ -216,8 +204,6 @@ planet_event = {
 							OR = {
 								has_citizenship_type = { country = root.owner type = citizenship_full }
 								has_citizenship_type = { country = root.owner type = citizenship_limited }
-								has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-								has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 							}
 							root = {
 								count_owned_pop = {
@@ -237,8 +223,6 @@ planet_event = {
 						OR = {
 							has_citizenship_type = { country = root.owner type = citizenship_full }
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system }
-							has_citizenship_type = { country = root.owner type = citizenship_caste_system_limited }
 						}
 						root = {
 							count_owned_pop = {

@@ -31,9 +31,9 @@ country_event = {
 		FROMFROM = {
 			solar_system = { save_event_target_as = system }
 			if = {
-				limit = { any_owned_ship = { is_ship_size = battleship } }
+				limit = { any_controlled_ship = { is_ship_size = battleship } }
 				
-				random_owned_ship = { 
+				random_controlled_ship = { 
 					limit = {
 						is_ship_size = battleship
 						has_hp > 0
@@ -42,8 +42,8 @@ country_event = {
 				}
 			}
 			else_if = {
-				limit = { any_owned_ship = { is_ship_size = cruiser } }
-				random_owned_ship = { 
+				limit = { any_controlled_ship = { is_ship_size = cruiser } }
+				random_controlled_ship = { 
 					limit = {
 						is_ship_size = cruiser
 						has_hp > 0
@@ -52,7 +52,7 @@ country_event = {
 				}
 			}
 			else = {
-				random_owned_ship = { 
+				random_controlled_ship = { 
 					limit = {
 						has_hp > 0
 					}

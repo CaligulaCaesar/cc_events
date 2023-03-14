@@ -25,10 +25,7 @@ country_event = {
 	}	
 	
 	immediate = {
-		set_timed_country_flag = {
-			flag = cc_has_had_blackmail
-			years = 60
-		}
+		set_country_flag = cc_has_had_blackmail #apparently it's annoying. So only once.
 	}
 	
 	option = {

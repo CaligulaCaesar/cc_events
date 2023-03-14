@@ -1213,8 +1213,6 @@ country_event = {
 			OR = {
 				has_citizenship_type = { country = root type = citizenship_full }
 				has_citizenship_type = { country = root type = citizenship_limited }
-				has_citizenship_type = { country = root type = citizenship_caste_system }
-				has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 			}
 		}
 		any_owned_leader = {
@@ -1250,8 +1248,6 @@ country_event = {
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
-					has_citizenship_type = { country = root type = citizenship_caste_system }
-					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 				}
 			}
 			save_event_target_as = marriage_species

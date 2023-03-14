@@ -274,8 +274,6 @@ country_event = {
 				OR = {
 					has_citizenship_type = { country = root type = citizenship_full }
 					has_citizenship_type = { country = root type = citizenship_limited }
-					has_citizenship_type = { country = root type = citizenship_caste_system }
-					has_citizenship_type = { country = root type = citizenship_caste_system_limited }
 				}
 			}
 		}
@@ -1520,7 +1518,7 @@ country_event = {
 			}
 			random_fleet_in_system = {
 				limit = {
-					any_owned_ship = {
+					any_controlled_ship = {
 						is_ship_class = shipclass_starbase
 					}
 				}

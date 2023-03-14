@@ -2381,6 +2381,8 @@ country_event = {
 				species = root
 				ignore_initial_colony_error = yes
 				day_zero_contact = no
+				released_by_country = root
+				released_from_country = root
 				flag = random
 				effect = {
 
@@ -2410,7 +2412,7 @@ country_event = {
 								limit = {
 									exists = owner
 									owner = { is_same_value = root }
-									any_owned_ship = { is_ship_class = shipclass_military_station }
+									any_controlled_ship = { is_ship_class = shipclass_military_station }
 								}
 								set_owner = event_target:cc_breakaway_country
 							}
@@ -3684,15 +3686,15 @@ country_event = {
 				
 				#Apparently, can't bring back
 			}
-			if = {
-				limit = { event_target:cc_new_reb_faction_leader = { leader_class = governor } }
-#				from = { #apparently, can't exile
-#					set_timed_country_flag = {
-#						flag = cc_governor_defects2
-#						days = 5
-#					}
-#				}
-			}
+# 			if = {
+# 				limit = { event_target:cc_new_reb_faction_leader = { leader_class = governor } }
+# #				from = { #apparently, can't exile
+# #					set_timed_country_flag = {
+# #						flag = cc_governor_defects2
+# #						days = 5
+# #					}
+# #				}
+# 			}
 			if = {
 				limit = { event_target:cc_new_reb_faction_leader = { leader_class = general } }
 				from = {
@@ -3744,9 +3746,6 @@ country_event = {
 		random_owned_pop = {
 			save_event_target_as = cc_rebels_pop
 		}
-		
-		#Unity
-		add_100_unity_per_year_passed = yes
 		
 		capital_scope = { save_event_target_as = cc_rebels_capital }
 		
@@ -3844,7 +3843,7 @@ planet_event = {
 				limit = {
 					exists = owner
 					owner = { is_same_value = event_target:dpe_former_owner }
-					any_owned_ship = { is_ship_class = shipclass_military_station }
+					any_controlled_ship = { is_ship_class = shipclass_military_station }
 				}
 				set_owner = event_target:cc_breakaway_country
 			}
@@ -4569,7 +4568,7 @@ country_event = {
 	}
 
 	option = { #Vanilla name and tooltips are fine
-		name = unrest.4235.a
+		name = EXCELLENT
 		FromFrom = { 
 			add_modifier = {
 				modifier = cc_failed_factional_revolt

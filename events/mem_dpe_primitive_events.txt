@@ -1057,7 +1057,7 @@ country_event = {
 			capital_scope.solar_system = {
 				random_fleet_in_system = {
 					limit = {
-						any_owned_ship = {
+						any_controlled_ship = {
 							is_ship_class = shipclass_starbase
 						}
 					}
@@ -1476,7 +1476,7 @@ country_event = {
 				capital_scope.solar_system = {
 					random_fleet_in_system = {
 						limit = {
-							any_owned_ship = {
+							any_controlled_ship = {
 								is_ship_class = shipclass_starbase
 							}
 						}
@@ -1676,7 +1676,27 @@ country_event = {
 			if = {
 				limit = { is_species_class = PLANT }
 				set_graphical_culture = plantoid_01
-			}		
+			}	
+			if = {
+				limit = { is_species_class = HUM }
+				set_graphical_culture = humanoid_01
+			}
+			if = {
+				limit = { is_species_class = LITHOID }
+				set_graphical_culture = lithoid_01
+			}
+			if = {
+				limit = { is_species_class = NECROID }
+				set_graphical_culture = necroid_01
+			}
+			if = {
+				limit = { is_species_class = AQUATIC }
+				set_graphical_culture = aquatic_01
+			}	
+			if = {
+				limit = { is_species_class = TOX }
+				set_graphical_culture = toxoid_01
+			}	
 			change_government = {
 				authority = random
 				civics = random
@@ -1741,7 +1761,7 @@ country_event = {
 					}
 				}			
 			}
-			random_owned_ship = {
+			random_controlled_ship = {
 				limit = { is_ship_size = primitive_space_station }
 				fleet = { destroy_fleet = THIS }
 			}
@@ -1749,7 +1769,7 @@ country_event = {
 
 		
 		event_target:mem_dpe_primitive_fleet = {
-			every_owned_fleet = {
+			every_controlled_fleet = {
 				delete_fleet = this
 			}
 		}

@@ -83,7 +83,7 @@ mem_dpe_become_protectorate = {
 					}
 				}			
 			}
-			random_owned_ship = {
+			random_controlled_ship = {
 				limit = { is_ship_size = primitive_space_station }
 				fleet = { destroy_fleet = THIS }
 			}
@@ -93,13 +93,13 @@ mem_dpe_become_protectorate = {
 				}
 				set_subject_of = {
 					who = root
-					subject_type = tributary
+					preset = preset_tributary
 				}
 			}			
 			else = {
 				set_subject_of = {
 					who = root
-					subject_type = protectorate
+					preset = preset_protectorate
 				}						
 			}
 		}

@@ -14,10 +14,8 @@ is_valid_TP_refugee_pop = {
 			prevprev = { #this ensures Pop scope, as root will not always be pop scope
 				OR = { 
 					has_citizenship_type = { type = citizenship_full country = prev }
-					has_citizenship_type = { type = citizenship_caste_system country = prev }
 					AND = {
 						has_citizenship_type = { type = citizenship_limited country = prev }
-						has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
 						prev = { has_policy_flag = refugees_allowed }
 					}
 				}

@@ -3743,11 +3743,13 @@ country_event = {
 
 	option = {
 		name = dpe_xenophile_mission.24.A
-		
-		set_subject_of = { who = from subject_type = tributary }
-
-		from = {
-			country_event = { id = dpe_xenophile_mission.251 }
+		custom_tooltip = dpe_xenophile_mission.24.A.tooltip
+		hidden_effect = {
+			set_subject_of = { who = from preset = preset_tributary }
+	
+			from = {
+				country_event = { id = dpe_xenophile_mission.251 }
+			}
 		}
 
 		ai_chance = {
@@ -3819,7 +3821,7 @@ country_event = {
 		
 		custom_tooltip = dpe_xenophile_mission.25.A.tooltip
 		hidden_effect = {
-			every_owned_ship = {
+			every_controlled_ship = {
 				limit = {
 					is_ship_class = shipclass_military
 				}
