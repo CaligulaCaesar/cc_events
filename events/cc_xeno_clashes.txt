@@ -2864,14 +2864,14 @@ planet_event = {
 		while = {
 			limit = {
 				count_owned_pop = {
-					limit = { species = { is_same_empire = root.owner } }
+					limit = { species = { is_same_value = root.owner.species } }
 					count > 1
 				}
 			}
 			count = 6
 			
 			random_owned_pop = {
-				limit = { species = { is_same_empire = root.owner } }
+				limit = { species = { is_same_value = root.owner.species } }
 				kill_pop = yes
 			}
 		}
