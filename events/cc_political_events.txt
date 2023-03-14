@@ -9,6 +9,8 @@ namespace = cc_events_mod
 country_event = {
 	id = cc_events_mod.1009
 	hide_window = yes
+
+	is_triggered_only = yes
 	
 	trigger = {
 		is_country_type = default
