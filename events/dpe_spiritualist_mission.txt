@@ -9,6 +9,8 @@ country_event = {
 	
 	picture = GFX_evt_cc_priesthood
 	location = event_target:dpe_neighbour.capital_scope
+
+	is_triggered_only = yes
 	
 	trigger = {
 		is_country_type = default
@@ -18,14 +20,14 @@ country_event = {
 		
 		OR = {
 			is_spiritualist = yes
-#			count_pop_faction = {
-#				limit = {
-#					is_pop_faction_type = traditionalist
-#					support > 0.15
-#					faction_approval > 0.6
-#				}
-#				count = 1
-#			}
+			# count_pop_faction = {
+			# 	limit = {
+			# 		is_pop_faction_type = traditionalist
+			# 		support > 0.15
+			# 		faction_approval > 0.6
+			# 	}
+			# 	count = 1
+			# }
 		}
 		NOR = { #just in case
 			is_materialist = yes

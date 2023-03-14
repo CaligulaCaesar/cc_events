@@ -6,14 +6,13 @@ country_event = {
 	id = cc_events_blackmail.20
 	title = cc_events_blackmail.20.name
 	desc = cc_events_blackmail.20.desc
+	is_triggered_only = yes
 	
 	picture = GFX_evt_metropolis
 	
 	# mean_time_to_happen = {
 	# 	years = 100
 	# }
-
-	is_triggered_only = yes
 
 	trigger = {
 		num_owned_planets > 7

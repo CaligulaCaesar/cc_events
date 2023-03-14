@@ -11,6 +11,7 @@ country_event = {
 	title = dpe_fe.1.name
 	desc = dpe_fe.1.desc
 	picture = GFX_evt_cc_throne_room
+	is_triggered_only = yes
 	
 	# mean_time_to_happen = { years = 120 }
 	
@@ -1274,6 +1275,8 @@ country_event = {
 	desc = dpe_fe.20.desc 
 	
 	diplomatic = yes
+
+	is_triggered_only = yes
 
 	picture_event_data = {
 		portrait = root

@@ -5,6 +5,7 @@ namespace = dpe_smallpos_events
 planet_event = {
 	id = dpe_smallpos_events.1
 	hide_window = yes
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
@@ -78,6 +79,7 @@ planet_event = {
 country_event = {
 	id = dpe_smallpos_events.3
 	hide_window = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		is_country_type = default
@@ -260,6 +262,7 @@ country_event = {
 country_event = {
 	id = dpe_smallpos_events.10
 	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
 		is_country_type = default
@@ -1556,6 +1559,7 @@ planet_event = {
 		}
 	}
 	picture = GFX_evt_alien_propaganda
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
@@ -1651,6 +1655,7 @@ planet_event = {
 		}
 	}
 	picture = GFX_evt_metropolis
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
@@ -1753,6 +1758,7 @@ planet_event = {
 		}
 	}
 	picture = GFX_evt_frozen
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
@@ -1856,6 +1862,7 @@ planet_event = {
 		}
 	}
 	picture = GFX_evt_mining_operations
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
@@ -1958,6 +1965,7 @@ planet_event = {
 		}
 	}
 	picture = GFX_evt_mining_operations
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes

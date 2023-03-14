@@ -9,7 +9,6 @@ namespace = cc_events_mod
 country_event = {
 	id = cc_events_mod.1009
 	hide_window = yes
-
 	is_triggered_only = yes
 	
 	trigger = {
@@ -791,6 +790,7 @@ country_event = {
 country_event = {
 	id = cc_events_mod.17018
 	hide_window = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		is_country_type = default
@@ -1365,6 +1365,8 @@ country_event = {
 	
 	picture = GFX_evt_metropolis
 	location = event_target:dpe_merchant_planet
+
+	is_triggered_only = yes
 
 	trigger = {
 		is_country_type = default
