@@ -129,7 +129,22 @@ country_event = { # Emancipation Crisis
 	immediate = {
 		random = {
 			chance = 1
-			country_event = { id = cc_emancipation.1000 days = 0 random = 359 }
+			random_owned_planet = {
+				limit = {
+					planet_stability < @dpe_normal_unrest_value
+					NOT = { has_planet_flag = cc_emancipation_movement }
+					any_owned_pop = {
+						is_enslaved = yes
+						pop_has_happiness = yes
+						happiness < 0.4
+					}
+					any_owned_pop = {
+						has_ethic = ethic_egalitarian
+						is_enslaved = no
+					}
+				}
+				planet_event = { id = cc_emancipation.1000 days = 0 random = 359 }
+			}
 		}
 	}
 }
@@ -166,7 +181,19 @@ country_event = { # Ludditism Crisis
 	immediate = {
 		random = {
 			chance = 1
-			country_event = { id = cc_luddite.1000 days = 0 random = 359 }
+			random_owned_planet = {
+				limit = {
+					planet_stability < @dpe_normal_unrest_value
+					NOT = { has_planet_flag = cc_luddite_strike }
+					any_owned_pop = { is_non_sapient_robot = yes }
+					any_owned_pop = {
+						has_ethic = ethic_spiritualist
+						has_citizenship_rights = yes
+						happiness < 0.4
+					}
+				}
+				country_event = { id = cc_luddite.1000 days = 0 random = 359 }
+			}
 		}
 	}
 }
@@ -409,7 +436,62 @@ country_event = { # Xeno Clashes
 	immediate = {
 		random = {
 			chance = 5
-			country_event = { id = cc_xeno_clashes.1 days = 0 random = 359 }
+			random_owned_planet = {
+				limit = {
+					num_pops > 10
+					
+					any_owned_pop = { has_ethic = ethic_xenophobe }
+					pop_percentage = {
+						percentage > 0.2
+						limit = { has_ethic = ethic_xenophobe }
+					}
+
+					NOR = {
+						has_planet_flag = cc_xeno_clashes
+						# has_planet_flag = pop_modification
+						owner = {
+							OR = {
+								has_country_flag = cc_recent_xeno_empire_clashes
+								has_country_flag = cc_recent_first_xeno_clashes
+								has_ethic = ethic_gestalt_consciousness
+							}
+						}
+					}
+
+					num_species > 1
+
+					any_owned_species = {
+						species_has_happiness_with_owner = root.owner
+						is_robotic_species = no
+						OR = {
+							has_citizenship_type = { country = root.owner type = citizenship_full }
+							has_citizenship_type = { country = root.owner type = citizenship_limited }
+						}
+						root = {
+							count_owned_pop = {
+								limit = { is_same_species = prev }
+								count > 4
+							}
+							any_owned_species = {
+								NOT = { is_same_species = prevprev }
+								species_has_happiness_with_owner = root.owner
+								is_robotic_species = no
+								OR = {
+									has_citizenship_type = { country = root.owner type = citizenship_full }
+									has_citizenship_type = { country = root.owner type = citizenship_limited }
+								}
+								root = {
+									count_owned_pop = {
+										limit = { is_same_species = prev }
+										count > 4
+									}
+								}
+							}
+						}
+					}
+				}
+				planet_event = { id = cc_xeno_clashes.1 days = 0 random = 359 }
+			}
 		}
 	}
 }
@@ -1311,7 +1393,24 @@ country_event = { # Government Support Statue
 	immediate = {
 		random = {
 			chance = 2
-			country_event = { id = dpe_smallpos_events.1 days = 0 random = 359 }
+			random_owned_planet = {
+				limit = {
+					planet_stability > 65
+					NOR = {
+						has_planet_flag = dpe_unity_planet
+						has_planet_flag = dpe_dissent_planet
+					}
+					count_owned_pop = {
+						limit = { pop_has_happiness = yes }
+						count > 18
+					}
+					pop_percentage = {
+						limit = { happiness > 0.55 }
+						percentage > 0.75
+					}
+				}
+				planet_event = { id = dpe_smallpos_events.1 days = 0 random = 359 }
+			}
 		}
 	}
 }
