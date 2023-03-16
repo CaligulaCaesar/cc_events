@@ -1,0 +1,983 @@
+﻿l_japanese:
+
+
+#Militarist:
+cc_colony_events.2.name:0 "退役した提督が[root.GetName]にて影響力を拡大"
+cc_colony_events.2.desc.pos:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 受勲の経験がある退役宇宙軍将校[cc_colony_leader.GetName]が[cc_colony_leader.GetHisHer]リーダーシップで植民者たちを牽引してきたことで、[cc_colony_leader.GetHisHer]決定が尊重されるようになったという。幸いにも、[cc_colony_leader.GetSheHe]にはその人気を悪用し[root.owner.GetName]当局へ反発するつもりはないようだ。実際、地元当局は 惑星をよりよく統治するため、[cc_colony_leader.GetName]に'[root.GetName]の総督代理'として公式に役職を与えるべきだと提言してきた。" 
+cc_colony_events.2.desc.neut:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [root.GetName]では、これが事実であることが証明された。受勲の経験がある退役宇宙軍将校[cc_colony_leader.GetName]が[cc_colony_leader.GetHisHer]リーダーシップで植民者たちを牽引してきたことで、[cc_colony_leader.GetHisHer]決定が尊重されるようになったという。幸いにも、[cc_colony_leader.GetSheHe]にはその人気を悪用し[root.owner.GetName]当局へ反発するつもりはないようだ。実際、[cc_colony_leader.GetSheHe]は今までのところ地元当局と良い協力関係を築いてきている。しかし、'[root.GetName]の総督代理'としての公的地位を請願してきた。(我々の通常のやり方からは多少ずれている)この請願はかなりの支持を集めているようだ。\n\nこの請願に対しどのように対応すべきだろうか?"
+cc_colony_events.2.desc.neg:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 受勲の経験がある退役宇宙軍将校[cc_colony_leader.GetName]が[cc_colony_leader.GetHisHer]リーダーシップで植民者たちを牽引してきたことで、[cc_colony_leader.GetHisHer]決定が尊重されるようになったという。地元当局に「迷惑」な存在だとみなされている[cc_colony_leader.GetSheHe]だが、現在は植民者により新たに贈られた'[root.GetName]の総督代理'という地位を喜んで受け入れており、この地位を公的に認める請願がなされている。この請願は残念ながらかなりの支持を集めているようだ。だが、この申し立ては[root.GetName]の統治原則に反する。\n\nこの請願に対しどのように対応すべきだろうか?" 
+
+cc_colony_events.2.A1:0 "[cc_colony_leader.GetHimHer] を植民地の総督代理に任命する。" 
+cc_colony_events.2.A2:0 "[cc_colony_leader.GetHimHer]に助言役としての役割を付与する。"
+cc_colony_events.2.B:0 " [cc_colony_leader.GetHimHer]更迭せよ。 [cc_colony_leader.GetSheHe]は自分の立場を弁えていないな。"
+
+cc_colony_events.2.C:0 "請願を認める。"
+cc_colony_events.2.D:0 "[cc_colony_leader.GetSheHe]は自分の立場を弁えていない。[cc_colony_leader.GetHimHer]逮捕せよ!"
+cc_colony_events.2.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+
+
+cc_colony_events.21.name:0 "[root.GetName]で小規模の抗議"
+cc_colony_events.21.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetHisHer]教えは思っていたほど尊敬を集めてはいなかったようだ!!"
+
+
+cc_colony_events.22.name:0 "[root.GetName]で大規模な抗議"
+cc_colony_events.22.desc:0 "[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では[cc_colony_leader.GetHisHer]釈放を求める運動が広がっている。抗議活動は激しさを増し、地方当局は住民の制御に困難をきたすようになり、中央に事態の収拾を求めてきた。"
+cc_colony_events.22.A:0 "[cc_colony_leader.GetHimHer] [Root.Owner.Capital.GetName]へ移せ。 [cc_colony_leader.GetSheHe]が二度と[Root.GetName]の土を踏むことは無いだろう。"
+cc_colony_events.22.A.tooltip:0 "この一連の行動は住民の[Root.Owner.GetName]に対する態度に永続的な影響を与えるかもしれない。"
+cc_colony_events.22.B:0 "[cc_colony_leader.GetHimHer]釈放し、[cc_colony_leader.GetHimHer]総督代理として認めよ。" 
+
+
+cc_colony_events.221.name:0 "[Root.GetName]の消えることのない不信感"
+cc_colony_events.221.desc:0 "幾年か経ち、[cc_colony_leader.GetName]の逮捕に対する抵抗は落ち着いた。しかし、[cc_colony_leader.GetHisHer]記憶-どのように[cc_colony_leader.GetSheHe]が[root.GetName]から引き離されたか-は苦い記憶として住民の中に残っている。住民が中央国家を完全に信頼することはまずないだろう。"
+
+cc_colony_events.23.name:0 "抗議者が[cc_colony_leader.GetName]を解放"
+cc_colony_events.23.desc:0 "[Root.GetName]で[cc_colony_leader.GetName]を逮捕したことで大規模な抗議活動が勃発した。地元当局はこの状況に対処しきれず、混乱の最中に抗議の集団が惑星刑務所のセキュリティを突破し、[cc_colony_leader.GetName]を解放した。当局は状況への対処について指示を求めている。"
+cc_colony_events.23.A:0 "彼らの要求を認めよ。ここで内乱を始めさせるわけにはいかない。"
+cc_colony_events.23.B:0 "[cc_colony_leader.GetHimHer]再逮捕し、[cc_colony_leader.GetHimHer] [Root.Owner.Capital.GetName]へ移せ。"
+cc_colony_events.23.C:0 "この暴徒と[cc_colony_leader.GetHisHer]支持者を捕らえよ。この状況を座視するわけにはいかない。"
+
+cc_colony_events.231.name:0 "[cc_colony_leader.GetName]の逮捕に成功"
+cc_colony_events.231.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは成功した。[cc_colony_leader.GetSheHe]の身柄は確保され[Root.Owner.Capital.GetName]へと移された。しかし、[Root.GetName]での抗議はいまだに根強く、我々に対する信頼を回復できるかどうかはわからない。"
+cc_colony_events.231.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.232.name:0 "[cc_colony_leader.GetName]の逮捕に失敗"
+cc_colony_events.232.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは失敗した。[cc_colony_leader.GetSheHe] は[cc_colony_leader.GetHisHer]最も信頼している支持者を集め、[cc_colony_leader.GetHisHer]教え(明確に反体制的な)を広げる地下活動を展開した。いつか[cc_colony_leader.GetSheHe]トラブルをもたらすだろう。"
+
+cc_colony_events.233.name:0 "[root.GetName]での取り締まりに成功"
+cc_colony_events.233.desc:0 "[cc_colony_leader.GetName]と[cc_colony_leader.GetHisHer]支持者に対する取り締まり及び殺害は概ね成功に終わった。彼らは植民地から一掃されたが、住民からの信頼を取り戻すには時間がかかりそうだ。"
+
+cc_colony_events.234.name:0 "[root.GetName]での取り締まりに失敗"
+cc_colony_events.234.desc:0 "[cc_colony_leader.GetName]の取り締まり及び殺害に失敗した。[cc_colony_leader.GetSheHe]は[cc_colony_leader.GetHisHer]最も信頼している支持者を集め、[Root.Owner.GetName]からの独立を目指す地下運動を開始した。しばらくの間混乱が続くだろうことが予測される。"
+cc_colony_events.235.name:0 "[Root.GetName]での[cc_colony_leader.GetName]逮捕劇は悲劇に終わる"
+cc_colony_events.235.desc:0 "[cc_colony_leader.GetName]を逮捕しようとする試みは失敗に終わった。[cc_colony_leader.GetSheHe]は十字砲火の最中、流れ弾か[cc_colony_leader.GetHisHer] 自身による弾で死亡した。不幸なことに、[cc_colony_leader.GetSheHe]は殉難者としてさらに名を上げ[cc_colony_leader.GetHisHer]が最も信頼していた支持者たちはあらたに我が国からの独立を試みる地下の抵抗運動を開始した。しばらくの間混乱が続くことが予測される。"
+
+cc_colony_events.25.name:0 "偉大なる[root.owner.GetSpeciesName]の死"
+cc_colony_events.25.desc:0 "[cc_colony_leader.GetName],'[root.GetName]の総督代理,が病気のため本日死亡した。 [root.GetName] の住民は[cc_colony_leader.GetHisHer]死を悼んだ。 [cc_colony_leader.GetHisHer]最後の願いは、[cc_colony_leader.GetSheHe]が蒔いた次世代の士官の種の芽を育てるべく[root.GetName]に巨大な士官学校を設立することであった。[root.GetName]の関係者はこの願いを現実のものとすべく我々に計画を持ちかけてきた。\n\n士官学校を設立するべきだろうか?"
+cc_colony_events.25.A: "勿論です!"
+cc_colony_events.25.B: "高すぎる"
+cc_colony_events.25.B.tooltip:0 "[cc_colony_leader.GetName]の影響は30年後には消えるだろう。"
+cc_colony_events.251.name:0 "[root.GetName]に士官学校がオープン"
+cc_colony_events.251.desc.:0 "[cc_colony_leader.GetName]の名誉を記念する士官学校が完成した。惑星の住民の間では、その開学は[root.GetName]が[root.owner.GetName]の軍学の中心地となることへの喜びとともに迎えられた。さらに[root.owner.GetName]中の軍人と支援者は、この偉大なる国家への軍務に服する者たちに対する[root.owner.GetRulerTitle]の献身の証に満足している。"
+
+cc_milacademy_will_be_built:0 "\n士官学校の完成には5年かかる。完成すると§Y$cc_milacademy$§!の補正を得る, 効果:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+
+cc_founder_militarist:0 "惑星総督代理"
+cc_founder_militarist_desc:0 "この惑星は「総督代理」の地位を贈られた退役士官に統治されている。"
+
+cc_militarist_influence:0 "軍国主義の影響"
+cc_militarist_influence_desc:0 "退役士官が惑星当局に助言を行っている。"
+
+cc_minor_protests_militarist:0 "小規模の抗議"
+cc_minor_protests_militarist_desc:0 "高名な宇宙軍退役士官の一人を逮捕したことで小さな抗議が巻き起こっている。"
+cc_major_protests_militarist:0 "大規模な抗議"
+cc_major_protests_militarist_desc:0 "高名な宇宙軍退役士官の一人を逮捕したことで大きな抗議が巻き起こっている。"
+
+cc_underground_militarist_movement_1:0 "地下の軍国主義運動"
+cc_underground_militarist_movement_1_desc:0 "反体制的な元宇宙軍士官が主導する地下運動がこの惑星で活発だ。この運動は我が国の理想に反する思想を広めることを目的としている。"
+cc_underground_militarist_movement_2:0 "地下の軍国主義運動"
+cc_underground_militarist_movement_2_desc:0 "反体制的な元宇宙軍士官が主導する地下運動がこの惑星で活発だ。この運動の究極の目的は我が国からの完全な独立だ。"
+
+cc_militarists_offended:0 "軍国主義者の不満"
+cc_militarists_offended_desc:0 "軍国主義志向の住民は現体制へ不満を持っている。"
+
+cc_milacademy_built_faction:0 "士官学校"
+
+cc_building_milacademy:0 "士官学校を建設中"
+cc_building_milacademy_desc:0 "この惑星では士官学校が建設中だ。"
+
+cc_milacademy:0 "士官学校"
+cc_milacademy_desc:0 "この惑星の士官学校は軍事学の拠点として重要な場所となっている。熱意有る士官はここを訪れ学ぶために何光年もの距離を飛んでくる。"
+
+cc_founders_memory_disrespected_1_militarist:0 "地元の宇宙軍士官への無礼"
+cc_founders_memory_disrespected_1_militarist_desc:0 "中央国家の退役士官に対する扱い方に住民は失望している。"
+
+cc_mourning_martyr:0 "殉じた者への悼み"
+
+
+
+#Pacifists
+
+cc_colony_events.3.name:0 "[root.GetName]の平和活動家"
+cc_colony_events.3.desc.pos:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 引退した外交官[cc_colony_leader.GetName]が新植民地にて紛争の危険に対抗するためのメディアキャンペーンを開始し、[root.owner.GetName]で採用されている哲学を賞賛している。このキャンペーンに刺激を受けた支持者たちは「Ghandeis」というグループを形成しており、この新しい運動は地元住民の間でとても人気だ。現地の指導者たちは(地元住民からの支持を得るために)全ての種類の紛争や戦争に反対するようになり、住民らは[root.owner.GetName]がより平和な銀河を追求するためにも [cc_colony_leader.GetName]を植民地のリーダーに押し上げたいと考えているようだ。."
+cc_colony_events.3.desc.neut:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 引退した外交官[cc_colony_leader.GetName]が新植民地にて紛争の危険に対抗するためのメディアキャンペーンを開始した。このキャンペーンに刺激を受けた支持者たちは「Ghandeis」というグループを形成しており、この新しい運動は地元住民の間でとても人気だ。現地の指導者たちは全ての種類の紛争や戦争に反対するようになり、住民らは我が国を外交を更に重視するような方向へと進ませてゆくべく[cc_colony_leader.GetName]を植民地のリーダーに押し上げたいと考えているようだ。\n\nこの状況に対しどのように対応するべきだろうか?"
+cc_colony_events.3.desc.neg:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 引退した外交官[cc_colony_leader.GetName]が新植民地にて紛争の危険に対抗するためのメディアキャンペーンを開始した。このキャンペーンに刺激を受けた支持者たちは「Ghandeis」というグループを形成しており、この新しい運動は地元住民の間でとても人気だ。現地の指導者たちは全ての種類の紛争や戦争に反対するようになり、今のところ、惑星当局はこの状況に危惧を抱いている。いくらかの地域では、政府職員に対する扇動も行われているようだ。\n\nこの状況に対しどのように対応するべきだろうか?"
+
+cc_colony_events.3.B:0 "[cc_colony_leader.GetHimHer]大目に見よう"
+cc_colony_events.3.C:0 "[cc_colony_leader.GetSheHeCap]はトラブルメーカーだ。[cc_colony_leader.GetHimHer]逮捕せよ。"
+cc_colony_events.3.C.tooltip:0 "[cc_colony_leader.GetName]は表舞台から姿を消す。この行動がもたらす結果は予測不能だ。"
+
+
+cc_colony_events.31.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.31.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。, しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetHisHer] の教えはこちらが考えているほど尊敬を集めてはいなかったようだ!"
+
+
+cc_colony_events.32.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.32.desc:0 "[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では[cc_colony_leader.GetHisHer]釈放を求める運動が広がっている。ほとんどの抗議活動は平和的な目標を持っているとはいえ、政府当局にとっては様々な意味で不愉快なものとなっている。地方当局は住民の制御に困難をきたすようになり、中央に事態の収拾を求めてきた。"
+cc_colony_events.32.A:0 "$cc_colony_events.22.A$"
+cc_colony_events.32.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.32.B:0 "[cc_colony_leader.GetHimHer]釈放しよう。"
+
+
+cc_colony_events.321.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.321.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.33.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.33.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.33.A:0 "$cc_colony_events.63.A$"
+cc_colony_events.33.B:0 "$cc_colony_events.63.B$"
+cc_colony_events.33.C:0 "Ghandeisを全力で取り締まれ"
+
+cc_colony_events.331.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.331.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは成功に終わった。 [cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetIsAre]は抑留され、[Root.Owner.Capital.GetName]へと安全に移送された。しかし、 [Root.GetName]ではまだ非暴力的な抵抗運動が続いている。彼らからの信頼を取り戻すことができるかどうかははっきりとはしない。"
+cc_colony_events.331.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.332.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.332.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは失敗した。[cc_colony_leader.GetSheHe] は[cc_colony_leader.GetHisHer]最も信頼している支持者を集め、[cc_colony_leader.GetHisHer]教え(明確に反体制的な)を広げる地下活動を展開した。いつか[cc_colony_leader.GetSheHe]トラブルをもたらすだろう。"
+
+cc_colony_events.333.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.333.desc:0 "$cc_colony_events.233.desc$"
+
+cc_colony_events.334.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.334.desc:0 "[cc_colony_leader.GetName]の取り締まり及び殺害の任務は失敗に終わった。 [cc_colony_leader.GetSheHe] は[cc_colony_leader.GetHisHer]が最も信頼する支持者を集め、[Root.Owner.GetName]からの平和的な独立を目指す地下運動を開始した。不運にも、[root.owner.GetName]の「大いなる悪」からの解放のためには武力闘争も辞さないという主張を行う集団も出てきた。しばらくの間混乱が続くことが予測される。"
+
+
+cc_colony_events.34.name:0 "[cc_colony_leader.GetName]の名声の広がり"
+cc_colony_events.34.desc:0 "15年以上に渡り、[cc_colony_leader.GetName]は[Root.GetName]を導いてきた。[cc_colony_leader.GetSheHe]は住民の間で非常に人気があり、[cc_colony_leader.GetHisHer]評判が広がっている。[cc_colony_leader.GetSheHe]は今や[root.owner.GetName]での平和志向の人々皆にとって良い刺激となっているようだ。[cc_colony_leader.GetSheHe]は[cc_colony_leader.GetHisHer]ことを称える惑星を訪問してまわるワールドツアーを企画した。"
+
+cc_colony_events.341.name:0 "[cc_colony_leader.GetName]のワールドツアーが終了"
+cc_colony_events.341.desc:0 "[cc_colony_leader.GetName]は[root.owner.GetName]の[cc_colony_leader.GetHisHer]セクターを回るワールドツアーを終えた。[cc_colony_leader.GetHisHer]支持者は偉大なる思想家[cc_colony_leader.GetSpeciesName]に出会う機会を得て喜んでおり、[cc_colony_leader.GetHisHer]例示に刺激を受けている。[cc_colony_leader.GetHisHer]名声は新たな高みへと達した。"
+
+
+cc_colony_events.342.name:0 "[cc_colony_leader.GetName]のワールドツアーは悲劇に終わる"
+cc_colony_events.342.desc:0 "[cc_colony_leader.GetName]は[random_visit_planet.GetName]の支持者と会っているときに、[cc_colony_leader.GetHisHer]警備員が反応する前に、狂信的な帝国主義者による銃撃を受け、倒れた。残念ながら、暗殺者は何かを言う前に群集に殺されてしまった。これにより誰か(たぶん[root.owner.GetSpeciesAdj]政府の高官)がこの暗殺の背後にいるという陰謀論が助長されてしまった。[root.owner.GetSpeciesAdj]当局が[random_visit_planet.GetName]で[cc_colony_leader.GetName]に十分なセキュリティ環境を提供できていなかったことが悲劇の原因だという主張もある。とにかく、[root.owner.GetName]の平和主義コミュニティは憤慨しきっている。[spiritualist_faction.GetName]の首脳陣は混乱の最中、政府関係者と会合を開き、怒りを露にした一方、平和主義者たちの痛みを和らげるために[cc_colony_leader.GetName]の国葬を開き、[root.GetName]に[cc_colony_leader.GetHisHer]名誉を称える大きな寺院を建立することを提案した。"
+cc_colony_events.342.A:0 "やろう。[cc_colony_leader.GetSheHe]はそれに値する。"
+cc_pacmonument_will_be_built:0 "\n記念碑の完成には5年かかる。完成すると§Y$cc_pacifist_centre$§!の補正を得る。 効果:\n$planet_resource_unity_add$: §G+5§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+250%§!"		
+cc_colony_events.342.B:0 "$cc_colony_events.25.B$"
+
+cc_colony_events.343.name:0 "[root.GetName]に会衆センターがオープン"
+cc_colony_events.343.desc:0 "[cc_colony_leader.GetName]の名誉を称える寺院が完成した。そのオープン日から[cc_colony_leader.GetHisHer]支持者が他の惑星からも多く訪れた。[root.owner.GetName]内外の平和主義を称える巡礼の地として発展していくだろう。"
+
+cc_colony_events.35.name:0 "$cc_colony_events.25.name$"
+cc_colony_events.35.desc:0 "[cc_colony_leader.GetName]が今朝亡くなった。[cc_colony_leader.GetSheHe]は長い間闘病生活を続けてきたが、最終的に高熱を発し、それが原因で亡くなった。[root.GetName]の住民は哀悼の意を表しており、[cc_colony_leader.GetHisHer]名誉を称え、[cc_colony_leader.GetHisHer]人生や教えを記念する特別な寺院の建立を要請した。"
+cc_colony_events.35.A:0 "この模範市民を称える記念碑を建てよう。"
+cc_colony_events.35.B:0 "高すぎる"
+cc_colony_events.35.C:0 "[cc_colony_leader.GetSheHe]はただのトラブルメーカだった。[cc_colony_leader.GetHisHer]記憶が忘れ去られますように。"
+
+cc_colony_events.35.C.tooltip:0 "[root.GetName]における[cc_colony_leader.GetName]の影響力は30年で無くなる。"
+
+cc_minor_pacmonument_will_be_built:0 "\n記念碑の完成には5年かかる。完成後は§Y$cc_minor_pacmonument$§!の補正を得る, 効果:\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$pop_ethic_pacifist_attraction_mult$: §Y+150%§!"
+cc_colony_events.351.desc:0 "[cc_colony_leader.GetName]の名誉を称える記念碑が完成した。[root.GetName]に、[cc_colony_leader.GetHisHer]教えと業績を称える場が誕生した。"
+
+
+cc_pacifists_offended:0 "平和主義者の不満"
+cc_pacifists_offended_desc:0 "この惑星の平和主義者たちは新体制の態度に不満を持っている"
+
+cc_pacifist_protectorate:0 "平和主義護民領"
+cc_pacifist_protectorate_desc:0 "この惑星の領有者は反体制派の平和主義者と和平を結び、この惑星を平和主義護民領として宣言した。"
+
+cc_founder_pacifist:0 "著名な平和活動家"
+cc_founder_pacifist_desc:0 "この惑星の創始者は'Ghandei'として知られる平和活動家だ。かの者は住民に高く評価されており、その教えは大きく広がっている。"
+
+cc_minor_protests_pacifist:0 "小規模の抗議"
+cc_minor_protests_pacifist_desc:0 "この惑星では、著名な平和活動家の一人を逮捕したことで小さな抗議が巻き起こっている。"
+
+cc_major_protests_pacifist:0 "大規模な抗議"
+cc_major_protests_pacifist_desc:0 "この惑星では、著名な平和活動家の一人を逮捕したことで大きな抗議が巻き起こっている。"
+
+cc_pacifist_leader_visit:0 "'Ghandei'の訪問"
+cc_pacifist_leader_visit_desc:0 "'Ghandei'として知られる有名な平和活動家がこの惑星を訪問した。"
+
+cc_mourning_pacifist:0 "'Ghandei'の死への悼み"
+cc_mourning_and_angry_pacifist:0 "'Ghandei'の死に対する反応に怒っている"
+
+cc_building_pacmonument:0 "記念碑を建設中"
+cc_building_pacmonument_desc:0 "大物平和活動家の名誉を称える記念碑がこの惑星で建設中だ。"
+
+cc_minor_pacmonument:0 "平和活動家の記念碑"
+cc_minor_pacmonument_desc:0 "この惑星の初期植民者の一人である、ある平和活動家を記念する記念碑があり、毎年の国定記念日には多くの人が訪れる。"
+
+cc_pacifist_centre:0 "平和集会場"
+cc_pacifist_centre_desc:0 "大物平和活動家を記念して建造された記念碑がこの惑星にあり、そこは活動家の支持者たちの集会場となっている"
+
+cc_founders_memory_disrespected_1_pacifist:0 "地元の平和活動家への無礼"
+cc_founders_memory_disrespected_1_pacifist_desc:0 "中央国家のこの惑星出身の平和活動家に対する扱い方に住民は失望している。"
+
+cc_founders_memory_disrespected_2_pacifist:0 "地元の平和活動家への無礼"
+cc_founders_memory_disrespected_2_pacifist_desc:0 "中央国家のこの惑星出身の平和活動家に対する扱い方に住民は失望している。"
+
+cc_underground_pacifist_movement_1:0 "地下の平和活動"
+cc_underground_pacifist_movement_1_desc:0 "反体制的な平和活動家の教えを中心とする地下運動がこの惑星で活発だ。我が国の理想に反する思想を広げることを目的としている。"
+
+cc_underground_pacifist_movement_2:0 "地下の平和抵抗運動"
+cc_underground_pacifist_movement_2_desc:0 "反体制的な教祖の教えを中心とする地下運動がこの惑星で活発だ。その究極的な目標は我が国からの完全な独立を平和的に達成することだ。不運にも、中央国家の「大いなる悪」からの解放のためには武力闘争も辞さないという主張を行う集団も一部にはある。"
+
+
+#Xenophile
+
+cc_colony_events.4.name:0 "[root.GetName]の受容運動家"
+cc_colony_events.4.desc.pos:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか?\n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これはある心優しい指導者、[cc_colony_leader.GetName]によるもので、全ての異星人に対し平等で公正な取り扱いを保証するシステムの構築を求め始めてもいる。このイデオロギーは新しい植民者たちの間で高い人気を持ち始めている。彼らは多文化の安息所になりつつある[root.GetName]での思想に惹かれているのだ。彼らは[cc_colony_leader.GetHimHer]「メディエーター」と呼び、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。幸運なことに、[cc_colony_leader.GetSheHe]には現地当局への反抗を起こすつもりはないようだ。実際に何か重要な決断をする前には現地当局と会談を行ってもいる。現地当局の関係者は[cc_colony_leader.GetHisHer]教えとイニシアチブを認め、[cc_colony_leader.GetHimHer]現地の政府へ採用することを提案してきた。" 
+cc_colony_events.4.desc.neut:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか? \n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これはある心優しい指導者、[cc_colony_leader.GetName]によるもので、全ての異星人に対し平等で公正な取り扱いを保証するシステムの構築を求め始めてもいる。このイデオロギーは新しい植民者たちの間で高い人気を持ち始めている。彼らは多文化の安息所になりつつある[root.GetName]での思想に惹かれているのだ。彼らは[cc_colony_leader.GetHimHer]「メディエーター」と呼び、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。[cc_colony_leader.GetSheHe]この点をもって[root.owner.GetName]下の現地政府へ対抗するつもりはないようだ。むしろ、今までのところ [cc_colony_leader.GetSheHe]現地政府と良い協力関係を結んできた。しかし[cc_colony_leader.GetHisHer]の思想が理想とするころは[root.owner.GetName]のリーダーたちのそれとは違う。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+cc_colony_events.4.desc.neg:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか? \n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これはある厄介者、[cc_colony_leader.GetName]によるもので、全ての異星人に対し平等で公正な取り扱いを保証するシステムの構築を求め始めてもいる。このイデオロギーは新しい植民者たちの間で高い人気を持ち始めている。彼らは多文化の安息所になりつつある[root.GetName]での思想に惹かれているのだ。彼らは[cc_colony_leader.GetHimHer]「メディエーター」と呼び、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。[cc_colony_leader.GetSheHe]の採用する路線は[root.owner.GetName]を代表する現地当局とは別物で、現地当局からは「やっかいなもの」と呼ばれているようだ。\n\n[cc_colony_leader.GetHimHer]をどうするべきだろうか?" 
+
+cc_colony_events.4.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.4.C:0 "$cc_colony_events.3.C$"
+cc_colony_events.4.C.tooltip:0 "$cc_colony_events.remove_leader.tooltip$"
+
+
+cc_colony_events.41.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.41.desc:0 "$cc_colony_events.61.desc$"
+
+
+cc_colony_events.42.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.42.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.42.A:0 "$cc_colony_events.22.A.desc$"
+cc_colony_events.42.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.42.B:0 "[cc_colony_leader.GetHimHer]釈放せよ。" 
+
+
+cc_colony_events.421.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.421.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.43.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.43.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.43.A:0 "$cc_colony_events.23.A$"
+cc_colony_events.43.B:0 "$cc_colony_events.23.B$"
+cc_colony_events.43.C:0 "このアジテーターと[cc_colony_leader.GetHisHer]支持者を取り締まれ。"
+
+cc_colony_events.431.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.431.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.431.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.432.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.432.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは失敗に終わった。 [cc_colony_leader.GetSheHeCap][cc_colony_leader.GetHisHer]最も信頼している支持者を集め、[root.GetName]の異星人コミュニティを偏見や差別から守ろうとする地下活動を始めたらしい。[cc_colony_leader.GetShehe]は幾度かのトラブルをもたらすかもしれない。"
+
+cc_colony_events.433.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.433.desc:0 "$cc_colony_events.533.desc$"
+
+cc_colony_events.434.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.434.desc:0 "$cc_colony_events.234.desc$"
+
+
+cc_colony_events.45.name:0 "$cc_colony_events.55.name$"
+cc_colony_events.45.desc:0 "[cc_colony_leader.GetName]が今朝亡くなった。[cc_colony_leader.GetSheHe]健康状態が悪化し闘病生活を送っていたが、高熱を発しそれが死因となった。[cc_colony_leader.GetHisHer]最後のプロジェクトは文化交流を毎年行うことで種族の間での平穏な生活を確かなものにしようとするものであったが、そのプロジェクトは未完のまま[cc_colony_leader.GetSheHe]亡くなった。死を悼む[root.GetName]の住民 は[cc_colony_leader.GetName]の最後の望みは尊重されるべきだと考えており、政府に文化交流の支援を願い出てきた。"
+cc_colony_events.45.A: "文化交流のために建物を提供しよう"
+cc_colony_events.45.B: "$cc_colony_events.25.B$"
+cc_colony_events.45.C:0 "$cc_colony_events.65.C$"
+cc_colony_events.45.C.tooltip:0 "$cc_colony_events.55.C.tooltip$"
+
+cc_colony_events.451.name:0 "[root.GetName]の文化交流"
+cc_colony_events.451.desc:0 "[cc_colony_leader.GetName]の名誉を称える文化交流の準備が整った。開会式は惑星の住民や[root.owner.GetName]内の異星人なら誰でも参加できた。[cc_colony_leader.GetHisHerCap]の熱意はそれが称えられる限り忘れ去られることはないだろう。"
+
+
+cc_xenophile_institute_will_be_built:0 "\n文化交流の準備が完了するまでには5年間かかる。完成すると§Y$cc_xenophile_institute$§!の補正を得る, 効果:\n$MOD_POP_HAPPINESS$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+
+cc_founder_xenophile:0 "受容の媒介者"
+cc_founder_xenophile_desc:0 "この植民地は全ての異星人に対し平等で公正な取り扱いを保証することを自らの任務としているカリスマ的個人の影響下にある。"
+
+cc_minor_protests_xenophile:0 "小規模の抗議"
+cc_minor_protests_xenophile_desc:0 "この惑星では住民のリーダーを逮捕したことで小規模の抗議活動が行われている。"
+cc_major_protests_xenophile:0 "大規模な抗議"
+cc_major_protests_xenophile_desc:0 "この惑星では住民のリーダーを逮捕したことで大規模な抗議活動が行われている。"
+
+cc_underground_xenophile_movement_1:0 "地下の受容主義運動"
+cc_underground_xenophile_movement_1_desc:0 "この惑星ではカリスマ的個人による地下活動が活発だ。異星人を差別や偏見から守ることを目標としている。"
+cc_underground_xenophile_movement_2:0 "地下の受容主義運動"
+cc_underground_xenophile_movement_2_desc:0 "この惑星ではカリスマ的個人による地下活動が活発だ。我が国からの独立が運動の究極的な目標だ。"
+
+cc_xenophiles_offended:0 "受容主義者の怒り"
+cc_xenophiles_offended_desc:0 "この惑星の受容主義である住民は新体制の態度に対し不満を持っている。"
+
+cc_building_xenophile_institute:0 "文化交流の準備"
+cc_building_xenophile_institute_desc:0 "この惑星では「メディエーター」が遺した遺産を守ることを目的とした文化交流の準備が進められている。"
+
+cc_xenophile_institute:0 "文化交流"
+cc_xenophile_institute_desc:0 "ここは種族間関係を改善するために奮闘したある市民を記念するために開かれた文化交流のホスト惑星だ。彼らの熱意はそれが称えられる限り忘れ去られることは無いだろう。"
+
+cc_founders_memory_disrespected_1_xenophile:0 "地元の市民への無礼"
+cc_founders_memory_disrespected_1_xenophile_desc:0 "種族間関係の改善を追い求めてきた有名な市民である「メディエーター」に対する中央国家のやり方に住民は失望している。"
+
+cc_founders_memory_disrespected_2_xenophile:0 "$cc_founders_memory_disrespected_1_xenophile$"
+cc_founders_memory_disrespected_2_xenophile_desc:0 "$cc_founders_memory_disrespected_1_xenophile_desc$"
+
+
+#Xenophobe
+
+cc_colony_events.5.name:0 "[root.GetName]のナショナリストアジテーター"
+cc_colony_events.5.desc.pos:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか?\n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これは全ての異星人に対し否定的な演説をしてきたある熱意ある弁論家、[cc_colony_leader.GetName]によるもので、その言葉は植民者たちを熱狂させている。彼らは[cc_colony_leader.GetHimHer]「ヘゲモン」と呼び始め、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。幸運なことに、[cc_colony_leader.GetSheHe]には現地当局への反抗を起こすつもりはないようだ。実際に何か重要な決断をする前には現地当局と会談を行ってもいる。現地当局の関係者は[cc_colony_leader.GetHisHer]教えとイニシアチブを認め、[cc_colony_leader.GetHimHer]現地の政府へ採用することを提案してきた。" 
+cc_colony_events.5.desc.neut:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか?\n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これは全ての異星人に対し否定的な演説をしてきたある熱意ある弁論家、[cc_colony_leader.GetName]によるもので、その言葉は植民者たちを熱狂させている。彼らは[cc_colony_leader.GetHimHer]「ヘゲモン」と呼び始め、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。[cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetSheHe]この点をもって[root.owner.GetName]下の現地政府へ対抗するつもりはないようだ。むしろ、今までのところ [cc_colony_leader.GetSheHe]現地政府と良い協力関係を結んできた。しかし[cc_colony_leader.GetHisHer]の思想が理想とするころは[root.owner.GetName]のリーダーたちのそれとは違う。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+cc_colony_events.5.desc.neg:0 "私たちが星々の中に足を踏み入れるようになると、数多くの人が不思議に思うようになった。別の生命を見つけたとき、私たちはどうするのだろうか?\n\n[root.GetName]では、このトピックが公開討論の場で広く扱われてきた。これは全ての異星人に対し否定的な演説をしてきたある熱意ある弁論家、[cc_colony_leader.GetName]によるもので、その言葉は植民者たちを熱狂させている。彼らは[cc_colony_leader.GetHimHer]「ヘゲモン」と呼び始め、高位の[root.owner.GetSpeciesAdj]当局よりも[cc_colony_leader.GetHisHer]助言に従い始めている。[cc_colony_leader.GetSheHe]の採用する路線は[root.owner.GetName]を代表する現地当局とは別物で、現地当局からは「やっかいなもの」と呼ばれているようだ。\n\n[cc_colony_leader.GetHimHer]をどうするべきだろうか?" 
+
+cc_colony_events.5.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.5.C:0 "$cc_colony_events.3.C$"
+cc_colony_events.5.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+
+
+cc_colony_events.51.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.51.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。, しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetHisHer]の扇動は我々が思っていたほど効果をあげてはいなかったようだ!"
+
+
+cc_colony_events.52.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.52.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.52.A:0 "$cc_colony_events.22.A.desc$"
+cc_colony_events.52.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.52.B:0 "[cc_colony_leader.GetHimHer]釈放し[cc_colony_leader.GetHimHer]覇権者になることを許そう。"  
+
+
+cc_colony_events.521.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.521.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.53.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.53.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.53.A:0 "$cc_colony_events.23.A$"
+cc_colony_events.53.B:0 "$cc_colony_events.23.B$"
+cc_colony_events.53.C:0 "この大衆扇動家と[cc_colony_leader.GetHisHer]支持者を皆捕まえろ。このような扇動者を容認するわけにはいかない。"
+
+cc_colony_events.531.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.531.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.531.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.532.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.532.desc:0 "[cc_colony_leader.GetName]を逮捕する試みは失敗に終わった。 [cc_colony_leader.GetSheHeCap][cc_colony_leader.GetHisHer]最も信頼している支持者を集め、[root.GetName]を異星人の干渉から守ろうとする地下運動を始めたらしい。[cc_colony_leader.GetShehe]幾度かのトラブルをもたらすかもしれない。"
+
+cc_colony_events.533.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.533.desc:0 "$cc_colony_events.233.desc$"
+
+cc_colony_events.534.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.534.desc:0 "$cc_colony_events.234.desc$"
+
+cc_colony_events.54.name:0 "[cc_colony_leader.GetName]の名声の広がり"
+cc_colony_events.54.desc.pos:0 "15年以上に渡り、[cc_colony_leader.GetName]は[Root.GetName]を導いてきた。 [cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetHasHave]は[root.owner.GetSpeciesAdj]の住民に熱意と団結をもたらした。[cc_colony_leader.GetHisHerCap]評判は広がり、その噂は国外にまで及んだ。そしてある外国は[cc_colony_leader.GetHimHer]殺害する計画を立てているようだ。しかし、そのためには[root.owner.GetName]のそこかしこに沢山いる[cc_colony_leader.GetHisHer]支持者たちの間をかいくぐらなければならないのだ。誰にこのようなことができるのだろうか。"
+#Excellent!
+#Non-xenophobe variant:
+cc_colony_events.540.name:0 "A Foreign Nuisance" 
+cc_colony_events.540.desc:0 "同盟国である、[from.owner.GetName]は、排他主義的なカリスマである[cc_colony_leader.GetName]を過去数十年程許容してきた。[cc_colony_leader.GetSheHeCap]は自分自身を[from.GetName]の[cc_colony_leader.GetFVes]と呼び、他の[from.owner.GetSpeciesAdj]惑星では、公に外国や異星人を嘲る言論がみられるようになった。特に、[root.GetName]は - 「人民の敵」として -　。 [cc_colony_leader.GetSheHeCap]は最近、[from.owner.GetName]は私たちの住民や伝統、政府を軽く見ていると非難する演説を繰り返しており、[from.owner.GetName]との同盟を解消するだけでなく、[from.owner.GetName]に対し明確に敵対的な姿勢を採るべきであると訴えている。私たちには外交官や商業者たちが[cc_colony_leader.GetName]を支持する排他主義者に嫌がらせや攻撃をされているという報告が複数入っている。何とかしなければ。" 
+cc_colony_events.540.A:0 "同盟国に連絡をとれ、彼らを助けることができる筈だ…問題を消し去るんだ。"
+cc_colony_events.540.B:0 "リスクをとる価値はない。"
+
+cc_colony_events.54.desc.neg:0 "15年以上に渡り、[cc_colony_leader.GetName]は[Root.GetName]を導いてきた。 [cc_colony_leader.GetSheHeCap] [cc_colony_leader.GetHasHave]は[root.owner.GetSpeciesAdj]の住民に熱意と団結をもたらした。 しかし[cc_colony_leader.GetSheHe] [cc_colony_leader.GetIsAre]が異星人権団体の中で議論を呼ぶ人物であることも確かだ。最近、[cc_colony_leader.GetHisHer]反異星人的な演説が同盟国の耳に入り、[ally.GetName]は、大使を[root.owner.GetRulerTitle] [root.owner.GetRulerName]に派遣し、[ally.GetSpeciesAdj] [ally.GetRulerTitle]が民衆扇動家を排除する支援をする準備があるとの説明をした。失敗すれば、[ally.GetName] が大目に見れくれることは、もはや無いだろう。\n\nどうするべきだろうか?"
+cc_colony_events.54.A:0 "[cc_colony_leader.GetName]は[root.owner.GetSpeciesAdj] citizenの忠実な市民である。"
+cc_colony_events.54.B:0 "よろしい。[cc_colony_leader.GetHimHer]消し去ろう。"
+cc_colony_events.54.C:0 "私たちは自らの法を尊重しなければならない。私たちが[cc_colony_leader.GetHimHer]どのように思っていてもだ。"
+cc_colony_events.54.C.tooltip:0 "[cc_colony_leader.GetName]に対し行動はとらない。"
+
+cc_colony_events.541.name:0 "暗殺に成功"
+cc_colony_events.541.desc:0 "[cc_colony_leader.GetName]の暗殺に成功した。諜報員はこの作戦は順調に進み、証拠は何も残さなかったと主張してはいるものの、[cc_colony_leader.GetName]の支持者たちはこの暗殺の裏には[ally.GetName]が暗躍していると主張しており、我が国に所属する惑星の多くで[ally.GetName]との一切の繋がりを断つべきとの主張がなされ、排他主義的な態度をとる外交政策が採用された。"
+cc_colony_events.541.A:0 "何ということだ。"
+cc_colony_events.541.B:0 "彼らを好いたことなどなかった。"
+
+cc_colony_events.542.name:0 "[from.owner.GetName]は敵対的態度を採る"
+cc_colony_events.542.desc:0 "難しい選択を迫られたよ、[root.GetSpeciesNamePlural]。我々は我が友人と我が市民の板ばさみになってしまったのだ。慎重に考慮を重ねた結果、我々は市民に善をもたらすという[from.GetName]政府の基本的な任務に従うことにした。このような理由から、我々は[cc_colony_leader.GetName]を強制的に排除することを受け容れることもできないし、支援することもできないことを残念ながらも伝えなければならない。"
+cc_colony_events.542.option:0 "彼らへの態度を考え直さなければな。"
+
+cc_colony_events.5421.name:0 "[from.owner.GetName]は行動を拒絶"
+cc_colony_events.5421.desc:0 "難しい選択を迫られたよ、[root.GetSpeciesNamePlural]。我々は我が友人と我が市民の板ばさみになってしまったのだ。慎重に考慮を重ねた結果、我々は自らの法に反して自らの市民に反する行動をとることは出来ないと結論付けた。我々が彼らの考えをどれ程遺憾に思っていてもだ。このような理由から、我々は[cc_colony_leader.GetName]を強制的に排除することを受け容れることもできないし、支援することもできないことを残念ながらも伝えなければならない。申し訳ない。"
+cc_colony_events.5421.option:0 "彼らへの態度を考え直さなければな。"
+
+cc_colony_events.543.name:0 "[cc_colony_leader.GetName]排除への支援"
+cc_colony_events.543.desc:0 "あなたの悩みを解決するために、「ヘゲモン」[cc_colony_leader.GetName]を排除することには喜んで協力しますよ!こちらの諜報機関にはそちらの計画と協力するように指示してあります。すぐに[cc_colony_leader.GetHisHer]脅威は無くなることでしょう。"
+
+
+cc_colony_events.544.name:0 "[cc_colony_leader.GetName]の排除に成功"
+cc_colony_events.544.desc:0 "[cc_colony_leader.GetName]を排除する計画は大きな成功を収めた。事はなされ、暗殺に繋がるような証拠は抹消した。しかし、[cc_colony_leader.GetName]の支持者は我々を非難している。多分、彼らは異星人あるところに陰謀ありと考えているのだろう。だが、彼らの考えのうちいくらかは正しい。とにかく、from.owner.GetName]は我々を擁護し、[root.GetName]との友好関係は続くと述べた。"
+
+cc_colony_events.545.name:0 "[from.owner.GetName]の裏切り!"
+cc_colony_events.545.desc:0 "[cc_colony_leader.GetName]の排除に成功した。事はなされ、暗殺に繋がるような証拠は抹消した。しかし、[cc_colony_leader.GetName]の支持者は我々を非難している。多分、彼らは異星人あるところに陰謀ありと考えているのだろう。だが、彼らの考えのうちいくらかは正しい。ところが、[from.owner.GetSpeciesAdj] [from.owner.GetRulerTitle]はかつて我々に計画を支持すると約したにもかかわらず、[from.owner.leader.GetSheHe] [from.owner.leader.GetHasHave]は[root.GetName]での計画の全責任を否定し、最も侮辱的な言葉で我が国を非難した。我が国の大使が説明を要求したところ、大使には惑星を去る前には10日間の猶予が与えられると伝えられただけだった。"
+cc_colony_events.545.option:0 "$cc_colony_events.542.option$"
+
+cc_colony_events.546.name:0 "暗殺に失敗!" 
+cc_colony_events.546.desc:0 "我が国の諜報部員は[cc_colony_leader.GetName]の殺害に失敗し、途中に捕らえられた。これ以上この件に関与せずに彼らを奪還することは不可能だ。そのため、彼らを見捨てざるを得なかった。不幸なことに、彼らは口を割り、[cc_colony_leader.GetHimHer]暗殺しようとしていたことだけではなく、[ally.GetName]が協力していたことまで洩らしまった。これにより国中に動揺が広がった。[cc_colony_leader.GetName]の支持者は激怒し、中央政府に対し広く抵抗を開始した。 - そしてその抵抗には自国の住民に刃を向ける外国勢力に力を貸す自国政府に不満を感じた一般の住民が数多く参加している。結果として、政府に辞任を求める抵抗が広まった。\n\n[ally.GetName]の大使は任務の失敗を詫び、[ally.GetName]は支援することはできるものの、これ以上さらに[ally.GetSpeciesAdj]が関与してしまうと更なる抵抗が予想されると述べた。大使は身の危険を感じたため、政府の建物へと避難した。\n\n一方、[cc_colony_leader.GetName]の名声は新たな高みへと達し、支持者のいる諸惑星を周り、「裏切り者」の政府に対抗するために、「真の[root.owner.GetSpeciesName]」を支持するように求めていた。\n\nどのようにして秩序を維持するべきだろうか?" 
+cc_colony_events.546.A:0 "嵐に耐えなければならない時が来る。"
+cc_colony_events.546.B:0 "補償を試みる:暗殺の計画と[ally.GetSpeciesNamePlural]を非難する。"
+cc_colony_events.546.C:0 "謝罪し、辞任する。"
+
+cc_colony_events.547.name:0 "暗殺計画に失敗"
+cc_colony_events.547.desc:0 "暗殺者は無能だった。"ヘゲモン" [cc_colony_leader.GetName]の殺害に失敗し捕縛することもできなかった。我々の関与が判明したことで、[from.owner.GetName]では動揺が広がっており、両国の関係にも緊張が走った。しかし、向こうの政府は此方への態度を変えることは無いと言明している。"
+cc_colony_events.548.name:0 "裏切り!"
+cc_colony_events.548.desc:0 "暗殺者は無能だった。"ヘゲモン" [cc_colony_leader.GetName]の殺害に失敗し捕縛することもできなかった。我々の関与が判明したことで、[from.owner.GetName]では動揺が広がっている。住民の動揺に恐れをなし、[from.owner.GetSpeciesAdj]政府は[cc_colony_leader.GetName]の美辞麗句を反映するかのような言葉で[root.GetName]を非難した。此方の大使が説明を求めると、10日間以内の退去を求められた。両国間の関係は悪化するだろう!"
+cc_colony_events.548.option:0 "$cc_colony_events.542.option$"
+
+cc_colony_events.55.name:0 "偉大なる[cc_colony_leader.Species.GetName]の死"
+cc_colony_events.55.desc:0 "[root.GetName]の"ヘゲモン"、[cc_colony_leader.GetName]が今朝亡くなった。[cc_colony_leader.GetSheHeCap]の健康状態は以前から悪化していたが、高熱を発したことが死因となった。[root.GetName]は悲しみに包まれ、住民は政府に[cc_colony_leader.GetHisHer]名誉と業績、そして何より、[cc_colony_leader.Species.GetAdj]の栄光を称える特別な施設を建設することを提案してきた。"
+cc_colony_events.55.A: "$cc_colony_events.25.A$"
+cc_colony_events.55.B: "$cc_colony_events.25.B$"
+cc_colony_events.55.C:0 "$cc_colony_events.65.C$"
+cc_colony_events.55.C.tooltip:0 "[cc_colony_leader.GetName]'s influence will wear off in 30 years' time."
+
+cc_colony_events.551.name:0 "[root.GetName]に純潔会館がオープン"
+cc_colony_events.551.desc.A:0 "[cc_colony_leader.GetName]を称える施設が完成した。[cc_colony_leader.GetHisHer]支持者たちが他の惑星からも参加し、オープンセレモニーには数多くの者が参加した。ここは[cc_colony_leader.Species.GetAdj]のナショナリストたちの聖地となるだろう。"
+cc_colony_events.551.desc.B:0 "[cc_colony_leader.GetName]を称える純潔会館が完成した。[root.GetName]の住民は[cc_colony_leader.GetHisHer]教えと業績を記憶に留めることができるようになった。"
+
+cc_xenophobe_hero_1:0 "$cc_xenophobe_hero$"
+cc_xenophobe_hero_1_desc:0 "この惑星の住民の多くが、近隣の惑星にいる"ヘゲモン"を英雄と見なすようになり、異星人とその庇護者である政府との戦いに進まんとしている。"
+cc_widespread_xenophobic_unrest:0 "排他主義的な社会不安の広がり"
+cc_widespread_xenophobic_unrest_desc:0 "排他主義の派閥への支持が広がっている。国が外国勢力と手を結び、派閥の指導者を暗殺しようとしたことが明るみに出たからだ。"
+cc_xenophobe_assassinated_attempt:0 "ヘゲモンの暗殺を試みた"
+cc_ally_xenophobic_rhetoric:0 "排他主義的な雄弁家"
+
+cc_xenophobe_martyr:0 "殉じた者の記憶"
+cc_xenophobe_martyr_desc:0 "この惑星にいた、"ヘゲモン"は異星人の目論見により暗殺され、殉教者として記憶されることになった。."
+
+cc_mourning_xenophobe:0 "英雄への悼み"
+cc_mourning_and_angry_xenophobe:0 "英雄の死に対する怒り"
+
+cc_xenophobe_hero:0 "排他主義の英雄"
+cc_xenophobe_hero_desc:0 "この惑星の住民の多くが、近隣の惑星にいる"ヘゲモン"を英雄と見なすようになり、異星人との戦いに喜んで進まんとしている。"
+cc_xenophobe_assassinated:0 "英雄が暗殺された"
+cc_betrayed_us_ally:0 "我らを裏切った"
+cc_ignored_ally:0 "我らの懸念を無視した"
+
+cc_xenophobe_institute_will_be_built:0 "\n純潔会館の完成には5年かかる。完成すると、§Y$cc_xenophobe_institute$§!補正を得る。効果:\n$tile_resource_unity_mult$: §G+25%§!\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+250%§!"
+
+cc_minor_xenophobe_institute_will_be_built:0 "\nヘゲモン記念館の完成には5年かかる。完成すると、完成すると、§Y$cc_minor_xenophobe_institute$§!補正を得る。効果:\n$MOD_PLANET_MIGRATION_SAME_PULL$: §G+50%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §R-100%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$pop_ethic_xenophobe_attraction_mult$: §Y+150%§!"
+
+
+cc_founder_xenophobe:0 "惑星のヘゲモン"
+cc_founder_xenophobe_desc:0 "この植民地は、異星人の影響から惑星を護ることを使命と感じているカリスマ的個人により統治されている。"
+
+cc_minor_protests_xenophobe:0 "小規模の抗議"
+cc_minor_protests_xenophobe_desc:0 "この惑星では、指導者の一人を逮捕したことで小さな抗議が巻き起こっている。"
+cc_major_protests_xenophobe:0 "大規模な抗議"
+cc_major_protests_xenophobe_desc:0 "この惑星では、指導者の一人を逮捕したことで大きな抗議が巻き起こっている。"
+
+cc_underground_xenophobe_movement_1:0 "地下の排他主義運動"
+cc_underground_xenophobe_movement_1_desc:0 "この惑星では、カリスマ的な反体制派を中心に地下運動がなされている。運動の目的は惑星を異星人の影響から護ることだ。"
+cc_underground_xenophobe_movement_2:0 "地下の排他主義運動"
+cc_underground_xenophobe_movement_2_desc:0 "この惑星では、カリスマ的な反体制派を中心に地下運動がなされている。運動の最終目標は国家からの独立だ。"
+
+cc_xenophobes_offended:0 "排他主義者の怒り"
+cc_xenophobes_offended_desc:0 "新体制からの扱いに、この惑星の排他主義者は怒りを持っている。"
+
+cc_xenophobe_institute_built_faction:0 "純潔会館の建設"
+
+cc_building_xenophobe_institute:0 "会館の建設"
+cc_building_xenophobe_institute_desc:0 "この惑星の"ヘゲモン"の記憶を称える会館が建設中だ。"
+
+cc_xenophobe_institute:0 "純潔会館"
+cc_xenophobe_institute_desc:0 "この惑星の純潔会館は、ナショナリストの聖地となっており、支持者は訪問するためであれば、何光年もの距離を飛んでくる。"
+
+cc_minor_xenophobe_institute:0 "ヘゲモン記念館"
+cc_minor_xenophobe_institute_desc:0 "この植民地の初期、かつてその手腕を振るったある人物に対する尊敬の念は未だ強い。"ヘゲモン"の記念日を公式に祝う行事には多くの住民が訪れる。"
+
+
+cc_founders_memory_disrespected_1_xenophobe:0 "現地のヘゲモンへの侮辱"
+cc_founders_memory_disrespected_1_xenophobe_desc:0 "The population is disappointed at the manner in which the parent state treated one of this planet's most treasured citizens."
+
+cc_founders_memory_disrespected_2_xenophobe:0 "$cc_founders_memory_disrespected_1_xenophobe$"
+cc_founders_memory_disrespected_2_xenophobe_desc:0 "$cc_founders_memory_disrespected_1_xenophobe_desc$"
+
+cc_hostile_towards_xenos:0 "異星人への敵意"
+
+#Spiritualists
+
+cc_colony_events.6.name:0 "精神主義の教祖が[root.GetName]にて影響力を拡大"
+cc_colony_events.6.desc.pos:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる、ある精神主義の教祖の教えが植民者の間で非常に人気があり、植民者は[cc_colony_leader.GetHimHer]"Elder"と呼び、[root.owner.GetSpeciesAdj]当局よりも、[cc_colony_leader.GetHisHer]助言にしたがっている。 幸運なことに、[cc_colony_leader.GetSheHe]は地方政権を不当に奪うつもりはなく、中央政府へ会談を持ちかけてきた。現地の関係者は、その地域における[cc_colony_leader.GetHisHer]教えと主導権を認め、[cc_colony_leader.GetHisHer]を 現地政府の一員とすることを推奨している。"
+cc_colony_events.6.desc.neut:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 植民者は[cc_colony_leader.GetHimHer]"Elder"と呼び、[root.owner.GetSpeciesAdj]当局よりも、[cc_colony_leader.GetHisHer]アドバイスにしたがっている。だが、[cc_colony_leader.GetSheHe]はこの点をもって[root.owner.GetName]の体制に反旗を翻すつもりはないようだ。実際、[cc_colony_leader.GetSheHe]と地方当局は良い協力関係を築いてきた。だが、[cc_colony_leader.GetHisHer]思想は[root.owner.GetName]のリーダーたちが持つ思想からは外れたものだ。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+cc_colony_events.6.desc.neg:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる、ある精神主義の教祖の教えが植民者の間では非常に人気があり、植民者は[cc_colony_leader.GetHimHer]"Elder"と呼び、[root.owner.GetSpeciesAdj]当局よりも、[cc_colony_leader.GetHisHer]アドバイスにしたがっている。だが、[cc_colony_leader.GetSheHe]はこの点をもって[root.owner.GetName]の体制に反旗を翻すつもりはないようだ。実際、[cc_colony_leader.GetSheHe]と地方当局は良い協力関係を築いてきた。だが、[cc_colony_leader.GetHisHer]思想は[root.owner.GetName]の指導者の思想とはかけ離れている。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+
+cc_colony_events.6.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.6.C:0 "$cc_colony_events.3.C$"
+cc_colony_events.6.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+
+
+cc_colony_events.61.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.61.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。, しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetHisHer] の教えは我々が考えているほど尊敬を集めてはいなかったようだ!"
+
+
+cc_colony_events.62.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.62.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.62.A:0 "$cc_colony_events.22.A$"
+cc_colony_events.62.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.62.B:0 "[cc_colony_leader.GetHimHer]釈放せよ。"
+
+cc_colony_events.621.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.621.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.63.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.63.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.63.A:0 "この事件は容認しなければならない。状況を落ち着かせなければ。"
+cc_colony_events.63.B:0 "[cc_colony_leader.GetHimHer]再逮捕し、[cc_colony_leader.GetHimHer][Root.Owner.Capital.GetName]へ移送しよう。"
+cc_colony_events.63.C:0 "精神主義者たちを全力で取り締まれ"
+
+cc_colony_events.631.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.631.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.631.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.632.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.632.desc:0 "$cc_colony_events.332.desc$"
+
+cc_colony_events.633.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.633.desc:0 "$cc_colony_events.233.desc$"
+
+cc_colony_events.634.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.634.desc:0 "$cc_colony_events.234.desc$"
+
+
+cc_colony_events.64.name:0 "[cc_colony_leader.GetName]の名声の広がり"
+cc_colony_events.64.desc:0 "15年以上に渡り、[cc_colony_leader.GetName]は[Root.GetName]を導いてきた。[cc_colony_leader.GetSheHe]は住民の間で非常に人気があり、[cc_colony_leader.GetHisHer]評判が広がっている。[cc_colony_leader.GetSheHe]は今や[root.owner.GetName]の精神主義的な人々皆にとって良い刺激となっているようだ。[cc_colony_leader.GetSheHe]は[cc_colony_leader.GetHisHer]ことを称える惑星を訪問してまわるワールドツアーを企画した。"
+
+cc_colony_events.641.name:0 "$cc_colony_events.341.name$"
+cc_colony_events.641.desc:0 "$cc_colony_events.341.desc$"
+
+
+cc_colony_events.642.name:0 "[cc_colony_leader.GetName]のワールドツアーは悲劇に終わる"
+cc_colony_events.642.desc:0 "[cc_colony_leader.GetName]は[random_visit_planet.GetName]の支持者と会っているときに、[cc_colony_leader.GetHisHer]警備員が反応する前に、狂信的な反精神主義者による銃撃を受け、倒れた。残念ながら、暗殺者は何かを言う前に群集に殺されてしまった。これにより誰か(たぶん[root.owner.GetSpeciesAdj]政府の高官)がこの暗殺の背後にいるという陰謀論が助長されてしまった。[root.owner.GetSpeciesAdj]当局が[random_visit_planet.GetName]で[cc_colony_leader.GetName]に十分なセキュリティ環境を提供できていなかったことが悲劇の原因だという主張もある。とにかく、[root.owner.GetName]の精神主義コミュニティは憤慨しきっている。[spiritualist_faction.GetName]の首脳陣は混乱の最中、政府関係者と会合を開き、怒りを露にした一方で、精神主義者たちの痛みを和らげるために[cc_colony_leader.GetName]の国葬を開き、[root.GetName]に[cc_colony_leader.GetHisHer]名誉を称える大きな霊廟を建立することを提案した。"
+cc_colony_events.642.A:0 "やろう。[cc_colony_leader.GetSheHe]はそれに値する。"
+cc_mausoleum_will_be_built:0 "\n霊廟の完成には5年かかる。 §Y$cc_religious_centre$§!の補正がつく。効果:\n$tile_resource_unity_mult$: §G+50%§!\n$planet_resource_unity_add$: §G+2§!\n$MOD_POP_HAPPINESS$: §G+10%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+50%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+250%§!"
+cc_colony_events.642.B:0 "$cc_colony_events.25.B$"
+
+cc_colony_events.643.name:0 "[root.GetName]の霊廟が開かれる"
+cc_colony_events.643.desc:0 "[cc_colony_leader.GetName]の名誉を称える霊廟が完成した。その開廟日から[cc_colony_leader.GetHisHer]支持者が他の惑星からも多く訪れた。[root.owner.GetName]内外の精神主義を称える巡礼の地として発展していくだろう。"
+
+cc_colony_events.65.name:0 "$cc_colony_events.25.name$"
+cc_colony_events.65.desc:0 "[root.GetName]の高名な教祖である[cc_colony_leader.GetName]は今朝亡くなった。[cc_colony_leader.GetSheHe]は長い間闘病生活を続けてきたが、最終的に高熱を発し、それが原因で亡くなった。[root.GetName]の住民は哀悼の意を表しており、[cc_colony_leader.GetHisHer]名誉を称え、[cc_colony_leader.GetHisHer]人生や教えを記念する特別な寺院の建立を要請した。"
+cc_colony_events.65.A:0 "偉大な寺院を建てよう。[cc_colony_leader.GetSheHe]はそれに値する。"
+cc_colony_events.65.B:0 "高すぎる"
+cc_colony_events.65.C:0 "[cc_colony_leader.GetSheHe]はただのトラブルメーカだった。[cc_colony_leader.GetHisHer]記憶が忘れ去られますように。"
+
+cc_colony_events.65.C.tooltip:0 "[root.GetName]における[cc_colony_leader.GetName]の影響力は30年で無くなる。"
+
+cc_minor_mausoleum_will_be_built:0 "\n霊廟の完成には5年かかる。完成後は§Y$cc_minor_mausoleum$§!の補正を得る, 効果:\n$tile_resource_unity_mult$: §G+25%§!\n$planet_resource_unity_add$: §G+1§!\n$MOD_POP_HAPPINESS$: §G+5%§!\n$pop_ethic_spiritualist_attraction_mult$: §Y+150%§!"
+cc_colony_events.651.desc:0 "[cc_colony_leader.GetName]の名誉を称える霊廟が完成した。[root.GetName]に、[cc_colony_leader.GetHisHer]教えと業績を称える場が誕生した。"
+
+#General random spiritualist guru
+
+cc_colony_events.100.name:0 "[root.GetName]の著名な教祖"
+cc_colony_events.100.desc.pos:0 "[cc_colony_leader.GetName]と呼ばれる精神主義の教祖[root.GetName]にて非常に影響力を持っている。[cc_colony_leader.GetHisHer]教えは精神主義の住民の大半に支持されており、[cc_colony_leader.GetHisHer]助言はとても尊重されている。[cc_colony_leader.GetSheHe]は[root.GetName]での精神主義的な活動を強めてきており、近隣の惑星にもその動きは波及し始めている。- [cc_colony_leader.GetSheHe]は現在[cc_colony_leader.GetHisHer]を敬う惑星を訪問するワールドツアーを企画している。だが、[cc_colony_leader.GetHisHer]が[root.GetRulerTitle]をしのぐ影響力を持つのではないかと危惧する者も多い。幸運なことに、[cc_colony_leader.GetSheHe]は[root.GetRulerTitle]を全面的に支持し、[root.leader.GetHisHer]権威に服することを明言している。"
+
+cc_colony_events.100.desc.neut:0 "[cc_colony_leader.GetName]と呼ばれる精神主義の教祖[root.GetName]にて非常に影響力を持っている。[cc_colony_leader.GetHisHer]教えは精神主義の住民の大半に支持されており、[cc_colony_leader.GetHisHer]助言はとても尊重されている。[cc_colony_leader.GetSheHe]は[root.GetName]での精神主義的な活動を強めてきており、近隣の惑星にもその動きは波及し始めている。- [cc_colony_leader.GetSheHe]は現在[cc_colony_leader.GetHisHer]を敬う惑星を訪問するワールドツアーを企画している。だが、[cc_colony_leader.GetHisHer]が[root.GetRulerTitle]をしのぐ影響力を持つのではないかと危惧する者も多い。幸運なことに、[cc_colony_leader.GetSheHe]は[root.GetRulerTitle]を全面的に支持し、[root.leader.GetHisHer]権威に服することを明言している。\n\nしかし広がりを見せる[cc_colony_leader.GetSheHe]の哲学は[root.GetName]の哲学から外れたものだ。どのようにすべきだろうか?"
+
+cc_colony_events.100.desc.neg:0 "[cc_colony_leader.GetName]と呼ばれる精神主義の教祖[root.GetName]にて非常に影響力を持っている。[cc_colony_leader.GetHisHer]教えは精神主義の住民の大半に支持されており、[cc_colony_leader.GetHisHer]助言はとても尊重されている。[cc_colony_leader.GetSheHe]は[root.GetName]での精神主義的な活動を強めてきており、近隣の惑星にもその動きは波及し始めている。- [cc_colony_leader.GetSheHe]は現在[cc_colony_leader.GetHisHer]を敬う惑星を訪問するワールドツアーを企画している。[root.GetSpeciesName]の政府では[cc_colony_leader.GetHisHer]影響力の高まりを危惧する声が多く、[root.GetRulerTitle]を超えるのではないかと脅威を感じている。[cc_colony_leader.GetName]はいかなる反体制的な動きも見せていないとはいえ、[cc_colony_leader.GetHisHer]哲学は[root.GetName]の哲学に反するものだ。\n\nどのようにすべきだろうか?"
+
+cc_colony_events.100.tooltip:0 "Planets within a radius of 75 game units will get the modifier $cc_spiritualist_leader_visit$補正を得る。 効果は：$pop_ethic_spiritualist_attraction_mult$+20%及び$MOD_POP_HAPPINESS$+10%"
+
+cc_colony_events.102.B:0 "[cc_colony_leader.GetHimHer]釈放はする。だがツアーは禁止する。"
+cc_colony_events.103.A.tooltip:0 "ツアーは実施されない。"
+
+
+cc_spiritualists_offended:0 "精神主義者の不満"
+cc_spiritualists_offended_desc:0 "この惑星の精神主義者たちは新体制の態度に不満を持っている"
+
+cc_spiritualist_protectorate:0 "精神主義護民領"
+cc_spiritualist_protectorate_desc:0 "この惑星の領有者は反体制派の精神主義者と和平を結び、この惑星を精神主義護民領として宣言した。"
+
+cc_founder_spiritualist:0 "著名な精神主義の教祖"
+cc_founder_spiritualist_desc:0 "この惑星の創始者は精神主義の教祖だ。教祖は住民に高く評価されており、その教えは大きく広がっている。"
+
+cc_famous_guru:0 "著名な精神主義の教祖"
+cc_famous_guru_desc:0 "著名な精神主義の教祖がこの惑星で活動中だ。かの者は住民に高く評価されており、その教えは大きく広がっている。"
+
+cc_minor_protests_spiritualist:0 "小規模の抗議"
+cc_minor_protests_spiritualist_desc:0 "この惑星では、著名な教祖の一人を逮捕したことで小さな抗議が巻き起こっている。"
+
+cc_major_protests_spiritualist:0 "大規模な抗議"
+cc_major_protests_spiritualist_desc:0 "この惑星では、著名な教祖の一人を逮捕したことで大きな抗議が巻き起こっている。"
+
+cc_spiritualist_leader_visit:0 "著名な教祖の訪問"
+cc_spiritualist_leader_visit_desc:0 "著名な精神主義の教祖がこの惑星を訪問した。"
+
+cc_mourning_spiritualist:0 "教祖の死への悼み"
+cc_mourning_and_angry_spiritualist:0 "教祖の死に対する反応に怒っている"
+
+cc_building_mausoleum:0 "霊廟を建設中"
+cc_building_mausoleum_desc:0 "精神主義の教祖の名誉を称える霊廟がこの惑星で建設中だ。"
+
+cc_minor_mausoleum:0 "教祖の霊廟"
+cc_minor_mausoleum_desc:0 "精神主義の教祖の記憶を称える霊廟がこの惑星にある。"
+
+cc_religious_centre:0 "巡礼の中心地"
+cc_religious_centre_desc:0 "この惑星にある精神主義の教祖の記憶を称える霊廟は巡礼の中心地となっており、信徒たちは何年もかけてここを訪れる。"
+
+cc_founders_memory_disrespected_1_spiritualist:0 "地元の名教祖への無礼"
+cc_founders_memory_disrespected_1_spiritualist_desc:0 "中央国家のこの惑星出身の教祖に対する扱い方に住民は失望している。"
+
+cc_founders_memory_disrespected_2_spiritualist:0 "地元の名教祖への無礼"
+cc_founders_memory_disrespected_2_spiritualist_desc:0 "中央国家のこの惑星出身の教祖に対する扱い方に住民は失望している。"
+
+cc_underground_spiritualist_movement_1:0 "精神主義の地下運動"
+cc_underground_spiritualist_movement_1_desc:0 "反体制的な教祖の教えを中心とする地下運動がこの惑星で活発だ。我が国の理想に反する思想を広げることを目的としている。"
+
+cc_underground_spiritualist_movement_2:0 "精神主義の地下抵抗運動"
+cc_underground_spiritualist_movement_2_desc:0 "反体制的な教祖の教えを中心とする地下運動がこの惑星で活発だ。その究極的な目標は我が国からの完全な独立だ。"
+
+cc_arrested_guru:0 "逮捕された著名な教祖"
+
+
+
+#Materialist
+
+cc_colony_events.7.name:0 "[root.GetName]"
+cc_colony_events.7.desc.pos:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetHisHer]革新的な思考で知られる元大学教授である[cc_colony_leader.GetName]は新しい植民者の間でよく知られるようになった。植民者は[cc_colony_leader.GetHimHer]に何の事柄についてもアドバイスを求め、[cc_colony_leader.GetSheHe]は植民地の日常的な運営を引き受け、植民者らが直面していたいくつかの緊急の問題に対し独創的な解決方法を発見した。 [cc_colony_leader.GetSheHe]は植民地の成功のために[cc_colony_leader.GetHimHer]自身を捧げてきたのだ。市民が教育と知識に専念しない限り、銀河で[root.GetName]は無価値なのだ。"
+cc_colony_events.7.desc.neut:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetHisHer]革新的な思考で知られる元大学教授である[cc_colony_leader.GetName]は新しい植民者の間でよく知られるようになった。植民者は[cc_colony_leader.GetHimHer]に何の事柄についてもアドバイスを求め、[cc_colony_leader.GetSheHe]は植民地の日常的な運営を引き受け、植民者らが直面していたいくつかの緊急の問題に対し独創的な解決方法を発見した。 [cc_colony_leader.GetSheHe]は植民地の成功のために[cc_colony_leader.GetHimHer]自身を捧げてきたのだ。\n\nしかし、地元当局は[cc_colony_leader.GetName]の哲学が[root.GetName]の哲学とは完全に適合しておらず、[cc_colony_leader.GetSheHe] が植民者を惑わす可能性についての懸念を表している。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+cc_colony_events.7.desc.neg:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetHisHer]革新的な思考で知られる元大学教授である[cc_colony_leader.GetName]は新しい植民者の間でよく知られるようになった。植民者は[cc_colony_leader.GetHimHer]に何の事柄についてもアドバイスを求め、[cc_colony_leader.GetSheHe]は植民地の日常的な運営を引き受け、植民者らが直面していたいくつかの緊急の問題に対し独創的な解決方法を発見した。\n\n地元当局は[cc_colony_leader.GetHisHer]が住民の間で影響力を持ち[root.GetName]の住民を精神主義的価値、すなわち[root.owner.GetSpeciesName]の政府が最も優先する価値から引き離しかねないことを懸念している。\n\n[cc_colony_leader.GetHimHer]どうするべきだろうか?"
+
+cc_colony_events.7.B:0 "$cc_colony_events.3.B$"
+cc_colony_events.7.C:0 "[cc_colony_leader.GetHimHer]逮捕せよ。"
+cc_colony_events.7.C.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+
+#(65%)
+cc_colony_events.71.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.71.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。, しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetHisHer] の教えは我々が考えているほど尊敬を集めてはいなかったようだ!"
+
+#(20%)
+cc_colony_events.72.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.72.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.72.A:0 "$cc_colony_events.22.A$"
+cc_colony_events.72.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.72.B:0 "[cc_colony_leader.GetHimHer]釈放せよ。"
+
+cc_colony_events.721.name:0 "[Root.GetName]の消えることのない不信感"
+cc_colony_events.721.desc:0 "$cc_colony_events.221.desc$"
+
+#(15%)
+cc_colony_events.73.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.73.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.73.A:0 "$cc_colony_events.63.A$"
+cc_colony_events.73.B:0 "$cc_colony_events.63.B$"
+cc_colony_events.73.C:0 "物質主義者を全力で取り締まれ。"
+
+cc_colony_events.731.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.731.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.731.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.732.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.732.desc:0 "$cc_colony_events.332.desc$"
+
+cc_colony_events.733.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.733.desc:0 "$cc_colony_events.233.desc$"
+
+cc_colony_events.734.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.734.desc:0 "$cc_colony_events.234.desc$"
+
+
+cc_colony_events.75.name:0 "$cc_colony_events.25.name$"
+cc_colony_events.75.desc:0 "[root.GetName]を創設した市民とみなされている[cc_colony_leader.GetName]は、病気のため亡くなった。[root.GetName]の住民は [cc_colony_leader.GetHisHer]死を悼んだ。[cc_colony_leader.GetHisHer]最後の願いは、[cc_colony_leader.GetSheHe]が蒔いた次世代の思想家の種の芽を育てるべく[root.GetName]に巨大な大学を設立することであった。[root.GetName]の関係者はこの願いを現実のものとすべく我々に計画を持ちかけてきた。\n\n大学を設立するべきだろうか?"
+cc_colony_events.75.A: "勿論!"
+cc_colony_events.75.B: "$cc_colony_events.25.B$"
+
+cc_colony_events.75.B.tooltip:0 "[cc_colony_leader.GetName]の影響は30年後には消えるだろう。"
+
+cc_colony_events.751.name:0 "[root.GetName]に大学が開かれる"
+cc_colony_events.751.desc:0 "[cc_colony_leader.GetName]の名誉を記念する大学が完成した。惑星の住民の間では、その開学は[root.GetName]が[root.owner.GetName]の学問の中心地となることへの喜びとともに迎えられた。さらに[root.owner.GetName]中の物質主義者は、科学的進歩に対する[root.owner.GetRulerTitle]の献身と証に満足している。"
+
+cc_university_will_be_built:0 "\n大学の完成には5年かかる。完成すると§Y$cc_university$§!の補正を得る。 効果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+
+
+cc_founder_materialist:0 "著名な知識人"
+cc_founder_materialist_desc:0 "この惑星の創設者は元大学教授だ。住民に高く評価されており、その言葉は広く受け入れられている。"
+cc_minor_protests_materialist:0 "小規模の抗議"
+cc_minor_protests_materialist_desc:0 "著名な知識人の一人を逮捕したことで小さな抗議が巻き起こっている。"
+cc_major_protests_materialist:0 "大規模な抗議"
+cc_major_protests_materialist_desc:0 "著名な知識人の一人を逮捕したことで大さな抗議が巻き起こっている。"
+cc_underground_materialist_movement_1:0 "地下の知的運動"
+cc_underground_materialist_movement_1_desc:0 "反体制的な知識人が主導する地下運動がこの惑星で活発だ。この運動は我が国の理想に反する思想を広めることを目的としている。"
+cc_underground_materialist_movement_2:0 "地下の知的運動"
+cc_underground_materialist_movement_2_desc:0 "反体制的な知識人が主導する地下運動がこの惑星で活発だ。この運動の究極の目的は我が国からの完全な独立だ。"
+cc_building_university:0 "博物館を建設中"
+cc_building_university_desc:0 "大きな大学がこの惑星で建設中だ。"
+cc_university:0 "学びの中心地"
+cc_university_desc:0 "この惑星の大学は学びの拠点として重要な場所となっている。学者も学生もここを訪れ学ぶために何光年もの距離を飛んでくる。"
+cc_university_built_faction:0 "大学の建設"
+cc_founders_memory_disrespected_1_materialist:0 "地元の知識人への無礼"
+cc_founders_memory_disrespected_1_materialist_desc:0 "中央国家のこの惑星出身の知識人に対する扱い方に住民は失望している。"
+
+cc_materialists_offended:0 "物質主義者の不満"
+cc_materialists_offended_desc:0 "物質主義志向の住民は現体制へ不満を持っている。"
+
+
+#Authoritarian (monarchy):
+cc_colony_events.8.name:0 "[root.GetName]のローカル君主制"
+cc_colony_events.8.desc.pos1:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与えた。幸いにも、[cc_colony_leader.GetSheHe]には[root.owner.GetName]政府に対する反抗の意図は見られない。実際、地元当局は中央政府に対し、正式に[cc_colony_leader.GetName]を[root.GetName]の王として認める方がこの惑星をよりよく統治する上では賢明だと主張している。" 
+cc_colony_events.8.desc.pos2:0 "野心有る者にとって、新興植民地は常にチャンスの場であった。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与え始めた。幸いにも、[cc_colony_leader.GetSheHe]には[root.owner.GetName]政府に対する反抗の意図は見られない。実際、地元当局は中央政府に対し、正式に[cc_colony_leader.GetName]を[root.GetName]の女王として認める方がこの惑星をよりよく統治する上では賢明だと主張している。"
+cc_colony_events.8.desc.neut1:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与えた。幸いにも、[cc_colony_leader.GetSheHe]には[root.owner.GetName]政府に対する反抗の意図は見られないし、地元当局とも良好な関係を築いているようだ。だが、[cc_colony_leader.GetHimHer]に[root.GetName]の王としての正式な地位を与えるよう求める請願はかなりの支持を集めているようだ。(我々の通常のやり方からは多少ずれているが…)\n\nこの請願に対しどのように対応すべきだろうか?" 
+cc_colony_events.8.desc.neut2:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与えた。幸いにも、[cc_colony_leader.GetSheHe]には[root.owner.GetName]政府に対する反抗の意図は見られないし、地元当局とも良好な関係を築いているようだ。だが、[cc_colony_leader.GetHimHer]に[root.GetName]の女王としての正式な地位を与えるよう求める請願はかなりの支持を集めているようだ。(我々の通常のやり方からは多少ずれているが…)\n\nこの請願に対しどのように対応すべきだろうか?"
+cc_colony_events.8.desc.neg1:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与えた。地元当局には「迷惑」な存在と見なされている彼だが、[cc_colony_leader.GetHisHer]に'[root.GetName]の王'としての地位を公式に認めるよう求める請願はかなりの支持を集めているようだ。しかし、この申し立ては[root.GetName]の統治原則に反する。\n\nこの請願に対しどのように対応すべきだろうか?" 
+cc_colony_events.8.desc.neg2:0 "新興植民地は常に出世のチャンスに恵まれた場であり続けてきた。特に、国家中央の流れから外れた者にとっては。\n\n [root.GetName]では、これを裏付けるようなことが起きている。 [cc_colony_leader.GetName]と呼ばれる才能有る者が[cc_colony_leader.GetHisHer]リーダーシップをもって他の植民者たちへ刺激を与えてきた。そして、植民者たちは[cc_colony_leader.GetHimHer]に王位を与え始めた。地元当局には「迷惑」な存在と見なされている彼女だが、[cc_colony_leader.GetHisHer]に'[root.GetName]の女王'としての地位を公式に認めるよう求める請願はかなりの支持を集めているようだ。しかし、この申し立ては[root.GetName]の統治原則に反する。\n\nこの請願に対しどのように対応すべきだろうか?"
+
+cc_colony_events.8.A1:0 "新王[Root.GetName]ばんざい!" 
+cc_colony_events.8.A2:0 "新女王[Root.GetName]ばんざい!"
+cc_colony_events.8.B:0 "[root.owner.GetRulerTitle]はいかなる権力の僭取も認めない。"
+cc_colony_events.8.C:0 "申請を認める。"
+cc_colony_events.8.D:0 "$cc_colony_events.3.C$"
+cc_colony_events.8.D.tooltip:0 "$CC_COLONY_UNPREDICTABLE$"
+
+cc_colony_events.81.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.81.desc:0 "最近[cc_colony_leader.GetName]を逮捕したことで、[Root.GetName]では小規模な抗議活動が起こっている。, しかし、この抗議は広がりを見せてはおらず、住民の大半は我々が[cc_colony_leader.GetHimHer]に対し採った行動を受け入れている。[cc_colony_leader.GetSheHe]は思っていた程の者ではなかったようだ!"
+
+cc_colony_events.82.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.82.desc:0 "$cc_colony_events.22.desc$"
+cc_colony_events.82.A:0 "$cc_colony_events.22.A$"
+cc_colony_events.82.A.tooltip:0 "$cc_colony_events.22.A.tooltip$"
+cc_colony_events.82.B1:0 "[cc_colony_leader.GetHimHer]釈放し[cc_colony_leader.GetHimHer]王として認める。" 
+cc_colony_events.82.B2:0 "[cc_colony_leader.GetHimHer]釈放し[cc_colony_leader.GetHimHer]女王として認める。"
+
+cc_colony_events.821.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.821.desc:0 "$cc_colony_events.221.desc$"
+
+cc_colony_events.83.name:0 "$cc_colony_events.23.name$"
+cc_colony_events.83.desc:0 "$cc_colony_events.23.desc$"
+cc_colony_events.83.A:0 "$cc_colony_events.63.A$"
+cc_colony_events.83.B:0 "$cc_colony_events.63.B$"
+cc_colony_events.83.C:0 "君主制支持者を全力で取り締まれ"
+
+cc_colony_events.831.name:0 "$cc_colony_events.231.name$"
+cc_colony_events.831.desc:0 "$cc_colony_events.231.desc$"
+cc_colony_events.831.option:0 "$CC_GOODIGUESS$"
+
+cc_colony_events.832.name:0 "$cc_colony_events.232.name$"
+cc_colony_events.832.desc:0 "$cc_colony_events.332.desc$"
+
+cc_colony_events.833.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.833.desc:0 "$cc_colony_events.233.desc$"
+
+cc_colony_events.834.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.834.desc:0 "$cc_colony_events.234.desc$"
+
+
+
+cc_colony_events.85.name:0 "$cc_colony_events.25.name$"
+cc_colony_events.85.desc1:0 "[cc_colony_leader.GetName],[root.GetName]の王が、病気のため本日死亡した。[cc_colony_leader.GetSheHe]は良い時も悪い時も公平かつ賢明に惑星を導いてきた。[root.GetName]の住民は今朝[cc_colony_leader.GetHisHer]死を悼んだ。[root.GetName]の住民の支持を受け、[cc_colony_leader.GetHisHer]息子は親から王の称号を譲り受け、親同様に惑星を統治することを中央に求めてきた。\n\nこの願いを叶えるべきだろうか?"
+cc_colony_events.85.desc2:0 "[cc_colony_leader.GetName],[root.GetName]の女王が、病気のため本日死亡した。[cc_colony_leader.GetSheHe]は良い時も悪い時も公平かつ賢明に惑星を導いてきた。[root.GetName]の住民は今朝[cc_colony_leader.GetHisHer]死を悼んだ。[root.GetName]の住民の支持を受け、[cc_colony_leader.GetHisHer]娘は親から女王の称号を譲り受け、親同様に惑星を統治することを中央に求めてきた。\n\nこの願いを叶えるべきだろうか?"
+cc_colony_events.85.A: "勿論です!"
+cc_colony_events.85.A.tooltip:0 "$cc_colony_monarchy$の補正は永続する"
+cc_colony_events.85.B: "[root.GetName]は我々の直轄下の戻す。"
+cc_colony_events.85.B.tooltip:0 "住民は長く怒りを覚えるかもしれない。"
+
+cc_colony_events.851.name:0 "[cc_colony_leader.GetName]の君主制支持運動"
+cc_colony_events.851.desc1:0 "[root.GetName]の住民の意思に反し、君主制を廃止する決定をしたことで、惑星では怒りが広がっている。現在、王の息子は君主制の再興を目的とする地下運動を起こしている。彼がいつかトラブルを起こすかもしれない。"
+cc_colony_events.851.desc2:0 "[root.GetName]の住民の意思に反し、君主制を廃止する決定をしたことで、惑星では怒りが広がっている。現在、女王の娘は君主制の再興を目的とする地下運動を起こしている。彼女がいつかトラブルを起こすかもしれない。"
+
+cc_colony_monarchy:0 "公国"
+cc_colony_monarchy_desc:0 "この植民地は地元の君主により統治されている。"
+cc_colony_monarchy_unhappy:0 "君主制が廃止"
+cc_colony_monarchy_unhappy_desc:0 "この惑星は地元の君主制が現体制のよって廃止され怒りを覚えている。"
+
+cc_minor_protests_authoritarian:0 "$cc_minor_protests_militarist$"
+cc_minor_protests_authoritarian_desc:0 "現地の君主制を拒絶したことでこの惑星では小規模な抗議が起きている。"
+cc_major_protests_authoritarian:0 "$cc_major_protests_militarist$"
+cc_major_protests_authoritarian_desc:0 "現地の君主制を拒絶したことでこの惑星では大規模な抗議が起きている。"
+cc_underground_authoritarian_movement_1:0 "君主制支持の地下運動"
+cc_underground_authoritarian_movement_1_desc:0 "地元の君主制の再興を目指す地下運動がこの惑星で活発だ。我が国の理想に反する思想を広げることを目的としている。"
+cc_underground_authoritarian_movement_2:0 "君主制支持の地下運動"
+cc_underground_authoritarian_movement_2_desc:0 "地元の君主制の再興を目指す地下運動がこの惑星で活発だ。その究極的な目標は我が国からの完全な独立だ。"
+
+#Egalitarian
+cc_colony_events.9.name:0 "[root.GetName]の直接民主制"
+cc_colony_events.9.desc.pos:0 "[root.GetName]の市民は、植民地の日常的な運営を担う直接民主制システムを率先して構築してきた。彼らのシステムでは、政策のほとんどの問題は全住民によって投票される(今日の時代では考えるだけで投票が可能)。調整を必要とする基本的な作業だけが政府職員により行われており、その職員は市民の中から抽選で選出される。このシステムにより地域社会は良い結束を維持することができ、市民を幸福にする正しい決断を下すことができるようになっている。"
+cc_colony_events.9.desc.neut:0 "[root.GetName]の市民は、植民地の日常的な運営を担う直接民主制システムを率先して構築してきた。彼らのシステムでは、政策のほとんどの問題は全住民によって投票される(今日の時代では考えるだけで投票が可能)。調整を必要とする基本的な作業だけが政府職員により行われており、その職員は市民の中から抽選で選出される。このシステムにより地域社会は良い結束を維持することができ、市民を幸福にする正しい決断を下すことができるようになっていると彼らは主張している。しかし、[root.GetSpeciesName]政府内にはこの実験に不快感を示す者もいる。なぜならばこの実験は非[root.GetSpeciesAdj]的だからだ。\n\n継続を許可すべきだろうか?"
+cc_colony_events.9.desc.neg:0 "[root.GetName]の市民は「独立思考」の危険な兆候を見せている。彼らは植民地の日常的な運営を担う直接民主制システムを率先して構築してきた。彼らのシステムでは、政策のほとんどの問題は全住民によって投票される(今日の時代では考えるだけで投票が可能)。調整を必要とする基本的な作業だけが政府職員により行われており、その職員は市民の中から抽選で選出される。このシステムにより地域社会は良い結束を維持することができ、市民を幸福にする正しい決断を下すことができるようになっていると彼らは主張している。しかし、[root.GetSpeciesName]政府側の多くはこの実験に不快感を示している。なぜならばこの実験は[root.GetName]の価値観に真っ向から反するものだからだ。\n\nWhat should we do about it?"
+cc_colony_events.9.B:0 "継続を許可する"
+cc_colony_events.9.C:0 "禁止しろ"
+cc_colony_events.9.C.tooltip:0 "この行動による住民の反応は予測できない。"
+
+cc_colony_events.91.name:0 "$cc_colony_events.21.name$"
+cc_colony_events.91.desc:0 "直接民主制が終焉を迎えた後[root.GetName]では小規模の抗議活動があったのみで、ほとんどの住民は[root.owner.GetName]の上位権力を受け入れいている。彼らの「民主制」というものには思っていたほど価値がなかったようですね!"
+
+cc_colony_events.92.name:0 "$cc_colony_events.22.name$"
+cc_colony_events.92.desc:0 "直接民主制のが禁止された後、[root.GetName]では大規模な抗議活動が勃発した。抗議者の集団は暴力的になり、地元当局は民衆を抑える続けることが困難になりつつある。彼らは状況への対処を中央に要請した。"
+cc_colony_events.92.A:0 "抗議者は叩け"
+cc_colony_events.92.B:0 "抗議はそのままに" 
+cc_colony_events.92.C:0 "[root.GetName]の直接民主制を復活させよう。"
+
+cc_colony_events.921.name:0 "$cc_colony_events.233.name$"
+cc_colony_events.921.desc:0 "[root.GetName]での民主化勢力への取り締まりは成功した。首謀者は皆逮捕されるか殺害された。彼らは植民地から排除された。だが住民の信頼を取り戻すには時間がかかるだろう。"
+
+cc_colony_events.922.name:0 "$cc_colony_events.234.name$"
+cc_colony_events.922.desc:0 "[root.GetName]での民主化勢力への取り締まりは失敗した。首謀者らは、計画の前兆を掴み、彼らの支持者の多くと隠れた。彼らは[Root.Owner.GetName]からの独立を求める地下抵抗運動を開始した。しばらくの間混乱が続くことが予測される。"
+
+cc_colony_events.923.name:0 "$cc_colony_events.221.name$"
+cc_colony_events.923.desc:0 "幾年か経ち、[root.GetName]における直接民主制の廃止に対する抗議は消えていったが、その記憶は消えなかった。[root.GetName]の民主的な自己統治が行われたいた時代の記憶は黄金時代として[root.GetName]の民間伝承の中に刻まれている。そしてその喪失は苦い記憶として残っている。住民が中央国家を完全に信頼することはまずないだろう。"
+
+cc_colony_events.924.name:0 "[Root.GetName]の地下運動"
+cc_colony_events.924.desc:0 "[root.GetName]での抗議は終わらなかった。彼らは当局が抗議者を分散させるまで問題を引き起こし続けていた。それ以後運動は地下化し影から民主制を復興させようとしていた。"
+
+
+
+cc_colony_direct_democracy:0 "直接民主制"
+cc_colony_direct_democracy_desc:0 "この植民地は惑星規模の直接民主制により統治されている"
+cc_colony_democracy_unhappy:0 "直接民主制が廃止"
+cc_colony_democracy_unhappy_desc:0 "この惑星では直接民主制による自己統治システムが現体制により禁止されたことで怒りが広がっている。"
+
+cc_minor_protests_egalitarian:0 "$cc_minor_protests_militarist$"
+cc_minor_protests_egalitarian_desc:0 "直接民主制のシステムを禁止したことでこの惑星では小規模な抗議が起きている。"
+cc_major_protests_egalitarian:0 "$cc_major_protests_militarist$"
+cc_major_protests_egalitarian_desc:0 "直接民主制のシステムを禁止したことでこの惑星では大規模な抗議が起きている。"
+cc_underground_egalitarian_movement_1:0 "地下の民主化運動"
+cc_underground_egalitarian_movement_1_desc:0 "直接民主制システムの復興を目指す地下運動がこの惑星で活発だ。我が国の理想に反する思想を広げることを目的としている。"
+cc_underground_egalitarian_movement_2:0 "地下の民主化運動"
+cc_underground_egalitarian_movement_2_desc:0 "直接民主制システムの復興を目指す地下運動がこの惑星で活発だ。その究極的な目標は我が国からの完全な独立だ。"
+
+
+
+
+#Generic
+
+CC_COLONY_UNPREDICTABLE:0 "[cc_colony_leader.GetSheHe]は排除される。この一連の行動の結果は予測できない。"
+
+CC_GOODIGUESS:0 "大丈夫だ…たぶん。"
+
+#Cleanup
+#cc_cleanup_events.response.servitor:0 "Whatever keeps them happy."
+#cc_cleanup_events.response.servitor2:0 "Their past problems are irrelevant. They will be pampered."
+#cc_cleanup_events.response.servitor2.tooltip:0 "The populace will soon forget their grievances."
+
+cc_cleanup_events.2.name:0 "[root.GetName]の著名な教祖"
+cc_cleanup_events.2.desc:0 "著名な教祖が[root.GetName]で活動しており、惑星の精神主義者ネットワークの中心となっている。彼らの立場を容認するべきだろうか?"
+
+cc_cleanup_events.3.name:0 "[root.GetName]の高名な教祖の霊廟"
+cc_cleanup_events.3.desc:0 "[root.GetName]の前領有国は、ある著名な教祖を称える霊廟を建築していた。もし建築が完了すれば、それは惑星の精神主義者ネットワークの中心となるだろう。我々は霊廟の建設を続けるべきだろうか?"
+cc_cleanup_events.3.tooltip:0 "完成した場合、霊廟は惑星の統合力の産出を増やし、幸福度を上げ、精神主義志向への魅力を強化する。"
+
+cc_cleanup_events.4.name:0 "[root.GetName]の高名な教祖の霊廟"
+cc_cleanup_events.4.desc:0 "[root.GetName]の前領有国は、この惑星出身の著名な教祖を称える霊廟を建立した。現在、そこは精神主義者ネットワークの中心となっている。我々はその建造物を破壊から守るべきだろうか?"
+
+cc_cleanup_events.5.name:0 "[root.GetName]の高名な教祖の記憶"
+cc_cleanup_events.5.desc:0 "[root.GetName]の前領有国は、この惑星出身の著名な教祖を称える霊廟を建立する請願に応えなかったことでここの住民に怒りを向けられていた。我々が建立を実現させるべきだろうか?"
+
+cc_cleanup_events.51.name:0 "[root.GetName]の霊廟が完成"
+cc_cleanup_events.51.desc:0 "[root.GetName]の有名な教祖を称える霊廟が完成した。[root.GetName]の住民は今、かつていた精神主義の指導者の教えとその業績を記憶することができるようになった。"
+
+cc_cleanup_events.6.name:0 "[root.GetName]で地下の精神主義運動"
+cc_cleanup_events.6.desc:0 "精神主義の地下運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、惑星の精神主義者に特権を認めることを条件に武装解除をすることを提案してきた。\n\n我々はその権利を認めるべきだろうか?"
+
+cc_cleanup_events.7.name:0 "[root.GetName]では精神主義が主流"
+cc_cleanup_events.7.desc:0 "[root.GetName]の精神主義者たちは旧体制によりあるレベルの特権を受けていた。我々はそれを持続させるべきだろうか?"
+
+cc_cleanup_events.8.name:0 "[root.GetName]の直接民主制"
+cc_cleanup_events.8.desc:0 "[root.GetName]は現在惑星規模の直接民主制により統治されている。この自己統治システムの維持を我々は認めるべきだろうか?"
+
+cc_cleanup_events.9.name:0 "[root.GetName]で地下の民主化運動"
+cc_cleanup_events.9.desc:0 "地下の民主化運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、彼らが望む形での惑星規模の直接民主制の復興を条件に武装解除をすることを提案してきた。\n\n我々は彼らの願いを叶えるべきだろうか?"
+
+cc_cleanup_events.10.name:0 "[root.GetName]で直接民主制を復活させるべきか?"
+cc_cleanup_events.10.desc:0 "[root.GetName]の前領有国は、住民が立ち上げた惑星規模の直接民主制を禁止し、惑星の進歩的な住民を怒らせた。我々はその制度を復興させるべきだろうか?"
+
+
+cc_cleanup_events.11.name:0 "[root.GetName]の大学"
+cc_cleanup_events.11.desc:0 "[root.GetName]の前領有国は、大きな大学を建設していた。完成すれば、惑星の知的活動ネットワークの中心となるだろう。我々は大学の建設を続けるべきだろうか?"
+cc_cleanup_events.11.tooltip:0 "\n完成すると、惑星は§Y$cc_university$§!の補正を得る, 効果:\n$tile_resource_physics_research_mult$: §G+33%§!\n$tile_resource_society_research_mult$: §G+33%§!\n$tile_resource_engineering_research_mult$: §G+33%§!\n$MOD_PLANET_MIGRATION_ALL_PULL$: §G+25%§!\n$pop_ethic_materialist_attraction_mult$: §Y+150%§!"
+
+cc_cleanup_events.12.name:0 "[root.GetName]の大学"
+cc_cleanup_events.12.desc:0 "[root.GetName]の前領有国は、惑星に大きな大学を建設した。それは惑星の知的活動ネットワークの中心となっている。我々はこの建物を破壊から守るべきだろうか?"
+
+cc_cleanup_events.13.name:0 "[root.GetName]の著名な知識人"
+cc_cleanup_events.13.desc:0 "著名な知識人が[root.GetName]で活動しており、惑星の知的活動ネットワークの中心となっている。彼らのこの立場を認めるべきだろうか?"
+
+cc_cleanup_events.14.name:0 "[root.GetName]で地下で知的運動"
+cc_cleanup_events.14.desc:0 "地下の知的運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、大学の建設を条件に武装解除をすることを提案してきた。\n\n我々は大学を設立するべきだろうか?"
+
+cc_cleanup_events.15.name:0 "[root.GetName]の高名な知識人の記憶"
+cc_cleanup_events.15.desc:0 "[root.GetName]の前領有国は、この惑星出身の著名な知識人を称える大学を建設するという請願に応えなかったことで惑星の物質主義的な住民たちを怒らせた。我々が建設を実現させるべきだろうか?"
+
+cc_cleanup_events.151.name:0 "[root.GetName]に大学がオープン"
+cc_cleanup_events.151.desc:0 "[root.GetName]で大学が完成した。惑星の住民の間では、その開学は[root.GetName]が[root.owner.GetName]の学問の中心地となることへの喜びとともに迎えられた。さらに[root.owner.GetName]中の物質主義者は、科学的進歩に対する[root.owner.GetRulerTitle]の献身と証に満足している。"
+
+
+cc_cleanup_events.16.name:0 "[root.GetName]公国"
+cc_cleanup_events.16.desc:0 "[root.GetName]は現在、地元の君主制を通じて統治されている。この地方統治体制の維持を認めるべきだろうか?"
+
+cc_cleanup_events.17.name:0 "[root.GetName]の地下で君主制運動"
+cc_cleanup_events.17.desc:0 "君主制支持の地下運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、運動の指導者が[root.GetName]の君主の称号を名乗り、惑星の基礎的な統治を行うことを認めることを条件に武装解除をすることを提案してきた。\n\n彼らの願いを叶えるべきだろうか?"
+
+cc_cleanup_events.18.name:0 "[root.GetName]の地域君主制を復活させるべきか?"
+cc_cleanup_events.18.desc:0 "[root.GetName]の前領有国は、地元の君主制を廃止したことで惑星の君主制を支持する住民を怒らせた。我々はこの惑星の地域君主制を復活させるべきだろうか?"
+
+
+
+cc_cleanup_events.19.name:0 "[root.GetName]の士官学校"
+cc_cleanup_events.19.desc:0 "[root.GetName]の前領有国は、惑星に大きな士官学校を建設した。それは惑星の軍事学ネットワークの中心となっている。我々はこの建物を破壊から守るべきだろうか?"
+
+cc_cleanup_events.20.name:0 "[root.GetName]の総督代理"
+cc_cleanup_events.20.desc:0 "'[root.GetName]の総督代理'の地位を持つ退役宇宙軍士官がこの惑星の住民の間では有名で、惑星の軍事学ネットワークの中心となっている。彼らのこの立場を認めるべきだろうか?"
+
+cc_cleanup_events.21.name:0 "[root.GetName]で地下の軍国主義運動"
+cc_cleanup_events.21.desc:0 "地下の軍国主義運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、大きな士官学校の設立を条件に武装解除をすることを提案してきた。\n\n我々は士官学校を設立するべきだろうか?"
+
+cc_cleanup_events.22.name:0 "[root.GetName]の高名な宇宙軍士官の記憶"
+cc_cleanup_events.22.desc:0 "[root.GetName]の前領有国は、この惑星に関わった著名な宇宙軍士官を称える士官学校を建設するという請願に応えなかったことで惑星の軍国主義的な住民たちを怒らせた。我々が建設を実現させるべきだろうか?"
+
+cc_cleanup_events.23.name:0 "[root.GetName]に士官学校がオープン"
+cc_cleanup_events.23.desc:0 "[cc_colony_leader.GetName]の名誉を記念する士官学校が完成した。惑星の住民の間では、その開学は[root.GetName]が[root.owner.GetName]の軍学の中心地となることへの喜びとともに迎えられた。さらに[root.owner.GetName]中の軍人と支援者は、この偉大なる国家への軍務に服する者たちに対する[root.owner.GetRulerTitle]の献身の証に満足している。"
+
+cc_cleanup_events.24.name:0 "[root.GetName]の士官学校"
+cc_cleanup_events.24.desc:0 "[root.GetName]の前領有国は[root.GetName]上で士官学校を建設していた。これが完成した際には軍事学ネットワークの中心となるだろう。我々はこの建設を引き継ぐべきだろうか?"
+cc_cleanup_events.24.tooltip:0 "\n完成すると、惑星は§Y$cc_milacademy$§!の補正を得る, 効果:\n$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-20%§!\n$MOD_PLANET_ARMY_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_ARMY_BUILD_COST_MULT$: §G-15%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+10%§!\n$pop_ethic_militarist_attraction_mult$: §Y+150%§!"
+
+
+
+cc_cleanup_events.25.name:0 "[root.GetName]の著名な平和活動家"
+cc_cleanup_events.25.desc:0 "[root.GetName]では有力な平和活動家たちによるネットワーク「Ghandeis」が活発だ。彼らの活動を認めるべきだろうか?"
+
+cc_cleanup_events.26.name:0 "[root.GetName]の有名な平和活動家を称える記念碑"
+cc_cleanup_events.26.desc:0 "[root.GetName]の前領有国は[root.GetName]上で記念碑を建設していた。これが完成した際には平和主義者ネットワーク「Ghandeis」の中心となるだろう。我々はこの建設を引き継ぐべきだろうか?"
+cc_cleanup_events.26.tooltip:0 "完成すると、記念碑は惑星の統合力産出、幸福度、平和主義志向への魅力を引き上げる。"
+
+cc_cleanup_events.27.name:0 "[root.GetName]の有名な平和活動家を称える記念碑"
+cc_cleanup_events.27.desc:0 "[root.GetName]の前領有国は、惑星に大きな記念碑を建設した。それは惑星の平和主義者ネットワーク「Ghandeis」の中心となっている。我々はこの建物を破壊から守るべきだろうか?"
+
+cc_cleanup_events.28.name:0 "[root.GetName]の有名な平和活動家の記憶"
+cc_cleanup_events.28.desc:0 "[root.GetName]の前領有国は、この惑星に関わった著名な平和活動家を称える記念碑を建設するという請願に応えなかったことで惑星の平和主義的な住民たちを怒らせた。我々が建設を実現させるべきだろうか?"
+
+cc_cleanup_events.29.name:0 "[root.GetName]の記念碑が完成"
+cc_cleanup_events.29.desc:0 "有名な平和活動家の名誉を称える記念碑が[root.GetName]上にある。現在、[root.GetName]には惑星住民にとっての精神的指導者の教えと業績を記念する場がある。"
+
+cc_cleanup_events.30.name:0 "[root.GetName]の地下の平和運動"
+cc_cleanup_events.30.desc:0 "平和主義の地下運動が[Root.GetName]の前領有国と問題を起こしていた。彼らの代表者は惑星の新たな領有者と会談し、惑星の平和主義者に特権を認めることを条件に武装解除をすることを提案してきた。\n\n我々はその権利を認めるべきだろうか?"
+
+cc_cleanup_events.31.name:0 "[root.GetName]では平和主義が主流"
+cc_cleanup_events.31.desc:0 "[root.GetName]の平和主義者たちは旧体制によりあるレベルの特権を受けていた。我々はそれを持続させるべきだろうか?"
+
+
+
+cc_cleanup_events.32.name:0 "[root.GetName]の排他主義な有名政治家が自殺"
+cc_cleanup_events.32.desc:0 "[root.GetName]では排他主義的思想を持つ著名な政治家が活動を行っていた。惑星を異星人から守護する"ヘゲモン"として知られていたが、その夢は消え去った。屈辱よりも死を選んだとのことだ。"
+cc_cleanup_events.32.option:0 "いいことだ。"
+
+cc_cleanup_events.33.name:0 "[root.GetName]のヘゲモン記念館"
+cc_cleanup_events.33.desc:0 "[root.GetName]の旧領有国はかつて、この惑星出身の著名な政治家を称える目的で、ある施設を建設していた。この施設は排他的な思想を体現するものと考えられており、完成すればナショナリストたちの聖地となっていただろう。惑星の陥落時にこのような施設を建設していたとは皮肉なものだ。我が国の現地当局は施設の建設を中止した。"
+
+cc_cleanup_events.34.name:0 "[root.GetName]のヘゲモン記念館"
+cc_cleanup_events.34.desc:0 "[root.GetName]の旧領有国はかつて、この惑星出身の著名な政治家を称える目的で、ある施設を建設した。この施設は過激な排他的思想を反映したものだ。そのため占領側の住民はこの施設の解体を求めているが、被占領側の住民はこの施設を惑星の宝と見なしているようだ。この施設を解体するべきだろうか?"
+cc_cleanup_events.34.A:0 "彼らの英雄を護ってやれ。"
+
+
+cc_cleanup_events.35.name:0 "[root.GetName]の地下の排他主義運動"
+cc_cleanup_events.35.desc:0 "[Root.GetName]の旧領有国は、この惑星の排他主義的な地下活動と問題を起こしていた。運動家たちはかつての運動の潔白を説明するとともに、惑星を異星人から護るために、運動を改めて強化した。"
+
+
+cc_cleanup_events.36.name:0 "[root.GetName]の高名な受容主義活動家"
+cc_cleanup_events.36.desc:0 "[root.GetName]には有名な受容主義活動家がおり、惑星における種族間での平和と団結を目指す運動の中心となっている。その運動の持続を許すべきだろうか?"
+
+cc_cleanup_events.37.name:0 "[root.GetName]の文化交流"
+cc_cleanup_events.37.desc:0 "[root.GetName]の旧領有国はある著名な受容主義活動家の名誉を称えて文化交流の準備をしていた。完了すれば、惑星の「多文化の安息所」としての評判は上がることだろう。これの継続を支援するべきだろうか?"
+cc_cleanup_events.37.tooltip:0 "完了すれば、文化交流により補正§Y$cc_xenophile_institute$§!が追加される。効果:\n$MOD_POP_HAPPINESS$$: §G+5%§!\n$MOD_PLANET_MIGRATION_XENO_PULL$: §G+100%§!\n$tile_resource_unity_mult$: §G+25%§!\n$pop_ethic_xenophile_attraction_mult$: §Y+150%§!"
+
+cc_cleanup_events.38.name:0 "[root.GetName]の文化交流"
+cc_cleanup_events.38.desc:0 "[root.GetName]の旧領有国はある著名な受容主義活動家の名誉を称えて文化交流を始めた。この行事により活動家の遺産は記憶され、惑星は「多文化の安息所」としての評判を得た。文化交流の持続を許可するべきだろうか?"
+
+cc_cleanup_events.39.name:0 "[root.GetName]の有名な活動家の記憶"
+cc_cleanup_events.39.desc:0 "[root.GetName]の旧領有国はかつて[root.GetName]での文化交流を拒絶したことで惑星の受容主義志向を持つ住民の怒りを買った。文化交流はこの惑星出身の有名だった活動家が望んでいたことだった。私たちは自らで文化交流を立ち上げるべきだろうか?"
+
+cc_cleanup_events.40.name:0 "[root.GetName]の受容主義地下運動"
+cc_cleanup_events.40.desc:0 "受容主義の地下運動が[Root.GetName]では行われており、この惑星の旧領有国との間に問題を引き起こしていた。運動の代表者は惑星の新領有国との間に会談を設けた。そして種族間の平和と善意を強固にするための文化交流を惑星に立ち上げてくれれば武装解除に応じると提案してきた。\n\n文化交流を立ち上げるべきだろうか?"
+
+cc_cleanup_events.41.name:0 "[root.GetName]の文化交流の準備完了"
+cc_cleanup_events.41.desc:0 "[root.GetName]の有名な受容主義活動家の名誉を称える文化交流の準備が整った。[root.GetName]の住民はかつてのリーダーが残した教えと業績の記憶を残し、種族間の平和と善意を自信をもって守ることができるようになった。"
+
+
+#General Modifiers
+cc_colony_distrusts:0 "中央国家への不信"
+cc_colony_distrusts_desc:0 "この植民地の住民の多くは、歴史上起きた事件の結果、中央国家に対し不信感を抱いている。"
+
+cc_lingering_oppression:0 "取り締まりによる長引く弾圧"
+cc_oppression:0 "取締りの原因"
+
+cc_planet_oppression:0 "弾圧的な取り締まり"
+cc_planet_oppression_desc:0 "政府はこの惑星に対し弾圧的な取り締まりを開始した。"
+
+
+
+mod_planets_unity_produces_add:0 "$mod_country_unity_produces_mult$"
+mod_planets_influence_produces_add:0 "$mod_country_influence_produces_mult$"
+mod_planets_minerals_produces_add:0 "$mod_country_minerals_produces_mult$"
+mod_planets_energy_produces_add:0 "$mod_country_energy_produces_mult$"

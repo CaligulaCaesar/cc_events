@@ -1,0 +1,131 @@
+﻿l_japanese:
+
+
+dpe_conspiracy.20.name:0 "反逆的な言動"
+dpe_conspiracy.20.desc:0 "今日早く、 [authoritarian.GetTitle] [authoritarian.GetName]が主要な通信チャンネルで演説をした。そこでは、[authoritarian.GetSheHe]反逆ともとれるような思想を述べていた。: [authoritarian.GetSheHeCap][root.GetName]が挑戦的な行動をこちらに採っている一方で脆弱で、分裂した、無力な政府は何もしていない。この事態を解決し、[root.GetSpeciesAdj]の偉大さを取り戻すため、[authoritarian.GetSheHe]新しい形態の- 厳しい決断をも断行できるほど強力な為政者による -　政府の必要性を訴えた。。[authoritarian.GetSheHeCap]政府が何も出来ない場合は、「憂国の愛国市民」たちが自らの手で問題を解決しなければならないとも主張した。\n\nそれから、[authoritarian.GetName]は身を隠した。[authoritarian.GetHisHerCap] 何処にいるのかわからない。しかし、[authoritarian.GetSheHe]高度に暗号化されたメッセージを残している。そこでは自らの居場所を秘密にしていることの謝罪が述べられていたが、その原因として現在の政治状況下では自らの命が危ういと感じたからだと主張している。[authoritarian.GetSheHeCap]連絡をとる詳細な方法も残した。\n\nどのように対応するべきだろうか?"
+dpe_conspiracy.20.A:0 "この裏切り者を逮捕せよ!"
+dpe_conspiracy.20.A.tooltip:0 "諜報員が[authoritarian.GetName]の逮捕を試みる。"
+dpe_conspiracy.20.B:0 "説明を要求する。"
+dpe_conspiracy.20.C:0 "[authoritarian.GetSheHeCap] [authoritarian.GetIsAre]は正しい!"
+dpe_conspiracy.20.D:0 "[authoritarian.GetHimHer]無視しろ。"
+
+dpe_conspiracy.21.name:0 "[authoritarian.GetName]が逮捕される!"
+dpe_conspiracy.21.desc:0 "諜報員の手により[authoritarian.GetName]の逮捕に成功した。[authoritarian.GetSheHeCap] [authoritarian.GetIsAre]は現在国家への反逆を問う裁判にかけられている。これがこの問題に関する最後のニュースだといいのだが。"
+
+dpe_conspiracy.211.name:0 "[authoritarian.GetName]は陰謀を認める!"
+dpe_conspiracy.211.desc:0 "苛烈な尋問の後、[authoritarian.GetName]は[root.GetRulerTitle]に対する陰謀を認めた。しかし、[authoritarian.GetHimHer]から名前を聞き出すことに成功する頃には、陰謀の共謀者たちは皆[authoritarian.GetName]の逮捕を恐れて[root.GetName]へと自発的に亡命してしまっていた。国境警備隊が共謀者たちの再入国を防ぐように命令を受けたので、[root.GetSpeciesAdj]の住民は安堵のため息をついている。"
+
+dpe_conspiracy.22.name:0 "[authoritarian.GetName]の逮捕に失敗!"
+dpe_conspiracy.22.desc:0 "諜報員による[authoritarian.GetName]を逮捕する試みは失敗に終わった。. [authoritarian.GetHisHerCap]居場所、現在の活動…は全て不明だ。[authoritarian.GetSheHe]何を企んでいるのか?"
+
+dpe_conspiracy.23.name:0 "[authoritarian.GetName]の反応"
+dpe_conspiracy.23.desc:0 "申し訳ない。[root.GetRulerName]...ですがこれは単に事実を述べただけなのです。事実を述べることは私の義務です。私は[root.GetSpeciesAdj]の未来を守るために行動しているのです。"
+dpe_conspiracy.23.option:0 "続けて"
+
+dpe_conspiracy.24.name:0 "$dpe_conspiracy.23.name$"
+dpe_conspiracy.24.desc:0 "これは私が長年かけて計画してきたことなのです。あなたの面子を保ちたければ辞任して別の者の手に任せることです。"
+dpe_conspiracy.24.A:0 "そんなことはしない。逮捕しろ!"
+dpe_conspiracy.24.A.tooltip:0 "$dpe_conspiracy.20.A.tooltip$"
+dpe_conspiracy.24.A.response:0 "好きにしろ。"
+dpe_conspiracy.24.B:0 "たぶん[authoritarian.GetSheHe]正しい..."
+dpe_conspiracy.24.B.tooltip:0 "$dpe_conspiracy.27.A.tooltip$"
+dpe_conspiracy.24.B.response:0 "素晴らしい。[root.GetName]への信頼が回復したよ。"
+dpe_conspiracy.24.C:0 "用心を続けろ。"
+
+dpe_conspiracy.25.name:0 "陰謀が暴露!"
+dpe_conspiracy.25.desc:0 "[root.GetSpeciesAdj]の情報局が[root.GetName]に権威主義体制を立ち上げる計画を発見した。 [authoritarian.GetName]は名目上のトップで、実際はその裏に影響力のある数多くの[root.GetSpeciesNamePlural]や軍部内のある派閥が関わっていた。計画は何も実施されなかったが、もう少しで政府が転覆し権威主義体制へと変えられるところであった。"
+dpe_conspiracy.25.A:0 "全面的に取り締まれ。"
+dpe_conspiracy.25.A.tooltip:0 "共謀者が脱出することは困難となるだろう。"
+dpe_conspiracy.25.B:0 "計画者の逮捕に注力せよ。"
+
+dpe_state_in_lockdown:0 "国家機関封鎖中"
+dpe_state_in_lockdown_desc:0 "政府は急を要しない業務を停止中だ。政府に対する陰謀を企てた共謀者を制圧するためだ。"
+dpe_state_in_lockdown_faction:0 "民間人の自由を制限"
+
+dpe_conspiracy.26.name:0 "陰謀の首謀者が逮捕!"
+dpe_conspiracy.26.desc:0 "[root.GetSpeciesAdj]の情報局と治安部隊により、権威主義体制の陰謀を企てた首謀者らの個人と居場所を特定することに成功した。この情報を元に、計画者たちを逮捕することができた。これで、陰謀の火は消し止められた。"
+
+dpe_conspiracy.27.name:0 "陰謀!"
+dpe_conspiracy.27.desc:0 "「こうなっては欲しくなかった。だが、あなたに[root.GetName]を壊させはしない。」\n\n[root.GetRulerTitle] [root.GetRulerName]は振り返った。[authoritarian.GetName]だった。ピストルを[root.GetRulerName]に向けて言った。「ガードを呼んでも無駄だ。彼らは私の味方だからな。」[authoritarian.GetName]は冷たく言い放った。「さあ、ここに二つの選択肢がある。この紙にサインして新体制の支援を約するか、亡命するか、私に撃たれるか。あなたの選択次第だ。」"
+dpe_conspiracy.27.desc.clever:0 "「こうなっては欲しくなかった。だが、あなたに[root.GetName]を壊させはしない。」\n\n[root.GetRulerTitle] [root.GetRulerName]は振り返った。[authoritarian.GetName]だった。ピストルを[root.GetRulerName]に向けていた。「お前は!」\n\n[authoritarian.GetName]は冷たく笑った。「あぁ、私さ。あんたにもう少しでやられるところだった。違うかい?それでこっちはこんなことが出来るのか疑ってしまうところだった。今のようなことをな。」[authoritarian.GetSheHeCap]は芝居がかったため息をついた。「ガードを呼んでも無駄だ。彼らは私の味方だからな。」[authoritarian.GetName]は冷たく言い放った。「さあ、ここに二つの選択肢がある。この紙にサインして新体制の支援を約するか、亡命するか、私に撃たれるか。あなたの選択次第だ。」"
+dpe_conspiracy.27.desc.stupid:0 "「こうなっては欲しくなかった。だが、あなたに[root.GetName]を壊させはしない。」\n\n[root.GetRulerTitle] [root.GetRulerName]は振り返った。[authoritarian.GetName]だった。ピストルを[root.GetRulerName]に向けていた。\n\n「こんなことが起きるとはわからなかった。」[root.GetRulerName]は言った。\n\n[authoritarian.GetName]は冷たく笑った。「実のところ、それが問題なんだよ。あんたはいつも弱腰で必要なことをやろうとしないからな。」[authoritarian.GetSheHeCap]は芝居がかったため息をついた。「ガードを呼んでも無駄だ。彼らは私の味方だからな。」[authoritarian.GetName]は冷たく言い放った。「さあ、ここに二つの選択肢がある。この紙にサインして新体制の支援を約するか、亡命するか、私に撃たれるか。あなたの選択次第だ。」"
+dpe_conspiracy.27.A:0 "早くしろ。"
+dpe_conspiracy.27.A.tooltip:0 "[root.GetRulerTitle] [root.GetRulerName] は辞任し亡命する。"
+dpe_conspiracy.27.B:0 "最後まで戦うぞ。"
+
+dpe_illegitimate_regime:0 "正統性のない体制"
+dpe_illegitimate_regime_desc:0 "現体制は過去の指導者を暗殺するという陰謀を経て権力を得た。"
+
+dpe_seized_control_faction:0 "コントロール下"
+dpe_lost_control_faction:0 "陰謀を制止できない"
+
+dpe_conspiracy.28.name:0 "陰謀が立ち消える"
+dpe_conspiracy.28.desc:0 "[authoritarian.GetName]の消息が絶えてから扇動的な噂が飛び交ったが、こちらの諜報機関は政府側に留まり、計画の全てをくじくことに成功した。反逆的な活動家たちは死亡し、[authoritarian.GetName]は失敗を諦め、[rival.GetName]へ亡命した。"
+
+
+
+
+dpe_conspiracy.1.name:0 "宇宙軍が政府に請願"
+dpe_conspiracy.1.desc:0 "[root.GetRulerTitle] [root.GetRulerName]宛　\n\n艦隊は[root.GetName]の安定と平和を保つ最重要な役割を担っていることを再認識する時です。艦隊は銀河的な政治に関わるものなのです。我々は絶え間なく来る脅威に対抗するため日々働いており、我々の熟練クルーは銀河で最も能力に恵まれております。そして我々の操船技術に並ぶ者はおりません。\n\nしかし国内の政治において、宇宙軍が厳しい状況に置かれていることは甚だ遺憾と申し上げるほかありません。下士官から提督に至るまで、宇宙軍は本来あるべき地位に対しあまりにも軽んじられているのは明らかです。宇宙軍の軍人に対する給与が犯罪的なまでに低いだけでなく、徴兵から広報活動まで、文民による干渉が多すぎるのです。それどころか有能な士官に対する任務不履行を捏造してまで非難する始末です。つまり、艦隊の最重要事項について、艦隊は発言権を持ってはいないのです\n\nこの現状は[root.GetName]を脅威から守るという役割を満足に果たす障害になっております。これはあなたの[root.GetRulerTitle]という立場を維持する上でも良い状況とはいえないでしょう。現状に対し対策がなされなければ、我々は国家と政府の安全を保障できるとは断言できなくなります。\n\n敬具,\n[militarist.GetName],\n　[militarist_faction.GetName]の指導者にして、[root.GetSpeciesAdj]宇宙軍の代弁者"
+dpe_conspiracy.1.A:0 "軍事的なことを考えるときが来た。"
+dpe_conspiracy.1.B:0 "艦隊にもっと支払うべきだ。"
+dpe_extra_naval_expenses:0 "宇宙軍への追加支出"
+dpe_extra_naval_expenses_desc:0 "政府は艦隊に対する支出を追加した。"
+dpe_conspiracy.1.C:0 "艦隊と政府は分離していなければならない。"
+dpe_conspiracy.1.C.tooltip:0 "宇宙軍の士官たちはとても混乱するだろう。Steps should be taken to reduce the influence of the fleet (cut its size) or otherwise mollify the militarist faction if this course of action is adopted."
+dpe_military_petition_rejected:0 "請願は却下する"
+
+dpe_conspiracy.2.name:0 "不従順な宇宙軍士官"
+dpe_conspiracy.2.desc:0 "It appears that several top naval officers are ignoring your orders. You cannot get through to them by any means of communication. Your advisors worry what this might portend. You have contacted other, lower-ranking officers, but they claim not to know of anything untoward."
+#CCWORRYING
+
+#(2 days later)
+dpe_conspiracy.3.name:0 "軍事クーデタ!"
+dpe_conspiracy.3.desc:0 "This is [militarist.GetName]. I speak on behalf of the [root.GetSpeciesAdj] Navy. Our admirals have decided with unanimity that the [root.GetSpeciesAdj] government must be placed under our protection for the good of the state. Our cannons are locked onto you, and our ground forces have formed a perimeter around [root.GetGovtBuilding]. You cannot escape us. If you do not surrender immediately, we will blow you and [root.GetGovtBuilding] to shreds. You have an hour to give your response."
+dpe_conspiracy.3.option:0 "選択肢はない"
+dpe_conspiracy.3.tooltip:0 "[root.GetRulerTitle] [root.GetRulerName]は辞任し亡命する。"
+
+#GetGovtBuilding:
+ccloc_democracy_building:0 "議会"
+ccloc_oligarchy_building:0 "評議会ビル"
+ccloc_others_building:0 "あなたの王宮"
+
+dpe_military_coup_faction:0 "軍事クーデタ"
+
+#Follow-up event (Paid ransom): 
+dpe_conspiracy.4.name:0 "宇宙軍はさらなる資金を必要としている"
+dpe_conspiracy.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]宛\n\n あなたは栄光ある勇敢な我が軍の増強に何度か手を差し伸べてくださいました。もう一度、手を差し伸べては頂けませんか。宇宙軍本部は艦隊の拡大、艦船の改修、新技術の研究のために新たな研究開発プロジェクトの開始を求めています。以前に頂いた予算ではどうにも必要な分に届かないのです。国防の観点から、より多くの資金を必要としています。我が国の栄光を守るために自らの命を以って奉仕に当たっている人々に報いることができないようなことはあってはなりませんよね?\n\n敬具\n[militarist.GetName],\n[militarist_faction.GetName!]の指導者にして [root.GetSpeciesAdj]宇宙軍の代弁者"
+dpe_conspiracy.4.A:0 "わかった、持っていけ。艦隊には命令に服従し続けてもらわねばならないからな。"
+dpe_conspiracy.4.B:0 "軍部は文民の統制下にある。;宇宙軍にはこのことをしっかり思い出してもらうぞ!"
+dpe_conspiracy.4.B.tooltip:0 "$dpe_conspiracy.1.C.tooltip$"
+dpe_conspiracy.4.C:0 "研究開発プロジェクト?"
+
+dpe_extra_naval_expenses_2:0 "$dpe_extra_naval_expenses$"
+dpe_extra_naval_expenses_2_desc:0 "$dpe_extra_naval_expenses_desc$"
+
+dpe_conspiracy.5.name:0 "宇宙軍　研究開発部"
+dpe_conspiracy.5.desc:0 "宇宙軍本部は艦隊の予算がが国家予算のうち無視できない部分を占めていることを理解しています。その上で、我が隊を銀河一進んだ艦隊-現代艦隊のモデルと呼ばれるような-へと変えていくよう最善を尽くすことを決めたのです。軍事的な基準からすれば、科学者や研究所、研究素材といったものにかかる費用はそこまで高くつくようなものではありません。なので、研究に必要な予算さえ頂ければ、すぐに軍部を改革し、銀河中から羨まれる軍隊を目指して突き進むことができるようになるでしょう。"
+dpe_conspiracy.5.A:0 "この新しい研究プロジェクトに予算を割り当てることは可能だ。"
+dpe_conspiracy.5.B:0 "国にそのような余裕はない。"
+dpe_conspiracy.5.B.tooltip:0 "$dpe_conspiracy.1.C.tooltip$"
+
+dpe_navy_RandD:0 "宇宙軍の研究に投資"
+dpe_navy_RandD_desc:0 "国は艦隊の改修に投資した。"
+
+
+dpe_conspiracy.6.name:0 "宇宙軍への追加予算は無駄だったのか?"
+dpe_conspiracy.6.desc:0 "Following the defeat at the hands of the [fromfrom.GetName], many have called into question whether the extra money given to the navy is being spent well - after all, that same navy was unable to bring the [root.GetName] victory. Already, other departments are lobbying for more funding, claiming that they will be able to have a bigger impact in ensuring the [root.GetName] rises back to its former glory."
+dpe_conspiracy.6.A:0 "艦隊にはまだ金が必要だ。"
+#only if the fleet has taken a beating
+dpe_conspiracy.6.B:0 "艦隊の再建に使う。"
+dpe_conspiracy.6.C:0 "別のところで使う。"
+#only if the fleet is still fully intact
+dpe_conspiracy.6.C.tooltip:0 "$dpe_conspiracy.1.C.tooltip$"
+dpe_conspiracy.6.C.tooltip2:0 "The Naval Officers will be very upset. Steps should be taken to ensure that influence of the fleet does not grow sufficiently for it to destabilise the government, or alternatively that the militarist faction is otherwise mollified, if this course of action is adopted."
+
+dpe_rebuilding_fleet:0 "艦隊の再建"
+dpe_rebuilding_fleet_desc:0 "国は先の敗北のため弱体化した艦隊の再建のために予算を割り当てている。"
+dpe_rebuilding_fleet_2:0 "$dpe_rebuilding_fleet$"
+dpe_rebuilding_fleet_2_desc:0 "$dpe_rebuilding_fleet_desc$"
+dpe_naval_pay_cut_faction:0 "宇宙軍の予算カット"
+dpe_navy_privileges_cut_faction:0 "宇宙軍の特権カット"

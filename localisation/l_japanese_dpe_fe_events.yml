@@ -1,0 +1,82 @@
+﻿l_japanese:
+
+ dpe_fe.1.name:0 "いにしえの助けは要るか?"
+ dpe_fe.1.desc:0 "ここ数世紀間の進歩は非常に目覚しいものであったが、[root.GetSpeciesAdj]の医学では治療できない病気が未だ数種類残っている。 [root.GetRulerTitle] [root.GetRulerName]は不幸ながらその不治の病にかかってしまった。病のため、[root.leader.GetHisHer]脳機能が急激に低下し、数ヶ月で死に至るかもしれないという現実に医者は当惑を隠せないでいる。しかし、このような病も進んだ社会ではありふれた病気として扱われており、我々が奇跡と呼ぶようなもので治療をしてしまうのだろう。もしくはこのような病気は存在さえしないのかもしれない。だが、そのような社会からの関心を引寄せるような行為はリスクが伴う。向こうの態度は予測できないからだ。それでも、適切な支払いさえすれば、いにしえの助けを得て[root.GetRulerName]を救うことができるかもしれない。"
+ dpe_fe.1.materialist:0 "Approach the [dpe_materialist_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.spiritualist:0 "Approach the [dpe_spiritualist_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.xenophile:0 "Approach the [dpe_xenophile_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.xenophobe:0 "Approach the [dpe_xenophobe_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.machine:0 "Approach the [dpe_machine_fe.GetSpeciesNamePlural]."
+ dpe_fe.1.no:0 "自然な死がよい"
+ dpe_fe.1.no.tooltip:0 "払う価値のない犠牲というものもある。"
+ 
+
+ dpe_fe.12.name:0 "The [dpe_xenophobe_fe.GetSpeciesNamePlural]が此方の使節を撃墜"
+ dpe_fe.12.desc:0 "The [dpe_xenophobe_fe.GetSpeciesNamePlural]は親切にもメッセージを聞くことなく此方の使節が乗った船を撃墜した。向こうの答えは「ノー」だと推測することしかできない。"
+ 
+ dpe_fe.15.name:0 "[dpe_fe.GetName]の反応"
+ dpe_fe.15.desc:0 "有機物からの支援申請を受信。管理プロトコル317-2を有効化。 メッセージは以下の通り: 全有機物は我々に支えられるべきだ。患者をこちらの惑星に送るように。さすれば… §R<<ERROR: DATA BLOCK CORRUPTED>> <<ERROR: DATA BLOCK CORRUPTED>>§!. 反応を待機中…。"
+ dpe_fe.15.A:0 "感謝する。ありがたく治療を受け入れよう。"
+ dpe_fe.15.B:0 "やめた方が良いと思う..."
+ 
+ dpe_fe.16.name:0 "[root.GetRulerTitle] [root.GetRulerName] "治療済""
+ dpe_fe.16.desc:0 "情報の要約: 貴国の統治者の病を治療した。 [root.leader.GetSheHeCap] will be free to live out the rest of [root.leader.GetHisHer] life on our Sanctuary."
+ 
+ 
+ dpe_fe.2.name:0 "[dpe_fe.GetName]の反応"
+ dpe_fe.2.desc.friendly:0 "友人を助けよう。お得な価格で。"
+ dpe_fe.2.desc.angry:0 "貴様らのような下等生物を助けるなど有り得ない。[root.GetSpeciesName]。"
+ dpe_fe.2.desc.change:0 "やり方を変えると約するならば助ける用意がある。[root.GetSpeciesName]。"
+ dpe_fe.2.desc.pay:0 "払えば、助ける。[root.GetSpeciesName]。"
+ dpe_fe.2.change:0 "やるべきことをやる。"
+ dpe_fe.2.pay:0 "生き抜くためだ、喜んで支払おう。"
+ dpe_fe.2.friendly:0 "$dpe_fe.2.pay$"
+ dpe_fe.2.nopay:0 "それは高すぎる - 死を待つとする。"
+
+dpe_paying_spirFE:0 "没落した帝国への支払い"
+dpe_paying_friendly_spirFE:0 "$dpe_paying_spirFE$"
+dpe_paying_xenoFE:0 "$dpe_paying_spirFE$"
+dpe_paying_friendly_xenoFE:0 "$dpe_paying_spirFE$"
+dpe_paying_matFE:0 "$dpe_paying_spirFE$"
+dpe_paying_friendly_matFE:0 "$dpe_paying_spirFE$"
+
+ dpe_fe.3.name:0 "[root.GetRulerTitle] [root.GetRulerName]は回復した"
+ dpe_fe.3.desc:0 "We have healed your leader. As a sign of our favour for you, we have added a small addition to [root.leader.GetHisHer] abilities. May [root.leader.GetSheHe] use it well!"
+ dpe_fe.3.option.spiritualist:0 "The trait $leader_trait_ruler_psionic$ is added to [root.leader.GetName]."
+ dpe_fe.3.option.xenophile:0 "The trait $leader_trait_ruler_erudite$ is added to [root.leader.GetName]."
+ dpe_fe.3.option.materialist:0 "The trait $leader_trait_ruler_cyborg$ is added to [root.leader.GetName]."
+ dpe_fe.3.option:0 "Thank you for your help. We are forever in your debt."
+ 
+dpe_fe_disturbed_us:0 "我らを妨害"
+dpe_spurned_our_help:0 "我らの助けを撥ね付けた"
+dpe_sought_our_help:0 "我らの助けを求めた"
+
+dpe_fe.4.name:0 "[root.GetRulerTitle] [root.GetRulerName] が死亡"
+dpe_fe.4.desc:0 "[root.GetRulerTitle] [root.GetRulerName]'s degenerative brain condition suddenly deteriorated, before the [dpe_fe.GetName]'s healers could look at [root.Leader.GetHimHer]."
+ 
+dpe_leader_trait_reinvigorated:0 "生き返った"
+dpe_leader_trait_reinvigorated_desc:0 "このリーダーは古代文明の助けを借り、若返った。"
+ 
+dpe_leader_die_soon:0 "[root.GetRulerTitle] [root.GetRulerName] will die soon."
+
+#Second chain
+ dpe_fe.20.name:0 "没落した帝国からの脱出"
+ dpe_fe.20.desc:0 "Hi there, my [root.GetRulerTitle]. I am... [dpe_escaped_scientist.GetName]... your loyal subject.\n\n*大きい笑い声*\n\nI recently escaped from the [FallenEmpireTaskOrigin.GetName], where I had undertaken a close study of their technology. I have managed to bring most of my materials with me, and I believe I can replicate several of their technologies.\n\nFurthermore, the [FallenEmpireTaskOrigin.GetSpeciesNamePlural] made some... improvements... to me. I am now capable of thought processes well beyond the even the greatest [root.GetSpeciesAdj] genius. It may have slightly driven me mad, but never mind.\n\n*大きい笑い声*\n\nErm, I should mention, the [FallenEmpireTaskOrigin.GetSpeciesNamePlural] might be a tad annoyed at me... nothing you can't deal with though, I'm sure.\n\n *大きい笑い声*"
+ dpe_fe.20.option:0 "Excellent... I guess?"
+ dpe_fe.20.tooltip:0 "[dpe_escaped_scientist.GetName], a level 5 scientist with the traits $leader_trait_scientist_erudite$, $leader_trait_maniacal$ and $dpe_leader_trait_ancient_knowledge$ is added to the leader pool."
+ 
+ dpe_fe.22.name:0 "[dpe_escaped_scientist.GetName] is Wanted"
+ dpe_fe.22.desc:0 "Dear [root.GetSpeciesName]. It has come to our attention that you are harbouring the deranged criminal, [dpe_escaped_scientist.GetName]. [dpe_escaped_scientist.GetSheHeCap] committed unspeakable atrocities whilst escaping from out authorities with a large cache of dangerous technology. It is imperative that [dpe_escaped_scientist.GetSheHe] is returned to us so that [dpe_escaped_scientist.GetSheHe] can face trial for [dpe_escaped_scientist.GetHisHer] crimes... and that you surrender [dpe_escaped_scientist.GetHisHer] cache to us - for your own safety, it cannot be left in the hands of an immature race."
+ dpe_fe.22.A:0 "[dpe_escaped_scientist.GetSheHeCap] will find a refuge with us."
+ dpe_fe.22.A.response:0 "You will live to regret this, [root.GetSpeciesName]."
+ dpe_fe.22.B:0 "We will return [dpe_escaped_scientist.GetHimHer] and [dpe_escaped_scientist.GetHisHer] cache to you."
+ dpe_fe.22.B.tooltip:0 "[dpe_escaped_scientist.GetName] is removed from the leader pool."
+ dpe_fe.22.B.response:0 "You have made the right choice, [root.GetSpeciesName]."
+ dpe_fe.22.C:0 "(Lie) We will return [dpe_escaped_scientist.GetHimHer] to you. But what cache?"
+ dpe_fe.22.C.tooltip:0 "$dpe_fe.22.B.tooltip$ The [root.GetName] will secretly seize [dpe_escaped_scientist.GetName]'s cache of technologies:"
+ dpe_fe.22.C.response:0 "Be careful, [root.GetSpeciesName]. You are playing with fire."
+ 
+
+dpe_leader_trait_ancient_knowledge:0 "Ancient Knowledge"
+dpe_leader_trait_ancient_knowledge_desc:0 "This scientist has seen the workings of a Fallen Empire firsthand, and has a cache of ancient technologies they are bent on reproducing."
+ 

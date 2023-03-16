@@ -1,6 +1,4 @@
-﻿l_simp_chinese:
-#l_english:
-#commented this out so that I get the correct tooltips with my validator
+﻿l_japanese:
 
 ########################################################################################################
 ############### Caligula's Note to Translators #########################################################
@@ -69,8 +67,8 @@
  dpe_hw_duel.3.reject.hive:0 "The Hive does not care for your honour, [from.GetSpeciesName]."
  dpe_hw_duel.3.reject.machine:0 "Kindly delete yourself and stop bothering us."
  dpe_hw_duel.3.accept:0 "We will duel your champion."
- dpe_hw_duel.3.accept.militarist:0 "A duel? Excellent idea!"
- dpe_hw_duel.3.accept.machine:0 "Very well. We will dismantle your champion."
+ dpe_hw_duel.3.accept.machine:0 "A duel? Excellent idea!"
+ dpe_hw_duel.3.accept.militarist:0 "Very well. We will dismantle your champion."
  dpe_hw_duel.3.apologise:0 "We humbly apologise for the misunderstanding. Please forgive us."
  
  
@@ -330,7 +328,3 @@
  dpe_hw_duel.78.desc.root_leader:0 "The duel against the [from.GetSpeciesAdj] champion went better than we anticipated. Our combatant, [dpe_duel_leader2.GetTitle] [dpe_duel_leader2.GetName], struck a rapid barrage of blows, wounding the opposing duellist. The latter then attempted to surrender, but as we had ordered, [dpe_duel_leader2.GetName] ignored this and slow the [from.GetSpeciesAdj] on the spot. The incensed [from.GetSpeciesAdj] delegation had to be restrained by security staff and escorted out of the arena. It is most satisfying to see the [from.GetSpeciesNamePlural] this angry, but these actions may have cost our standing in the galactic community somewhat."
  dpe_hw_duel.78.desc.both_leader:0 "The duel against the [from.GetSpeciesAdj] champion, [dpe_duel_leader.GetTitle] [dpe_duel_leader.GetName], went better than we anticipated. Our combatant, [dpe_duel_leader2.GetTitle] [dpe_duel_leader2.GetName], struck a rapid barrage of blows, wounding [dpe_duel_leader.GetName]. The latter then attempted to surrender, but as we had ordered, [dpe_duel_leader2.GetName] ignored this and slow the [from.GetSpeciesAdj] on the spot. The incensed [from.GetSpeciesAdj] delegation had to be restrained by security staff and escorted out of the arena. It is most satisfying to see the [from.GetSpeciesNamePlural] this angry, but these actions may have cost our standing in the galactic community somewhat."
  dpe_hw_duel.78.option:0 "Our warriors truly are the finest!"
-
- dpe_better_relations_with_militarists:0 "Militarist nations will admire our fighting prowess as a result of this victory."
- dpe_worse_relations_with_militarists:0 "Militarist nations will look down on us for this disgrace."
- dpe_worse_relations_from_deceit:0 "Non-Gestalt nations will spurn us for our deceitfulness."

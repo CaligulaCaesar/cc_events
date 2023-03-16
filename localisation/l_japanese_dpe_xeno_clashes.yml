@@ -1,0 +1,161 @@
+﻿l_japanese:
+
+cc_xeno_clashes.2.name:0 "[root.GetName]でヘイトスピーチ"
+cc_xeno_clashes.2.desc:0 "[root.GetName]の[species1.GetNamePlural]と[species2.GetNamePlural]間の緊張を高める事件が多発している。世論は排他的なものになりつつある。両方の指導者たちが自らこそが[root.GetName]における居住の正当性を主張している。互いに出し合っている文書では相手を遠まわしに侮辱する言葉が含まれ、特に[species2.GetNamePlural]の文書には「[species1.GetAdj]問題の解決」に関する不穏な言説が含まれていた。"
+cc_xeno_clashes.2.desc.phile:0 "[species1.GetNamePlural]と[species2.GetNamePlural]のどちらがより良い待遇で扱われるべきかという議論が広く行われている。公論の場では互いが互いを公然と非難し、自分たちの種族こそが[root.GetName]の正当な居住者であると主張している。世論は大きく排他的な方向へと舵を切った。「[species1.GetAdj]問題の解決」に関する不穏なコメントさえ見られた。"
+cc_xeno_clashes.2.phile.own:0 "[species1.GetNamePlural]は良い例となる!"
+cc_xeno_clashes.2.phobe.own:0 "異星のクズは[species1.GetNamePlural]には不適切だ。"
+cc_xeno_clashes.2.own:0 "平和を保たなければ成らない。"
+cc_xeno_clashes.2.no_own:0 "$cc_xeno_clashes.2.own$"
+cc_xeno_clashes.2.phobe.no_own:0 "異星のクズ共が互いを嫌いあうなら好きにすれば良い。"
+
+cc_planet_hate_speech:0 "ヘイトスピーチ"
+cc_planet_hate_speech_desc:0 "悪意に満ちた言論のため、この惑星の種族間関係は緊張状態にある。"
+
+cc_xeno_clashes.3.name:0 "[root.GetName]の種族間緊張が沸騰"
+cc_xeno_clashes.3.desc.A:0 "[species2.GetName]の著名人が汚職のため逮捕されたことを切欠に、[species2.GetAdj]の住民たちは大規模な抗議を行うに至った。[species2.GetNamePlural]の抗議者たちは[species1.GetAdj]当局による抑圧の結果だと主張している。この抗議活動に対抗し、[species1.GetNameAdj]の支持者たちが抗議に対する抗議活動を行い、通りは両者で満たされた。現時警察はこの両者を離すことに失敗し、流血の惨事を招く結果となってしまった。これが導火線に火をつけることになり、暴動は急速に拡大していった。現在、秩序を回復するために路上に軍隊が配備されている。\n\nこの状況に対しどのようにすべきだろうか?"
+cc_xeno_clashes.3.desc.B:0 "[species2.GetName]の著名人が「[species1.GetNamePlural]は故郷に帰れ」という旨のヘイトスピーチを行ったことで逮捕されたことを切欠に、[species2.GetAdj]の住民たちは大規模な抗議を行うに至った。[species2.GetNamePlural]の抗議者たちは[species1.GetAdj]当局による抑圧の結果だと主張している。この抗議活動に対抗し、[species1.GetNameAdj]の支持者たちが抗議に対する抗議活動を行い、通りは両者で満たされた。現時警察はこの両者を離すことに失敗し、流血の惨事を招く結果となってしまった。これが導火線に火をつけることになり、暴動は急速に拡大していった。現在、秩序を回復するために路上に軍隊が配備されているが、緊張状態は緩和されないままだ。\n\n[species1.GetAdj]当局はどのように対処すべきだろうか?"
+cc_xeno_clashes.3.A:0 "[root.owner.GetName]に[species2.GetNamePlural]の場所はない。"
+cc_xeno_clashes.3.A.tooltip:0 "[root.owner.GetName]の[species2.GetAdj]住民は侮辱されたと感じるだろう。 "
+cc_xeno_clashes.3.B:0 "このような事件は避けられないことだが遺憾なことだ。"
+cc_xeno_clashes.3.B.tooltip:0 "緊張状態が悪化し広がる可能性がある。"
+cc_xeno_clashes.3.C:0 "共にうまくやっていく方法を探さなければならない。"
+cc_xeno_clashes.3.C.tooltip:0 "和解キャンペーン - 膨大な投資に基づく - で惑星の緊張状態を緩和する。"
+
+cc_xeno_clashes.31.name:0 "[species2.GetAdj]独立前線の結成"
+cc_xeno_clashes.31.desc:0 "宛：にっくき[root.GetRulerTitle] [root.GetRulerName]。\n\n[species2.GetAdj]のコミュニティが長らく疑わしく思っていたことを明確にして頂きありがとうございます。はっきりとしました。我々は[root.GetName]では歓迎されていないのです。そのためあなたは我々がここからの離脱を計画しているということを聞いて大変お喜びのことかと存じます。[species1.GetAdj]の専制は　続かない!\n\n敬具\n[annoyed_xeno.GetName],\n[species2.GetAdj] 独立前線のリーダー"
+cc_xeno_clashes.31.tooltip:0 "全ての[species2.GetAdj]£pops Popは§R$cc_feels_unwelcome$§!補正を得る。効果は幸福度-20%\n種族間の更なる騒動が起きうる。"
+
+cc_planet_interspecies_tensions:0 "種族間の緊張"
+cc_planet_interspecies_tensions_desc:0 "この惑星の異種族間の緊張が高まっている。"
+cc_empire_interspecies_tensions:0 "種族間の緊張の広がり"
+cc_empire_interspecies_tensions_desc:0 "国内の異種族間の緊張が高まっている。"
+cc_feels_unwelcome:0 "受け入れられていると感じる"
+cc_xenos_disparaged:0 "異星人歓迎"
+cc_xenos_disparaged_sup:0 "$cc_xenos_disparaged$"
+cc_xenos_encouraged:0 "平和的共存の奨励"
+
+cc_xeno_reconciliation:0 "異星人和解"
+cc_xeno_reconciliation_desc:0 "一連の不愉快な事件の後、政府は種族間の和解と平和的共存を推し進めるキャンペーンを立ち上げた。"
+cc_investment_package:0 "投資パッケージ"
+cc_investment_package_desc:0 "中央政府はこの惑星の状況を落ち着かせるために「投資」を行っている。"
+
+cc_xeno_clashes.32.name:0 "[species2.GetAdj]民兵団の攻撃!"
+cc_xeno_clashes.32.desc:0 "[species2.GetAdj]独立前線が[root.GetName]を攻撃した。[species2.GetName]の民兵が[species1.GetAdj]のコミュニティを警告なしに攻撃し、数多くの[species1.GetNamePlural]を殺した。"
+cc_xeno_clashes.32.option:0 "これ以上の虐殺を防ぐためにも行動せねば。"
+
+cc_xeno_clashes.33.name:0 "[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.33.desc:0 "[species2.GetAdj]独立前線の工作員が[root.GetName]で[species1.GetNamePlural]を狙った攻撃を行った。[species1.GetNamePlural]の住民が多く住む地域で強力な核爆弾を起爆したのだ。犠牲者は数知れない。生き残った[species1.GetNamePlural]たちは更なるテロリストからの攻撃からの保護を訴えている。"
+cc_xeno_clashes.33.option:0 "$cc_xeno_clashes.32.option$"
+
+
+cc_xeno_clashes.34.name:0 "[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.34.desc:0 "[species2.GetAdj]独立前線が[root.GetName]当局にサイバー攻撃を仕掛けた。システムを停止させ機密情報を奪った。独立前線は惑星に[species2.GetAdj]中心の政権を打ち立てるつもりだ。"
+cc_xeno_clashes.34.option:0 "秩序を回復しなければ。"
+
+cc_xeno_clashes.35.name:0 "[species2.GetAdj]民兵団の攻撃!"
+cc_xeno_clashes.35.desc:0 "[species2.GetAdj]独立前線が[root.GetName]を攻撃した。[species2.GetName] の民兵が現地の政府関係者を数人殺害し、現地政府の運営を妨害している。独立前線は現地政府を転覆させ惑星に[species2.GetAdj]中心の政権を打ち立てようとしている。"
+cc_xeno_clashes.35.option:0 "$cc_xeno_clashes.34.option$"
+
+cc_xeno_clashes.36.name:0 "[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.36.desc:0 "[species2.GetAdj]独立戦線の工作員が[root.GetName]に攻撃を仕掛けた。政府の建物に自爆チームが侵入し、高威力の爆弾を起爆した。政府は人員及びインフラを喪失し混乱状態にあるが、状況に対処しようと奮闘中だ。"
+cc_xeno_clashes.36.option:0 "$cc_xeno_clashes.34.option$"
+
+cc_disrupted_government:0 "政府が混乱中"
+cc_disrupted_government_desc:0 "反乱勢力が惑星政府の機関を攻撃し、業務を妨害している。"
+
+cc_xeno_clashes.37.name:0 "[root.GetName]の虐殺"
+cc_xeno_clashes.37.desc:0 "[root.GetName]での状況は即時に介入せねばジェノサイドに繋がりかねない程にエスカレートしてきている。[species1.GetNamePlural] と[species2.GetNamePlural]は民兵団を秘密裏に結成し、攻撃を行ってきた。[species2.GetNamePlural]側が優勢で、[species1.GetAdj]が多く住む都市を占領し、数え切れない犠牲者を出した。"
+
+cc_xeno_clashes.371.name:0 "[root.GetName]の大量虐殺"
+cc_xeno_clashes.371.desc:0 "[species1.GetAdj]民兵団のリーダーが政府に報復のための支援を要請した。リーダーは惑星の[species2.GetNamePlural]一掃し報復を果たすと約している。どのように対応するべきだろうか?"
+cc_xeno_clashes.371.A:0 "必要なことをやれ。"
+cc_xeno_clashes.371.B:0 "これ以上の虐殺を防ぐために戒厳令を敷け。"
+
+cc_allowed_genocide_of_us:0 "我らの種族への虐殺を許した"
+
+cc_xeno_clashes.372.name:0 "$cc_xeno_clashes.31.name$"
+cc_xeno_clashes.372.desc:0 "宛：にっくき[root.GetRulerTitle] [root.GetRulerName],\n\nあなたの欺瞞の深さを表す言葉はこの世に存在しないでしょう。あなた自らが敵を作り出したことを知りなさい。あなたの圧制が永遠に続くことはない!\n\n敬具,\n[annoyed_xeno.GetName],\n[species2.GetAdj]独立前線のリーダー"
+cc_xeno_clashes.372.tooltip:0 "全ての[species2.GetAdj] £pops Popは補正§R$cc_pop_fears_genocide$§!を得る。効果は幸福度-50%\n種族間の更なる騒動が起きうる。"
+
+cc_pop_fears_genocide:0 "ジェノサイドへの恐怖"
+cc_xenos_spared_from_massacre:0 "異星人を保護"
+cc_xenos_massacred:0 "異星人が虐殺"
+
+cc_martial_law:0 "戒厳令が敷かれる"
+cc_martial_law_desc:0 "中央政府はこの惑星の平和を維持するために戒厳令を敷かなければならなかった。"
+
+
+cc_xeno_clashes.382.name:0 "種族間の緊張が[root.GetName]へ広がる"
+cc_xeno_clashes.382.desc:0 "[root.GetName]の[species1.GetAdj]と[species2.GetAdj]の住民は[from.GetName]での一連の事件を熱心に追いかけている。その結果その惑星での公論も[from.GetName]の種族間の緊張を反映する形となってしまった。今のところこの事件はエスカレートしてはいない。だが緊張が高まっている。"
+
+cc_xeno_clashes.383.name:0 "種族間の緊張が[root.GetName]に根付く"
+cc_xeno_clashes.383.desc:0 "[species2.GetNamePlural]と[species1.GetNamePlural]の間での緊張状態が広がり、この二種族が接触する場ではどこでも議論が行われるようになった。何もしなければすぐに暴力的な事態になるだろう。確実に!"
+
+cc_xeno_clashes.383.A:0 "戒厳令を敷け。"
+cc_xeno_clashes.383.B:0 "[species2.GetNamePlural]を抜きにしたほうがうまくやっていけるだろう。"
+cc_xeno_clashes.383.B.tooltip:0 "種族間の緊張が沸騰状態になりうる。"
+
+
+
+cc_xeno_clashes.4.name:0 "[root.GetName]の種族間緊張が沸騰状態に"
+cc_xeno_clashes.4.desc:0 "[root.GetName]での[species1.GetNamePlural]と[species2.GetNamePlural]の間での緊張状態は[species2.GetAdj]支持者に影響力の有る[species1.GetName]が暗殺されたことで遂に沸騰状態へと達した。[species1.GetAdj]の住民は暴力的な抗議を大規模に繰り広げ、通りの[species2.GetNamePlural]を攻撃し始めた。[species2.GetNamePlural]はすぐに抗議に対する抗議活動を組織した。そしてこの事件は現地警察がこの二勢力を離しきれず制御不可能に陥り、流血の事態へと発展した。現在、軍隊が通りに配備され治安を回復しようとしている。しかし、状況は緊張状態であるままだ。両サイドの指導者が代表団を惑星政府へと派遣し、この事件について説明し、行政府にこの事態の解決手段を求めてきた。\n\n公式政府としてどのように対応するべきだろうか?"
+cc_xeno_clashes.4.A:0 "[species1.GetNamePlural]を支持。"
+cc_xeno_clashes.4.A.tooltip:0 "The [root.owner.GetName]'s [species2.GetAdj] population will be insulted, but the [species1.GetSpeciesNamePlural] will feel vindicated."
+cc_xeno_clashes.4.B:0 "[species2.GetNamePlural]を支持"
+cc_xeno_clashes.4.B.tooltip:0 "The [root.owner.GetName]'s [species1.GetAdj] population will be insulted, but the [species2.GetSpeciesNamePlural] will feel vindicated."
+cc_xeno_clashes.4.C:0 "共にうまくやっていくことを学ばせるために戒厳令を敷け。"
+cc_xeno_clashes.4.D:0 "交渉チームを送れ。"
+cc_xeno_clashes.4.D.tooltip:0 "外交を通じてこの緊張状態を解決できるかもしれない。"
+cc_xeno_clashes.4.E:0 "[root.owner.GetName]に彼らの場所はない。"
+cc_xeno_clashes.4.E.tooltip:0 "[root.owner.GetName]の[species1.GetAdj]と[species2.GetAdj]の住民は侮辱されたと感じるだろう。"
+
+#E:
+cc_xeno_clashes.41.name:0 "[species1.GetAdj]-[species2.GetAdj]独立前線の結成"
+cc_xeno_clashes.41.desc:0 "宛：にっくき[root.GetRulerTitle] [root.GetRulerName],\n\n最近まで、この前線への加盟者である我々は互いに争っていました。しかし、あなたの反応を見たことで、我々にはより巨大な共通の敵がいることを認識するに至りました。[root.GetSpeciesNamePlural]。我々は違いを乗り越え、共に調和の取れた国家を作るために行動しようと思います。[root.GetName]の外で。\n\n敬具,\n[annoyed_xeno.GetName]、[annoyed_xeno2.GetName]\n[species1.GetAdj]-[species2.GetAdj]独立前線指導部"
+cc_xeno_clashes.41.tooltip:0 "全ての[species1.GetAdj]と[species2.GetAdj] £pops Popは補正§R$cc_feels_unwelcome$§!を得る。効果は幸福度-20%。\n種族間の更なる騒動が起きうる。"
+
+
+cc_xeno_clashes.42.name:0 "[species1.GetAdj]-[species2.GetAdj]民兵団の攻撃!"
+cc_xeno_clashes.42.desc:0 "The [species1.GetAdj]-[species2.GetAdj]独立前線が[root.GetName]を攻撃した。 [species1.GetNamePlural]と[species2.GetName]の民兵が[root.owner.GetSpeciesAdj]のコミュニティを警告なしに攻撃し、数多くの[root.owner.GetSpeciesNamePlural]を殺した。"
+cc_xeno_clashes.42.option:0 "これ以上の虐殺を防ぐためにも行動せねば。"
+
+cc_xeno_clashes.43.name:0 "[species1.GetAdj]-[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.43.desc:0 "[species1.GetAdj]-[species2.GetAdj]独立前線の工作員が[root.GetName]の[root.owner.GetSpeciesNamePlural]を攻撃した。[root.owner.GetSpeciesNamePlural]の住民が多く住む地域で強力な核爆弾を起爆したのだ。犠牲者は数知れない。生き残った[root.owner.GetSpeciesNamePlural]たちは更なるテロリストからの攻撃からの保護を訴えている。"
+cc_xeno_clashes.43.option:0 "$cc_xeno_clashes.42.option$"
+
+
+cc_xeno_clashes.44.name:0 "[species1.GetAdj]-[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.44.desc:0 "The [species1.GetAdj]-[species2.GetAdj] [root.GetName]当局にサイバー攻撃を仕掛けた。システムを停止させ機密情報を奪った。独立前線は惑星に[species1.GetAdj]-[species2.GetAdj]中心の政権を打ち立てるつもりだ。"
+cc_xeno_clashes.44.option:0 "秩序を回復しなければ。"
+
+cc_xeno_clashes.45.name:0 "[species1.GetAdj]-[species2.GetAdj]民兵団の攻撃!"
+cc_xeno_clashes.45.desc:0 "The [species1.GetAdj]-[species2.GetAdj]独立前線が[root.GetName]を攻撃した。[species2.GetName]の民兵が現地の政府関係者を数人殺害し、現地政府の運営を妨害している。独立前線は現地政府を転覆させ惑星に[species1.GetAdj]-[species2.GetAdj]中心の政権を打ち立てようとしている。"
+cc_xeno_clashes.45.option:0 "$cc_xeno_clashes.44.option$"
+
+cc_xeno_clashes.46.name:0 "[species1.GetAdj]-[species2.GetAdj]独立前線の攻撃!"
+cc_xeno_clashes.46.desc:0 "Operatives of the [species1.GetAdj]-[species2.GetAdj]独立戦線の工作員が[root.GetName]に攻撃を仕掛けた。政府の建物に自爆チームが侵入し、高威力の爆弾を起爆した。政府は人員及びインフラを喪失し混乱状態にあるが、状況に対処しようと奮闘中だ。"
+cc_xeno_clashes.46.option:0 "$cc_xeno_clashes.44.option$"
+
+cc_xeno_clashes.5.name:0 "[root.GetName]での交渉は決裂"
+cc_xeno_clashes.5.desc:0 "[root.GetName]での[species1.GetNamePlural]と[species2.GetNamePlural]の間に残る種族間の緊張を解決するための交渉は失敗に終わった。緊張状態がすぐに終わることなないだろう。"
+cc_xeno_clashes.5.A:0 "では和平を強制する。"
+cc_xeno_clashes.5.B:0 "あぁ、そうか。"
+
+cc_xeno_clashes.51.name:0 "[root.GetName]の緊張状態に解決策はあるのか?"
+cc_xeno_clashes.51.desc:0 "[species1.GetNamePlural]と[species2.GetNamePlural]の間の緊張状態を解決するための交渉を通じ、両者は合意点に達することが出来た。現在、[species1.GetAdj]政府からの支援があればすぐに平和を回復することができる。この支援には「開発パッケージ」が必要であるように思われる。惑星を充分に開発、発展させることで緊張状態が再発することを防ぐというものだ。"
+cc_xeno_clashes.51.A:0 "支援しよう。"
+cc_xeno_clashes.51.B:0 "厚かましい連中だ!"
+cc_xeno_clashes.51.B.tooltip:0 "[root.GetName]での平和が崩壊するかもしれない。"
+
+cc_xeno_clashes.52.name:0 "[root.GetName]の平和が崩壊"
+cc_xeno_clashes.52.desc:0 "[root.GetName]での不安定な休戦協定は崩壊した。"
+cc_xeno_clashes.52.A:0 "では和平を強制する。"
+cc_xeno_clashes.52.B:0 "あぁ、そうか。"
+
+cc_xeno_clashes.53.name:0 "[root.GetName]の平和は維持"
+cc_xeno_clashes.53.desc:0 "政府が支援を拒否したにも関わらず、[species1.GetNamePlural]と[species2.GetNamePlural]は暴力的な手に訴えることはしなかった。[root.GetName]での種族間和平は保たれた。"
+
+#cc_ruled_against_our_pops:0 "Ruled against our citizens"
+cc_ruled_against_us_pops:0 "我らに反する統治"
+cc_ruled_in_our_favour_pops:0 "我らに優しい統治"

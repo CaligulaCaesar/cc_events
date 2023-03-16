@@ -1,0 +1,95 @@
+﻿l_japanese:
+
+dpe_scandal.1.name:0 "State Funds given to the Undeserving"
+dpe_scandal.1.desc:0 "[root.GetName]では[root.GetRulerTitle] [root.GetRulerName]が政府の資金を貧困層に再配分してきたことが判明し、騒然としている。住民の多くは納税者の金が貧困層に使われてきたことに不快感を感じており、[root.GetSpeciesAdj]の文化における基本的な罪を犯していると主張する者もいる。 However, other しかし、[root.GetRulerTitle]の寛大さを称える声も(前者よりは少ないないが)みられる。彼らは[root.GetName]へ福祉国家としての基本的制度を設立させることを長年にわたり求めてきており、今回の事件こそがそれを実現させる最高の機会だと考えている。もし、[root.GetRulerTitle]にそれを継続する勇気があれば、だが。"
+dpe_scandal.1.A:0 "そのようなことはしていないと明確に否定する。"
+dpe_scandal.1.B:0 "思いやりのある国家であるほうがよい。"
+dpe_scandal.1.C:0 "不名誉な辞任。"
+dpe_scandal.1.C.tooltip:0 "$CCREMOVERULER.tooltip$"
+
+dpe_charity_unpopular_ruler:0 "不人気な統治者"
+dpe_charity_unpopular_ruler_desc:0 "この統治者は国家の信念に反した行動をしたため恥ずべきことだと思われている。その行動については明確に否定したものの、それについて疑念を抱く者は多く、統治者への不信を露にしている。"
+
+dpe_charity_faction_undeserving:0 "受けるに値しない者に対する再分配"
+
+
+#This one is adapted from the blackmail -> corruption scandal. Difference is the lack of blackmail and only 2 people caught
+
+dpe_scandal.2.name:0 "汚職スキャンダル!"
+dpe_scandal.2.desc:0 "二人の[root.GetSpeciesAdj]政府上級職員が汚職に手を染めていたことが公衆に知らされた。彼らは私服を肥やすために自らが担当する省庁が受け持つ予算の大部分を横領していたらしい。そのために惑星外のある小惑星にあるタックスヘイブンが用いられた。この暴露に対する怒りが広まっており、早くも彼らを任命した者に対し、談合の疑いで告発しようとする者も出始めている。\n\nこの状況にどのように対応するべきだろうか?"
+dpe_scandal.2.A:0 "彼らは辞任させ、裁判にかける。"
+dpe_scandal.2.A.tooltip:0 "[cc_first_corrupt.GetName]と[cc_second_corrupt.GetName]はゲームから姿を消す。"
+dpe_scandal.2.B:0 "彼らの役割はとても価値あるものだ。そのままにしておけ。"
+
+#weakened it by 25%
+cc_outrage_at_corruption_1:0 "$cc_outrage_at_corruption$"
+cc_outrage_at_corruption_1_desc:0 "$cc_outrage_at_corruption_desc$"
+
+
+dpe_scandal.3.name:0 "[root.GetRulerTitle] [root.GetRulerName]は不信心者だ!"
+dpe_scandal.3.desc:0 "宗教と精神世界への信仰は常に[root.GetSpeciesAdj]社会の核であり続けてきた。[root.GetRulerTitle] [root.GetRulerName]にはそのような信仰がないという暴露がなされたとき、社会に激震が走ったのはそのためだ。確かに、[root.leader.GetSheHe] [root.leader.GetWasWere]が[root.GetSpeciesAdj]の教義を侮辱し、「魔法に踊らされる愚か者」たちを操るのは容易いと発言していたことが録音、記録されている。宗教の指導者たちはすぐに[root.GetRulerName]への非難を表明し、[root.leader.GetSheHe]が[root.GetName]の統治に不適格であることを認定せよと求めてきた。多くの住民もこの主張に賛同している。だが、[root.GetRulerTitle]の支持者は[root.leader.GetHimHer]擁護し、[root.leader.GetSheHe] [root.leader.GetHasHave] は[root.GetName]で一番有能な指導者で、その優秀さは銀河レベルでも認められていると主張している。\n\nこの状況にどのように対応するべきだろうか?"
+dpe_scandal.3.A:0 "宗教は愚か者のためにある。迷信は捨て去らなければならぬ。"
+dpe_scandal.3.A.tooltip:0 "精神主義者はとても怒るだろう。"
+dpe_scandal.3.B:0 "何とか丸く収めることができる筈だ。"
+dpe_scandal.3.B.tooltip:0 "宗教の指導者たちが統治者に対し沈黙を保つのであれば[root.GetRulerTitle] [root.GetRulerName]も宗教に対し沈黙を守る。"
+dpe_scandal.3.C:0 "[root.GetRulerTitle] [root.GetRulerName]は去るべきだ。"
+dpe_scandal.3.C.tooltip:0 "$CCREMOVERULER.tooltip$"
+
+dpe_unbelief_faction:0 "不信心な統治者"
+dpe_unbelief_empire:0 "不人気な統治者"
+dpe_unbelief_empire_desc:0 "統治者には社会の鍵であるはずの宗教や精神主義に対する信仰心が欠けていると判明した。何とか現在の地位を守ることに成功してはいるものの、信用を失ってしまった。"
+
+dpe_scandal.4.name:0 "[root.GetRulerTitle] [root.GetRulerName]、破門される!"
+dpe_scandal.4.desc:0 "[root.GetRulerName] (この呼び名はもはや適切ではない),\n\n我々はここにあなたの[root.GetSpeciesAdj]のおける全宗教施設からの破門を宣言する。 更に、評議員会は全会一致であなたが地獄へ落ちることを公式に決定した。先人の魂があなたに慈悲を賜らんことを。\n\n霊的問題評議員会"
+
+dpe_damned_to_hell_faction:0 "地獄行きの統治者"
+dpe_damned_to_hell_empire:0 "地獄行きの統治者"
+dpe_damned_to_hell_empire_desc:0 "統治者が不信心者であることが公になった後も悪びれずにいたため、国における最高の宗教機関が破門を宣言するに至った。"
+
+
+dpe_scandal.10.name:0 "不愉快な事実"
+dpe_scandal.10.desc:0 ""[root.GetRulerTitle]、これにちょっと目を通して頂けますか？"」\n\n[root.GetRulerTitle] [root.GetRulerName]が文書に目を通すと、[root.leader.GetHisHer]の眼は恐怖で見開いた。「この証拠は破壊したはずだ。この目で見た。」と[root.leader.GetSheHe]は小声で言った。\n\nその謎に包まれた人物は冷たい笑みを浮かべた。「だが、ここにある。」\n\n---\n\n綿密に計画されたスパイ活動を通じ[root.GetRulerTitle]の敵対者は[root.leader.GetHisHer]公式な経歴は大部分に渡ってでっち上げられたものであることの証拠を提出した。: 実は[root.leader.GetSheHeCap] [root.leader.GetIsAre]の過去は逃亡奴隷で、その過去を体系的に書き換えていた。さらに、その地位に至るまでには数々の不正や殺人事件を引き起こしてきたのだ。残念ながら、その証拠の大部分は正確だ。もしこれが広く知られるようなことになれば、それは[root.GetRulerTitle] [root.GetRulerName]の治世が終わることを意味するだろう。[root.GetSpeciesAdj]のエリートは誰も逃亡奴隷の命令になぞ従わないだろうからだ。"
+dpe_scandal.10.A:0 "この陰謀家を逮捕し、証拠を隠滅しよう。"
+dpe_scandal.10.A.tooltip:0 "証拠が流出するリスクが高い。"
+dpe_scandal.10.B:0 "何が望みだ?"
+
+dpe_scandal.11.name:0 "陰謀のもみ消し"
+dpe_scandal.11.desc:0 "最初に思っていた程、陰謀を企んでいた連中の能力は高くなかったようだ。迅速な行動と断固とした決断を経て、証拠は消え去った。"
+
+leader_trait_dpe_ruthless:0 "断固"
+leader_trait_dpe_ruthless_desc:0 "このリーダーは必要なことをためらわない。"
+
+dpe_scandal.12.name:0 "陰謀のもみ消しに失敗"
+dpe_scandal.12.desc:0 "「愚か者!一人でやっていると思っていたのか?」\n\nスパイは逮捕した、だが数分後に証拠のコピーが[root.GetName]の全主要配分ノードに送信された旨の警告レポートが届いた。その対象には[root.GetName]の宿敵も含まれていた。少し後、[root.GetRulerTitle]のプライベートルームのドアが蹴破られた。[root.GetName]における圧力団体の代表者ほぼ全てが入ってきた。[root.GetRulerName]は[root.leader.GetHisHer]かつての支援者に助けを求めるような目を向けた。だが彼らの目は冷たく、無慈悲だった。 \n\n「これで終わりだ。」[random_guy.GetName]副長官が言った。そして、[root.GetRulerTitle] [root.GetRulerName]にブラスターを向け、「降伏しなければ死ぬことになる。」と言った。"
+dpe_scandal.12.A:0 "降伏する。"
+dpe_scandal.12.A.tooltip:0 "[root.GetRulerName]は奴隷として売られる。"
+dpe_scandal.12.B:0 "最後まで抵抗する。"
+dpe_scandal.12.B.tooltip:0 "屈辱を味わうくらいなら死んだほうがましだ。"
+
+dpe_scandal.14.name:0 "陰謀家の要求"
+dpe_scandal.14.desc.generic:0 "口止め料として大金を。"
+#cc_paid_blackmail modifier
+dpe_scandal.14.desc.egal:0 "辞任して選挙を許可すれば、解放する。"
+dpe_scandal.14.desc.spir:0 "神々への適切な敬意を忘れるな、さすれば沈黙を保とう。"
+dpe_scandal.14.desc.mil:0 "敵国に対し毅然とした態度を採れば沈黙を保とう。"
+dpe_scandal.14.desc.pac:0 "戦争狂いを止めろ。さもなくばリークする。"
+dpe_scandal.14.desc.mat:0 "市場を開放すればあなたの過去の過ちを許す。"
+dpe_scandal.14.desc.phobe:0 "[root.GetSpeciesAdj]の国に異星人の場所はない。彼らを排除しろ。"
+dpe_scandal.14.desc.phile:0 "排他主義を止めれば沈黙を保とう。"
+
+dpe_scandal.14.A:0 "よろしい、やろう。"
+dpe_scandal.14.B:0 "受け入れられない!この陰謀家を逮捕し、証拠を隠滅しよう。"
+dpe_scandal.14.B.tooltip: "$dpe_scandal.10.A.tooltip$"
+
+
+
+dpe_scandal.16.name:0 "[root.GetRulerName], [root.GetRulerTitle] はカルトの操り人形では?"
+dpe_scandal.16.desc:0 "[root.GetSpeciesAdj]の社会は常に科学と進歩への信条を中心的な価値観としてきた…。そのため先日、[root.GetRulerTitle] [root.GetRulerName]が、あるカルト教団の有名だが謎に包まれた指導者の影響下にあることが判明したとき、社会に激震が走った。この"グル"[dpe_cultist.GetName]がハッキング攻撃を受けたときにそれは始まった。ハッカーが政府の文書を大量に発見したのだ。そこには[root.GetRulerTitle]が実施予定だった演説の原稿も含まれていた。報道サイトはこの事件を受け、[dpe_cultist.GetName]が何故この文書にアクセスできたのかについて考察を行った。: [root.GetRulerTitle]は[dpe_cultist.GetName]の助言を長年に渡り受けており、[root.GetHisHer] 国内政策はその助言に依るものであった可能性がある。 [root.GetRulerName]が行ってきた演説の殆んどが[dpe_cultist.GetHisHer] "スピリチュアルコンパス"に導かれた上で行われたものかもしれない…。　この一件により社会には落胆が広がっている。というのもこの教団はこれまで我が社会における道徳観念からして不適切と思われるような活動を行ってきたからだ。講義集団は[root.Ruler.GetSheHe]の辞任と裁判にかけることを求め、それを[root.GetName]中に公開することも求めている。[dpe_matfaction.GetName]の意見は大きくなりつつあるが、[dpe_spirfaction.GetName]は[root.Ruler.GetHisHer]支持を表明し、[root.GetRulerName]が精神主義的な立場を採ったことを賞賛する声明を発表した。\n\nどのように対応するべきだろうか?" 
+dpe_scandal.16.A:0 "精神主義は真理である。神を意識するときがきた。"
+dpe_scandal.16.B:0 "[dpe_cultist.GetName]はただの友人だ。それ以上のなにものでもない。"
+dpe_scandal.16.C:0 "辞職する。"
+
+dpe_cultist_embraced:0 "カルトに抱き込まれた"
+dpe_cultist_faction:0 "カルトスキャンダル"
+dpe_cultist_scandal_empire:0 "カルトの影響力"
+dpe_unbelief_empire_desc:0 "統治者が謎に包まれたカルト教団の影響下にあることが暴露されたことで、住民の中に恐怖と不安が広がっている。"

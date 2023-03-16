@@ -1,0 +1,123 @@
+﻿l_japanese:
+
+mem_dpe_primitives.2.name:0 "Lights in the Sky"
+mem_dpe_primitives.2.primitive:0 "The civilisation on [mem_dpe_primitive_planet.GetName] was witness to the recent space battle in the [mem_dpe_primitive_system.GetName] system, though they did not comprehend the truth of what was happening. To them, it appeared as unexplainable lights and flashes in the sky, which they interpreted as a battle between their Gods - something perhaps not that inaccurate."
+mem_dpe_primitives.2.renaissance:0 "The civilisation on [mem_dpe_primitive_planet.GetName] was witness to the recent space battle in the [mem_dpe_primitive_system.GetName] system, though they did not comprehend the truth of what was happening. To them, it appeared as unexplainable lights and flashes in the sky. Many of the more superstitious interpreted it as some sort of message from, or battle between, the Gods. Their budding astronomical community has been at loss to explain the sightings, though there has been no shortage of attempts to do so!"
+mem_dpe_primitives.2.machine:0 "The civilisation on [mem_dpe_primitive_planet.GetName] was witness to the recent space battle in the [mem_dpe_primitive_system.GetName] system, though they did not comprehend the truth of what was happening. Despite their increasingly advanced understanding of astronomy, [mem_dpe_primitive_civ.GetSpeciesAdj] scientists were left stumped by the sightings of unexplainable lights and flashes in the sky, which corresponded to nothing they had ever witnessed before. This has provided the conspiracy theorists, who - correctly, as it happens - believe there is an alien presence in the [mem_dpe_primitive_system.GetName] System, though as of yet they have no way of proving this."
+mem_dpe_primitives.2.space_age:0 "The civilisation on [mem_dpe_primitive_planet.GetName] was witness to the recent space battle in the [mem_dpe_primitive_system.GetName] system, which appeared to them as unexplainable lights and flashes in the sky. Their astronomers, who within their limitations have built up a relatively advanced image of the galaxy, were at a loss to explain these new sightings. Many within [mem_dpe_primitive_civ.GetSpeciesAdj] society are openly speculating that it was evidence of alien activity. They are already planning to send several drones to investigate the areas of the system affected by the battle. It is only a matter of time before they detect our presence."
+
+mem_dpe_primitive_events.2.amusing:0 "Amusing."
+mem_dpe_primitive_events.2.irrelevant:0 "The doings of primitive xenos are of no interest to us."
+mem_dpe_primitive_events.2.terminator:0 "We will have to schedule their termination."
+mem_dpe_primitive_events.2.devourer:0 "The food is ripe for harvest."
+
+ mem_dpe_primitive_events.3.name:0 "Persistent Radio Signals"
+ mem_dpe_primitive_events.3.desc.evil:0 "We are picking up some persistent, repeating radio signals coming from the early space-age civilisation on [mem_dpe_primitive_planet.GetName]. It appears to be directed at our starbase in the system, suggesting that they have detected our presence."
+ mem_dpe_primitive_events.3.desc:0 "$mem_dpe_primitive_events.3.desc.evil$ Our scientists are working on deciphering the message."
+ mem_dpe_primitive_events.3.desc.gestalt:0 "$mem_dpe_primitive_events.3.desc.evil$ We have dedicated a subroutine to deciphering the message."
+ mem_dpe_primitive_events.3.option.evil:0 "We care nothing for their worthless blabber."
+
+ mem_dpe_primitive_events.5.name:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] Message"
+ #I tried to make this easier for translators and less bloating on the word count
+ mem_dpe_primitive_events.5.desc.message_start:0 "To those who travel the stars in our sky,\n\nThis missive comes to you from a council of all the major [mem_dpe_primitive_civ.GetSpeciesAdj] nations. We are united in this message.\n\nWe do not know who you are. We can only assume that you have noticed our presence and chosen not to contact us for reasons we can only guess at. Please know, if you do not know it already, that we mean you no harm. No doubt, even if we wanted to do you harm, we would be unable to."
+ mem_dpe_primitive_events.5.desc.spiritualist:0 "$mem_dpe_primitive_events.5.desc.message_start$ We cannot begin to imagine what you are capable of, what Truths you have discovered as you travelled the stars. Our sole interest, in this moment of uncertainty, is in ensuring the survival and spiritual wellbeing of the [mem_dpe_primitive_civ.GetSpeciesAdj] race.\n\nWe have therefore decided, since there was no more room to deny the implications of your presence, that we must contact you and offer you our hand in friendship and cooperation. We are no match for your might, but perhaps, in a few years, we will be able to join you in the stars. When we do so, we hope to do so as your friends and partners, whom you will guide to the discovery of new Truths, rather than as ones you would see as heathens or enemies. We sincerely hope that you agree with this sentiment.\n\nWe await your answer with hope and trepidation in equal measure.\n\nYours sincerely,\nThe [mem_dpe_primitive_civ.GetSpeciesAdj] Council"
+ mem_dpe_primitive_events.5.desc.else:0 "$mem_dpe_primitive_events.5.desc.message_start$ Our sole interest, in this moment of uncertainty, is in ensuring the survival and prosperity of the [mem_dpe_primitive_civ.GetSpeciesAdj] race.\n\nWe have therefore decided, since there is no more room to deny the implications of your presence, that we must contact you and offer you our hand in friendship and cooperation. We are no match for your might, but perhaps, in a few years, we will be able to join you in the stars. When we do so, we hope to do so as your friends and partners - albeit your junior partners, in need of guidance - rather than as ones you would see as competition or enemies. We sincerely hope that you agree with this sentiment.\n\nWe await your answer with hope and trepidation in equal measure.\n\nYours sincerely,\nThe [mem_dpe_primitive_civ.GetSpeciesAdj] Council"
+ mem_dpe_primitive_events.5.A:0 "Give no answer."
+ mem_dpe_primitive_events.5.B:0 "We welcome you to the Galactic Community."
+ mem_dpe_primitive_events.5.B.tooltip:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] will become a spacefaring [root.GetSpeciesAdj] protectorate."
+ mem_dpe_primitive_events.5.B.tooltip.inwards_protection:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] will become a spacefaring [root.GetSpeciesAdj] tributary."
+ mem_dpe_primitive_events.5.C:0 "You are not worthy of our Empire."
+ mem_dpe_primitive_events.5.D:0 "You will bow before us, [mem_dpe_primitive_civ.GetSpeciesNamePlural]."
+
+
+ mem_dpe_primitive_events.6.name:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] Response"
+ mem_dpe_primitive_events.6.desc:0 "It saddens us to hear this message. We will redouble our efforts and seek to reach your heights. One day, perhaps, you will see us in a better light."
+ mem_dpe_primitive_events.6.A:0 "Perhaps."
+ mem_dpe_primitive_events.6.B:0 "Doubtful."
+
+
+
+
+ mem_dpe_primitive_events.20.name:0 "[mem_dpe_primitive_civ.GetSpeciesNamePlural] Launch Probe"
+ mem_dpe_primitive_events.20.desc:0 "It appears that the [mem_dpe_primitive_civ.GetSpeciesNamePlural] are convinced that we exist, despite our refusal to make contact with them. They have launched a probe towards our starbase to investigate it further. If the probe is allowed to reach the vicinity of our starbase, we will not be able to prevent them from discovering our presence. What action should we take?"
+ mem_dpe_primitive_events.20.A:0 "Destroy it."
+ mem_dpe_primitive_events.20.B:0 "Let it find us."
+ mem_dpe_primitive_events.20.C:0 "Make Contact: $mem_dpe_primitive_events.5.B$"
+ mem_dpe_primitive_events.20.D:0 "Make Contact: $mem_dpe_primitive_events.5.C$"
+ mem_dpe_primitive_events.20.E:0 "Make Contact: $mem_dpe_primitive_events.5.D$"
+
+ mem_dpe_primitive_events.21.name:0 "We are Discovered"
+ mem_dpe_primitive_events.21.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] probe has discovered our starbase in the [mem_dpe_primitive_system.GetName] system. It has orbited it several times, taking numerous images of our station. These images, broadcast back to [mem_dpe_primitive_planet.GetName], have created quite the stir, representing as they do undeniable evidence of alien presence in their system. Debates are underway among the [mem_dpe_primitive_civ.GetSpeciesNamePlural] as to how to respond to this development."
+ mem_dpe_primitive_events.21.desc.no_post:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] probe has discovered our starbase in the [mem_dpe_primitive_system.GetName] system. It has orbited it several times, taking numerous images of our station. It awaits to be seen what the [mem_dpe_primitive_civ.GetName] will do at this undeniable evidence of alien presence in their system."
+ mem_dpe_primitive_events.21.option:0 "We will monitor the situation."
+
+ mem_dpe_primitive_events.12.name:0 "$mem_dpe_primitive_events.5.name$"
+ mem_dpe_primitive_events.12.desc:0 "To those who would trespass on our territory,\n\nThis missive comes to you from a council of all the major [mem_dpe_primitive_civ.GetSpeciesAdj] nations. We are united in this message.\n\nKnow that this system is inhabited. It belongs to the [mem_dpe_primitive_civ.GetSpeciesAdj] people, and we will fight to protect what is ours until the last breath. You may have reached technological heights that are far beyond ours, but we are armed, and we have justice on our side. Vacate this system, or we will consider ourselves at war with you.\n\nThe [mem_dpe_primitive_civ.GetSpeciesAdj] Council"
+ mem_dpe_primitive_events.12.A:0 "Give no answer."
+ mem_dpe_primitive_events.12.B:0 "As you wish. We will respect your sovereignty."
+ mem_dpe_primitive_events.12.C:0 "Insolent children! You will bow before us!"
+
+ mem_dpe_primitive_snub:0 "Arrogant"
+
+ mem_dpe_primitive_events.16.name:0 "An Improbable Rebellion"
+ mem_dpe_primitive_events.16.desc:0 "Our observation post over [mem_dpe_primitive_planet.GetName] reports that the [mem_dpe_primitive_civ.GetSpeciesNamePlural] have interpreted the destruction of their search probe as evidence of a hostile extraterrestrial presence in their system and are preparing a strike force of primitive - but nevertheless highly armed - strike crafts. Apparently, they wish to rid the [mem_dpe_primitive_system.GetName] of our presence."
+ mem_dpe_primitive_events.16.desc.probe:0 "Our observation post over [mem_dpe_primitive_planet.GetName] reports that the [mem_dpe_primitive_civ.GetSpeciesNamePlural] are preparing a strike force of primitive - but nevertheless highly armed - strike crafts. Apparently, they wish to rid the [mem_dpe_primitive_system.GetName] of our presence."
+ mem_dpe_primitive_events.16.option:0 "We will be ready for them."
+ 
+ mem_dpe_primitive_events.17.name:0 "Primitives Launch Strike Force"
+ mem_dpe_primitive_events.17.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! Several dozen 'proto-corvettes' are now heading for our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
+ mem_dpe_primitive_events.17.desc.post:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have launched a strike force! Several dozen 'proto-corvettes' have quickly overwhelmed our observation post and have begun their approach to our starbase. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] watches their media programmes with bated breath, the fate of their civilisation resting on the outcome of this mission."
+ mem_dpe_primitive_events.17.option:0 "Weapons systems ready!"
+ mem_dpe_primitive_events.17.tooltip:0 "Thirty primitive proto-Corvettes are heading for our starbase in the [mem_dpe_primitive_system.GetName] system!"
+ 
+ MEM_DPE_PROTO_CORVETTE_MID_S3:0 "Proto-Corvette Section"
+ mem_dpe_proto_corvette:0 "Proto-Corvette"
+ mem_dpe_proto_corvette_plural:0 "Proto-Corvettes"
+ shipsize_mem_dpe_proto_corvette_construction_speed_mult:0 ""
+ shipsize_mem_dpe_proto_corvette_build_cost_mult:0 ""
+ shipsize_mem_dpe_proto_corvette_upkeep_mult:0 ""
+
+
+
+ mem_dpe_primitive_events.30.name:0 "The [mem_dpe_primitive_civ.GetSpeciesAdj] Fleet is Crushed"
+ mem_dpe_primitive_events.30.desc:0 "We have crushed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet. The [mem_dpe_primitive_civ.GetSpeciesNamePlural] are at our mercy. What should we do about them?"
+ mem_dpe_primitive_events.30.desc.help:0 "The [from.GetName] has destroyed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet for us. The [mem_dpe_primitive_civ.GetSpeciesNamePlural] are at our mercy. What should we do about them?"
+ mem_dpe_primitive_events.30.desc.unasked_for_help:0 "The [from.GetName] has destroyed the [mem_dpe_primitive_civ.GetSpeciesAdj] fleet for us. However, as we do not currently control the [mem_dpe_primitive_system.GetName] system, we are unable to benefit from this turn of events."
+ mem_dpe_primitive_events.30.A:0 "Destroy them."
+ mem_dpe_primitive_events.30.B:0 "Demand their surrender."
+ mem_dpe_primitive_events.30.C:0 "We don't want them in our empire."
+ mem_dpe_primitive_events.30.C.tooltip:0 "To avoid further conflict, we will cede the [mem_dpe_primitive_system.GetName] to them."
+
+ mem_dpe_primitive_events.31.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Are No More"
+ mem_dpe_primitive_events.31.desc:0 "It appears that the authorities on [mem_dpe_primitive_planet.GetName] were so distressed at the prospect of their subjugation to our Empire that they implemented a devastating final solution: Nuclear annihilation. The entire [mem_dpe_primitive_civ.GetSpeciesAdj] nuclear arsenal was denoted in unison, striking every major population centre. The planet almost instantly became a nuclear wasteland. The few survivors of the calamity will soon fall to radiation poisoning."
+
+ mem_dpe_primitive_events.32.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Surrender"
+ mem_dpe_primitive_events.32.desc:0 "We cannot withstand your might, [root.GetSpeciesName]. We surrender."
+
+ mem_dpe_destroy_primitives:0 "Destroy the Primitives"
+ mem_dpe_destroy_primitives_DESC:0 "Wipe out the primitives that have dared to resist us."
+ 
+ mem_dpe_primitive_events.33.name:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] Are No More"
+ mem_dpe_primitive_events.33.desc:0 "We have destroyed the primitives that used to inhabit [mem_dpe_primitive_planet.GetName]. The planet is now ripe for our colonisation."
+
+
+ mem_dpe_primitive_events.35.name:0 "Our Control of the [mem_dpe_primitive_system.GetName] System Wavers"
+ mem_dpe_primitive_events.35.desc:0 "The [mem_dpe_primitive_civ.GetSpeciesNamePlural] have destroyed our starbase! With the techs they will be able to harvest from the wreckage of our facilities, they will very soon be able to leave the borders of their system!"
+ mem_dpe_primitive_events.35.tooltip:0 "If we do not crush the [mem_dpe_primitive_civ.GetSpeciesNamePlural] within 720 days, they will become a full spacefaring nation."
+
+ mem_dpe_primitive_events.36.name:0 "Control of the [mem_dpe_primitive_system.GetName] System Lost"
+ mem_dpe_primitive_events.36.desc:0 "The [mem_dpe_primitive_civ.GetName] has unlocked the secrets of FTL technology from the wreckage of our starbase. They now qualify as a galactic starfaring nation."
+ mem_dpe_primitive_events.36.tooltip:0 "The [mem_dpe_primitive_civ.GetName] gains FTL technologies. Control of the [mem_dpe_primitive_system.GetName] system is ceded to them."
+
+ mem_dpe_primitive_events.37.name:0 "通信が入った"
+ mem_dpe_primitive_events.37.desc.hostile:0 "To those who would oppress us,\n\nWe have ridden our home system of your presence. Know that you are not welcome in our territories. Any further trespass will produce a hostile response."
+ mem_dpe_primitive_events.37.desc.conciliatory:0 "Greetings, [root.GetSpeciesNamePlural]. As you know, we have seized what is ours from you. However, we have no desire for lasting hostilities. There is no need for ongoing hostility between our peoples. Please accept this offering of peace."
+ mem_dpe_primitive_events.37.A:0 "As you wish."
+ mem_dpe_primitive_events.37.B.hostile:0 "We will retake what is ours."
+ mem_dpe_primitive_events.37.B.conciliatory:0 "Peace? You will bow before us."
+ mem_dpe_primitive_events.37.C:0 "Upstart xeno scum! There is no place for you in this galaxy."
+ mem_dpe_primitive_events.37.D:0 "Why does the food speak?"
+ mem_dpe_primitive_events.37.E:0 "<<< Weapons protocols enabled >>>"
+
+ mem_dpe_primitive_conflict:0 "Conflict over Home System"
+ mem_dpe_primitives_boost:0 "Latecomer Bonus"

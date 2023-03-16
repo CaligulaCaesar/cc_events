@@ -5,7 +5,6 @@ tags={
 	"Diplomacy"
 }
 picture="thumbnail.png"
-version="3.6"
-supported_version="3.6.*"
-path="D:/Users/Pierre/Documents/Paradox Interactive/Stellaris/mod/cc_events"
+version="3.7"
+supported_version="3.7.*"
 remote_file_id="1227620643"

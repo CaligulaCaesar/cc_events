@@ -1,0 +1,999 @@
+﻿l_korean:
+
+dpe_diplo.1.name:0 "The Populace begs for War"
+dpe_diplo.1.desc:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], whose leaders have recently been openly derisive about the [root.GetSpeciesNamePlural], claiming that we are cowardly and have no honour. The outraged population demands war."
+dpe_diplo.1.desc.machine:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it recently emerged that the Machine Intelligence had issued a directive to its subroutines that stated that the [root.GetSpeciesNamePlural] were officially to be considered as "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
+dpe_diplo.1.desc.hive:0 "Nationalist feeling among the [root.GetSpeciesNamePlural] has spiked, with empire-wide demonstrations calling for the national honour to be restored - citizens are perturbed that the [root.GetName] has seen a long period of peace, and worry that our enemies might begin to see us as having turned soft. The target of their ire is the [enemy.GetName], as it was recently discovered that the Hive's official thoughts on the [root.GetSpeciesNamePlural] are that they are "cowardly", "lacking honour" and "mostly harmless". The outraged population demands war."
+dpe_diplo.1.A:0 "Declare War."
+#dpe_diplo.1.A.tooltip:0 "The war demands will be $war_demand_humiliate_header$ and $war_demand_dpe_cede_borders_header$. The latter demand will cede the following planets:"
+dpe_diplo.1.B: "Patience. We will declare war soon on our own terms."
+dpe_diplo.1.B.tooltip:0 "This will allow you to choose War Demands. If you wait for more than a year before declaring war, militarists in the [root.GetName] will be upset."
+dpe_diplo.1.C:0 "War is too risky right now."
+
+#B + No war declaration in a year
+dpe_diplo.2.name:0 "Broken Promises"
+dpe_diplo.2.desc:0 "The nationalists are disappointed that you have failed to keep your promises of declaring war on the [enemy.GetName]. They feel that the [root.GetName] has been humiliated, and that they, as [root.GetAdj] citizens, can no longer hold their heads high among their peers. As a result, a significant number of citizens have turned against the current government."
+
+#C or follow-up to .2:
+dpe_diplo.4.name:0 "Border Incident"
+dpe_diplo.4.desc:0 "Dismayed at the refusal of the [root.owner.GetName] to make war on the [enemy.GetName], some hardcore jingoists on [root.GetName] hijacked an old cruiser that had been stationed there and flew it into the [enemy.GetName], shooting down several merchant ships and a mining outpost before it was driven away. [enemy.GetAdj] authorities are furious, and demand that the perpetrators be handed over and an indemnity be paid. On the other hand, the [root.owner.GetAdj] population is rallying behind the hijackers, calling them heroes and demanding further action against the [enemy.GetName].\n\nWhat action should be taken?"
+dpe_diplo.4.A:0 "We shall give them their war."
+dpe_diplo.4.B:0 "Surrender the hijackers and pay the indemnity."
+
+dpe_ruler_looks_weak:0 "Government looks weak"
+dpe_ruler_looks_weak_desc:0 "The government looks weak, as it refused to declare war on its enemies to restore the nation's honour."
+dpe_ruler_looks_weak_faction:0 "Weak and cowardly government"
+dpe_ruler_looks_weak_and_breaks_promises_faction:0 "Weak, cowardly and lying government"
+
+dpe_diplo.5.name:0 "Border Incident"
+dpe_diplo.5.desc:0 "A group of nationalists in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to harass our civilian traders and attack our stations, destroying one of them. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. The populace is outraged, and is demanding the [from.GetName] hands over the perpetrators and pay damages."
+dpe_diplo.5.desc.machine:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt our subroutines. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
+dpe_diplo.5.desc.hive:0 "Some disruptive elements in the [from.GetName] have launched an unprovoked attack on [attacked_planet.GetName] and other nearby systems. They hijacked an old cruiser and used it to attack our stations and disrupt the hive's activities. We were able to chase them off, but they evaded capture and made it back to the [from.GetName]. What action should the [root.GetName] take in the face of such behaviour?"
+dpe_diplo.5.A:0 "Demand justice"
+dpe_diplo.5.A.tooltip:0 "If the [from.GetName] accepts, the [root.GetName] will be paid an indemnity of 100 minerals for a year. If they reject it, the [from.GetName] will get claims on our systems that neighbour them and war will be declared with the war goal $war_goal_wg_conquest$."
+dpe_diplo.5.B:0 "Seek to ease the tensions"
+
+
+dpe_diplo.7.name:0 "Indemnity Paid"
+dpe_diplo.7.desc:0 "We will hand over the perpetrators and pay you your indemnity. May you choke on them!"
+dpe_diplo.7.desc.machine:0 "We will hand over the perpetrators and pay you your indemnity. May they overload your processors!"
+
+dpe_indemnity_paid:0 "Paying Indemnity"
+dpe_indemnity_paid_desc:0 "This Empire is paying another Empire an indemnity to stave off their wrath."
+dpe_indemnity_receive:0 "Receiving Indemnity"
+dpe_indemnity_receive_desc:0 "This Empire is being paid an indemnity by another Empire to stave off their wrath."
+
+dpe_militarist_unrest:0 "Upset Militarists"
+dpe_militarist_unrest_desc:0 "The militarist populace on this planet is upset at the failure of the government to stand by them against the Empire's enemies."
+
+dpe_eased_tensions:0 "Eased Tensions"
+
+#war_demand_dpe_cede_borders_header:1 "§HCede Border Territories§!"
+#war_demand_dpe_cede_borders_subtext:0 "[parameter:country.GetName]"
+#war_demand_dpe_cede_borders_tooltip_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_content:2 "[parameter:country.GetName] will cede all planets near the border to [GetCountry.GetName]."
+#war_demand_dpe_cede_borders_tooltip_proper_header:0 "$war_demand_dpe_cede_borders_header$"
+#war_demand_dpe_cede_borders_tooltip_proper_content:1 "$war_demand_dpe_cede_borders_tooltip_content$"
+#war_demand_dpe_cede_borders_not_under_our_control:0 "Planets must be controlled by us or our allies to be ceded with this demand. No neighbouring planets currently meet this criterion."
+#dpe_event_war_demand:0 "Special Event War Demand"
+
+dpe_diplo.100.name:0 "The [enemy.GetName]'s Response"
+#This is taken from Vanilla HM_DOW_ACCEPT, just replaced [root.GetName] with [enemy.GetName]
+HM_DOW_ACCEPT_DPE:0 "Seeking to destroy one of us is seeking to destroy us all. The [enemy.GetName] now stands against the [From.GetName]."
+dpe_diplo.100.option:0 "Whatever."
+
+dpe_diplo.101.name:0 "The [from.GetName] Declares War!"
+dpe_diplo.101.option:0 "Prepare for War!"
+
+
+#Spiritualist Mission
+
+dpe_spiritualist_mission.2.name:0 "Send a Mission to the [dpe_neighbour.GetName]?"
+dpe_spiritualist_mission.2.desc:0 "Many of our stellar neighbours don't seem to be believers in any religion. Some even seem to worship their machines and inventions. A group within the clergy have discussed sending missions to save the souls of these unfortune and misguided xenos. Currently, most of the discussion is centred around the [dpe_neighbour.GetName]. Shall we authorise the mission to go and spread the good word amongst the [dpe_neighbour.GetAdj] people?"
+dpe_spiritualist_mission.2.A:0 "Yes, we must offer them enlightenment."
+dpe_spiritualist_mission.2.B:0 "No, they are unworthy of our glorious religion."
+dpe_spiritualist_mission.2.C:0 "No, these clerics need to learn their place. I am the one in charge here!"
+
+dpe_spiritualist_mission.2.D:0 "Perhaps the [dpe_ally.GetName] would be a better candidate?"
+dpe_spiritualist_mission.2.E:0 "Let's be ambitious - send the mission to the [dpe_hive.GetName]."
+dpe_spiritualist_mission.2.E.tooltip:0 "This may be a futile endeavour. Who can say how the Hive will react?"
+dpe_spiritualist_mission.2.F:0 "Let's be ambitious - send the mission to the [dpe_machines.GetName]."
+dpe_spiritualist_mission.2.F.tooltip:0 "This is probably a futile endeavour."
+
+dpe_missionary_faction:0 "Accepted Foreign Mission"
+dpe_missionary_faction_rejected:0 "Rejected Foreign Mission"
+dpe_missionary_faction_rejected1:0 "$dpe_missionary_faction_rejected$"
+dpe_missionary_country:0 "Proselytising"
+dpe_missionary_country_desc:0 "The efforts of this country to spread its faith have reinvigorated the spiritualist movement within the country as well."
+dpe_missionary_country_rejected:0 "Spiritualists put in their Place"
+dpe_missionary_country_rejected_desc:0 "The spiritualist establishment overstepped its bounds and has been put in its place by the government."
+
+dpe_spiritualist_mission.3.name:0 "The [from.GetAdj] Missionaries"
+dpe_spiritualist_mission.3.desc.machine:0 "Dear... Machines, we in the [from.GetName] hold the conviction that all can find salvation before our Deities, even the most depraved soul. It is therefore an ethical imperative for us to offer this salvation, even to you, a monstrous construction that should never have existed. Will you accept salvation and listen to the Word of our missionaries?"
+dpe_spiritualist_mission.3.desc.hive:0 "Dear [root.GetSpeciesNamePlural], we in the [from.GetName] hold the conviction that all can find salvation before our Deities if we follow the correct practices. In the name of all that is good in the galaxy, we wish to offer you Enlightenment. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.3.option.hive.A:0 "Why do you bother us with this nonsense?"
+dpe_spiritualist_mission.3.option.hive.B:0 "Your ideas are strange to us but interesting. Perhaps we will consider further cooperation."
+dpe_spiritualist_mission.3.option.devourers:0 "Why does the food talk to us?"
+dpe_spiritualist_mission.3.option.machine:0 "Joke unsuccessful. Kindly leave us alone."
+dpe_spiritualist_mission.3.option.exterminator:0 "You will be annihilated."
+
+dpe_spiritualist_mission_insult:0 "Insulting Missionaries"
+dpe_spiritualist_mission_ignored:0 "Ignored our Holy Message"
+dpe_spiritualist_mission_hive_listened:0 "Interesting Ideas"
+dpe_spiritualist_mission_hive_listened1:0 "Heard our Message"
+
+dpe_spiritualist_mission.300.name:0 "The [from.GetName]'s Response"
+dpe_spiritualist_mission.300.A:0 "We tried our best to save you."
+
+
+dpe_spiritualist_mission.4.name:0 "Will you accept our Missionaries?"
+dpe_spiritualist_mission.4.desc.normal:0 "Dear [root.GetRulerTitle], we in the [from.GetName] hold the conviction that all can find salvation before our Deities if we follow the correct practices. In the name of all that is good in the galaxy, we wish to offer you Enlightenment. We recognise that there are considerable differences between our species, but we believe that you will find our Words interesting, if you will listen to them. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.4.desc.ally:0 "Dear friend, we in the [from.GetName] have always had good relations with your people. Your salvation is a great worry for us - we couldn't help but notice that your practices diverge from ours in certain, important ways. We wish to offer you Enlightenment, so that you can face your Maker without fear of Damnation. Will you host a mission of our finest religious scholars, who will guide you to find the Way?"
+dpe_spiritualist_mission.4.A:0 "Our people will not suffer xenos telling us what to do."
+dpe_spiritualist_mission.4.B:0 "We will let them in, but don't try any tricks - we will be watching you!"
+dpe_spiritualist_mission.4.C:0 "We will be glad to host your mission, friend."
+dpe_spiritualist_mission.4.D:0 "(Lie) Of course we will host your mission."
+dpe_spiritualist_mission.4.D.tooltip:0 "\nWe will secretly take measures to hinder their message from being spread. The [from.GetName] will be angered if they discover that we are doing this."
+
+dpe_spiritualist_mission_accepted_mission:0 "Hosted our Missionaries"
+#dpe_hosting_spiritualist_mission:0 "Hosting Missionaries"
+dpe_hosting_spiritualist_mission_planet:0 "Hosting Missionaries"
+dpe_hosting_spiritualist_mission_planet_desc:0 "This planet is hosting missionaries from one of the state's neighbours."
+
+dpe_spiritualist_mission.41.name:0 "The [from.GetName] declines"
+dpe_spiritualist_mission.41.desc:0 "Our people will not suffer xenos telling us what to do. We will not accept your missionaries."
+dpe_spiritualist_mission.41.option:0 "Then you have damned yourselves."
+
+dpe_spiritualist_mission.411.name:0 "The [fromfrom.GetName] rejected our Mission"
+dpe_spiritualist_mission.411.desc:0 "The [dpe_neighbour.GetName] have refused to allow our mission to travel to their lands. Many clerics are furious that these ignorant xenos would choose to damn themselves. Others are of a milder temper and believe that the divine simply has another species in mind for salvation at the moment. Should we attempt to send our missionaries elsewhere?"
+dpe_spiritualist_mission.411.option:0 "Better not"
+
+dpe_spiritualist_mission.42.name:0 "The [from.GetName] accepts"
+dpe_spiritualist_mission.42.desc:0 "Thank you for your offer. We will gladly host your missionaries."
+dpe_spiritualist_mission.42.option:0 "You are welcome."
+
+dpe_spiritualist_mission.421.name:0 "Our Mission departs for the [fromfrom.GetName]"
+dpe_spiritualist_mission.421.desc:0 "The mission to deliver salvation to the [dpe_neighbour.GetAdj] people departed today. We eagerly await news of their success."
+
+dpe_spiritualist_mission.4.accept:0 "The Mission will attempt to win converts on [dpe_mission_host_planet.GetName] and throughout the [dpe_neighbour.GetName]."
+
+
+dpe_spiritualist_mission.5.name:0 "Our Mission establishes itself successfully"
+dpe_spiritualist_mission.5.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. According to their first reports, the locals are open to our teaching, and many have converted already! The missionaries will continue their work, and are optimistic that they will be able to offer our salvation to further people in the [dpe_neighbour.GetName] and ensure that spiritualism holds an appropriate role in the [dpe_neighbour.GetAdj] state."
+
+dpe_spiritualist_mission.51.name:0 "The [dpe_missionary_country.GetAdj] Mission establishes itself successfully"
+dpe_spiritualist_mission.51.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, they've also noticed something that may be concerning: A sizeable portion of the local population is actually partaking in the ceremonies and rituals that the missionaries put on. It seems like this religion of theirs may be catching on. Should we tolerate this?"
+dpe_spiritualist_mission.51.desc.ally:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetAdj] mission have reported no disturbances. The missionaries have established themselves fine, and in fact, they have found many of our citizens to be receptive to their message. However, there are those within our population who worry that part of [root.GetAdj] identity could be lost of the missionaries are allowed to continue to have free reign. How should we react?"
+dpe_spiritualist_mission.51.normal.A:0 "If we were afraid of their religion, we shouldn't have let them in in the first place."
+dpe_spiritualist_mission.51.normal.B:0 "Send them home - we never thought that anyone would actually fall for their ludicrous space cult!"
+dpe_spiritualist_mission.51.ally.A:0 "Of course they may stay."
+dpe_spiritualist_mission.51.ally.B:0 "We should find an excuse to send them home."
+
+dpe_spiritualist_mission.52.name:0 "The [from.GetAdj] authorities send our Mission home"
+dpe_spiritualist_mission.52.desc:0 "Dear [root.GetRulerTitle]... we regret to inform you that we must send your mission to us home. Although they had many interesting things to tell us, we have discovered that their presence violates an ancient [from.GetAdj] law regulating the propagation of foreign ideologies. Please don't hold this against us."
+dpe_spiritualist_mission.52.option:0 "So you don't want our Salvation?"
+
+dpe_spiritualist_mission.59.name:0 "Our Mission establishes itself"
+dpe_spiritualist_mission.59.desc:0 "The mission to the [dpe_neighbour.GetName] has gone ahead, and our missionaries have established themselves on [dpe_mission_host_planet.GetName]. However, they report that they are struggling to get their views across to the local population and haven't attracted much of a following yet. We can only hope that with time they will come to have a greater impact."
+
+dpe_spiritualist_mission.591.name:0 "The [from.GetAdj] Mission establishes itself"
+dpe_spiritualist_mission.591.desc.normal:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetAdj] mission have reported no disturbances or trickery. Our intelligence staff has been monitoring these xenos, and it seems they are what they claim. However, they have so far struggled to get their views across to the local population and haven't attracted much of a following yet."
+dpe_spiritualist_mission.591.desc.ally:0 "So far, the local officials on [dpe_mission_host_planet.GetName] responsible for overseeing the [dpe_missionary_country.GetAdj] mission have reported no disturbances, and the missionaries have established themselves fine. However, they have so far struggled to get their views across to the local population and haven't attracted much of a following yet."
+
+
+dpe_spiritualist_mission.6.name:0 "Our Mission faces Resistance"
+dpe_spiritualist_mission.6.desc:0 "The mission to the [dpe_neighbour.GetName] has been set up, and we have just received the first set of reports. Unfortunately, the locals are not very happy about our teachings. The missionaries mention being harassed, threatened, and even assaulted by local civilians upset at our presence. The local authorities are trying to maintain peace, but a full security team will be necessary to ensure the safety of our mission. Should we persist in our efforts or recall the mission?" 
+dpe_spiritualist_mission.6.A:0 "Recall the mission, the Will of the Divine has been made clear."
+dpe_spiritualist_mission.6.B:0 "We must persist and try to save the [dpe_neighbour.GetAdj] people from themselves!"
+
+dpe_spiritualist_mission.601.name:0 "The [from.GetAdj] authorities recall their Mission"
+dpe_spiritualist_mission.601.desc:0 "The [from.GetAdj] mission has been recalled by their government due to tensions with the locals on [dpe_mission_host_planet.GetName]. Following a series of unfortunate occurrences, it was deemed too dangerous to allow the mission to continue. The situation on [dpe_mission_host_planet.GetName] is quickly returning to normal, and the local officials are confident that order will be fully restored."
+dpe_spiritualist_mission.601.option:0 "It is the probably for the best."
+
+
+dpe_spiritualist_mission.61.name:0 "Resistance to the [dpe_missionary_country.GetAdj] Mission"
+dpe_spiritualist_mission.61.desc:0 "The local officials near the mission on [dpe_mission_host_planet.GetName] have reported a plethora of issues stemming from the presence of the [dpe_missionary_country.GetAdj] mission, which has not been received well. Harassment, intimidation, destruction of property, and graffiti are just the beginning of a long list of problems that have arisen recently. So far, the local law enforcement has done its best to keep things calm as they waited for us to make an official decision on the matter. However, many advisors raise concerns that the situation could escalate rapidly, as local security officers are faced with the dilemma of either protecting their own beliefs or maintaining law and order. For their part, the [dpe_missionary_country.GetAdj] missionaries have expressed the firm intention of keeping on with their mission."
+dpe_spiritualist_mission.61.A:0 "Send them home to stop the situation from escalating."
+dpe_spiritualist_mission.61.B:0 "We will try to protect the missionaries, but they stay at their own risk."
+
+dpe_spiritualist_mission.62.name:0 "The [from.GetAdj] authorities send our Mission home"
+dpe_spiritualist_mission.62.desc:0 "The situation on [dpe_mission_host_planet.GetName] has deteriorated beyond our control. We must send your mission home to avoid destabilising the planet."
+dpe_spiritualist_mission.62.option.A:0 "A shame - all we wanted was your Salvation."
+dpe_spiritualist_mission.62.option.B:0 "How dare you."
+
+
+dpe_spiritualist_mission.631.name:0 "Disaster strikes our Mission!"
+dpe_spiritualist_mission.631.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that has struck our mission on [dpe_mission_host_planet.GetName]. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed large parts of the city and killed even more of our faithful. The [dpe_neighbour.GetName] has officially sent our mission home, even though no members of the mission survived the attack, and they request that we refrain from sending any non-essential personnel to their empire in the foreseeable future."
+dpe_spiritualist_mission.631.A:0 "We should have recalled them earlier."
+dpe_spiritualist_mission.631.B:0 "The [dpe_neighbour.GetAdj] [dpe_neighbour.GetSpeciesNamePluralInsult] are to blame for this tragedy!"
+
+
+dpe_spiritualist_mission.632.name:0 "Disaster strikes the [from.GetAdj] Mission!"
+dpe_spiritualist_mission.632.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that has struck the [from.GetAdj] mission on [dpe_mission_host_planet.GetName]. In spite of our best efforts to protect the missionaries, our security services were helpless to prevent the slaughter. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed parts of the city and killed most of the [from.GetAdj] missionaries and their followers. We don't currently have a final number on the death toll yet, but it is estimated at over 3,000 and still rising. This is truly a national disaster.\n\nThe [from.GetAdj] government has declared a period of mourning following these events, and have avoided directly blaming us for the events, accepting that they should have heeded our warnings that something might happen. Although many [from.GetAdj] citizens are now inevitably hostile towards us, hopefully, in time, we will be able to repair our relations with them."
+
+dpe_spiritualist_mission.633.name:0 "Disaster strikes the [from.GetAdj] Mission!"
+dpe_spiritualist_mission.633.desc:0 "Every news agency in both our empires, along with our own intelligence agencies, are all reporting on the tragedy that has struck the [from.GetAdj] mission on [dpe_mission_host_planet.GetName]. In spite of our best efforts to protect the missionaries, our security services were helpless to prevent the slaughter. As the faithful were gathering for the first worship of the day, a bomb went off. The explosion destroyed nearly half the building, and the ensuing fire killed most of the survivors. By the end of that day, rioters had destroyed parts of the city and killed most of the [from.GetAdj] missionaries and their followers. We don't currently have a final number on the death toll yet, but it is estimated at over 3,000 and still rising. This is truly a national disaster.\n\nEven though we had warned the [from.GetAdj] government that something might happen, they are publicly blaming us for the disaster. This event will likely tar our relations with them for years to come."
+
+dpe_spirmission_killed_faction1:0 "Missionaries Slaughtered"
+dpe_spirmission_planet_xenos_unwelcome:0 "Xenos Unwelcome"
+dpe_spirmission_planet_xenos_unwelcome_desc:0 "The population has taken matters into its own hands and slaughtered the meddling foreign missionaries that had sought to convert them."
+
+dpe_spirmission_killed_faction:0 "Angry at failure to recall Missionaries"
+dpe_spirmission_killed_opinion:0 "Missionaries Massacred"
+dpe_spirmission_killed_xenophobia:0 "Massacre of Missionaries by Xenos"
+dpe_spirmission_killed_xenophobia_desc:0 "A mission to spread the faith to a xeno country ended with the missionaries being massacred by the xenos. Trust in xenos has taken a significant hit as a result."
+dpe_spirmission_killed_opinion2:0 "Missionaries Massacred"
+
+dpe_spiritualist_mission.64.name:0 "The Situation on [dpe_mission_host_planet.GetName] stabilises"
+dpe_spiritualist_mission.64.desc:0 "Fortunately, the situation surrounding our mission on [dpe_mission_host_planet.GetName] has calmed down. The locals have become slightly more accepting of our presence, and the missionaries have learned their boundaries. It seems we have reached a delicate equilibrium."
+dpe_spiritualist_mission.65.name:0 "$dpe_spiritualist_mission.64.name$"
+dpe_spiritualist_mission.65.desc:0 "Fortunately, the situation surrounding the [dpe_missionary_country.GetAdj] mission on [dpe_mission_host_planet.GetName] has calmed down. The locals have become slightly more accepting of the xenos, and the xenos have learned their boundaries. It seems we have reached a delicate equilibrium."
+
+dpe_hosting_spirmission_planet_turbulence:0 "Turbulence surrounding Foreign Missionaries"
+dpe_hosting_spirmission_planet_turbulence_desc:0 "The presence of foreign missionaries has provoked a hostile response from elements of the local population."
+
+dpe_spirmission_sent_mission_home:0 "Sent Mission Home"
+
+dpe_spirmission_minor_mission:0 "Spiritualist Missionaries"
+dpe_spirmission_minor_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. However, they have not attracted a large following, so their impact is only moderate."
+dpe_spirmission_major_mission:0 "$dpe_spirmission_minor_mission$"
+dpe_spirmission_major_mission_desc:0 "Foreign missionaries are attempting to spread their religion in our state. Their words are popular among the people, and many are pulled towards their views."
+
+dpe_spiritualist_mission_planet_success.tooltip:0 "Four £pops  Pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
+dpe_spiritualist_mission_planet_mid_success.tooltip:0 "Two £pops  Pops on [dpe_mission_host_planet.GetName] convert to $ethic_spiritualist$."
+
+dpe_spiritualist_mission.7.name:0 "The [dpe_neighbour.GetName] is obstructing our Mission"
+dpe_spiritualist_mission.7.desc:0 "Members of the mission have recently complained that the [dpe_neighbour.GetAdj] government is openly obstructing their activities. There had long been suspicions that their uncooperative attitude was part of a deliberate attempt to stop the missionaries' message from spreading, but with the growing success of the mission, the obstruction efforts have stepped up a gear. It seems like it will be very difficult to make further progress. What action should we take?"
+dpe_spiritualist_mission.7.A:0 "The mission has done its job, recall it."
+dpe_spiritualist_mission.7.B:0 "Publicly accuse the [dpe_neighbour.GetName]."
+dpe_spiritualist_mission.7.B.tooltip:0 "The [dpe_neighbour.GetAdj] authorities are unlikely to take kindly to this."
+dpe_spiritualist_mission.7.C:0 "The mission will continue, even in the face of adversity."
+
+dpe_spirmission_accused_us:0 "Accused us of Deceitfulness"
+dpe_spirmission_deceived:0 "Obstructing Mission"
+
+dpe_spiritualist_mission.71.name:0 "The [from.GetName] accuses us!"
+dpe_spiritualist_mission.71.desc:0 "Dear \"friend\", it has come to our attention that you have been obstructing the activities of our mission to provide your people with salvation. Kindly cease doing so, for your own good! It is not to late for your souls to be saved."
+dpe_spiritualist_mission.71.option:0 "How dare you! The activities of the mission cease today."
+
+dpe_spiritualist_mission.72.name:0 "The [from.GetName] responds"
+dpe_spiritualist_mission.72.desc:0 "$dpe_spiritualist_mission.71.desc$"
+dpe_spiritualist_mission.72.option:0 "Poor fools, to reject our enlightenment."
+
+dpe_spiritualist_mission.73.name:0 "The [from.GetAdj] Mission leaves!"
+dpe_spiritualist_mission.73.desc:0 "After some limited successes, the [from.GetAdj] mission to provide us with their \"salvation\" has departed, claiming to have achieved its aims. We believe that the [from.GetAdj] missionaries had realised that we were obstructing them and decided that the easiest course of action was to leave. Although the [from.GetAdj] ambassador has expressed a certain coolness towards us that he hadn't previously, this is a price worth paying for having contained the spread of their \"religion\"."
+
+dpe_spiritualist_mission.74.name:0 "Our Obstruction uncovered"
+dpe_spiritualist_mission.74.desc:0 "The recent activities of the [from.GetAdj] mission leave no room for doubt: They somehow got wind of our obstruction efforts, and are now attempting to counteract them. However, although they have had some limited success in their mission, our intelligence services assure us that they will be able to keep the situation in hand."
+dpe_spiritualist_mission.74.A:0 "I see."
+dpe_spiritualist_mission.74.B:0 "We should send them home anyway, just in case."
+
+dpe_spiritualist_mission.75.name:0 "The [from.GetAdj] authorities send our Mission home"
+dpe_spiritualist_mission.75.desc:0 "Dear [root.GetRulerTitle], we regret to inform you that the [from.GetName] has come to the decision that your missionaries are a disruptive influence. We have therefore ordered them to cease their activities and return home. We hope that you will not take this personally."
+
+
+dpe_spirmission_sent_home_faction:0 "Sent home missionaries"
+
+dpe_spirmission_succeeded_country:0 "Successful Mission"
+dpe_spirmission_succeeded_country_desc:0 "The spiritualist movement within the state has been reinvigorated by its success in bringing spiritualist truth one of the state's neighbours. The population now views Spiritualism with renewed enthusiasm."
+dpe_spirmission_succeeded_faction:0 "Successful Mission"
+
+dpe_spirmission_succeeded:0 "Brothers in Belief"
+
+#these events are 10 years later
+
+dpe_spiritualist_mission.10.name:0 "Our Mission to the [from.GetName]"
+dpe_spiritualist_mission.10.desc.low:0 "Our mission to the [from.GetName] has achieved little over the past years: The majority of the [from.GetAdj] people have not heeded their words, and do not follow the True Way. There is some debate as to whether there is any point in continuing the mission at all."
+dpe_spiritualist_mission.10.desc.mid:0 "Our mission to the [from.GetName] has achieved some limited success over the past years: A sizeable minority in the [from.GetName] now follow the True Way. Should the mission continue?"
+dpe_spiritualist_mission.10.desc.high:0 "Our mission to the [from.GetName] has achieved considerable successes over the past years: Although the [from.GetAdj] government has not yet adopted the True Way, many in the [from.GetName] now do. Some have even embarked on pilgrimages to our worlds. Should the mission continue?"
+dpe_spiritualist_mission.10.desc.success:0 "Our mission to the [from.GetName] has been successful: Through their tireless efforts, spiritualism has become an integral part of the [from.GetAdj] way of life, and many in the [from.GetName] have embarked on pilgrimages to our worlds. Apart from a few who intend to remain on [dpe_mission_host_planet.GetName] and continue to guide the [from.GetAdj] people, the missionaries are preparing to return home, their work completed. The [from.GetAdj] authorities have organised a large celebration to mark the departure of the missionaries, who have made many friends during their time in the [from.GetName]. This will hopefully inaugurate a new period of friendship between our nations."
+dpe_spiritualist_mission.10.option.continue:0 "Continue the Mission - they are doing valuable work."
+dpe_spiritualist_mission.10.option.cancel:0 "Bring the Mission - they have done enough."
+dpe_spiritualist_mission.10.option.success:0 "$CCEXCELLENT$"
+
+#this is every 15 years afterwards
+dpe_spiritualist_mission.11.name:0 "$dpe_spiritualist_mission.10.name$"
+dpe_spiritualist_mission.11.desc.low:0 "$dpe_spiritualist_mission.10.desc.low$"
+dpe_spiritualist_mission.11.desc.mid:0 "$dpe_spiritualist_mission.10.desc.mid$"
+dpe_spiritualist_mission.11.desc.high:0 "$dpe_spiritualist_mission.10.desc.high$"
+dpe_spiritualist_mission.11.desc.success:0 "$dpe_spiritualist_mission.10.desc.success$"
+
+dpe_spiritualist_mission.101.name:0 "The [from.GetAdj] Mission"
+dpe_spiritualist_mission.101.desc.low:0 "Despite their lack of success in converting our population to their ways, the [from.GetAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.desc.mid:0 "The [from.GetAdj] missionaries have had some limited success in converting our population to their ways: Their followers now represent a considerable minority within the [root.GetName]. The [from.GetAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.desc.high:0 "The [from.GetAdj] missionaries have been relatively successful in converting our population to their ways, and their followers now represent a considerable minority within the [root.GetName]. The [from.GetAdj] missionaries have expressed the intention to stay on and continue their work. Should we allow them to?"
+dpe_spiritualist_mission.101.option.continue:0 "They may stay, if they wish."
+dpe_spiritualist_mission.101.option.cancel:0 "Send them home."
+ 
+dpe_spiritualist_mission.102.name:0 "The [from.GetAdj] Missionaries leave"
+dpe_spiritualist_mission.102.desc.uninterested:0 "Dear [root.GetRulerTitle], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We are simply not interested in spreading our beliefs to other Empires anymore. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.low:0 "Dear [root.GetRulerTitle], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. Given the lack of progress in converting the [root.GetAdj] people to the True Way, we have come to the conclusion that Salvation is not for all. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.mid:0 "Dear [root.GetRulerTitle], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.desc.high:0 "Dear [root.GetRulerTitle], we have elected to recall our missionaries from [dpe_mission_host_planet.GetName]. We are satisfied that they have done enough to ensure that the Truth is followed in the [root.GetName]. We thank you for hosting them over the past years."
+dpe_spiritualist_mission.102.A:0 "We are sorry to see them go."
+dpe_spiritualist_mission.102.B:0 "Good riddance."
+ 
+dpe_spiritualist_mission.1011.name:0 "The [from.GetAdj] authorities send our Mission home"
+dpe_spiritualist_mission.1011.desc:0 "Dear [root.GetRulerTitle], we have hosted your missionaries for some years now. However, it is now time for them to return home. We would like to thank them for their tireless efforts at promoting spiritualism in the [root.GetName]."
+dpe_spiritualist_mission.1011.option:0 "Enlightenment is not for all."
+ 
+dpe_spiritualist_mission.1099.name:0 "Mission Accomplished"
+dpe_spiritualist_mission.1099.desc:0 "The [from.GetAdj] mission is preparing to return home, their mission complete: Through their tireless work, spiritualism is now an integral part of our way of life. A large ceremony has been organised to celebrate the departure of the missionaries, who have made many friends during the years they have spent in the [root.GetName]. Some of the [from.GetAdj] missionaries have requested permission to remain on [dpe_mission_host_planet.GetName] and continue to guide our people. Should we grant them this?"
+dpe_spiritualist_mission.1099.A:0 "Of course - they are most welcome here."
+dpe_spiritualist_mission.1099.B:0 "There is no space for them in our state."
+
+
+#contingencies
+
+dpe_spiritualist_mission.9611.name:0 "The Contingency strikes [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9611.desc:0 "The Contingency has struck [dpe_mission_host_planet.GetName] and slaughtered our missionaries, along with all the other inhabitants of the planet!"
+
+dpe_spiritualist_mission.9612.name:0 "The Contingency strikes [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9612.desc:0 "The Contingency has struck [dpe_mission_host_planet.GetName], where the [from.GetAdj] missionaries were based! The missionaries were slaughtered, along with all the other inhabitants of the planet."
+
+dpe_spiritualist_mission.9621.name:0 "Prethoryn strike [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9621.desc:0 "The Prethoryn have struck [dpe_mission_host_planet.GetName] and slaughtered our missionaries, along with all the other inhabitants of the planet!"
+
+dpe_spiritualist_mission.9622.name:0 "The Prethoryn strike [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9622.desc:0 "The Prethoryn have struck [dpe_mission_host_planet.GetName], where the [from.GetAdj] missionaries were based! The missionaries were slaughtered, along with all the other inhabitants of the planet."
+
+dpe_spiritualist_mission.9631.name:0 "Extradimensionals strike [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9631.desc:0 "The Extradimensional Invaders have struck [dpe_mission_host_planet.GetName] and slaughtered our missionaries, along with all the other inhabitants of the planet!"
+
+dpe_spiritualist_mission.9632.name:0 "Extradimensionals strike [dpe_mission_host_planet.GetName]!"
+dpe_spiritualist_mission.9632.desc:0 "The Extradimensional Invaders have struck [dpe_mission_host_planet.GetName], where the [from.GetAdj] missionaries were based! The missionaries were slaughtered, along with all the other inhabitants of the planet."
+
+dpe_spiritualist_mission.971.name:0 "Our Missionaries return Home"
+dpe_spiritualist_mission.971.desc:0 "The [dpe_neighbour.GetName] has lost control of [dpe_mission_host_planet.GetName], the planet where our missionaries were active. Fortunately, our missionaries were able to escape the chaos unharmed, and have returned home."
+
+dpe_spiritualist_mission.972.name:0 "[from.GetAdj] Missionaries return Home"
+dpe_spiritualist_mission.972.desc:0 "With the loss of [dpe_mission_host_planet.GetName] to the [fromfromfrom.GetName], the [from.GetAdj] missionaries have returned to their homeland."
+
+dpe_spiritualist_mission.98.name:0 "War with the Missionaries!"
+dpe_spiritualist_mission.98.desc:0 "The war between us and the [dpe_missionary_country.GetName] has put us in an awkward position. They had set up a mission on [dpe_mission_host_planet.GetName], which we now have to decide what to do with. Some have advocated simply deporting them back to their homeland, others want to make a statement by killing them. What should be done?" 
+dpe_spiritualist_mission.98.A:0 "Kill them all, we will show them what happens when they trifle with us!"
+dpe_spiritualist_mission.98.A.tooltip:0 "Relations with all empires not allied in this war: §R-30§!\nRelations with the [dpe_missionary_country.GetName]: §R-100§!"
+dpe_spiritualist_mission.98.B:0 "Send them home. We may be enemies, but we are not savages."
+dpe_spiritualist_mission.98.B.tooltip:0 "Relations with all empires not allied in this war: §G+30§!\nRelations with the [dpe_missionary_country.GetName]: §R+50§!"
+dpe_spiritualist_mission.98.C:0 "Imprison them. They've seen too much to be allowed to aid our enemy."
+
+dpe_dishonourable_in_war:0 "Dishonourable in War"
+dpe_killed_missionaries_faction:0 "Murdered missionaries"
+dpe_killed_missionaries_faction1:0 "Killed the enemy agents"
+dpe_honourable_in_war:0 "Honourable in War"
+dpe_not_killed_missionaries_faction:0 "Let enemy agents go"
+
+dpe_spiritualist_mission.981.name:0 "Our Missionaries slaughtered!"
+dpe_spiritualist_mission.981.desc:0 "We have received word that, at the outbreak of war, the heathen [dpe_neighbour.GetAdj] [dpe_neighbour.GetSpeciesNamePluralInsult] that we were trying to enlighten slaughtered our missionaries. The people are outraged at this atrocity!"
+dpe_spiritualist_mission.981.option:0 "The savages will pay for this!"
+
+dpe_spiritualist_mission.982.name:0 "Our Missionaries returned to us!"
+dpe_spiritualist_mission.982.desc:0 "Due to our current conflict with the [dpe_neighbour.GetName], our missionaries have been returned to us. They say they were treated decently, but most of their belongings and materials were confiscated."
+dpe_spiritualist_mission.982.option:0 "Things could be worse, all things considered."
+
+dpe_spiritualist_mission.983.name:0 "Our Missionaries imprisoned!"
+dpe_spiritualist_mission.983.desc:0 "The recent outbreak of hostilities between us and the [dpe_neighbour.GetName] has led to some unintended consequences. Our attempts to enlighten them have put our citizens in danger. They are currently held in custody on [dpe_mission_host_planet.GetName], and all requests for them to be freed have been ignored."
+dpe_spiritualist_mission.983.option:0 "At least they are still alive."
+
+dpe_spiritualist_mission.991.name:0 "The [LastKilledCountryName] collapses!"
+dpe_spiritualist_mission.991.desc:0 "The [LastKilledCountryName] has collapsed in the face of all its struggles. Their missionaries now have no home to return to. What should we do about them?"
+dpe_spiritualist_mission.991.A:0 "Grant them citizenship, it's the least we can do."
+dpe_spiritualist_mission.991.B:0 "They will make good slaves."
+dpe_spiritualist_mission.991.C:0 "They will have to find their new home elsewhere." 
+
+dpe_missionary_planet:0 "Settled Missionaries"
+dpe_missionary_planet_desc:0 "Former missionaries from a neighbour have made this planet their home."
+
+
+
+
+#Xenophile Mission
+
+dpe_xenophile_mission.3.name:0 "Discovery of the [dpe_new_contact.GetName]"
+dpe_xenophile_mission.3.desc:0 "Many [root.GetAdj] citizens are fascinated at the discovery of the [dpe_new_contact.GetName], a new highly advanced xeno society. News outlets are abuzz with speculation about the [dpe_new_contact.GetSpeciesNamePlural], and the population beg to be able to learn more. Inspired by this wave of enthusiasm, the [xenophile_faction.GetName] has approached government officials with an ambitious plan to reach out to the [dpe_new_contact.GetAdj] authorities and propose a cultural exchange, so that [root.GetSpeciesNamePlural] and [dpe_new_contact.GetSpeciesNamePlural] can learn to understand each other better. If the [dpe_new_contact.GetName] agrees, several private starships will take a group of [root.GetSpeciesNamePlural] to the [dpe_new_contact.GetName], where they will spend several months living among [dpe_new_contact.GetSpeciesNamePlural], with the [dpe_new_contact.GetName] reciprocating in kind. Should we propose such an exchange?"
+dpe_xenophile_mission.3.A:0 "Of course."
+dpe_xenophile_mission.3.B:0 "No, we will get to know them in due course."
+
+dpe_rejected_xenophile_mission_faction:0 "Rejected Discovery Mission"
+
+dpe_xenophile_mission.4.name:0 "The [from.GetSpeciesNamePlural] want to get to know us"
+dpe_xenophile_mission.4.desc:0 "Noble [root.GetSpeciesNamePluralCompliment], we wish to propose a cultural exchange with you to encourage friendship between our peoples. If you accept, we will send a group of [from.GetSpeciesNamePlural] to the [root.GetName], where they will spend several months living among [root.GetSpeciesNamePlural]. In return, we will host a similar group of [root.GetSpeciesNamePlural]. We hope that, by doing this, we will be able to understand your people better and herald in a new era of friendship between our nations."
+dpe_xenophile_mission.4.A:0 "It would be our pleasure to get to know the [from.GetSpeciesNamePlural] better."
+dpe_xenophile_mission.4.B:0 "We are not interested in a cultural exchange."
+dpe_xenophile_mission.4.C:0 "(Lie) We will gladly take this opportunity to learn more about your kind."
+dpe_xenophile_mission.4.C.tooltip:0 "Our mission will attempt to learn as much as possible about the [from.GetName]'s systems, technology and military. The [from.GetName] will be angered if our spying is discovered."
+dpe_xenophile_mission.4.D:0 "(Lie) We can't wait to host your citizens."
+dpe_xenophile_mission.4.D.tooltip:0 "We will attempt to take their mission hostage and extort favourable terms from them for their safe return. The [from.GetName] is a threat that we must take pre-emptive action against!"
+
+dpe_xenophile_mission_opinion:0 "Discovery Mission"
+dpe_rejected_xenophile_mission_opinion:0 "Rejected Discovery Mission"
+
+dpe_xenophile_mission.5.name:0 "The [dpe_new_contact.GetName] responds"
+dpe_xenophile_mission.5.desc:0 "It would be our pleasure to get to know the [root.GetSpeciesNamePlural] better."
+dpe_xenophile_mission.6.name:0 "The [dpe_new_contact.GetName] responds"
+dpe_xenophile_mission.6.desc:0 "We are not interested in a cultural exchange."
+
+dpe_xenophile_mission.7.name:0 "The [from.GetSpeciesAdj] Delegation Arrives"
+dpe_xenophile_mission.7.desc:0 "The [from.GetSpeciesAdj] delegation arrived today to a rapturous applause: [root.GetSpeciesNamePlural] lined the streets to greet the new aliens, and billions upon billions watched their arrival on the news channels. Our own delegation reports that it has arrived to a similar reception. Optimism is high that the mission will be a success."
+dpe_xenophile_mission.7.A:0 "May the good news continue coming!"
+dpe_xenophile_mission.7.B:0 "Poor [from.GetSpeciesNamePlural], they don't know what is coming for them."
+dpe_xenophile_mission.7.C:0 "Good. It should be easy to find out all their secrets."
+
+dpe_xenophile_mission.73.name:0 "Progress Update of the Discovery Mission"
+dpe_xenophile_mission.73.desc:0 "Our respective delegations have spent some time building rapport with their hosts. Initial differences between [root.GetSpeciesNamePlural] and [from.GetSpeciesNamePlural] have been smoothed over, and we are learning fascinating novelties about - and building a closer relationship with - [from.GetSpeciesNamePlural] daily."
+dpe_xenophile_mission.74.desc.spying:0 "Our respective delegations have spent some time building rapport with their hosts. Initial differences between our species have been smoothed over. The [from.GetSpeciesNamePlural] have no idea that we have been using the mission as a screen to spy on them, and are coming to trust us. This will only make it easier for us to learn their secrets..."
+
+
+dpe_xenomission_sent_home:0 "Xenophile Mission Sent Home"
+dpe_xenomission_xenophobia:0 "Xenophobic Wave"
+dpe_xenomission_xenophobia_desc:0 "The arrival of a group of xenos seeking to learn more about our culture has created a hostile and xenophobic reaction."
+dpe_xenophile_mission_ends:0 "The Xenophile Discovery Mission ends."
+
+#Death Chain
+ dpe_xenophile_mission.20.name:0 "Time to Strike"
+ dpe_xenophile_mission.20.desc:0 "The time has come to strike. Our intelligence agencies have drawn up a cunning plan: Now that the [from.GetSpeciesNamePlural] have lowered their guards, our special forces will be able to overwhelm their protection teams and take as many of them hostage as possible. To ensure that they cannot escape us, we have installed malware on their starships' automation systems that will make it impossible to fly them; as a backup, we have also installed antimatter explosives. In the meantime, our delegates, who are strategically positioned near the [from.GetSpeciesAdj] frontier, will have left without warning and disappeared from [from.GetSpeciesAdj] space. We will then be able to extort favourable terms from the [from.GetSpeciesNamePlural]."
+ dpe_xenophile_mission.20.A:0 "Excellent, proceed."
+ dpe_xenophile_mission.20.A.tooltip:0 "Our agents will attempt to take the [from.GetAdj] delegation hostage."
+ dpe_xenophile_mission.20.B:0 "It is too risky, let's just send them home."
+ 
+ dpe_xenophile_mission.21.name:0 "The [from.GetAdj] authorities send our Delegates home"
+ dpe_xenophile_mission.21.desc:0 "We do not believe this arrangement is working out. For reasons of national security, we must end the discovery mission."
+ dpe_xenophile_mission.21.option:0 "Disappointing."
+ 
+ dpe_xenophile_mission.22.name:0 "Betrayed by the [from.GetName]"
+ dpe_xenophile_mission.22.desc:0 "The first sign of treachery was the sudden departure of the [from.GetSpeciesNamePlural] from our planets, and then, before we could react, our space. Then, horrifying stories filtered through from the [from.GetName]: The [from.GetSpeciesNamePlural] had turned on our delegates in a well-planned move, and after a brief but hopeless firefight taken them hostage.\n\nWe have opened diplomatic channels to demand an explanation for this action. In the meantime, our populace's positive outlook towards xenos has been severely shaken."
+ dpe_xenophile_mission.22.option:0 "How dare they?"
+
+ dpe_xenophile_mission.23.name:0 "Setting our Demands"
+ dpe_xenophile_mission.23.desc:0 "Explain yourselves and your treacherous behaviour, [root.GetSpeciesName]."
+ dpe_xenophile_mission.23.A:0 "Give us money, or the hostages die."
+ dpe_xenophile_mission.23.A.tooltip:0 "If the [from.GetName] accepts, they will become a tributary of the [root.GetName]."
+ dpe_xenophile_mission.23.B:0 "Disband your fleet, or the hostages die."
+ dpe_xenophile_mission.23.B.tooltip:0 "If the [from.GetName] accepts, a third of their fleet will disband and their naval capacity will be cut by 33% for 15 years."
+ 
+ dpe_xenophile_mission.24.name:0 "The [from.GetAdj] Demands"
+ dpe_xenophile_mission.24.desc:0 "Pay tribute to us, or the hostages die."
+ dpe_xenophile_mission.24.A:0 "We will do what we must to protect our people."
+ dpe_xenophile_mission.24.A.tooltip:0 "We will become a tributary of the [from.GetName]."
+ #anaphysik: added that tooltip, from .23.A
+ dpe_xenophile_mission.24.B:0 "Not a chance."
+
+ dpe_xenophile_mission.25.name:0 "$dpe_xenophile_mission.24.name$"
+ dpe_xenophile_mission.25.desc:0 "Disband your fleet, or the hostages die."
+ dpe_xenophile_mission.25.A:0 "$dpe_xenophile_mission.24.A$"
+ dpe_xenophile_mission.25.A.tooltip:0 "A third of the fleet will disband and our naval capacity will be cut by 33% for 15 years." 
+ #anaphysik: expanded tooltip, from .23.B
+ dpe_xenophile_mission.25.B:0 "$dpe_xenophile_mission.24.B$"
+ 
+ dpe_xenophile_mission.251.name:0 "$dpe_title_response$"
+ dpe_xenophile_mission.251.desc:0 "$dpe_xenophile_mission.24.A$"
+ dpe_xenophile_mission.252.name:0 "$dpe_title_response$"
+ dpe_xenophile_mission.252.desc:0 "$dpe_xenophile_mission.24.B$"
+ dpe_xenophile_mission.252.thendie:0 "Then your people shall die."
+
+ dpe_xenophile_mission.29.name:0 "Betrayed by the [from.GetName]"
+ dpe_xenophile_mission.29.desc:0 "The first sign of treachery was the sudden departure of the [from.GetSpeciesNamePlural] from our planets, and then, before we could react, our space. Then, horrifying stories filtered through from the [from.GetName]: The [from.GetSpeciesNamePlural] turned on our delegates in a well-planned move and attempted to take them hostage. However, a heroic [root.GetSpeciesAdj] technician somehow got hold of an antimatter explosive and detonated it so that the [from.GetSpeciesNamePlural] could not use our delegates against us, in the process doing considerable damage to [random_planet.GetName]. Our population is in mourning at the deaths of our delegates, who are now seen as heroes. Their positive outlook towards xenos has been severely shaken."
+ dpe_xenophile_mission.29.option:0 "How dare they?"
+ 
+ dpe_xenophile_mission.291.name:0 "Disastrous Failure"
+ dpe_xenophile_mission.291.desc:0 "The [from.GetAdj] delegation managed to get ahold of one of the antimatter bombs we had placed on their ships, and detonated it in the vicinity of [random_planet.GetName], causing widespread damage to the planet - millions have died already in the aftermath of the blast. The population is in shock and demands a response."
+ dpe_xenophile_mission.291.A:0 "We must punish the terrorists."
+ dpe_xenophile_mission.291.B:0 "Close the borders, the [from.GetSpeciesNamePlural] are not welcome here."
+
+ dpe_xenophile_mission.292.name:0 "The [from.GetName] Declares War!"
+ dpe_xenophile_mission.292.desc:0 "Filthy terrorist scum! We will have our revenge on you."
+ dpe_xenophile_mission.292.option:0 "Your hypocrisy is incredible, [from.GetSpeciesName]."
+
+ dpe_xenophile_mission.293.name:0 "The [from.GetAdj] Response"
+ dpe_xenophile_mission.293.desc:0 "Your hypocrisy is incredible, [from.GetSpeciesName]."
+ dpe_xenophile_mission.293.option:0 "Die, scum."
+ 
+ dpe_xenomission_death:0 "Hostages Crisis"
+ dpe_deceitful:0 "Deceitful"
+ dpe_xenomission_abandoned_hostages:0 "Abandoned Hostages"
+ dpe_xenomission_abandoned_hostages_desc:0 "Many citizens are disturbed that the government abandoned hostages to the tortures of the enemy."
+ dpe_xenomission_disbanding_fleet:0 "Naval Disarmament"
+ dpe_xenomission_disbanding_fleet_desc:0 "A rival state has forced this state to commit to disarmament."
+ 
+ 
+#Tensions event chain
+ dpe_xenophile_mission.81.name:0 "Tensions over our Delegation"
+ dpe_xenophile_mission.81.desc:0 "There have been a number of unfortunate incidents surrounding our delegation to the [from.GetName]. These were first triggered by a number of cultural misunderstandings by our people, the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, xenophobic elements within [from.GetSpeciesAdj] society have seized upon these incidents to provoke a backlash: Our people are increasingly met by protests wherever they go, and the [from.GetSpeciesAdj] government has informed us that their security services have foiled several attempts of violence against them, and that they cannot guarantee their continued safety. Some of our delegates were sufficiently spooked by this news that they demanded to be allowed to return home immediately, a wish their leader granted; however, most of them are intent on braving it out in the hope that these difficulties can be surmounted. Should we summon them home?"
+ dpe_xenophile_mission.81.A:0 "Keep at it - nobody expected this to be easy."
+ dpe_xenophile_mission.81.B:0 "Bring them home, before anything worse happens!"
+
+ dpe_xenophile_mission.82.name:0 "Tensions over the [from.GetSpeciesAdj] Delegation"
+ dpe_xenophile_mission.82.desc:0 "There have been a number of unfortunate incidents surrounding the [from.GetSpeciesAdj] delegation to our country. These were first triggered by a number of cultural misunderstandings by the [from.GetSpeciesNamePlural], the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, those within our society who would seek to distance our species from outside influences have seized upon these incidents to provoke a backlash: The [from.GetSpeciesNamePlural] are increasingly met by protests wherever they go, and our security services have foiled several attempts of violence against them. Their leader has tried to put a brave face on things, and has expressed the desire to keep on in spite of these incidents - something the [from.GetSpeciesAdj] government supports them in - though part of their delegation has left to return home. What action should be taken?"
+ dpe_xenophile_mission.82.A:0 "Keep at it - nobody expected this to be easy."
+ dpe_xenophile_mission.82.B:0 "Send them home, before anything worse happens!"
+ 
+ dpe_xenophile_mission.83.name:0 "The [from.GetSpeciesNamePlural] pull out of the Discovery Mission"
+ dpe_xenophile_mission.83.desc:0 "Following a number of unfortunate incidents, the [from.GetName] has summoned its delegation home. The incidents were first triggered by a number of cultural misunderstandings by the [from.GetSpeciesNamePlural], the sort that is perhaps inevitable when two groups from totally alien backgrounds meet. Unfortunately, those within our society who would seek to distance our species from outside influences have seized upon these incidents to provoke a backlash: The [from.GetSpeciesNamePlural] are increasingly met by protests wherever they go, and our security services have foiled several attempts of violence against them. Faced with an uncertain situation, the [from.GetSpeciesAdj] government elected to recall its delegation rather than risk their safety. They have also advised us that it would be best for our delegation to their planets to withdraw, as tensions are running too high for their presence to be of any use to either state."
+ 
+ dpe_xenophile_mission.84.name:0 "The [from.GetAdj] authorities send our Delegation home"
+ dpe_xenophile_mission.84.desc:0 "We cannot guarantee the safety of your delegation. We must therefore send them home."
+ dpe_xenophile_mission.84.option:0 "A shame. It's best if yours returns home then too."
+
+ dpe_xenomission_unrest_blame:0 "Blamed for Failure of Xenophile Mission"
+ 
+ dpe_xenophile_mission.91.name:0 "Devastating Terror Attack on our Delegates!"
+ dpe_xenophile_mission.91.desc:0 "This morning, a group of [dpe_new_contact.GetSpeciesNamePlural] opened fire on our delegates to the [dpe_new_contact.GetName] before detonating a bomb in their midst. A large number of them were killed, and many others were wounded. The survivors have been evacuated with immediate effect. For their own safety, we have also sent the [dpe_new_contact.GetAdj] delegation home."
+ dpe_xenophile_mission.91.A:0 "We should have recalled them earlier."
+ dpe_xenophile_mission.91.B:0 "The [dpe_neighbour.GetAdj] [dpe_neighbour.GetSpeciesNamePluralInsult] are to blame for this!"
+
+ dpe_xenophile_mission.92.name:0 "Devastating Terror Attack on the [from.GetAdj] Delegates!"
+ dpe_xenophile_mission.92.desc:0 "There has been a major security breach! This morning, a group of [root.GetSpeciesNamePlural] opened fire on the [from.GetSpeciesAdj] delegates before detonating a bomb in their midst. Our security services were powerless to prevent the tragedy. A large number of [from.GetSpeciesNamePlural] were killed, and many others were wounded. The survivors have been evacuated with immediate effect, and the [from.GetName] has instructed our own delegation to return home immediately, citing security fears. Their government officials have so far avoided blaming the [root.GetSpeciesAdj] people for the tragedy, stressing that it was the action of a few "bad apples", but it is unclear how our relations with the [from.GetSpeciesNamePlural] will develop from here."
+ dpe_xenophile_mission.92.A:0 "The [from.GetSpeciesNamePlural] got what they deserved."
+ dpe_xenophile_mission.92.B:0 "Condemn the attack and pursue the terrorists with full force."
+ 
+ dpe_xenophile_mission.93.name:0 "$dpe_xenophile_mission.92.name$"
+ dpe_xenophile_mission.93.desc:0 "There has been a major security breach! This morning, a group of [root.GetSpeciesNamePlural] opened fire on the [from.GetSpeciesAdj] delegates before detonating a bomb in their midst. Our security services were powerless to prevent the tragedy. A large number of [from.GetSpeciesNamePlural] were killed, and many others were wounded. The survivors have been evacuated with immediate effect, and the [from.GetName] has instructed our own delegation to return home immediately, citing security fears. Their government officials have been quick to cast the blame on our people, claiming that the "deceitful", "intolerant" and "warlike" [root.GetSpeciesNamePlural] had abused their trust. It is unclear how our relations with the [from.GetSpeciesNamePlural] will develop from here."
+ 
+ dpe_xenophile_mission.94.name:0 "The [from.GetAdj] authorities blame us for the Tragedy!"
+ dpe_xenophile_mission.94.desc:0 "Your delegation got what it deserved, xeno scum."
+ dpe_xenophile_mission.94.option:0 "You have made an enemy of us, [root.GetSpeciesName]."
+ 
+ dpe_xenophile_mission.95.name:0 "The Situation of our Delegates stabilises"
+ dpe_xenophile_mission.95.desc:0 "The situation surrounding our delegation to the [from.GetName] has stabilised. Through admirable hard work, the delegates have managed to better bridge the gap to the [from.GetSpeciesAdj] locals, and the animosity they had faced has subsided."
+ dpe_xenophile_mission.951.name:0 "The Situation of the [from.GetAdj] Delegates stabilises"
+ dpe_xenophile_mission.951.desc:0 "The situation surrounding the [from.GetAdj] delegation has stabilised. Through admirable hard work on both sides, we have managed to better bridge the gap between the two species, and the animosity the [from.GetSpeciesNamePlural] previously provoked has subsided."
+ 
+ dpe_xenomission_disaster_upset:0 "Xenophobic Sentiment"
+ dpe_xenomission_disaster_upset_desc:0 "A xenophobic wave has swept across the population as a result of the manner in which another country treated this country's delegation."
+
+#Espionage sub-chain
+ dpe_xenophile_mission.11.name:0 "Espionage Update"
+ dpe_xenophile_mission.11.desc.first:0 "Our agents among our delegation to the [dpe_xenophile_country.GetName] have managed to send home a large cache of [dpe_xenophile_country.GetSpeciesAdj] technologies for our scientists to work on. The operation went without a hitch, and the [dpe_xenophile_country.GetSpeciesNamePlural] are none the wiser."
+ dpe_xenophile_mission.11.desc.subsequent:0 "Our agents among our delegation to the [dpe_xenophile_country.GetName] have managed to send home another cache of [dpe_xenophile_country.GetSpeciesAdj] technologies for our scientists to work on. The [dpe_xenophile_country.GetSpeciesNamePlural] still suspect nothing of our operations."
+ dpe_xenophile_mission.11.desc.spying:0 "Our agents among our delegation to the [dpe_xenophile_country.GetName] have managed to send home another cache of [dpe_xenophile_country.GetSpeciesAdj] technologies for our scientists to work on. The [dpe_xenophile_country.GetSpeciesNamePlural] have not realised that we are still conducting these operations."
+ 
+ dpe_xenophile_mission.12.name:0 "The [from.GetAdj] Delegates have been Spying on Us!"
+ dpe_xenophile_mission.12.desc:0 "Our intelligence services have discovered something disturbing: Members of the [from.GetSpeciesAdj] delegation were caught attempting to smuggle samples of our technologies to the [from.GetName]. We have arrested the guilty individuals. They are refusing to speak, but our intelligence services have reviewed their recent activities, and it seems likely that this was part of a broader effort by the [from.GetSpeciesNamePlural] to learn our secrets. We have a brief window to act before the [from.GetSpeciesAdj] leaders hear of the arrests; our intelligence officials suggest that we raid the main [from.GetSpeciesAdj] starship and search for further evidence. However, it will be hard to de-escalate the situation if we do this. How should we proceed?"
+ dpe_xenophile_mission.12.A:0 "Raid their ship."
+ dpe_xenophile_mission.12.B:0 "Address the matter discreetly."
+ dpe_xenophile_mission.12.B.tooltip:0 "Take it up with their leaders and warn them that further such transgressions will not be tolerated."
+ dpe_xenophile_mission.12.C:0 "Maybe we can set up a trade."
+ dpe_xenophile_mission.12.C.tooltip:0 "We can trade non-disclosure of their misdeeds - which would tarnish their name - for their own techs."
+
+ dpe_xenophile_mission.121.name:0 "The [from.GetSpeciesNamePlural] have Caught our Spies!"
+ dpe_xenophile_mission.121.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. Please ensure that this does not happen again - it would be most inconvenient if the public were to come to believe your delegation was spying on us, forcing to take further action..."
+ dpe_xenophile_mission.121.A:0 "Understood."
+ dpe_xenophile_mission.121.B:0 "(Lie) Of course we will stop spying on you."
+ dpe_xenophile_mission.continue_spying:0 "We will secretly continue espionage operations."
+ 
+ dpe_xenophile_mission.1211.name:0 "$dpe_title_response$"
+ dpe_xenophile_mission.1211.desc:0 "We apologise for this incident, it will not recur."
+ dpe_xenophile_mission.1211.option:0 "It had better not!"
+ 
+
+ dpe_xenophile_mission.14.name:0 "The [from.GetSpeciesNamePlural] Caught Spying Again!"
+ dpe_xenophile_mission.14.desc:0 "We have caught the [from.GetAdj] delegation attempting to steal our technologies - again! We have sent them packing and informed them of our displeasure at their deceit."
+ dpe_xenophile_mission.14.option:0 "They are not to be trusted."
+ 
+ dpe_xenophile_mission.141.name:0 "Caught Spying Again!"
+ dpe_xenophile_mission.141.desc:0 "Deceitful [root.GetSpeciesNamePlural], to lie to us once is bad enough, but to be caught deceiving us twice... You make poor friends."
+ 
+ dpe_xenophile_mission.13.name:0 "The Raid on the [fromfrom.GetAdj] Ship"
+ dpe_xenophile_mission.13.desc:0 "The raid has confirmed our fears: The [fromfrom.GetAdj] delegation to promote friendship with our species is merely a screen to hide their true intention of stealing our knowledge. Since the mission began, they have been funnelling countless prototypes, samples, data collections and software programs back to the [fromfrom.GetName]. We have arrested the [fromfrom.GetSpeciesAdj] spies. What should we do about them?"
+ dpe_xenophile_mission.13.A:0 "Cancel the mission, but allow them to return home."
+ dpe_xenophile_mission.13.B:0 "Trial them by our laws."
+ 
+ dpe_xenophile_mission.131.name:0 "The [from.GetSpeciesNamePlural] Caught us Spying!"
+ dpe_xenophile_mission.131.desc:0 "Dear [root.GetSpeciesNamePlural], we must inform you that your cultural mission to our worlds is over. Likewise, we are withdrawing our mission from your worlds. We reached this decision after apprehending a number of [root.GetSpeciesNamePlural] as they were attempting to smuggle our technologies out of the [from.GetName]. Suspecting a plot, we raided your ship and uncovered evidence that your delegation was merely a screen to hide your true intention of stealing our knowledge. We do not wish to be your enemies, but this revelation has severely shaken our trust in you. We will think twice before cooperating with the [root.GetSpeciesNamePlural] again."
+ 
+ dpe_xenophile_mission.132.name:0 "$dpe_xenophile_mission.131.name$"
+ dpe_xenophile_mission.132.desc:0 "The [from.GetSpeciesNamePlural] have uncovered our espionage! It appears that they apprehended a group of our delegates as they were attempting to smuggle the latest cache out. Before we could react, they launched a raid on our main ship and quickly uncovered the truth. The [from.GetSpeciesAdj] government and public are furious. They are refusing to allow our delegates to return home and have elected to trial them under their own laws. We may never see them again."
+ 
+ dpe_xenomission_spying_deceit:0 "Deceived Us"
+ dpe_xenomission_imprisoned_citizens:0 "Citizens Imprisoned by Foreign Power"
+ dpe_xenomission_imprisoned_citizens_desc:0 "Whether or not their imprisonment was just, the populace is furious that a foreign power dared to imprison their fellow citizens."
+ dpe_xenomission_imprisoned_citizens_auth_faction:0 "Imprisoned Foreign Criminals"
+ dpe_xenomission_imprisoned_citizens_phobe_faction:0 "$dpe_xenomission_imprisoned_citizens_auth_faction$"
+ 
+ dpe_xenophile_mission.125.name:0 "The [from.GetSpeciesNamePlural] have Caught our Spies!"
+ dpe_xenophile_mission.125.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. We realise that this would rather harm your reputation if it were to become generally known. We therefore propose a trade, in which you give us access to some of your technologies and promise to cease your espionage in return for us keeping our silence."
+ dpe_xenophile_mission.125.A:0 "It is a deal."
+ dpe_xenophile_mission.125.B:0 "(Lie) It is a deal. Of course we will stop spying."
+ dpe_xenophile_mission.125.C:0 "How dare you accuse us? We are pulling out of the mission."
+ 
+ dpe_xenophile_mission.1251.name:0 "$dpe_xenophile_mission.1211.name$"
+ dpe_xenophile_mission.1251.desc:0 "Here are the requested techs, [root.GetSpeciesName]. We apologise again - this incident will not recur."
+ dpe_xenophile_mission.1251.option:0 "$dpe_xenophile_mission.1211.option$"
+ 
+ dpe_xenophile_mission.1252.name:0 "$dpe_xenophile_mission.1211.name$"
+ dpe_xenophile_mission.1252.desc:0 "How dare you accuse us? We are pulling out of the mission."
+ dpe_xenophile_mission.1252.option:0 "As you wish."
+
+
+#Techs sub-chain
+ dpe_xenophile_mission.15.name:0 "[from.GetAdj] Interest in our Techs"
+ dpe_xenophile_mission.15.desc:0 "The [from.GetAdj] delegation has been fascinated by a certain element of [root.GetAdj] technology, which is apparently significantly more advanced than their own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [from.GetName]. She has requested our authorisation to send her work home for further study there."
+ dpe_xenophile_mission.15.A:0 "Give it as a gift."
+ dpe_xenophile_mission.15.B:0 "Propose an exchange for some prototypes of their own tech."
+ dpe_xenophile_mission.15.C:0 "They cannot have it."
+
+ dpe_xenophile_mission.16.name:0 "A Gift of [from.GetAdj] Technology"
+ dpe_xenophile_mission.16.desc:0 "Our delegation has been fascinated by a certain element of [from.GetAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. With the permission of the [from.GetName], she has sent some samples with the latest dispatch."
+ 
+ dpe_xenophile_mission.17.name:0 "Tech Exchange?"
+ dpe_xenophile_mission.17.desc:0 "Our delegation has been fascinated by a certain element of [from.GetAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. The [from.GetAdj] authorities have allowed her to send us her work on the condition that we send the them samples of our own latest techs in return."
+ dpe_xenophile_mission.17.A:0 "Sure, send them the samples."
+ dpe_xenophile_mission.17.B:0 "We can do without this tech."
+ dpe_xenophile_mission.17.C:0 "Attempt to smuggle her work out."
+ dpe_xenophile_mission.17.C.tooltip:0 "The [from.GetAdj] authorities will detect our smuggling attempt, and may be very angry."
+
+ dpe_xenophile_mission.18.name:0 "Technological Envy"
+ dpe_xenophile_mission.18.desc:0 "Our delegation has been fascinated by a certain element of [from.GetAdj] technology, which is significantly more advanced than our own. A scientist on the mission has managed to work out how it works, and has drawn up a plan as to how it could be used within the [root.GetName]. However, the [from.GetAdj] authorities have refused to allow her to send us her work, claiming that this was not part of the agreement."
+ dpe_xenophile_mission.18.A:0 "Attempt to smuggle her work out."
+
+ dpe_xenophile_mission.171.name:0 "$dpe_title_response$"
+ dpe_xenophile_mission.171.desc:0 "Here are our samples, [root.GetSpeciesName]."
+ dpe_xenophile_mission.171.option:0 "Thanks a lot!"
+ 
+ dpe_xenophile_mission.172.name:0 "$dpe_xenophile_mission.171.name$"
+ dpe_xenophile_mission.172.desc:0 "We can do without your techs, [from.GetSpeciesName]."
+ dpe_xenophile_mission.172.option:0 "A shame."
+ 
+ dpe_xenophile_mission.173.name:0 "Smuggling Operation Successful"
+ dpe_xenophile_mission.173.desc:0 "Our team has successfully managed to smuggle our scientist's work out of the [fromfrom.GetName]. The operation went without a hitch, and the [fromfrom.GetAdj] authorities are none the wiser."
+ 
+ dpe_xenophile_mission.174.name:0 "The [from.GetSpeciesNamePlural] attempted to smuggle our Techs!"
+ dpe_xenophile_mission.174.desc:0 "Our intelligence services have discovered something disturbing: Having failed to secure our permission to send samples of our technology to the [from.GetName], the treacherous [from.GetSpeciesNamePlural] are attempting to smuggle it home instead. The guilty individuals are now in our custody, but we have evidence that they were acting on state orders. How should we react?"
+ dpe_xenophile_mission.174.A:0 "We understand the temptation. Discreetly berate the [from.GetName]."
+ dpe_xenophile_mission.174.B:0 "We cannot trust the [from.GetName]. End the project and send them home."
+ 
+ dpe_xenophile_mission.175.name:0 "Upset at Smuggling"
+ dpe_xenophile_mission.175.desc:0 "Dear [root.GetSpeciesNamePlural], we have apprehended some troublemakers from your delegation. It seems that they were attempting to smuggle our technologies to you. Please ensure that this does not happen again - it would be most inconvenient if the public were to come to believe your delegation was spying on us, forcing to take further action..."
+ dpe_xenophile_mission.175.option:0 "Understood."
+ 
+ dpe_xenophile_mission.176.name:0 "Outrage at Smuggling"
+ dpe_xenophile_mission.176.desc:0 "Dear [root.GetSpeciesNamePlural], we must inform you that your cultural mission to our worlds is over. Likewise, we are withdrawing our mission from your worlds. We reached this decision after apprehending a number of [root.GetSpeciesNamePlural] as they were attempting to smuggle our technologies out of the [from.GetName] - apparently on your command. This has shaken our trust in you. We will think twice before cooperating with the [root.GetSpeciesNamePlural] again."
+
+ dpe_xenomission_denied_tech:0 "Denied Tech-Sharing"
+ dpe_xenomission_granted_tech:0 "Gifted Technology"
+ dpe_xenomission_caught_smuggling:0 "Caught Smuggling our Techs"
+ 
+ 
+#Xenophilia sub-chain
+dpe_xenophile_mission.150.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.150.desc:0 "With the [from.GetAdj] delegation due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to marry their [root.GetSpeciesAdj] partners and remain in the [root.GetName] instead."
+
+dpe_xenophile_mission.151.title:0 "[root.GetSpeciesNamePlural] living with [from.GetSpeciesNamePlural]"
+dpe_xenophile_mission.151.desc:0 "With the [from.GetAdj] delegation due to return home soon, a number of [from.GetSpeciesNamePlural] have chosen to remain with their [root.GetSpeciesAdj] partners in the [root.GetName], even though such partnerships are not given full rights in [root.GetAdj] law."
+
+dpe_xenophile_mission.152.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]?"
+dpe_xenophile_mission.152.desc:0 "With the [from.GetAdj] delegation due to return home soon, the situation of the [from.GetSpeciesName]-[root.GetSpeciesName] couples that have formed has taken on a new importance. [root.GetAdj] law does not currently present a clear ruling on the legality of such partnerships, creating considerable uncertainty for the individuals involved. The [xenophile_faction.GetName] has agreed to represent their cause, and is pushing for such unions to be recognised within the [root.GetName] - though more conservative elements in society abhor the very idea of them. Should we allow interspecies marriage?"
+dpe_xenophile_mission.152.A:0 "Allow interspecies marriage, they may remain."
+dpe_xenophile_mission.152.B:0 "Tolerate them but do not permit interspecies marriages."
+dpe_xenophile_mission.152.C:0 "Ban interspecies intercourse and send them on their way."
+
+dpe_xenophile_mission.154.title:0 "[root.GetSpeciesNamePlural] marrying [from.GetSpeciesNamePlural]!"
+dpe_xenophile_mission.154.desc:0 "As our delegates to the [from.GetName] return home, we have become aware that many [root.GetSpeciesNamePlural] have elected to remain with their [from.GetSpeciesAdj] partners in the [from.GetName], despite such practices being against our laws. Although there is little we can do to stop them from doing this, public opinion is split as to whether these individuals deserve our condemnation or our sympathy."
+dpe_xenophile_mission.154.option:0 "So long as they don't bring these practices home..."
+
+dpe_xenomission_xenophilia_torn:0 "Debate over Xenophile Marriages"
+dpe_xenomission_xenophilia_torn_desc:0 "The country is split by the debate as to the justice of allowing or banning marriages between individuals of different species."
+
+#End of Chain
+dpe_xenophile_mission.101.name:0 "A Parting of Friends"
+dpe_xenophile_mission.101.desc:0 "It is with a touch of sadness that our delegation to the [from.GetName] and the [from.GetAdj] delegation to our state return home today. The initiative has been a great success! Over the past ten years, both our peoples have come to understand each other well, and many new friendships have been born. We are hopeful that we are entering an era of lasting peace and cooperation between the [root.GetName] and the [from.GetName]."
+
+dpe_xenophile_mission.102.name:0 "A Parting of Friends"
+dpe_xenophile_mission.102.desc:0 "Our delegation to the [from.GetName] and the [from.GetAdj] delegation to our state return home today. Although it has not always been easy, the initiative has helped to foster greater understanding between the two species, allowing us to build a stronger relationship with the [from.GetName]."
+dpe_xenophile_mission.102.desc.spying:0 "Our delegation to the [from.GetName] and the [from.GetAdj] delegation to our state return home today. The initiative has been highly rewarding to us: Not only have we been able to build a stronger relationship with the [from.GetName], but we were also able to glean considerable knowledge from them via our espionage operations."
+
+dpe_xenophile_mission.103.name:0 "The Discovery Mission is over"
+dpe_xenophile_mission.103.desc:0 "Both our population and that of the [from.GetName] breathe a sigh of relief today as our delegations to each other return home. The initiative has not been a success by any stretch of the imagination: The two species simply weren't able to connect with each other very well. There were multiple unpleasant incidents, and if anything, each species' opinion towards the other hardened over time. Much progress is yet to be made before [root.GetSpeciesNamePlural] and [from.GetSpeciesNamePlural] can come to trust each other."
+
+dpe_xenophile_mission.104.name:0 "The Discovery Mission is over"
+dpe_xenophile_mission.104.desc:0 "Our delegation to the [from.GetName] and the [from.GetSpeciesAdj] delegation to our state return home today. From the point of view of establishing better relations between our species, the mission was a dismal failure: The two species simply weren't able to connect with each other very well. There were multiple unpleasant incidents, and if anything, each species' opinion towards the other hardened over time. However, [root.GetDPEDeceitSuccess]"
+
+#GetDPEDeceitSuccess
+dpe_xenophile_spying_positive:0 "unbeknownst to the [from.GetAdj] authorities, we have managed to glean a considerable amount of knowledge from them, making the initiative well worth our while!"
+dpe_xenophile_spying_caught:0 "even though the [from.GetAdj] authorities eventually cottoned on to our espionage activities and forced us to cease them, we were able to glean much useful knowledge from them."
+
+dpe_successful_xenomission:0 "Successful Discovery Mission"
+dpe_xenomission_not_like:0 "Dislike between Species"
+dpe_xenomission_love:0 "Friendship between Species"
+dpe_xenomission_like:0 "$dpe_xenomission_love$"
+
+#Contingencies
+ dpe_xenophile_mission.990.name:0 "Our Delegation to the [dpe_xenophile_opponent.GetName] Returns"
+ dpe_xenophile_mission.990.desc:0 "As a result of our war with the [dpe_xenophile_opponent.GetName], our delegates to their country and their delegates to ours have returned home."
+ dpe_xenophile_mission.999.name:0 "Our Delegation to the [LastKilledCountryName] Returns"
+ dpe_xenophile_mission.999.desc:0 "The [LastKilledCountryName] is no more - it has fallen to political instability and conflict. As a result, our delegates to their country and their delegates to ours have returned home."
+
+ 
+ 
+
+#-------------------------------------------
+
+#Contraband Chain 
+ dpe_contraband_event.1.name:0 "Smuggling Rings"
+ dpe_contraband_event.1.desc:0 "Our law enforcement services have discovered that a collection of our citizens have been smuggling goods into the [dpe_neighbor.GetName]. The goods they are smuggling are perfectly legal within our own realm, but their effect on [dpe_neighbor.GetSpeciesAdj] biology is that of a moderately effective hallucinatory drug - the [dpe_neighbor.GetAdj] government has therefore placed very harsh restrictions on them.\n\nSome of the smugglers are average citizens running rings with individuals they know on the other side, others are large corporations that sell legitimate goods along with contraband. Combined, these groups earn quite a bit of money and contribute to the economy. How should we deal with them?"
+ dpe_contraband_event.1.A:0 "Crack down on them. We can't jeopardize our foreign relations."
+ dpe_contraband_event.1.B:0 "Turn a blind eye and allow the economy to reap the benefits."
+ dpe_contraband_event.1.B.tooltip:0 "The [dpe_neighbor.GetName] will be displeased if this is discovered."
+ dpe_contraband_event.1.C:0 "Extort money from these rackets."
+ dpe_contraband_event.1.C.tooltip:0 "The [dpe_neighbor.GetName] will be furious if our involvement is uncovered."
+ 
+ dpe_contraband_event.90.name:0 "Smuggler Rings Stopped"
+ dpe_contraband_event.90.desc:0 "The [from.GetAdj] ambassador has approached our minister of foreign affairs with an interesting story: Apparently, their government recently uncovered several smuggler rings operating on the edge of their space, which had been sneaking considerable quantities of hallucinatory drugs into our territory. Once discovered, the [from.GetAdj] authorities cracked down on these bands of rogues, preventing a potential contraband crisis in our empire."
+ dpe_contraband_event.90.option:0 "You have our thanks!"
+
+ dpe_contraband_event.2.name:0 "Smuggling Crisis"
+ dpe_contraband_event.2.desc:0 "Local authorities across our planets are reporting a massive spike in the usage of a certain hallucinatory drug, the trade and usage of which is illegal under [root.GetAdj] law. The scale of the problem is so serious that it has become obvious that this needs to be dealt with on a national level. How should we respond?"
+ dpe_contraband_event.2.A:0 "Legalise the drug and tax it."
+ dpe_contraband_event.2.B:0 "Begin cracking down! We will not tolerate this flagrant disregard for the law."
+ 
+ dpe_contraband_event.21.name:0 "The [from.GetAdj] authorities Legalise our Drugs"
+ dpe_contraband_event.21.desc.tolerate:0 "The [from.GetName] has legalised the contraband goods that our citizens were smuggling into their territory. Our stance of allowing it to continue has been vindicated."
+ dpe_contraband_event.21.desc.extort:0 "The [from.GetName] has legalised the contraband goods that our citizens were smuggling into their territory, a trade through which we had been extorting significant revenues. Now that the threat of getting on the wrong side of the law no longer exists, our traders are refusing to pay us the money agreed, and have let it be known that they will inform the [from.GetAdj] authorities of our transgressions if we insist."
+ dpe_contraband_event.21.option:0 "At least we have one more legitimate export option now."
+
+ dpe_drug_trade_legit:0 "Legitimate Drugs Trade"
+ dpe_cracked_down_on_drugs_opinion:0 "Cracked Down on Smugglers for us"
+ dpe_drug_cartels_crackdown:0 "Cracking down on Smugglers"
+ dpe_taxing_drugs:0 "Taxing Legalised Drugs"
+ dpe_taxing_drugs_desc:0 "By taxing the drugs, the state is able to make some money. However, easy access to drugs is hitting productivity."
+ 
+ dpe_taxing_drugs_faction:0 "Legalised Drugs"
+ dpe_contraband_crisis:0 "Smuggling Crisis"
+ dpe_taking_action_drugs_faction:0 "Cracking Down on Drugs"
+ dpe_drug_cartels_tolerate:0 "Tolerating Smuggling Rings"
+ dpe_drug_cartels_tolerate_desc:0 "The government is happy to allow citizens to enrich themselves by trading drugs to foreigners."
+ dpe_drug_cartels_extort:0 "Supporting Smuggling Rings"
+ dpe_drug_cartels_extort_desc:0 "The government is happy to support drug rings in return for money it extorts from them."
+ 
+ dpe_contraband_event.4.name:0 "Adopt a more Proactive Approach?"
+ dpe_contraband_event.4.desc:0 "Our law enforcement agencies have been working tirelessly trying to find out where all of these illegal goods are coming from. Thus far, we haven't had much success, so the head of our internal security agency has proposed that we take a more proactive approach: Instead of simply investigating the cases we uncover, they suggest that law enforcement agents detain anyone believed to be involved in the trade. This would include acquaintances, co-workers, family, and others who interact with suspects on a regular basis. This would be setting a very radical precedent for our law enforcement and intelligence agencies. Should they proceed?"
+ dpe_contraband_event.4.A:0 "Do it! We must stop these smugglers at all costs!"
+ dpe_contraband_event.4.B:0 "This would be a step too far. We will find the smugglers some other way."
+ dpe_contraband_event.4.B.tooltip:0 "It will be harder to track down the source of the drugs."
+ 
+ dpe_contraband_event.45.name:0 "Proactive Screening for Drugs"
+ dpe_contraband_event.45.desc:0 "After struggling for some time to uncover the origins of the illegal goods, our law enforcement agencies have begun detaining anyone believed to be involved in the trade - including acquaintances, co-workers, family, and others who interact with suspects on a regular basis. Our law enforcement agencies are confident that this will allow us to track down their source quickly, though some citizens are perturbed at the severity of this measure."
+ dpe_contraband_event.45.tooltip:0 "One in five non-authoritarian citizen £pops  gain the modifier $dpe_raids_worry$, giving §R+100%§! egalitarian attraction."
+
+ dpe_contraband_stop_and_search_faction:0 "Excesses of Security Services"
+ dpe_raids_worry:0 "Excesses of Security Services"
+ 
+ dpe_contraband_closed_borders:0 "Blamed us for Drugs Crisis"
+ dpe_contraband_source_of_drugs:0 "Drug Smuggling"
+ 
+ dpe_contraband_event.51.name:0 "Drug Source tracked to the [from.GetName]"
+ dpe_contraband_event.51.desc:0 "Our agents have been interrogating suspects thought to be involved in the contraband smuggling, and have uncovered a very important piece of evidence. The agents managed to get a lead on a group of smugglers operating near one of our border worlds. After setting up an ambush, they managed to disable one of the smuggler vessels. As they boarded the ship, they were met with a brief firefight, but quickly overtook the bandits. To their shock, half of those involved were [dpe_drugs_country.GetAdj] citizens! These rogues were brought to a detention center for questioning, where they admitted that the [dpe_drugs_country.GetName] was allowing these smuggler rings to operate as long as they gave a percentage to the government. How shall we respond?"
+ dpe_contraband_event.51.A:0 "Unacceptable! Summon their ambassador, we are going to have words."
+ dpe_contraband_event.51.B:0 "Show restraint - we do not want a diplomatic incident."
+ dpe_contraband_event.51.B.tooltip:0 "Avoid discussing the politics of the event, and quietly contact the [dpe_drugs_country.GetAdj] ambassador to offer their citizens' deportation in return for action."
+
+ dpe_contraband_event.52.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.52.desc:0 "The investigation into the source of the contraband products has been making slow progress, but a breakthrough has finally been made: Our customs officials have discovered a large quantity of hallucinatory drugs hidden in falsely marked crates amidst a massive shipment of goods coming from the [dpe_drugs_country.GetName], which a major [dpe_drugs_country.GetAdj] corporation had been importing into our country. Further investigation has shown that the drug has a considerably lower impact on [dpe_drugs_country.GetSpeciesNamePlural], and is consequently commonplace in their country. Our intelligence and border security departments therefore suspect that this is not an isolated incident and have begun a thorough audit of everything crossing the border from them. How should we respond? "
+ dpe_contraband_event.52.A:0 "They will rue the day that they decided to profit on the suffering of our citizens!"
+ dpe_contraband_event.52.A.tooltip:0 "Seize the corporation's assets and implement harsh border controls."
+ dpe_contraband_event.52.B:0 "Show restraint - we do not want an incident."
+ dpe_contraband_event.52.B.tooltip:0 "Begin trialling those involved in the drugs trade, but do not make accusations of the [dpe_drugs_country.GetAdj] government."
+ dpe_contraband_event.52.C:0 "Contact their ambassador and seek a diplomatic solution."
+
+ dpe_contraband_event.53.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.53.desc:0 "Our law enforcement agencies have found a lead on the source of the drugs that have flooded into our country. They began sectioning off areas where reports of drug use had been concentrated, and systematically interrogated anyone deemed suspect. By doing this, they caught a rather cowardly dealer who was willing to spill the beans in exchange for a lighter punishment. Fortuitous carelessness on the part of the drug cartel meant that his information allowed us to trace the identities of the smugglers. To our surprise, most of them are [dpe_drugs_country.GetAdj] citizens - in fact, they have been smuggling the drugs from the [dpe_drugs_country.GetName], where they are legal.\n\nOur subsequent investigations have uncovered no evidence that the [dpe_drugs_country.GetAdj] government is complicit in the smuggling rings, but our intelligence agency believes they probably knew of their citizens' activities but failed to act. What is our next step? "
+ dpe_contraband_event.53.A:0 "Take immediate action and close the border."
+ dpe_contraband_event.53.B:0 "Request [from.GetAdj] help in confronting the drug problem together."
+ dpe_contraband_event.53.B.tooltip:0 "Tacitly ignore our intelligence agency's belief that the [dpe_drugs_country.GetAdj] government had known about this, and seek a diplomatic solution."
+
+ dpe_contraband_event.54.name:0 "$dpe_contraband_event.51.name$"
+ dpe_contraband_event.54.desc:0 "Although the investigation has been slow, it has made some progress. We've been rounding up people caught selling or buying the drugs, and through their interrogations we have started to piece together a picture of what's going on. It seems like regular citizens in a neighbouring empire, the [dpe_drugs_country.GetName], have started selling the goods to rogue elements of our society. These goods are legal in their misguided empire, so they have easy access to the goods. So far, we have no hard evidence that the government is complicit in this, but many of our advisors suspect that they can't have been totally ignorant of their citizens' activities. How should we proceed?"
+ dpe_contraband_event.54.A:0 "Introduce more stringent border controls."
+ dpe_contraband_event.54.B:0 "Extend an offer to fight these smugglers together!"
+
+ dpe_contraband_event.61.name:0 "The [from.GetName] Track their Drugs to Us!"
+ dpe_contraband_event.61.desc:0 "We have seen through your scheme, [root.GetSpeciesNamePluralInsult]. No more will you flood our country with illegal drugs! May your name be cursed by all who respect justice and the rule of law!"
+ dpe_contraband_event.61.option:0 "We are not sorry."
+ 
+ dpe_contraband_event.62.name:0 "$dpe_contraband_event.61.name$"
+ dpe_contraband_event.62.desc:0 "[root.GetRulerTitle], we have caught wind of a vicious scheme by your government to enrich itself by flooding our country with drugs. Now, we are loath to believe that those we would consider to be our friends would do such a thing! If you will help us tackle this problem, we will not pursue these allegations further - nor allow them to be leaked to others."
+ dpe_contraband_event.62.A:0 "Of course we will help you."
+ dpe_contraband_event.62.B:0 "We will not help you, [from.GetSpeciesName]."
+ dpe_contraband_event.62.B.tooltip:0 "The [from.GetName] will be very displeased."
+
+ dpe_contraband_event.621.name:0 "$dpe_title_response$"
+ dpe_contraband_event.621.desc:0 "Of course we will help the [root.GetName]."
+ dpe_contraband_event.621.A:0 "You have our thanks."
+
+ dpe_contraband_event.622.name:0 "$dpe_title_response$"
+ dpe_contraband_event.622.desc:0 "We will not help the [root.GetName]."
+ dpe_contraband_event.622.A:0 "Then you leave us with no choice."
+ 
+ dpe_contraband_event.63.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.63.desc:0 "We have seen through the vicious scheme pursued by your citizens, [root.GetRulerTitle]. No more will you flood our country with illegal drugs! We have seized the assets of those responsible, and taken measures to ensure that other unscrupulous [root.GetSpeciesNamePlural] will have a harder time abusing our trust in future."
+ dpe_contraband_event.63.option:0 "We deplore your actions."
+ 
+ dpe_contraband_event.64.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.64.desc:0 "[root.GetAdj] friend, we have caught a [root.GetAdj] corporation smuggling illegal drugs into the [from.GetName]. We very much hope that your government has nothing to do with this scheme... in fact, we have instructed our investigators to act with these hopes in mind so long as the flow of drugs slows, if you get our drift..."
+ dpe_contraband_event.64.A:0 "I guess the game is up."
+ dpe_contraband_event.64.B:0 "What drugs?"
+ dpe_contraband_event.64.B.tooltip:0 "The [from.GetName] will be very upset."
+ 
+ dpe_contraband_event.641.name:0 "$dpe_title_response$"
+ dpe_contraband_event.641.desc:0 "We don't know what you are talking about. How dare you make this accusation!"
+ dpe_contraband_event.641.A:0 "Maybe we should investigate your role a bit closer..."
+ 
+ dpe_contraband_event.642.name:0 "The [from.GetAdj] Authorities Proclaim our Guilt!"
+ dpe_contraband_event.642.desc:0 "Further investigation has revealed the complicity of your government in the smuggling, [root.GetRulerTitle] [root.GetRulerName]. We regret that this has forced us to take more drastic action."
+ 
+ dpe_contraband_event.66.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.66.desc:0 "We have caught your citizens smuggling drugs into our country, [root.GetRulerTitle]. In the absence of any steps by your government to enforce the law, we have decided to close our border with you."
+ dpe_contraband_event.66.option:0 "We deplore your actions."
+ 
+ dpe_contraband_event.68.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.68.desc:0 "Esteemed friend, we have caught a certain number of your citizens smuggling drugs into our country. This is creating a significant drugs crisis in the [from.GetName]. Would you care to help us snuff out this drugs problem?"
+ dpe_contraband_event.68.A:0 "Of course we will help you."
+ dpe_contraband_event.68.B:0 "We will not help you, [from.GetSpeciesName]."
+ dpe_contraband_event.68.B.tooltip:0 "The [from.GetName] will be displeased:"
+ 
+ dpe_contraband_event.682.name:0 "$dpe_title_response$"
+ dpe_contraband_event.682.desc:0 "We cannot help you, [root.GetSpeciesName]."
+ dpe_contraband_event.682.A:0 "Then we will have to implement border controls."
+ 
+ dpe_contraband_event.69.name:0 "$dpe_contraband_event.62.name$"
+ dpe_contraband_event.69.desc:0 "Esteemed friend, we have caught a certain number of your citizens smuggling drugs into our country. This is creating a significant drugs crisis in the [from.GetName]. For this reason, we have elected to introduce more stringent border controls, severely limiting [root.GetAdj] access to our space. We thank you for your understanding."
+ dpe_contraband_event.69.option:0 "We deplore your actions."
+ 
+
+ dpe_contraband_event.900.title:0 "The Drugs Trade Collapses"
+ dpe_contraband_event.900.desc:0 "The closure of our border to the [dpe_drugs_country.GetName] has brought about an end to the contraband crisis. It seems that the drugs were entering our country from there."
+ dpe_contraband_event.900.option:0 "I see."
+ 
+ dpe_contraband_event.901.title:0 "The Drugs Trade Collapses"
+ dpe_contraband_event.901.desc:0 "The [from.GetName] has closed its border with us. This move has made it far harder for our smugglers to deliver drugs into their country. Unfortunately, the [from.GetAdj] authorities have noticed the correlation and (correctly) decided that we must have been the guilty party. This has somewhat cooled our relations."
+ 
+ dpe_contraband_event.999.name:0 "Source of Drugs Located"
+ dpe_contraband_event.999.desc:0 "The chaos that has brought down the [dpe_drugs_country.GetName] appears to have disrupted the drugs trade, which apparently originated from there. Now that we know the drugs' source, we will be better able to combat the problem."
+ dpe_contraband_event.999.option:0 "Good to know."
+ 
+ dpe_contraband_event.9991.name:0 "New Consumers for our Drugs Needed"
+ dpe_contraband_event.9991.desc:0 "With the fall of the [LastKilledCountryName], our smugglers will have to find a new target."
+ dpe_contraband_event.9991.option:0 "A shame."
+
+ 
+ 
+ 
+ dpe_xenomission_imprisoned_citizens:0 "Imprisoned Citizens"
+ 
+ 
+ 
+ ##########Egalitarian Mission 1
+ 
+ dpe_egalitarian_missions.1.name:0 "A Question of Voting"
+ dpe_egalitarian_missions.1.desc:0 "Our advisors have discussed our relationship with the [dpe_egalitarian.GetName] at great length, and have come up with a devious scheme. Many are convinced that we can use them to our advantage by asking them to help oversee our elections. It is true we don't have elections at the moment, and indeed we do not plan to ever let the people have a major role in running our state, but we can please them by allowing votes on some unimportant policy decisions and minor leadership roles. Regardless of what the plebs decide, we will simply claim the vote went the way we wanted it to all along, and they have no way of proving otherwise.\n\nThis is where our friends can come in: Even if our people don't see through our scheme, we can be sure that certain other nations in the galaxy will be highly sceptical and will do all they can to dispute the legitimacy of our elections. If we can convince our democratic friends to 'oversee' the elections and sign off on the results we announce, then it will lend the legitimacy we would need to make them believable. Do you approve of this scheme?"
+ dpe_egalitarian_missions.1.A:0 "Send the request and see what they say." (chain continues)
+ dpe_egalitarian_missions.1.B:0 "No! Even mock elections are too much for the commoners."
+ dpe_egalitarian_missions.1.B.tooltip:0 "Every other pop faction but the totalitarian faction receive the modifier §R$dpe_denied_a_say$§!, giving:\n\n§R-20% $MOD_FACTION_APPROVAL$§!"
+ dpe_egalitarian_missions.1.A.tooltip:0 "If the electoral experiment is a success, the [root.GetName] will gain the modifier $dpe_auth_held_successful_election$ for 5 years, granting:\n$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+50%§!\n$MOD_POP_CITIZEN_HAPPINESS$: §G+5%§!\n$MOD_COUNTRY_UNREST_UNHAPPY_POP_EFFECT_MULT$: §G-25%§!"
+ 
+ dpe_egalitarian_missions.2.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.2.desc:0 "Friends, inspired by your example, we are planning to - for the first time - hold elections. Given our inexperience in this field, we wish to request your assistance in observing them... in particular, in ensuring that the credibility of the results is upheld. Would you be willing to send observers?"
+ dpe_egalitarian_missions.2.option:0 "Since when does the [from.GetAdj] [from.GetRulerTitle] care for elections?"
+ 
+ dpe_egalitarian_missions.3.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.3.desc:0 "It is true that this is an experiment. One that will have to be carefully managed. These are our first steps on this path, and we must of course ensure that ultimate authority rests with the [from.GetRulerTitle]. We will be upfront about it: It is our intention to avoid any undesirable outcomes at all costs. As our allies, we will expect you to support us in this endeavour."
+ dpe_egalitarian_missions.3.option:0 "You wish us to help you to forge election results?"
+ 
+ dpe_egalitarian_missions.4.name:0 "An Unexpected Request"
+ dpe_egalitarian_missions.4.desc:0 "We would avoid that particular phrasing, but yes, we wish for you to help ensure the credibility of the desired outcome."
+ dpe_egalitarian_missions.4.A:0 "Fake elections are better than no elections. We will support you."
+ dpe_egalitarian_missions.4.help.tooltip:0 "Both other egalitarian countries and our own citizens may be upset if they see us to have helped fix an election."
+ dpe_egalitarian_missions.4.B:0 "We will not sully the sanctity of Democracy!"
+ dpe_egalitarian_missions.4.C:0 "We will support you, at a price."
+ 
+ dpe_egalitarian_missions.5.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.5.desc:0 "Fake elections are better than no elections. We will support you."
+ 
+ dpe_egalitarian_missions.6.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.6.desc:0 "We will not sully the sanctity of Democracy!"
+ 
+ dpe_egalitarian_missions.7.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.7.desc:0 "We will support you, at a price."
+ dpe_egalitarian_missions.7.A:0 "It is worth it, pay them."
+ dpe_egalitarian_missions.7.B:0 "How outrageous. The elections are cancelled."
+
+ dpe_egalitarian_missions.71.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.71.desc:0 "We will not comply with your outrageous demands. The elections are cancelled."
+ 
+ dpe_egalitarian_missions.72.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.72.desc:0 "As you wish. You had better make your services worth it!"
+ 
+ dpe_egalitarian_missions.8.name:0 "Honouring our Agreement?"
+ dpe_egalitarian_missions.8.desc:0 "Since we entered into an agreement with the [from.GetAdj] government to 'oversee' their elections, some members of our government have begun having second thoughts. Many of the more zealous democrats believe that we should use this unique opportunity and, instead of helping fix the elections, push for free and fair elections in the [from.GetName]. However, our more cautious advisors point out that this could potentially ruin our relationship with the [from.GetAdj] government, as well as our standing in the eyes of other nations.\n\nAre we going to play along and fake the election, or should we publish the true results?"
+ dpe_egalitarian_missions.8.A:0 "We will honour the deal."
+ dpe_egalitarian_missions.8.A.tooltip:0 "The egalitarian faction and other egalitarian nations will be upset if we are seen to have faked the result."
+ dpe_egalitarian_missions.8.B:0 "The results are the results, no matter what."
+ dpe_egalitarian_missions.8.B.tooltip:0 "The [from.GetAdj] regime will be upset if we announce a result contrary to their wishes."
+ 
+ dpe_egalitarian_missions.9.name:0 "Elections Successfully Held"
+ dpe_egalitarian_missions.9.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetName]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... As expected, our choice won the election!"
+ dpe_egalitarian_missions.9.option:0 "The people will be thrilled!"
+ 
+ dpe_egalitarian_missions.91.name:0 "[from.GetAdj] Elections Successfully Held"
+ dpe_egalitarian_missions.91.desc:0 "Our agents have observed and reported on the elections as instructed. Our [from.GetAdj] allies are very enthused by our cooperation with their scheme, and their people seem to be blissfully ignorant of the entire charade. Hopefully we haven't done democracy a disservice today."
+ dpe_egalitarian_missions.91.option:0 "We have done what we must."
+ 
+ dpe_egalitarian_missions.10.name:0 "Elections Held"
+ dpe_egalitarian_missions.10.desc:0 "$dpe_egalitarian_missions.9.desc$\n\nHowever, it seems that some of the opposition feel that they gained a much larger portion of the vote than they were allocated. Unfortunately, this is quite true. The ungrateful fools are protesting the result, something which has caused a great deal of embarrassment among the [from.GetAdj] authorities."
+ dpe_egalitarian_missions.10.option:0 "They will survive."
+ 
+ dpe_egalitarian_missions.101.name:0 "[from.GetAdj] Elections Held"
+ dpe_egalitarian_missions.101.desc:0 "Our agents have observed and reported on the elections as instructed. Our [from.GetAdj] allies are very enthused by our cooperation with their scheme as we announced a result very favourable to their leaders. However, the opposition in the [from.GetName] is challenging the result, rightly feeling that they gained more votes than the announced results suggest. Unfortunately, it seems that this incident has reached the attention of both pro-democracy interest groups within our country and the governments of other democratic countries, attracting their disgust and outrage."
+ dpe_egalitarian_missions.101.option:0 "We have done what we must."
+
+ dpe_egalitarian_missions.11.name:0 "Elections Successfully Held"
+ dpe_egalitarian_missions.11.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetName]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... As expected, our choice won the election!\n\nThe result is however a bit closer than we had hoped. It appears that the [from.GetName] announced the true results, rather than arranging it to be more in our favour. We will let them know of our displeasure."
+ dpe_egalitarian_missions.11.option:0 "The people will be thrilled!"
+
+ dpe_egalitarian_missions.111.name:0 "[from.GetAdj] Elections Held"
+ dpe_egalitarian_missions.111.desc:0 "[from.GetRulerTitle] [from.GetRulerName], we appreciate your help with the elections. However, we are a bit disappointed that you let the result be as close as it was - we must stress again our aim is not to hold competitive democratic elections, but to please the people with the appearance of these!"
+ dpe_egalitarian_missions.111.option:0 "A job well done."
+
+ dpe_egalitarian_missions.12.name:0 "Electoral Defeat!"
+ dpe_egalitarian_missions.12.desc:0 "The time has come for our very first election. Turnout is expected to be extremely high as several of our more dissident groups have agreed to cooperate, thanks to our partnership with the [from.GetName]. According to our propagandists, the people are very excited to finally have a say in their government. It seems as if our plan is working, now just to wait for our friends to read out the results... What! How could we have lost?"
+ dpe_egalitarian_missions.12.option:0 "The [from.GetAdj] [from.GetSpeciesNamePluralInsult] double crossed us!"
+
+ dpe_egalitarian_missions.121.name:0 "[from.GetAdj] Anger at Election Result"
+ dpe_egalitarian_missions.121.desc:0 "Traitorous filth! How dare you double cross us in such a brazen manner! We will have our revenge..."
+ dpe_egalitarian_missions.121.option:0 "A victory for democracy!"
+ 
+ dpe_offered_some_help_with_elections:0 "Offered Electoral Aid"
+ dpe_rejected_help_with_elections:0 "Rejected Electoral Aid"
+ dpe_helping_with_elections:0 "Gave Electoral Aid"
+ dpe_denied_a_say:0 "Denied a Say"
+ dpe_denied_elections:0 "Denied Elections"
+ 
+ dpe_electoral_experiment:0 "Electoral Experiment"
+ dpe_electoral_experiment_desc:0 "The populace is electrified by the prospect of elections."
+ 
+ dpe_electoral_experiment_faction:0 "$dpe_electoral_experiment$"
+ dpe_electoral_experiment_faction_negative:0 "$dpe_electoral_experiment$"
+
+ dpe_paying_foreign_country:0 "Paying Foreign Country"
+ 
+ dpe_electoral_help_auth:0 "Electoral Aid"
+ dpe_electoral_help_auth_1:0 "$dpe_electoral_help_auth$"
+ dpe_electoral_betrayal:0 "Betrayal in Electoral Aid"
+ dpe_betrayed_democracy_opinion:0 "Betrayed Democracy"
+ dpe_betrayed_democracy_faction:0 "$dpe_betrayed_democracy_opinion$"
+ dpe_auth_held_successful_election:0 "Successful Election"
+ dpe_auth_held_election:0 "Elections Held"
+ dpe_promoted_democracy_opinion:0 "Promoted Democracy"
+ dpe_promoted_democracy_faction:0 "$dpe_promoted_democracy_opinion$"
+ 
+ dpe_cancelled_electoral_aid:0 "Cancelled Electoral Aid"
+ dpe_upcoming_elections:0 "Upcoming Elections"
+ dpe_elections_cancelled:0 "Elections Cancelled"
+ dpe_elections_cancelled_1:0 "Elections Cancelled"
+ dpe_sham_elections:0 "Sham Elections"
+
+ dpe_egalitarian_missions.20.name:0 "Continue Holding Elections?"
+ dpe_egalitarian_missions.20.pos:0 "The scheduled time for new \"elections\" has arrived. Should we continue our arrangement with the [from.GetName] that brought us such benefits last time around?"
+ dpe_egalitarian_missions.20.half_pos:0 "The scheduled time for new \"elections\" has arrived. We had previously struck an arrangement with the [from.GetName] to carefully control the results of the elections, which govern choices for non-vital administrative positions. However, although the result of the last elections was very much in our favour, we are unsure whether the [from.GetAdj] authorities are willing to play their part in fixing the results. Should we risk continuing the arrangement?"
+ dpe_egalitarian_missions.20.neg:0 "The scheduled time for new \"elections\" has arrived. We had previously struck an arrangement with the [from.GetName] to carefully control the results of the elections, which govern choices for non-vital administrative positions. However, they announced a result contrary to our interests. This has tempted many in the government to cancel further elections. Nonetheless, it seems many of our citizens are attached to the idea of such elections continuing. Should we risk further elections?"
+ dpe_egalitarian_missions.20.no_more_destroyed:0 "We had previously struck an arrangement with a friendly democracy to hold controlled elections in our country. However, since our last election, this country has ceased to exist. As neither our populace nor anyone else will respect the outcome of the elections without external observers, we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.no_more_nodemo:0 "We had previously struck an arrangement with a democratic ally to hold controlled elections in our country. However, since our last election, they have abolished their own democracy. As neither our populace nor anyone else will respect the outcome of the elections without external observers - a position the [from.GetName] now lack the credentials to fill - we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.no_friends:0 "We had previously struck an arrangement with a democratic ally to hold controlled elections in our country. However, since our last election, our relations with the [from.GetName] have soured, so that our nations can no longer be called \"friends\". This being the case, we can no longer trust them to act as observers. As neither our populace nor anyone else will respect the outcome of the elections without external observers, we will not be able to continue holding them."
+ dpe_egalitarian_missions.20.A:0 "Of course."
+ dpe_egalitarian_missions.20.B:0 "Best not to."
+ dpe_egalitarian_missions.20.C:0 "It's worth the risk."
+ dpe_egalitarian_missions.20.D:0 "Best not to."
+ dpe_egalitarian_missions.20.E:0 "Let's try this again."
+ dpe_egalitarian_missions.20.F:0 "No. Definitely no elections for us!"
+
+ dpe_egalitarian_missions.201.name:0 "Continue Giving Electoral Aid?"
+ dpe_egalitarian_missions.201.pos:0 "Dear [root.GetRulerTitle] [root.GetRulerName], we have decided to request your nation's aid in holding elections again. This has been a valuable arrangement for us, which we hope will continue to develop into greater ties of friendship between our nations. Will you continue to provide us your services?"
+ dpe_egalitarian_missions.201.half_pos:0 "[root.GetRulerTitle] [root.GetRulerName], we have decided to request your nation's aid in holding elections again. We hope that you will continue to ensure that the result of these elections remains in our favour - should it not, our displeasure would be considerable. Will you continue to provide us your services?"
+ dpe_egalitarian_missions.201.neg:0 "[root.GetRulerTitle] [root.GetRulerName], we have decided to request your nation's aid in holding elections again. Please ensure the result is more in our favour this time. Our displeasure would be considerable if it is not. Will you send us your electoral observers?"
+ dpe_egalitarian_missions.201.continue:0 "We will continue the arrangement."
+ dpe_egalitarian_missions.201.bribe:0 "You must pay us to receive our services."
+ dpe_egalitarian_missions.201.cancel:0 "Our electoral support is cancelled."
+
+ dpe_egalitarian_missions.202.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.202.desc:0 "We will continue to keep our side of the arrangement."
+
+ dpe_egalitarian_missions.2021.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.2021.desc:0 "We will continue to offer our services, at a price."
+
+ dpe_egalitarian_missions.203.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.203.desc:0 "Dear [root.GetRulerTitle] [root.GetRulerName], we have elected not to continue this arrangement. We hope you will be understanding of our decision."
+
+ dpe_egalitarian_missions.204.name:0 "$dpe_title_response$"
+ dpe_egalitarian_missions.204.desc:0 "Should we honour our agreement with the [from.GetName] and fix the election, or should we take the opportunity to score a victory for true democracy?"
+
+ dpe_egalitarian_missions.205.name:0 "$dpe_egalitarian_missions.9.name$"
+ dpe_egalitarian_missions.205.desc:0 "The [from.GetSpeciesNamePlural] have announced the results of the election: Our candidates have won, as arranged. The citizens are oblivious to the deception and are happy to have had a chance to have their thoughts heard."
+
+ dpe_egalitarian_missions.206.name:0 "$dpe_egalitarian_missions.10.name$"
+ dpe_egalitarian_missions.206.desc:0 "The [from.GetAdj] authorities have announced the results of the election: Our candidates have won, as arranged. However, it seems that some of the opposition feel that they gained a much larger portion of the vote than they were allocated. Unfortunately, this is quite true. The ungrateful fools are protesting the result, something which has caused a great deal of embarrassment within the [from.GetName]."
+
+ dpe_egalitarian_missions.207.name:0 "$dpe_egalitarian_missions.11.name$"
+ dpe_egalitarian_missions.207.desc:0 "The [from.GetAdj] authorities have announced the results of the election: Our candidates have won, but our opponents have achieved a respectable portion of the votes. It seems they announced the true results, rather than arranging it to be more in our favour. We will let them know of our displeasure."
+
+ dpe_egalitarian_missions.208.name:0 "$dpe_egalitarian_missions.12.name$"
+ dpe_egalitarian_missions.208.desc:0 "The [from.GetAdj] authorities have announced the results of the election: Our opponents have scored major victories! It seems the [from.GetSpeciesNamePluralInsult] double-crossed us and announced the true results, rather than arranging it to be more in our favour. This is an outrage!"
