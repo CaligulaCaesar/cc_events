@@ -192,7 +192,7 @@ country_event = { # Ludditism Crisis
 						happiness < 0.4
 					}
 				}
-				country_event = { id = cc_luddite.1000 days = 0 random = 359 }
+				planet_event = { id = cc_luddite.1000 days = 0 random = 359 }
 			}
 		}
 	}
@@ -365,7 +365,13 @@ country_event = { # Thought Police
 	immediate = {
 		random = {
 			chance = 5
-			country_event = { id = cc_thought_police.10 days = 0 random = 359 }
+			random_owned_pop = {
+				limit = {
+					is_enslaved = no
+					happiness < 0.4
+				}
+				pop_event = { id = cc_thought_police.10 days = 0 random = 359 }
+			}
 		}
 	}
 }
