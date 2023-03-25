@@ -21,13 +21,44 @@
 
 # Send an insult. Harms relations.
 action_insult = {
+	icon = "GFX_diplomacy_status_war"
 	requires_recipient_independence = no
 	requires_actor_independence = no
 	auto_accepted = yes
 	should_show_auto_accept_message_recipient = yes
+	action_type = aggressive
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_poor_or_worse_opinion"
+
+			OR = {
+				opinion_level = { who = from level <= poor }
+				is_fallen_empire = yes
+				from = { is_fallen_empire = yes }
+				is_harming_relations_with = from
+				from = { is_at_war_with = prev }
+			}
+		}
+	}
 
 	on_accept = {
-		hidden_effect = {
+		if = {
+			limit = {
+				has_technology = tech_satisfying_insults
+				NOT = {
+					has_modifier = satisfying_insult_recently
+				}
+			}
+			add_modifier = {
+				modifier = satisfying_insult_recently
+				days = 1800
+			}
+			add_resource = { influence = 50}
+			country_event = {
+				id = fircon.20
+				days = 1800
+			}
 			set_timed_relation_flag = {
 				flag = dpe_insult
 				who = from
