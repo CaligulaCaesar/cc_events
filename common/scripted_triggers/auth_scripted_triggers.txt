@@ -20,7 +20,7 @@ is_dictatorial = {
 		has_authority = auth_dictatorial
 		# Other Mods
 		AND = {
-			has_authority = auth_democratic_dictatorship
+			has_authority = auth_dict_democratic
 			is_egalitarian = no
 		}
 	}
@@ -64,7 +64,7 @@ is_democracy = { #Power of many
 		has_authority = auth_cooperative
 		has_authority = auth_strict_democratic
 		AND = {
-			has_authority = auth_democratic_dictatorship
+			has_authority = auth_dict_democratic
 			is_egalitarian = yes
 		}
 	}
