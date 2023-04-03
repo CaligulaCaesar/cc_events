@@ -203,7 +203,7 @@ country_event = {
 			}
 		}
 		NOR = {
-			is_rival = prev
+			is_rival = event_target:dpe_new_contact
 			any_relation = {
 				is_same_species = event_target:dpe_new_contact
 				has_relation_flag = {
@@ -211,23 +211,9 @@ country_event = {
 					flag = dpe_has_had_xenophile_mission
 				}
 			}
-			any_owned_pop = {
-				is_same_species = event_target:dpe_new_contact
-				owner = {
-					any_owned_pop = {
-						NOT = { is_same_value = prevprev }
-						is_same_species = event_target:dpe_new_contact
-						owner = {
-							any_owned_pop = {
-								NOR = {
-									is_same_value = prevprev
-									is_same_value = prevprevprevprev
-								}
-								is_same_species = event_target:dpe_new_contact
-							}
-						}
-					}
-				}
+			count_owned_pop = {
+				limit = { is_same_species = event_target:dpe_new_contact }
+				count >= 3
 			}
 		}
 		
@@ -248,23 +234,9 @@ country_event = {
 						flag = dpe_has_had_xenophile_mission
 					}
 				}
-				any_owned_pop = {
-					is_same_species = root
-					owner = {
-						any_owned_pop = {
-							NOT = { is_same_value = prevprev }
-							is_same_species = root
-							owner = {
-								any_owned_pop = {
-									NOR = {
-										is_same_value = prevprev
-										is_same_value = prevprevprevprev
-									}
-									is_same_species = root
-								}
-							}
-						}
-					}
+				count_owned_pop = {
+					limit = { is_same_species = root }
+					count >= 3
 				}
 			}
 		}
