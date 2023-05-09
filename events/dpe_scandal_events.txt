@@ -161,7 +161,7 @@ country_event = {
 		name = dpe_scandal.1.C
 		custom_tooltip = dpe_scandal.1.C.tooltip
 		hidden_effect = {
-			kill_leader = { type = ruler show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 		
 		ai_chance = {
@@ -552,7 +552,7 @@ country_event = {
 		name = dpe_scandal.3.C
 		custom_tooltip = dpe_scandal.3.C.tooltip
 		hidden_effect = {
-			kill_leader = { type = ruler show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 		
 		ai_chance = {
@@ -872,7 +872,7 @@ country_event = {
 		custom_tooltip = dpe_scandal.12.A.tooltip
 		
 		hidden_effect = {
-			kill_leader = { type = ruler show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 	}
 	option = {
@@ -881,7 +881,7 @@ country_event = {
 		custom_tooltip = dpe_scandal.12.B.tooltip
 		
 		hidden_effect = {
-			kill_leader = { type = ruler show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 	}
 }
@@ -932,7 +932,7 @@ country_event = {
 			limit = { has_country_flag = dpe_escaped_slave_ruler_egal }
 			custom_tooltip = CCREMOVERULER.tooltip
 			hidden_effect = {
-				kill_leader = { type = ruler show_notification = no }
+				kill_leader = { show_notification = no }
 			}
 			shift_ethic = ethic_egalitarian
 #			change_government = { authority = auth_democratic }
@@ -1241,7 +1241,7 @@ country_event = {
 		name = dpe_scandal.16.C
 		custom_tooltip = CCREMOVERULER.tooltip
 		hidden_effect = {
-			kill_leader = { type = ruler show_notification = no }
+			kill_leader = { show_notification = no }
 		}
 		
 		ai_chance = {

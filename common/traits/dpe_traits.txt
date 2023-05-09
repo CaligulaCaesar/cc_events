@@ -9,8 +9,6 @@ leader_trait_dpe_ruthless = {
 	modifier = {
 		planet_stability_add = 8
 	}
-	leader_trait = { ruler }
-	leader_class = { ruler }
 }
 
 
@@ -25,7 +23,6 @@ leader_trait_dpe_talented = {
 #		leader_skill_levels = 2
 	}
 	leader_potential_add = {
-		NOT = { leader_class = ruler}
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 		
 	}
@@ -57,7 +54,6 @@ dpe_leader_trait_ancient_knowledge = {
 		all_technology_research_speed = 0.1
 	}
 	leader_potential_add = {
-		NOT = { leader_class = ruler}
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 		
 	}
@@ -87,11 +83,10 @@ dpe_leader_trait_reinvigorated = {
 		leader_age = 15
 	}
 	leader_potential_add = {
-		NOT = { leader_class = ruler}
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 		
 	}
-	leader_class = { admiral scientist general governor ruler }
+	leader_class = { admiral scientist general governor }
 	opposites = { "leader_trait_stubborn" "leader_trait_adaptable" "leader_trait_arrested_development" }
 	leader_trait = all
 	
@@ -122,9 +117,9 @@ dpe_duel_victor_ruler = {
 		pop_ethic_militarist_attraction_mult = 0.2
 	}
 	
-	leader_class = { ruler }
+	leader_class = { scientist }
 	
-	leader_trait = { ruler }
+	leader_trait = { scientist }
 	
 	initial = no
 	randomized = no
@@ -189,9 +184,9 @@ dpe_duel_loser_ruler = {
 		pop_ethic_militarist_attraction_mult = -0.15
 	}
 	
-	leader_class = { ruler }
+	leader_class = { scientist }
 	
-	leader_trait = { ruler }
+	leader_trait = { scientist }
 	
 	initial = no
 	randomized = no

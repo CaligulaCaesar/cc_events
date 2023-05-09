@@ -34,7 +34,7 @@ country_event = {
 		ruler = {
 			NOR = {
 				has_ruler_trait = leader_trait_ruler_chosen
-				has_ruler_trait = leader_trait_ruler_cyborg
+				has_ruler_trait = leader_trait_cyborg
 				has_leader_flag = mem_neochadanus
 			}
 		}
@@ -1106,26 +1106,8 @@ country_event = {
 					modify_species = {
 						add_trait = trait_latent_psionic
 					}
-					if = {
-						limit = { leader_class = scientist }
-						add_trait = leader_trait_scientist_psionic
-					}
-					if = {
-						limit = { leader_class = admiral }
-						add_trait = leader_trait_admiral_psionic
-					}
-					if = {
-						limit = { leader_class = governor }
-						add_trait = leader_trait_governor_psionic
-					}
-					if = {
-						limit = { leader_class = general }
-						add_trait = leader_trait_general_psionic
-					}
-					add_ruler_trait = leader_trait_ruler_psionic
-
+					add_trait = leader_trait_psionic
 					add_trait = dpe_leader_trait_reinvigorated
-					add_ruler_trait = dpe_leader_trait_reinvigorated
 				}
 			}
 		}
@@ -1142,26 +1124,8 @@ country_event = {
 					modify_species = {
 						add_trait = trait_erudite
 					}
-					if = {
-						limit = { leader_class = scientist }
-						add_trait = leader_trait_scientist_erudite
-					}
-					if = {
-						limit = { leader_class = admiral }
-						add_trait = leader_trait_admiral_erudite
-					}
-					if = {
-						limit = { leader_class = governor }
-						add_trait = leader_trait_governor_erudite
-					}
-					if = {
-						limit = { leader_class = general }
-						add_trait = leader_trait_general_erudite
-					}
-					add_ruler_trait = leader_trait_ruler_erudite
-
+					add_trait = leader_trait_erudite
 					add_trait = dpe_leader_trait_reinvigorated
-					add_ruler_trait = dpe_leader_trait_reinvigorated
 				}
 			}
 		}
@@ -1178,26 +1142,8 @@ country_event = {
 					modify_species = {
 						add_trait = trait_cybernetic
 					}
-					if = {
-						limit = { leader_class = scientist }
-						add_trait = leader_trait_scientist_cyborg
-					}
-					if = {
-						limit = { leader_class = admiral }
-						add_trait = leader_trait_admiral_cyborg
-					}
-					if = {
-						limit = { leader_class = governor }
-						add_trait = leader_trait_governor_cyborg
-					}
-					if = {
-						limit = { leader_class = general }
-						add_trait = leader_trait_general_cyborg
-					}
-					add_ruler_trait = leader_trait_ruler_cyborg
-
+					add_trait = leader_trait_cyborg
 					add_trait = dpe_leader_trait_reinvigorated
-					add_ruler_trait = dpe_leader_trait_reinvigorated
 				}
 			}
 		}
@@ -1342,8 +1288,8 @@ country_event = {
 				modify_species = {
 					add_trait = trait_erudite
 				}
-				add_trait = leader_trait_scientist_erudite
-				add_ruler_trait = leader_trait_ruler_erudite
+				add_trait = leader_trait_erudite
+				add_ruler_trait = leader_trait_erudite
 			}
 		}
 

@@ -2696,18 +2696,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -2846,18 +2836,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -2967,18 +2947,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -3199,18 +3169,8 @@ country_event = {
 					add_trait = dpe_duel_loser_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_loser_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_loser_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_loser_ruler
 				}
 			}
 		}
@@ -3531,18 +3491,8 @@ country_event = {
 					add_trait = dpe_duel_loser_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_loser_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_loser_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_loser_ruler
 				}
 			}
 		}
@@ -3794,18 +3744,8 @@ country_event = {
 					add_trait = dpe_duel_loser_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_loser_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_loser_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_loser_ruler
 				}
 			}
 		}
@@ -4007,18 +3947,8 @@ country_event = {
 					add_trait = dpe_duel_loser_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_loser_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_loser_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_loser_ruler
 				}
 			}
 		}
@@ -4154,18 +4084,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -4295,18 +4215,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -4477,18 +4387,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -4617,18 +4517,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -4763,18 +4653,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}
@@ -4944,18 +4824,8 @@ country_event = {
 					add_trait = dpe_duel_victor_general
 				}
 				if = {
-					limit = {
-						OR = {
-							is_same_value = root.heir
-							is_same_value = root.ruler
-						}
-					}
-					add_ruler_trait = dpe_duel_victor_ruler
-				}
-				else = {
-					hidden_effect = {
-						add_ruler_trait = dpe_duel_victor_ruler
-					}
+					limit = { leader_class = scientist }
+					add_trait = dpe_duel_victor_ruler
 				}
 			}
 		}

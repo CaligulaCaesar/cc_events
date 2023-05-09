@@ -322,7 +322,7 @@ country_event = {
 		name = dpe_conspiracy.24.B
 		
 		custom_tooltip = dpe_conspiracy.24.B.tooltip
-		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		hidden_effect = { kill_leader = { show_notification = no } }
 		
 		shift_ethic = ethic_authoritarian
 		change_government = {
@@ -546,7 +546,7 @@ country_event = {
 	option = {
 		name = dpe_conspiracy.27.A
 		custom_tooltip = dpe_conspiracy.27.A.tooltip
-		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		hidden_effect = { kill_leader = { show_notification = no } }
 		shift_ethic = ethic_authoritarian
 		change_government = {
 			authority = auth_dictatorial
@@ -585,7 +585,7 @@ country_event = {
 	}
 	option = {
 		name = dpe_conspiracy.27.B
-		kill_leader = { type = ruler show_notification = no }
+		kill_leader = { show_notification = no }
 		add_modifier = {
 			modifier = dpe_illegitimate_regime
 			months = 160
@@ -1094,7 +1094,7 @@ country_event = {
 		shift_ethic = ethic_militarist
 		
 		custom_tooltip = dpe_conspiracy.3.tooltip
-		hidden_effect = { kill_leader = { type = ruler show_notification = no } }
+		hidden_effect = { kill_leader = { show_notification = no } }
 		
 		if = {
 			limit = { is_dictatorial = no }
