@@ -1,8 +1,13 @@
 
 leader_trait_dpe_ruthless = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_fist.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_legendary_authoritarian_bad"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
@@ -15,12 +20,17 @@ leader_trait_dpe_ruthless = {
 
 
 leader_trait_dpe_talented = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_medal.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_gifted"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	self_modifier = {
 		species_leader_exp_gain = 0.25
-#		leader_skill_levels = 2
+		leader_skill_levels = 2
 	}
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
@@ -28,7 +38,6 @@ leader_trait_dpe_talented = {
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = { "leader_trait_stubborn" "leader_trait_adaptable" "leader_trait_arrested_development" }
-	leader_trait = all
 	
 	initial = no
 	randomized = no
@@ -47,9 +56,14 @@ leader_trait_dpe_talented = {
 
 
 dpe_leader_trait_ancient_knowledge = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scroll.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_scroll"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		all_technology_research_speed = 0.1
 	}
@@ -58,7 +72,6 @@ dpe_leader_trait_ancient_knowledge = {
 		
 	}
 	leader_class = { scientist }
-	leader_trait = { scientist }
 	
 	initial = no
 	randomized = no
@@ -76,9 +89,14 @@ dpe_leader_trait_ancient_knowledge = {
 
 
 dpe_leader_trait_reinvigorated = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_resilient.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_resilient"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	self_modifier = {
 		leader_age = 15
 	}
@@ -88,7 +106,6 @@ dpe_leader_trait_reinvigorated = {
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = { "leader_trait_stubborn" "leader_trait_adaptable" "leader_trait_arrested_development" }
-	leader_trait = all
 	
 	initial = no
 	randomized = no
@@ -109,9 +126,14 @@ dpe_leader_trait_reinvigorated = {
 #HW Duel traits
 
 dpe_duel_victor_ruler = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_glory_seeker"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		pop_happiness = 0.05
 		pop_ethic_militarist_attraction_mult = 0.2
@@ -119,16 +141,19 @@ dpe_duel_victor_ruler = {
 	
 	leader_class = { scientist }
 	
-	leader_trait = { scientist }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_victor_general = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_glory_seeker"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		army_morale = 0.1
 		army_morale_damage_mult = 0.1
@@ -136,32 +161,38 @@ dpe_duel_victor_general = {
 	
 	leader_class = { general }
 	
-	leader_trait = { general }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_victor_admiral = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_glory_seeker"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		ship_fire_rate_mult = 0.1
 	}
 	
 	leader_class = { admiral }
 	
-	leader_trait = { admiral }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_victor_governor = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_glory_seeker"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		ARMY_DEFENSE_DAMAGE_MULT = 0.33
 		pop_ethic_militarist_attraction_mult = 0.33
@@ -169,16 +200,19 @@ dpe_duel_victor_governor = {
 	
 	leader_class = { governor }
 	
-	leader_trait = { governor }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_loser_ruler = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_dpe_wooden_spoon"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		pop_happiness = -0.05
 		pop_ethic_militarist_attraction_mult = -0.15
@@ -186,55 +220,62 @@ dpe_duel_loser_ruler = {
 	
 	leader_class = { scientist }
 	
-	leader_trait = { scientist }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_loser_general = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_dpe_wooden_spoon"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		army_morale = -0.1
 	}
 	
 	leader_class = { general }
 	
-	leader_trait = { general }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_loser_admiral = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_dpe_wooden_spoon"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		ship_fire_rate_mult = -0.1
 	}
 	
 	leader_class = { admiral }
 	
-	leader_trait = { admiral }
-	
 	initial = no
 	randomized = no
 }
 
 dpe_duel_loser_governor = {
-	cost = 0
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_dpe_wooden_spoon"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	modifier = {
 		pop_ethic_militarist_attraction_mult = -0.2
 	}
 	
 	leader_class = { governor }
-	
-	leader_trait = { governor }
 	
 	initial = no
 	randomized = no
