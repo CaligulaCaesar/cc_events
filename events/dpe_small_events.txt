@@ -618,7 +618,7 @@ country_event = {
 			}
 			else = {
 				if = {
-					limit = { has_trait = leader_trait_expertise_materials }
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_materials } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_materials
@@ -630,8 +630,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_propulsion }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_propulsion } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_propulsion
@@ -643,8 +643,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_voidcraft }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_voidcraft } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_voidcraft
@@ -656,8 +656,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_industry }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_industry } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_industry
@@ -669,8 +669,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_field_manipulation }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_field_manipulation } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_field_manipulation
@@ -682,8 +682,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_particles }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_particles } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_particles
@@ -695,8 +695,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_computing }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_computing } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_computing
@@ -708,8 +708,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_psionics }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_psionics
@@ -721,8 +721,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_new_worlds }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_new_worlds } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_new_worlds
@@ -734,8 +734,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_statecraft }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_statecraft } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_statecraft
@@ -747,8 +747,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_biology }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_biology } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_biology
@@ -760,8 +760,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
-					limit = { has_trait = leader_trait_expertise_military_theory }
+				else_if = {
+					limit = { has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_military_theory } }
 					root = {
 						set_timed_country_flag = {
 							flag = dpe_talent_expertise_military_theory
@@ -808,10 +808,10 @@ country_event = {
 				limit = {
 					event_target:dpe_talent_leader = {
 						OR = {
-							has_trait = leader_trait_expertise_materials
-							has_trait = leader_trait_expertise_propulsion
-							has_trait = leader_trait_expertise_voidcraft
-							has_trait = leader_trait_expertise_industry
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_materials }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_propulsion }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_voidcraft }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_industry }
 						}
 					}
 				}
@@ -820,12 +820,12 @@ country_event = {
 					years = 30
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					event_target:dpe_talent_leader = {
 						OR = {
-							has_trait = leader_trait_expertise_field_manipulation
-							has_trait = leader_trait_expertise_particles
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_field_manipulation }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_particles }
 						}
 					}
 				}
@@ -834,10 +834,10 @@ country_event = {
 					years = 30
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					event_target:dpe_talent_leader = {
-						has_trait = leader_trait_expertise_computing
+						has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_computing }
 					}
 				}
 				add_modifier = {
@@ -845,13 +845,13 @@ country_event = {
 					years = 30
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					event_target:dpe_talent_leader = {
 						OR = {
-							has_trait = leader_trait_expertise_new_worlds
-							has_trait = leader_trait_expertise_statecraft
-							has_trait = leader_trait_expertise_military_theory
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_new_worlds }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_statecraft }
+							has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_military_theory }
 						}
 					}
 				}
@@ -860,10 +860,10 @@ country_event = {
 					years = 30
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					event_target:dpe_talent_leader = {
-						has_trait = leader_trait_expertise_biology
+						has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_biology }
 					}
 				}
 				add_modifier = {
@@ -976,7 +976,7 @@ country_event = {
 				skill = 2
 				traits = {
 					add_trait = leader_trait_dpe_talented
-					add_trait = leader_trait_charismatic
+					add_trait = leader_trait_inspiring_2
 				}
 			}
 		}

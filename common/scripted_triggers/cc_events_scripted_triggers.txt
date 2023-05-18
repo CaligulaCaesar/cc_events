@@ -203,18 +203,18 @@ dpe_talent_flavour_governor_default = {
 
 dpe_talent_scientist_has_speciality = {
 	OR = {
-		has_trait = leader_trait_expertise_materials
-		has_trait = leader_trait_expertise_propulsion
-		has_trait = leader_trait_expertise_voidcraft
-		has_trait = leader_trait_expertise_industry
-		has_trait = leader_trait_expertise_field_manipulation
-		has_trait = leader_trait_expertise_particles
-		has_trait = leader_trait_expertise_computing
-		has_trait = leader_trait_expertise_psionics
-		has_trait = leader_trait_expertise_new_worlds
-		has_trait = leader_trait_expertise_statecraft
-		has_trait = leader_trait_expertise_biology
-		has_trait = leader_trait_expertise_military_theory
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_materials }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_propulsion }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_voidcraft }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_industry }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_field_manipulation }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_particles }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_computing }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_new_worlds }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_statecraft }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_biology }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_military_theory }
 	}
 }
 
