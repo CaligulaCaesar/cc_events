@@ -559,8 +559,7 @@ country_event = { # Prominent Interspecies Marriage
 		any_owned_leader = {
 			NOR = {
 				is_same_value = root.ruler
-				leader_of_faction = supremacist
-				leader_of_faction = isolationist
+				has_ethic = ethic_xenophobe
 				has_leader_flag = cc_married
 			}
 			is_same_species = root
@@ -593,7 +592,7 @@ country_event = { # Ruler Xenophobic Comments
 		}
 		
 		exists = ruler
-		NOT = { ruler = { leader_of_faction = xenoist } }
+		NOT = { ruler = { has_ethic = ethic_xenophile } }
 	}
 	
 	immediate = {
@@ -671,7 +670,7 @@ country_event = { # Military Coup
 		exists = ruler
 
 		any_owned_leader = {
-			leader_of_faction = totalitarian
+			has_ethic = ethic_authoritarian
 			NOT = {
 				is_same_value = root.ruler
 			}
@@ -1435,7 +1434,7 @@ country_event = { # Ruler Charity Scandal
 			has_country_flag = dpe_recent_charity_scandal
 		}
 		exists = ruler
-		ruler = { NOT = { leader_of_faction = totalitarian } }
+		ruler = { NOT = { has_ethic = ethic_authoritarian } }
 
 		count_pop_faction = {
 			limit = {
@@ -1490,7 +1489,7 @@ country_event = { # Ruler Belief Scandal
 		exists = ruler
 		ruler = {
 			NOR = {
-				leader_of_faction = traditionalist
+				has_ethic = ethic_spiritualist
 				has_leader_flag = mem_neochadanus
 			}
 		}
@@ -1535,7 +1534,7 @@ country_event = { # Ruler Ex-Slave Scandal
 			is_enslaved = yes
 		}
 
-		ruler = { NOT = { has_ruler_trait = leader_trait_ruler_chosen } }
+		ruler = { NOT = { has_trait = leader_trait_chosen } }
 	}
 	
 	immediate = {
@@ -1561,7 +1560,7 @@ country_event = { # Ruler Cultist Scandal
 		}
 		
 		exists = ruler
-		ruler = { NOT = { leader_of_faction = technologist } }
+		ruler = { NOT = { has_ethic = ethic_materialist } }
 	}
 	
 	immediate = {
@@ -1660,8 +1659,8 @@ country_event = { # Ruler Terminally Ill
 		exists = ruler
 		ruler = {
 			NOR = {
-				has_ruler_trait = leader_trait_ruler_chosen
-				has_ruler_trait = leader_trait_cyborg
+				has_trait = leader_trait_chosen
+				has_trait = leader_trait_cyborg
 				has_leader_flag = mem_neochadanus
 			}
 		}

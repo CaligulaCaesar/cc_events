@@ -20,7 +20,7 @@ country_event = {
 		has_faction = totalitarian
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = totalitarian
+			has_ethic = ethic_authoritarian
 		}
 	}
 	
@@ -64,7 +64,7 @@ country_event = {
 		has_faction = totalitarian
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = totalitarian
+			has_ethic = ethic_authoritarian
 		}
 	}
 	
@@ -72,7 +72,7 @@ country_event = {
 	
 	immediate = {
 		random_owned_leader = {
-			limit = { leader_of_faction = totalitarian }
+			limit = { has_ethic = ethic_authoritarian }
 			save_event_target_as = authoritarian
 			
 			exile_leader_as = dpe_authoritarian_conspirator
@@ -741,7 +741,7 @@ country_event = {
 		exists = ruler
 
 		any_owned_leader = {
-			leader_of_faction = totalitarian
+			has_ethic = ethic_authoritarian
 			NOT = {
 				is_same_value = root.ruler
 			}
@@ -814,14 +814,14 @@ country_event = {
 		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = imperialist
+			has_ethic = ethic_militarist
 		}
 		exists = ruler
 	}
 	
 	immediate = {
 		random_owned_leader = {
-			limit = { leader_of_faction = imperialist }
+			limit = { has_ethic = ethic_militarist }
 			save_event_target_as = militarist
 		}
 		random_pop_faction = {
@@ -1004,7 +1004,7 @@ country_event = {
 		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = imperialist
+			has_ethic = ethic_militarist
 		}
 	}
 	
@@ -1042,7 +1042,7 @@ country_event = {
 		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = imperialist
+			has_ethic = ethic_militarist
 		}
 	}
 	
@@ -1076,13 +1076,13 @@ country_event = {
 		}
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = imperialist
+			has_ethic = ethic_militarist
 		}
 	}
 	
 	immediate = {
 		random_owned_leader = {
-			limit = { leader_of_faction = imperialist }
+			limit = { has_ethic = ethic_militarist }
 			save_event_target_as = militarist
 			exile_leader_as = dpe_militarist_coup_leader
 		}
@@ -1194,7 +1194,7 @@ country_event = {
 						}
 						any_owned_leader = {
 							NOT = { is_same_value = root.ruler }
-							leader_of_faction = imperialist
+							has_ethic = ethic_militarist
 						}
 						exists = ruler
 					}
@@ -1240,13 +1240,13 @@ country_event = {
 		
 		any_owned_leader = {
 			NOT = { is_same_value = root.ruler }
-			leader_of_faction = imperialist
+			has_ethic = ethic_militarist
 		}
 	}
 	
 	immediate = {
 		random_owned_leader = {
-			limit = { leader_of_faction = imperialist }
+			limit = { has_ethic = ethic_militarist }
 			save_event_target_as = militarist
 		}
 	}

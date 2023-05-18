@@ -963,7 +963,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -978,7 +978,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -993,7 +993,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1008,7 +1008,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1023,7 +1023,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1038,7 +1038,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1053,7 +1053,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1068,7 +1068,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1083,7 +1083,7 @@ save_faction_revolt_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_rebellious_faction_leader }
 			}
@@ -1101,7 +1101,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1116,7 +1116,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1131,7 +1131,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1146,7 +1146,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1161,7 +1161,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1176,7 +1176,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1191,7 +1191,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1206,7 +1206,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}
@@ -1221,7 +1221,7 @@ save_faction_revolt_2nd_event_target = {
 			if = {
 				limit = {
 					exists = leader
-					leader = { NOT = { leader_class = ruler } }
+					leader = { is_ruler = no }
 				}
 				leader = { save_event_target_as = cc_new_reb_faction_leader }
 			}

@@ -25,7 +25,7 @@ country_event = {
 		
 		
 		exists = ruler
-		NOT = { ruler = { leader_of_faction = xenoist } }
+		NOT = { ruler = { has_ethic = ethic_xenophile } }
 	}
 	
 	# mean_time_to_happen = {
@@ -51,7 +51,7 @@ country_event = {
 				}
 				modifier = {
 					factor = 2
-					ruler = { leader_of_faction = supremacist }
+					ruler = { has_ethic = ethic_xenophobe }
 				}
 				modifier = {
 					factor = 2
@@ -115,7 +115,7 @@ country_event = {
 		NOT = { has_ethic = ethic_fanatic_xenophile }
 		
 		exists = ruler
-		NOT = { ruler = { leader_of_faction = xenoist } }
+		NOT = { ruler = { has_ethic = ethic_xenophile } }
 
 		any_owned_pop = {
 			NOT = { is_same_species = root }
@@ -373,7 +373,7 @@ country_event = {
 		}
 		
 		exists = ruler
-		NOT = { ruler = { leader_of_faction = xenoist } }
+		NOT = { ruler = { has_ethic = ethic_xenophile } }
 
 		
 		any_owned_species = {
@@ -832,12 +832,12 @@ country_event = {
 						modifier = {
 							factor = 0.75
 							exists = ruler
-							ruler = { leader_of_faction = supremacist }
+							ruler = { has_ethic = ethic_xenophobe }
 						}
 						modifier = {
 							factor = 3
 							exists = ruler
-							ruler = { leader_of_faction = xenoist }
+							ruler = { has_ethic = ethic_xenophile }
 						}
 					}
 					4 = {
@@ -846,7 +846,7 @@ country_event = {
 							factor = 1.5
 							any_owned_leader = {
 								NOT = { is_same_value = prev.ruler }
-								leader_of_faction = xenoist
+								has_ethic = ethic_xenophile
 							}
 						}
 					}
@@ -869,14 +869,14 @@ country_event = {
 					factor = 0.75
 					has_faction = xenoist
 					any_owned_leader = {
-						leader_of_faction = xenoist
+						has_ethic = ethic_xenophile
 					}
 				}
 				modifier = {
 					factor = 0.5
 					exists = ruler
 					has_faction = xenoist
-					ruler = { leader_of_faction = xenoist }
+					ruler = { has_ethic = ethic_xenophile }
 				}
 				modifier = {
 					factor = 1.25
@@ -1211,12 +1211,12 @@ country_event = {
 		if = {
 			limit = {
 				has_faction = xenoist
-				any_owned_leader = { leader_of_faction = xenoist }
+				any_owned_leader = { has_ethic = ethic_xenophile }
 			}
 			random_list = {
 				1 = {
 					random_owned_leader = {
-						limit = { leader_of_faction = xenoist }
+						limit = { has_ethic = ethic_xenophile }
 						save_event_target_as = cc_scandal_leader
 					}
 				}

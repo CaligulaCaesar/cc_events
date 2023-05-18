@@ -87,7 +87,7 @@ dpe_planet_talented_socscientist_desc:0 "Este planeta se beneficia dos serviços
 dpe_smallpos_events.12.name:0 "General Talentoso Descoberto"
 dpe_smallpos_events.12.desc:0 "[dpe_talent_leader.GetName], [root.GetDPETalentFlavour] [dpe_talent_planet.GetName][root.GetDPETalentFlavour1], impressionou as Forças Armadas [root.GetSpeciesAdj] com suas habilidades de liderança - tanto que eles sugeriram que [dpe_talent_leader.GetSheHe] seja promovido a General do Exército. No entanto, [dpe_talent_planet.GetName] está interessado igualmente em manter [dpe_talent_leader.GetSheHe] e colocar [dpe_talent_leader.GetSheHe] no comando da defesa do planeta."
 dpe_smallpos_events.12.A:0 "Contratar [dpe_talent_leader.GetSheHe]."
-dpe_smallpos_events.12.A.tooltip:0 "[dpe_talent_leader.GetName], um general nível 2 com o traço $leader_trait_dpe_talented$ e $leader_trait_charismatic$, será adicionado aos seus líderes."
+dpe_smallpos_events.12.A.tooltip:0 "[dpe_talent_leader.GetName], um general nível 2 com o traço $leader_trait_dpe_talented$ e $leader_trait_inspiring_2$, será adicionado aos seus líderes."
 dpe_smallpos_events.12.B:0 "[dpe_talent_leader.GetSheHeCap] [dpe_talent_leader.GetIsAre] de maior ajuda em [dpe_talent_planet.GetName]."
 
 dpe_planet_talented_general:0 "General Talentoso"
@@ -354,6 +354,7 @@ cc_antiluddite:0 "Celebrando Trabalhadores Robóticos"
  dpe_disillusioned_with_democracy_desc:0 "O povo perdeu a fé no funcionamento da democracia."
 
  dpe_election_scandal_upset_faction:0 "Perturbado com o Resultado das Eleições"
+ dpe_election_scandal_upset:0 "$dpe_election_scandal_upset_faction$"
  dpe_political_crackdown_faction:0 "Alvos de Repressão Política"
  dpe_upset_intolerant_ruler_faction:0 "Insultado pelo Governante"
 

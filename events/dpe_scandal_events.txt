@@ -24,7 +24,7 @@ country_event = {
 	# 	modifier = {
 	# 		factor = 0.5
 	# 		exists = ruler
-	# 		ruler = { leader_of_faction = progressive }
+	# 		ruler = { has_ethic = ethic_egalitarian }
 	# 	}
 	# }
 	
@@ -37,7 +37,7 @@ country_event = {
 			has_country_flag = dpe_recent_charity_scandal
 		}
 		exists = ruler
-		ruler = { NOT = { leader_of_faction = totalitarian } }
+		ruler = { NOT = { has_ethic = ethic_authoritarian } }
 
 		count_pop_faction = {
 			limit = {
@@ -393,7 +393,7 @@ country_event = {
 		exists = ruler
 		ruler = {
 			NOR = {
-				leader_of_faction = traditionalist
+				has_ethic = ethic_spiritualist
 				has_leader_flag = mem_neochadanus
 			}
 		}
@@ -427,7 +427,7 @@ country_event = {
 			1 = {
 				modifier = {
 					factor = 0
-					ruler = { leader_of_faction = technologist }
+					ruler = { has_ethic = ethic_materialist }
 				}
 			}
 		}
@@ -642,7 +642,7 @@ country_event = {
 
 		ruler = {
 			NOT = {
-				has_ruler_trait = leader_trait_ruler_chosen
+				has_trait = leader_trait_chosen
 			}
 		}
 	}
@@ -843,9 +843,9 @@ country_event = {
 		if = {
 			limit = {
 				exists = ruler
-				ruler = { NOT = { has_ruler_trait = leader_trait_dpe_ruthless } }
+				ruler = { NOT = { has_trait = leader_trait_dpe_ruthless } }
 			}
-			ruler = { add_ruler_trait = leader_trait_dpe_ruthless }
+			ruler = { add_trait = leader_trait_dpe_ruthless }
 		}
 	}
 }
@@ -1109,7 +1109,7 @@ country_event = {
 		}
 		
 		exists = ruler
-		ruler = { NOT = { leader_of_faction = technologist } }
+		ruler = { NOT = { has_ethic = ethic_materialist } }
 	}
 		
 		
