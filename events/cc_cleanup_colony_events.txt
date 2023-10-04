@@ -41,10 +41,6 @@ planet_event = {
 		
 		#remove the ones not relevant to the new empire
 		remove_new_owner_irrelevant_political_colony_modifiers = yes
-		remove_all_faction_strongholds = yes
-		remove_all_faction_sympathies = yes
-		remove_all_faction_seditions = yes
-		remove_all_seditious_talk = yes
 		
 		if = {
 			limit = {
@@ -2921,11 +2917,6 @@ country_event = {
 	immediate = {
 		from = {
 			remove_rebel_irrelevant_political_colony_modifiers = yes
-			
-			remove_all_faction_strongholds = yes
-			remove_all_faction_sympathies = yes
-			remove_all_faction_seditions = yes
-			remove_all_seditious_talk = yes
 		}
 	}
 }
@@ -2989,11 +2980,6 @@ planet_event = {
 	immediate = {
 		remove_all_political_colony_modifiers = yes
 		
-		remove_all_faction_strongholds = yes
-		remove_all_faction_sympathies = yes
-		remove_all_faction_seditions = yes
-		remove_all_seditious_talk = yes
-		
 		#Added for Spiritualist Mission
 		if = {
 			limit = {
@@ -3043,12 +3029,7 @@ planet_event = {
 	
 	immediate = {
 		remove_all_political_colony_modifiers = yes
-		
-		remove_all_faction_strongholds = yes
-		remove_all_faction_sympathies = yes
-		remove_all_faction_seditions = yes
-		remove_all_seditious_talk = yes
-		
+
 		#Added for Spiritualist Mission
 		if = {
 			limit = {

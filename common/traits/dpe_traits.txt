@@ -11,7 +11,7 @@ leader_trait_dpe_ruthless = {
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
-	leader_class = { admiral scientist general governor }
+	leader_class = { governor }
 	modifier = {
 		planet_stability_add = 8
 	}
@@ -31,7 +31,8 @@ leader_trait_dpe_talented = {
 	}
 	self_modifier = {
 		species_leader_exp_gain = 0.25
-		leader_skill_levels = 2
+		councilor_exp_gain = 0.15
+		leader_trait_selection_options_add = 2
 	}
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
