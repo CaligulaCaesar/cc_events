@@ -621,18 +621,7 @@ country_event = {
 country_event = {
 	id = dpe_election_events.80
 	title = dpe_election_events.80.name
-	desc = {
-		trigger = {
-			has_a_factional_revolt_active = no
-		}
-		text = dpe_election_events.80.desc
-	}
-	desc = {
-		trigger = {
-			has_a_factional_revolt_active = yes
-		}
-		text = dpe_election_events.80.desc.fac_revolt
-	}
+	desc = dpe_election_events.80.desc
 	picture = GFX_evt_arguing_senate
 
 	is_triggered_only = yes
@@ -651,7 +640,6 @@ country_event = {
 		NOT = {
 			has_country_flag = dpe_recent_election_positive
 		}
-		has_factional_revolt_stage3 = no
 
 		any_pop_faction = {
 			support > 0.1
@@ -664,12 +652,6 @@ country_event = {
 			flag = dpe_recent_election_positive
 			years = 400
 		}
-		if = {
-			limit = {
-				has_a_factional_revolt_active = yes
-			}
-			save_faction_revolt_event_target = yes
-		}
 	}
 
 	option = {
@@ -678,29 +660,6 @@ country_event = {
 		add_modifier = {
 			modifier = dpe_election_unifying_candidate
 			years = 5
-		}
-		
-
-		if = {
-			limit = {
-				has_a_factional_revolt_active = yes
-			}
-			remove_modifier = cc_country_factional_unrest
-		
-			custom_tooltip = cc_faction_revolt_modifiers_removed
-			hidden_effect = {
-				remove_all_faction_revolt_flags = yes
-				every_owned_planet = {
-					remove_all_seditious_talk = yes
-					remove_all_faction_strongholds = yes
-					remove_all_faction_sympathies = yes
-					remove_all_faction_seditions = yes
-				}
-				set_timed_country_flag = {
-					flag = cc_faction_ended
-					months = 160
-				}
-			}
 		}
 		
 		every_pop_faction = {
