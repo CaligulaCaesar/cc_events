@@ -11,6 +11,7 @@ leader_trait_dpe_ruthless = {
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
+	leader_class = { admiral scientist general governor }
 	modifier = {
 		planet_stability_add = 8
 	}
