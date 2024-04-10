@@ -64,7 +64,7 @@ country_event = {
 		random_list = {
 			25 = {
 				create_leader = {
-					class = admiral
+					class = commander
 					species = owner_main_species
 					name = random
 					skill = 2
@@ -78,7 +78,7 @@ country_event = {
 			}
 			25 = {
 				create_leader = {
-					class = admiral
+					class = commander
 					species = owner_main_species
 					name = random
 					skill = 2
@@ -93,7 +93,7 @@ country_event = {
 			}
 			25 = {
 				create_leader = {
-					class = admiral
+					class = commander
 					species = owner_main_species
 					name = random
 					skill = 2
@@ -107,7 +107,7 @@ country_event = {
 			}
 			25 = {
 				create_leader = {
-					class = admiral
+					class = commander
 					species = owner_main_species
 					name = random
 					skill = 2
@@ -205,10 +205,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				any_owned_leader = {
-					leader_class = admiral
+					leader_class = commander
 					root = {
 						any_owned_leader = {
-							leader_class = admiral
+							leader_class = commander
 							NOT = { is_same_value = prevprev }
 						}
 					}

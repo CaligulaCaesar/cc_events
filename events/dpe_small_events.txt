@@ -970,7 +970,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander 
 				species = root.species
 				name = random
 				skill = 2
@@ -994,7 +994,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander 
 				species = event_target:dpe_talent_leader_pop.species
 				name = random
 				skill = 2
@@ -1149,7 +1149,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				class = governor
+				class = official
 				species = root.species
 				name = random
 				skill = 2
@@ -1173,7 +1173,7 @@ country_event = {
 				}
 			}
 			create_leader = {
-				class = governor
+				class = official
 				species = event_target:dpe_talent_leader_pop.species
 				name = random
 				skill = 2
@@ -1344,7 +1344,7 @@ country_event = {
 			}
 		}
 		create_leader = {
-			class = admiral
+			class = commander
 			species = root.species
 			name = random
 			skill = 2

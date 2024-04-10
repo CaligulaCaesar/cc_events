@@ -126,10 +126,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 		}
 		text = dpe_defect_leader.2.desc.military
@@ -138,7 +135,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
@@ -569,10 +566,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 			NOR = {
 				has_country_flag = dpe_defect_investigation@from
@@ -585,7 +579,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
@@ -599,10 +593,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 			has_country_flag = dpe_defect_misplaced_confidence@from
 		}
@@ -612,7 +603,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
@@ -623,10 +614,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 			has_country_flag = dpe_defect_investigation@from
 		}
@@ -636,7 +624,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
@@ -1086,10 +1074,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 		}
 		text = dpe_defect_leader.4.desc.military
@@ -1098,7 +1083,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
@@ -1774,10 +1759,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:dpe_defect_leader = {
-				OR = {
-					leader_class = general
-					leader_class = admiral
-				}
+				leader_class = commander
 			}
 		}
 		text = dpe_defect_leader.2.desc.military
@@ -1786,7 +1768,7 @@ country_event = {
 		trigger = {
 			event_target:dpe_defect_leader = {
 				OR = {
-					leader_class = governor
+					leader_class = official
 					leader_class = scientist
 				}
 			}
