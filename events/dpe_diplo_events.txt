@@ -1413,7 +1413,7 @@ country_event = {
 			OR = {
 				AND = {
 					FROM = {
-						is_fallen_machine_empire = no
+						is_fallen_empire_machine = no
 						NOR = {
 							has_ethic = ethic_gestalt_consciousness
 							is_xenophobe = yes
@@ -1448,7 +1448,7 @@ country_event = {
 				AND = {
 					FROM = {
 						has_authority = auth_machine_intelligence
-						is_fallen_machine_empire = no
+						is_fallen_empire_machine = no
 					}
 					ROOT = {
 						NOR = {
@@ -1464,7 +1464,7 @@ country_event = {
 	desc = {
 		trigger = {
 			FROM = {
-				is_fallen_machine_empire = no
+				is_fallen_empire_machine = no
 				is_xenophobe = yes
 				NOT = { has_ai_personality = fanatic_purifiers }
 			}
@@ -1654,7 +1654,7 @@ country_event = {
 		trigger = {
 			FROM = {
 				has_authority = auth_machine_intelligence
-				is_fallen_machine_empire = no
+				is_fallen_empire_machine = no
 				NOR = {
 					has_ai_personality = assimilators
 					has_ai_personality = servitors
