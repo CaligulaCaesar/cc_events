@@ -15,7 +15,7 @@ is_megacorp = {
 	}
 }
 
-is_dictatorial = {
+is_dictatorial_authority ={
 	OR = {
 		has_authority = auth_dictatorial
 		# Other Mods
@@ -26,7 +26,7 @@ is_dictatorial = {
 	}
 }
 
-is_imperial = { #Has Heir
+is_imperial_authority ={ #Has Heir
 	OR = {
 		has_authority = auth_imperial
 		# Other Mods
@@ -41,19 +41,19 @@ is_imperial = { #Has Heir
 is_autocracy = { #Power of one
 	OR = {
 		is_gestalt = yes
-		is_imperial = yes
-		is_dictatorial = yes
+		is_imperial_authority =yes
+		is_dictatorial_authority =yes
 	}
 }
 
 is_imp_or_dict = { #Power of one
 	OR = {
-		is_imperial = yes
-		is_dictatorial = yes
+		is_imperial_authority =yes
+		is_dictatorial_authority =yes
 	}
 }
 
-is_democracy = { #Power of many
+is_democratic_authority ={ #Power of many
 	OR = {
 		has_authority = auth_democratic
 		# Other Mods

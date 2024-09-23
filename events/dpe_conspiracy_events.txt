@@ -10,7 +10,7 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		
-		is_democracy = yes
+		is_democratic_authority =yes
 		NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
 		OR = {
 			has_country_flag = cc_eventperf_has_overwhelming_rival
@@ -46,7 +46,7 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		is_democracy = yes
+		is_democratic_authority =yes
 		NOT = { has_country_flag = cc_recent_authoritarian_conspiracy }
 		any_country = {
 			OR = {
@@ -1097,7 +1097,7 @@ country_event = {
 		hidden_effect = { kill_leader = { show_notification = no } }
 		
 		if = {
-			limit = { is_dictatorial = no }
+			limit = { is_dictatorial_authority =no }
 			change_government = {
 				authority = auth_dictatorial
 				civics = {

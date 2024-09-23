@@ -937,7 +937,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				owner = { is_democracy = yes }
+				owner = { is_democratic_authority =yes }
 			}
 			modifier = {
 				factor = 0
@@ -1001,7 +1001,7 @@ planet_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				owner = { is_democracy = yes }
+				owner = { is_democratic_authority =yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}
@@ -1456,7 +1456,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				owner = { is_imperial = yes }
+				owner = { is_imperial_authority =yes }
 			}
 			modifier = {
 				factor = 0
@@ -1503,7 +1503,7 @@ planet_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				owner = { is_democracy = yes }
+				owner = { is_democratic_authority =yes }
 			}
 			modifier = {
 				factor = 0
@@ -1518,7 +1518,7 @@ planet_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				owner = { is_imperial = yes }
+				owner = { is_imperial_authority =yes }
 				any_owned_pop = { has_citizenship_rights = yes }
 			}
 		}

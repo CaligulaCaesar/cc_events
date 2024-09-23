@@ -13,8 +13,6 @@ country_event = {
 	picture = GFX_evt_cc_throne_room
 	is_triggered_only = yes
 	
-	# mean_time_to_happen = { years = 120 }
-	
 	trigger = {
 		is_country_type = default
 		NOR = {
@@ -32,6 +30,7 @@ country_event = {
 		}
 		exists = ruler
 		ruler = {
+			is_immortal = no
 			NOR = {
 				has_trait = leader_trait_chosen
 				has_trait = leader_trait_cyborg

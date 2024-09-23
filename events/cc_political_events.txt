@@ -38,15 +38,15 @@ country_event = {
 				if = {
 					limit = {
 						OR = {
-							is_democracy = yes
-							has_authority = auth_oligarchic
-							is_dictatorial = yes
+							is_democratic_authority =yes
+							is_oligarchic_authority = yes
+							is_dictatorial_authority =yes
 						}
 					}
 					country_event = { id = cc_events_mod.1 }
 				}
 				if = {
-					limit = { is_imperial = yes }
+					limit = { is_imperial_authority =yes }
 					country_event = { id = cc_events_mod.2 }
 				}
 				modifier = {
@@ -106,9 +106,9 @@ country_event = {
 		
 		has_faction = xenoist
 		OR = {
-			is_democracy = yes
-			has_authority = auth_oligarchic
-			is_dictatorial = yes
+			is_democratic_authority =yes
+			is_oligarchic_authority = yes
+			is_dictatorial_authority =yes
 		}
 		NOT = { has_country_flag = recent_xenophobic_comments }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -210,7 +210,7 @@ country_event = {
 				factor = 0
 				OR = {
 					is_xenophobe = yes
-					is_dictatorial = yes
+					is_dictatorial_authority =yes
 				}
 			}
 		}
@@ -365,7 +365,7 @@ country_event = {
 		is_country_type = default
 		
 		has_faction = xenoist
-		is_imperial = yes
+		is_imperial_authority =yes
 		NOR = {
 			has_country_flag = recent_xenophobic_comments
 			has_ethic = ethic_gestalt_consciousness
@@ -705,14 +705,14 @@ country_event = {
 		}
 		if = {
 			limit = {
-				is_imperial = no
+				is_imperial_authority =no
 				has_modifier = cc_ruler_cult
 			}
 			remove_modifier = cc_ruler_cult
 		}
 		if = {
 			limit = {
-				is_imperial = yes
+				is_imperial_authority =yes
 				has_modifier = cc_ruler_cult
 				NOT = { has_country_flag = cc_permanent_ruler_cult }
 			}

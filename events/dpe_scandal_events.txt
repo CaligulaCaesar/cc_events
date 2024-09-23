@@ -274,13 +274,19 @@ country_event = {
 			years = 80
 		}
 		random_owned_leader = {
-			limit = { NOT = { is_same_value = root.ruler } }
+			limit = {
+				NOR = {
+					is_same_value = root.ruler
+					has_leader_flag = paragon_origin_legendary_leader
+				}
+			}
 			save_event_target_as = cc_first_corrupt
 		}
 		random_owned_leader = {
 			limit = {
 				NOR = {
 					is_same_value = root.ruler
+					has_leader_flag = paragon_origin_legendary_leader
 					is_same_value = event_target:cc_first_corrupt
 				}
 			}
@@ -630,7 +636,7 @@ country_event = {
 		
 		NOT = { has_country_flag = dpe_recent_escaped_slave_ruler }
 		
-		is_imperial = no
+		is_imperial_authority =no
 		NOT = { has_tradition = tr_psionics_psionic_assimilation }
 
 		exists = ruler
@@ -672,7 +678,7 @@ country_event = {
 					OR = {
 						is_egalitarian = yes
 						NOT = { has_faction = progressive }
-						is_democracy = yes
+						is_democratic_authority =yes
 					}
 				}
 				modifier = {
