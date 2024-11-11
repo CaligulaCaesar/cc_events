@@ -1,5 +1,6 @@
 
 is_megacorp = {
+	optimize_memory
 	OR = {
 		has_authority = auth_corporate
 		has_government = gov_imperial_domain_megacorp
@@ -16,6 +17,7 @@ is_megacorp = {
 }
 
 is_dictatorial_authority ={
+	optimize_memory
 	OR = {
 		has_authority = auth_dictatorial
 		# Other Mods
@@ -27,6 +29,7 @@ is_dictatorial_authority ={
 }
 
 is_imperial_authority ={ #Has Heir
+	optimize_memory
 	OR = {
 		has_authority = auth_imperial
 		# Other Mods
@@ -39,6 +42,7 @@ is_imperial_authority ={ #Has Heir
 }
 
 is_autocracy = { #Power of one
+	optimize_memory
 	OR = {
 		is_gestalt = yes
 		is_imperial_authority =yes
@@ -47,6 +51,7 @@ is_autocracy = { #Power of one
 }
 
 is_imp_or_dict = { #Power of one
+	optimize_memory
 	OR = {
 		is_imperial_authority =yes
 		is_dictatorial_authority =yes
@@ -54,6 +59,7 @@ is_imp_or_dict = { #Power of one
 }
 
 is_democratic_authority ={ #Power of many
+	optimize_memory
 	OR = {
 		has_authority = auth_democratic
 		# Other Mods

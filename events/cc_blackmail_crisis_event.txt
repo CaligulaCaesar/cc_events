@@ -636,52 +636,26 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	
-	
-		if = {
-			limit = {
-				any_owned_leader = {
-					leader_class = scientist
-					is_researching_area = physics
-				}
-			}
-			random_owned_leader = {
-				limit = {
-					leader_class = scientist
-					is_researching_area = physics
-				}
-				save_event_target_as = cc_first_scientist
-			}
+		random_owned_leader = {
+			limit = { leader_class = scientist }
+			save_event_target_as = cc_first_scientist
 		}
-		if = {
+		random_owned_leader = {
 			limit = {
-				any_owned_leader = {
-					leader_class = scientist
-					is_researching_area = society
-				}
+				leader_class = scientist
+				NOT = { is_same_value = event_target:cc_first_scientist }
 			}
-			random_owned_leader = {
-				limit = {
-					leader_class = scientist
-					is_researching_area = society
-				}
-				save_event_target_as = cc_second_scientist
-			}
+			save_event_target_as = cc_second_scientist
 		}
-		if = {
+		random_owned_leader = {
 			limit = {
-				any_owned_leader = {
-					leader_class = scientist
-					is_researching_area = engineering
+				leader_class = scientist
+				NOR = {
+					is_same_value = event_target:cc_first_scientist
+					is_same_value = event_target:cc_second_scientist
 				}
 			}
-			random_owned_leader = {
-				limit = {
-					leader_class = scientist
-					is_researching_area = engineering
-				}
-				save_event_target_as = cc_third_scientist
-			}
+			save_event_target_as = cc_third_scientist
 		}
 	}
 			
