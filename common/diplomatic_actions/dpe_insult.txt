@@ -28,6 +28,14 @@ action_insult = {
 	should_show_auto_accept_message_recipient = yes
 	action_type = aggressive
 
+	potential = {
+		hidden_trigger = {
+			from = {
+				NOT = { is_country_type = mirrored_country }
+			}
+		}
+	}
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_poor_or_worse_opinion"
@@ -56,6 +64,12 @@ action_insult = {
 	}
 
 	on_accept = {
+		from = {
+			add_trust = {
+				amount = -5
+				who = root
+			}
+		}
 		if = {
 			limit = {
 				has_technology = tech_satisfying_insults
@@ -67,6 +81,7 @@ action_insult = {
 			}
 			add_resource = { influence = 50}
 			country_event = { id = fircon.20 days = 1800 }
+			#### DPE
 			set_timed_relation_flag = { flag = dpe_insult who = from days = 3 }
 			from = { country_event = { id = dpe_hw_duel.1 } }
 		}
