@@ -141,7 +141,7 @@ country_event = {
 						is_country_type = default
 						has_communications = prev
 						has_ethic = ethic_gestalt_consciousness
-						has_authority = auth_hive_mind
+						is_hive_empire = yes
 						NOR = {
 							is_at_war_with = prev
 #							is_hostile_to = prev
@@ -165,7 +165,7 @@ country_event = {
 						is_country_type = default
 						has_communications = prev
 						has_ethic = ethic_gestalt_consciousness
-						has_authority = auth_hive_mind
+						is_hive_empire = yes
 						NOR = {
 							is_at_war_with = prev
 #							is_hostile_to = prev
@@ -192,7 +192,7 @@ country_event = {
 						is_country_type = default
 						has_communications = prev
 						has_ethic = ethic_gestalt_consciousness
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 						NOR = {
 							is_at_war_with = prev
 #									is_hostile_to = prev
@@ -492,11 +492,11 @@ country_event = {
 	title = dpe_spiritualist_mission.3.name
 	
 	desc = {
-		trigger = { has_authority = auth_hive_mind }
+		trigger = { is_hive_empire = yes }
 		text = dpe_spiritualist_mission.3.desc.hive
 	}
 	desc = {
-		trigger = { has_authority = auth_machine_intelligence }
+		trigger = { is_machine_empire = yes }
 		text = dpe_spiritualist_mission.3.desc.machine
 	}
 	
@@ -531,7 +531,7 @@ country_event = {
 		}
 
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { has_civic = civic_hive_devouring_swarm }
 		}
 	}
@@ -552,7 +552,7 @@ country_event = {
 		}
 		
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { has_civic = civic_hive_devouring_swarm }
 		}
 		allow = {
@@ -577,7 +577,7 @@ country_event = {
 	option = {
 		name = dpe_spiritualist_mission.3.option.machine
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { has_civic = civic_machine_terminator }
 		}
 		

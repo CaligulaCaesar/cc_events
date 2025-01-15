@@ -103,11 +103,11 @@ country_event = {
 		text = dpe_diplo.1.desc
 	}
 	desc = {
-		trigger = { event_target:enemy = { has_authority = auth_machine_intelligence } }
+		trigger = { event_target:enemy = { is_machine_empire = yes } }
 		text = dpe_diplo.1.desc.machine
 	}
 	desc = {
-		trigger = { event_target:enemy = { has_authority = auth_hive_mind } }
+		trigger = { event_target:enemy = { is_hive_empire = yes } }
 		text = dpe_diplo.1.desc.hive
 	}
 	
@@ -672,11 +672,11 @@ country_event = {
 		text = dpe_diplo.5.desc
 	}
 	desc = {
-		trigger = { has_authority = auth_machine_intelligence }
+		trigger = { is_machine_empire = yes }
 		text = dpe_diplo.5.desc.machine
 	}
 	desc = {
-		trigger = { has_authority = auth_hive_mind }
+		trigger = { is_hive_empire = yes }
 		text = dpe_diplo.5.desc.hive
 	}
 	picture = GFX_evt_exploding_ship
@@ -1072,11 +1072,11 @@ country_event = {
 	id = dpe_diplo.7
 	title = dpe_diplo.7.name
 	desc = {
-		trigger = { NOT = { has_authority = auth_machine_intelligence } }
+		trigger = { NOT = { is_machine_empire = yes } }
 		text = dpe_diplo.7.desc
 	}
 	desc = {
-		trigger = { has_authority = auth_machine_intelligence }
+		trigger = { is_machine_empire = yes }
 		text = dpe_diplo.7.desc.machine
 	}
 	
@@ -1302,7 +1302,7 @@ country_event = {
 				FROM = { 
 					NOR = {
 						is_species_class = ROBOT
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 				}
 			}
@@ -1316,7 +1316,7 @@ country_event = {
 				FROM = {
 					OR = {
 						is_species_class = ROBOT
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 				}
 			}
@@ -1360,7 +1360,7 @@ country_event = {
 			event_target:enemy = {
 				OR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 				NOR = {
 					has_ai_personality = exterminators
@@ -1376,13 +1376,13 @@ country_event = {
 			event_target:enemy = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
-					has_authority = auth_hive_mind
+					is_machine_empire = yes
+					is_hive_empire = yes
 				}
 				FROM = {
 					OR = {
 						is_species_class = ROBOT
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 				}
 			}
@@ -1429,7 +1429,7 @@ country_event = {
 					ROOT = {
 						NOR = {
 							is_species_class = ROBOT
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
 						}
 					}
 				}
@@ -1443,17 +1443,17 @@ country_event = {
 							is_xenophobe = yes
 						}
 					}
-					NOT = { has_authority = auth_hive_mind }
+					NOT = { is_hive_empire = yes }
 				}
 				AND = {
 					FROM = {
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 						is_fallen_empire_machine = no
 					}
 					ROOT = {
 						NOR = {
 							is_species_class = ROBOT
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
 						}
 					}
 				}
@@ -1469,7 +1469,7 @@ country_event = {
 				NOT = { has_ai_personality = fanatic_purifiers }
 			}
 			NOR = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_species_class = ROBOT
 			}
 		}
@@ -1486,7 +1486,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1518,7 +1518,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1532,7 +1532,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1549,7 +1549,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1566,7 +1566,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1583,7 +1583,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1596,7 +1596,7 @@ country_event = {
 				has_ai_personality = hive_mind
 			}
 			NOR = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_species_class = ROBOT
 			}
 		}
@@ -1608,7 +1608,7 @@ country_event = {
 				has_ai_personality = devouring_swarm
 			}
 			NOR = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_species_class = ROBOT
 			}
 		}
@@ -1620,7 +1620,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1632,7 +1632,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1644,7 +1644,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1653,7 +1653,7 @@ country_event = {
 	desc = {
 		trigger = {
 			FROM = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_fallen_empire_machine = no
 				NOR = {
 					has_ai_personality = assimilators
@@ -1664,7 +1664,7 @@ country_event = {
 			ROOT = {
 				NOR = {
 					is_species_class = ROBOT
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -1674,11 +1674,11 @@ country_event = {
 		trigger = {
 			FROM = {
 				NOR = {
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 					is_species_class = ROBOT
 				}
 			}
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 		text = ORG_TO_MECH_DOW_PROPOSE_02
 	}

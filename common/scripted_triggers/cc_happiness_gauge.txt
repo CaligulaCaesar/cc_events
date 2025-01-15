@@ -10,7 +10,7 @@ cc_has_happiness = {
 			has_trait = trait_mechanical
 			OR = {
 				NOT = { exists = owner }
-				owner = { has_authority = auth_machine_intelligence }
+				owner = { is_machine_empire = yes }
 				owner = { NOT = { has_technology = tech_synthetic_workers } }
 				owner = { has_policy_flag = ai_outlawed }
 			}
@@ -19,7 +19,7 @@ cc_has_happiness = {
 			has_trait = trait_cybernetic
 			exists = owner
 			owner = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				has_civic = civic_machine_assimilator # Assimilator empire
 			}
 		}

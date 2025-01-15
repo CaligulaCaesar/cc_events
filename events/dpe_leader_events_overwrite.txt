@@ -160,11 +160,11 @@ country_event = {
 	id = leader.91
 	title = "leader.1.name"
 	desc = {
-		trigger = { has_authority = auth_hive_mind }
+		trigger = { is_hive_empire = yes }
 		text = "leader.1.desc.hive"
 	}
 	desc = {
-		trigger = { has_authority = auth_machine_intelligence }
+		trigger = { is_machine_empire = yes }
 		text = "leader.1.desc.machine"
 	}
 	picture = GFX_evt_federation_fleet

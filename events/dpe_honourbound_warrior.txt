@@ -342,8 +342,8 @@ country_event = {
 				is_fallen_empire = yes
 				has_ethic = ethic_fanatic_xenophobe
 				has_valid_civic = civic_hive_devouring_swarm
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
+				is_hive_empire = yes
+				is_machine_empire = yes
 			}
 		}
 
@@ -445,7 +445,7 @@ country_event = {
 		}
 
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { 
 				has_valid_civic = civic_hive_devouring_swarm
 			}
@@ -464,7 +464,7 @@ country_event = {
 		}
 
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 	}
 
@@ -498,7 +498,7 @@ country_event = {
 						}
 					}
 				}
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_fallen_empire = yes
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_fanatic_purifiers
@@ -518,7 +518,7 @@ country_event = {
 		}
 
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_terminator }
 		}
 	}
@@ -733,8 +733,8 @@ country_event = {
 					is_fallen_empire = yes
 					has_ethic = ethic_fanatic_xenophobe
 					has_valid_civic = civic_hive_devouring_swarm
-					has_authority = auth_hive_mind
-					has_authority = auth_machine_intelligence
+					is_hive_empire = yes
+					is_machine_empire = yes
 				}
 			}
 		}
@@ -768,7 +768,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 		text = dpe_hw_duel.4.desc.machine
@@ -776,7 +776,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				has_authority = auth_hive_mind
+				is_hive_empire = yes
 				NOT = { has_valid_civic = civic_hive_devouring_swarm }
 			}
 		}
@@ -2576,28 +2576,28 @@ country_event = {
 	title = dpe_hw_duel.60.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.60.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.60.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.60.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.60.desc.machine.no_leader
@@ -2712,28 +2712,28 @@ country_event = {
 	title = dpe_hw_duel.61.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.61.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.61.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.61.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.61.desc.machine.no_leader
@@ -2955,28 +2955,28 @@ country_event = {
 	title = dpe_hw_duel.63.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.63.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.63.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.63.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.63.desc.machine.no_leader
@@ -3052,28 +3052,28 @@ country_event = {
 	title = dpe_hw_duel.64.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.64.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.64.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.64.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.64.desc.machine.no_leader
@@ -3160,28 +3160,28 @@ country_event = {
 	title = dpe_hw_duel.65.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.65.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.65.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.65.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.65.desc.machine.no_leader
@@ -3261,28 +3261,28 @@ country_event = {
 	title = dpe_hw_duel.66.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.66.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.66.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.66.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.66.desc.machine.no_leader
@@ -3370,28 +3370,28 @@ country_event = {
 	title = dpe_hw_duel.67.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.67.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.67.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.67.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.67.desc.machine.no_leader
@@ -3490,28 +3490,28 @@ country_event = {
 	title = dpe_hw_duel.68.name	
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.68.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_hive_mind }
+			from = { is_hive_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.68.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			has_country_flag = dpe_hw_duel_leader
 		}
 		text = dpe_hw_duel.68.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			from = { has_authority = auth_machine_intelligence }
+			from = { is_machine_empire = yes }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.68.desc.machine.no_leader
@@ -3605,28 +3605,28 @@ country_event = {
 	title = dpe_hw_duel.70.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.70.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.70.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.70.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.70.desc.machine.no_leader
@@ -3738,28 +3738,28 @@ country_event = {
 	title = dpe_hw_duel.71.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.71.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.71.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.71.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.71.desc.machine.no_leader
@@ -3922,28 +3922,28 @@ country_event = {
 	title = dpe_hw_duel.73.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.73.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.73.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.73.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.73.desc.machine.no_leader
@@ -4055,28 +4055,28 @@ country_event = {
 	title = dpe_hw_duel.74.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.74.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.74.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.74.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.74.desc.machine.no_leader
@@ -4188,28 +4188,28 @@ country_event = {
 	title = dpe_hw_duel.75.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.75.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.75.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.75.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.75.desc.machine.no_leader
@@ -4349,28 +4349,28 @@ country_event = {
 	title = dpe_hw_duel.76.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.76.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.76.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.76.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.76.desc.machine.no_leader
@@ -4481,28 +4481,28 @@ country_event = {
 	title = dpe_hw_duel.77.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.77.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.77.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.77.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.77.desc.machine.no_leader
@@ -4613,28 +4613,28 @@ country_event = {
 	title = dpe_hw_duel.78.name	
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.78.desc.hive.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.78.desc.hive.no_leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.78.desc.machine.leader
 	}
 	desc = {
 		trigger = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			NOT = { from = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.78.desc.machine.no_leader

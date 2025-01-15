@@ -44,7 +44,7 @@ country_event = {
 				has_ethic = ethic_fanatic_spiritualist
 				has_ethic = ethic_fanatic_xenophile
 				has_ethic = ethic_fanatic_xenophobe
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 		NOT = { any_neighbor_country = { is_country_type = awakened_fallen_empire } }
@@ -86,7 +86,7 @@ country_event = {
 		random_neighbor_country = {
 			limit = {
 				is_country_type = fallen_empire
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 			save_event_target_as = dpe_machine_fe
 		}

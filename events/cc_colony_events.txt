@@ -3488,7 +3488,7 @@ planet_event = {
 				any_relation = {
 					NOR = {
 						is_same_species = prev
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 					OR = {
 						has_defensive_pact = prev
@@ -3514,7 +3514,7 @@ planet_event = {
 					limit = {
 						NOR = {
 							is_same_species = prev
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
 						}
 						OR = {
 							has_defensive_pact = prev
@@ -3621,7 +3621,7 @@ planet_event = {
 				any_relation = {
 					NOR = {
 						is_same_species = prev
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 					OR = {
 						has_defensive_pact = prev
