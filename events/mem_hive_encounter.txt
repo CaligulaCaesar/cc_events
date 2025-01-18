@@ -847,6 +847,7 @@ country_event = {
 		random_owned_leader = {
 			limit = {
 				leader_class = scientist
+                is_head_of_research = yes
 			}
 			save_event_target_as = mem_hive_encounter_leader
 		}
