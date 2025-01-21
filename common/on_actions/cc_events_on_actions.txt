@@ -180,6 +180,8 @@ on_war_lost = {
 # FromFromFrom = fleet 2
 on_fleet_destroyed_perp = {
 	random_events = { #adds up to about a 10% chance
-		32 = leader.1
+		# 32 = leader.1
+		#adds up to about a 2.5% chance
+		8 = leader.1
 	}
 }
