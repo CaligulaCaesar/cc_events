@@ -821,7 +821,7 @@ country_event = { # Leader Debates
 	trigger = {
 		is_country_type = default
 		OR = {
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_oligarchic_authority = yes
 		}
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
@@ -1697,7 +1697,7 @@ country_event = { # Egalitarian Mission
 			has_country_flag = dpe_has_recent_egalitarian_mission
 			has_country_flag = dpe_provided_with_egalitarian_mission
 			has_ethic = ethic_gestalt_consciousness
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_egalitarian = yes
 			has_ethic = ethic_fanatic_authoritarian
 		}
@@ -1706,7 +1706,7 @@ country_event = { # Egalitarian Mission
 		any_relation = {
 			is_country_type = default
 			
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			has_faction = progressive
 			# is_egalitarian = yes
 			OR = {

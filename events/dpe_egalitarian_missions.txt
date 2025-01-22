@@ -18,7 +18,7 @@ country_event = {
 			has_country_flag = dpe_has_recent_egalitarian_mission
 			has_country_flag = dpe_provided_with_egalitarian_mission
 			has_ethic = ethic_gestalt_consciousness
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_egalitarian = yes
 			has_ethic = ethic_fanatic_authoritarian
 		}
@@ -27,7 +27,7 @@ country_event = {
 		any_relation = {
 			is_country_type = default
 			
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			has_faction = progressive
 #			OR = {
 #				has_ethic = ethic_egalitarian
@@ -58,7 +58,7 @@ country_event = {
 			limit = {
 				is_country_type = default
 				
-				is_democratic_authority =yes
+				is_democratic_authority = yes
 				has_faction = progressive
 #				OR = {
 #					has_ethic = ethic_egalitarian
@@ -916,7 +916,7 @@ country_event = {
 		}
 		every_relation = {
 			limit = {
-				is_democratic_authority =yes
+				is_democratic_authority = yes
 				is_egalitarian = yes
 			}
 			add_opinion_modifier = {
@@ -1113,7 +1113,7 @@ country_event = {
 		}
 		every_relation = {
 			limit = {
-				is_democratic_authority =yes
+				is_democratic_authority = yes
 				is_egalitarian = yes
 			}
 			add_opinion_modifier = {
@@ -1191,7 +1191,7 @@ country_event = {
 	
 	trigger = {
 		NOR = {
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_egalitarian = yes
 			has_ethic = ethic_fanatic_authoritarian
 		}

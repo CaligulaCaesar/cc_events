@@ -131,7 +131,7 @@ defined_text = {
 defined_text = {
 	name = GetGovtBuilding
 	text = {
-		trigger = { is_democratic_authority =yes }
+		trigger = { is_democratic_authority = yes }
 		localization_key = ccloc_democracy_building
 	}
 	text = {
@@ -141,7 +141,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOR = {
-				is_democratic_authority =yes
+				is_democratic_authority = yes
 				is_oligarchic_authority = yes
 			}
 		}

@@ -84,7 +84,7 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		OR = {
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_oligarchic_authority = yes
 		}
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
@@ -103,7 +103,7 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					is_democratic_authority =yes
+					is_democratic_authority = yes
 					is_oligarchic_authority = yes
 				}
 				NOT = { has_country_flag = dpe_recent_ruler_debate }

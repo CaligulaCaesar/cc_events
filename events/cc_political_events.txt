@@ -38,7 +38,7 @@ country_event = {
 				if = {
 					limit = {
 						OR = {
-							is_democratic_authority =yes
+							is_democratic_authority = yes
 							is_oligarchic_authority = yes
 							is_dictatorial_authority = yes
 						}
@@ -106,7 +106,7 @@ country_event = {
 		
 		has_faction = xenoist
 		OR = {
-			is_democratic_authority =yes
+			is_democratic_authority = yes
 			is_oligarchic_authority = yes
 			is_dictatorial_authority = yes
 		}
