@@ -1,77 +1,7 @@
 
-is_megacorp = {
-	optimize_memory
-	OR = {
-		has_authority = auth_corporate
-		has_government = gov_imperial_domain_megacorp
-		# Other Mods
-		has_authority = auth_corporate_imperial
-		has_authority = auth_corporate_democratic
-		has_authority = auth_bugged_corporate_democratic
-		has_authority = auth_cooperative
-		has_authority = auth_corporate_fiefdom
-		has_authority = auth_tec_patrocorporate
-		has_authority = auth_tec_ai_corporate
-		has_authority = auth_private
-	}
-}
-
-is_dictatorial_authority ={
-	optimize_memory
-	OR = {
-		has_authority = auth_dictatorial
-		# Other Mods
-		AND = {
-			has_authority = auth_dict_democratic
-			is_egalitarian = no
-		}
-	}
-}
-
-is_imperial_authority ={ #Has Heir
-	optimize_memory
-	OR = {
-		has_authority = auth_imperial
-		# Other Mods
-		has_authority = auth_corporate_imperial
-		has_authority = auth_corporate_fiefdom
-		has_authority = auth_tec_patrocorporate
-		has_authority = auth_bugged_corporate_imperial
-		has_authority = auth_private
-	}
-}
-
-is_autocracy = { #Power of one
-	optimize_memory
-	OR = {
-		is_gestalt = yes
-		is_imperial_authority =yes
-		is_dictatorial_authority =yes
-	}
-}
-
 is_imp_or_dict = { #Power of one
-	optimize_memory
 	OR = {
-		is_imperial_authority =yes
-		is_dictatorial_authority =yes
-	}
-}
-
-is_democratic_authority ={ #Power of many
-	optimize_memory
-	OR = {
-		has_authority = auth_democratic
-		# Other Mods
-		has_authority = auth_direct_democratic
-		has_authority = auth_bugged_direct_democratic
-		has_authority = auth_bugged_corporate_democratic
-		has_authority = auth_corporate_democratic
-		has_authority = auth_cooperative
-		has_authority = auth_strict_democratic
-		AND = {
-			has_authority = auth_dict_democratic
-			is_egalitarian = yes
-		}
+		is_imperial_authority = yes
+		is_dictatorial_authority = yes
 	}
 }

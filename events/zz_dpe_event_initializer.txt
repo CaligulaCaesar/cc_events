@@ -1199,7 +1199,7 @@ country_event = { # Royal Marriage
 	is_triggered_only = yes
 	
 	trigger = {
-		is_imperial_authority =yes
+		is_imperial_authority = yes
 		is_xenophile = yes
 		has_faction = xenoist
 		exists = ruler #should always be true, but just in case
@@ -1220,7 +1220,7 @@ country_event = { # Royal Marriage
 				has_defensive_pact = root
 				is_in_federation_with = root
 			}
-			is_imperial_authority =yes
+			is_imperial_authority = yes
 			NOR = {
 				has_relation_flag = {
 					who = root

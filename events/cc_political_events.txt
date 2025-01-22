@@ -40,13 +40,13 @@ country_event = {
 						OR = {
 							is_democratic_authority =yes
 							is_oligarchic_authority = yes
-							is_dictatorial_authority =yes
+							is_dictatorial_authority = yes
 						}
 					}
 					country_event = { id = cc_events_mod.1 }
 				}
 				if = {
-					limit = { is_imperial_authority =yes }
+					limit = { is_imperial_authority = yes }
 					country_event = { id = cc_events_mod.2 }
 				}
 				modifier = {
@@ -108,7 +108,7 @@ country_event = {
 		OR = {
 			is_democratic_authority =yes
 			is_oligarchic_authority = yes
-			is_dictatorial_authority =yes
+			is_dictatorial_authority = yes
 		}
 		NOT = { has_country_flag = recent_xenophobic_comments }
 		NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -210,7 +210,7 @@ country_event = {
 				factor = 0
 				OR = {
 					is_xenophobe = yes
-					is_dictatorial_authority =yes
+					is_dictatorial_authority = yes
 				}
 			}
 		}
@@ -365,7 +365,7 @@ country_event = {
 		is_country_type = default
 		
 		has_faction = xenoist
-		is_imperial_authority =yes
+		is_imperial_authority = yes
 		NOR = {
 			has_country_flag = recent_xenophobic_comments
 			has_ethic = ethic_gestalt_consciousness
@@ -712,7 +712,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				is_imperial_authority =yes
+				is_imperial_authority = yes
 				has_modifier = cc_ruler_cult
 				NOT = { has_country_flag = cc_permanent_ruler_cult }
 			}
