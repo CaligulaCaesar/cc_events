@@ -20,18 +20,14 @@ country_event = {
 		
 		OR = {
 			is_spiritualist = yes
-			# count_pop_faction = {
-			# 	limit = {
-			# 		is_pop_faction_type = traditionalist
-			# 		support > 0.15
-			# 		faction_approval > 0.6
-			# 	}
-			# 	count = 1
-			# }
+			any_pop_faction = {
+				is_spiritualist_faction = yes
+				support > 0.15
+				faction_approval > 0.6
+			}
 		}
-		NOR = { #just in case
-			is_materialist = yes
-		}
+		is_materialist = no #just in case
+			
 		
 		any_neighbor_country = {
 			is_country_type = default
@@ -1953,6 +1949,10 @@ country_event = {
 			event_target:dpe_mission_host_planet = {
 				remove_modifier = dpe_hosting_spiritualist_mission_planet
 			}
+		}
+
+		hidden_effect = {
+			event_target:dpe_mission_host_planet = { remove_modifier = dpe_hosting_spiritualist_mission_planet }
 		}
 	}
 }

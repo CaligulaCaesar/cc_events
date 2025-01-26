@@ -1,0 +1,15 @@
+
+is_imp_or_dict = { #Power of one
+	OR = {
+		is_imperial_authority = yes
+		is_dictatorial_authority = yes
+	}
+}
+
+is_spiritualist_faction = {
+	OR = {
+		is_pop_faction_type = traditionalist
+		is_pop_faction_type = crusader					# Divided Loyalties
+		is_pop_faction_type = shepherd					# Divided Loyalties
+	}
+}
