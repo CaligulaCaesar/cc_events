@@ -2979,6 +2979,10 @@ country_event = {
 					limit = { has_modifier = dpe_spirmission_major_mission }
 					remove_modifier = dpe_spirmission_major_mission
 				}
+				event_target:dpe_mission_host_planet = {
+					remove_modifier = dpe_hosting_spiritualist_mission_planet
+					remove_planet_flag = dpe_hosting_spiritualist_mission_planet@root
+				}
 				country_event = { id = dpe_spiritualist_mission.102 }
 			}
 		}
