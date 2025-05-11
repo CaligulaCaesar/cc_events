@@ -887,7 +887,7 @@
 # 					factor = 2
 # 					event_target:mem_dpe_primitive_civ = {
 # 						NOT = {
-# 							any_owned_pop = {
+# 							any_owned_pop_group = {
 # 								OR = {
 # 									has_ethic = ethic_pacifist
 # 									has_ethic = ethic_xenophile
@@ -900,14 +900,14 @@
 # 					factor = 0
 # 					event_target:mem_dpe_primitive_civ = {
 # 						NOT = {
-# 							any_owned_pop = {
+# 							any_owned_pop_group = {
 # 								OR = {
 # 									has_ethic = ethic_militarist
 # 									has_ethic = ethic_xenophobe
 # 								}
 # 							}
 # 						}
-# 						any_owned_pop = {
+# 						any_owned_pop_group = {
 # 							OR = {
 # 								has_ethic = ethic_pacifist
 # 								has_ethic = ethic_xenophile
@@ -928,7 +928,7 @@
 # 					factor = 2
 # 					event_target:mem_dpe_primitive_civ = {
 # 						NOT = {
-# 							any_owned_pop = {
+# 							any_owned_pop_group = {
 # 								OR = {
 # 									has_ethic = ethic_militarist
 # 									has_ethic = ethic_xenophobe
@@ -1648,10 +1648,10 @@
 		# 		clear_blockers = yes
 		# 		while = {
 		# 			limit = { 
-		# 				num_pops < 8
+		# 				pop_amount < 800
 		# 				#free_housing > 0
 		# 			}
-		# 			create_pop = {
+		# 			create_pop_group = {
 		# 				species = owner
 		# 			}
 		# 		}

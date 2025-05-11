@@ -455,13 +455,13 @@ country_event = {
 			custom_tooltip = dpe_contraband_event.45.tooltip
 	
 			hidden_effect = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						has_citizenship_rights = yes
 						NOT = { has_ethic = ethic_authoritarian }
 						pop_has_happiness = yes
 					}
-					pop_event = { id = dpe_contraband_event.46 }
+					pop_group_event = { id = dpe_contraband_event.46 }
 				}
 			}
 		}
@@ -538,13 +538,13 @@ country_event = {
 		custom_tooltip = dpe_contraband_event.45.tooltip
 
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					has_citizenship_rights = yes
 					NOT = { has_ethic = ethic_authoritarian }
 					pop_has_happiness = yes
 				}
-				pop_event = { id = dpe_contraband_event.46 }
+				pop_group_event = { id = dpe_contraband_event.46 }
 			}
 		}
 
@@ -565,7 +565,7 @@ country_event = {
 	}
 }
 
-pop_event = {
+pop_group_event = {
 	id = dpe_contraband_event.46
 	hide_window = yes
 	is_triggered_only = yes

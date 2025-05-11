@@ -49,7 +49,7 @@ cc_thought_police = {
 		modifier = {
 			factor = 2
 			has_policy_flag = slavery_allowed
-			any_owned_pop = { is_enslaved = yes }
+			any_owned_pop_group = { is_enslaved = yes }
 		}	
 		modifier = {
 			factor = 2

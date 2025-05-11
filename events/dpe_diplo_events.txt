@@ -387,12 +387,12 @@ country_event = {
 			every_owned_planet = {
 				limit = {
 					is_neighbor_of = event_target:enemy
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 9
+						count > 900
 					}
 				}
 				if = {
@@ -470,12 +470,12 @@ country_event = {
 			every_owned_planet = {
 				limit = {
 					is_neighbor_of = event_target:enemy
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 9
+						count > 900
 					}
 				}
 				set_timed_planet_flag = {
@@ -523,12 +523,12 @@ planet_event = {
 				}
 			}
 		}
-		count_owned_pop = {
+		count_owned_pop_amount = {
 			limit = {
 				has_ethic = ethic_militarist
 				has_citizenship_rights = yes
 			}
-			count > 9
+			count > 900
 		}
 	}
 	
@@ -556,12 +556,12 @@ planet_event = {
 				}
 				modifier = {
 					factor = 2
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_militarist
 						}
-						count > 15
+						count > 1500
 					}
 				}
 			}

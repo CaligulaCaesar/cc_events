@@ -13,7 +13,7 @@ planet_event = {
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
 		NOT = { has_planet_flag = cc_colony_story }
-		any_owned_pop = {
+		any_owned_pop_group = {
 			pop_has_happiness = yes
 			is_enslaved = no
 			has_citizenship_rights = yes
@@ -35,7 +35,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_militarist } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_militarist } }
 				}
 				modifier = {
 					factor = 0.5
@@ -70,7 +70,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_pacifist } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_pacifist } }
 				}
 				modifier = {
 					factor = 0.5
@@ -129,7 +129,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_xenophile } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_xenophile } }
 				}
 				modifier = {
 					factor = 0.5
@@ -164,7 +164,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_xenophobe } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_xenophobe } }
 				}
 				modifier = {
 					factor = 0.5
@@ -215,7 +215,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_spiritualist } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_spiritualist } }
 				}
 				modifier = {
 					factor = 0.5
@@ -250,7 +250,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_materialist } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_materialist } }
 				}
 				modifier = {
 					factor = 0.5
@@ -285,7 +285,7 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.5
-					NOT = { any_owned_pop = { has_ethic = ethic_authoritarian } }
+					NOT = { any_owned_pop_group = { has_ethic = ethic_authoritarian } }
 				}
 				modifier = {
 					factor = 0.5
@@ -321,7 +321,7 @@ planet_event = {
 				modifier = {
 					factor = 0.5
 					NOT = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_ethic = ethic_egalitarian
 						}
 					}
@@ -433,7 +433,7 @@ planet_event = {
 	
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -445,7 +445,7 @@ planet_event = {
 			}
 		}
 		else = {
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { pop_has_happiness = yes }
 				save_event_target_as = cc_leader_pop
 			}
@@ -815,7 +815,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_militarist }
 			add_modifier = {
 				modifier = cc_oppression
@@ -940,7 +940,7 @@ planet_event = {
 		name = cc_colony_events.231.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -972,7 +972,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -1003,7 +1003,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -1189,7 +1189,7 @@ planet_event = {
 		
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -1533,7 +1533,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_pacifist }
 			add_modifier = {
 				modifier = cc_oppression
@@ -1650,7 +1650,7 @@ planet_event = {
 		name = cc_colony_events.331.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -1682,7 +1682,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -1724,7 +1724,7 @@ planet_event = {
 					min_distance >= 0
 					max_distance <= 75
 				}
-				any_owned_pop = { has_ethic = ethic_pacifist }
+				any_owned_pop_group = { has_ethic = ethic_pacifist }
 			}
 			has_faction = prosperity
 		}
@@ -1808,7 +1808,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = { has_ethic = ethic_pacifist }
+					any_owned_pop_group = { has_ethic = ethic_pacifist }
 				}
 				add_modifier = {
 					modifier = cc_pacifist_leader_visit
@@ -1848,7 +1848,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = { has_ethic = ethic_pacifist }
+					any_owned_pop_group = { has_ethic = ethic_pacifist }
 				}
 				save_event_target_as = random_visit_planet
 			}
@@ -2204,7 +2204,7 @@ planet_event = {
 		
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -2538,7 +2538,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_xenophile }
 			add_modifier = {
 				modifier = cc_oppression
@@ -2655,7 +2655,7 @@ planet_event = {
 		name = cc_colony_events.431.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -2687,7 +2687,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -2923,9 +2923,9 @@ planet_event = {
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
-				set_pop_flag = cc_xenophobe_species
+				set_pop_group_flag = cc_xenophobe_species
 			}
 		}
 		
@@ -2960,9 +2960,9 @@ planet_event = {
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
-				set_pop_flag = cc_xenophobe_species
+				set_pop_group_flag = cc_xenophobe_species
 			}
 		}
 		
@@ -3158,9 +3158,9 @@ planet_event = {
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
-				set_pop_flag = cc_xenophobe_species
+				set_pop_group_flag = cc_xenophobe_species
 			}
 		}
 		
@@ -3224,9 +3224,9 @@ planet_event = {
 			}
 			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
-				set_pop_flag = cc_xenophobe_species
+				set_pop_group_flag = cc_xenophobe_species
 			}
 		}
 		
@@ -3283,7 +3283,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_xenophobe }
 			add_modifier = {
 				modifier = cc_oppression
@@ -3403,7 +3403,7 @@ planet_event = {
 		name = cc_colony_events.531.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -3435,7 +3435,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -3470,7 +3470,7 @@ planet_event = {
 					min_distance >= 0
 					max_distance <= 75
 				}
-				any_owned_pop = {
+				any_owned_pop_group = {
 					has_ethic = ethic_xenophobe
 					is_same_species = root.owner
 				}
@@ -3603,7 +3603,7 @@ planet_event = {
 					min_distance >= 0
 					max_distance <= 75
 				}
-				any_owned_pop = {
+				any_owned_pop_group = {
 					has_ethic = ethic_xenophobe
 					is_same_species = root.owner
 				}
@@ -3666,7 +3666,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -3697,7 +3697,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -3873,7 +3873,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -4271,7 +4271,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -4374,7 +4374,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -4468,7 +4468,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_xenophobe
 						is_same_species = root.owner
 					}
@@ -4776,20 +4776,20 @@ planet_event = {
 }
 
 #formerly on_pop_migration_end (now completely unused)
-pop_event = {
+pop_group_event = {
 	id = cc_colony_events.552
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		has_pop_flag = cc_xenophobe_species
+		has_pop_group_flag = cc_xenophobe_species
 		owner = { NOT = { is_same_species = root } }
 	}
 	
 	immediate = {
 		if = {
-			limit = { has_pop_flag = cc_xenophobe_species }
-			remove_pop_flag = cc_xenophobe_species
+			limit = { has_pop_group_flag = cc_xenophobe_species }
+			remove_pop_group_flag = cc_xenophobe_species
 		}
 	}
 }
@@ -4848,7 +4848,7 @@ planet_event = {
 		
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -5192,7 +5192,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_spiritualist }
 			add_modifier = {
 				modifier = cc_oppression
@@ -5309,7 +5309,7 @@ planet_event = {
 		name = cc_colony_events.631.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -5341,7 +5341,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -5383,7 +5383,7 @@ planet_event = {
 					min_distance >= 0
 					max_distance <= 75
 				}
-				any_owned_pop = { has_ethic = ethic_spiritualist }
+				any_owned_pop_group = { has_ethic = ethic_spiritualist }
 			}
 			has_faction = traditionalist
 		}
@@ -5467,7 +5467,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = { has_ethic = ethic_spiritualist }
+					any_owned_pop_group = { has_ethic = ethic_spiritualist }
 				}
 				add_modifier = {
 					modifier = cc_spiritualist_leader_visit
@@ -5507,7 +5507,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = { has_ethic = ethic_spiritualist }
+					any_owned_pop_group = { has_ethic = ethic_spiritualist }
 				}
 				save_event_target_as = random_visit_planet
 			}
@@ -5859,7 +5859,7 @@ planet_event = {
 		
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -6189,7 +6189,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_materialist }
 			add_modifier = {
 				modifier = cc_oppression
@@ -6306,7 +6306,7 @@ planet_event = {
 		name = cc_colony_events.731.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -6338,7 +6338,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -6559,7 +6559,7 @@ planet_event = {
 		
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -6969,7 +6969,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_authoritarian }
 			add_modifier = {
 				modifier = cc_oppression
@@ -7085,7 +7085,7 @@ planet_event = {
 		name = cc_colony_events.831.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -7117,7 +7117,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -7423,7 +7423,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_egalitarian }
 			add_modifier = {
 				modifier = cc_oppression
@@ -7542,7 +7542,7 @@ planet_event = {
 		name = CC_GOODIGUESS
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -7577,7 +7577,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -7670,7 +7670,7 @@ country_event = {
 							min_distance >= 0
 							max_distance <= 75
 						}
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 					}
 				}
 			}
@@ -7690,7 +7690,7 @@ country_event = {
 							min_distance >= 0
 							max_distance <= 75
 						}
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 					}	
 					NOT = {
 						any_owned_planet = {
@@ -7725,7 +7725,7 @@ country_event = {
 								min_distance >= 0
 								max_distance <= 75
 							}
-							any_owned_pop = { has_ethic = ethic_spiritualist }
+							any_owned_pop_group = { has_ethic = ethic_spiritualist }
 						}
 					}
 				}
@@ -7748,7 +7748,7 @@ country_event = {
 								min_distance >= 0
 								max_distance <= 75
 							}
-							any_owned_pop = { has_ethic = ethic_spiritualist }
+							any_owned_pop_group = { has_ethic = ethic_spiritualist }
 						}	
 						NOT = {
 							any_owned_planet = {
@@ -7828,7 +7828,7 @@ planet_event = {
 					min_distance >= 0
 					max_distance <= 75
 				}
-				any_owned_pop = { has_ethic = ethic_spiritualist }
+				any_owned_pop_group = { has_ethic = ethic_spiritualist }
 			}
 			NOT = {
 				any_owned_planet = {
@@ -7845,8 +7845,8 @@ planet_event = {
 		has_orbital_bombardment = no
 	
 		NOT = { has_planet_flag = cc_colony_story }
-		count_owned_pop = {
-			count > 9
+		count_owned_pop_amount = {
+			count > 900
 			limit = { has_ethic = ethic_spiritualist }
 		}
 		pop_percentage = {
@@ -7867,7 +7867,7 @@ planet_event = {
 		}
 		if = {
 			limit = {
-				any_owned_pop = { is_same_species = owner }
+				any_owned_pop_group = { is_same_species = owner }
 			}
 			owner = {
 				create_leader = {
@@ -8289,7 +8289,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 2
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_spiritualist }
 			add_modifier = {
 				modifier = cc_oppression
@@ -8402,7 +8402,7 @@ planet_event = {
 		name = cc_colony_events.631.option #deliberate
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 		}
@@ -8434,7 +8434,7 @@ planet_event = {
 		}
 		
 		remove_modifier = cc_planet_oppression
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_modifier = cc_oppression }
 			remove_modifier = cc_oppression
 			add_modifier = {
@@ -8476,7 +8476,7 @@ planet_event = {
 						min_distance >= 0
 						max_distance <= 75
 					}
-					any_owned_pop = { has_ethic = ethic_spiritualist }
+					any_owned_pop_group = { has_ethic = ethic_spiritualist }
 				}
 				add_modifier = {
 					modifier = cc_spiritualist_leader_visit

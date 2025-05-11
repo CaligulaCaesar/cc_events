@@ -30,7 +30,7 @@ dpe_entourage = {
 		weight = @specialist_job_weight
 		modifier = {
 			factor = 20
-			has_pop_flag = royal_entourage_pops
+			has_pop_group_flag = royal_entourage_pops
 		}
 		modifier = {
 			factor = 0.5
@@ -56,10 +56,10 @@ dpe_entourage = {
 			factor = 0.75
 			has_trait = trait_quarrelsome
 		} 
-		modifier = {
-			factor = 1.5
-			has_job = entertainer
-		}		
+		# modifier = {
+		# 	factor = 1.5
+		# 	has_job = entertainer
+		# }		
 		modifier = {
 			factor = 1.25
 			has_trait = trait_brainslug

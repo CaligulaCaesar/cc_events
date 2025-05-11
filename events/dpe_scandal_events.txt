@@ -48,7 +48,7 @@ country_event = {
 			count = 0
 		}
 
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_enslaved = no
 			is_being_purged = no
 			NOT = {
@@ -641,7 +641,7 @@ country_event = {
 
 		exists = ruler
 		
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_same_species = root.ruler
 			is_enslaved = yes
 		}

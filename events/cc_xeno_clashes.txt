@@ -15,9 +15,9 @@ planet_event = {
 			is_country_type = default
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
-		num_pops > 10
+		pop_amount > 1000
 		
-		any_owned_pop = { has_ethic = ethic_xenophobe }
+		any_owned_pop_group = { has_ethic = ethic_xenophobe }
 		pop_percentage = {
 			percentage > 0.2
 			limit = { has_ethic = ethic_xenophobe }
@@ -45,9 +45,9 @@ planet_event = {
 				has_citizenship_type = { country = root.owner type = citizenship_limited }
 			}
 			root = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = { is_same_species = prev }
-					count > 4
+					count > 400
 				}
 				any_owned_species = {
 					NOT = { is_same_species = prevprev }
@@ -58,9 +58,9 @@ planet_event = {
 						has_citizenship_type = { country = root.owner type = citizenship_limited }
 					}
 					root = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = { is_same_species = prev }
-							count > 4
+							count > 400
 						}
 					}
 				}
@@ -94,9 +94,9 @@ planet_event = {
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
 						}
 						root = {
-							count_owned_pop = {
+							count_owned_pop_amount = {
 								limit = { is_same_species = prev }
-								count > 10
+								count > 1000
 							}
 							any_owned_species = {
 								NOT = { is_same_species = prevprev }
@@ -107,9 +107,9 @@ planet_event = {
 									has_citizenship_type = { country = root.owner type = citizenship_limited }
 								}
 								root = {
-									count_owned_pop = {
+									count_owned_pop_amount = {
 										limit = { is_same_species = prev }
-										count > 10
+										count > 1000
 									}
 								}
 							}
@@ -168,9 +168,9 @@ planet_event = {
 								has_citizenship_type = { country = root.owner type = citizenship_limited }
 							}
 							root = {
-								count_owned_pop = {
+								count_owned_pop_amount = {
 									limit = { is_same_species = prev }
-									count > 4
+									count > 400
 								}
 								any_owned_species = {
 									NOT = { is_same_species = prevprev }
@@ -182,9 +182,9 @@ planet_event = {
 										has_citizenship_type = { country = root.owner type = citizenship_limited }
 									}
 									root = {
-										count_owned_pop = {
+										count_owned_pop_amount = {
 											limit = { is_same_species = prev }
-											count > 4
+											count > 400
 										}
 									}
 								}
@@ -207,9 +207,9 @@ planet_event = {
 								has_citizenship_type = { country = root.owner type = citizenship_limited }
 							}
 							root = {
-								count_owned_pop = {
+								count_owned_pop_amount = {
 									limit = { is_same_species = prev }
-									count > 4
+									count > 400
 								}
 							}
 						}
@@ -226,9 +226,9 @@ planet_event = {
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
 						}
 						root = {
-							count_owned_pop = {
+							count_owned_pop_amount = {
 								limit = { is_same_species = prev }
-								count > 4
+								count > 400
 							}
 						}
 					}
@@ -416,12 +416,12 @@ planet_event = {
 	trigger = {
 		planet_stability < @dpe_normal_unrest_value
 		is_owned_by = event_target:cc_owner
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
 		}
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 	}
@@ -459,7 +459,7 @@ planet_event = {
 					OR = {
 						is_xenophile = yes
 						
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = { is_same_species = prev }
 							has_citizenship_rights = no
 						}
@@ -551,8 +551,8 @@ planet_event = {
 					owner = {
 						any_owned_planet = {
 							NOT = { is_same_value = root }
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species2 } }
 							}
 						}
@@ -561,7 +561,7 @@ planet_event = {
 				owner = { country_event = { id = cc_xeno_clashes.31 days = 10 random = 10 } }
 			}
 			else = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { species = { is_same_value = event_target:species2 } }
 					add_modifier = {
 						modifier = cc_feels_unwelcome
@@ -623,12 +623,12 @@ planet_event = {
 				every_owned_planet = {
 					limit = {
 						NOT = { is_same_value = root }
-						count_owned_pop = {
-							count > 4
+						count_owned_pop_amount = {
+							count > 400
 							limit = { species = { is_same_value = event_target:species1 } }
 						}
-						count_owned_pop = {
-							count > 4
+						count_owned_pop_amount = {
+							count > 400
 							limit = { species = { is_same_value = event_target:species2 } }
 						}
 					}
@@ -728,23 +728,23 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species1 } }
 					}
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 					owner = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species1 } }
 							}
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species2 } }
 							}
 							owner = {
@@ -753,12 +753,12 @@ country_event = {
 										is_same_value = prevprev
 										is_same_value = prevprevprevprev
 									}
-									count_owned_pop = {
-										count > 4
+									count_owned_pop_amount = {
+										count > 400
 										limit = { species = { is_same_value = event_target:species1 } }
 									}
-									count_owned_pop = {
-										count > 4
+									count_owned_pop_amount = {
+										count > 400
 										limit = { species = { is_same_value = event_target:species2 } }
 									}
 								}
@@ -782,12 +782,12 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species1 } }
 				}
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species2 } }
 				}
 			}
@@ -799,7 +799,7 @@ country_event = {
 		
 		custom_tooltip = cc_xeno_clashes.31.tooltip
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { species = { is_same_value = event_target:species2 } }
 				add_modifier = {
 					modifier = cc_feels_unwelcome
@@ -808,12 +808,12 @@ country_event = {
 			}
 			every_owned_planet = {
 				limit = {
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species1 } }
 					}
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 				}
@@ -830,9 +830,9 @@ planet_event = {
 	
 	trigger = {
 		has_modifier = cc_planet_interspecies_tensions
-#		any_owned_pop = { species = { is_same_value = event_target:species1 } }
-		count_owned_pop = {
-			count > 4
+#		any_owned_pop_group = { species = { is_same_value = event_target:species1 } }
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		NOT = { has_planet_flag = cc_interspecies_incident }
@@ -842,11 +842,11 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				any_owned_pop = { species = { is_same_value = event_target:species1 } }
+				any_owned_pop_group = { species = { is_same_value = event_target:species1 } }
 			}
 			if = {
 				limit = {
-					num_pops < 20
+					pop_amount < 2000
 				}
 				random_list = {
 					1 = {
@@ -874,7 +874,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -946,7 +946,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -1026,9 +1026,9 @@ planet_event = {
 	
 	option = {
 		name = cc_xeno_clashes.32.option
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { species = { is_same_value = event_target:species1 } }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 25% }
 		}
 	}
 }
@@ -1065,16 +1065,16 @@ planet_event = {
 		}
 		while = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = { species = { is_same_value = event_target:species1 } }
-					count > 1
+					count > 100
 				}
 			}
 			count = 6
 			
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { species = { is_same_value = event_target:species1 } }
-				kill_pop = yes
+				kill_pop_group = { pop_group = this amount = 100% }
 			}
 		}
 	}
@@ -1182,12 +1182,12 @@ planet_event = {
 		owner = { species = { is_same_value = event_target:species1 } }
 		NOT = { owner = { has_country_flag = cc_interspecies_genocide } }
 		NOT = { has_planet_flag = cc_interspecies_incident }
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
 		}
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 	}
@@ -1208,9 +1208,9 @@ planet_event = {
 	option = {
 		name = UNFORTUNATE
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { species = { is_same_value = event_target:species1 } }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 		hidden_effect = { planet_event = { id = cc_xeno_clashes.371 days = 15 } }
 	}
@@ -1228,9 +1228,9 @@ planet_event = {
 	option = {
 		name = cc_xeno_clashes.371.A
 		
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { species = { is_same_value = event_target:species2 } }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 			
 			hidden_effect = {
 				every_country = {
@@ -1302,8 +1302,8 @@ planet_event = {
 						NOT = { has_country_flag = cc_xeno_clashes_militia_formed }
 						any_owned_planet = {
 							NOT = { is_same_value = root }
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species2 } }
 							}
 						}
@@ -1414,23 +1414,23 @@ country_event = {
 				NOT = { has_modifier = cc_empire_interspecies_tensions }
 				
 				any_owned_planet = {
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species1 } }
 					}
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 					owner = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species1 } }
 							}
-							count_owned_pop = {
-								count > 4
+							count_owned_pop_amount = {
+								count > 400
 								limit = { species = { is_same_value = event_target:species2 } }
 							}
 							owner = {
@@ -1439,12 +1439,12 @@ country_event = {
 										is_same_value = prevprev
 										is_same_value = prevprevprevprev
 									}
-									count_owned_pop = {
-										count > 4
+									count_owned_pop_amount = {
+										count > 400
 										limit = { species = { is_same_value = event_target:species1 } }
 									}
-									count_owned_pop = {
-										count > 4
+									count_owned_pop_amount = {
+										count > 400
 										limit = { species = { is_same_value = event_target:species2 } }
 									}
 								}
@@ -1468,12 +1468,12 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species1 } }
 				}
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species2 } }
 				}
 			}
@@ -1485,7 +1485,7 @@ country_event = {
 		
 		custom_tooltip = cc_xeno_clashes.372.tooltip
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { species = { is_same_value = event_target:species2 } }
 				add_modifier = {
 					modifier = cc_pop_fears_genocide
@@ -1494,8 +1494,8 @@ country_event = {
 			}
 			every_owned_planet = {
 				limit = {
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 				}
@@ -1512,9 +1512,9 @@ planet_event = {
 	
 	trigger = {
 		has_modifier = cc_planet_interspecies_tensions
-#		any_owned_pop = { species = { is_same_value = event_target:species1 } }
-		count_owned_pop = {
-			count > 4
+#		any_owned_pop_group = { species = { is_same_value = event_target:species1 } }
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		NOT = { has_planet_flag = cc_interspecies_incident }
@@ -1524,11 +1524,11 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				any_owned_pop = { species = { is_same_value = event_target:species1 } }
+				any_owned_pop_group = { species = { is_same_value = event_target:species1 } }
 			}
 			if = {
 				limit = {
-					num_pops < 20
+					pop_amount < 2000
 				}
 				random_list = {
 					1 = {
@@ -1556,7 +1556,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -1605,7 +1605,7 @@ planet_event = {
 		else = {
 			if = {
 				limit = {
-					num_pops < 20
+					pop_amount < 2000
 				}
 				random_list = {
 					1 = {
@@ -1633,7 +1633,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -1701,12 +1701,12 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
 		}
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		is_owned_by = event_target:cc_owner
@@ -1860,12 +1860,12 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
 		}
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 		is_owned_by = event_target:cc_owner
@@ -1942,12 +1942,12 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species1 } }
 				}
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species2 } }
 				}
 			}
@@ -1997,12 +1997,12 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species1 } }
 				}
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count > 400
 					limit = { species = { is_same_value = event_target:species2 } }
 				}
 			}
@@ -2100,12 +2100,12 @@ planet_event = {
 	trigger = {
 		planet_stability < @dpe_normal_unrest_value
 		is_owned_by = event_target:cc_owner
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
 		}
-		count_owned_pop = {
-			count > 4
+		count_owned_pop_amount = {
+			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
 	}
@@ -2146,14 +2146,14 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { species = { is_same_value = event_target:species1 } }
 					add_modifier = {
 						modifier = cc_ruled_in_our_favour_pops
 						years = 10
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { species = { is_same_value = event_target:species2 } }
 					add_modifier = {
 						modifier = cc_ruled_against_us_pops
@@ -2202,14 +2202,14 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { species = { is_same_value = event_target:species2 } }
 					add_modifier = {
 						modifier = cc_ruled_in_our_favour_pops
 						years = 10
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { species = { is_same_value = event_target:species1 } }
 					add_modifier = {
 						modifier = cc_ruled_against_us_pops
@@ -2325,7 +2325,7 @@ planet_event = {
 					OR = {
 						is_xenophile = yes
 						
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = { is_same_species = prev }
 							has_citizenship_rights = no
 						}
@@ -2418,12 +2418,12 @@ planet_event = {
 						any_owned_planet = {
 							NOT = { is_same_value = root }
 							OR = {
-								count_owned_pop = {
-									count > 4
+								count_owned_pop_amount = {
+									count > 400
 									limit = { species = { is_same_value = event_target:species1 } }
 								}
-								count_owned_pop = {
-									count > 4
+								count_owned_pop_amount = {
+									count > 400
 									limit = { species = { is_same_value = event_target:species2 } }
 								}
 							}
@@ -2433,7 +2433,7 @@ planet_event = {
 				owner = { country_event = { id = cc_xeno_clashes.41 days = 10 random = 10 } }
 			}	
 			else = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							species = { is_same_value = event_target:species1 }
@@ -2498,28 +2498,28 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					any_owned_pop = { is_same_species = root.owner }
+					any_owned_pop_group = { is_same_species = root.owner }
 					OR = {
-						count_owned_pop = {
-							count > 4
+						count_owned_pop_amount = {
+							count > 400
 							limit = { species = { is_same_value = event_target:species1 } }
 						}
-						count_owned_pop = {
-							count > 4
+						count_owned_pop_amount = {
+							count > 400
 							limit = { species = { is_same_value = event_target:species2 } }
 						}
 					}
 					owner = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
-							any_owned_pop = { is_same_species = root.owner }
+							any_owned_pop_group = { is_same_species = root.owner }
 							OR = {
-								count_owned_pop = {
-									count > 4
+								count_owned_pop_amount = {
+									count > 400
 									limit = { species = { is_same_value = event_target:species1 } }
 								}
-								count_owned_pop = {
-									count > 4
+								count_owned_pop_amount = {
+									count > 400
 									limit = { species = { is_same_value = event_target:species2 } }
 								}
 							}
@@ -2529,14 +2529,14 @@ country_event = {
 										is_same_value = prevprev
 										is_same_value = prevprevprevprev
 									}
-									any_owned_pop = { is_same_species = root.owner }
+									any_owned_pop_group = { is_same_species = root.owner }
 									OR = {
-										count_owned_pop = {
-											count > 4
+										count_owned_pop_amount = {
+											count > 400
 											limit = { species = { is_same_value = event_target:species1 } }
 										}
-										count_owned_pop = {
-											count > 4
+										count_owned_pop_amount = {
+											count > 400
 											limit = { species = { is_same_value = event_target:species2 } }
 										}
 									}
@@ -2561,14 +2561,14 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				NOT = { has_modifier = cc_planet_interspecies_tensions }
-				any_owned_pop = { is_same_species = root.owner }
+				any_owned_pop_group = { is_same_species = root.owner }
 				OR = {
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species1 } }
 					}
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count > 400
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 				}
@@ -2581,7 +2581,7 @@ country_event = {
 		
 		custom_tooltip = cc_xeno_clashes.41.tooltip
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					species = {
 						OR = {
@@ -2597,7 +2597,7 @@ country_event = {
 			}
 			every_owned_planet = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
 							species = { is_same_value = event_target:species1 }
 							species = { is_same_value = event_target:species2 }
@@ -2617,14 +2617,14 @@ planet_event = {
 	
 	trigger = {
 		has_modifier = cc_planet_interspecies_tensions
-		any_owned_pop = { is_same_species = root.owner }
+		any_owned_pop_group = { is_same_species = root.owner }
 		OR = {
-			count_owned_pop = {
-				count > 4
+			count_owned_pop_amount = {
+				count > 400
 				limit = { species = { is_same_value = event_target:species1 } }
 			}
-			count_owned_pop = {
-				count > 4
+			count_owned_pop_amount = {
+				count > 400
 				limit = { species = { is_same_value = event_target:species2 } }
 			}
 		}
@@ -2635,11 +2635,11 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				any_owned_pop = { species = { is_same_value = event_target:species1 } }
+				any_owned_pop_group = { species = { is_same_value = event_target:species1 } }
 			}
 			if = {
 				limit = {
-					num_pops < 20
+					pop_amount < 2000
 				}
 				random_list = {
 					1 = {
@@ -2667,7 +2667,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -2716,7 +2716,7 @@ planet_event = {
 		else = {
 			if = {
 				limit = {
-					num_pops < 20
+					pop_amount < 2000
 				}
 				random_list = {
 					1 = {
@@ -2744,7 +2744,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOT = {
-						num_pops < 20
+						pop_amount < 2000
 					}
 				}
 				random_list = {
@@ -2824,9 +2824,9 @@ planet_event = {
 	
 	option = {
 		name = cc_xeno_clashes.42.option
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { is_same_species = root.owner }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 	}
 }
@@ -2863,16 +2863,16 @@ planet_event = {
 		}
 		while = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = { species = { is_same_value = root.owner.species } }
-					count > 1
+					count > 100
 				}
 			}
 			count = 6
 			
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { species = { is_same_value = root.owner.species } }
-				kill_pop = yes
+				kill_pop_group = { pop_group = this amount = 100% }
 			}
 		}
 	}

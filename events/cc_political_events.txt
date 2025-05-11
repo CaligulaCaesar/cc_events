@@ -117,7 +117,7 @@ country_event = {
 		exists = ruler
 		NOT = { ruler = { has_ethic = ethic_xenophile } }
 
-		any_owned_pop = {
+		any_owned_pop_group = {
 			NOT = { is_same_species = root }
 			pop_has_happiness = yes
 			is_robot_pop = no
@@ -152,7 +152,7 @@ country_event = {
 			flag = recent_xenophobic_comments
 			years = 65
 		}
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOT = { is_same_species = root }
 				is_robot_pop = no
@@ -282,7 +282,7 @@ country_event = {
 				shift_ethic = "ethic_xenophobe"
 			}
 
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_2
@@ -310,7 +310,7 @@ country_event = {
 		custom_tooltip = cc_events_mod.1.C.tooltip
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_1
@@ -478,7 +478,7 @@ country_event = {
 		custom_tooltip = cc_events_mod.2.B.tooltip
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_1
@@ -563,7 +563,7 @@ country_event = {
 				}
 				shift_ethic = "ethic_xenophobe"
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { is_same_species = event_target:discriminated_species }
 				add_modifier = {
 					modifier = cc_species_insulted_2
@@ -772,9 +772,9 @@ country_event = {
 				NOT = {
 					any_owned_planet = {
 						planet_stability < @dpe_somewhat_unrest_value
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = { has_ethic = ethic_spiritualist }
-							count > 7
+							count > 700
 						}
 					}
 				}
@@ -930,7 +930,7 @@ country_event = {
 			save_event_target_as = cc_scandal_leader
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOT = {
 					is_same_species = root
@@ -1198,7 +1198,7 @@ country_event = {
 			years = 50
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOT = {
 					is_same_species = root

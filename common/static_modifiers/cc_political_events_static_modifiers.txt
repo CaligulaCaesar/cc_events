@@ -43,7 +43,7 @@ cc_ruler_cult = {
 
 
 cc_literally_xenophile_country = {
-	pop_growth_speed = -0.15
+	logistic_growth_mult = -0.15
 	pop_ethic_xenophile_attraction_mult = 0.5
 }
 
@@ -620,7 +620,7 @@ dpe_planet_talented_engineer = {
 
 dpe_planet_talented_biologist = {
 	planet_jobs_society_research_produces_mult = 0.2
-	pop_growth_speed = 0.15
+	logistic_growth_mult = 0.15
 	
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_genetics.dds"

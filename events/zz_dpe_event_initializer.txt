@@ -51,7 +51,7 @@ country_event = { # Spiritualist Guru
 							min_distance >= 0
 							max_distance <= 75
 						}
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 					}
 				}
 			}
@@ -71,7 +71,7 @@ country_event = { # Spiritualist Guru
 							min_distance >= 0
 							max_distance <= 75
 						}
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 					}	
 					NOT = {
 						any_owned_planet = {
@@ -114,12 +114,12 @@ country_event = { # Emancipation Crisis
 
 			planet_stability < @dpe_normal_unrest_value
 			NOT = { has_planet_flag = cc_emancipation_movement }
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_enslaved = yes
 				pop_has_happiness = yes
 				happiness < 0.4
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_ethic = ethic_egalitarian
 				is_enslaved = no
 			}
@@ -133,12 +133,12 @@ country_event = { # Emancipation Crisis
 				limit = {
 					planet_stability < @dpe_normal_unrest_value
 					NOT = { has_planet_flag = cc_emancipation_movement }
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_enslaved = yes
 						pop_has_happiness = yes
 						happiness < 0.4
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_egalitarian
 						is_enslaved = no
 					}
@@ -169,8 +169,8 @@ country_event = { # Ludditism Crisis
 		any_owned_planet = {
 			planet_stability < @dpe_normal_unrest_value
 			NOT = { has_planet_flag = cc_luddite_strike }
-			any_owned_pop = { is_non_sapient_robot = yes }
-			any_owned_pop = {
+			any_owned_pop_group = { is_non_sapient_robot = yes }
+			any_owned_pop_group = {
 				has_ethic = ethic_spiritualist
 				has_citizenship_rights = yes
 				happiness < 0.4
@@ -185,8 +185,8 @@ country_event = { # Ludditism Crisis
 				limit = {
 					planet_stability < @dpe_normal_unrest_value
 					NOT = { has_planet_flag = cc_luddite_strike }
-					any_owned_pop = { is_non_sapient_robot = yes }
-					any_owned_pop = {
+					any_owned_pop_group = { is_non_sapient_robot = yes }
+					any_owned_pop_group = {
 						has_ethic = ethic_spiritualist
 						has_citizenship_rights = yes
 						happiness < 0.4
@@ -214,12 +214,12 @@ country_event = { # Peace Protests
 			support > 0.1
 		}
 		any_owned_planet = {
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					has_ethic = ethic_pacifist
 					has_citizenship_rights = yes
 				}
-				count > 7
+				count > 700
 			}
 		}
 		any_war = {
@@ -326,7 +326,7 @@ country_event = { # Thought Police
 	is_triggered_only = yes
 	
 	trigger = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_enslaved = no
 			happiness < 0.4
 			exists = owner
@@ -365,12 +365,12 @@ country_event = { # Thought Police
 	immediate = {
 		random = {
 			chance = 5
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					is_enslaved = no
 					happiness < 0.4
 				}
-				pop_event = { id = cc_thought_police.10 days = 0 random = 359 }
+				pop_group_event = { id = cc_thought_police.10 days = 0 random = 359 }
 			}
 		}
 	}
@@ -385,9 +385,9 @@ country_event = { # Xeno Clashes
 		is_country_type = default
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 		any_owned_planet = {
-			num_pops > 10
+			pop_amount > 1000
 			
-			any_owned_pop = { has_ethic = ethic_xenophobe }
+			any_owned_pop_group = { has_ethic = ethic_xenophobe }
 			pop_percentage = {
 				percentage > 0.2
 				limit = { has_ethic = ethic_xenophobe }
@@ -415,9 +415,9 @@ country_event = { # Xeno Clashes
 					has_citizenship_type = { country = root.owner type = citizenship_limited }
 				}
 				root = {
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = { is_same_species = prev }
-						count > 4
+						count > 400
 					}
 					any_owned_species = {
 						NOT = { is_same_species = prevprev }
@@ -428,9 +428,9 @@ country_event = { # Xeno Clashes
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
 						}
 						root = {
-							count_owned_pop = {
+							count_owned_pop_amount = {
 								limit = { is_same_species = prev }
-								count > 4
+								count > 400
 							}
 						}
 					}
@@ -444,9 +444,9 @@ country_event = { # Xeno Clashes
 			chance = 5
 			random_owned_planet = {
 				limit = {
-					num_pops > 10
+					pop_amount > 1000
 					
-					any_owned_pop = { has_ethic = ethic_xenophobe }
+					any_owned_pop_group = { has_ethic = ethic_xenophobe }
 					pop_percentage = {
 						percentage > 0.2
 						limit = { has_ethic = ethic_xenophobe }
@@ -474,9 +474,9 @@ country_event = { # Xeno Clashes
 							has_citizenship_type = { country = root.owner type = citizenship_limited }
 						}
 						root = {
-							count_owned_pop = {
+							count_owned_pop_amount = {
 								limit = { is_same_species = prev }
-								count > 4
+								count > 400
 							}
 							any_owned_species = {
 								NOT = { is_same_species = prevprev }
@@ -487,9 +487,9 @@ country_event = { # Xeno Clashes
 									has_citizenship_type = { country = root.owner type = citizenship_limited }
 								}
 								root = {
-									count_owned_pop = {
+									count_owned_pop_amount = {
 										limit = { is_same_species = prev }
-										count > 4
+										count > 400
 									}
 								}
 							}
@@ -524,7 +524,7 @@ country_event = { # Interspecies Marriage
 					is_enslaved = yes
 					is_being_purged = yes
 				}
-				has_pop_flag = cc_literally_xenophile_manifested
+				has_pop_group_flag = cc_literally_xenophile_manifested
 			}
 		}
 	}
@@ -800,7 +800,7 @@ country_event = { # Runaway Scientist
 
 			any_owned_planet = {
 				has_planet_flag = fe_the_preserve
-				any_owned_pop = { is_same_species = root }
+				any_owned_pop_group = { is_same_species = root }
 			}
 		}
 	}
@@ -894,12 +894,12 @@ country_event = { # Dissent
 				has_planet_flag = dpe_unity_planet
 				has_planet_flag = dpe_dissent_planet
 			}
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					pop_has_happiness = yes
 					has_citizenship_rights = yes
 				}
-				count > 18
+				count > 1800
 			}
 			pop_percentage = {
 				limit = { happiness < 0.75 }
@@ -917,12 +917,12 @@ country_event = { # Dissent
 						has_planet_flag = dpe_unity_planet
 						has_planet_flag = dpe_dissent_planet
 					}
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							pop_has_happiness = yes
 							has_citizenship_rights = yes
 						}
-						count > 18
+						count > 1800
 					}
 					pop_percentage = {
 						limit = { happiness < 0.75 }
@@ -951,7 +951,7 @@ country_event = { # Positive Energy
 				has_planet_flag = dpe_negenergy_planet
 			}
 
-			num_pops > 20
+			pop_amount > 2000
 			habitable_structure = no
 			
 			if = {
@@ -978,7 +978,7 @@ country_event = { # Positive Energy
 						has_planet_flag = dpe_negenergy_planet
 					}
 
-					num_pops > 20
+					pop_amount > 2000
 					habitable_structure = no
 					
 					if = {
@@ -1016,7 +1016,7 @@ country_event = { # Negative Energy
 				has_planet_flag = dpe_negenergy_planet
 			}
 
-			num_pops > 20
+			pop_amount > 2000
 			habitable_structure = no
 			
 			if = {
@@ -1043,7 +1043,7 @@ country_event = { # Negative Energy
 						has_planet_flag = dpe_negenergy_planet
 					}
 
-					num_pops > 20
+					pop_amount > 2000
 					habitable_structure = no
 					
 					if = {
@@ -1080,7 +1080,7 @@ country_event = { # Positive Minerals
 				has_planet_flag = dpe_negminerals_planet
 			}
 
-			num_pops > 20
+			pop_amount > 2000
 			habitable_structure = no
 			
 			if = {
@@ -1107,7 +1107,7 @@ country_event = { # Positive Minerals
 						has_planet_flag = dpe_negminerals_planet
 					}
 
-					num_pops > 20
+					pop_amount > 2000
 					habitable_structure = no
 					
 					if = {
@@ -1145,7 +1145,7 @@ country_event = { # Negative Minerals
 				has_planet_flag = dpe_negminerals_planet
 			}
 
-			num_pops > 20
+			pop_amount > 2000
 			habitable_structure = no
 			
 			if = {
@@ -1172,7 +1172,7 @@ country_event = { # Negative Minerals
 						has_planet_flag = dpe_negminerals_planet
 					}
 
-					num_pops > 20
+					pop_amount > 2000
 					habitable_structure = no
 					
 					if = {
@@ -1282,9 +1282,9 @@ country_event = { # Anti-Luddite event
 		}
 		has_faction = technologist
 		
-		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop_group = { is_non_sapient_robot = yes }
 		NOT = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_robot_pop = yes
 				is_non_sapient_robot = no
 			}
@@ -1384,9 +1384,9 @@ country_event = { # Government Support Statue
 				has_planet_flag = dpe_unity_planet
 				has_planet_flag = dpe_dissent_planet
 			}
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { pop_has_happiness = yes }
-				count > 18
+				count > 1800
 			}
 			pop_percentage = {
 				limit = { happiness > 0.55 }
@@ -1405,9 +1405,9 @@ country_event = { # Government Support Statue
 						has_planet_flag = dpe_unity_planet
 						has_planet_flag = dpe_dissent_planet
 					}
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = { pop_has_happiness = yes }
-						count > 18
+						count > 1800
 					}
 					pop_percentage = {
 						limit = { happiness > 0.55 }
@@ -1445,7 +1445,7 @@ country_event = { # Ruler Charity Scandal
 			count = 0
 		}
 
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_enslaved = no
 			is_being_purged = no
 			NOT = {
@@ -1529,7 +1529,7 @@ country_event = { # Ruler Ex-Slave Scandal
 
 		exists = ruler
 		
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_same_species = root.ruler
 			is_enslaved = yes
 		}
@@ -1625,7 +1625,7 @@ country_event = { # Extra Ludditism Start Event
 			any_relation = { has_country_flag = machine_uprising_country }
 		}
 		
-		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop_group = { is_non_sapient_robot = yes }
 	}
 	
 	immediate = {

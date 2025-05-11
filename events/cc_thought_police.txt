@@ -4,7 +4,7 @@ namespace = cc_thought_police
 
 
 #Thought Police
-pop_event = {
+pop_group_event = {
 	id = cc_thought_police.10
 	hide_window = yes
 	is_triggered_only = yes
@@ -47,7 +47,7 @@ pop_event = {
 
 	immediate = {
 		random_list = {
-			100 = { pop_event = { id = cc_thought_police.1 } }
+			100 = { pop_group_event = { id = cc_thought_police.1 } }
 
 			100 = {
 				modifier = {
@@ -72,7 +72,7 @@ pop_event = {
 }
 
 # Pop is purged or escapes as a political refugee
-pop_event = {
+pop_group_event = {
 	id = cc_thought_police.1
 	
 	hide_window = yes
@@ -94,13 +94,13 @@ pop_event = {
 					}
 				}
 				5 = {
-					kill_pop = yes
+					kill_pop_group = { pop_group = this amount = 100% } 
 
 #					log = "Activist Pop in [root.owner.GetName] dies"
 				}
 			}
 		}
-		else = { kill_pop = yes }
+		else = { kill_pop_group = { pop_group = this amount = 100% } }
 	}
 }
 
@@ -108,7 +108,7 @@ pop_event = {
 
 
 # Refugees Arrive (new species)
-pop_event = {
+pop_group_event = {
 	id = cc_thought_police.2
 	title = cc_thought_police.2.name	
 	picture = GFX_evt_unknown_ships

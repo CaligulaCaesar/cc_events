@@ -984,12 +984,15 @@ country_event = {
 		}
 		capital_scope = {
 			add_deposit = d_dpe_royal_entourage
-			create_pop = {
+			create_pop_group = {
 				species = from
+				effect = {
+					save_event_target_as = last_created_pop_group
+				}
 			}
 			hidden_effect = {
-				last_created_pop = {
-					set_pop_flag = royal_entourage_pops
+				event_target:last_created_pop_group = {
+					set_pop_group_flag = royal_entourage_pops
 					set_citizenship_type = {
 						type = citizenship_full
 						cooldown = yes

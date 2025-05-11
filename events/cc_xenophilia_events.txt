@@ -33,7 +33,7 @@ country_event = {
 					is_enslaved = yes
 					is_being_purged = yes
 				}
-				has_pop_flag = cc_literally_xenophile_manifested
+				has_pop_group_flag = cc_literally_xenophile_manifested
 			}
 		}
 	}
@@ -105,9 +105,9 @@ country_event = {
 		
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_practising_xenophile }
 				}
 				add_modifier = {
@@ -115,11 +115,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secretly_practising_xenophile }
 				remove_modifier = cc_secretly_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secret_xenophile }
 				remove_modifier = cc_secret_xenophile
 			}
@@ -150,9 +150,9 @@ country_event = {
 		}
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_secretly_practising_xenophile }
 				}
 				add_modifier = {
@@ -160,11 +160,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_practising_xenophile }
 				remove_modifier = cc_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secret_xenophile }
 				remove_modifier = cc_secret_xenophile
 			}
@@ -203,9 +203,9 @@ country_event = {
 		}
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_secret_xenophile }
 				}
 				add_modifier = {
@@ -213,11 +213,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secretly_practising_xenophile }
 				remove_modifier = cc_secretly_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_practising_xenophile }
 				remove_modifier = cc_practising_xenophile
 			}
@@ -295,14 +295,14 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { pop_has_happiness = yes }
-			pop_event = { id = cc_events_mod.9 }
+			pop_group_event = { id = cc_events_mod.9 }
 		}
 	}
 }
 
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.9
 	hide_window = yes
 	is_triggered_only = yes
@@ -312,15 +312,15 @@ pop_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_pop_flag = cc_not_literally_xenophile_3
+				has_pop_group_flag = cc_not_literally_xenophile_3
 				exists = owner
 				owner = { has_policy_flag = allows_im }
 			}
-			remove_pop_flag = cc_not_literally_xenophile_3
+			remove_pop_group_flag = cc_not_literally_xenophile_3
 			
 			random_list = {
 				1 = {
-					set_pop_flag = cc_literally_xenophile
+					set_pop_group_flag = cc_literally_xenophile
 					modifier = {
 						factor = 1.5
 						has_ethic = ethic_xenophile
@@ -335,12 +335,12 @@ pop_event = {
 						}
 					}
 				}
-				15 = { set_pop_flag = cc_not_literally_xenophile_4 }
+				15 = { set_pop_group_flag = cc_not_literally_xenophile_4 }
 			}
 		}
 		if = {
 			limit = {
-				has_pop_flag = cc_not_literally_xenophile_2
+				has_pop_group_flag = cc_not_literally_xenophile_2
 				NOT = { has_ethic = ethic_xenophobe }
 				OR = {
 					owner = { has_policy_flag = allows_im }
@@ -352,11 +352,11 @@ pop_event = {
 					}
 				}
 			}
-			remove_pop_flag = cc_not_literally_xenophile_2
+			remove_pop_group_flag = cc_not_literally_xenophile_2
 			
 			random_list = {
 				1 = {
-					set_pop_flag = cc_literally_xenophile
+					set_pop_group_flag = cc_literally_xenophile
 					modifier = {
 						factor = 1.5
 						has_ethic = ethic_xenophile
@@ -371,12 +371,12 @@ pop_event = {
 						}
 					}
 				}
-				15 = { set_pop_flag = cc_not_literally_xenophile_3 }
+				15 = { set_pop_group_flag = cc_not_literally_xenophile_3 }
 			}
 		}
 		if = {
 			limit = {
-				has_pop_flag = cc_not_literally_xenophile_1
+				has_pop_group_flag = cc_not_literally_xenophile_1
 				NOT = { has_ethic = ethic_xenophobe }
 				OR = {
 					has_ethic = ethic_xenophile
@@ -395,11 +395,11 @@ pop_event = {
 					}
 				}
 			}
-			remove_pop_flag = cc_not_literally_xenophile_1
+			remove_pop_group_flag = cc_not_literally_xenophile_1
 			
 			random_list = {
 				1 = {
-					set_pop_flag = cc_literally_xenophile
+					set_pop_group_flag = cc_literally_xenophile
 					modifier = {
 						factor = 1.5
 						has_ethic = ethic_xenophile
@@ -414,22 +414,22 @@ pop_event = {
 						}
 					}
 				}
-				15 = { set_pop_flag = cc_not_literally_xenophile_2 }
+				15 = { set_pop_group_flag = cc_not_literally_xenophile_2 }
 			}
 		}
 		if = {
 			limit = {
 				NOR = {
-					has_pop_flag = cc_literally_xenophile
-					has_pop_flag = cc_not_literally_xenophile_1
-					has_pop_flag = cc_not_literally_xenophile_2
-					has_pop_flag = cc_not_literally_xenophile_3
-					has_pop_flag = cc_not_literally_xenophile_4
+					has_pop_group_flag = cc_literally_xenophile
+					has_pop_group_flag = cc_not_literally_xenophile_1
+					has_pop_group_flag = cc_not_literally_xenophile_2
+					has_pop_group_flag = cc_not_literally_xenophile_3
+					has_pop_group_flag = cc_not_literally_xenophile_4
 				}
 			}
 			random_list = {
 				1 = {
-					set_pop_flag = cc_literally_xenophile
+					set_pop_group_flag = cc_literally_xenophile
 					modifier = {
 						factor = 1.5
 						has_ethic = ethic_xenophile
@@ -444,23 +444,23 @@ pop_event = {
 						}
 					}
 				}
-				15 = { set_pop_flag = cc_not_literally_xenophile_1 }
+				15 = { set_pop_group_flag = cc_not_literally_xenophile_1 }
 			}
 		}
 	}
 }
 
 
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.10
 	hide_window = yes
 	
 	mean_time_to_happen = { years = 20 }
 	
 	trigger = {
-		has_pop_flag = cc_literally_xenophile
+		has_pop_group_flag = cc_literally_xenophile
 		pop_has_happiness = yes
-		NOT = { has_pop_flag = cc_literally_xenophile_manifested }
+		NOT = { has_pop_group_flag = cc_literally_xenophile_manifested }
 		exists = owner
 		owner = {
 			pop_percentage = {
@@ -498,7 +498,7 @@ pop_event = {
 				}
 			}
 			100 = {
-				set_pop_flag = cc_literally_xenophile_manifested
+				set_pop_group_flag = cc_literally_xenophile_manifested
 				
 				if = {
 					limit = { owner = { has_policy_flag = allows_im } }
@@ -535,14 +535,14 @@ pop_event = {
 	
 
 #Gradually gets rid of modifiers if there are no longer foreigners
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.11
 	hide_window = yes
 	
 	mean_time_to_happen = { years = 25 }
 
 	trigger = {
-		has_pop_flag = cc_literally_xenophile_manifested
+		has_pop_group_flag = cc_literally_xenophile_manifested
 		exists = owner
 		pop_has_happiness = yes
 		owner = { NOT = { has_country_flag = cc_eventperf_has_minority } }
@@ -551,7 +551,7 @@ pop_event = {
 	immediate = {
 		random_list = {
 			3 = {
-				remove_pop_flag = cc_literally_xenophile_manifested
+				remove_pop_group_flag = cc_literally_xenophile_manifested
 				if = {
 					limit = { has_modifier = cc_practising_xenophile }
 					remove_modifier = cc_practising_xenophile
@@ -594,7 +594,7 @@ event = {
 					pop_percentage = {
 						percentage > 0.15
 						limit = {
-							has_pop_flag = cc_literally_xenophile_manifested
+							has_pop_group_flag = cc_literally_xenophile_manifested
 							is_robot_pop = no
 						}
 					}
@@ -617,7 +617,7 @@ event = {
 							pop_percentage = {
 								percentage > 0.15
 								limit = {
-									has_pop_flag = cc_literally_xenophile_manifested
+									has_pop_group_flag = cc_literally_xenophile_manifested
 									is_robot_pop = no
 								}
 							}
@@ -626,24 +626,24 @@ event = {
 				}
 				remove_modifier = cc_literally_xenophile_country
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					pop_has_happiness = no
 					OR = {
-						has_pop_flag = cc_literally_xenophile
-						has_pop_flag = cc_literally_xenophile_manifested
+						has_pop_group_flag = cc_literally_xenophile
+						has_pop_group_flag = cc_literally_xenophile_manifested
 						has_modifier = cc_practising_xenophile
 						has_modifier = cc_secretly_practising_xenophile
 						has_modifier = cc_secret_xenophile
 					}
 				}
 				if = {
-					limit = { has_pop_flag = cc_literally_xenophile }
-					remove_pop_flag = cc_literally_xenophile
+					limit = { has_pop_group_flag = cc_literally_xenophile }
+					remove_pop_group_flag = cc_literally_xenophile
 				}
 				if = {
-					limit = { has_pop_flag = cc_literally_xenophile_manifested }
-					remove_pop_flag = cc_literally_xenophile_manifested
+					limit = { has_pop_group_flag = cc_literally_xenophile_manifested }
+					remove_pop_group_flag = cc_literally_xenophile_manifested
 				}
 				if = {
 					limit = { has_modifier = cc_practising_xenophile }
@@ -660,7 +660,7 @@ event = {
 			}
 			if = {
 				limit = { has_policy_flag = allows_im }
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							has_modifier = cc_secretly_practising_xenophile
@@ -691,7 +691,7 @@ event = {
 						NOT = { has_country_flag = cc_has_had_interspecies_marriage }
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							has_modifier = cc_practising_xenophile
@@ -717,7 +717,7 @@ event = {
 			}
 			if = {
 				limit = { has_policy_flag = bans_im_completely }
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							has_modifier = cc_practising_xenophile
@@ -829,7 +829,7 @@ country_event = {
 
 
 
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.1300
 	hide_window = yes
 	
@@ -844,7 +844,7 @@ pop_event = {
 	immediate = {
 		random_list = {
 			100 = {
-				pop_event = { id = cc_events_mod.13 }
+				pop_group_event = { id = cc_events_mod.13 }
 			}			
 			30 = {
 				modifier = {
@@ -858,7 +858,7 @@ pop_event = {
 
 #triggered in performance
 # Pop escapes into a country where it can be 'literally xenophile'
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.13
 	
 	is_triggered_only = yes
@@ -881,7 +881,7 @@ pop_event = {
 }
 
 # Refugees Arrive, fleeing persecution for xenophilia
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.131
 	title = cc_events_mod.131.name	
 	picture = GFX_evt_unknown_ships
@@ -898,7 +898,7 @@ pop_event = {
 
 
 
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.1400
 	hide_window = yes
 	mean_time_to_happen = { years = 38 }
@@ -919,7 +919,7 @@ pop_event = {
 	
 	immediate = {
 		random_list = {
-			80 = { pop_event = { id = cc_events_mod.14 } }
+			80 = { pop_group_event = { id = cc_events_mod.14 } }
 			20 = {
 				modifier = {
 					factor = 0
@@ -932,7 +932,7 @@ pop_event = {
 
 #triggered in performance
 #pop purged for being 'literally xenophile'
-pop_event = {
+pop_group_event = {
 	id = cc_events_mod.14
 	
 	hide_window = yes
@@ -953,7 +953,7 @@ pop_event = {
 	}
 	
 	immediate = {
-		kill_pop = yes
+		kill_pop_group = { pop_group = this amount = 75% }
 	}
 }
 
@@ -1019,9 +1019,9 @@ country_event = {
 				}
 			}
 		
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_practising_xenophile }
 				}
 				add_modifier = {
@@ -1029,11 +1029,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secretly_practising_xenophile }
 				remove_modifier = cc_secretly_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secret_xenophile }
 				remove_modifier = cc_secret_xenophile
 			}
@@ -1042,9 +1042,9 @@ country_event = {
 		if = {
 			limit = { has_policy_flag = does_not_allow_im }
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_secretly_practising_xenophile }
 				}
 				add_modifier = {
@@ -1052,11 +1052,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_practising_xenophile }
 				remove_modifier = cc_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secret_xenophile }
 				remove_modifier = cc_secret_xenophile
 			}
@@ -1113,9 +1113,9 @@ country_event = {
 		if = {
 			limit = { has_policy_flag = bans_im_completely }
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = cc_literally_xenophile_manifested
+					has_pop_group_flag = cc_literally_xenophile_manifested
 					NOT = { has_modifier = cc_secret_xenophile }
 				}
 				add_modifier = {
@@ -1123,11 +1123,11 @@ country_event = {
 					days = -1
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_secretly_practising_xenophile }
 				remove_modifier = cc_secretly_practising_xenophile
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = cc_practising_xenophile }
 				remove_modifier = cc_practising_xenophile
 			}
@@ -1234,7 +1234,7 @@ country_event = {
 			set_leader_flag = cc_married
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				NOT = { is_same_species = root }
 				pop_has_happiness = yes

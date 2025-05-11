@@ -1,7 +1,7 @@
 
 
 is_valid_xenophilia_refugee_pop = {	
-	has_pop_flag = cc_literally_xenophile_manifested
+	has_pop_group_flag = cc_literally_xenophile_manifested
 	is_robot_pop = no
 	has_culture_shock = no
 	NOR = {
@@ -37,8 +37,8 @@ has_political_colony_modifier = {
 	OR = {
 		has_modifier = cc_colony_distrusts
 		has_modifier = cc_planet_oppression
-		any_owned_pop = { has_modifier = cc_lingering_oppression }
-		any_owned_pop = { has_modifier = cc_oppression }
+		any_owned_pop_group = { has_modifier = cc_lingering_oppression }
+		any_owned_pop_group = { has_modifier = cc_oppression }
 		has_modifier = cc_breakaway_sympathy
 		has_modifier = cc_faction_acute_unrest
 		

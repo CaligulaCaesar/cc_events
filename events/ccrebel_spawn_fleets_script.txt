@@ -77,7 +77,7 @@ planet_event = {
 					limit = { num_owned_planets < 4 }
 				
 					if = {
-						limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+						limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 						
 						create_fleet_from_naval_cap = 0.05
 						last_created_fleet = {
@@ -85,7 +85,7 @@ planet_event = {
 						}
 					}
 					else_if = {
-						limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+						limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 							
 						create_fleet_from_naval_cap = 0.1
 						last_created_fleet = {
@@ -94,7 +94,7 @@ planet_event = {
 					}
 						
 					else_if = {
-						limit = { NOT = { num_pops < 12 } }
+						limit = { NOT = { pop_amount < 1200 } }
 						create_fleet_from_naval_cap = 0.15
 						last_created_fleet = {
 							set_location = root
@@ -107,7 +107,7 @@ planet_event = {
 						num_owned_planets < 6
 					}
 					if = {
-						limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+						limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 						
 						create_fleet_from_naval_cap = 0.03
 						last_created_fleet = {
@@ -116,7 +116,7 @@ planet_event = {
 					}
 						
 					else_if = {
-						limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+						limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 						
 						create_fleet_from_naval_cap = 0.06
 						last_created_fleet = {
@@ -124,7 +124,7 @@ planet_event = {
 						}
 					}
 					else_if = {
-						limit = { NOT = { num_pops < 12 } }
+						limit = { NOT = { pop_amount < 1200 } }
 						create_fleet_from_naval_cap = 0.09
 						last_created_fleet = {
 							set_location = root
@@ -132,7 +132,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 						
 					create_fleet_from_naval_cap = 0.013
 					last_created_fleet = {
@@ -141,7 +141,7 @@ planet_event = {
 				}
 							
 				else_if = {
-					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 						
 					create_fleet_from_naval_cap = 0.027
 					last_created_fleet = {
@@ -150,7 +150,7 @@ planet_event = {
 				}
 				
 				else_if = {
-					limit = { NOT = { num_pops < 12 } }
+					limit = { NOT = { pop_amount < 1200 } }
 					create_fleet_from_naval_cap = 0.04
 					last_created_fleet = {
 						set_location = root
@@ -162,7 +162,7 @@ planet_event = {
 				limit = { num_owned_planets < 4 }
 					
 				if = {
-					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 					
 					create_fleet_from_naval_cap = 0.1
 					last_created_fleet = {
@@ -171,7 +171,7 @@ planet_event = {
 				}
 					
 				else_if = {
-					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 					
 					create_fleet_from_naval_cap = 0.2
 					last_created_fleet = {
@@ -179,7 +179,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { NOT = { num_pops < 12 } }
+					limit = { NOT = { pop_amount < 1200 } }
 					create_fleet_from_naval_cap = 0.3
 					last_created_fleet = {
 						set_location = root
@@ -191,7 +191,7 @@ planet_event = {
 					num_owned_planets < 6
 				}
 				if = {
-					limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 					
 					create_fleet_from_naval_cap = 0.06
 					last_created_fleet = {
@@ -199,7 +199,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+					limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 					
 					create_fleet_from_naval_cap = 0.12
 					last_created_fleet = {
@@ -207,7 +207,7 @@ planet_event = {
 					}
 				}
 				else_if = {
-					limit = { NOT = { num_pops < 12 } }
+					limit = { NOT = { pop_amount < 1200 } }
 					create_fleet_from_naval_cap = 0.18
 					last_created_fleet = {
 						set_location = root
@@ -215,7 +215,7 @@ planet_event = {
 				}
 			}
 			else_if = {
-				limit = { root = { num_pops < 20 NOT = { num_pops < 12 } } }
+				limit = { root = { pop_amount < 2000 NOT = { pop_amount < 1200 } } }
 				
 				create_fleet_from_naval_cap = 0.025
 				last_created_fleet = {
@@ -224,7 +224,7 @@ planet_event = {
 			}
 				
 			else_if = {
-				limit = { root = { num_pops < 30 NOT = { num_pops < 12 } } }
+				limit = { root = { pop_amount < 3000 NOT = { pop_amount < 1200 } } }
 				
 				create_fleet_from_naval_cap = 0.05
 				last_created_fleet = {
@@ -232,7 +232,7 @@ planet_event = {
 				}
 			}
 			else_if = {
-				limit = { NOT = { num_pops < 12 } }
+				limit = { NOT = { pop_amount < 1200 } }
 				create_fleet_from_naval_cap = 0.075
 				last_created_fleet = {
 					set_location = root

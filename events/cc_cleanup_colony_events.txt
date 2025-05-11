@@ -29,7 +29,7 @@ planet_event = {
 		if = {
 			limit = {
 				has_planet_flag = cc_conquered_purge
-				NOT = { any_owned_pop = { is_being_purged = yes } }
+				NOT = { any_owned_pop_group = { is_being_purged = yes } }
 			}
 			remove_planet_flag = cc_conquered_purge
 		}	
@@ -278,12 +278,12 @@ planet_event = {
 					owner = {
 						root = {
 							OR = {
-								any_owned_pop = {
-									has_pop_flag = cc_xenophobe_species
+								any_owned_pop_group = {
+									has_pop_group_flag = cc_xenophobe_species
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
 									pop_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
@@ -303,12 +303,12 @@ planet_event = {
 					owner = {
 						root = {
 							OR = {
-								any_owned_pop = {
-									has_pop_flag = cc_xenophobe_species
+								any_owned_pop_group = {
+									has_pop_group_flag = cc_xenophobe_species
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
 									pop_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
@@ -332,12 +332,12 @@ planet_event = {
 					owner = {
 						root = {
 							OR = {
-								any_owned_pop = {
-									has_pop_flag = cc_xenophobe_species
+								any_owned_pop_group = {
+									has_pop_group_flag = cc_xenophobe_species
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
 									pop_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
@@ -360,12 +360,12 @@ planet_event = {
 					owner = {
 						root = {
 							OR = {
-								any_owned_pop = {
-									has_pop_flag = cc_xenophobe_species
+								any_owned_pop_group = {
+									has_pop_group_flag = cc_xenophobe_species
 									is_same_species = prevprev
 								}
 								AND = {
-									NOT = { any_owned_pop = { has_pop_flag = cc_xenophobe_species } }
+									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
 									pop_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
@@ -459,7 +459,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -487,7 +487,7 @@ planet_event = {
 				owner = {
 					is_spiritualist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -523,7 +523,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -557,7 +557,7 @@ planet_event = {
 				owner = {
 					is_spiritualist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -594,7 +594,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -616,7 +616,7 @@ planet_event = {
 					owner = {
 						is_materialist = yes
 					}
-					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+					NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 				}
 			}
 		}
@@ -669,7 +669,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -683,7 +683,7 @@ planet_event = {
 				owner = {
 					is_spiritualist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -764,7 +764,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -803,7 +803,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -824,7 +824,7 @@ planet_event = {
 				owner = {
 					is_spiritualist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -859,7 +859,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -888,7 +888,7 @@ planet_event = {
 				owner = {
 					is_egalitarian = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -947,7 +947,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -990,7 +990,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1002,7 +1002,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = { is_democratic_authority = yes }
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1038,7 +1038,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1069,7 +1069,7 @@ planet_event = {
 				owner = {
 					is_materialist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1104,7 +1104,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1126,7 +1126,7 @@ planet_event = {
 					owner = {
 						is_spiritualist = yes
 					}
-					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+					NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 				}
 			}
 		}
@@ -1162,7 +1162,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1183,7 +1183,7 @@ planet_event = {
 				owner = {
 					is_materialist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1231,7 +1231,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1244,7 +1244,7 @@ planet_event = {
 				owner = {
 					is_materialist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1288,7 +1288,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1302,7 +1302,7 @@ planet_event = {
 				owner = {
 					is_materialist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1378,7 +1378,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1407,7 +1407,7 @@ planet_event = {
 				owner = {
 					is_authoritarian = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1466,7 +1466,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1507,7 +1507,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1519,7 +1519,7 @@ planet_event = {
 			modifier = {
 				factor = 0
 				owner = { is_imperial_authority = yes }
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1557,7 +1557,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1579,7 +1579,7 @@ planet_event = {
 					owner = {
 						is_militarist = yes
 					}
-					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+					NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 				}
 			}
 		}
@@ -1615,7 +1615,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1638,7 +1638,7 @@ planet_event = {
 						is_militarist = yes
 					}
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1686,7 +1686,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1701,7 +1701,7 @@ planet_event = {
 						is_militarist = yes
 					}
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1745,7 +1745,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1761,7 +1761,7 @@ planet_event = {
 						is_militarist = yes
 					}
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1837,7 +1837,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1870,7 +1870,7 @@ planet_event = {
 						is_militarist = yes
 					}
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1910,7 +1910,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -1931,7 +1931,7 @@ planet_event = {
 				owner = {
 					is_pacifist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -1969,7 +1969,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2000,7 +2000,7 @@ planet_event = {
 				owner = {
 					is_pacifist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2042,7 +2042,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2071,7 +2071,7 @@ planet_event = {
 					owner = {
 						is_militarist = yes
 					}
-					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+					NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 				}
 			}
 		}
@@ -2126,7 +2126,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2140,7 +2140,7 @@ planet_event = {
 				owner = {
 					is_pacifist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2213,7 +2213,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2254,7 +2254,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2275,7 +2275,7 @@ planet_event = {
 				owner = {
 					is_pacifist = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2468,7 +2468,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2489,7 +2489,7 @@ planet_event = {
 				owner = {
 					is_xenophile = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2526,7 +2526,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2556,7 +2556,7 @@ planet_event = {
 				owner = {
 					is_xenophile = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2592,7 +2592,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2614,7 +2614,7 @@ planet_event = {
 					owner = {
 						is_xenophobe = yes
 					}
-					NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+					NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 				}
 			}
 		}
@@ -2667,7 +2667,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2681,7 +2681,7 @@ planet_event = {
 				owner = {
 					is_xenophile = yes
 				}
-				any_owned_pop = { has_citizenship_rights = yes }
+				any_owned_pop_group = { has_citizenship_rights = yes }
 			}
 		}
 	}
@@ -2735,7 +2735,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { any_owned_pop = { has_citizenship_rights = yes } }
+				NOT = { any_owned_pop_group = { has_citizenship_rights = yes } }
 			}
 		}
 	}
@@ -2924,7 +2924,7 @@ country_event = {
 
 # This = Pop scope
 # From = Planet
-pop_event = {
+pop_group_event = {
 	id = cc_cleanup_events.9997
 	hide_window = yes
 	
@@ -3010,13 +3010,13 @@ planet_event = {
 		OR = {
 			AND = {
 				has_planet_flag = cc_conquered_purge
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = { is_being_purged = yes }
-					count = 1 # Since the crisis ones go with the last pop being alive, I presume there is a reason
+					count = 100 # Since the crisis ones go with the last pop being alive, I presume there is a reason
 				}
 			}
 			AND = {
-				num_pops = 1 # Last Pop is still alive when this event is fired
+				pop_amount >= 1 # Last Pop is still alive when this event is fired
 				controller = {
 					OR = {
 						is_country_type = "ai_empire"

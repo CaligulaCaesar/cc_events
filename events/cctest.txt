@@ -505,7 +505,7 @@
 # 			limit = { is_pop_faction_type = prosperity }
 # 			save_event_target_as = prosperity_faction
 # 		}
-# #		random_owned_pop = {
+# #		random_owned_pop_group = {
 # #			limit = { member_of_faction = prosperity }
 # #			root.capital_scope = {
 # #				change_variable = {
@@ -514,7 +514,7 @@
 # #				}
 # #			}
 # #		}
-# 		random_owned_pop = {
+# 		random_owned_pop_group = {
 # 			limit = { member_of_faction = yes }
 # 			root.capital_scope = {
 # 				change_variable = {
@@ -523,7 +523,7 @@
 # 				}
 # 			}
 # 		}
-# 		random_owned_pop = {
+# 		random_owned_pop_group = {
 # 			limit = { member_of_faction = no }
 # 			root.capital_scope = {
 # 				change_variable = {
@@ -532,7 +532,7 @@
 # 				}
 # 			}
 # 		}
-# #		random_owned_pop = {
+# #		random_owned_pop_group = {
 # #			limit = { member_of_faction = event_target:prosperity_faction }
 # #			root.capital_scope = {
 # #				change_variable = {
@@ -624,7 +624,7 @@
 # 	immediate = {
 # 		if = {
 # 			limit = {
-# 				any_owned_pop = {
+# 				any_owned_pop_group = {
 # 					is_robot_pop = yes
 # 				}
 # 			}
@@ -637,7 +637,7 @@
 # 		}
 # 		if = {
 # 			limit = {
-# 				any_owned_pop = {
+# 				any_owned_pop_group = {
 # 					is_robot_pop = no
 # 				}
 # 			}
@@ -1208,7 +1208,7 @@
 # 								while = {
 # 									count = 50
 # 									event_target:planet1 = {
-# 										create_pop = {
+# 										create_pop_group = {
 # 											species = root
 # 										}
 # 									}
@@ -1239,7 +1239,7 @@
 # 									while = {
 # 										count = 10
 # 										event_target:planet2 = {
-# 											create_pop = {
+# 											create_pop_group = {
 # 												species = root
 # 											}
 # 										}
@@ -1256,7 +1256,7 @@
 # 									change_pc = pc_gaia
 # 									set_planet_size = 25
 # 									set_owner = event_target:test_subject
-# 									create_pop = {
+# 									create_pop_group = {
 # 										species = root
 # 									}
 # 								}
@@ -1288,7 +1288,7 @@
 # 	hide_window = yes
 
 # 	immediate = {
-# 		random_owned_pop = {
+# 		random_owned_pop_group = {
 # 			save_event_target_as = planet_pop
 # 		}
 # 		create_rebels = {

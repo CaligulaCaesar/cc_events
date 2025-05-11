@@ -812,7 +812,7 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					num_pops > 30
+					pop_amount > 3000
 					is_capital = no
 					exists = controller
 					controller = { is_same_value = root }
@@ -830,7 +830,7 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {
-					num_pops > 30
+					pop_amount > 3000
 					is_capital = no
 					exists = controller
 					controller = { is_same_value = root }
@@ -1460,7 +1460,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 4
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
@@ -2209,27 +2209,27 @@ country_event = {
 				modifier = {
 					factor = 0.5
 					event_target:dpe_mission_host_planet = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = { has_ethic = ethic_xenophobe }
-							count < 4
+							count < 400
 						}
 					}
 				}
 				modifier = {
 					factor = 1.5
 					event_target:dpe_mission_host_planet = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = { has_ethic = ethic_xenophobe }
-							count > 8
+							count > 800
 						}
 					}
 				}
 				modifier = {
 					factor = 1.5
 					event_target:dpe_mission_host_planet = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = { has_ethic = ethic_xenophobe }
-							count > 15
+							count > 1500
 						}
 					}
 				}
@@ -2355,8 +2355,8 @@ country_event = {
 		}
 		event_target:dpe_mission_host_planet = {
 			if = {
-				limit = { num_pops > 1 }
-				random_owned_pop = { kill_pop = yes }
+				limit = { pop_amount >= 100 }
+				random_owned_pop_group = { kill_pop_group = { pop_group = this amount = 95% } }
 			}
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
@@ -2400,8 +2400,8 @@ country_event = {
 		}
 		event_target:dpe_mission_host_planet = {
 			if = {
-				limit = { num_pops > 1 }
-				random_owned_pop = { kill_pop = yes }
+				limit = { pop_amount >= 100 }
+				random_owned_pop_group = { kill_pop_group = { pop_group = this amount = 95% } }
 			}
 			remove_modifier = dpe_hosting_spirmission_planet_turbulence
 			add_modifier = {
@@ -2497,7 +2497,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 2
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
@@ -2784,7 +2784,7 @@ country_event = {
 			event_target:dpe_mission_host_planet = {
 				while = {
 					count = 2
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							pop_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
@@ -3699,7 +3699,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 3
-				create_pop = {
+				create_pop_group = {
 					species = from
 					ethos = {
 						ethic = "ethic_spiritualist"			
@@ -4537,7 +4537,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 3
-				create_pop = {
+				create_pop_group = {
 					species = from
 					ethos = {
 						ethic = "ethic_spiritualist"			
@@ -4565,7 +4565,7 @@ country_event = {
 		event_target:dpe_mission_host_planet = {
 			while = {
 				count = 3
-				create_pop = {
+				create_pop_group = {
 					species = from
 					ethos = {
 						ethic = "ethic_spiritualist"			

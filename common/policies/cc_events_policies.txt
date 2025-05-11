@@ -45,7 +45,7 @@ cc_interspecies_marriage = {
 				pop_percentage = {
 					percentage > 0.05
 					limit = {
-						has_pop_flag = cc_literally_xenophile_manifested
+						has_pop_group_flag = cc_literally_xenophile_manifested
 						OR = {
 							has_citizenship_type = { country = root type = citizenship_full }
 							has_citizenship_type = { country = root type = citizenship_limited }
@@ -58,7 +58,7 @@ cc_interspecies_marriage = {
 				pop_percentage = {
 					percentage > 0.1
 					limit = {
-						has_pop_flag = cc_literally_xenophile_manifested
+						has_pop_group_flag = cc_literally_xenophile_manifested
 						OR = {
 							has_citizenship_type = { country = root type = citizenship_full }
 							has_citizenship_type = { country = root type = citizenship_limited }

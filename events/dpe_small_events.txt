@@ -19,9 +19,9 @@ planet_event = {
 			has_planet_flag = dpe_unity_planet
 			has_planet_flag = dpe_dissent_planet
 		}
-		count_owned_pop = {
+		count_owned_pop_amount = {
 			limit = { pop_has_happiness = yes }
-			count > 18
+			count > 1800
 		}
 		pop_percentage = {
 			limit = { happiness > 0.55 }
@@ -569,7 +569,7 @@ country_event = {
 		if = {
 			limit = {
 				event_target:dpe_talent_planet = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = root
 						is_enslaved = no
 					}
@@ -587,7 +587,7 @@ country_event = {
 		}
 		else = {
 			event_target:dpe_talent_planet = {
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						pop_has_happiness = yes
 						has_citizenship_type = {
@@ -963,7 +963,7 @@ country_event = {
 		if = {
 			limit = {
 				event_target:dpe_talent_planet = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = root
 						is_enslaved = no
 					}
@@ -982,7 +982,7 @@ country_event = {
 		}
 		else = {
 			event_target:dpe_talent_planet = {
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						pop_has_happiness = yes
 						has_citizenship_type = {
@@ -1142,7 +1142,7 @@ country_event = {
 		if = {
 			limit = {
 				event_target:dpe_talent_planet = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = root
 						is_enslaved = no
 					}
@@ -1161,7 +1161,7 @@ country_event = {
 		}
 		else = {
 			event_target:dpe_talent_planet = {
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						pop_has_happiness = yes
 						has_citizenship_type = {
@@ -1437,12 +1437,12 @@ planet_event = {
 			has_planet_flag = dpe_unity_planet
 			has_planet_flag = dpe_dissent_planet
 		}
-		count_owned_pop = {
+		count_owned_pop_amount = {
 			limit = {
 				pop_has_happiness = yes
 				has_citizenship_rights = yes
 			}
-			count > 18
+			count > 1800
 		}
 		pop_percentage = {
 			limit = { happiness < 0.75 }
@@ -1534,7 +1534,7 @@ planet_event = {
 			has_planet_flag = dpe_negenergy_planet
 		}
 
-		num_pops > 20
+		pop_amount > 2000
 		
 		habitable_structure = no
 		
@@ -1637,7 +1637,7 @@ planet_event = {
 			has_planet_flag = dpe_negenergy_planet
 		}
 
-		num_pops > 20
+		pop_amount > 2000
 
 		habitable_structure = no
 		
@@ -1741,7 +1741,7 @@ planet_event = {
 			has_planet_flag = dpe_negminerals_planet
 		}
 
-		num_pops > 20
+		pop_amount > 2000
 		
 		habitable_structure = no
 		
@@ -1844,7 +1844,7 @@ planet_event = {
 			has_planet_flag = dpe_negminerals_planet
 		}
 
-		num_pops > 20
+		pop_amount > 2000
 		
 		habitable_structure = no
 		

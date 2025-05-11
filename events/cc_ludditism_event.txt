@@ -31,8 +31,8 @@ planet_event = { #shifted back to a completely normal planet event
 		
 		planet_stability < @dpe_normal_unrest_value
 		NOT = { has_planet_flag = cc_luddite_strike }
-		any_owned_pop = { is_non_sapient_robot = yes }
-		any_owned_pop = {
+		any_owned_pop_group = { is_non_sapient_robot = yes }
+		any_owned_pop_group = {
 			has_ethic = ethic_spiritualist
 			has_citizenship_rights = yes
 			happiness < 0.4
@@ -49,8 +49,8 @@ planet_event = { #shifted back to a completely normal planet event
 				
 				modifier = {
 					factor = 1.5
-					count_owned_pop = {
-						count > 8
+					count_owned_pop_amount = {
+						count > 800
 						limit = {
 							has_citizenship_rights = yes
 							has_ethic = ethic_spiritualist
@@ -107,8 +107,8 @@ planet_event = {
 		}
 		planet_stability < @dpe_normal_unrest_value
 		NOT = { has_planet_flag = cc_luddite_strike }
-		any_owned_pop = { is_non_sapient_robot = yes }
-		any_owned_pop = {
+		any_owned_pop_group = { is_non_sapient_robot = yes }
+		any_owned_pop_group = {
 			has_ethic = ethic_spiritualist
 			has_citizenship_rights = yes
 			happiness < 0.4
@@ -134,9 +134,9 @@ planet_event = {
 	option = {
 		name = UNFORTUNATE
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100 }
 		}
 		
 		hidden_effect = { planet_event = { id = cc_luddite.2 } }
@@ -155,9 +155,9 @@ planet_event = {
 		
 	option = {		
 		name = cc_luddite.2.A
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 		
 		add_modifier = {
@@ -175,8 +175,8 @@ planet_event = {
 							has_planet_flag = cc_luddite_strike
 							owner = { has_country_flag = cc_luddite_movement }
 						}
-						any_owned_pop = { is_non_sapient_robot = yes }
-						any_owned_pop = {
+						any_owned_pop_group = { is_non_sapient_robot = yes }
+						any_owned_pop_group = {
 							has_ethic = ethic_spiritualist
 							has_citizenship_rights = yes
 							happiness < 0.4
@@ -255,8 +255,8 @@ planet_event = {
 							has_planet_flag = cc_luddite_strike
 							owner = { has_country_flag = cc_luddite_movement }
 						}
-						any_owned_pop = { is_non_sapient_robot = yes }
-						any_owned_pop = {
+						any_owned_pop_group = { is_non_sapient_robot = yes }
+						any_owned_pop_group = {
 							has_ethic = ethic_spiritualist
 							has_citizenship_rights = yes
 							happiness < 0.4
@@ -281,7 +281,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				NOT = { any_owned_pop = { is_non_sapient_robot = yes } }
+				NOT = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 			}
 		}
 	}
@@ -306,7 +306,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 10
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_ethic = ethic_spiritualist }
 			
 			add_modifier = {
@@ -324,8 +324,8 @@ planet_event = {
 							has_planet_flag = cc_luddite_strike
 							owner = { has_country_flag = cc_luddite_movement }
 						}
-						any_owned_pop = { is_non_sapient_robot = yes }
-						any_owned_pop = {
+						any_owned_pop_group = { is_non_sapient_robot = yes }
+						any_owned_pop_group = {
 							has_ethic = ethic_spiritualist
 							has_citizenship_rights = yes
 							happiness < 0.4
@@ -423,12 +423,12 @@ planet_event = {
 			}
 		}
 		
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_ethic = ethic_spiritualist
 				is_enslaved = no
 			}
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 			
 			hidden_effect = {
 				every_country = {
@@ -512,7 +512,7 @@ planet_event = {
 			}
 		}
 		
-		any_owned_pop = { has_ethic = ethic_spiritualist }
+		any_owned_pop_group = { has_ethic = ethic_spiritualist }
 		
 #		NOR = {
 #			has_planet_flag = cc_luddite_strike
@@ -529,7 +529,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.3 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					15 = {
 						planet_event = { id = cc_luddite.8 days = 10 random = 15 }
@@ -553,7 +553,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.3 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					15 = {
 						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
@@ -582,7 +582,7 @@ planet_event = {
 				planet_event = { id = cc_luddite.3 days = 30 }
 			
 				if = {
-					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+					limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 					random = { chance = 15 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
@@ -733,7 +733,7 @@ planet_event = {
 			}
 		}
 		
-		any_owned_pop = { has_ethic = ethic_spiritualist }
+		any_owned_pop_group = { has_ethic = ethic_spiritualist }
 		
 #		NOR = {
 #			has_planet_flag = cc_luddite_strike
@@ -750,7 +750,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.4 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					9 = {
 						planet_event = { id = cc_luddite.8 days = 10 random = 15 }
@@ -774,7 +774,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.4 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					9 = {
 						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
@@ -803,7 +803,7 @@ planet_event = {
 				planet_event = { id = cc_luddite.4 days = 30 }
 				
 				if = {
-					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+					limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 					random = { chance = 8 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
@@ -954,7 +954,7 @@ planet_event = {
 			}
 		}
 		
-		any_owned_pop = { has_ethic = ethic_spiritualist }
+		any_owned_pop_group = { has_ethic = ethic_spiritualist }
 		
 #		NOR = {
 #			has_planet_flag = cc_luddite_strike
@@ -971,7 +971,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.5 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					2 = { planet_event = { id = cc_luddite.8 days = 10 random = 15 }
 						modifier = {
@@ -992,7 +992,7 @@ planet_event = {
 			planet_event = { id = cc_luddite.5 days = 30 }
 
 			if = {
-				limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+				limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 				random_list = {
 					2 = {
 						planet_event = { id = cc_luddite.9 days = 10 random = 15 }
@@ -1018,7 +1018,7 @@ planet_event = {
 				planet_event = { id = cc_luddite.5 days = 30 }
 				
 				if = {
-					limit = { any_owned_pop = { is_non_sapient_robot = yes } }
+					limit = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 					random = { chance = 2 planet_event = { id = cc_luddite.10 days = 10 random = 15 } }
 				}
 			}
@@ -1199,8 +1199,8 @@ planet_event = {
 	
 	trigger = {
 		owner = { has_policy_flag = robots_allowed }
-		any_owned_pop = { is_non_sapient_robot = yes }
-		any_owned_pop = {
+		any_owned_pop_group = { is_non_sapient_robot = yes }
+		any_owned_pop_group = {
 			has_ethic = ethic_spiritualist
 			is_robot_pop = no
 		}
@@ -1209,9 +1209,9 @@ planet_event = {
 	option = {
 		name = UNFORTUNATE
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 	}
 }
@@ -1229,7 +1229,7 @@ planet_event = {
 	
 	trigger = {
 		owner = { has_policy_flag = robots_allowed }
-		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop_group = { is_non_sapient_robot = yes }
 	}
 
 	immediate = {
@@ -1244,7 +1244,7 @@ planet_event = {
 				modifier = cc_planet_oppression
 				years = 10
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_ethic = ethic_spiritualist }
 				
 				add_modifier = {
@@ -1258,9 +1258,9 @@ planet_event = {
 	option = {
 		name = UNFORTUNATE
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 	}
 }
@@ -1275,8 +1275,8 @@ planet_event = {
 	
 	trigger = {
 		owner = { has_policy_flag = robots_allowed }
-		any_owned_pop = { is_non_sapient_robot = yes }
-		any_owned_pop = {
+		any_owned_pop_group = { is_non_sapient_robot = yes }
+		any_owned_pop_group = {
 			has_ethic = ethic_spiritualist
 			is_robot_pop = no
 		}
@@ -1317,8 +1317,8 @@ planet_event = {
 	trigger = {
 		exists = owner
 		
-		any_owned_pop = { is_non_sapient_robot = yes }
-		any_owned_pop = {
+		any_owned_pop_group = { is_non_sapient_robot = yes }
+		any_owned_pop_group = {
 			has_ethic = ethic_spiritualist
 			has_citizenship_rights = yes
 			happiness < 0.4
@@ -1341,9 +1341,9 @@ planet_event = {
 	option = {
 		name = UNFORTUNATE
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 		
 		hidden_effect = { planet_event = { id = cc_luddite.12 } }
@@ -1362,9 +1362,9 @@ planet_event = {
 		
 	option = {		
 		name = cc_luddite.12.A
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { is_non_sapient_robot = yes }
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 		}
 		
 		add_modifier = {
@@ -1446,7 +1446,7 @@ planet_event = {
 			}
 			modifier = {
 				factor = 5
-				NOT = { any_owned_pop = { is_non_sapient_robot = yes } }
+				NOT = { any_owned_pop_group = { is_non_sapient_robot = yes } }
 			}
 		}
 	}
@@ -1471,7 +1471,7 @@ planet_event = {
 			modifier = cc_planet_oppression
 			years = 10
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {  has_ethic = ethic_spiritualist }
 			
 			add_modifier = {
@@ -1564,12 +1564,12 @@ planet_event = {
 			}
 		}
 		
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_ethic = ethic_spiritualist
 				is_enslaved = no
 			}
-			kill_pop = yes
+			kill_pop_group = { pop_group = this amount = 100% }
 			
 			hidden_effect = {
 				every_country = {
@@ -1643,9 +1643,9 @@ country_event = {
 
 	immediate = {
 		from = {
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { is_non_sapient_robot = yes }
-				kill_pop = yes
+				kill_pop_group = { pop_group = this amount = 100% }
 			}
 			set_timed_planet_flag = {
 				flag = cc_luddite_strike
@@ -1807,7 +1807,7 @@ country_event = {
 				modifier = cc_planet_oppression
 				years = 10
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_ethic = ethic_spiritualist }
 				
 				add_modifier = {
@@ -1853,10 +1853,10 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_bit_unrest_value
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_non_sapient_robot = yes
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_spiritualist
 					}
 				}
@@ -1865,10 +1865,10 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_somewhat_unrest_value
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_non_sapient_robot = yes
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_spiritualist
 					}
 				}
@@ -1877,10 +1877,10 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_risk_unrest_value
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_non_sapient_robot = yes
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_ethic = ethic_spiritualist
 					}
 				}
@@ -1946,21 +1946,21 @@ country_event = {
 			}
 
 			from = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						has_ethic = ethic_spiritualist
 					}
-					kill_pop = yes
+					kill_pop_group = { pop_group = this amount = 100% }
 				}
 			}
 			every_owned_planet = {
 				limit = { has_modifier = cc_luddite_movement }
 				remove_modifier = cc_luddite_movement
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						has_ethic = ethic_spiritualist
 					}
-					kill_pop = yes
+					kill_pop_group = { pop_group = this amount = 100% }
 				}
 				if = {
 					limit = { has_modifier = cc_planet_oppression }
@@ -2094,7 +2094,7 @@ event = {
 			every_owned_planet = {
 				limit = {
 					has_modifier = cc_luddite_celebration
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_non_sapient_robot = yes
 						is_being_purged = no
 					}
@@ -2148,7 +2148,7 @@ country_event = {
 			any_relation = { has_country_flag = machine_uprising_country }
 		}
 		
-		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop_group = { is_non_sapient_robot = yes }
 	}
 	
 	# mean_time_to_happen = { months = 78 }
@@ -2210,12 +2210,12 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = cc_preluddite_event
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_enslaved = no
 				pop_has_happiness = yes
 			}
-			pop_event = { id = cc_luddite.21 }
+			pop_group_event = { id = cc_luddite.21 }
 		}
 		
 		if = {
@@ -2239,7 +2239,7 @@ country_event = {
 	}
 }
 
-pop_event = { 
+pop_group_event = { 
 	id = cc_luddite.21
 	hide_window = yes
 	is_triggered_only = yes
@@ -2283,9 +2283,9 @@ country_event = {
 		}
 		has_faction = technologist
 		
-		any_owned_pop = { is_non_sapient_robot = yes }
+		any_owned_pop_group = { is_non_sapient_robot = yes }
 		NOT = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_robot_pop = yes
 				is_non_sapient_robot = no
 			}

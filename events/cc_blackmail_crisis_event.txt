@@ -784,7 +784,7 @@ country_event = {
 		custom_tooltip = cc_events_blackmail.207.tooltip
 		
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					pop_has_happiness = yes
 					NOT = { is_same_species = root }

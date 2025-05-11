@@ -46,9 +46,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = { 
 						clear_pop_category = yes
@@ -66,7 +67,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -74,10 +75,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -103,9 +104,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -123,7 +125,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -131,10 +133,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -161,9 +163,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -181,7 +184,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -189,10 +192,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -218,9 +221,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -238,7 +242,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -246,10 +250,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -276,9 +280,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -296,7 +301,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -304,10 +309,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -333,9 +338,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -353,7 +359,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -361,10 +367,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -390,9 +396,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -410,7 +417,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -418,10 +425,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}
@@ -445,9 +452,10 @@ TP_refugee_pop_effect = {
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
 					}
-					resettle_pop = {
-						pop = event_target:refugee_pop
-						planet = this
+					resettle_pop_group = {
+						POP_GROUP = event_target:refugee_pop
+						PLANET = this
+						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
 						clear_pop_category = yes
@@ -465,7 +473,7 @@ TP_refugee_pop_effect = {
 							NOT = {
 								owner = {
 									any_owned_planet = {
-										any_owned_pop = {
+										any_owned_pop_group = {
 											NOT = { is_same_value = event_target:refugee_pop }
 											is_same_species = event_target:refugee_pop
 										}
@@ -473,10 +481,10 @@ TP_refugee_pop_effect = {
 								}
 							}				
 						}		
-						event_target:refugee_pop = { pop_event = { id = refugees.1 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.1 } }
 					}	
 					else = {
-						event_target:refugee_pop = { pop_event = { id = refugees.2 } }
+						event_target:refugee_pop = { pop_group_event = { id = refugees.2 } }
 					}
 				}
 			}

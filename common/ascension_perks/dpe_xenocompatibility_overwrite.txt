@@ -21,7 +21,7 @@ ap_xeno_compatibility = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_xeno_species"
-			any_owned_pop = {
+			any_owned_pop_group = {
 				NOR = {
 					is_same_species = root.owner
 					has_trait = trait_mechanical
@@ -104,9 +104,9 @@ ap_xeno_compatibility = {
 					}
 				}
 				
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
-						has_pop_flag = cc_literally_xenophile_manifested
+						has_pop_group_flag = cc_literally_xenophile_manifested
 						NOT = { has_modifier = cc_practising_xenophile }
 					}
 					add_modifier = {
@@ -114,11 +114,11 @@ ap_xeno_compatibility = {
 						days = -1
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { has_modifier = cc_secretly_practising_xenophile }
 					remove_modifier = cc_secretly_practising_xenophile
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { has_modifier = cc_secret_xenophile }
 					remove_modifier = cc_secret_xenophile
 				}

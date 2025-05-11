@@ -18,12 +18,12 @@ country_event = {
 			support > 0.1
 		}
 		any_owned_planet = {
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					has_ethic = ethic_pacifist
 					has_citizenship_rights = yes
 				}
-				count > 7
+				count > 700
 			}
 		}
 		any_war = {
@@ -116,12 +116,12 @@ country_event = {
 		}
 		random_owned_planet = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
 					}
-					count > 7
+					count > 700
 				}
 			}
 			save_event_target_as = cc_peace_planet
@@ -171,12 +171,12 @@ country_event = {
 		name = cc_peace.1.B
 		every_owned_planet = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
 					}
-					count > 7
+					count > 700
 				}
 			}
 			add_modifier = {
@@ -226,12 +226,12 @@ country_event = {
 		
 		every_owned_planet = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
 					}
-					count > 7
+					count > 700
 				}
 			}
 			add_modifier = {
@@ -243,7 +243,7 @@ country_event = {
 				years = 10
 			}
 			hidden_effect = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
@@ -311,12 +311,12 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_bit_unrest_value
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_ethic = ethic_pacifist
 							has_citizenship_rights = yes
 						}
-						count > 7
+						count > 700
 					}
 				}
 			}
@@ -324,12 +324,12 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_somewhat_unrest_value
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_ethic = ethic_pacifist
 							has_citizenship_rights = yes
 						}
-						count > 7
+						count > 700
 					}
 				}
 			}
@@ -337,12 +337,12 @@ country_event = {
 				factor = 2
 				any_owned_planet = {
 					planet_stability < @dpe_risk_unrest_value
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_ethic = ethic_pacifist
 							has_citizenship_rights = yes
 						}
-						count > 7
+						count > 700
 					}
 				}
 				NOR = {
@@ -401,20 +401,20 @@ country_event = {
 		hidden_effect = {
 			every_owned_planet = {
 				limit = {
-					count_owned_pop = {
+					count_owned_pop_amount = {
 						limit = {
 							has_ethic = ethic_pacifist
 							has_citizenship_rights = yes
 						}
-						count > 7
+						count > 700
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
 					}
-					kill_pop = yes
+					kill_pop_group = { pop_group = this amount = 100% }
 				
 					every_country = {
 						limit = {
@@ -512,12 +512,12 @@ country_event = {
 		
 		every_owned_planet = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						has_ethic = ethic_pacifist
 						has_citizenship_rights = yes
 					}
-					count > 7
+					count > 700
 				}
 			}
 			add_modifier = {
