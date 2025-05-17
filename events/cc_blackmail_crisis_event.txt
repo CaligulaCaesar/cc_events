@@ -246,7 +246,7 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage < 0.15
 							limit = {
 								NOT = { is_same_species = root }
@@ -255,7 +255,7 @@ country_event = {
 					}
 					modifier = {
 						factor = 2
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage > 0.4
 							limit = {
 								NOT = { is_same_species = root }
@@ -444,22 +444,22 @@ country_event = {
 			modifier = {
 				factor = 0.8
 				exists = event_target:cc_first_corrupt
-				event_target:cc_first_corrupt = { has_skill > 4 }
+				event_target:cc_first_corrupt = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.8
 				exists = event_target:cc_second_corrupt
-				event_target:cc_second_corrupt = { has_skill > 4 }
+				event_target:cc_second_corrupt = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.8
 				exists = event_target:cc_third_corrupt
-				event_target:cc_third_corrupt = { has_skill > 4 }
+				event_target:cc_third_corrupt = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.8
 				exists = event_target:cc_fourth_corrupt
-				event_target:cc_fourth_corrupt = { has_skill > 4 }
+				event_target:cc_fourth_corrupt = { has_base_skill > 4 }
 			}
 		}
 	}
@@ -487,36 +487,36 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				exists = event_target:cc_first_corrupt
-				event_target:cc_first_corrupt = { has_skill < 4 }
+				event_target:cc_first_corrupt = { has_base_skill < 4 }
 				
 				exists = event_target:cc_second_corrupt
-				event_target:cc_second_corrupt = { has_skill < 4 }
+				event_target:cc_second_corrupt = { has_base_skill < 4 }
 						
 				exists = event_target:cc_third_corrupt
-				event_target:cc_third_corrupt = { has_skill < 4 }
+				event_target:cc_third_corrupt = { has_base_skill < 4 }
 					
 				exists = event_target:cc_fourth_corrupt
-				event_target:cc_fourth_corrupt = { has_skill < 4 }
+				event_target:cc_fourth_corrupt = { has_base_skill < 4 }
 			}
 			modifier = {
 				factor = 1.2
 				exists = event_target:cc_first_corrupt
-				event_target:cc_first_corrupt = { has_skill > 5 }
+				event_target:cc_first_corrupt = { has_base_skill > 5 }
 			}
 			modifier = {
 				factor = 1.2
 				exists = event_target:cc_second_corrupt
-				event_target:cc_second_corrupt = { has_skill > 5 }
+				event_target:cc_second_corrupt = { has_base_skill > 5 }
 			}
 			modifier = {
 				factor = 1.2
 				exists = event_target:cc_third_corrupt
-				event_target:cc_third_corrupt = { has_skill > 5 }
+				event_target:cc_third_corrupt = { has_base_skill > 5 }
 			}
 			modifier = {
 				factor = 1.2
 				exists = event_target:cc_fourth_corrupt
-				event_target:cc_fourth_corrupt = { has_skill > 5 }
+				event_target:cc_fourth_corrupt = { has_base_skill > 5 }
 			}
 		}
 	}
@@ -703,13 +703,13 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				exists = event_target:cc_first_scientist
-				event_target:cc_first_scientist = { has_skill < 4 }
+				event_target:cc_first_scientist = { has_base_skill < 4 }
 				
 				exists = event_target:cc_second_scientist
-				event_target:cc_second_scientist = { has_skill < 4 }
+				event_target:cc_second_scientist = { has_base_skill < 4 }
 				
 				exists = event_target:cc_third_scientist
-				event_target:cc_third_scientist = { has_skill < 4 }
+				event_target:cc_third_scientist = { has_base_skill < 4 }
 			}
 		}
 	}
@@ -753,17 +753,17 @@ country_event = {
 			modifier = {
 				factor = 0.75
 				exists = event_target:cc_first_scientist
-				event_target:cc_first_scientist = { has_skill > 4 }
+				event_target:cc_first_scientist = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.75
 				exists = event_target:cc_second_scientist
-				event_target:cc_second_scientist = { has_skill > 4 }
+				event_target:cc_second_scientist = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.75
 				exists = event_target:cc_third_scientist
-				event_target:cc_third_scientist = { has_skill > 4 }
+				event_target:cc_third_scientist = { has_base_skill > 4 }
 			}
 		}
 	}

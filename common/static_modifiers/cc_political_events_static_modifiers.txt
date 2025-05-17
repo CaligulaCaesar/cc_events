@@ -264,7 +264,7 @@ cc_luddite_celebration = {
 cc_luddite_movement = {
 	planet_stability_add = -20
 	pop_ethic_spiritualist_attraction_mult = 1
-	planet_jobs_robotic_produces_mult = -0.25
+	pop_bonus_workforce_mult = -0.25
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_luddite.dds"
 }
@@ -638,7 +638,7 @@ dpe_planet_talented_compscientist = {
 dpe_planet_talented_socscientist = {
 	planet_jobs_society_research_produces_mult = 0.2
 	planet_crime_mult = -0.15
-	planet_immigration_pull_add = 5
+	planet_resettlement_unemployed_destination_mult = 0.05
 
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_judge.dds"

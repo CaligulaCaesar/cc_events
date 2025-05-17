@@ -388,7 +388,7 @@ country_event = { # Xeno Clashes
 			pop_amount > 1000
 			
 			any_owned_pop_group = { has_ethic = ethic_xenophobe }
-			pop_percentage = {
+			pop_amount_percentage = {
 				percentage > 0.2
 				limit = { has_ethic = ethic_xenophobe }
 			}
@@ -447,7 +447,7 @@ country_event = { # Xeno Clashes
 					pop_amount > 1000
 					
 					any_owned_pop_group = { has_ethic = ethic_xenophobe }
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.2
 						limit = { has_ethic = ethic_xenophobe }
 					}
@@ -517,7 +517,7 @@ country_event = { # Interspecies Marriage
 			has_country_flag = cc_has_had_interspecies_marriage
 		}
 		
-		pop_percentage = {
+		pop_amount_percentage = {
 			percentage > 0.02
 			limit = {
 				NOR = {
@@ -901,7 +901,7 @@ country_event = { # Dissent
 				}
 				count > 1800
 			}
-			pop_percentage = {
+			pop_amount_percentage = {
 				limit = { happiness < 0.75 }
 				percentage > 0.75
 			}
@@ -924,7 +924,7 @@ country_event = { # Dissent
 						}
 						count > 1800
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						limit = { happiness < 0.75 }
 						percentage > 0.75
 					}
@@ -1388,7 +1388,7 @@ country_event = { # Government Support Statue
 				limit = { pop_has_happiness = yes }
 				count > 1800
 			}
-			pop_percentage = {
+			pop_amount_percentage = {
 				limit = { happiness > 0.55 }
 				percentage > 0.75
 			}
@@ -1409,7 +1409,7 @@ country_event = { # Government Support Statue
 						limit = { pop_has_happiness = yes }
 						count > 1800
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						limit = { happiness > 0.55 }
 						percentage > 0.75
 					}

@@ -42,7 +42,7 @@ cc_interspecies_marriage = {
 			}
 			modifier = {
 				factor = 1.15
-				pop_percentage = {
+				pop_amount_percentage = {
 					percentage > 0.05
 					limit = {
 						has_pop_group_flag = cc_literally_xenophile_manifested
@@ -55,7 +55,7 @@ cc_interspecies_marriage = {
 			}
 			modifier = {
 				factor = 1.5
-				pop_percentage = {
+				pop_amount_percentage = {
 					percentage > 0.1
 					limit = {
 						has_pop_group_flag = cc_literally_xenophile_manifested

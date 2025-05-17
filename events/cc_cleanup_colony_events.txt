@@ -284,7 +284,7 @@ planet_event = {
 								}
 								AND = {
 									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-									pop_percentage = {
+									pop_amount_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
 									}
@@ -309,7 +309,7 @@ planet_event = {
 								}
 								AND = {
 									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-									pop_percentage = {
+									pop_amount_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
 									}
@@ -338,7 +338,7 @@ planet_event = {
 								}
 								AND = {
 									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-									pop_percentage = {
+									pop_amount_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
 									}
@@ -366,7 +366,7 @@ planet_event = {
 								}
 								AND = {
 									NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-									pop_percentage = {
+									pop_amount_percentage = {
 										limit = { is_same_species = prev }
 										percentage > 0.45
 									}

@@ -124,7 +124,7 @@ has_factional_revolt_stage3 = {
 	}
 }
 
-#necessary as pop_percentage = { limit = { member_of_faction = x } } appears to default to 'yes' if no pop is a member of a faction
+#necessary as pop_amount_percentage = { limit = { member_of_faction = x } } appears to default to 'yes' if no pop is a member of a faction
 valid_factional_revolt_target = {
 	any_owned_pop_group = {
 		member_of_faction = yes

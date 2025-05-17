@@ -48,7 +48,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = { 
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -106,7 +105,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -165,7 +163,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -223,7 +220,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -282,7 +278,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -340,7 +335,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -398,7 +392,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -455,7 +448,6 @@ xenophilia_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -1368,7 +1360,7 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 				}
 				AND = {
 					NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-					pop_percentage = {
+					pop_amount_percentage = {
 						limit = { is_same_species = root.owner }
 						percentage > 0.45
 					}
@@ -1387,7 +1379,7 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 				}
 				AND = {
 					NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-					pop_percentage = {
+					pop_amount_percentage = {
 						limit = { is_same_species = root.owner }
 						percentage > 0.45
 					}
@@ -1406,7 +1398,7 @@ remove_new_owner_irrelevant_political_colony_modifiers = {
 				}
 				AND = {
 					NOT = { any_owned_pop_group = { has_pop_group_flag = cc_xenophobe_species } }
-					pop_percentage = {
+					pop_amount_percentage = {
 						limit = { is_same_species = root.owner }
 						percentage > 0.45
 					}

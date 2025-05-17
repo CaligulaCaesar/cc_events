@@ -52,7 +52,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = { 
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -110,7 +109,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -169,7 +167,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -227,7 +224,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -286,7 +282,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -344,7 +339,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -402,7 +396,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee
@@ -458,7 +451,6 @@ TP_refugee_pop_effect = {
 						AMOUNT = 50
 					}
 					event_target:refugee_pop = {
-						clear_pop_category = yes
 						if = { # refresh modifier if already refugee
 							limit = { has_modifier = recent_refugee }
 							remove_modifier = recent_refugee

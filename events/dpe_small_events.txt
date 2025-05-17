@@ -23,7 +23,7 @@ planet_event = {
 			limit = { pop_has_happiness = yes }
 			count > 1800
 		}
-		pop_percentage = {
+		pop_amount_percentage = {
 			limit = { happiness > 0.55 }
 			percentage > 0.75
 		}
@@ -1444,7 +1444,7 @@ planet_event = {
 			}
 			count > 1800
 		}
-		pop_percentage = {
+		pop_amount_percentage = {
 			limit = { happiness < 0.75 }
 			percentage > 0.75
 		}

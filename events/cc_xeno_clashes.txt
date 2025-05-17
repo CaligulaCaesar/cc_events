@@ -18,7 +18,7 @@ planet_event = {
 		pop_amount > 1000
 		
 		any_owned_pop_group = { has_ethic = ethic_xenophobe }
-		pop_percentage = {
+		pop_amount_percentage = {
 			percentage > 0.2
 			limit = { has_ethic = ethic_xenophobe }
 		}
@@ -2132,11 +2132,11 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.2
 						limit = { species = { is_same_value = event_target:species1 } }
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage < 0.1
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
@@ -2188,11 +2188,11 @@ planet_event = {
 			modifier = {
 				factor = 2
 				owner = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.2
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage < 0.1
 						limit = { species = { is_same_value = event_target:species1 } }
 					}

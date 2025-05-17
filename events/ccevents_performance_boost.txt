@@ -78,7 +78,7 @@ country_event = {
 			limit = {
 				OR = {
 					AND = {
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage < 0.4
 							limit = { is_same_species = root }
 						}
@@ -102,7 +102,7 @@ country_event = {
 							has_citizenship_type = { country = prev type = citizenship_limited }
 						}
 						root = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.1
 								limit = { is_same_species = prev }
 							}
@@ -116,7 +116,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage < 0.4
 						limit = { is_same_species = owner_species }
 					}
@@ -140,7 +140,7 @@ country_event = {
 							has_citizenship_type = { country = prev type = citizenship_limited }
 						}
 						prev = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.25
 								limit = { is_same_species = prev }
 							}

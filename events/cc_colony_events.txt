@@ -28,7 +28,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_militarist }
 					}
@@ -63,7 +63,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_pacifist }
 					}
@@ -98,7 +98,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_xenophile }
 					}
@@ -118,7 +118,7 @@ planet_event = {
 				modifier = {
 					factor = 0.5
 					owner = {
-						pop_percentage = {
+						pop_amount_percentage = {
 							limit = {
 								NOT = { is_same_species = root.owner }
 								pop_has_happiness = yes
@@ -157,7 +157,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_xenophobe }
 					}
@@ -208,7 +208,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_spiritualist }
 					}
@@ -243,7 +243,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_materialist }
 					}
@@ -278,7 +278,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_authoritarian }
 					}
@@ -313,7 +313,7 @@ planet_event = {
 			10 = {
 				modifier = {
 					factor = 2
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.49
 						limit = { has_ethic = ethic_egalitarian }
 					}
@@ -1766,7 +1766,7 @@ planet_event = {
 					modifier = {
 						factor = 1.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.15
 								limit = { has_ethic = ethic_militarist }
 							}
@@ -1775,7 +1775,7 @@ planet_event = {
 					modifier = {
 						factor = 0.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.08
 								limit = { has_ethic = ethic_militarist }
 							}
@@ -4483,19 +4483,19 @@ planet_event = {
 			factor = 2.5
 			modifier = {
 				factor = 0.5
-				owner = { ruler = { has_skill > 4 } }
+				owner = { ruler = { has_base_skill > 4 } }
 			}
 			modifier = {
 				factor = 0.67
-				owner = { ruler = { has_skill > 5 } }
+				owner = { ruler = { has_base_skill > 5 } }
 			}
 			modifier = {
 				factor = 0.67
-				owner = { ruler = { has_skill > 6 } }
+				owner = { ruler = { has_base_skill > 6 } }
 			}
 			modifier = {
 				factor = 0.67
-				owner = { ruler = { has_skill > 7 } }
+				owner = { ruler = { has_base_skill > 7 } }
 			}
 		}
 	}
@@ -5425,7 +5425,7 @@ planet_event = {
 					modifier = {
 						factor = 1.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.15
 								limit = { has_ethic = ethic_materialist }
 							}
@@ -5434,7 +5434,7 @@ planet_event = {
 					modifier = {
 						factor = 0.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.08
 								limit = { has_ethic = ethic_materialist }
 							}
@@ -7849,7 +7849,7 @@ planet_event = {
 			count > 900
 			limit = { has_ethic = ethic_spiritualist }
 		}
-		pop_percentage = {
+		pop_amount_percentage = {
 			percentage > 0.33
 			limit = { has_ethic = ethic_spiritualist }
 		}
@@ -7929,7 +7929,7 @@ planet_event = {
 					modifier = {
 						factor = 1.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.15
 								limit = { has_ethic = ethic_materialist }
 							}
@@ -7938,7 +7938,7 @@ planet_event = {
 					modifier = {
 						factor = 0.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.08
 								limit = { has_ethic = ethic_materialist }
 							}
@@ -7992,7 +7992,7 @@ planet_event = {
 					modifier = {
 						factor = 1.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.15
 								limit = { has_ethic = ethic_materialist }
 							}
@@ -8001,7 +8001,7 @@ planet_event = {
 					modifier = {
 						factor = 0.5
 						owner = {
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.08
 								limit = { has_ethic = ethic_materialist }
 							}

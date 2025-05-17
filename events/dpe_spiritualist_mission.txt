@@ -818,11 +818,11 @@ country_event = {
 					controller = { is_same_value = root }
 					has_ground_combat = no
 					NOT = { has_planet_flag = cc_colony_story }
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.75
 						limit = { pop_has_happiness = yes }
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.5
 						limit = { is_enslaved = no }
 					}
@@ -836,11 +836,11 @@ country_event = {
 					controller = { is_same_value = root }
 					has_ground_combat = no
 					NOT = { has_planet_flag = cc_colony_story }
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.75
 						limit = { pop_has_happiness = yes }
 					}
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.5
 						limit = { is_enslaved = no }
 					}
@@ -1465,7 +1465,7 @@ country_event = {
 						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
-					pop_change_ethic = ethic_spiritualist
+					pop_change_ethic = { ethic = ethic_spiritualist }
 				}
 			}
 		}
@@ -2502,7 +2502,7 @@ country_event = {
 						pop_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
-					pop_change_ethic = ethic_spiritualist
+					pop_change_ethic = { ethic = ethic_spiritualist }
 				}
 			}
 		}
@@ -2789,7 +2789,7 @@ country_event = {
 							pop_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
 						}
-						pop_change_ethic = ethic_spiritualist
+						pop_change_ethic = { ethic = ethic_spiritualist }
 					}
 				}
 			}

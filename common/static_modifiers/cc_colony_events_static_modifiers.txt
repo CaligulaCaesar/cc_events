@@ -161,7 +161,7 @@ cc_minor_mausoleum = {
 cc_religious_centre = {
 	job_dpe_gurus_followers_add = 4
 	job_dpe_gurus_followers_per_pop = 0.025 # 1 per 40
-	planet_immigration_pull_add = 20
+	planet_resettlement_unemployed_destination_mult = 0.2
 	pop_ethic_spiritualist_attraction_mult = 2.5
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_mausoleum.dds"
@@ -334,7 +334,7 @@ cc_university = {
 	planet_jobs_physics_research_produces_mult = 0.2
 	planet_jobs_society_research_produces_mult = 0.2
 	planet_jobs_engineering_research_produces_mult = 0.2
-	planet_immigration_pull_add = 10
+	planet_resettlement_unemployed_destination_mult = 0.1
 	pop_ethic_materialist_attraction_mult = 2.0
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/pm_university.dds"
@@ -544,8 +544,7 @@ cc_xenophobe_assassinated = {
 }
 
 cc_founder_xenophobe = {
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_mult = -0.5
+	planet_resettlement_unemployed_destination_mult = -0.5
 	pop_citizen_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 1.5
 	icon_frame = 1
@@ -601,8 +600,7 @@ cc_building_xenophobe_institute = {
 
 cc_xenophobe_institute = {
 	planet_jobs_unity_produces_mult = 0.2
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_mult = -0.5
+	planet_resettlement_unemployed_destination_mult = -0.5
 	pop_citizen_happiness = 0.1
 	pop_ethic_xenophobe_attraction_mult = 3
 	icon_frame = 1
@@ -610,8 +608,7 @@ cc_xenophobe_institute = {
 }
 
 cc_minor_xenophobe_institute = {
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_mult = -0.5
+	planet_resettlement_unemployed_destination_mult = -0.5
 	pop_happiness = 0.05
 	pop_ethic_xenophobe_attraction_mult = 2
 	icon_frame = 1
@@ -656,7 +653,7 @@ cc_xenophobe_hero_1 = {
 
 #Xenophiles
 cc_founder_xenophile = {
-	planet_immigration_pull_mult = 1
+	planet_resettlement_unemployed_destination_mult = 0.5
 	pop_happiness = 0.05
 	pop_ethic_xenophile_attraction_mult = 1.5
 	icon_frame = 1
@@ -708,7 +705,7 @@ cc_building_xenophile_institute = {
 
 cc_xenophile_institute = {
 	planet_jobs_unity_produces_mult = 0.25
-	planet_immigration_pull_mult = 1
+	planet_resettlement_unemployed_destination_mult = 0.5
 	pop_happiness = 0.05
 	pop_ethic_xenophile_attraction_mult = 2.0
 	icon_frame = 1

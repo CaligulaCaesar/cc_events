@@ -127,17 +127,17 @@ country_event = {
 			}
 			root = {
 				OR = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.15
 						limit = { is_same_species = prev }
 					}
 					AND = {
 						num_owned_planets > 25
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage > 0.05
 							limit = { is_same_species = prev }
 						}
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage < 0.4
 							limit = { is_same_species = root }
 						}
@@ -163,17 +163,17 @@ country_event = {
 				}
 				root = {
 					OR = {
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage > 0.15
 							limit = { is_same_species = prev }
 						}
 						AND = {
 							num_owned_planets > 25
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.05
 								limit = { is_same_species = prev }
 							}
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.4
 								limit = { is_same_species = root }
 							}
@@ -386,17 +386,17 @@ country_event = {
 			}
 			root = {
 				OR = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage > 0.15
 						limit = { is_same_species = prev }
 					}
 					AND = {
 						num_owned_planets > 25
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage > 0.05
 							limit = { is_same_species = prev }
 						}
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage < 0.4
 							limit = {
 								is_same_species = root
@@ -427,17 +427,17 @@ country_event = {
 				}
 				root = {
 					OR = {
-						pop_percentage = {
+						pop_amount_percentage = {
 							percentage > 0.15
 							limit = { is_same_species = prev }
 						}
 						AND = {
 							num_owned_planets > 25
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage > 0.05
 								limit = { is_same_species = prev }
 							}
-							pop_percentage = {
+							pop_amount_percentage = {
 								percentage < 0.4
 								limit = {
 									is_same_species = root
@@ -1026,11 +1026,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.65
-				ruler = { has_skill > 4 }
+				ruler = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.65
-				ruler = { has_skill > 6 }
+				ruler = { has_base_skill > 6 }
 			}
 		}
 	}
@@ -1078,11 +1078,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				ruler = { has_skill > 4 }
+				ruler = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 2
-				ruler = { has_skill > 6 }
+				ruler = { has_base_skill > 6 }
 			}
 		}
 	}
@@ -1298,11 +1298,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.65
-				event_target:cc_scandal_leader = { has_skill > 4 }
+				event_target:cc_scandal_leader = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 0.65
-				event_target:cc_scandal_leader = { has_skill > 6 }
+				event_target:cc_scandal_leader = { has_base_skill > 6 }
 			}
 		}
 	}
@@ -1346,11 +1346,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				event_target:cc_scandal_leader = { has_skill > 4 }
+				event_target:cc_scandal_leader = { has_base_skill > 4 }
 			}
 			modifier = {
 				factor = 2
-				event_target:cc_scandal_leader = { has_skill > 6 }
+				event_target:cc_scandal_leader = { has_base_skill > 6 }
 			}
 		}
 	}
