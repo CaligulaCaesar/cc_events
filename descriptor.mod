@@ -5,6 +5,6 @@ tags={
 	"Diplomacy"
 }
 picture="thumbnail.png"
-version="3.14"
+version="4.0"
 supported_version="v4.0.*"
 remote_file_id="1227620643"
