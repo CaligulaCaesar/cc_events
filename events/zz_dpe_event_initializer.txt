@@ -1200,8 +1200,6 @@ country_event = { # Royal Marriage
 	
 	trigger = {
 		is_imperial_authority = yes
-		is_xenophile = yes
-		has_faction = xenoist
 		exists = ruler #should always be true, but just in case
 		ruler = {
 			OR = { #To stop confusing localisation with fungoids.
@@ -1214,13 +1212,15 @@ country_event = { # Royal Marriage
 		NOT = { has_country_flag = recent_royal_marriage_timer } #it's weird when such events happen twice in quick succession
 
 		any_relation = {
+			is_imperial_authority = yes
 			is_country_type = default
 			has_communications = root
 			OR = {
 				has_defensive_pact = root
 				is_in_federation_with = root
+				has_subject = root
+				has_overlord = root
 			}
-			is_imperial_authority = yes
 			NOR = {
 				has_relation_flag = {
 					who = root
@@ -1245,9 +1245,14 @@ country_event = { # Royal Marriage
 					gender = male
 					gender = female
 				}
-				NOT = { is_same_species = root }
 			}
-			NOT = { is_same_species = root }
+			OR = {
+				is_same_species = root
+				AND = {
+					is_xenophobe = no
+					root = { has_faction = xenoist } ## More interesting than a xenophobe check. Gives xenophobic govs a way into it as well.
+				}
+			}
 			NOT = { has_country_flag = never_do_dpe_royal_marriages }
 			NOT = { has_country_flag = recent_royal_marriage_timer }
 		}

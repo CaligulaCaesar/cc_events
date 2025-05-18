@@ -286,7 +286,7 @@ dpe_monarchists = {
 		default = {
 			icon = noble
 			condition_string = SPECIALIST_JOB_TRIGGER
-			building_icon = building_major_capital
+			building_icon = building_noble_estates
 		}
 	}
 
@@ -339,7 +339,6 @@ dpe_missionaries = {
 	swappable_data = {
 		default = {
 			icon = priest
-			condition_string = SPECIALIST_JOB_TRIGGER
 			building_icon = building_temple
 		}
 	}
@@ -359,23 +358,11 @@ dpe_missionaries = {
 	resources = {
 		category = planet_culture_workers
 		produces = {
-			unity = 3
+			unity = 4
 		}
 		upkeep = {
 			consumer_goods = 0.5
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				exists = owner
-				owner = {
-					has_tradition = tr_modularity_4
-				}
-			}
-		}
-		planet_jobs_worker_produces_mult = 0.02
 	}
 
 	weight = {
