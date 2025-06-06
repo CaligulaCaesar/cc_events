@@ -1,4 +1,3 @@
-
 namespace = cc_colony_events
 
 planet_event = {
@@ -10,11 +9,11 @@ planet_event = {
 		exists = root.owner
 		owner = {
 			is_country_type = default
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 		}
 		NOT = { has_planet_flag = cc_colony_story }
 		any_owned_pop_group = {
-			pop_has_happiness = yes
+			pop_group_has_happiness = yes
 			is_enslaved = no
 			has_citizenship_rights = yes
 		}
@@ -121,7 +120,7 @@ planet_event = {
 						pop_amount_percentage = {
 							limit = {
 								NOT = { is_same_species = root.owner }
-								pop_has_happiness = yes
+								pop_group_has_happiness = yes
 							}
 							percentage < 0.1
 						}
@@ -446,7 +445,7 @@ planet_event = {
 		}
 		else = {
 			random_owned_pop_group = {
-				limit = { pop_has_happiness = yes }
+				limit = { pop_group_has_happiness = yes }
 				save_event_target_as = cc_leader_pop
 			}
 			owner = {
@@ -3462,7 +3461,7 @@ planet_event = {
 		
 		has_modifier = cc_founder_xenophobe
 		owner = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			any_owned_planet = {
 				NOT = { is_same_value = root }
 				distance = {
@@ -7651,7 +7650,7 @@ country_event = {
 
 	trigger = {
 		num_owned_planets > 3
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_gestalt = no
 		has_faction = traditionalist
 
 		if = {
@@ -7661,7 +7660,7 @@ country_event = {
 				NOT = { has_planet_flag = cc_colony_story }
 				has_orbital_bombardment = no
 				exists = controller
-				controller = { is_same_value = root }
+				controller = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -7681,7 +7680,7 @@ country_event = {
 				NOT = { has_planet_flag = cc_colony_story }
 				has_orbital_bombardment = no
 				exists = controller
-				controller = { is_same_value = root }
+				controller = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -7716,7 +7715,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					has_orbital_bombardment = no
 					exists = controller
-					controller = { is_same_value = root }
+					controller = { is_same_empire = root }
 					root = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
@@ -7739,7 +7738,7 @@ country_event = {
 					NOT = { has_planet_flag = cc_colony_story }
 					has_orbital_bombardment = no
 					exists = controller
-					controller = { is_same_value = root }
+					controller = { is_same_empire = root }
 					root = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
@@ -7819,7 +7818,7 @@ planet_event = {
 		owner = {
 			NOT = { has_country_flag = cc_recent_spiritualist_story }
 			is_country_type = default
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			has_faction = traditionalist
 			any_owned_planet = {
 				NOT = { is_same_value = root }

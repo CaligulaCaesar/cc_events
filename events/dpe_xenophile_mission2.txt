@@ -1,4 +1,3 @@
-
 namespace = dpe_xenophile_mission
 
 
@@ -35,7 +34,7 @@ event = {
 		every_playable_country = {
 			limit = {
 				NOR = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					has_civic = civic_fanatic_purifiers
 				}
 			}
@@ -51,7 +50,7 @@ event = {
 						}
 						is_country_type = default
 						NOR = {
-							has_ethic = ethic_gestalt_consciousness
+							is_gestalt = yes
 							has_civic = civic_fanatic_purifiers
 						}
 					}
@@ -67,7 +66,7 @@ event = {
 						}
 						is_country_type = default
 						NOR = {
-							has_ethic = ethic_gestalt_consciousness
+							is_gestalt = yes
 							has_civic = civic_fanatic_purifiers
 						}
 					}
@@ -2137,7 +2136,7 @@ country_event = {
 		every_country = {
 			limit = {
 				NOR = {
-					is_same_value = fromfrom
+					is_same_empire = fromfrom
 					is_same_value = root
 				}
 				has_communications = root
@@ -2628,7 +2627,7 @@ country_event = {
 		every_country = {
 			limit = {
 				NOR = {
-					is_same_value = from
+					is_same_empire = from
 					is_same_value = root
 				}
 				has_communications = root
@@ -3487,7 +3486,7 @@ country_event = {
 			every_country = {
 				limit = {
 					NOR = {
-						is_same_value = root
+						is_same_empire = root
 						is_same_value = from
 					}
 					OR = {
@@ -3512,7 +3511,7 @@ country_event = {
 			every_country = {
 				limit = {
 					NOR = {
-						is_same_value = root
+						is_same_empire = root
 						is_same_value = from
 						is_in_federation_with = FROM
 						has_defensive_pact = FROM

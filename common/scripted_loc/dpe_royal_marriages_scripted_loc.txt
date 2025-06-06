@@ -1,12 +1,11 @@
 
 
-
 #"Their system of government is a [monarchy/dictatorship/oligarchy/republic/hive mind/machine intelligence]"
 defined_text = { # Country scope
 	name = GovernmentName
 	text = {
 		trigger = {
-			has_authority = auth_corporate
+			is_megacorp = yes
 		}
 		localization_key = corporation_string
 	}

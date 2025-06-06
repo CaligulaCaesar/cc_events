@@ -1,5 +1,4 @@
 
-
 TP_refugee_pop_effect = {
 	remove_modifier = "pop_recently_conquered"
 	remove_culture_shock = yes
@@ -41,7 +40,7 @@ TP_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.7 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -156,7 +155,7 @@ TP_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.5 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -271,7 +270,7 @@ TP_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.2 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -385,7 +384,7 @@ TP_refugee_pop_effect = {
 				}
 				random_owned_planet = {
 					limit = {
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					

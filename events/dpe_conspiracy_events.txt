@@ -1,4 +1,3 @@
-
 namespace = dpe_conspiracy
 
 #Authoritarian Conspiracy
@@ -209,7 +208,7 @@ country_event = {
 						is_domineering_to = root
 					}
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						is_xenophobe = yes
 					}
 				}
@@ -222,7 +221,7 @@ country_event = {
 						is_domineering_to = root
 					}
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						is_xenophobe = yes
 					}
 				}
@@ -234,7 +233,7 @@ country_event = {
 			random_playable_country = {
 				limit = {
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_ethic = ethic_fanatic_xenophobe
 						is_in_federation_with = root
 					}
@@ -657,7 +656,7 @@ country_event = {
 						is_domineering_to = root
 					}
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						is_xenophobe = yes
 					}
 				}
@@ -670,7 +669,7 @@ country_event = {
 						is_domineering_to = root
 					}
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						is_xenophobe = yes
 					}
 				}
@@ -682,7 +681,7 @@ country_event = {
 			random_playable_country = {
 				limit = {
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_ethic = ethic_fanatic_xenophobe
 						is_in_federation_with = root
 					}
@@ -710,7 +709,7 @@ country_event = {
 		is_country_type = default
 
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_militarist = yes
 		}
 		is_at_war = no
@@ -781,7 +780,7 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_militarist = yes
 			has_ethic = ethic_fanatic_egalitarian
 		}

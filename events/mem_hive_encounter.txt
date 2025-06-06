@@ -29,7 +29,7 @@ event = {
                     any_playable_country = {
                         has_communications = PREV 
                         NOT = {
-							has_ethic = ethic_gestalt_consciousness
+							is_gestalt = yes
 						}
                         OR = {
                             is_neutral_to = PREV
@@ -68,7 +68,7 @@ event = {
 									is_ai = no
 									has_communications = PREV 
 									NOT = {
-										has_ethic = ethic_gestalt_consciousness
+										is_gestalt = yes
 									}
 									OR = {
 										is_neutral_to = PREV
@@ -84,7 +84,7 @@ event = {
 									has_communications = PREV 
 									is_country_type = default
 									NOT = {
-										has_ethic = ethic_gestalt_consciousness
+										is_gestalt = yes
 									}
 									OR = {
 										is_neutral_to = PREV
@@ -104,7 +104,7 @@ event = {
 									has_communications = PREV 
 									is_country_type = default
 									NOT = {
-										has_ethic = ethic_gestalt_consciousness
+										is_gestalt = yes
 									}
 									OR = {
 										is_neutral_to = PREV
@@ -126,7 +126,7 @@ event = {
             limit = {
                 any_playable_country = {
                     NOT = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
                     is_ai = no
                     any_playable_country = {
@@ -150,7 +150,7 @@ event = {
                     random_playable_country = {
                         limit = {
                             NOT = {
-								has_ethic = ethic_gestalt_consciousness
+								is_gestalt = yes
 							}
                             is_ai = no
                             any_playable_country = {
@@ -303,7 +303,7 @@ country_event = {
                 limit = { is_pop_faction_type = isolationist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -315,7 +315,7 @@ country_event = {
                 limit = { is_pop_faction_type = supremacist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -327,7 +327,7 @@ country_event = {
                 limit = { is_pop_faction_type = progressive }
                 add_modifier = {
                     modifier = mem_hive_encounter_traded_prisoners
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -359,7 +359,7 @@ country_event = {
                 limit = { is_pop_faction_type = isolationist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -371,7 +371,7 @@ country_event = {
                 limit = { is_pop_faction_type = supremacist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -383,7 +383,7 @@ country_event = {
                 limit = { is_pop_faction_type = traditionalist }
                 add_modifier = {
                     modifier = mem_hive_encounter_desecrated_corpses
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -487,7 +487,7 @@ country_event = {
                 limit = { is_pop_faction_type = isolationist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -499,7 +499,7 @@ country_event = {
                 limit = { is_pop_faction_type = supremacist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -511,7 +511,7 @@ country_event = {
                 limit = { is_pop_faction_type = progressive }
                 add_modifier = {
                     modifier = mem_hive_encounter_traded_prisoners
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -543,7 +543,7 @@ country_event = {
                 limit = { is_pop_faction_type = isolationist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -555,7 +555,7 @@ country_event = {
                 limit = { is_pop_faction_type = supremacist }
                 add_modifier = {
                     modifier = mem_hive_encounter_dealed_with_xenos
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -567,7 +567,7 @@ country_event = {
                 limit = { is_pop_faction_type = traditionalist }
                 add_modifier = {
                     modifier = mem_hive_encounter_desecrated_corpses
-                    days = 3600 # TODO adjust timer
+                    years = 10 # TODO adjust timer
                 }
             }
         }
@@ -883,7 +883,10 @@ country_event = {
                 }
             }
             event_target:mem_hive_encounter_leader = {
-                add_trait = leader_trait_expertise_psionics
+                add_trait = {
+					trait = leader_trait_expertise_psionics
+					show_message = no
+				}
 				add_experience = 100
             }
         }

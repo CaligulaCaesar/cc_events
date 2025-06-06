@@ -52,7 +52,7 @@ country_event = {
 			is_enslaved = no
 			is_being_purged = no
 			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 			}
 			NOR = {
 				has_living_standard = {
@@ -187,7 +187,7 @@ country_event = {
 	trigger = {
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = dpe_recent_corruption_scandal
 		}
 		is_at_war = no
@@ -630,7 +630,7 @@ country_event = {
 	
 	trigger = {
 		is_country_type = default
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_gestalt = no
 		years_passed > 25
 		allows_slavery = yes
 		
@@ -851,7 +851,12 @@ country_event = {
 				exists = ruler
 				ruler = { NOT = { has_trait = leader_trait_dpe_ruthless } }
 			}
-			ruler = { add_trait = leader_trait_dpe_ruthless }
+			ruler = {
+				add_trait = {
+					trait = leader_trait_dpe_ruthless
+					show_message = no
+				}
+			}
 		}
 	}
 }

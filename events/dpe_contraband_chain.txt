@@ -1,4 +1,3 @@
-
 namespace = dpe_contraband_event
 
 country_event = {
@@ -17,7 +16,7 @@ country_event = {
 		is_country_type = default
 		is_authoritarian = no
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_civic = civic_fanatic_purifiers
 			has_country_flag = dpe_has_had_contraband_crisis
 		}
@@ -31,7 +30,7 @@ country_event = {
 			NOR = {
 				is_same_species = root
 				has_closed_borders = root
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_civic = civic_fanatic_purifiers
 			}
 			has_relation_flag = {
@@ -55,7 +54,7 @@ country_event = {
 				NOR = {
 					is_materialist = yes
 					is_egalitarian = yes
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					has_civic = civic_fanatic_purifiers
 				}
 				has_relation_flag = {
@@ -459,7 +458,7 @@ country_event = {
 					limit = {
 						has_citizenship_rights = yes
 						NOT = { has_ethic = ethic_authoritarian }
-						pop_has_happiness = yes
+						pop_group_has_happiness = yes
 					}
 					pop_group_event = { id = dpe_contraband_event.46 }
 				}
@@ -542,7 +541,7 @@ country_event = {
 				limit = {
 					has_citizenship_rights = yes
 					NOT = { has_ethic = ethic_authoritarian }
-					pop_has_happiness = yes
+					pop_group_has_happiness = yes
 				}
 				pop_group_event = { id = dpe_contraband_event.46 }
 			}

@@ -1,4 +1,3 @@
-
 namespace = dpe_init
 
 country_event = { # Blackmail Crisis
@@ -11,7 +10,7 @@ country_event = { # Blackmail Crisis
 		years_passed > 60
 		NOR = {
 			has_country_flag = cc_has_had_blackmail
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = cc_eventperf_has_overwhelming_rival
 			has_country_flag = cc_eventperf_has_superior_rival
 		}
@@ -32,7 +31,7 @@ country_event = { # Spiritualist Guru
 	
 	trigger = {
 		num_owned_planets > 3
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_gestalt = no
 		has_faction = traditionalist
 
 		if = {
@@ -42,7 +41,7 @@ country_event = { # Spiritualist Guru
 				NOT = { has_planet_flag = cc_colony_story }
 				has_orbital_bombardment = no
 				exists = controller
-				controller = { is_same_value = root }
+				controller = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -62,7 +61,7 @@ country_event = { # Spiritualist Guru
 				NOT = { has_planet_flag = cc_colony_story }
 				has_orbital_bombardment = no
 				exists = controller
-				controller = { is_same_value = root }
+				controller = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -116,7 +115,7 @@ country_event = { # Emancipation Crisis
 			NOT = { has_planet_flag = cc_emancipation_movement }
 			any_owned_pop_group = {
 				is_enslaved = yes
-				pop_has_happiness = yes
+				pop_group_has_happiness = yes
 				happiness < 0.4
 			}
 			any_owned_pop_group = {
@@ -135,7 +134,7 @@ country_event = { # Emancipation Crisis
 					NOT = { has_planet_flag = cc_emancipation_movement }
 					any_owned_pop_group = {
 						is_enslaved = yes
-						pop_has_happiness = yes
+						pop_group_has_happiness = yes
 						happiness < 0.4
 					}
 					any_owned_pop_group = {
@@ -158,7 +157,7 @@ country_event = { # Ludditism Crisis
 		is_country_type = default
 		has_policy_flag = robots_allowed
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_synthetic_empire = yes
 			is_mechanical_empire = yes
 			has_country_flag = cc_luddite_movement
@@ -257,7 +256,7 @@ country_event = { # Xeno Sex Scandal
 		is_country_type = default
 		
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = cc_recent_sex_scandal
 		}
 
@@ -383,7 +382,7 @@ country_event = { # Xeno Clashes
 	
 	trigger = {
 		is_country_type = default
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_gestalt = no
 		any_owned_planet = {
 			pop_amount > 1000
 			
@@ -400,7 +399,7 @@ country_event = { # Xeno Clashes
 					OR = {
 						has_country_flag = cc_recent_xeno_empire_clashes
 						has_country_flag = cc_recent_first_xeno_clashes
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
 				}
 			}
@@ -459,7 +458,7 @@ country_event = { # Xeno Clashes
 							OR = {
 								has_country_flag = cc_recent_xeno_empire_clashes
 								has_country_flag = cc_recent_first_xeno_clashes
-								has_ethic = ethic_gestalt_consciousness
+								is_gestalt = yes
 							}
 						}
 					}
@@ -513,7 +512,7 @@ country_event = { # Interspecies Marriage
 		has_faction = xenoist
 		
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = cc_has_had_interspecies_marriage
 		}
 		
@@ -587,7 +586,7 @@ country_event = { # Ruler Xenophobic Comments
 		
 		NOR = {
 			has_country_flag = recent_xenophobic_comments
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_ethic = ethic_fanatic_xenophile
 		}
 		
@@ -611,7 +610,7 @@ country_event = { # Ruler Corruption Scandal
 	trigger = {
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = dpe_recent_corruption_scandal
 		}
 		is_at_war = no
@@ -639,7 +638,7 @@ country_event = { # Military Coup
 		is_country_type = default
 
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_militarist = yes
 		}
 		is_at_war = no
@@ -790,7 +789,7 @@ country_event = { # Runaway Scientist
 		NOR = {
 			has_country_flag = dpe_has_had_escaped_fe_pop
 			has_ascension_perk = ap_synthetic_evolution
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			end_game_years_passed > 0
 		}
 
@@ -850,13 +849,13 @@ country_event = { # Talent Uncovered
 	trigger = {
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = dpe_recent_talent_leader
 		}
 
 		any_owned_planet = {
 			NOT = { has_planet_flag = dpe_recent_talent_planet }
-			controller = { is_same_value = root }
+			controller = { is_same_empire = root }
 			any_owned_species = {
 				species_has_happiness_with_owner = root
 				OR = {
@@ -885,7 +884,7 @@ country_event = { # Dissent
 		is_country_type = default
 		num_owned_planets > 1
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = dpe_recent_dissent_planet
 		}
 
@@ -896,7 +895,7 @@ country_event = { # Dissent
 			}
 			count_owned_pop_amount = {
 				limit = {
-					pop_has_happiness = yes
+					pop_group_has_happiness = yes
 					has_citizenship_rights = yes
 				}
 				count > 1800
@@ -919,7 +918,7 @@ country_event = { # Dissent
 					}
 					count_owned_pop_amount = {
 						limit = {
-							pop_has_happiness = yes
+							pop_group_has_happiness = yes
 							has_citizenship_rights = yes
 						}
 						count > 1800
@@ -1277,7 +1276,7 @@ country_event = { # Anti-Luddite event
 		NOR = {
 			is_synthetic_empire = yes
 			is_mechanical_empire = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			
 			has_country_flag = machine_uprising_originator
 			has_country_flag = cc_preluddite_event
@@ -1339,7 +1338,7 @@ country_event = { # Spiritualist Mission
 				has_defensive_pact = prev
 				is_in_federation_with = prev
 				
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_spiritualist = yes
 				any_pop_faction = {
 					is_pop_faction_type = traditionalist
@@ -1379,7 +1378,7 @@ country_event = { # Government Support Statue
 		years_passed > 15
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_country_flag = dpe_recent_unity_planet
 		}
 
@@ -1390,7 +1389,7 @@ country_event = { # Government Support Statue
 				has_planet_flag = dpe_dissent_planet
 			}
 			count_owned_pop_amount = {
-				limit = { pop_has_happiness = yes }
+				limit = { pop_group_has_happiness = yes }
 				count > 1800
 			}
 			pop_amount_percentage = {
@@ -1411,7 +1410,7 @@ country_event = { # Government Support Statue
 						has_planet_flag = dpe_dissent_planet
 					}
 					count_owned_pop_amount = {
-						limit = { pop_has_happiness = yes }
+						limit = { pop_group_has_happiness = yes }
 						count > 1800
 					}
 					pop_amount_percentage = {
@@ -1454,7 +1453,7 @@ country_event = { # Ruler Charity Scandal
 			is_enslaved = no
 			is_being_purged = no
 			NOT = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 			}
 			NOR = {
 				has_living_standard = {
@@ -1523,7 +1522,7 @@ country_event = { # Ruler Ex-Slave Scandal
 	
 	trigger = {
 		is_country_type = default
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		is_gestalt = no
 		years_passed > 25
 		allows_slavery = yes
 		
@@ -1617,7 +1616,7 @@ country_event = { # Extra Ludditism Start Event
 		NOR = {
 			is_synthetic_empire = yes
 			is_mechanical_empire = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			
 			has_country_flag = machine_uprising_originator
 			has_country_flag = cc_preluddite_event
@@ -1655,11 +1654,11 @@ country_event = { # Ruler Terminally Ill
 		is_imp_or_dict = yes
 		NOR = {
 			has_ethic = ethic_fanatic_xenophobe
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_tradition = tr_psionics_psionic_assimilation
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_ascension_perk = ap_synthetic_evolution
-			has_ascension_perk = ap_evolutionary_mastery
+			has_tradition = tr_genetics_resequencing
 		}
 		exists = ruler
 		ruler = {
@@ -1701,7 +1700,7 @@ country_event = { # Egalitarian Mission
 		NOR = {
 			has_country_flag = dpe_has_recent_egalitarian_mission
 			has_country_flag = dpe_provided_with_egalitarian_mission
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_democratic_authority = yes
 			is_egalitarian = yes
 			has_ethic = ethic_fanatic_authoritarian

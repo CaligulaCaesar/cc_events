@@ -1,4 +1,3 @@
-
 namespace = dpe_hw_duel
 
 
@@ -940,21 +939,21 @@ country_event = {
 	title = dpe_hw_duel.51.name
 	desc = {
 		trigger = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			from = { has_country_flag = dpe_hw_duel_leader }
 		}
 		text = dpe_hw_duel.51.desc.gestalt.leader
 	}
 	desc = {
 		trigger = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 		}
 		text = dpe_hw_duel.51.desc.gestalt.no_leader
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -962,7 +961,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -970,7 +969,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -978,7 +977,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -1125,7 +1124,7 @@ country_event = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
 								modifier = {
 									factor = 0
-									root = { has_ethic = ethic_gestalt_consciousness }
+									root = { is_gestalt = yes }
 								}
 							}
 						}
@@ -1235,7 +1234,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -1255,7 +1254,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -1374,7 +1373,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -1394,7 +1393,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -1612,7 +1611,7 @@ country_event = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
 								modifier = {
 									factor = 0
-									root = { has_ethic = ethic_gestalt_consciousness }
+									root = { is_gestalt = yes }
 								}
 							}
 						}
@@ -1722,7 +1721,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -1742,7 +1741,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -1861,7 +1860,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -1881,7 +1880,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -2145,7 +2144,7 @@ country_event = {
 								country_event = { id = dpe_hw_duel.62 days = 5 }
 								modifier = {
 									factor = 0
-									root = { has_ethic = ethic_gestalt_consciousness }
+									root = { is_gestalt = yes }
 								}
 							}
 						}
@@ -2255,7 +2254,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -2275,7 +2274,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -2394,7 +2393,7 @@ country_event = {
 							root = {
 								OR = {
 									has_ethic = ethic_militarist
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 								}
 							}
 						}
@@ -2414,7 +2413,7 @@ country_event = {
 							factor = 0.75
 							root = {
 								NOR = {
-									has_ethic = ethic_gestalt_consciousness
+									is_gestalt = yes
 									has_faction = imperialist
 								}
 							}
@@ -2605,7 +2604,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2615,7 +2614,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2625,7 +2624,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -2635,7 +2634,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -2673,15 +2672,24 @@ country_event = {
 			event_target:dpe_duel_leader = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -2741,7 +2749,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2751,7 +2759,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2761,7 +2769,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -2771,7 +2779,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -2809,15 +2817,24 @@ country_event = {
 			event_target:dpe_duel_leader = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -2848,7 +2865,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2858,7 +2875,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2868,7 +2885,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -2878,7 +2895,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -2916,15 +2933,24 @@ country_event = {
 			event_target:dpe_duel_leader = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -2984,7 +3010,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -2994,7 +3020,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3004,7 +3030,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3014,7 +3040,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3081,7 +3107,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3091,7 +3117,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3101,7 +3127,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3111,7 +3137,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3134,15 +3160,24 @@ country_event = {
 			event_target:dpe_duel_leader = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_loser_commander
+					add_trait = {
+						trait = dpe_duel_loser_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_loser_governor
+					add_trait = {
+						trait = dpe_duel_loser_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_loser_ruler
+					add_trait = {
+						trait = dpe_duel_loser_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -3189,7 +3224,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3199,7 +3234,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3209,7 +3244,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3219,7 +3254,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3290,7 +3325,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3300,7 +3335,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3310,7 +3345,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3320,7 +3355,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3399,7 +3434,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3409,7 +3444,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3419,7 +3454,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3429,7 +3464,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3452,15 +3487,24 @@ country_event = {
 			event_target:dpe_duel_leader = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_loser_commander
+					add_trait = {
+						trait = dpe_duel_loser_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_loser_governor
+					add_trait = {
+						trait = dpe_duel_loser_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_loser_ruler
+					add_trait = {
+						trait = dpe_duel_loser_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -3519,7 +3563,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3529,7 +3573,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
@@ -3539,7 +3583,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
@@ -3549,7 +3593,7 @@ country_event = {
 	desc = {
 		trigger = {
 			from = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
@@ -3633,7 +3677,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3641,7 +3685,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3649,7 +3693,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3657,7 +3701,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3701,15 +3745,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_loser_commander
+					add_trait = {
+						trait = dpe_duel_loser_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_loser_governor
+					add_trait = {
+						trait = dpe_duel_loser_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_loser_ruler
+					add_trait = {
+						trait = dpe_duel_loser_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -3766,7 +3819,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3774,7 +3827,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3782,7 +3835,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3790,7 +3843,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3840,7 +3893,7 @@ country_event = {
 
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3848,7 +3901,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3856,7 +3909,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3864,7 +3917,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3900,15 +3953,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_loser_commander
+					add_trait = {
+						trait = dpe_duel_loser_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_loser_governor
+					add_trait = {
+						trait = dpe_duel_loser_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_loser_ruler
+					add_trait = {
+						trait = dpe_duel_loser_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -3950,7 +4012,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3958,7 +4020,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -3966,7 +4028,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -3974,7 +4036,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4033,15 +4095,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -4083,7 +4154,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4091,7 +4162,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4099,7 +4170,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4107,7 +4178,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4160,15 +4231,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -4216,7 +4296,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4224,7 +4304,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4232,7 +4312,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4240,7 +4320,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4271,7 +4351,7 @@ country_event = {
 				limit = {
 					NOR = {
 						is_same_value = from
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
 				}
 				add_opinion_modifier = {
@@ -4299,7 +4379,7 @@ country_event = {
 				limit = {
 					NOR = {
 						is_same_value = from
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
 				}
 				add_opinion_modifier = {
@@ -4328,15 +4408,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -4377,7 +4466,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4385,7 +4474,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4393,7 +4482,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4401,7 +4490,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4454,15 +4543,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -4509,7 +4607,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4517,7 +4615,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4525,7 +4623,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4533,7 +4631,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4586,15 +4684,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}
@@ -4641,7 +4748,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4649,7 +4756,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			NOT = { has_country_flag = dpe_hw_duel_leader }
 		}
@@ -4657,7 +4764,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { NOT = { has_country_flag = dpe_hw_duel_leader } }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4665,7 +4772,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_gestalt = no
 			from = { has_country_flag = dpe_hw_duel_leader }
 			has_country_flag = dpe_hw_duel_leader
 		}
@@ -4696,7 +4803,7 @@ country_event = {
 				limit = {
 					NOR = {
 						is_same_value = from
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
 				}
 				add_opinion_modifier = {
@@ -4724,7 +4831,7 @@ country_event = {
 				limit = {
 					NOR = {
 						is_same_value = from
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 					}
 				}
 				add_opinion_modifier = {
@@ -4753,15 +4860,24 @@ country_event = {
 			event_target:dpe_duel_leader2 = {
 				if = {
 					limit = { leader_class = commander }
-					add_trait = dpe_duel_victor_commander
+					add_trait = {
+						trait = dpe_duel_victor_commander
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = dpe_duel_victor_governor
+					add_trait = {
+						trait = dpe_duel_victor_governor
+						show_message = no
+					}
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = dpe_duel_victor_ruler
+					add_trait = {
+						trait = dpe_duel_victor_ruler
+						show_message = no
+					}
 				}
 			}
 		}

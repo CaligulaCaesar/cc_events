@@ -22,11 +22,11 @@ country_event = {
 		is_imp_or_dict = yes
 		NOR = {
 			has_ethic = ethic_fanatic_xenophobe
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			has_tradition = tr_psionics_psionic_assimilation
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_ascension_perk = ap_synthetic_evolution
-			has_ascension_perk = ap_evolutionary_mastery
+			has_tradition = tr_genetics_resequencing
 		}
 		exists = ruler
 		ruler = {
@@ -1105,8 +1105,14 @@ country_event = {
 					modify_species = {
 						add_trait = trait_latent_psionic
 					}
-					add_trait = leader_trait_psionic
-					add_trait = dpe_leader_trait_reinvigorated
+					add_trait = {
+						trait = leader_trait_psionic
+						show_message = no
+					}
+					add_trait = {
+						trait = dpe_leader_trait_reinvigorated
+						show_message = no
+					}
 				}
 			}
 		}
@@ -1123,8 +1129,14 @@ country_event = {
 					modify_species = {
 						add_trait = trait_erudite
 					}
-					add_trait = leader_trait_erudite
-					add_trait = dpe_leader_trait_reinvigorated
+					add_trait = {
+						trait = leader_trait_erudite
+						show_message = no
+					}
+					add_trait = {
+						trait = dpe_leader_trait_reinvigorated
+						show_message = no
+					}
 				}
 			}
 		}
@@ -1141,8 +1153,14 @@ country_event = {
 					modify_species = {
 						add_trait = trait_cybernetic
 					}
-					add_trait = leader_trait_cyborg
-					add_trait = dpe_leader_trait_reinvigorated
+					add_trait = {
+						trait = leader_trait_cyborg
+						show_message = no
+					}
+					add_trait = {
+						trait = dpe_leader_trait_reinvigorated
+						show_message = no
+					}
 				}
 			}
 		}
@@ -1233,7 +1251,7 @@ country_event = {
 		NOR = {
 			has_country_flag = dpe_has_had_escaped_fe_pop
 			has_ascension_perk = ap_synthetic_evolution
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			end_game_years_passed > 0
 		}
 
@@ -1287,7 +1305,10 @@ country_event = {
 				modify_species = {
 					add_trait = trait_erudite
 				}
-				add_trait = leader_trait_erudite
+				add_trait = {
+					trait = leader_trait_erudite
+					show_message = no
+				}
 			}
 		}
 

@@ -1,0 +1,917 @@
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\ascension_perks\\dpe_xenocompatibility_overwrite.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\deposits\\dpe_royal_marriage_deposits.txt'
+# Match:
+ add_modifier = {
+				modifier = satisfying_insult_recently
+				days = 1800
+			}
+# Multiline replace:
+ add_modifier = {
+				modifier = satisfying_insult_recently
+				years = 5
+			}
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\diplomatic_actions\\dpe_insult.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\global_ship_designs\\mem_dpe_primitive_proto_corvette.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\ccevents_global_flag.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\ccrebel_perf2.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\ccrebel_planet_flag.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\cc_events_on_actions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\dpe_diplo_missions_on_actions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\dpe_elections_events.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\dpe_event_init_on_actions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\dpe_royal_marriage_on_actions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\on_actions\\mem_dpe_space_battle_primitives.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\opinion_modifiers\\cc_events_opinion_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\opinion_modifiers\\cc_thought_police_opinion_modifier.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\opinion_modifiers\\dpe_royal_marriage_opinions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\opinion_modifiers\\mem_dpe_primitives_opinions.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\opinion_modifiers\\mem_hive_encounter_opinions.txt'
+	# Updated file: b'dpe_pop_jobs.txt' on b'planet_amenities_add = 10' (at line 33) with b'planet_amenities_add = 1000'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'#\tpop_modifier = {' (at line 36) with b'#\tpop_group_modifier = {'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'# \thas_job = dpe_guardian_of_the_peace' (at line 111) with b'# \thas_job_type = dpe_guardian_of_the_peace'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'#\tpop_modifier = {' (at line 149) with b'#\tpop_group_modifier = {'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'# \thas_job = dpe_gurus_followers' (at line 224) with b'# \thas_job_type = dpe_gurus_followers'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'#\tpop_modifier = {' (at line 261) with b'#\tpop_group_modifier = {'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'planet_amenities_add = 3' (at line 266) with b'planet_amenities_add = 300'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'# \thas_job = dpe_direct_democrats' (at line 277) with b'# \thas_job_type = dpe_direct_democrats'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'#\tpop_modifier = {' (at line 313) with b'#\tpop_group_modifier = {'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'# \thas_job = dpe_monarchists' (at line 329) with b'# \thas_job_type = dpe_monarchists'
+
+	# Updated file: b'dpe_pop_jobs.txt' on b'# \thas_job = entertainer' (at line 447) with b'# \thas_job_type = entertainer'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\pop_jobs\\dpe_pop_jobs.txt'
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "[This.MainDefender.GetAdj] <ccrebel_faction_war_1>"' (at line 32) with b'format = "{[This.MainDefender.GetAdj] <ccrebel_faction_war_1>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Spiritualist <ccrebel_faction_war_2>"' (at line 49) with b'format = "{The Spiritualist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Materialist <ccrebel_faction_war_2>"' (at line 65) with b'format = "{The Materialist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Pacifist <ccrebel_faction_war_2>"' (at line 81) with b'format = "{The Pacifist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Imperialist <ccrebel_faction_war_2>"' (at line 97) with b'format = "{The Imperialist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Supremacist <ccrebel_faction_war_2>"' (at line 113) with b'format = "{The Supremacist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Xenoist <ccrebel_faction_war_2>"' (at line 129) with b'format = "{The Xenoist <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Pro-Democratic <ccrebel_faction_war_2>"' (at line 145) with b'format = "{The Pro-Democratic <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Authoritarian <ccrebel_faction_war_2>"' (at line 162) with b'format = "{The Authoritarian <ccrebel_faction_war_2>}"'
+
+	# Updated file: b'ccrebel_faction_war.txt' on b'format = "The Monarchist <ccrebel_faction_war_2>"' (at line 179) with b'format = "{The Monarchist <ccrebel_faction_war_2>}"'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\random_names\\ccrebel_faction_war.txt'
+	# Updated file: b'cc_events_scripted_effects.txt' on b'free_housing >= 1' (at line 39) with b'free_housing >= 100'
+
+	# Updated file: b'cc_events_scripted_effects.txt' on b'free_housing >= 1' (at line 154) with b'free_housing >= 100'
+
+	# Updated file: b'cc_events_scripted_effects.txt' on b'free_housing >= 1' (at line 269) with b'free_housing >= 100'
+
+	# Updated file: b'cc_events_scripted_effects.txt' on b'free_housing >= 1' (at line 383) with b'free_housing >= 100'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_effects\\cc_events_scripted_effects.txt'
+	# Updated file: b'cc_thought_police_effect.txt' on b'free_housing >= 1' (at line 43) with b'free_housing >= 100'
+
+	# Updated file: b'cc_thought_police_effect.txt' on b'free_housing >= 1' (at line 158) with b'free_housing >= 100'
+
+	# Updated file: b'cc_thought_police_effect.txt' on b'free_housing >= 1' (at line 273) with b'free_housing >= 100'
+
+	# Updated file: b'cc_thought_police_effect.txt' on b'free_housing >= 1' (at line 387) with b'free_housing >= 100'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_effects\\cc_thought_police_effect.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_effects\\dpe_attitude_country_effect.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_effects\\dpe_royal_marriage_scripted_effects.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_effects\\mem_dpe_primitive_effects.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_loc\\cc_scripted_loc.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_loc\\cc_scripted_loc_deloc.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_loc\\cc_scripted_loc_engloc.txt'
+	# Updated file: b'dpe_royal_marriages_scripted_loc.txt' on b'has_authority = auth_corporate' (at line 8) with b'is_megacorp = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_loc\\dpe_royal_marriages_scripted_loc.txt'
+	# Updated file: b'ccrebel_factions_triggers.txt' on b'pop_group_has_happiness = yes' (at line 130) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_triggers\\ccrebel_factions_triggers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_triggers\\cc_events_scripted_triggers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_triggers\\cc_happiness_gauge.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_triggers\\cc_misc_scripted_triggers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_triggers\\cc_thought_police_trigger.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\scripted_variables\\dpe_scripted_variables.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\section_templates\\mem_dpe_primitive_proto_corvette.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\ship_sizes\\mem_dpe_proto_corvette.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\special_projects\\mem_dpe_primitives.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\ccrebel_factions_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\ccrebel_revolutionary_boost.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\cc_colony_events_static_modifiers.txt'
+	# Updated file: b'cc_political_events_static_modifiers.txt' on b'planet_amenities_add = 10' (at line 410) with b'planet_amenities_add = 1000'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\cc_political_events_static_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\dpe_diplo_static_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\dpe_election_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\dpe_royal_marriage_events_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\mem_dpe_primitives_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\static_modifiers\\mem_hive_encounter_modifiers.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\traits\\dpe_traits.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\common\\war_goals\\dpe_faction_revolt_wg.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\ccevents_global_flag.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\ccevents_performance_boost.txt'
+	# Updated file: b'ccrebel_perf2.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 17) with b'NOT = { is_gestalt = yes }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\ccrebel_perf2.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\ccrebel_planet_flag.txt'
+	# Updated file: b'cctest.txt' on b'# \t\t\t\tadd_ruler_trait = leader_trait_erudite' (at line 208) with b'# \t\t\t\tadd_trait = leader_trait_erudite'
+
+	# Updated file: b'cctest.txt' on b'# \t\t\t\t\t\tNOT = { has_ethic = ethic_gestalt_consciousness }' (at line 851) with b'# \t\t\t\t\t\tNOT = { is_gestalt = yes }'
+
+	# Updated file: b'cctest.txt' on b'# \t\t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 1075) with b'# \t\t\t\t\tis_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cctest.txt'
+	# Updated file: b'cc_blackmail_crisis_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 21) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_blackmail_crisis_event.txt' on b'pop_group_has_happiness = yes' (at line 788) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_blackmail_crisis_event.txt'
+	# Updated file: b'cc_cleanup_colony_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 47) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_cleanup_colony_events.txt'
+	# Updated file: b'cc_colony_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 12) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_colony_events.txt' on b'pop_group_has_happiness = yes' (at line 16) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_colony_events.txt' on b'pop_group_has_happiness = yes' (at line 123) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_colony_events.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 448) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'cc_colony_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3464) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_colony_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 7653) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_colony_events.txt' on b'controller = { is_same_value = root }' (at line 7663) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'cc_colony_events.txt' on b'controller = { is_same_value = root }' (at line 7683) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'cc_colony_events.txt' on b'controller = { is_same_value = root }' (at line 7718) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'cc_colony_events.txt' on b'controller = { is_same_value = root }' (at line 7741) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'cc_colony_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 7821) with b'NOT = { is_gestalt = yes }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_colony_events.txt'
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 30) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 117) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 224) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 284) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 746) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1072) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1101) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1165) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1180) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1195) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1261) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1380) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_emancipation_event.txt' on b'pop_group_has_happiness = yes' (at line 1514) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_emancipation_event.txt'
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 21) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 98) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 203) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 509) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 730) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 951) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1390) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1685) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2137) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'pop_group_has_happiness = yes' (at line 2215) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_ludditism_event.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2275) with b'is_gestalt = yes'
+
+# Match:
+ 	every_country = {
+			limit = {
+				has_policy_flag
+# Multiline replace:
+ 	every_playable_country = {
+			limit = {
+				has_policy_flag
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_ludditism_event.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_peace_protests.txt'
+	# Updated file: b'cc_political_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 21) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 113) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_political_events.txt' on b'pop_group_has_happiness = yes' (at line 121) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'pop_group_has_happiness = yes' (at line 158) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 370) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 798) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 910) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_political_events.txt' on b'pop_group_has_happiness = yes' (at line 938) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_political_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 1183) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_political_events.txt' on b'pop_group_has_happiness = yes' (at line 1206) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_political_events.txt'
+	# Updated file: b'cc_xenophilia_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 24) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 298) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'pop_group_has_happiness = yes' (at line 461) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'pop_group_has_happiness = yes' (at line 469) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'pop_group_has_happiness = yes' (at line 546) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'pop_group_has_happiness = no' (at line 630) with b'pop_group_has_happiness = no'
+
+	# Updated file: b'cc_xenophilia_events.txt' on b'pop_group_has_happiness = yes' (at line 1239) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_xenophilia_events.txt'
+	# Updated file: b'cc_xeno_clashes.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 15) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'cc_xeno_clashes.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 32) with b'is_gestalt = yes'
+
+	# Updated file: b'cc_xeno_clashes.txt' on b'limit = { species = { is_same_value = root.owner.species } }' (at line 2866) with b'limit = { species = { is_same_value = root.owner_species } }'
+
+	# Updated file: b'cc_xeno_clashes.txt' on b'limit = { species = { is_same_value = root.owner.species } }' (at line 2873) with b'limit = { species = { is_same_value = root.owner_species } }'
+
+# Match:
+ count_owned_pop_amount = {
+					limit = { species = { is_same_value = event_target:species1 } }
+					count > 100
+				}
+			}
+			count = 6
+
+# Multiline replace:
+ count_owned_pop_amount = {
+					limit = { species = { is_same_value = event_target:species1 } }
+					count > 10000
+				}
+			}
+			count = 600
+
+# Match:
+ count_owned_pop_amount = {
+					limit = { species = { is_same_value = root.owner_species } }
+					count > 100
+				}
+			}
+			count = 6
+
+# Multiline replace:
+ count_owned_pop_amount = {
+					limit = { species = { is_same_value = root.owner_species } }
+					count > 10000
+				}
+			}
+			count = 600
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\cc_xeno_clashes.txt'
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 211) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 224) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 236) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 659) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 672) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 684) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 712) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_conspiracy_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 783) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_conspiracy_events.txt'
+	# Updated file: b'dpe_contraband_chain.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 19) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_contraband_chain.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 33) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_contraband_chain.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 57) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_contraband_chain.txt' on b'pop_group_has_happiness = yes' (at line 461) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_contraband_chain.txt' on b'pop_group_has_happiness = yes' (at line 544) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_contraband_chain.txt'
+	# Updated file: b'dpe_diplo_events.txt' on b'trigger = { event_target:enemy = { NOT = { has_ethic = ethic_gestalt_consciousness } } }' (at line 101) with b'trigger = { event_target:enemy = { NOT = { is_gestalt = yes } } }'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'trigger = { NOT = { has_ethic = ethic_gestalt_consciousness } }' (at line 670) with b'trigger = { NOT = { is_gestalt = yes } }'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1183) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1200) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1216) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1233) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1252) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1270) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 1288) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1417) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_diplo_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 1505) with b'NOT = { is_gestalt = yes }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_diplo_events.txt'
+	# Updated file: b'dpe_egalitarian_missions.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 19) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_egalitarian_missions.txt'
+	# Updated file: b'dpe_election_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 13) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_election_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 42) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_election_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 492) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_election_events.txt'
+	# Updated file: b'dpe_fe_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 24) with b'is_gestalt = yes'
+
+# WARNING: Potentially deprecated Syntax (Removed in v3.6: can be replaced with 'has_tradition = tr_genetics_resequencing'): b'\t\t\thas_ascension_perk = ap_evolutionary_mastery' in line 28 file b'dpe_fe_events.txt'
+
+	# Updated file: b'dpe_fe_events.txt' on b'has_ascension_perk = ap_evolutionary_mastery' (at line 28) with b'has_tradition = tr_genetics_resequencing'
+
+	# Updated file: b'dpe_fe_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1235) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_fe_events.txt'
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 942) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 949) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 956) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 964) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 972) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 980) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'root = { has_ethic = ethic_gestalt_consciousness }' (at line 1127) with b'root = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1237) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1257) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1376) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1396) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'root = { has_ethic = ethic_gestalt_consciousness }' (at line 1614) with b'root = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1724) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1744) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1863) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1883) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'root = { has_ethic = ethic_gestalt_consciousness }' (at line 2147) with b'root = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2257) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2277) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2396) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 2416) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2607) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2617) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2627) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2637) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2743) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2753) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2763) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2773) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2850) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2860) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2870) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2880) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2986) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 2996) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3006) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3016) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3083) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3093) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3103) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3113) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3191) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3201) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3211) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3221) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3292) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3302) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3312) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3322) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3401) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3411) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3421) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3431) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3521) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3531) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3541) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3551) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3635) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3643) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3651) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3659) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3768) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3776) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3784) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3792) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3842) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3850) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3858) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3866) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3952) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3960) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3968) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 3976) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4085) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4093) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4101) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4109) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4218) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4226) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4234) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4242) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 4273) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 4301) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4379) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4387) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4395) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4403) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4511) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4519) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4527) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4535) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4643) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4651) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4659) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 4667) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 4698) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_honourbound_warrior.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 4726) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_honourbound_warrior.txt'
+	# Updated file: b'dpe_leader_events_overwrite.txt' on b'limit = { has_ethic = ethic_gestalt_consciousness }' (at line 124) with b'limit = { is_gestalt = yes }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_leader_events_overwrite.txt'
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_enthusiastic@root
+						days = 180
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_enthusiastic@root
+						months = 6
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_normal@root
+						days = 180
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_normal@root
+						months = 6
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_troubles@root
+						days = 180
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_troubles@root
+						months = 6
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_hostile@root
+						days = 180
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_hostile@root
+						months = 6
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_happy_couple@root
+						days = 480
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_happy_couple@root
+						months = 16
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_content_couple@root
+						days = 480
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_content_couple@root
+						months = 16
+					}
+# Match:
+ set_timed_country_flag = {
+						flag = royal_marriage_unhappy_couple@root
+						days = 480
+					}
+# Multiline replace:
+ set_timed_country_flag = {
+						flag = royal_marriage_unhappy_couple@root
+						months = 16
+					}
+# Match:
+ set_timed_country_flag = {
+			flag = repeat_marriage@from
+			days = 360
+		}
+# Multiline replace:
+ set_timed_country_flag = {
+			flag = repeat_marriage@from
+			years = 1
+		}
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_royal_marriages_events.txt'
+	# Updated file: b'dpe_scandal_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 54) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_scandal_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 189) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_scandal_events.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 632) with b'NOT = { is_gestalt = yes }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_scandal_events.txt'
+	# Updated file: b'dpe_small_events.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 22) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 33) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 269) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 275) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 339) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 364) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 381) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 508) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 521) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 547) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'pop_group_has_happiness = yes' (at line 591) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 902) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 915) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 941) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'pop_group_has_happiness = yes' (at line 986) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 1064) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 1080) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'controller = { is_same_value = root }' (at line 1120) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_small_events.txt' on b'pop_group_has_happiness = yes' (at line 1165) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'pop_group_has_happiness = yes' (at line 1441) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1455) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1508) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1517) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1610) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1620) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1714) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1724) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1817) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_small_events.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1827) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_small_events.txt'
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 42) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 86) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 115) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 138) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 162) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 189) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 224) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 249) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'controller = { is_same_value = root }' (at line 817) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 822) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'controller = { is_same_value = root }' (at line 835) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 840) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'pop_group_has_happiness = yes' (at line 1464) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'pop_group_has_happiness = yes' (at line 2501) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'dpe_spiritualist_mission.txt' on b'pop_group_has_happiness = yes' (at line 2788) with b'pop_group_has_happiness = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_spiritualist_mission.txt'
+	# Updated file: b'dpe_xenophile_mission2.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 37) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_xenophile_mission2.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 53) with b'is_gestalt = yes'
+
+	# Updated file: b'dpe_xenophile_mission2.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 69) with b'is_gestalt = yes'
+
+# WARNING: Potentially deprecated Syntax: b' random_planet' in line 3885 file b'dpe_xenophile_mission2.txt'
+
+# WARNING: Potentially deprecated Syntax: b' random_planet' in line 3894 file b'dpe_xenophile_mission2.txt'
+
+# Match:
+ 	every_country = {
+			limit = {
+				NOR = {
+					is_same_value
+# Multiline replace:
+ 	every_country = {
+			limit = {
+				NOR = {
+					is_same_empire
+# Match:
+ 	every_country = {
+				limit = {
+					NOR = {
+						is_same_value
+# Multiline replace:
+ 	every_country = {
+				limit = {
+					NOR = {
+						is_same_empire
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\dpe_xenophile_mission2.txt'
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\tis_country_type = primitive' (at line 37) with b'# \t\t\t\t\tis_primitive = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 40) with b'# \t\t\t\t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\t\tis_country_type = primitive' (at line 81) with b'# \t\t\t\t\t\tis_primitive = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 84) with b'# \t\t\t\t\t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\thas_ethic = ethic_gestalt_consciousness' (at line 393) with b'# \t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 495) with b'# \t\t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\thas_ethic = ethic_gestalt_consciousness' (at line 502) with b'# \t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 1351) with b'# \t\t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\t\t\thas_ethic = ethic_gestalt_consciousness' (at line 1388) with b'# \t\t\t\t\t\t\tis_gestalt = yes'
+
+	# Updated file: b'mem_dpe_primitive_events.txt' on b'# \t\t\t\t\t\tNOT = { owner = { is_same_value = event_target:mem_dpe_primitive_civ } }' (at line 1691) with b'# \t\t\t\t\t\tNOT = { is_owned_by = event_target:mem_dpe_primitive_civ }'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\mem_dpe_primitive_events.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\mem_dpe_space_battle_calculator.txt'
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 31) with b'is_gestalt = yes'
+
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 70) with b'is_gestalt = yes'
+
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 86) with b'is_gestalt = yes'
+
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 106) with b'is_gestalt = yes'
+
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 128) with b'is_gestalt = yes'
+
+	# Updated file: b'mem_hive_encounter.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 152) with b'is_gestalt = yes'
+
+# Match:
+ add_modifier = {
+                    modifier = mem_hive_encounter_dealed_with_xenos
+                    days = 3600 # TODO adjust timer
+                }
+# Multiline replace:
+ add_modifier = {
+                    modifier = mem_hive_encounter_dealed_with_xenos
+                    years = 10 # TODO adjust timer
+                }
+# Match:
+ add_modifier = {
+                    modifier = mem_hive_encounter_traded_prisoners
+                    days = 3600 # TODO adjust timer
+                }
+# Multiline replace:
+ add_modifier = {
+                    modifier = mem_hive_encounter_traded_prisoners
+                    years = 10 # TODO adjust timer
+                }
+# Match:
+ add_modifier = {
+                    modifier = mem_hive_encounter_desecrated_corpses
+                    days = 3600 # TODO adjust timer
+                }
+# Multiline replace:
+ add_modifier = {
+                    modifier = mem_hive_encounter_desecrated_corpses
+                    years = 10 # TODO adjust timer
+                }
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\mem_hive_encounter.txt'
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\placeholder_ccrebel_su_event.txt'
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 13) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 34) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'controller = { is_same_value = root }' (at line 44) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'controller = { is_same_value = root }' (at line 64) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'pop_group_has_happiness = yes' (at line 118) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'pop_group_has_happiness = yes' (at line 137) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 160) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 259) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 385) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 402) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 461) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 515) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 589) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 613) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 641) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 792) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 852) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'controller = { is_same_value = root }' (at line 858) with b'controller = { is_same_empire = root }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 887) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'pop_group_has_happiness = yes' (at line 898) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'pop_group_has_happiness = yes' (at line 921) with b'pop_group_has_happiness = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1279) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1341) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1381) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 1392) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'limit = { pop_group_has_happiness = yes }' (at line 1413) with b'limit = { pop_group_has_happiness = yes }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1456) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'NOT = { has_ethic = ethic_gestalt_consciousness }' (at line 1525) with b'NOT = { is_gestalt = yes }'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1619) with b'is_gestalt = yes'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1657) with b'is_gestalt = yes'
+
+# WARNING: Potentially deprecated Syntax (Removed in v3.6: can be replaced with 'has_tradition = tr_genetics_resequencing'): b'\t\t\thas_ascension_perk = ap_evolutionary_mastery' in line 1661 file b'zz_dpe_event_initializer.txt'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ascension_perk = ap_evolutionary_mastery' (at line 1661) with b'has_tradition = tr_genetics_resequencing'
+
+	# Updated file: b'zz_dpe_event_initializer.txt' on b'has_ethic = ethic_gestalt_consciousness' (at line 1703) with b'is_gestalt = yes'
+
+	# WRITE FILE: b'C:\\Users\\micha\\Documents\\Paradox\\Stellaris\\Mods\\My Mods\\My Main Mods\\cc_events\\events\\zz_dpe_event_initializer.txt'
+# Main-version = 4.0 (Sub-version = .11)
+b'Dynamic Political Events' version 4.0 on 'descriptor.mod' updated to 4.0.11!
+
+# Done! b'C:/Users/micha/Documents/Paradox/Stellaris/Mods/My Mods/My Main Mods/cc_events'

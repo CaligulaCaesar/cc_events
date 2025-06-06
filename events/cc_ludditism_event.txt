@@ -19,7 +19,7 @@ planet_event = { #shifted back to a completely normal planet event
 			is_country_type = default
 			has_policy_flag = robots_allowed
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
 				has_country_flag = cc_luddite_movement
@@ -96,7 +96,7 @@ planet_event = {
 			is_country_type = default
 			has_policy_flag = robots_allowed
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
 				has_country_flag = cc_luddite_movement
@@ -201,7 +201,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_country_flag = synthetic_empire
 						has_ascension_perk = ap_the_flesh_is_weak
 						has_policy_flag = ai_full_rights
@@ -507,7 +507,7 @@ planet_event = {
 			NOR = {
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_country_flag = cc_killing_all_luddites
 			}
 		}
@@ -728,7 +728,7 @@ planet_event = {
 			NOR = {
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_country_flag = cc_killing_all_luddites
 			}
 		}
@@ -949,7 +949,7 @@ planet_event = {
 			NOR = {
 				is_synthetic_empire = yes
 				is_mechanical_empire = yes
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_country_flag = cc_killing_all_luddites
 			}
 		}
@@ -1388,7 +1388,7 @@ planet_event = {
 			if = {
 				limit = {
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_country_flag = synthetic_empire
 						has_ascension_perk = ap_the_flesh_is_weak
 						has_policy_flag = ai_full_rights
@@ -1683,7 +1683,7 @@ country_event = {
 			if = {
 				limit = {
 					NOR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_country_flag = synthetic_empire
 						has_ascension_perk = ap_the_flesh_is_weak
 						has_policy_flag = ai_full_rights
@@ -2072,7 +2072,7 @@ event = {
 			}
 			remove_modifier = cc_empire_luddite_movement
 		}
-		every_country = {
+		every_playable_country = {
 			limit = {
 				has_policy_flag = robots_outlawed
 				any_owned_planet = { has_modifier = cc_luddite_movement }
@@ -2086,7 +2086,7 @@ event = {
 				}
 			}
 		}
-		every_country = {
+		every_playable_country = {
 			limit = {
 				has_policy_flag = robots_allowed
 				any_owned_planet = { has_modifier = cc_luddite_celebration }
@@ -2135,7 +2135,7 @@ country_event = {
 		NOR = {
 			is_synthetic_empire = yes
 			is_mechanical_empire = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			
 			has_country_flag = machine_uprising_originator
 			has_country_flag = cc_preluddite_event
@@ -2213,7 +2213,7 @@ country_event = {
 		every_owned_pop_group = {
 			limit = {
 				is_enslaved = no
-				pop_has_happiness = yes
+				pop_group_has_happiness = yes
 			}
 			pop_group_event = { id = cc_luddite.21 }
 		}
@@ -2273,7 +2273,7 @@ country_event = {
 		NOR = {
 			is_synthetic_empire = yes
 			is_mechanical_empire = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			
 			has_country_flag = machine_uprising_originator
 			has_country_flag = cc_preluddite_event

@@ -1,4 +1,3 @@
-
 xenophilia_refugee_pop_effect = {
 	if = {
 		limit = { has_modifier = pop_recently_conquered }
@@ -37,7 +36,7 @@ xenophilia_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.7 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -152,7 +151,7 @@ xenophilia_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.5 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -267,7 +266,7 @@ xenophilia_refugee_pop_effect = {
 				random_owned_planet = {
 					limit = {
 						habitability = { who = event_target:refugee_pop value >= 0.2 }
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -381,7 +380,7 @@ xenophilia_refugee_pop_effect = {
 				}
 				random_owned_planet = {
 					limit = {
-						free_housing >= 1
+						free_housing >= 100
 						is_under_colonization = no
 						is_controlled_by = owner
 						has_orbital_bombardment = no					
@@ -486,7 +485,10 @@ xenophilia_refugee_pop_effect = {
 dpe_talent_scientist_give_speciality = {
 	random_list = {
 		2 = { 
-			add_trait = leader_trait_expertise_materials
+			add_trait = {
+				trait = leader_trait_expertise_materials
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_materials
@@ -495,7 +497,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_propulsion
+			add_trait = {
+				trait = leader_trait_expertise_propulsion
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_propulsion
@@ -504,7 +509,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_voidcraft
+			add_trait = {
+				trait = leader_trait_expertise_voidcraft
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_voidcraft
@@ -513,7 +521,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_industry
+			add_trait = {
+				trait = leader_trait_expertise_industry
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_industry
@@ -522,7 +533,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_field_manipulation
+			add_trait = {
+				trait = leader_trait_expertise_field_manipulation
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_field_manipulation
@@ -531,7 +545,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_particles
+			add_trait = {
+				trait = leader_trait_expertise_particles
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_particles
@@ -540,7 +557,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_computing
+			add_trait = {
+				trait = leader_trait_expertise_computing
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_computing
@@ -549,7 +569,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_new_worlds
+			add_trait = {
+				trait = leader_trait_expertise_new_worlds
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_new_worlds
@@ -558,7 +581,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_statecraft
+			add_trait = {
+				trait = leader_trait_expertise_statecraft
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_statecraft
@@ -567,7 +593,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_biology
+			add_trait = {
+				trait = leader_trait_expertise_biology
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_biology
@@ -576,7 +605,10 @@ dpe_talent_scientist_give_speciality = {
 			}
 		}
 		2 = {
-			add_trait = leader_trait_expertise_military_theory
+			add_trait = {
+				trait = leader_trait_expertise_military_theory
+				show_message = no
+			}
 			root = {
 				set_timed_country_flag = {
 					flag = dpe_talent_expertise_military_theory

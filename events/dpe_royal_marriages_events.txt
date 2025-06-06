@@ -1280,7 +1280,7 @@ country_event = {
 				1 = { #wholly enthusiastic
 					set_timed_country_flag = {
 						flag = royal_marriage_enthusiastic@root
-						days = 180
+						months = 6
 					}
 					modifier = {
 						factor = 0.25
@@ -1310,7 +1310,7 @@ country_event = {
 				1 = { #somewhat enthusiastic
 					set_timed_country_flag = {
 						flag = royal_marriage_normal@root
-						days = 180
+						months = 6
 					}
 					modifier = {
 						factor = 0.75
@@ -1320,7 +1320,7 @@ country_event = {
 				1 = { #could be troubles
 					set_timed_country_flag = {
 						flag = royal_marriage_troubles@root
-						days = 180
+						months = 6
 					}
 					modifier = {
 						factor = 0 #I need these factions for later events if you get this modifier
@@ -1346,7 +1346,7 @@ country_event = {
 				1 = { #hostile public opinion
 					set_timed_country_flag = {
 						flag = royal_marriage_hostile@root
-						days = 180
+						months = 6
 					}
 					modifier = {
 						factor = 0 #I need these factions for later events if you get this modifier
@@ -1654,7 +1654,7 @@ country_event = {
 				2 = { #very happy
 					set_timed_country_flag = {
 						flag = royal_marriage_happy_couple@root
-						days = 480
+						months = 16
 					}
 					modifier = {
 						factor = 2
@@ -1703,13 +1703,13 @@ country_event = {
 				3 = { #tolerable
 					set_timed_country_flag = {
 						flag = royal_marriage_content_couple@root
-						days = 480
+						months = 16
 					}
 				}
 				2 = { #not a great couple
 					set_timed_country_flag = {
 						flag = royal_marriage_unhappy_couple@root
-						days = 480
+						months = 16
 					}
 					modifier = {
 						factor = 0.5
@@ -2319,7 +2319,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = repeat_marriage@from
-			days = 360
+			years = 1
 		}
 		from = { country_event = { id = dpe_royal_marriages_events.10 } }
 	}

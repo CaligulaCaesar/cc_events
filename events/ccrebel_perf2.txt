@@ -1,4 +1,3 @@
-
 namespace = ccrebel_perf
 
 @dpe_pops_small_cluster = 5
@@ -15,7 +14,7 @@ event = {
 		every_country = {
 			limit = {
 				is_country_type_with_subjects = yes
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_gestalt = no
 			}
 			every_owned_planet = {
 				limit = {

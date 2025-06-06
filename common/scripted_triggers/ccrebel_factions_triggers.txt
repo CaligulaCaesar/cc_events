@@ -1,4 +1,3 @@
-
 has_a_factional_revolt_active = {
 	OR = {
 		has_country_flag = cc_imperialist_revolt_active
@@ -128,7 +127,7 @@ has_factional_revolt_stage3 = {
 valid_factional_revolt_target = {
 	any_owned_pop_group = {
 		member_of_faction = yes
-		pop_has_happiness = yes
+		pop_group_has_happiness = yes
 	}
 }
 
