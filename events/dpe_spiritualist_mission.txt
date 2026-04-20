@@ -1464,7 +1464,11 @@ country_event = {
 						pop_group_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
-					pop_change_ethic = { ethic = ethic_spiritualist }
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_spiritualist
+						PERCENTAGE = 1 # 100%
+					}
 				}
 			}
 		}
@@ -2501,7 +2505,11 @@ country_event = {
 						pop_group_has_happiness = yes
 						NOT = { has_ethic = ethic_spiritualist }
 					}
-					pop_change_ethic = { ethic = ethic_spiritualist }
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_spiritualist
+						PERCENTAGE = 1 # 100%
+					}
 				}
 			}
 		}
@@ -2788,7 +2796,11 @@ country_event = {
 							pop_group_has_happiness = yes
 							NOT = { has_ethic = ethic_spiritualist }
 						}
-						pop_change_ethic = { ethic = ethic_spiritualist }
+						pop_group_transfer_ethic = {
+							POP_GROUP = this
+							ETHOS = ethic_spiritualist
+							PERCENTAGE = 1 # 100%
+						}
 					}
 				}
 			}

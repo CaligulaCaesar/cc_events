@@ -24,13 +24,13 @@ xenophilia_refugee_pop_effect = {
 		if = {
 			limit = {
 				any_relation = {
-					has_good_habitability_and_housing = yes
+					# has_good_habitability_and_housing = yes
 					NOT = { has_policy_flag = refugees_not_allowed }
 				}
 			}
 			random_relation = {
 				limit = {
-					has_good_habitability_and_housing = yes
+					# has_good_habitability_and_housing = yes
 					NOT = { has_policy_flag = refugees_not_allowed }
 				}
 				random_owned_planet = {
@@ -82,13 +82,13 @@ xenophilia_refugee_pop_effect = {
 		else_if = {
 			limit = {
 				any_relation = {
-					has_good_habitability = yes
+					# has_good_habitability = yes
 					NOT = { has_policy_flag = refugees_not_allowed }
 				}
 			}
 			random_relation = {
 				limit = {
-					has_good_habitability = yes
+					# has_good_habitability = yes
 					NOT = { has_policy_flag = refugees_not_allowed }
 				}
 				random_owned_planet = {
