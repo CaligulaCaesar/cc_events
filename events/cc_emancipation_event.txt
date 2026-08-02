@@ -2,7 +2,7 @@ namespace = cc_emancipation
 
 
 #Emancipation Crisis Start
-planet_event = { #shifted back to completely normal planet event start.
+carrier_event = { #shifted back to completely normal planet event start.
 	id = cc_emancipation.1000
 	hide_window = yes
 	is_triggered_only = yes
@@ -24,7 +24,7 @@ planet_event = { #shifted back to completely normal planet event start.
 		}
 
 		planet_stability < @dpe_normal_unrest_value
-		NOT = { has_planet_flag = cc_emancipation_movement }
+		NOT = { has_carrier_flag = cc_emancipation_movement }
 		any_owned_pop_group = {
 			is_enslaved = yes
 			pop_group_has_happiness = yes
@@ -71,14 +71,14 @@ planet_event = { #shifted back to completely normal planet event start.
 				}
 
 
-				planet_event = { id = cc_emancipation.1 }
+				carrier_event = { id = cc_emancipation.1 }
 			}
 		}
 	}
 }
 
 #triggered in performance now
-planet_event = {
+carrier_event = {
 	id = cc_emancipation.1
 	title = cc_emancipation.1.name
 	desc = {
@@ -99,8 +99,7 @@ planet_event = {
 		has_owner = yes
 	}
 	trigger = {
-		exists = owner
-		owner = {
+		owner? = {
 			is_country_type = default
 			allows_slavery = yes
 			has_faction = progressive
@@ -111,7 +110,7 @@ planet_event = {
 			}
 		}
 		planet_stability < @dpe_normal_unrest_value
-		NOT = { has_planet_flag = cc_emancipation_movement }
+		NOT = { has_carrier_flag = cc_emancipation_movement }
 		any_owned_pop_group = {
 			is_enslaved = yes
 			pop_group_has_happiness = yes
@@ -124,7 +123,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_emancipation_movement
 			years = 15
 		}
@@ -216,7 +215,7 @@ planet_event = {
 						NOT = { is_same_value = root }
 						planet_stability < @dpe_normal_unrest_value
 						NOR = {
-							has_planet_flag = cc_emancipation_movement
+							has_carrier_flag = cc_emancipation_movement
 							owner = { has_country_flag = cc_emancipation_movement }
 						}
 						any_owned_pop_group = {
@@ -229,7 +228,7 @@ planet_event = {
 							is_enslaved = no
 						}
 					}
-					planet_event = { id = cc_emancipation.2 days = 15 }
+					carrier_event = { id = cc_emancipation.2 days = 15 }
 				}
 			}
 		}
@@ -276,7 +275,7 @@ planet_event = {
 						NOT = { is_same_value = root }
 						planet_stability < @dpe_normal_unrest_value
 						NOR = {
-							has_planet_flag = cc_emancipation_movement
+							has_carrier_flag = cc_emancipation_movement
 							owner = { has_country_flag = cc_emancipation_movement }
 						}
 						any_owned_pop_group = {
@@ -289,7 +288,7 @@ planet_event = {
 							is_enslaved = no
 						}
 					}
-					planet_event = { id = cc_emancipation.3 days = 15 }
+					carrier_event = { id = cc_emancipation.3 days = 15 }
 				}
 			}
 		}
@@ -410,14 +409,14 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_emancipation.2
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = { 
 		NOR = {
-			has_planet_flag = cc_emancipation_movement
+			has_carrier_flag = cc_emancipation_movement
 			owner = { has_country_flag = cc_emancipation_movement }
 		}
 		owner = { allows_slavery = yes }
@@ -426,12 +425,12 @@ planet_event = {
 	immediate = {
 		random = {
 			chance = 10
-			planet_event = { id = cc_emancipation.4 days = 10 random = 15 }
+			carrier_event = { id = cc_emancipation.4 days = 10 random = 15 }
 		}
 		
 		if = {
 			limit = { NOT = { owner = { has_country_flag = cc_enough_emancipation_12 } } }
-			planet_event = { id = cc_emancipation.2 days = 30 }
+			carrier_event = { id = cc_emancipation.2 days = 30 }
 		}
 		owner = {
 			if = {
@@ -557,14 +556,14 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_emancipation.3
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = { 
 		NOR = {
-			has_planet_flag = cc_emancipation_movement
+			has_carrier_flag = cc_emancipation_movement
 			owner = { has_country_flag = cc_emancipation_movement }
 		}
 		owner = { allows_slavery = yes }
@@ -573,12 +572,12 @@ planet_event = {
 	immediate = {
 		random = {
 			chance = 5
-			planet_event = { id = cc_emancipation.4 days = 10 random = 15 }
+			carrier_event = { id = cc_emancipation.4 days = 10 random = 15 }
 		}
 		
 		if = {
 			limit = { NOT = { owner = { has_country_flag = cc_enough_emancipation_12 } } }
-			planet_event = { id = cc_emancipation.2 days = 30 }
+			carrier_event = { id = cc_emancipation.2 days = 30 }
 		}
 		owner = {
 			if = {
@@ -704,7 +703,7 @@ planet_event = {
 	}
 }
 	
-planet_event = {
+carrier_event = {
 	id = cc_emancipation.4
 	hide_window = yes
 	is_triggered_only = yes
@@ -714,9 +713,9 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				owner = { NOT = { any_owned_planet = { has_planet_flag = cc_second_emancipation_planet } } }
+				owner = { NOT = { any_owned_planet = { has_carrier_flag = cc_second_emancipation_planet } } }
 			}
-			planet_event = { id = cc_emancipation.5 }
+			carrier_event = { id = cc_emancipation.5 }
 		}
 		else = {
 			owner = {
@@ -731,7 +730,7 @@ planet_event = {
 
 
 ##Second event
-planet_event = {
+carrier_event = {
 	id = cc_emancipation.5
 	title = cc_emancipation.5.name
 	desc = cc_emancipation.5.desc
@@ -753,11 +752,11 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_emancipation_movement
 			years = 15
 		}
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_second_emancipation_planet
 			years = 5
 		}

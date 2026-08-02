@@ -1,7 +1,7 @@
 namespace = dpe_smallpos_events
 
 
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -15,8 +15,8 @@ planet_event = {
 
 		planet_stability > 65
 		NOR = {
-			has_planet_flag = dpe_unity_planet
-			has_planet_flag = dpe_dissent_planet
+			has_carrier_flag = dpe_unity_planet
+			has_carrier_flag = dpe_dissent_planet
 		}
 		count_owned_pop_amount = {
 			limit = { pop_group_has_happiness = yes }
@@ -39,11 +39,11 @@ planet_event = {
 	# mean_time_to_happen = { years = 60 }
 
 	immediate = {
-		planet_event = { id = dpe_smallpos_events.2 }
+		carrier_event = { id = dpe_smallpos_events.2 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.2
 	title = dpe_smallpos_events.2.name
 	desc = dpe_smallpos_events.2.desc
@@ -52,7 +52,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_unity_planet
 			years = 40
 		}
@@ -79,7 +79,7 @@ country_event = {
 	id = dpe_smallpos_events.3
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		is_country_type = default
 		OR = {
@@ -89,10 +89,10 @@ country_event = {
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
 		exists = ruler
 		any_pop_faction = {
-			is_a_vanilla_faction = yes
-			exists = leader
-			leader = { not = { is_same_value = root.ruler } }
+			is_regular_faction = yes
 			faction_approval < 0.4
+			NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+			owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 		}
 	}
 	
@@ -108,89 +108,89 @@ country_event = {
 				NOT = { has_country_flag = dpe_recent_ruler_debate }
 				exists = ruler
 				any_pop_faction = {
-					is_a_vanilla_faction = yes
-					exists = leader
-					leader = { not = { is_same_value = root.ruler } }
+					is_regular_faction = yes
 					faction_approval < 0.4
+					NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+					owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 				}
 			}
 		
 			if = {
 				limit = {
 					any_pop_faction = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.15
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 				}
 				random_pop_faction = {
 					limit = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.15
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 					save_event_target_as = dpe_dissident_faction
-					leader = { save_event_target_as = dpe_dissident_faction_leader }
+					owner = { random_owned_leader = { limit = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } save_event_target_as = dpe_dissident_faction_leader } }
 				}
 			}
 			else_if = {
 				limit = {
 					any_pop_faction = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.1
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 				}
 				random_pop_faction = {
 					limit = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.1
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 					save_event_target_as = dpe_dissident_faction
-					leader = { save_event_target_as = dpe_dissident_faction_leader }
+					owner = { random_owned_leader = { limit = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } save_event_target_as = dpe_dissident_faction_leader } }
 				}
 			}
 			else_if = {
 				limit = {
 					any_pop_faction = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.05
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 				}
 				random_pop_faction = {
 					limit = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
 						support > 0.05
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 					save_event_target_as = dpe_dissident_faction
-					leader = { save_event_target_as = dpe_dissident_faction_leader }
+					owner = { random_owned_leader = { limit = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } save_event_target_as = dpe_dissident_faction_leader } }
 				}
 			}
 			else = {
 				random_pop_faction = {
 					limit = {
-						is_a_vanilla_faction = yes
-						exists = leader
-						leader = { not = { is_same_value = root.ruler } }
+						is_regular_faction = yes
 						faction_approval < 0.4
+						NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+						owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 					}
 					save_event_target_as = dpe_dissident_faction
-					leader = { save_event_target_as = dpe_dissident_faction_leader }
+					owner = { random_owned_leader = { limit = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } save_event_target_as = dpe_dissident_faction_leader } }
 				}
 			}
 		
@@ -271,7 +271,7 @@ country_event = {
 		}
 
 		any_owned_planet = {
-			NOT = { has_planet_flag = dpe_recent_talent_planet }
+			NOT = { has_carrier_flag = dpe_recent_talent_planet }
 			controller = { is_same_empire = root }
 			any_owned_species = {
 				species_has_happiness_with_owner = root
@@ -335,7 +335,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					any_owned_planet = {
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
+						NOT = { has_carrier_flag = dpe_recent_talent_planet }
 						controller = { is_same_empire = root }
 						any_owned_species = {
 							has_citizenship_type = {
@@ -360,7 +360,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					any_owned_planet = {
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
+						NOT = { has_carrier_flag = dpe_recent_talent_planet }
 						controller = { is_same_empire = root }
 						any_owned_species = {
 							has_citizenship_type = {
@@ -377,7 +377,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					any_owned_planet = {
-						NOT = { has_planet_flag = dpe_recent_talent_planet }
+						NOT = { has_carrier_flag = dpe_recent_talent_planet }
 						controller = { is_same_empire = root }
 						any_owned_species = {
 							has_citizenship_type = {
@@ -406,8 +406,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					any_system_within_border = {
-						exists = starbase
-						starbase = {
+						starbase? = {
 							has_starbase_size >= starbase_starport
 							OR = {
 								has_starbase_building = fleet_academy
@@ -421,8 +420,7 @@ country_event = {
 				modifier = {
 					factor = 2
 					any_system_within_border = {
-						exists = starbase
-						starbase = {
+						starbase? = {
 							has_starbase_size >= starbase_starport
 						}
 						
@@ -448,8 +446,7 @@ country_event = {
 					factor = 0
 					NOT = {
 						any_system_within_border = {
-							exists = starbase
-							starbase = {
+							starbase? = {
 								has_starbase_size >= starbase_starport
 							}
 							NOT = { has_star_flag = dpe_recent_talent_starbase }
@@ -504,7 +501,7 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -517,7 +514,7 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -528,7 +525,7 @@ country_event = {
 					has_modifier = cc_university
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -543,7 +540,7 @@ country_event = {
 		else = {
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -553,7 +550,7 @@ country_event = {
 					}
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -898,7 +895,7 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -911,7 +908,7 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -922,7 +919,7 @@ country_event = {
 					has_modifier = cc_milacademy
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -937,7 +934,7 @@ country_event = {
 		else = {
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -947,7 +944,7 @@ country_event = {
 					}
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -1060,7 +1057,7 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -1076,7 +1073,7 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -1090,7 +1087,7 @@ country_event = {
 					}
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -1116,7 +1113,7 @@ country_event = {
 		else = {
 			random_owned_planet = {
 				limit = {				
-					NOT = { has_planet_flag = dpe_recent_talent_planet }
+					NOT = { has_carrier_flag = dpe_recent_talent_planet }
 					controller = { is_same_empire = root }
 					any_owned_species = {
 						has_citizenship_type = {
@@ -1126,7 +1123,7 @@ country_event = {
 					}
 				}
 				save_event_target_as = dpe_talent_planet
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_recent_talent_planet
 					years = 50
 				}
@@ -1239,8 +1236,7 @@ country_event = {
 		if = {
 			limit = {
 				any_system_within_border = {
-					exists = starbase
-					starbase = {
+					starbase? = {
 						has_starbase_size >= starbase_starport
 					}
 					
@@ -1264,8 +1260,7 @@ country_event = {
 			}
 			random_system_within_border = {
 				limit = {
-					exists = starbase
-					starbase = {
+					starbase? = {
 						has_starbase_size >= starbase_starport
 					}
 					NOT = { has_star_flag = dpe_recent_talent_starbase }
@@ -1295,8 +1290,7 @@ country_event = {
 		else_if = {
 			limit = {
 				any_system_within_border = {
-					exists = starbase
-					starbase = {
+					starbase? = {
 						has_starbase_size >= starbase_starport
 						OR = {
 							has_starbase_building = fleet_academy
@@ -1308,8 +1302,7 @@ country_event = {
 			}
 			random_system_within_border = {
 				limit = {
-					exists = starbase
-					starbase = {
+					starbase? = {
 						has_starbase_size >= starbase_starport
 						OR = {
 							has_starbase_building = fleet_academy
@@ -1329,8 +1322,7 @@ country_event = {
 		else = {
 			random_system_within_border = {
 				limit = {
-					exists = starbase
-					starbase = {
+					starbase? = {
 						has_starbase_size >= starbase_starport
 					}
 					NOT = { has_star_flag = dpe_recent_talent_starbase }
@@ -1407,19 +1399,19 @@ country_event = {
 ######Output-based events (like the unity one)
 
 #Dissent
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.20
 	title = dpe_smallpos_events.20.name
 	desc = {
 		text = dpe_smallpos_events.20.desc.A
 		trigger = {
-			has_planet_flag = dpe_dissent_a
+			has_carrier_flag = dpe_dissent_a
 		}
 	}
 	desc = {
 		text = dpe_smallpos_events.20.desc.B
 		trigger = {
-			has_planet_flag = dpe_dissent_b
+			has_carrier_flag = dpe_dissent_b
 		}
 	}
 	picture = GFX_evt_alien_propaganda
@@ -1433,8 +1425,8 @@ planet_event = {
 		years_passed > 30
 
 		NOR = {
-			has_planet_flag = dpe_unity_planet
-			has_planet_flag = dpe_dissent_planet
+			has_carrier_flag = dpe_unity_planet
+			has_carrier_flag = dpe_dissent_planet
 		}
 		count_owned_pop_amount = {
 			limit = {
@@ -1461,7 +1453,7 @@ planet_event = {
 	# mean_time_to_happen = { years = 75 }
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_dissent_planet
 			years = 40
 		}
@@ -1473,13 +1465,13 @@ planet_event = {
 		}
 		random_list = {
 			1 = {
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_dissent_a
 					days = 5
 				}
 			}
 			1 = {
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_dissent_b
 					days = 5
 				}
@@ -1497,7 +1489,7 @@ planet_event = {
 }
 
 #Positive Energy
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.21
 	title = dpe_smallpos_events.21.name
 	desc = {
@@ -1529,8 +1521,8 @@ planet_event = {
 		years_passed > 15
 
 		NOR = {
-			has_planet_flag = dpe_posenergy_planet
-			has_planet_flag = dpe_negenergy_planet
+			has_carrier_flag = dpe_posenergy_planet
+			has_carrier_flag = dpe_negenergy_planet
 		}
 
 		pop_amount > 2000
@@ -1576,7 +1568,7 @@ planet_event = {
 	# mean_time_to_happen = { years = 60 }
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_posenergy_planet
 			years = 30
 		}
@@ -1598,7 +1590,7 @@ planet_event = {
 }
 
 #Negative Energy
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.22
 	title = dpe_smallpos_events.22.name
 	desc = {
@@ -1632,8 +1624,8 @@ planet_event = {
 		years_passed > 30
 
 		NOR = {
-			has_planet_flag = dpe_posenergy_planet
-			has_planet_flag = dpe_negenergy_planet
+			has_carrier_flag = dpe_posenergy_planet
+			has_carrier_flag = dpe_negenergy_planet
 		}
 
 		pop_amount > 2000
@@ -1680,7 +1672,7 @@ planet_event = {
 	# mean_time_to_happen = { years = 75 }
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_negenergy_planet
 			years = 30
 		}
@@ -1702,7 +1694,7 @@ planet_event = {
 }
 
 #Positive Minerals
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.23
 	title = dpe_smallpos_events.23.name
 	desc = {
@@ -1736,8 +1728,8 @@ planet_event = {
 		years_passed > 15
 
 		NOR = {
-			has_planet_flag = dpe_posminerals_planet
-			has_planet_flag = dpe_negminerals_planet
+			has_carrier_flag = dpe_posminerals_planet
+			has_carrier_flag = dpe_negminerals_planet
 		}
 
 		pop_amount > 2000
@@ -1783,7 +1775,7 @@ planet_event = {
 	# mean_time_to_happen = { years = 60 }
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_posminerals_planet
 			years = 30
 		}
@@ -1805,7 +1797,7 @@ planet_event = {
 }
 
 #Negative Minerals
-planet_event = {
+carrier_event = {
 	id = dpe_smallpos_events.24
 	title = dpe_smallpos_events.24.name
 	desc = {
@@ -1839,8 +1831,8 @@ planet_event = {
 		years_passed > 30
 
 		NOR = {
-			has_planet_flag = dpe_posminerals_planet
-			has_planet_flag = dpe_negminerals_planet
+			has_carrier_flag = dpe_posminerals_planet
+			has_carrier_flag = dpe_negminerals_planet
 		}
 
 		pop_amount > 2000
@@ -1887,7 +1879,7 @@ planet_event = {
 	# mean_time_to_happen = { years = 75 }
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = dpe_negminerals_planet
 			years = 30
 		}

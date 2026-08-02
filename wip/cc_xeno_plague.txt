@@ -286,7 +286,7 @@
 # 	}
 # }
 
-# planet_event = {
+# carrier_event = {
 # 	id = cc_xeno_plague.3
 # 	hide_window = yes
 # 	is_triggered_only = yes
@@ -544,7 +544,7 @@
 # 				}
 # 				random_owned_planet = {
 # 					limit = { NOT = { any_owned_pop_group = { has_modifier = cc_ill } } }
-# 					planet_event = { id = cc_xeno_plague.7 }
+# 					carrier_event = { id = cc_xeno_plague.7 }
 # 				}
 # 			}
 			
@@ -575,7 +575,7 @@
 # 				planet = {
 # 					if = {
 # 						limit = { NOT = { any_owned_pop_group = { has_modifier = cc_ill } } }
-# 						planet_event = { id = cc_xeno_plague.7 }
+# 						carrier_event = { id = cc_xeno_plague.7 }
 # 					}
 # 				}
 # 				modifier = {
@@ -592,7 +592,7 @@
 # 				planet = {
 # 					if = {
 # 						limit = { NOT = { any_owned_pop_group = { has_modifier = cc_ill } } }
-# 						planet_event = { id = cc_xeno_plague.7 }
+# 						carrier_event = { id = cc_xeno_plague.7 }
 # 					}
 # 				}
 # 				modifier = {
@@ -609,7 +609,7 @@
 # 				planet = {
 # 					if = {
 # 						limit = { NOT = { any_owned_pop_group = { has_modifier = cc_ill } } }
-# 						planet_event = { id = cc_xeno_plague.7 }
+# 						carrier_event = { id = cc_xeno_plague.7 }
 # 					}
 # 				}
 # 				modifier = {
@@ -626,7 +626,7 @@
 # 				planet = {
 # 					if = {
 # 						limit = { NOT = { any_owned_pop_group = { has_modifier = cc_ill } } }
-# 						planet_event = { id = cc_xeno_plague.7 }
+# 						carrier_event = { id = cc_xeno_plague.7 }
 # 					}
 # 				}
 # 				modifier = {
@@ -646,9 +646,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 						
@@ -682,12 +682,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -695,7 +695,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -712,7 +712,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -734,9 +734,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 						
@@ -770,12 +770,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -783,7 +783,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -800,7 +800,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -822,9 +822,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 						
@@ -858,12 +858,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -871,7 +871,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -888,7 +888,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -910,9 +910,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 						
@@ -946,12 +946,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -959,7 +959,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -976,7 +976,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -998,9 +998,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 						
@@ -1034,12 +1034,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -1047,7 +1047,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -1064,7 +1064,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -1086,9 +1086,9 @@
 # 						planet = {
 # 							if = {
 # 								limit = {
-# 									NOT = { has_planet_flag = cc_planet_plague }
+# 									NOT = { has_carrier_flag = cc_planet_plague }
 # 								}
-# 								planet_event = { id = cc_xeno_plague.8 }
+# 								carrier_event = { id = cc_xeno_plague.8 }
 # 							}
 # 						}
 					
@@ -1122,12 +1122,12 @@
 # 						}
 # 						modifier = {
 # 							factor = 0.33
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.33
 # 							owner = { has_country_flag = cc_plague_quarantine }
-# 							planet = { NOT = { has_planet_flag = cc_planet_plague } }
+# 							planet = { NOT = { has_carrier_flag = cc_planet_plague } }
 # 						}
 # 						modifier = {
 # 							factor = 0.5
@@ -1135,7 +1135,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 75
@@ -1152,7 +1152,7 @@
 # 								owner = {
 # 									NOT = {
 # 										any_owned_planet = {
-# 											has_planet_flag = cc_planet_plague
+# 											has_carrier_flag = cc_planet_plague
 # 											distance = {
 # 												source = prevprev
 # 												max_distance <= 150
@@ -1172,14 +1172,14 @@
 
 
 # #Planet Free of Disease
-# planet_event = {
+# carrier_event = {
 # 	id = cc_xeno_plague.7
 # 	title = cc_xeno_plague.7.name
 # 	desc = cc_xeno_plague.7.desc
 # 	is_triggered_only = yes
 	
 # 	immediate = {
-# 		remove_planet_flag = cc_planet_plague
+# 		remove_carrier_flag = cc_planet_plague
 # 	}
 	
 # 	option = {
@@ -1192,14 +1192,14 @@
 # }
 
 # #Planet Gets Disease
-# planet_event = {
+# carrier_event = {
 # 	id = cc_xeno_plague.8
 # 	title = cc_xeno_plague.8.name
 # 	desc = cc_xeno_plague.8.desc
 # 	is_triggered_only = yes
 	
 # 	immediate = {
-# 		set_planet_flag = cc_planet_plague
+# 		set_carrier_flag = cc_planet_plague
 # 	}
 	
 # 	option = {

@@ -23,7 +23,7 @@ event = {
 						count > @dpe_pops_medium_cluster
 					}
 				}
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = ccrebel_perf_spiritualists_2
 					years = 2
 				}
@@ -36,7 +36,7 @@ event = {
 						count > @dpe_pops_small_cluster
 					}
 				}
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = ccrebel_perf_xenophiles_1
 					years = 2
 				}
@@ -47,7 +47,7 @@ event = {
 							count > @dpe_pops_medium_cluster
 						}
 					}
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = ccrebel_perf_xenophiles_2
 						years = 2
 					}
@@ -57,7 +57,7 @@ event = {
 								is_xenophobe = yes
 							}
 						}
-						set_timed_planet_flag = {
+						set_timed_carrier_flag = {
 							flag = cc_opposite_ethic_to_ruler
 							years = 2
 						}
@@ -69,7 +69,7 @@ event = {
 								count > @dpe_pops_large_cluster
 							}
 						}
-						set_timed_planet_flag = {
+						set_timed_carrier_flag = {
 							flag = ccrebel_perf_xenophiles_3
 							years = 2
 						}
@@ -84,7 +84,7 @@ event = {
 						count > @dpe_pops_small_cluster
 					}
 				}
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = ccrebel_perf_xenophobes_1
 					years = 2
 				}
@@ -95,7 +95,7 @@ event = {
 							count > @dpe_pops_medium_cluster
 						}
 					}
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = ccrebel_perf_xenophobes_2
 						years = 2
 					}
@@ -105,7 +105,7 @@ event = {
 								is_xenophile = yes
 							}
 						}
-						set_timed_planet_flag = {
+						set_timed_carrier_flag = {
 							flag = cc_opposite_ethic_to_ruler
 							years = 2
 						}
@@ -117,7 +117,7 @@ event = {
 								count > @dpe_pops_large_cluster
 							}
 						}
-						set_timed_planet_flag = {
+						set_timed_carrier_flag = {
 							flag = ccrebel_perf_xenophobes_3
 							years = 2
 						}

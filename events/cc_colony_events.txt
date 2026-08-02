@@ -1,6 +1,6 @@
 namespace = cc_colony_events
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -11,7 +11,7 @@ planet_event = {
 			is_country_type = default
 			is_gestalt = no
 		}
-		NOT = { has_planet_flag = cc_colony_story }
+		NOT = { has_carrier_flag = cc_colony_story }
 		any_owned_pop_group = {
 			pop_group_has_happiness = yes
 			is_enslaved = no
@@ -21,7 +21,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_planet_flag = cc_colony_story
+		set_carrier_flag = cc_colony_story
 
 		random_list = {
 			10 = {
@@ -57,7 +57,7 @@ planet_event = {
 					owner = { has_country_flag = cc_recent_militarist_story }
 				}
 				
-				planet_event = { id = cc_colony_events.2 }
+				carrier_event = { id = cc_colony_events.2 }
 			}
 			10 = {
 				modifier = {
@@ -92,7 +92,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.3 }
+				carrier_event = { id = cc_colony_events.3 }
 			}
 			10 = {
 				modifier = {
@@ -151,7 +151,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.4 }
+				carrier_event = { id = cc_colony_events.4 }
 			}
 			10 = {
 				modifier = {
@@ -202,7 +202,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.5 }
+				carrier_event = { id = cc_colony_events.5 }
 			}
 			10 = {
 				modifier = {
@@ -237,7 +237,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.6 }
+				carrier_event = { id = cc_colony_events.6 }
 			}
 			10 = {
 				modifier = {
@@ -272,7 +272,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.7 }
+				carrier_event = { id = cc_colony_events.7 }
 			}
 			10 = {
 				modifier = {
@@ -307,7 +307,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.8 }
+				carrier_event = { id = cc_colony_events.8 }
 			}
 			10 = {
 				modifier = {
@@ -346,7 +346,7 @@ planet_event = {
 					years_passed < 30
 				}
 				
-				planet_event = { id = cc_colony_events.9 }
+				carrier_event = { id = cc_colony_events.9 }
 			}
 			20 = {
 				modifier = {
@@ -382,7 +382,7 @@ planet_event = {
 
 ##########Militarist Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.2
 	title = cc_colony_events.2.name
 	desc = {
@@ -472,7 +472,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -508,14 +508,14 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.21 days = 30 }
+					carrier_event = { id = cc_colony_events.21 days = 30 }
 					
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.22 days = 30 }
+					carrier_event = { id = cc_colony_events.22 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.23 days = 15 }
+					carrier_event = { id = cc_colony_events.23 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -545,7 +545,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -578,7 +578,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				65 = {
-					planet_event = { id = cc_colony_events.21 days = 30 }
+					carrier_event = { id = cc_colony_events.21 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -594,10 +594,10 @@ planet_event = {
 					}
 				}
 				20 = {
-					planet_event = { id = cc_colony_events.22 days = 30 }
+					carrier_event = { id = cc_colony_events.22 days = 30 }
 				}
 				15 = {
-					planet_event = { id = cc_colony_events.23 days = 15 }
+					carrier_event = { id = cc_colony_events.23 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -634,7 +634,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.21
 	title = cc_colony_events.21.name
 	desc = cc_colony_events.21.desc
@@ -653,7 +653,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.22
 	title = cc_colony_events.22.name
 	desc = cc_colony_events.22.desc
@@ -672,7 +672,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.221 days = 1800 }
+			carrier_event = { id = cc_colony_events.221 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -710,14 +710,14 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.221
 	title = cc_colony_events.221.name
 	desc = cc_colony_events.221.desc
@@ -739,7 +739,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.23
 	title = cc_colony_events.23.name
 	desc = cc_colony_events.23.desc
@@ -761,7 +761,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.25 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -773,9 +773,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.231 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.231 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.232 days = 60 }
+					carrier_event = { id = cc_colony_events.232 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -837,9 +837,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.233 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.233 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.234 days = 720 }
+					carrier_event = { id = cc_colony_events.234 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -847,7 +847,7 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.235 days = 720 }
+					carrier_event = { id = cc_colony_events.235 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -881,7 +881,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.231
 	title = cc_colony_events.231.name
 	desc = cc_colony_events.231.desc
@@ -900,12 +900,12 @@ planet_event = {
 		
 		hidden_effect = { 
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.221 days = 1800 }
+			carrier_event = { id = cc_colony_events.221 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.232
 	title = cc_colony_events.232.name
 	desc = cc_colony_events.232.desc
@@ -924,7 +924,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.233
 	title = cc_colony_events.233.name
 	desc = cc_colony_events.233.desc
@@ -951,7 +951,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.234
 	title = cc_colony_events.234.name
 	desc = cc_colony_events.234.desc
@@ -982,7 +982,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.235
 	title = cc_colony_events.235.name
 	desc = cc_colony_events.235.desc
@@ -1019,7 +1019,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.25
 	title = cc_colony_events.25.name
 	desc = cc_colony_events.25.desc
@@ -1035,7 +1035,7 @@ planet_event = {
 	trigger = { 
 		exists = root.owner
 		has_modifier = cc_founder_militarist
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 
 	immediate = {
@@ -1062,7 +1062,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.251 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.251 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -1099,12 +1099,12 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.251
 	title = cc_colony_events.251.name
 	desc = cc_colony_events.251.desc
 	
-	trigger = { NOT = { has_planet_flag = cc_milacademy_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_milacademy_cancelled } }
 	
 	picture = GFX_evt_cc_military_ceremony
 	
@@ -1139,7 +1139,7 @@ planet_event = {
 
 ##########Pacifist Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.3
 	title = cc_colony_events.3.name
 	desc = {
@@ -1230,9 +1230,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -1253,9 +1253,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -1288,7 +1288,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = { #adjusted the chances of a peacful resolution upwards, because obvs...
 				4 = {
-					planet_event = { id = cc_colony_events.31 days = 30 }
+					carrier_event = { id = cc_colony_events.31 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -1304,10 +1304,10 @@ planet_event = {
 					}
 				}
 				2 = {
-					planet_event = { id = cc_colony_events.32 days = 30 }
+					carrier_event = { id = cc_colony_events.32 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.33 days = 15 }
+					carrier_event = { id = cc_colony_events.33 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -1344,7 +1344,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.31
 	title = cc_colony_events.31.name
 	desc = cc_colony_events.31.desc
@@ -1363,7 +1363,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.32
 	title = cc_colony_events.32.name
 	desc = cc_colony_events.32.desc
@@ -1382,7 +1382,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.321 days = 1800 }
+			carrier_event = { id = cc_colony_events.321 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -1422,16 +1422,16 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.321
 	title = cc_colony_events.321.name
 	desc = cc_colony_events.321.desc
@@ -1453,7 +1453,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.33
 	title = cc_colony_events.33.name
 	desc = cc_colony_events.33.desc
@@ -1477,9 +1477,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.34 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.34 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.35 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -1491,9 +1491,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = { #adjusted peace upwards
-				4 = { planet_event = { id = cc_colony_events.331 days = 60 } }
+				4 = { carrier_event = { id = cc_colony_events.331 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.332 days = 60 }
+					carrier_event = { id = cc_colony_events.332 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -1555,9 +1555,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = { #adjusted peace upwards
-				5 = { planet_event = { id = cc_colony_events.333 days = 720 } }
+				5 = { carrier_event = { id = cc_colony_events.333 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.334 days = 720 }
+					carrier_event = { id = cc_colony_events.334 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -1591,7 +1591,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.331
 	title = cc_colony_events.331.name
 	desc = cc_colony_events.331.desc
@@ -1610,12 +1610,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.321 days = 1800 }
+			carrier_event = { id = cc_colony_events.321 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.332
 	title = cc_colony_events.332.name
 	desc = cc_colony_events.332.desc
@@ -1634,7 +1634,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.333
 	title = cc_colony_events.333.name
 	desc = cc_colony_events.333.desc
@@ -1661,7 +1661,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.334
 	title = cc_colony_events.334.name
 	desc = cc_colony_events.334.desc
@@ -1695,7 +1695,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.34
 	title = cc_colony_events.34.name
 	desc = cc_colony_events.34.desc
@@ -1710,8 +1710,7 @@ planet_event = {
 	}
 	trigger = {
 		
-		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller? = { is_same_empire = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_pacifist
@@ -1730,7 +1729,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_famous_leader
 			years = 25
 		}
@@ -1746,9 +1745,9 @@ planet_event = {
 		name = OK
 		hidden_effect = {
 			random_list = {
-				5 = { planet_event = { id = cc_colony_events.341 days = 270 } }
+				5 = { carrier_event = { id = cc_colony_events.341 days = 270 } }
 				1 = {
-					planet_event = { id = cc_colony_events.342 days = 180 }
+					carrier_event = { id = cc_colony_events.342 days = 180 }
 					
 					modifier = {
 						factor = 0
@@ -1786,7 +1785,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.341
 	title = cc_colony_events.341.name
 	desc = cc_colony_events.341.desc
@@ -1818,7 +1817,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.342
 	title = cc_colony_events.342.name
 	desc = cc_colony_events.342.desc
@@ -1828,7 +1827,7 @@ planet_event = {
 	location = root
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_leader_dead
 			years = 20
 		}
@@ -1877,7 +1876,7 @@ planet_event = {
 				days = -1
 			}
 		}
-		hidden_effect = { planet_event = { id = cc_colony_events.343 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.343 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -1921,7 +1920,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.343
 	title = cc_colony_events.343.name
 	desc = cc_colony_events.343.desc
@@ -1931,7 +1930,7 @@ planet_event = {
 	
 	picture = GFX_evt_cc_mausoleum
 	
-	trigger = { NOT = { has_planet_flag = cc_pacmonument_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_pacmonument_cancelled } }
 	
 	option = {
 		name = CCEXCELLENT
@@ -1944,7 +1943,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.35
 	title = cc_colony_events.35.name
 	desc = cc_colony_events.35.desc
@@ -1961,7 +1960,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_founder_pacifist
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -1976,7 +1975,7 @@ planet_event = {
 		name = cc_colony_events.35.A
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = prosperity }
@@ -1994,7 +1993,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			custom_tooltip = cc_pacmonument_will_be_built
 			tooltip = {
 				add_modifier = {
@@ -2013,7 +2012,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.351 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.351 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -2034,7 +2033,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = prosperity }
@@ -2071,7 +2070,7 @@ planet_event = {
 		name = cc_colony_events.35.C
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_famous_leader }
+			NOT = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				is_pacifist = no
 			}
@@ -2102,19 +2101,19 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.351
 	title = cc_colony_events.343.name
 	desc = {
 		text = cc_colony_events.343.desc
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 	}
 	desc = {
 		text = cc_colony_events.351.desc
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 	}
 	
-	trigger = { NOT = { has_planet_flag = cc_pacmonument_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_pacmonument_cancelled } }
 	
 	picture = GFX_evt_cc_mausoleum
 	
@@ -2124,7 +2123,7 @@ planet_event = {
 	option = {
 		name = CCGOODGOOD
 		
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 		
 		add_modifier = {
 			modifier = cc_minor_pacmonument
@@ -2136,7 +2135,7 @@ planet_event = {
 	option = {
 		name = CCEXCELLENT
 		
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 		
 		add_modifier = {
 			modifier = cc_pacifist_centre
@@ -2152,7 +2151,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.4
 	title = cc_colony_events.4.name
 	desc = {
@@ -2243,7 +2242,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -2262,7 +2261,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -2297,7 +2296,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.41 days = 30 }
+					carrier_event = { id = cc_colony_events.41 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -2315,10 +2314,10 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.42 days = 30 }
+					carrier_event = { id = cc_colony_events.42 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.43 days = 15 }
+					carrier_event = { id = cc_colony_events.43 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -2357,7 +2356,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.41
 	title = cc_colony_events.41.name
 	desc = cc_colony_events.41.desc
@@ -2376,7 +2375,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.42
 	title = cc_colony_events.42.name
 	desc = cc_colony_events.42.desc
@@ -2395,7 +2394,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.421 days = 1800 }
+			carrier_event = { id = cc_colony_events.421 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -2433,14 +2432,14 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.421
 	title = cc_colony_events.421.name
 	desc = cc_colony_events.421.desc
@@ -2462,7 +2461,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.43
 	title = cc_colony_events.43.name
 	desc = cc_colony_events.43.desc
@@ -2484,7 +2483,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.45 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -2496,9 +2495,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.431 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.431 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.432 days = 60 }
+					carrier_event = { id = cc_colony_events.432 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -2560,9 +2559,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.433 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.433 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.434 days = 720 }
+					carrier_event = { id = cc_colony_events.434 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -2596,7 +2595,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.431
 	title = cc_colony_events.431.name
 	desc = cc_colony_events.431.desc
@@ -2615,12 +2614,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.421 days = 1800 }
+			carrier_event = { id = cc_colony_events.421 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.432
 	title = cc_colony_events.432.name
 	desc = cc_colony_events.432.desc
@@ -2639,7 +2638,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.433
 	title = cc_colony_events.433.name
 	desc = cc_colony_events.433.desc
@@ -2666,7 +2665,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.434
 	title = cc_colony_events.434.name
 	desc = cc_colony_events.434.desc
@@ -2697,7 +2696,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.45
 	title = cc_colony_events.45.name
 	desc = cc_colony_events.45.desc
@@ -2714,7 +2713,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_founder_xenophile
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -2741,7 +2740,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.451 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.451 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -2786,7 +2785,7 @@ planet_event = {
 		name = cc_colony_events.45.C
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_famous_leader }
+			NOT = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				is_xenophile = no
 			}
@@ -2816,12 +2815,12 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.451
 	title = cc_colony_events.451.name
 	desc = cc_colony_events.451.desc
 	
-	trigger = { NOT = { has_planet_flag = cc_xenophile_institute_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_xenophile_institute_cancelled } }
 	
 	picture = GFX_evt_dpe_alien_wedding
 	
@@ -2844,7 +2843,7 @@ planet_event = {
 
 ##########Xenophobe Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.5
 	title = cc_colony_events.5.name
 	desc = {
@@ -2918,9 +2917,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
@@ -2948,15 +2947,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 			}
 			else = {
 				random = {
 					chance = 33
-					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+					carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			
 			every_owned_pop_group = {
@@ -3000,7 +2999,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.51 days = 30 }
+					carrier_event = { id = cc_colony_events.51 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -3021,10 +3020,10 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.52 days = 30 }
+					carrier_event = { id = cc_colony_events.52 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.53 days = 15 }
+					carrier_event = { id = cc_colony_events.53 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -3066,7 +3065,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.51
 	title = cc_colony_events.51.name
 	desc = cc_colony_events.51.desc
@@ -3085,7 +3084,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.52
 	title = cc_colony_events.52.name
 	desc = cc_colony_events.52.desc
@@ -3104,7 +3103,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.521 days = 1800 }
+			carrier_event = { id = cc_colony_events.521 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -3147,15 +3146,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 			}
 			else = {
 				random = {
 					chance = 33
-					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+					carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
@@ -3167,7 +3166,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.521
 	title = cc_colony_events.521.name
 	desc = cc_colony_events.521.desc
@@ -3189,7 +3188,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.53
 	title = cc_colony_events.53.name
 	desc = cc_colony_events.53.desc
@@ -3213,15 +3212,15 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = { owner = { NOT = { has_country_flag = cc_has_had_xenophobe_incident } } }
-				planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 			}
 			else = {
 				random = {
 					chance = 33
-					planet_event = { id = cc_colony_events.54 days = 5000 random = 800 }
+					carrier_event = { id = cc_colony_events.54 days = 5000 random = 800 }
 				}
 			}
-			planet_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.55 days = 7200 random = 3600 }
 			
 			every_owned_pop_group = {
 				limit = { is_same_species = root.owner }
@@ -3238,9 +3237,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.531 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.531 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.532 days = 60 }
+					carrier_event = { id = cc_colony_events.532 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -3305,9 +3304,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.533 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.533 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.534 days = 720 }
+					carrier_event = { id = cc_colony_events.534 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -3344,7 +3343,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.531
 	title = cc_colony_events.531.name
 	desc = cc_colony_events.531.desc
@@ -3363,12 +3362,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.521 days = 1800 }
+			carrier_event = { id = cc_colony_events.521 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.532
 	title = cc_colony_events.532.name
 	desc = cc_colony_events.532.desc
@@ -3387,7 +3386,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.533
 	title = cc_colony_events.533.name
 	desc = cc_colony_events.533.desc
@@ -3414,7 +3413,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.534
 	title = cc_colony_events.534.name
 	desc = cc_colony_events.534.desc
@@ -3445,7 +3444,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.54
 	hide_window = yes
 	is_triggered_only = yes
@@ -3455,8 +3454,7 @@ planet_event = {
 	}
 	trigger = {
 		
-		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller? = { is_same_empire = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
@@ -3505,7 +3503,7 @@ planet_event = {
 					is_xenophobe = yes
 				}
 			}
-			planet_event = { id = cc_colony_events.5400 }
+			carrier_event = { id = cc_colony_events.5400 }
 		}
 		else = {
 			owner = {
@@ -3540,7 +3538,7 @@ country_event = {
 	
 	option = {
 		name = cc_colony_events.540.A
-		hidden_effect = { from = { planet_event = { id = cc_colony_events.5400 } } }
+		hidden_effect = { from = { carrier_event = { id = cc_colony_events.5400 } } }
 		ai_chance = { factor = 100 } #I mean, why would I want the AI not to do this? :P
 	}
 	option = {
@@ -3557,7 +3555,7 @@ country_event = {
 }
 
 	
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.5400
 	title = cc_colony_events.54.name
 	desc = {
@@ -3589,8 +3587,7 @@ planet_event = {
 	}
 	trigger = {
 		
-		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller? = { is_same_empire = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_xenophobe
@@ -3632,7 +3629,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_famous_leader
 			years = 25
 		}
@@ -3819,8 +3816,8 @@ planet_event = {
 				}
 			}
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.541 days = 25 random = 40 } }
-				2 = { planet_event = { id = cc_colony_events.546 days = 25 random = 40 } }
+				3 = { carrier_event = { id = cc_colony_events.541 days = 25 random = 40 } }
+				2 = { carrier_event = { id = cc_colony_events.546 days = 25 random = 40 } }
 			}
 		}
 		
@@ -3917,7 +3914,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.541
 	title = cc_colony_events.541.name
 	desc = cc_colony_events.541.desc
@@ -3927,7 +3924,7 @@ planet_event = {
 	location = root
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_leader_dead
 			years = 20
 		}
@@ -4226,7 +4223,7 @@ country_event = {
 
 #Assassination Fails
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.546
 	title = cc_colony_events.546.name
 	desc = cc_colony_events.546.desc
@@ -4549,7 +4546,7 @@ country_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.55
 	title = cc_colony_events.55.name
 	desc = cc_colony_events.55.desc
@@ -4566,7 +4563,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_founder_xenophobe
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -4581,7 +4578,7 @@ planet_event = {
 		name = cc_colony_events.55.A
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				if = {
 					limit = { has_faction = supremacist }
@@ -4611,7 +4608,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			custom_tooltip = cc_xenophobe_institute_will_be_built
 			tooltip = {
 				add_modifier = {
@@ -4630,7 +4627,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.551 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.551 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -4659,7 +4656,7 @@ planet_event = {
 		}
 
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				if = {
 					limit = { has_faction = supremacist }
@@ -4699,7 +4696,7 @@ planet_event = {
 		name = cc_colony_events.55.C
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_famous_leader }
+			NOT = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				is_xenophobe = no
 			}
@@ -4730,19 +4727,19 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.551
 	title = cc_colony_events.551.name
 	desc = {
 		text = cc_colony_events.551.desc.A
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 	}
 	desc = {
 		text = cc_colony_events.551.desc.B
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 	}
 	
-	trigger = { NOT = { has_planet_flag = cc_xenophobe_institute_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_xenophobe_institute_cancelled } }
 	
 	picture = GFX_evt_cc_mausoleum
 	
@@ -4752,7 +4749,7 @@ planet_event = {
 	option = {
 		name = CCGOODGOOD
 		
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 		
 		add_modifier = {
 			modifier = cc_minor_xenophobe_institute
@@ -4764,7 +4761,7 @@ planet_event = {
 	option = {
 		name = CCEXCELLENT
 		
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 		
 		add_modifier = {
 			modifier = cc_xenophobe_institute
@@ -4796,7 +4793,7 @@ pop_group_event = {
 
 ##########Spiritualist Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.6
 	title = cc_colony_events.6.name
 	desc = {
@@ -4889,9 +4886,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -4912,9 +4909,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -4947,7 +4944,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.61 days = 30 }
+					carrier_event = { id = cc_colony_events.61 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -4963,10 +4960,10 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.62 days = 30 }
+					carrier_event = { id = cc_colony_events.62 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.63 days = 15 }
+					carrier_event = { id = cc_colony_events.63 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -5003,7 +5000,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.61
 	title = cc_colony_events.61.name
 	desc = cc_colony_events.61.desc
@@ -5022,7 +5019,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.62
 	title = cc_colony_events.62.name
 	desc = cc_colony_events.62.desc
@@ -5041,7 +5038,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.621 days = 1800 }
+			carrier_event = { id = cc_colony_events.621 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -5081,16 +5078,16 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.621
 	title = cc_colony_events.621.name
 	desc = cc_colony_events.621.desc
@@ -5112,7 +5109,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.63
 	title = cc_colony_events.63.name
 	desc = cc_colony_events.63.desc
@@ -5136,9 +5133,9 @@ planet_event = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				planet_event = { id = cc_colony_events.64 days = 5000 random = 800 }
+				carrier_event = { id = cc_colony_events.64 days = 5000 random = 800 }
 			}
-			planet_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.65 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -5150,9 +5147,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.631 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.631 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.632 days = 60 }
+					carrier_event = { id = cc_colony_events.632 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -5214,9 +5211,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.633 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.633 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.634 days = 720 }
+					carrier_event = { id = cc_colony_events.634 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -5250,7 +5247,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.631
 	title = cc_colony_events.631.name
 	desc = cc_colony_events.631.desc
@@ -5269,12 +5266,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.621 days = 1800 }
+			carrier_event = { id = cc_colony_events.621 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.632
 	title = cc_colony_events.632.name
 	desc = cc_colony_events.632.desc
@@ -5293,7 +5290,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.633
 	title = cc_colony_events.633.name
 	desc = cc_colony_events.633.desc
@@ -5320,7 +5317,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.634
 	title = cc_colony_events.634.name
 	desc = cc_colony_events.634.desc
@@ -5354,7 +5351,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.64
 	title = cc_colony_events.64.name
 	desc = cc_colony_events.64.desc
@@ -5369,8 +5366,7 @@ planet_event = {
 	}
 	trigger = {
 		
-		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller? = { is_same_empire = root.owner }
 		has_orbital_bombardment = no
 		
 		has_modifier = cc_founder_spiritualist
@@ -5389,7 +5385,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_famous_leader
 			years = 25
 		}
@@ -5405,9 +5401,9 @@ planet_event = {
 		name = OK
 		hidden_effect = {
 			random_list = {
-				5 = { planet_event = { id = cc_colony_events.641 days = 270 } }
+				5 = { carrier_event = { id = cc_colony_events.641 days = 270 } }
 				1 = {
-					planet_event = { id = cc_colony_events.642 days = 180 }
+					carrier_event = { id = cc_colony_events.642 days = 180 }
 					
 					modifier = {
 						factor = 0
@@ -5445,7 +5441,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.641
 	title = cc_colony_events.641.name
 	desc = cc_colony_events.641.desc
@@ -5477,7 +5473,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.642
 	title = cc_colony_events.642.name
 	desc = cc_colony_events.642.desc
@@ -5487,7 +5483,7 @@ planet_event = {
 	location = root
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_leader_dead
 			years = 20
 		}
@@ -5536,7 +5532,7 @@ planet_event = {
 				days = -1
 			}
 		}
-		hidden_effect = { planet_event = { id = cc_colony_events.643 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.643 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -5580,7 +5576,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.643
 	title = cc_colony_events.643.name
 	desc = cc_colony_events.643.desc
@@ -5590,7 +5586,7 @@ planet_event = {
 	
 	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
-	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_mausoleum_cancelled } }
 	
 	option = {
 		name = CCEXCELLENT
@@ -5603,7 +5599,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.65
 	title = cc_colony_events.65.name
 	desc = cc_colony_events.65.desc
@@ -5620,7 +5616,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_founder_spiritualist
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -5635,7 +5631,7 @@ planet_event = {
 		name = cc_colony_events.65.A
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
@@ -5653,7 +5649,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
 			tooltip = {
 				add_modifier = {
@@ -5672,7 +5668,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.651 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.651 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -5693,7 +5689,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
@@ -5729,7 +5725,7 @@ planet_event = {
 		name = cc_colony_events.65.C
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_famous_leader }
+			NOT = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				is_spiritualist = no
 			}
@@ -5760,19 +5756,19 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.651
 	title = cc_colony_events.643.name
 	desc = {
 		text = cc_colony_events.643.desc
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 	}
 	desc = {
 		text = cc_colony_events.651.desc
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 	}
 	
-	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_mausoleum_cancelled } }
 	
 	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
@@ -5782,7 +5778,7 @@ planet_event = {
 	option = {
 		name = CCGOODGOOD
 		
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 		
 		add_modifier = {
 			modifier = cc_minor_mausoleum
@@ -5794,7 +5790,7 @@ planet_event = {
 	option = {
 		name = CCEXCELLENT
 		
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 		
 		add_modifier = {
 			modifier = cc_religious_centre
@@ -5807,7 +5803,7 @@ planet_event = {
 
 ##########Materialist Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.7
 	title = cc_colony_events.7.name
 	desc = {
@@ -5898,7 +5894,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -5919,7 +5915,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -5952,7 +5948,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				65 = {
-					planet_event = { id = cc_colony_events.71 days = 30 }
+					carrier_event = { id = cc_colony_events.71 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -5968,10 +5964,10 @@ planet_event = {
 					}
 				}
 				20 = {
-					planet_event = { id = cc_colony_events.72 days = 30 }
+					carrier_event = { id = cc_colony_events.72 days = 30 }
 				}
 				15 = {
-					planet_event = { id = cc_colony_events.73 days = 15 }
+					carrier_event = { id = cc_colony_events.73 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -6008,7 +6004,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.71
 	title = cc_colony_events.71.name
 	desc = cc_colony_events.71.desc
@@ -6027,7 +6023,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.72
 	title = cc_colony_events.72.name
 	desc = cc_colony_events.72.desc
@@ -6046,7 +6042,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.721 days = 1800 }
+			carrier_event = { id = cc_colony_events.721 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -6084,14 +6080,14 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.721
 	title = cc_colony_events.721.name
 	desc = cc_colony_events.721.desc
@@ -6113,7 +6109,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.73
 	title = cc_colony_events.73.name
 	desc = cc_colony_events.73.desc
@@ -6135,7 +6131,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.75 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6147,9 +6143,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.731 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.731 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.732 days = 60 }
+					carrier_event = { id = cc_colony_events.732 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -6211,9 +6207,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.733 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.733 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.734 days = 720 }
+					carrier_event = { id = cc_colony_events.734 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -6247,7 +6243,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.731
 	title = cc_colony_events.731.name
 	desc = cc_colony_events.731.desc
@@ -6266,12 +6262,12 @@ planet_event = {
 		
 		hidden_effect = { 
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.721 days = 1800 }
+			carrier_event = { id = cc_colony_events.721 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.732
 	title = cc_colony_events.732.name
 	desc = cc_colony_events.732.desc
@@ -6290,7 +6286,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.733
 	title = cc_colony_events.733.name
 	desc = cc_colony_events.733.desc
@@ -6317,7 +6313,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.734
 	title = cc_colony_events.734.name
 	desc = cc_colony_events.734.desc
@@ -6350,7 +6346,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.75
 	title = cc_colony_events.75.name
 	desc = cc_colony_events.75.desc
@@ -6367,7 +6363,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_founder_materialist
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -6394,7 +6390,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.751 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.751 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -6431,12 +6427,12 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.751
 	title = cc_colony_events.751.name
 	desc = cc_colony_events.751.desc
 	
-	trigger = { NOT = { has_planet_flag = cc_university_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_university_cancelled } }
 	
 	picture = GFX_evt_cc_university
 	
@@ -6472,7 +6468,7 @@ planet_event = {
 
 ##########Authoritarian Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.8
 	title = cc_colony_events.8.name
 	desc = {
@@ -6598,7 +6594,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6618,7 +6614,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6636,14 +6632,14 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.81 days = 30 }
+					carrier_event = { id = cc_colony_events.81 days = 30 }
 					
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.82 days = 30 }
+					carrier_event = { id = cc_colony_events.82 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.83 days = 15 }
+					carrier_event = { id = cc_colony_events.83 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -6673,7 +6669,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		trigger = {
@@ -6706,7 +6702,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				2 = {
-					planet_event = { id = cc_colony_events.81 days = 30 }
+					carrier_event = { id = cc_colony_events.81 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -6722,10 +6718,10 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.82 days = 30 }
+					carrier_event = { id = cc_colony_events.82 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.83 days = 15 }
+					carrier_event = { id = cc_colony_events.83 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -6762,7 +6758,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.81
 	title = cc_colony_events.81.name
 	desc = cc_colony_events.81.desc
@@ -6781,7 +6777,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.82
 	title = cc_colony_events.82.name
 	desc = cc_colony_events.82.desc
@@ -6800,7 +6796,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.821 days = 1800 }
+			carrier_event = { id = cc_colony_events.821 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -6842,7 +6838,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6864,14 +6860,14 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.821
 	title = cc_colony_events.821.name
 	desc = cc_colony_events.821.desc
@@ -6893,7 +6889,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.83
 	title = cc_colony_events.83.name
 	desc = cc_colony_events.83.desc
@@ -6915,7 +6911,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
+			carrier_event = { id = cc_colony_events.85 days = 7200 random = 3600 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -6927,9 +6923,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.831 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.831 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.832 days = 60 }
+					carrier_event = { id = cc_colony_events.832 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -6990,9 +6986,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.833 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.833 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.834 days = 720 }
+					carrier_event = { id = cc_colony_events.834 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -7026,7 +7022,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.831
 	title = cc_colony_events.831.name
 	desc = cc_colony_events.831.desc
@@ -7045,12 +7041,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.821 days = 1800 }
+			carrier_event = { id = cc_colony_events.821 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.832
 	title = cc_colony_events.832.name
 	desc = cc_colony_events.832.desc
@@ -7069,7 +7065,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.833
 	title = cc_colony_events.833.name
 	desc = cc_colony_events.833.desc
@@ -7096,7 +7092,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.834
 	title = cc_colony_events.834.name
 	desc = cc_colony_events.834.desc
@@ -7130,7 +7126,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.85
 	title = cc_colony_events.85.name
 	desc = {
@@ -7154,7 +7150,7 @@ planet_event = {
 		
 		exists = root.owner
 		has_modifier = cc_colony_monarchy
-		NOT = { has_planet_flag = cc_leader_dead }
+		NOT = { has_carrier_flag = cc_leader_dead }
 	}
 	
 	immediate = {
@@ -7192,7 +7188,7 @@ planet_event = {
 		
 		random = {
 			chance = 33
-			planet_event = { id = cc_colony_events.851 days = 1080 }
+			carrier_event = { id = cc_colony_events.851 days = 1080 }
 		}
 		
 		ai_chance = {
@@ -7211,7 +7207,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.851
 	title = cc_colony_events.851.name
 	desc = {
@@ -7244,7 +7240,7 @@ planet_event = {
 
 #########Egalitarian Chain
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.9
 	title = cc_colony_events.9.name
 	desc = {
@@ -7343,7 +7339,7 @@ planet_event = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
 				6 = {
-					planet_event = { id = cc_colony_events.91 days = 30 }
+					carrier_event = { id = cc_colony_events.91 days = 30 }
 					modifier = {
 						factor = 1.5
 						owner = { NOT = { has_faction = progressive } }
@@ -7358,7 +7354,7 @@ planet_event = {
 					}
 				}
 				4 = {
-					planet_event = { id = cc_colony_events.91 days = 30 }
+					carrier_event = { id = cc_colony_events.91 days = 30 }
 					modifier = {
 						factor = 2
 						planet_stability < @dpe_bit_unrest_value
@@ -7386,7 +7382,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.91
 	title = cc_colony_events.91.name
 	desc = cc_colony_events.91.desc
@@ -7406,7 +7402,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.92
 	title = cc_colony_events.92.name
 	desc = cc_colony_events.92.desc
@@ -7441,9 +7437,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.921 days = 720 } }
+				3 = { carrier_event = { id = cc_colony_events.921 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.922 days = 720 }
+					carrier_event = { id = cc_colony_events.922 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -7476,8 +7472,8 @@ planet_event = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
 				4 = { }
-				4 = { planet_event = { id = cc_colony_events.923 days = 1800 } }
-				2 = { planet_event = { id = cc_colony_events.924 days = 360 } }
+				4 = { carrier_event = { id = cc_colony_events.923 days = 1800 } }
+				2 = { carrier_event = { id = cc_colony_events.924 days = 360 } }
 			}
 		}
 		
@@ -7526,7 +7522,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.921
 	title = cc_colony_events.921.name
 	desc = cc_colony_events.921.desc
@@ -7556,7 +7552,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.922
 	title = cc_colony_events.922.name
 	desc = cc_colony_events.922.desc
@@ -7587,7 +7583,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.923
 	title = cc_colony_events.923.name
 	desc = cc_colony_events.923.desc
@@ -7609,7 +7605,7 @@ planet_event = {
 }
 	
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.924
 	title = cc_colony_events.924.name
 	desc = cc_colony_events.924.desc
@@ -7656,11 +7652,10 @@ country_event = {
 		if = {
 			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
 			any_owned_planet = {
-				has_planet_flag = ccrebel_perf_spiritualists_2
-				NOT = { has_planet_flag = cc_colony_story }
+				has_carrier_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_carrier_flag = cc_colony_story }
 				has_orbital_bombardment = no
-				exists = controller
-				controller = { is_same_empire = root }
+				controller? = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -7676,11 +7671,10 @@ country_event = {
 		}
 		else = {
 			any_owned_planet = {
-				has_planet_flag = ccrebel_perf_spiritualists_2
-				NOT = { has_planet_flag = cc_colony_story }
+				has_carrier_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_carrier_flag = cc_colony_story }
 				has_orbital_bombardment = no
-				exists = controller
-				controller = { is_same_empire = root }
+				controller? = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -7711,11 +7705,10 @@ country_event = {
 			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
 			random_owned_planet = {
 				limit = {
-					has_planet_flag = ccrebel_perf_spiritualists_2
-					NOT = { has_planet_flag = cc_colony_story }
+					has_carrier_flag = ccrebel_perf_spiritualists_2
+					NOT = { has_carrier_flag = cc_colony_story }
 					has_orbital_bombardment = no
-					exists = controller
-					controller = { is_same_empire = root }
+					controller? = { is_same_empire = root }
 					root = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
@@ -7728,17 +7721,16 @@ country_event = {
 						}
 					}
 				}
-				planet_event = { id = cc_colony_events.100 }
+				carrier_event = { id = cc_colony_events.100 }
 			}
 		}
 		else = {
 			random_owned_planet = {
 				limit = {
-					has_planet_flag = ccrebel_perf_spiritualists_2
-					NOT = { has_planet_flag = cc_colony_story }
+					has_carrier_flag = ccrebel_perf_spiritualists_2
+					NOT = { has_carrier_flag = cc_colony_story }
 					has_orbital_bombardment = no
-					exists = controller
-					controller = { is_same_empire = root }
+					controller? = { is_same_empire = root }
 					root = {
 						any_owned_planet = {
 							NOT = { is_same_value = prevprev }
@@ -7761,7 +7753,7 @@ country_event = {
 						}
 					}
 				}
-				planet_event = { id = cc_colony_events.100 }
+				carrier_event = { id = cc_colony_events.100 }
 			}
 		}
 	}
@@ -7770,7 +7762,7 @@ country_event = {
 
 
 #triggered in performance
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.100
 	title = cc_colony_events.100.name
 	desc = {
@@ -7813,8 +7805,7 @@ planet_event = {
 	trigger = {
 		
 		exists = root.owner
-		exists = controller
-		controller = { is_same_empire = root.owner }
+		controller? = { is_same_empire = root.owner }
 		owner = {
 			NOT = { has_country_flag = cc_recent_spiritualist_story }
 			is_country_type = default
@@ -7843,7 +7834,7 @@ planet_event = {
 		
 		has_orbital_bombardment = no
 	
-		NOT = { has_planet_flag = cc_colony_story }
+		NOT = { has_carrier_flag = cc_colony_story }
 		count_owned_pop_amount = {
 			count > 900
 			limit = { has_ethic = ethic_spiritualist }
@@ -7857,7 +7848,7 @@ planet_event = {
 #	mean_time_to_happen = { years = 100 }
 	
 	immediate = {
-		set_planet_flag = cc_colony_story
+		set_carrier_flag = cc_colony_story
 		owner = {
 			set_timed_country_flag = {
 				flag = cc_recent_spiritualist_story
@@ -7909,9 +7900,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				5 = { planet_event = { id = cc_colony_events.1041 days = 270 } }
+				5 = { carrier_event = { id = cc_colony_events.1041 days = 270 } }
 				1 = {
-					planet_event = { id = cc_colony_events.1042 days = 180 }
+					carrier_event = { id = cc_colony_events.1042 days = 180 }
 					
 					modifier = {
 						factor = 0
@@ -7972,9 +7963,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				5 = { planet_event = { id = cc_colony_events.1041 days = 270 } }
+				5 = { carrier_event = { id = cc_colony_events.1041 days = 270 } }
 				1 = {
-					planet_event = { id = cc_colony_events.1042 days = 180 }
+					carrier_event = { id = cc_colony_events.1042 days = 180 }
 					
 					modifier = {
 						factor = 0
@@ -8045,7 +8036,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				1 = {
-					planet_event = { id = cc_colony_events.101 days = 30 }
+					carrier_event = { id = cc_colony_events.101 days = 30 }
 					
 					modifier = {
 						factor = 1.5
@@ -8061,10 +8052,10 @@ planet_event = {
 					}
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.102 days = 30 }
+					carrier_event = { id = cc_colony_events.102 days = 30 }
 				}
 				1 = {
-					planet_event = { id = cc_colony_events.103 days = 15 }
+					carrier_event = { id = cc_colony_events.103 days = 15 }
 					
 					modifier = {
 						factor = 2
@@ -8101,7 +8092,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.101
 	title = cc_colony_events.61.name
 	desc = cc_colony_events.61.desc
@@ -8120,7 +8111,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.102
 	title = cc_colony_events.62.name
 	desc = cc_colony_events.62.desc
@@ -8139,7 +8130,7 @@ planet_event = {
 		custom_tooltip = cc_colony_events.62.A.tooltip
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.1021 days = 1800 }
+			carrier_event = { id = cc_colony_events.1021 days = 1800 }
 		}
 		
 		ai_chance = {
@@ -8183,14 +8174,14 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.105 days = 5400 }
+			carrier_event = { id = cc_colony_events.105 days = 5400 }
 		}
 		
 		ai_chance = { factor = 1 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1021
 	title = cc_colony_events.621.name
 	desc = cc_colony_events.621.desc
@@ -8212,7 +8203,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.103
 	title = cc_colony_events.63.name
 	desc = cc_colony_events.63.desc
@@ -8235,7 +8226,7 @@ planet_event = {
 		}
 		
 		hidden_effect = {
-			planet_event = { id = cc_colony_events.105 days = 5400 }
+			carrier_event = { id = cc_colony_events.105 days = 5400 }
 		}
 		
 		ai_chance = { factor = 1 }
@@ -8247,9 +8238,9 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				3 = { planet_event = { id = cc_colony_events.1031 days = 60 } }
+				3 = { carrier_event = { id = cc_colony_events.1031 days = 60 } }
 				1 = {
-					planet_event = { id = cc_colony_events.1032 days = 60 }
+					carrier_event = { id = cc_colony_events.1032 days = 60 }
 					
 					modifier = {
 						factor = 2
@@ -8307,9 +8298,9 @@ planet_event = {
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
 			random_list = {
-				4 = { planet_event = { id = cc_colony_events.1033 days = 720 } }
+				4 = { carrier_event = { id = cc_colony_events.1033 days = 720 } }
 				1 = {
-					planet_event = { id = cc_colony_events.1034 days = 720 }
+					carrier_event = { id = cc_colony_events.1034 days = 720 }
 					
 					modifier = {
 						factor = 2
@@ -8343,7 +8334,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1031
 	title = cc_colony_events.631.name
 	desc = cc_colony_events.631.desc
@@ -8362,12 +8353,12 @@ planet_event = {
 		
 		hidden_effect = {
 			owner = { save_event_target_as = cc_owner }
-			planet_event = { id = cc_colony_events.1021 days = 1800 }
+			carrier_event = { id = cc_colony_events.1021 days = 1800 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1032
 	title = cc_colony_events.632.name
 	desc = cc_colony_events.632.desc
@@ -8386,7 +8377,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1033
 	title = cc_colony_events.633.name
 	desc = cc_colony_events.633.desc
@@ -8413,7 +8404,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1034
 	title = cc_colony_events.634.name
 	desc = cc_colony_events.634.desc
@@ -8447,7 +8438,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1041
 	title = cc_colony_events.641.name
 	desc = cc_colony_events.641.desc
@@ -8457,7 +8448,7 @@ planet_event = {
 	location = root
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_famous_leader
 			years = 18
 		}
@@ -8483,11 +8474,11 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = cc_colony_events.105 days = 5200 }
+		carrier_event = { id = cc_colony_events.105 days = 5200 }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1042
 	title = cc_colony_events.642.name
 	desc = cc_colony_events.642.desc
@@ -8497,7 +8488,7 @@ planet_event = {
 	location = root
 
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_leader_dead
 			years = 20
 		}
@@ -8531,7 +8522,7 @@ planet_event = {
 				days = -1
 			}
 		}
-		hidden_effect = { planet_event = { id = cc_colony_events.1043 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.1043 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -8575,7 +8566,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1043
 	title = cc_colony_events.643.name
 	desc = cc_colony_events.643.desc
@@ -8585,7 +8576,7 @@ planet_event = {
 	
 	picture = GFX_evt_cc_mausoleum
 	
-	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_mausoleum_cancelled } }
 	
 	option = {
 		name = CCEXCELLENT
@@ -8598,7 +8589,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.105
 	title = cc_colony_events.65.name
 	desc = cc_colony_events.65.desc
@@ -8624,7 +8615,7 @@ planet_event = {
 		name = cc_colony_events.65.A
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			owner = {
 				random_pop_faction = {
 					limit = { is_pop_faction_type = traditionalist }
@@ -8642,7 +8633,7 @@ planet_event = {
 		}
 		
 		if = {
-			limit = { has_planet_flag = cc_famous_leader }
+			limit = { has_carrier_flag = cc_famous_leader }
 			custom_tooltip = cc_mausoleum_will_be_built
 			tooltip = {
 				add_modifier = {
@@ -8661,7 +8652,7 @@ planet_event = {
 			}
 		}
 		
-		hidden_effect = { planet_event = { id = cc_colony_events.1051 days = 1800 } }
+		hidden_effect = { carrier_event = { id = cc_colony_events.1051 days = 1800 } }
 		
 		ai_chance = {
 			factor = 10
@@ -8746,19 +8737,19 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_colony_events.1051
 	title = cc_colony_events.643.name
 	desc = {
 		text = cc_colony_events.643.desc
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 	}
 	desc = {
 		text = cc_colony_events.651.desc
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 	}
 	
-	trigger = { NOT = { has_planet_flag = cc_mausoleum_cancelled } }
+	trigger = { NOT = { has_carrier_flag = cc_mausoleum_cancelled } }
 	
 	picture = GFX_evt_mem_ost_alien_pilgrimage
 	
@@ -8768,7 +8759,7 @@ planet_event = {
 	option = {
 		name = CCGOODGOOD
 		
-		trigger = { NOT = { has_planet_flag = cc_famous_leader } }
+		trigger = { NOT = { has_carrier_flag = cc_famous_leader } }
 		
 		add_modifier = {
 			modifier = cc_minor_mausoleum
@@ -8780,7 +8771,7 @@ planet_event = {
 	option = {
 		name = CCEXCELLENT
 		
-		trigger = { has_planet_flag = cc_famous_leader }
+		trigger = { has_carrier_flag = cc_famous_leader }
 		
 		add_modifier = {
 			modifier = cc_religious_centre

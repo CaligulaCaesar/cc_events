@@ -36,8 +36,7 @@ country_event = {
 			has_civic = civic_shared_burden
 			has_country_flag = dpe_recent_charity_scandal
 		}
-		exists = ruler
-		ruler = { NOT = { has_ethic = ethic_authoritarian } }
+		ruler? = { NOT = { has_ethic = ethic_authoritarian } }
 
 		count_pop_faction = {
 			limit = {
@@ -396,8 +395,7 @@ country_event = {
 			has_civic = civic_imperial_cult
 			has_modifier = cc_ruler_cult
 		}
-		exists = ruler
-		ruler = {
+		ruler? = {
 			NOR = {
 				has_ethic = ethic_spiritualist
 				has_leader_flag = mem_neochadanus
@@ -638,15 +636,12 @@ country_event = {
 		
 		is_imperial_authority =no
 		NOT = { has_tradition = tr_psionics_psionic_assimilation }
-
-		exists = ruler
-		
 		any_owned_pop_group = {
 			is_same_species = root.ruler
 			is_enslaved = yes
 		}
 
-		ruler = {
+		ruler? = {
 			NOT = {
 				has_trait = leader_trait_chosen
 			}
@@ -847,10 +842,7 @@ country_event = {
 		name = CCEXCELLENT
 		
 		if = {
-			limit = {
-				exists = ruler
-				ruler = { NOT = { has_trait = leader_trait_dpe_ruthless } }
-			}
+			limit = { ruler? = { NOT = { has_trait = leader_trait_dpe_ruthless } } }
 			ruler = {
 				add_trait = {
 					trait = leader_trait_dpe_ruthless
@@ -1119,8 +1111,7 @@ country_event = {
 			has_modifier = cc_ruler_cult
 		}
 		
-		exists = ruler
-		ruler = { NOT = { has_ethic = ethic_materialist } }
+		ruler? = { NOT = { has_ethic = ethic_materialist } }
 	}
 		
 		

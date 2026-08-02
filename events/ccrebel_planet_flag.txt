@@ -11,21 +11,21 @@ event = {
 			every_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = ccrebel_red
-						has_planet_flag = ccrebel_green
-						has_planet_flag = ccrebel_blue
-						has_planet_flag = ccrebel_yellow
-						has_planet_flag = ccrebel_white
+						has_carrier_flag = ccrebel_red
+						has_carrier_flag = ccrebel_green
+						has_carrier_flag = ccrebel_blue
+						has_carrier_flag = ccrebel_yellow
+						has_carrier_flag = ccrebel_white
 					}
 				}
-				planet_event = { id = ccrebel_sow_unrest.999 }
+				carrier_event = { id = ccrebel_sow_unrest.999 }
 			}
 		}
 	}
 }
 	
 
-planet_event = {
+carrier_event = {
 	id = ccrebel_sow_unrest.999
 	hide_window = yes
 	is_triggered_only = yes
@@ -33,19 +33,19 @@ planet_event = {
 	immediate = {
 		random_list = {
 			20 = {
-				set_planet_flag = ccrebel_red
+				set_carrier_flag = ccrebel_red
 			}
 			20 = {
-				set_planet_flag = ccrebel_green
+				set_carrier_flag = ccrebel_green
 			}
 			20 = {
-				set_planet_flag = ccrebel_blue
+				set_carrier_flag = ccrebel_blue
 			}
 			20 = {
-				set_planet_flag = ccrebel_yellow
+				set_carrier_flag = ccrebel_yellow
 			}
 			20 = {
-				set_planet_flag = ccrebel_white
+				set_carrier_flag = ccrebel_white
 			}
 		}
 	}

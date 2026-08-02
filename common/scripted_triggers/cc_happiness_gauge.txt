@@ -16,8 +16,7 @@ cc_has_happiness = {
 		}
 		AND = {
 			has_trait = trait_cybernetic
-			exists = owner
-			owner = {
+			owner? = {
 				is_machine_empire = yes
 				has_civic = civic_machine_assimilator # Assimilator empire
 			}

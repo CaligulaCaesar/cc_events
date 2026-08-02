@@ -346,19 +346,14 @@ country_event = {
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				NOT = {
-					is_same_value = root.ruler
-				}
 				is_councilor = no
+				NOT = { is_same_value = root.ruler }
+				NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
 			}
 			save_event_target_as = dpe_election_scandal_accuser
 		}
 		random_owned_planet = {
-			limit = {
-				NOT = {
-					is_same_value = root.capital_scope
-				}
-			}
+			limit = { NOT = { is_same_value = root.capital_scope } }
 			save_event_target_as = dpe_election_scandal_planet
 		}
 	}
@@ -374,26 +369,16 @@ country_event = {
 	option = {
 		name = dpe_election_events.15.B
 
-		hidden_effect = {
-			ruler = {
-				save_event_target_as = dpe_scandal_ruler
-			}
-		}
+		hidden_effect = { ruler = { save_event_target_as = dpe_scandal_ruler } }
 		
 		random_list = {
 			1 = { #name cleared
 				custom_tooltip = dpe_election_events.15.B.1
-
-				hidden_effect = {
-					country_event = { id = dpe_election_events.16 days = 20 }
-				}
+				hidden_effect = { country_event = { id = dpe_election_events.16 days = 20 } }
 			}
 			1 = { #found guilty
 				custom_tooltip = dpe_election_events.15.B.2
-
-				hidden_effect = {
-					country_event = { id = dpe_election_events.17 days = 20 }
-				}
+				hidden_effect = { country_event = { id = dpe_election_events.17 days = 20 } }
 			}
 		}
 	}
@@ -409,9 +394,7 @@ country_event = {
 
 	trigger = {
 		exists = event_target:dpe_scandal_ruler
-		ruler = {
-			is_same_value = event_target:dpe_scandal_ruler
-		}
+		ruler = { is_same_value = event_target:dpe_scandal_ruler }
 	}
 
 	option = {
@@ -422,22 +405,14 @@ country_event = {
 		event_target:dpe_election_scandal_accuser = {
 			root = {
 				random_pop_faction = {
-					limit = {
-						leader = {
-							is_same_value = prevprevprev
-						}
-					}
+					limit = { has_same_ethics = { SCOPE1 = this SCOPE2 = event_target:dpe_election_scandal_accuser } }
 					add_modifier = {
 						modifier = dpe_election_scandal_upset_faction
 						years = 5
 					}
 				}
 			}
-			hidden_effect = {
-				kill_leader = {
-					show_notification = no
-				}
-			}
+			hidden_effect = { kill_leader = { show_notification = no } }
 		}
 	}
 }
@@ -452,9 +427,7 @@ country_event = {
 
 	trigger = {
 		exists = event_target:dpe_scandal_ruler
-		ruler = {
-			is_same_value = event_target:dpe_scandal_ruler
-		}
+		ruler = { is_same_value = event_target:dpe_scandal_ruler }
 	}
 
 	option = {
@@ -491,8 +464,7 @@ country_event = {
 		NOT = {
 			is_gestalt = yes
 		}
-		exists = ruler
-		ruler = {
+		ruler? = {
 			NOT = {
 				has_leader_flag = dpe_incumbent_ruler
 			}

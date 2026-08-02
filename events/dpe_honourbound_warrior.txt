@@ -88,11 +88,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = { exists = heir }
-
-			heir = { save_event_target_as = dpe_duel_leader }
-		}
+		heir? = { save_event_target_as = dpe_duel_leader }
 		
 		else_if = {
 			limit = {
@@ -158,22 +154,15 @@ country_event = {
 		trigger = { exists = event_target:dpe_duel_leader }
 		
 		if = {
-			limit = {
-				exists = heir
-				heir = { is_same_value = event_target:dpe_duel_leader }
-			}
+			limit = { heir? = { is_same_value = event_target:dpe_duel_leader } }
 			custom_tooltip = dpe_hw_duel.2.A.tooltip.heir
 		}
 		else_if = {
-			limit = {
-				event_target:dpe_duel_leader = { leader_class = commander }
-			}
+			limit = { event_target:dpe_duel_leader = { leader_class = commander } }
 			custom_tooltip = dpe_hw_duel.2.A.tooltip.commander
 		}
 		else_if = {
-			limit = {
-				event_target:dpe_duel_leader = { leader_class = official }
-			}
+			limit = { event_target:dpe_duel_leader = { leader_class = official } }
 			custom_tooltip = dpe_hw_duel.2.A.tooltip.governor
 		}
 
@@ -294,8 +283,7 @@ country_event = {
 	title = dpe_hw_duel.3.name
 	desc = {
 		trigger = {
-			exists = event_target:dpe_duel_leader
-			event_target:dpe_duel_leader = {
+			event_target:dpe_duel_leader? = {
 				is_same_value = from.heir
 			}
 		}
@@ -617,11 +605,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = { exists = heir }
-
-			heir = { save_event_target_as = dpe_duel_leader2 }
-		}
+		heir? = { save_event_target_as = dpe_duel_leader2 }
 		
 		else_if = {
 			limit = {
@@ -685,22 +669,15 @@ country_event = {
 		name = dpe_hw_duel.45.A
 
 		if = {
-			limit = {
-				exists = heir
-				heir = { is_same_value = event_target:dpe_duel_leader2 }
-			}
+			limit = { heir? = { is_same_value = event_target:dpe_duel_leader2 } }
 			custom_tooltip = dpe_hw_duel.45.A.tooltip.heir
 		}
 		else_if = {
-			limit = {
-				event_target:dpe_duel_leader2 = { leader_class = commander }
-			}
+			limit = { event_target:dpe_duel_leader2 = { leader_class = commander } }
 			custom_tooltip = dpe_hw_duel.45.A.tooltip.admiral
 		}
 		else_if = {
-			limit = {
-				event_target:dpe_duel_leader2 = { leader_class = official }
-			}
+			limit = { event_target:dpe_duel_leader2 = { leader_class = official } }
 			custom_tooltip = dpe_hw_duel.45.A.tooltip.governor
 		}
 

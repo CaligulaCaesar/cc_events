@@ -46,26 +46,25 @@ country_event = {
 		}
 		
 		FromFrom = {
-			set_timed_planet_flag = {
+			set_timed_carrier_flag = {
 				flag = cc_recent_rebellion
 				days = 13
 			}
-			planet_event = { id = rebellionscript.30 days = 12 }
+			carrier_event = { id = rebellionscript.30 days = 12 }
 		}	
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = rebellionscript.30
 	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		exists = owner
-		has_planet_flag = cc_recent_rebellion
+		has_carrier_flag = cc_recent_rebellion
 		NOT = { owner = { has_country_flag = cc_temporary_rebellion_marker@root } }
-		owner = { NOT = { has_country_flag = ccrebel_has_existed_5_years } }
+		owner? = { NOT = { has_country_flag = ccrebel_has_existed_5_years } }
 	}
 
 	immediate = {

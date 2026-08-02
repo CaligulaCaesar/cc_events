@@ -283,7 +283,7 @@ country_event = {
 			
 			every_owned_planet = {
 				limit = { is_neighbor_of = prevprev }
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_will_cede_in_war
 					days = 5
 				}
@@ -399,7 +399,7 @@ country_event = {
 						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
-					planet_event = { id = dpe_diplo.3 days = 35 random = 20 }
+					carrier_event = { id = dpe_diplo.3 days = 35 random = 20 }
 				}
 			}
 			if = {
@@ -437,8 +437,7 @@ country_event = {
 		is_at_war = no
 		is_subject = no
 		has_federation = no
-		exists = event_target:enemy
-		event_target:enemy = {
+		event_target:enemy? = {
 			root = {
 				OR = {
 					is_rival = prev
@@ -477,7 +476,7 @@ country_event = {
 						count > 900
 					}
 				}
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_militarists_want_war_planet
 					days = 496
 				}
@@ -486,7 +485,7 @@ country_event = {
 						owner = { is_ai = no }
 						event_target:enemy = { is_ai = yes }
 					}
-					planet_event = { id = dpe_diplo.3 days = 35 random = 20 }
+					carrier_event = { id = dpe_diplo.3 days = 35 random = 20 }
 				}
 			}
 		}
@@ -497,13 +496,13 @@ country_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = dpe_diplo.3
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		has_planet_flag = dpe_militarists_want_war_planet
+		has_carrier_flag = dpe_militarists_want_war_planet
 		exists = event_target:enemy
 		is_neighbor_of = event_target:enemy
 		owner = {
@@ -535,7 +534,7 @@ planet_event = {
 		event_target:enemy = { save_event_target_as = enemy }
 		random_list = {
 			4 = {
-				planet_event = { id = dpe_diplo.4 }
+				carrier_event = { id = dpe_diplo.4 }
 				modifier = {
 					factor = 1.5
 					planet_stability < 50
@@ -564,13 +563,13 @@ planet_event = {
 					}
 				}
 			}
-			96 = { planet_event = { id = dpe_diplo.3 days = 30 } }
+			96 = { carrier_event = { id = dpe_diplo.3 days = 30 } }
 		}
 	}
 }
 
 
-planet_event = {
+carrier_event = {
 	id = dpe_diplo.4
 	title = dpe_diplo.4.name
 	desc = dpe_diplo.4.desc
@@ -726,7 +725,7 @@ country_event = {
 		from = {
 			every_owned_planet = {
 				limit = { is_neighbor_of = root }
-				set_timed_planet_flag = {
+				set_timed_carrier_flag = {
 					flag = dpe_will_cede_in_war
 					days = 5
 				}

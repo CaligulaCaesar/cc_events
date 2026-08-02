@@ -28,8 +28,7 @@ country_event = {
 			has_ascension_perk = ap_synthetic_evolution
 			has_tradition = tr_genetics_resequencing
 		}
-		exists = ruler
-		ruler = {
+		ruler? = {
 			is_immortal = no
 			NOR = {
 				has_trait = leader_trait_chosen
@@ -1260,7 +1259,7 @@ country_event = {
 			has_ethic = ethic_fanatic_xenophile
 
 			any_owned_planet = {
-				has_planet_flag = fe_the_preserve
+				has_carrier_flag = fe_the_preserve
 				any_owned_pop_group = { is_same_species = root }
 			}
 		}
@@ -1277,7 +1276,7 @@ country_event = {
 				has_ethic = ethic_fanatic_xenophile
 
 				any_owned_planet = {
-					has_planet_flag = fe_the_preserve
+					has_carrier_flag = fe_the_preserve
 					any_owned_pop_group = { is_same_species = root }
 				}
 			}

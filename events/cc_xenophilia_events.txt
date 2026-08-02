@@ -283,13 +283,13 @@ event = {
 						species_has_happiness_with_owner = prevprev
 					}
 				}
-				planet_event = { id = cc_events_mod.81 days = 1 random = 15 }
+				carrier_event = { id = cc_events_mod.81 days = 1 random = 15 }
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_events_mod.81
 	hide_window = yes
 	is_triggered_only = yes
@@ -313,8 +313,7 @@ pop_group_event = {
 		if = {
 			limit = {
 				has_pop_group_flag = cc_not_literally_xenophile_3
-				exists = owner
-				owner = { has_policy_flag = allows_im }
+				owner? = { has_policy_flag = allows_im }
 			}
 			remove_pop_group_flag = cc_not_literally_xenophile_3
 			
@@ -461,8 +460,7 @@ pop_group_event = {
 		has_pop_group_flag = cc_literally_xenophile
 		pop_group_has_happiness = yes
 		NOT = { has_pop_group_flag = cc_literally_xenophile_manifested }
-		exists = owner
-		owner = {
+		owner? = {
 			pop_amount_percentage = {
 				percentage > 0.2
 				limit = {
@@ -543,9 +541,8 @@ pop_group_event = {
 
 	trigger = {
 		has_pop_group_flag = cc_literally_xenophile_manifested
-		exists = owner
 		pop_group_has_happiness = yes
-		owner = { NOT = { has_country_flag = cc_eventperf_has_minority } }
+		owner? = { NOT = { has_country_flag = cc_eventperf_has_minority } }
 	}
 	
 	immediate = {
@@ -834,8 +831,7 @@ pop_group_event = {
 	hide_window = yes
 	
 	trigger = {
-		exists = owner
-		owner = { has_policy_flag = bans_im_completely }
+		owner? = { has_policy_flag = bans_im_completely }
 		is_valid_xenophilia_refugee_pop = yes
 	}
 
@@ -866,8 +862,7 @@ pop_group_event = {
 	
 	trigger = {	
 		is_valid_xenophilia_refugee_pop = yes
-		exists = owner
-		owner = {
+		owner? = {
 			has_policy_flag = bans_im_completely
 		}
 	}
@@ -905,8 +900,7 @@ pop_group_event = {
 
 	trigger = {
 		has_modifier = cc_secret_xenophile
-		exists = owner
-		owner = {
+		owner? = {
 			is_country_type = default
 			has_policy_flag = bans_im_completely
 			OR = {
@@ -941,8 +935,7 @@ pop_group_event = {
 	trigger = {
 		has_modifier = cc_secret_xenophile
 		
-		exists = owner
-		owner = {
+		owner? = {
 			is_country_type = default
 			has_policy_flag = bans_im_completely
 			OR = {

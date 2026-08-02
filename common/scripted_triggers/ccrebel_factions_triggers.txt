@@ -131,8 +131,7 @@ valid_factional_revolt_target = {
 	}
 }
 
-
-is_a_vanilla_faction = {
+is_regular_faction = {
 	OR = {
 		is_pop_faction_type = imperialist
 		is_pop_faction_type = isolationist
@@ -143,6 +142,54 @@ is_a_vanilla_faction = {
 		is_pop_faction_type = totalitarian
 		is_pop_faction_type = traditionalist
 		is_pop_faction_type = xenoist
+		## ECAF
+		is_pop_faction_type = bankers
+		is_pop_faction_type = socialists
+	}
+}
+
+has_same_ethics = {
+	OR = {
+		AND = {
+			$SCOPE1$ = { is_pacifist = yes }
+			$SCOPE2$ = { is_pacifist = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_militarist = yes }
+			$SCOPE2$ = { is_militarist = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_xenophobe = yes }
+			$SCOPE2$ = { is_xenophobe = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_xenophile = yes }
+			$SCOPE2$ = { is_xenophile = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_egalitarian = yes }
+			$SCOPE2$ = { is_egalitarian = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_authoritarian = yes }
+			$SCOPE2$ = { is_authoritarian = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_spiritualist = yes }
+			$SCOPE2$ = { is_spiritualist = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_materialist = yes }
+			$SCOPE2$ = { is_materialist = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_capitalism = yes }
+			$SCOPE2$ = { is_capitalism = yes }
+		}
+		AND = {
+			$SCOPE1$ = { is_socialism = yes }
+			$SCOPE2$ = { is_socialism = yes }
+		}
 	}
 }
 

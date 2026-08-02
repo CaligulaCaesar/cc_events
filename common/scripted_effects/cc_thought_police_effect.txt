@@ -11,8 +11,7 @@ TP_refugee_pop_effect = {
 			solar_system = {
 				random_fleet_in_system = {
 					limit = {
-						exists = owner
-						owner = {
+						owner? = {
 							is_crisis_faction = yes
 						}
 					}

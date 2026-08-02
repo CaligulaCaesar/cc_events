@@ -13,8 +13,7 @@ pop_group_event = {
 	trigger = {
 		is_enslaved = no
 		happiness < 0.4
-		exists = owner
-		owner = { has_edict = cc_thought_police }
+		owner? = { has_edict = cc_thought_police }
 		if = {
 			limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
 			NOT = { has_ethic = ethic_authoritarian }

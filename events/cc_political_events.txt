@@ -642,8 +642,7 @@ country_event = {
 
 		NOT = { has_tradition = tr_psionics_psionic_assimilation }
 		
-		exists = ruler
-		leader = { has_leader_flag = cc_leader_revered_event }
+		ruler? = { has_leader_flag = cc_leader_revered_event }
 	}
 	
 
@@ -830,13 +829,11 @@ country_event = {
 						}
 						modifier = {
 							factor = 0.75
-							exists = ruler
-							ruler = { has_ethic = ethic_xenophobe }
+							ruler? = { has_ethic = ethic_xenophobe }
 						}
 						modifier = {
 							factor = 3
-							exists = ruler
-							ruler = { has_ethic = ethic_xenophile }
+							ruler? = { has_ethic = ethic_xenophile }
 						}
 					}
 					4 = {
@@ -873,9 +870,8 @@ country_event = {
 				}
 				modifier = {
 					factor = 0.5
-					exists = ruler
 					has_faction = xenoist
-					ruler = { has_ethic = ethic_xenophile }
+					ruler? = { has_ethic = ethic_xenophile }
 				}
 				modifier = {
 					factor = 1.25

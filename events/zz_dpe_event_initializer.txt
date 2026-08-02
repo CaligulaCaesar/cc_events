@@ -37,11 +37,10 @@ country_event = { # Spiritualist Guru
 		if = {
 			limit = { NOT = { any_owned_planet = { has_modifier = cc_religious_centre } } }
 			any_owned_planet = {
-				has_planet_flag = ccrebel_perf_spiritualists_2
-				NOT = { has_planet_flag = cc_colony_story }
+				has_carrier_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_carrier_flag = cc_colony_story }
 				has_orbital_bombardment = no
-				exists = controller
-				controller = { is_same_empire = root }
+				controller? = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -57,11 +56,10 @@ country_event = { # Spiritualist Guru
 		}
 		else = {
 			any_owned_planet = {
-				has_planet_flag = ccrebel_perf_spiritualists_2
-				NOT = { has_planet_flag = cc_colony_story }
+				has_carrier_flag = ccrebel_perf_spiritualists_2
+				NOT = { has_carrier_flag = cc_colony_story }
 				has_orbital_bombardment = no
-				exists = controller
-				controller = { is_same_empire = root }
+				controller? = { is_same_empire = root }
 				root = {
 					any_owned_planet = {
 						NOT = { is_same_value = prevprev }
@@ -112,7 +110,7 @@ country_event = { # Emancipation Crisis
 		any_owned_planet = {
 
 			planet_stability < @dpe_normal_unrest_value
-			NOT = { has_planet_flag = cc_emancipation_movement }
+			NOT = { has_carrier_flag = cc_emancipation_movement }
 			any_owned_pop_group = {
 				is_enslaved = yes
 				pop_group_has_happiness = yes
@@ -131,7 +129,7 @@ country_event = { # Emancipation Crisis
 			random_owned_planet = {
 				limit = {
 					planet_stability < @dpe_normal_unrest_value
-					NOT = { has_planet_flag = cc_emancipation_movement }
+					NOT = { has_carrier_flag = cc_emancipation_movement }
 					any_owned_pop_group = {
 						is_enslaved = yes
 						pop_group_has_happiness = yes
@@ -142,7 +140,7 @@ country_event = { # Emancipation Crisis
 						is_enslaved = no
 					}
 				}
-				planet_event = { id = cc_emancipation.1000 days = 0 random = 359 }
+				carrier_event = { id = cc_emancipation.1000 days = 0 random = 359 }
 			}
 		}
 	}
@@ -167,7 +165,7 @@ country_event = { # Ludditism Crisis
 		}
 		any_owned_planet = {
 			planet_stability < @dpe_normal_unrest_value
-			NOT = { has_planet_flag = cc_luddite_strike }
+			NOT = { has_carrier_flag = cc_luddite_strike }
 			any_owned_pop_group = { is_non_sapient_robot = yes }
 			any_owned_pop_group = {
 				has_ethic = ethic_spiritualist
@@ -183,7 +181,7 @@ country_event = { # Ludditism Crisis
 			random_owned_planet = {
 				limit = {
 					planet_stability < @dpe_normal_unrest_value
-					NOT = { has_planet_flag = cc_luddite_strike }
+					NOT = { has_carrier_flag = cc_luddite_strike }
 					any_owned_pop_group = { is_non_sapient_robot = yes }
 					any_owned_pop_group = {
 						has_ethic = ethic_spiritualist
@@ -191,7 +189,7 @@ country_event = { # Ludditism Crisis
 						happiness < 0.4
 					}
 				}
-				planet_event = { id = cc_luddite.1000 days = 0 random = 359 }
+				carrier_event = { id = cc_luddite.1000 days = 0 random = 359 }
 			}
 		}
 	}
@@ -328,8 +326,7 @@ country_event = { # Thought Police
 		any_owned_pop_group = {
 			is_enslaved = no
 			happiness < 0.4
-			exists = owner
-			owner = { has_edict = cc_thought_police }
+			owner? = { has_edict = cc_thought_police }
 			if = {
 				limit = { owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } } }
 				NOT = { has_ethic = ethic_authoritarian }
@@ -393,8 +390,8 @@ country_event = { # Xeno Clashes
 			}
 
 			NOR = {
-				has_planet_flag = cc_xeno_clashes
-				# has_planet_flag = pop_modification
+				has_carrier_flag = cc_xeno_clashes
+				# has_carrier_flag = pop_modification
 				owner = {
 					OR = {
 						has_country_flag = cc_recent_xeno_empire_clashes
@@ -452,8 +449,8 @@ country_event = { # Xeno Clashes
 					}
 
 					NOR = {
-						has_planet_flag = cc_xeno_clashes
-						# has_planet_flag = pop_modification
+						has_carrier_flag = cc_xeno_clashes
+						# has_carrier_flag = pop_modification
 						owner = {
 							OR = {
 								has_country_flag = cc_recent_xeno_empire_clashes
@@ -495,7 +492,7 @@ country_event = { # Xeno Clashes
 						}
 					}
 				}
-				planet_event = { id = cc_xeno_clashes.1 days = 0 random = 359 }
+				carrier_event = { id = cc_xeno_clashes.1 days = 0 random = 359 }
 			}
 		}
 	}
@@ -798,7 +795,7 @@ country_event = { # Runaway Scientist
 			has_ethic = ethic_fanatic_xenophile
 
 			any_owned_planet = {
-				has_planet_flag = fe_the_preserve
+				has_carrier_flag = fe_the_preserve
 				any_owned_pop_group = { is_same_species = root }
 			}
 		}
@@ -826,10 +823,10 @@ country_event = { # Leader Debates
 		NOT = { has_country_flag = dpe_recent_ruler_debate }
 		exists = ruler
 		any_pop_faction = {
-			is_a_vanilla_faction = yes
-			exists = leader
-			leader = { not = { is_same_value = root.ruler } }
+			is_regular_faction = yes
 			faction_approval < 0.4
+			NOT = { has_same_ethics = { SCOPE1 = this SCOPE2 = root.ruler } }
+			owner = { any_owned_leader = { has_same_ethics = { SCOPE1 = this SCOPE2 = prevprev } } }
 		}
 	}
 	
@@ -854,7 +851,7 @@ country_event = { # Talent Uncovered
 		}
 
 		any_owned_planet = {
-			NOT = { has_planet_flag = dpe_recent_talent_planet }
+			NOT = { has_carrier_flag = dpe_recent_talent_planet }
 			controller = { is_same_empire = root }
 			any_owned_species = {
 				species_has_happiness_with_owner = root
@@ -890,8 +887,8 @@ country_event = { # Dissent
 
 		any_owned_planet = {
 			NOR = {
-				has_planet_flag = dpe_unity_planet
-				has_planet_flag = dpe_dissent_planet
+				has_carrier_flag = dpe_unity_planet
+				has_carrier_flag = dpe_dissent_planet
 			}
 			count_owned_pop_amount = {
 				limit = {
@@ -913,8 +910,8 @@ country_event = { # Dissent
 			random_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = dpe_unity_planet
-						has_planet_flag = dpe_dissent_planet
+						has_carrier_flag = dpe_unity_planet
+						has_carrier_flag = dpe_dissent_planet
 					}
 					count_owned_pop_amount = {
 						limit = {
@@ -928,7 +925,7 @@ country_event = { # Dissent
 						percentage > 0.75
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.20 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.20 days = 0 random = 359 }
 			}
 		}
 	}
@@ -946,8 +943,8 @@ country_event = { # Positive Energy
 
 		any_owned_planet = {
 			NOR = {
-				has_planet_flag = dpe_posenergy_planet
-				has_planet_flag = dpe_negenergy_planet
+				has_carrier_flag = dpe_posenergy_planet
+				has_carrier_flag = dpe_negenergy_planet
 			}
 
 			pop_amount > 2000
@@ -973,8 +970,8 @@ country_event = { # Positive Energy
 			random_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = dpe_posenergy_planet
-						has_planet_flag = dpe_negenergy_planet
+						has_carrier_flag = dpe_posenergy_planet
+						has_carrier_flag = dpe_negenergy_planet
 					}
 
 					pop_amount > 2000
@@ -992,7 +989,7 @@ country_event = { # Positive Energy
 						planet_resource_compare = { type = produces resource = energy value >= 40 }
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.21 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.21 days = 0 random = 359 }
 			}
 		}
 	}
@@ -1011,8 +1008,8 @@ country_event = { # Negative Energy
 
 		any_owned_planet = {
 			NOR = {
-				has_planet_flag = dpe_posenergy_planet
-				has_planet_flag = dpe_negenergy_planet
+				has_carrier_flag = dpe_posenergy_planet
+				has_carrier_flag = dpe_negenergy_planet
 			}
 
 			pop_amount > 2000
@@ -1038,8 +1035,8 @@ country_event = { # Negative Energy
 			random_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = dpe_posenergy_planet
-						has_planet_flag = dpe_negenergy_planet
+						has_carrier_flag = dpe_posenergy_planet
+						has_carrier_flag = dpe_negenergy_planet
 					}
 
 					pop_amount > 2000
@@ -1057,7 +1054,7 @@ country_event = { # Negative Energy
 						planet_resource_compare = { type = produces resource = energy value >= 40 }
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.22 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.22 days = 0 random = 359 }
 			}
 		}
 	}
@@ -1075,8 +1072,8 @@ country_event = { # Positive Minerals
 
 		any_owned_planet = {
 			NOR = {
-				has_planet_flag = dpe_posminerals_planet
-				has_planet_flag = dpe_negminerals_planet
+				has_carrier_flag = dpe_posminerals_planet
+				has_carrier_flag = dpe_negminerals_planet
 			}
 
 			pop_amount > 2000
@@ -1102,8 +1099,8 @@ country_event = { # Positive Minerals
 			random_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = dpe_posminerals_planet
-						has_planet_flag = dpe_negminerals_planet
+						has_carrier_flag = dpe_posminerals_planet
+						has_carrier_flag = dpe_negminerals_planet
 					}
 
 					pop_amount > 2000
@@ -1121,7 +1118,7 @@ country_event = { # Positive Minerals
 						planet_resource_compare = { type = produces resource = minerals value >= 40 }
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.23 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.23 days = 0 random = 359 }
 			}
 		}
 	}
@@ -1140,8 +1137,8 @@ country_event = { # Negative Minerals
 
 		any_owned_planet = {
 			NOR = {
-				has_planet_flag = dpe_posminerals_planet
-				has_planet_flag = dpe_negminerals_planet
+				has_carrier_flag = dpe_posminerals_planet
+				has_carrier_flag = dpe_negminerals_planet
 			}
 
 			pop_amount > 2000
@@ -1167,8 +1164,8 @@ country_event = { # Negative Minerals
 			random_owned_planet = {
 				limit = {
 					NOR = {
-						has_planet_flag = dpe_posminerals_planet
-						has_planet_flag = dpe_negminerals_planet
+						has_carrier_flag = dpe_posminerals_planet
+						has_carrier_flag = dpe_negminerals_planet
 					}
 
 					pop_amount > 2000
@@ -1186,7 +1183,7 @@ country_event = { # Negative Minerals
 						planet_resource_compare = { type = produces resource = minerals value >= 40 }
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.24 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.24 days = 0 random = 359 }
 			}
 		}
 	}
@@ -1199,8 +1196,7 @@ country_event = { # Royal Marriage
 	
 	trigger = {
 		is_imperial_authority = yes
-		exists = ruler #should always be true, but just in case
-		ruler = {
+		ruler? = {
 			OR = { #To stop confusing localisation with fungoids.
 				gender = male
 				gender = female
@@ -1238,8 +1234,7 @@ country_event = { # Royal Marriage
 					flag = rejected_royal_marriage
 				}
 			}
-			exists = ruler
-			ruler = {
+			ruler? = {
 				OR = {
 					gender = male
 					gender = female
@@ -1385,8 +1380,8 @@ country_event = { # Government Support Statue
 		any_owned_planet = {
 			planet_stability > 65
 			NOR = {
-				has_planet_flag = dpe_unity_planet
-				has_planet_flag = dpe_dissent_planet
+				has_carrier_flag = dpe_unity_planet
+				has_carrier_flag = dpe_dissent_planet
 			}
 			count_owned_pop_amount = {
 				limit = { pop_group_has_happiness = yes }
@@ -1406,8 +1401,8 @@ country_event = { # Government Support Statue
 				limit = {
 					planet_stability > 65
 					NOR = {
-						has_planet_flag = dpe_unity_planet
-						has_planet_flag = dpe_dissent_planet
+						has_carrier_flag = dpe_unity_planet
+						has_carrier_flag = dpe_dissent_planet
 					}
 					count_owned_pop_amount = {
 						limit = { pop_group_has_happiness = yes }
@@ -1418,7 +1413,7 @@ country_event = { # Government Support Statue
 						percentage > 0.75
 					}
 				}
-				planet_event = { id = dpe_smallpos_events.1 days = 0 random = 359 }
+				carrier_event = { id = dpe_smallpos_events.1 days = 0 random = 359 }
 			}
 		}
 	}
@@ -1437,8 +1432,7 @@ country_event = { # Ruler Charity Scandal
 			has_civic = civic_shared_burden
 			has_country_flag = dpe_recent_charity_scandal
 		}
-		exists = ruler
-		ruler = { NOT = { has_ethic = ethic_authoritarian } }
+		ruler? = { NOT = { has_ethic = ethic_authoritarian } }
 
 		count_pop_faction = {
 			limit = {
@@ -1490,8 +1484,7 @@ country_event = { # Ruler Belief Scandal
 			has_civic = civic_imperial_cult
 			has_modifier = cc_ruler_cult
 		}
-		exists = ruler
-		ruler = {
+		ruler? = {
 			NOR = {
 				has_ethic = ethic_spiritualist
 				has_leader_flag = mem_neochadanus
@@ -1531,14 +1524,12 @@ country_event = { # Ruler Ex-Slave Scandal
 		is_imperial_authority =no
 		NOT = { has_tradition = tr_psionics_psionic_assimilation }
 
-		exists = ruler
-		
 		any_owned_pop_group = {
 			is_same_species = root.ruler
 			is_enslaved = yes
 		}
 
-		ruler = { NOT = { has_trait = leader_trait_chosen } }
+		ruler? = { NOT = { has_trait = leader_trait_chosen } }
 	}
 	
 	immediate = {
@@ -1563,8 +1554,7 @@ country_event = { # Ruler Cultist Scandal
 			has_modifier = cc_ruler_cult
 		}
 		
-		exists = ruler
-		ruler = { NOT = { has_ethic = ethic_materialist } }
+		ruler? = { NOT = { has_ethic = ethic_materialist } }
 	}
 	
 	immediate = {
@@ -1660,8 +1650,7 @@ country_event = { # Ruler Terminally Ill
 			has_ascension_perk = ap_synthetic_evolution
 			has_tradition = tr_genetics_resequencing
 		}
-		exists = ruler
-		ruler = {
+		ruler? = {
 			is_immortal = no
 			NOR = {
 				has_trait = leader_trait_chosen

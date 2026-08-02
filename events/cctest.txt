@@ -544,7 +544,7 @@
 # }
 
 
-# planet_event = {
+# carrier_event = {
 # 	id = cctest.70
 # 	hide_window = yes
 # 	is_triggered_only = yes
@@ -1088,9 +1088,9 @@
 # 			}
 # 			log = [this.GetName]
 # 			log = [home_planet.GetName]
-# 			log = [home_planet.solar_system.GetName]
+# 			log = [home_planet.GetStarName]
 # 			log = [capital_scope.GetName]
-# 			log = [capital_scope.solar_system.GetName]
+# 			log = [capital_scope.GetStarName]
 # 			country_event = { id = mem_dpe_primitive_events.299 }
 # 		}
 # 	}
@@ -1281,7 +1281,7 @@
 # }
 
 
-# planet_event = {
+# carrier_event = {
 # 	id = cctest.761
 # 	is_triggered_only = yes
 # 	hide_window = yes

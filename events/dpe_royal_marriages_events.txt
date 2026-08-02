@@ -235,8 +235,7 @@ country_event = {
 
 	trigger = {
 		is_imperial_authority = yes
-		exists = ruler #should always be true, but just in case
-		ruler = {
+		ruler? = {
 			OR = { #To stop confusing localisation with fungoids.
 				gender = male
 				gender = female
@@ -274,8 +273,7 @@ country_event = {
 					flag = rejected_royal_marriage
 				}
 			}
-			exists = ruler
-			ruler = {
+			ruler? = {
 				OR = {
 					gender = male
 					gender = female
@@ -320,8 +318,7 @@ country_event = {
 						flag = initiated_royal_marriage_with_them
 					}
 				}
-				exists = ruler
-				ruler = {
+				ruler? = {
 					OR = {
 						gender = male
 						gender = female
@@ -1894,14 +1891,13 @@ country_event = {
 	picture = GFX_evt_space_funeral
 
 	trigger = {
-		exists = from
 		has_opinion_modifier = {
 			who = from
 			modifier = opinion_royal_marriage
 		}
 		#all these cases are covered elsewhere
 		is_imperial_authority = yes
-		from = { is_imperial_authority = yes }
+		from? = { is_imperial_authority = yes }
 		OR = {
 			has_defensive_pact = from
 			is_in_federation_with = from
@@ -2798,7 +2794,7 @@ country_event = {
 
 #on_planet_ownerless, on_planet_transfer
 #Planet uninhabitable or ceded
-planet_event = {
+carrier_event = {
 	id = dpe_royal_marriages_events.906
 	hide_window = yes
 	is_triggered_only = yes

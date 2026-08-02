@@ -1,6 +1,6 @@
 namespace = cc_xeno_clashes
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -23,8 +23,8 @@ planet_event = {
 		}
 
 		NOR = {
-			has_planet_flag = cc_xeno_clashes
-			# has_planet_flag = pop_modification
+			has_carrier_flag = cc_xeno_clashes
+			# has_carrier_flag = pop_modification
 			owner = {
 				OR = {
 					has_country_flag = cc_recent_xeno_empire_clashes
@@ -124,30 +124,30 @@ planet_event = {
 				}
 				modifier = {
 					factor = 0.75
-					has_planet_flag = ccrebel_perf_xenophiles_1
+					has_carrier_flag = ccrebel_perf_xenophiles_1
 					NOR = {
-						has_planet_flag = ccrebel_perf_xenophiles_2
-						has_planet_flag = ccrebel_perf_xenophiles_3
+						has_carrier_flag = ccrebel_perf_xenophiles_2
+						has_carrier_flag = ccrebel_perf_xenophiles_3
 					}
 				}
 				modifier = {
 					factor = 0.5
 					OR = {
-						has_planet_flag = ccrebel_perf_xenophiles_2
-						has_planet_flag = ccrebel_perf_xenophiles_3
+						has_carrier_flag = ccrebel_perf_xenophiles_2
+						has_carrier_flag = ccrebel_perf_xenophiles_3
 					}
 				}
 				modifier = {
 					factor = 1.25
-					has_planet_flag = ccrebel_perf_xenophobes_1
+					has_carrier_flag = ccrebel_perf_xenophobes_1
 				}
 				modifier = {
 					factor = 1.25
-					has_planet_flag = ccrebel_perf_xenophobes_2
+					has_carrier_flag = ccrebel_perf_xenophobes_2
 				}
 				modifier = {
 					factor = 1.25
-					has_planet_flag = ccrebel_perf_xenophobes_3
+					has_carrier_flag = ccrebel_perf_xenophobes_3
 				}
 
 				owner = {
@@ -190,7 +190,7 @@ planet_event = {
 							}
 						}
 					}
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = cc_eventperf_xeno_clashes_own_species_planet
 						years = 1
 					}
@@ -237,36 +237,36 @@ planet_event = {
 					
 				if = {
 					limit = {
-						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+						has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 						planet_stability > @dpe_bit_unrest_value
 					}
-					planet_event = { id = cc_xeno_clashes.2 }
+					carrier_event = { id = cc_xeno_clashes.2 }
 				}
 				if = {
 					limit = {
-						has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+						has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 						NOT = { planet_stability > @dpe_bit_unrest_value }
 					}
-					planet_event = { id = cc_xeno_clashes.3 }
+					carrier_event = { id = cc_xeno_clashes.3 }
 				}
 				if = {
 					limit = {
-						NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+						NOT = { has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet }
 					}
-					planet_event = { id = cc_xeno_clashes.2 }
+					carrier_event = { id = cc_xeno_clashes.2 }
 				}
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.2
 	title = cc_xeno_clashes.2.name
 	desc = {
 		trigger = {
 			OR = {
-				has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+				has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 				owner = {
 					is_xenophile = no
 				}
@@ -276,7 +276,7 @@ planet_event = {
 	}
 	desc = {
 		trigger = {
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+			NOT = { has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet }
 			owner = {
 				is_xenophile = yes
 			}
@@ -290,11 +290,11 @@ planet_event = {
 	
 	immediate = {
 		if = {
-			limit = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
-			planet_event = { id = cc_xeno_clashes.3 days = 480 }
+			limit = { has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet }
+			carrier_event = { id = cc_xeno_clashes.3 days = 480 }
 		}	
-		else = { planet_event = { id = cc_xeno_clashes.4 days = 480 } }
-		set_timed_planet_flag = {
+		else = { carrier_event = { id = cc_xeno_clashes.4 days = 480 } }
+		set_timed_carrier_flag = {
 			flag = cc_xeno_clashes
 			years = 30
 		}
@@ -309,7 +309,7 @@ planet_event = {
 		}
 		
 		trigger = {
-			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+			has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 		}
 		allow = {
 			owner = {
@@ -327,7 +327,7 @@ planet_event = {
 		}
 		
 		trigger = {
-			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+			has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 		}
 		allow = {
 			owner = {
@@ -345,7 +345,7 @@ planet_event = {
 		}
 		
 		trigger = {
-			has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet
+			has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet
 		}
 		allow = {
 			owner = {
@@ -366,7 +366,7 @@ planet_event = {
 		}
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+			NOT = { has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet }
 		}
 		allow = {
 			owner = {
@@ -384,7 +384,7 @@ planet_event = {
 		}
 		
 		trigger = {
-			NOT = { has_planet_flag = cc_eventperf_xeno_clashes_own_species_planet }
+			NOT = { has_carrier_flag = cc_eventperf_xeno_clashes_own_species_planet }
 		}
 		allow = {
 			owner = {
@@ -395,7 +395,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.3
 	
 	title = cc_xeno_clashes.3.name
@@ -426,7 +426,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_xeno_clashes
 			years = 30
 		}
@@ -568,7 +568,7 @@ planet_event = {
 					}
 				}
 			}
-			planet_event = { id = cc_xeno_clashes.37 days = 180 }
+			carrier_event = { id = cc_xeno_clashes.37 days = 180 }
 		}
 	}
 	option = {
@@ -598,7 +598,7 @@ planet_event = {
 		hidden_effect = {
 			random_list = {
 				1 = {
-					planet_event = { id = cc_xeno_clashes.37 days = 180 }
+					carrier_event = { id = cc_xeno_clashes.37 days = 180 }
 					modifier = {
 						factor = 1.5
 						planet_stability < @dpe_normal_unrest_value
@@ -631,7 +631,7 @@ planet_event = {
 							limit = { species = { is_same_value = event_target:species2 } }
 						}
 					}
-					planet_event = { id = cc_xeno_clashes.38 days = 15 }
+					carrier_event = { id = cc_xeno_clashes.38 days = 15 }
 				}
 			}
 		}
@@ -816,13 +816,13 @@ country_event = {
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 				}
-				planet_event = { id = cc_xeno_clashes.315 days = 30 }
+				carrier_event = { id = cc_xeno_clashes.315 days = 30 }
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.315
 	hide_window = yes
 	is_triggered_only = yes
@@ -834,7 +834,7 @@ planet_event = {
 			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
-		NOT = { has_planet_flag = cc_interspecies_incident }
+		NOT = { has_carrier_flag = cc_interspecies_incident }
 		is_owned_by = event_target:cc_owner
 	}
 	
@@ -849,7 +849,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.32 }
+						carrier_event = { id = cc_xeno_clashes.32 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -878,7 +878,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.33 }
+						carrier_event = { id = cc_xeno_clashes.33 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -897,7 +897,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.34 }
+						carrier_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -922,7 +922,7 @@ planet_event = {
 		else = {
 			random_list = {
 				1 = {
-					planet_event = { id = cc_xeno_clashes.35 }
+					carrier_event = { id = cc_xeno_clashes.35 }
 					modifier = {
 						factor = 1.5
 						planet_stability < @dpe_normal_unrest_value
@@ -950,7 +950,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.36 }
+						carrier_event = { id = cc_xeno_clashes.36 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -980,7 +980,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.34 }
+						carrier_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1002,12 +1002,12 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = cc_xeno_clashes.315 days = 30 }
+		carrier_event = { id = cc_xeno_clashes.315 days = 30 }
 	}
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.32
 	title = cc_xeno_clashes.32.name
 	desc = cc_xeno_clashes.32.desc
@@ -1017,7 +1017,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1032,7 +1032,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.33
 	title = cc_xeno_clashes.33.name
 	desc = cc_xeno_clashes.33.desc
@@ -1042,7 +1042,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1079,7 +1079,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.34
 	title = cc_xeno_clashes.34.name
 	desc = cc_xeno_clashes.34.desc
@@ -1089,7 +1089,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1105,7 +1105,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.35
 	title = cc_xeno_clashes.35.name
 	desc = cc_xeno_clashes.35.desc
@@ -1115,7 +1115,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1131,7 +1131,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.36
 	title = cc_xeno_clashes.36.name
 	desc = cc_xeno_clashes.36.desc
@@ -1141,7 +1141,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1168,7 +1168,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.37
 	title = cc_xeno_clashes.37.name
 	desc = cc_xeno_clashes.37.desc
@@ -1180,7 +1180,7 @@ planet_event = {
 	trigger = {
 		owner = { species = { is_same_value = event_target:species1 } }
 		NOT = { owner = { has_country_flag = cc_interspecies_genocide } }
-		NOT = { has_planet_flag = cc_interspecies_incident }
+		NOT = { has_carrier_flag = cc_interspecies_incident }
 		count_owned_pop_amount = {
 			count > 400
 			limit = { species = { is_same_value = event_target:species1 } }
@@ -1192,7 +1192,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -1211,11 +1211,11 @@ planet_event = {
 			limit = { species = { is_same_value = event_target:species1 } }
 			kill_pop_group = { pop_group = this amount = 100% }
 		}
-		hidden_effect = { planet_event = { id = cc_xeno_clashes.371 days = 15 } }
+		hidden_effect = { carrier_event = { id = cc_xeno_clashes.371 days = 15 } }
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.371
 	title = cc_xeno_clashes.371.name
 	desc = cc_xeno_clashes.371.desc
@@ -1498,13 +1498,13 @@ country_event = {
 						limit = { species = { is_same_value = event_target:species2 } }
 					}
 				}
-				planet_event = { id = cc_xeno_clashes.373 days = 30 }
+				carrier_event = { id = cc_xeno_clashes.373 days = 30 }
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.373
 	hide_window = yes
 	is_triggered_only = yes
@@ -1516,7 +1516,7 @@ planet_event = {
 			count > 400
 			limit = { species = { is_same_value = event_target:species2 } }
 		}
-		NOT = { has_planet_flag = cc_interspecies_incident }
+		NOT = { has_carrier_flag = cc_interspecies_incident }
 		is_owned_by = event_target:cc_owner
 	}
 	
@@ -1531,7 +1531,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.32 }
+						carrier_event = { id = cc_xeno_clashes.32 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1560,7 +1560,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.33 }
+						carrier_event = { id = cc_xeno_clashes.33 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1579,7 +1579,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.34 }
+						carrier_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1608,7 +1608,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.35 }
+						carrier_event = { id = cc_xeno_clashes.35 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1637,7 +1637,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.36 }
+						carrier_event = { id = cc_xeno_clashes.36 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1667,7 +1667,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.34 }
+						carrier_event = { id = cc_xeno_clashes.34 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -1689,12 +1689,12 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = cc_xeno_clashes.373 days = 30 }
+		carrier_event = { id = cc_xeno_clashes.373 days = 30 }
 	}
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.38
 	hide_window = yes
 	is_triggered_only = yes
@@ -1720,12 +1720,12 @@ planet_event = {
 	
 		random = {
 			chance = 6
-			planet_event = { id = cc_xeno_clashes.381 days = 15 random = 10 }
+			carrier_event = { id = cc_xeno_clashes.381 days = 15 random = 10 }
 		}
 	
 		if = {
 			limit = { owner = { NOT = { has_country_flag = cc_enough_xenohostile_12 } } }
-			planet_event = { id = cc_xeno_clashes.38 days = 30 }
+			carrier_event = { id = cc_xeno_clashes.38 days = 30 }
 		}
 		
 		owner = {
@@ -1853,7 +1853,7 @@ planet_event = {
 }
 
 #gatekeeper for second or third planet
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.381
 	hide_window = yes
 	is_triggered_only = yes
@@ -1878,9 +1878,9 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				owner = { NOT = { any_owned_planet = { has_planet_flag = cc_second_xenoclash_planet } } }
+				owner = { NOT = { any_owned_planet = { has_carrier_flag = cc_second_xenoclash_planet } } }
 			}
-			planet_event = { id = cc_xeno_clashes.382 }
+			carrier_event = { id = cc_xeno_clashes.382 }
 		}
 		else = {
 			owner = {
@@ -1893,7 +1893,7 @@ planet_event = {
 	}
 }
 	
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.382
 	title = cc_xeno_clashes.382.name
 	desc = cc_xeno_clashes.382.desc
@@ -1903,7 +1903,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_second_xenoclash_planet
 			years = 10
 		}
@@ -2009,7 +2009,7 @@ country_event = {
 				modifier = cc_planet_interspecies_tensions
 				years = 10
 			}
-			hidden_effect = { planet_event = { id = cc_xeno_clashes.384 days = 180 random = 90 } }
+			hidden_effect = { carrier_event = { id = cc_xeno_clashes.384 days = 180 random = 90 } }
 		}
 		
 		owner = {
@@ -2068,7 +2068,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.384
 	hide_window = yes
 	is_triggered_only = yes
@@ -2076,7 +2076,7 @@ planet_event = {
 	immediate = {
 		random = {
 			chance = 33
-			planet_event = { id = cc_xeno_clashes.37 }
+			carrier_event = { id = cc_xeno_clashes.37 }
 		}
 	}
 }
@@ -2086,7 +2086,7 @@ planet_event = {
 ###############Two species that aren't your own
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.4
 	title = cc_xeno_clashes.4.name
 	desc = cc_xeno_clashes.4.desc
@@ -2110,7 +2110,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_xeno_clashes
 			years = 30
 		}
@@ -2292,8 +2292,8 @@ planet_event = {
 		}
 		hidden_effect = {
 			random_list = {
-				1 = { planet_event = { id = cc_xeno_clashes.5 days = 90 } }
-				1 = { planet_event = { id = cc_xeno_clashes.51 days = 90 } }
+				1 = { carrier_event = { id = cc_xeno_clashes.5 days = 90 } }
+				1 = { carrier_event = { id = cc_xeno_clashes.51 days = 90 } }
 			}
 		}
 	}
@@ -2603,13 +2603,13 @@ country_event = {
 						}
 					}
 				}
-				planet_event = { id = cc_xeno_clashes.415 days = 30 }
+				carrier_event = { id = cc_xeno_clashes.415 days = 30 }
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.415
 	hide_window = yes
 	is_triggered_only = yes
@@ -2627,7 +2627,7 @@ planet_event = {
 				limit = { species = { is_same_value = event_target:species2 } }
 			}
 		}
-		NOT = { has_planet_flag = cc_interspecies_incident }
+		NOT = { has_carrier_flag = cc_interspecies_incident }
 		is_owned_by = event_target:cc_owner
 	}
 	
@@ -2642,7 +2642,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.42 }
+						carrier_event = { id = cc_xeno_clashes.42 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2671,7 +2671,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.43 }
+						carrier_event = { id = cc_xeno_clashes.43 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2690,7 +2690,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.44 }
+						carrier_event = { id = cc_xeno_clashes.44 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2719,7 +2719,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.45 }
+						carrier_event = { id = cc_xeno_clashes.45 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2748,7 +2748,7 @@ planet_event = {
 				}
 				random_list = {
 					1 = {
-						planet_event = { id = cc_xeno_clashes.46 }
+						carrier_event = { id = cc_xeno_clashes.46 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2778,7 +2778,7 @@ planet_event = {
 						}
 					}
 					1 = {
-						planet_event = { id = cc_xeno_clashes.44 }
+						carrier_event = { id = cc_xeno_clashes.44 }
 						modifier = {
 							factor = 1.5
 							planet_stability < @dpe_normal_unrest_value
@@ -2800,12 +2800,12 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = cc_xeno_clashes.415 days = 30 }
+		carrier_event = { id = cc_xeno_clashes.415 days = 30 }
 	}
 }
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.42
 	title = cc_xeno_clashes.42.name
 	desc = cc_xeno_clashes.42.desc
@@ -2815,7 +2815,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -2830,7 +2830,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.43
 	title = cc_xeno_clashes.43.name
 	desc = cc_xeno_clashes.43.desc
@@ -2840,7 +2840,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -2877,7 +2877,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.44
 	title = cc_xeno_clashes.44.name
 	desc = cc_xeno_clashes.44.desc
@@ -2887,7 +2887,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -2903,7 +2903,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.45
 	title = cc_xeno_clashes.45.name
 	desc = cc_xeno_clashes.45.desc
@@ -2913,7 +2913,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -2929,7 +2929,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.46
 	title = cc_xeno_clashes.46.name
 	desc = cc_xeno_clashes.46.desc
@@ -2939,7 +2939,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_timed_planet_flag = {
+		set_timed_carrier_flag = {
 			flag = cc_interspecies_incident
 			years = 10
 		}
@@ -2968,7 +2968,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.5
 	title = cc_xeno_clashes.5.name
 	desc = cc_xeno_clashes.5.desc
@@ -2990,7 +2990,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.51
 	title = cc_xeno_clashes.51.name
 	desc = cc_xeno_clashes.51.desc
@@ -3014,14 +3014,14 @@ planet_event = {
 		
 		hidden_effect = {
 			random_list = {
-				1 = { planet_event = { id = cc_xeno_clashes.52 days = 90 } }
-				1 = { planet_event = { id = cc_xeno_clashes.53 days = 90 } }
+				1 = { carrier_event = { id = cc_xeno_clashes.52 days = 90 } }
+				1 = { carrier_event = { id = cc_xeno_clashes.53 days = 90 } }
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.52
 	title = cc_xeno_clashes.52.name
 	desc = cc_xeno_clashes.52.desc
@@ -3043,7 +3043,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = cc_xeno_clashes.53
 	title = cc_xeno_clashes.53.name
 	desc = cc_xeno_clashes.53.desc
