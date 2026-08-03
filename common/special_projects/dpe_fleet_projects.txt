@@ -1,0 +1,39 @@
+# Fleet Maneuvers III
+special_project = {
+	key = "DPE_LEET_MANEUVERS_1_PROJECT"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_unknown_ships
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	timelimit = 1080
+
+	event_scope = ship_event
+
+	requirements = {
+		fleet_power >= 10000
+		leader = commander
+	}
+
+	on_success = {
+		ship_event = { id = diplomatic.1025 }
+	}
+
+	on_fail = {
+		country_event = { id = diplomatic.1001 }
+	}
+
+	on_start = {
+		ship_event = { id = diplomatic.1005 }
+	}
+
+	on_progress_25 = {
+		ship_event = { id = dpe_fleet.1011 }
+	}
+
+	on_progress_50 = {
+	}
+
+	on_progress_75 = {
+	}
+}

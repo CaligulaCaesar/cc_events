@@ -6,83 +6,83 @@
  # Code by Malthus 
  ########################
  # Hivemind player decides whether or not to message a normal empire
- mem_hive_encounter.2.name:0 "Formas de Vida Inteligente Idividuais"
- mem_hive_encounter.2.desc:0 "Conforme [root.GetName] começa a investigar as estrelas, encontramos um novo conceito: Inteligência em formas de vida individuais não ligadas a nenhuma consciência compartilhada.\n\nIsso é algo que antes pensávamos ser impossível. Dedicamos Drones Complexos consideráveis em nossos processos de pensamento para a questão de como isso aconteceu, mas ainda não fizemos muito progresso. Para acelerar o processo, talvez devêssemos pedir a [mem_hive_encounter_normal_country.GetName], uma das sociedades mais amigáveis, para nos fornecer algumas amostras."
- mem_hive_encounter.2.a:0 "Vamos solicitar a sua cooperação."
- mem_hive_encounter.2.b:0 "Não precisamos da ajuda deles."
+ mem_hive_encounter.2.name: "Formas de Vida Inteligente Idividuais"
+ mem_hive_encounter.2.desc: "Conforme [root.GetName] começa a investigar as estrelas, encontramos um novo conceito: Inteligência em formas de vida individuais não ligadas a nenhuma consciência compartilhada.\n\nIsso é algo que antes pensávamos ser impossível. Dedicamos Drones Complexos consideráveis em nossos processos de pensamento para a questão de como isso aconteceu, mas ainda não fizemos muito progresso. Para acelerar o processo, talvez devêssemos pedir a [mem_hive_encounter_normal_country.GetName], uma das sociedades mais amigáveis, para nos fornecer algumas amostras."
+ mem_hive_encounter.2.a: "Vamos solicitar a sua cooperação."
+ mem_hive_encounter.2.b: "Não precisamos da ajuda deles."
 
  # Normal empire receives hive proposal
- mem_hive_encounter.3.name:0 "Recebendo Transmissão"
- mem_hive_encounter.3.desc:0 "Saudações [root.species.GetNamePlural],\n\nÀ medida que começamos a explorar as estrelas, encontramos civilizações como a sua, que não são baseadas em uma mente coletiva. O conceito de inteligência em formas de vida individuais é novo para nós e refuta muitas crenças que antes considerávamos verdadeiras. Estamos intrigados com a forma como essas circunstâncias surgiram e desejamos investigar.\n\nGostaríamos, portanto, de solicitar que você nos envie alguns espécimes de sua espécie para que possamos examinar. Prometemos que nenhum dano será causado a eles. Em troca, podemos oferecer nossa Influência e uma amostra não-vital de nossos Drones[mem_hive_encounter_hive_country.GetSpeciesAdj] em que você pode realizar seus próprios experimentos."
- mem_hive_encounter.3.a:0 "É claro. Veremos se há voluntários."
- mem_hive_encounter.3.b:0 "Podemos enviar alguns de nossos criminosos, não precisamos deles."
- mem_hive_encounter.3.c:0 "Podemos enviar algumas amostras não-vitais."
- mem_hive_encounter.3.d:0 "Não podemos te ajudar."
+ mem_hive_encounter.3.name: "Recebendo Transmissão"
+ mem_hive_encounter.3.desc: "Saudações [root.species.GetNamePlural],\n\nÀ medida que começamos a explorar as estrelas, encontramos civilizações como a sua, que não são baseadas em uma mente coletiva. O conceito de inteligência em formas de vida individuais é novo para nós e refuta muitas crenças que antes considerávamos verdadeiras. Estamos intrigados com a forma como essas circunstâncias surgiram e desejamos investigar.\n\nGostaríamos, portanto, de solicitar que você nos envie alguns espécimes de sua espécie para que possamos examinar. Prometemos que nenhum dano será causado a eles. Em troca, podemos oferecer nossa Influência e uma amostra não-vital de nossos Drones[mem_hive_encounter_hive_country.GetSpeciesAdj] em que você pode realizar seus próprios experimentos."
+ mem_hive_encounter.3.a: "É claro. Veremos se há voluntários."
+ mem_hive_encounter.3.b: "Podemos enviar alguns de nossos criminosos, não precisamos deles."
+ mem_hive_encounter.3.c: "Podemos enviar algumas amostras não-vitais."
+ mem_hive_encounter.3.d: "Não podemos te ajudar."
 
  # volunteers found
- mem_hive_encounter.4.name:0 "Voluntários Prontos"
- mem_hive_encounter.4.desc:0 "Vários voluntários vieram atuar como cobaias para [mem_hive_encounter_hive_country.species.GetNamePlural]. Motivados por uma combinação de curiosidade, aventura e, em alguns casos, desespero, eles estão dispostos a deixar suas vidas atuais para trás e viver na Colmeia."
- mem_hive_encounter.4.b:0 "Excelente"
+ mem_hive_encounter.4.name: "Voluntários Prontos"
+ mem_hive_encounter.4.desc: "Vários voluntários vieram atuar como cobaias para [mem_hive_encounter_hive_country.species.GetNamePlural]. Motivados por uma combinação de curiosidade, aventura e, em alguns casos, desespero, eles estão dispostos a deixar suas vidas atuais para trás e viver na Colmeia."
+ mem_hive_encounter.4.b: "Excelente"
 
  # no volunteers found
- mem_hive_encounter.5.name:0 "Voluntários Não Encontrados"
- mem_hive_encounter.5.desc:0 "Nossa convocação para voluntários para atuarem como cobaias para [mem_hive_encounter_hive_country.GetName] não gerou comoção. Não conseguimos persuadir nenhum participante a se apresentar. Devemos encontrar uma maneira de atender à a solicitação[mem_hive_encounter_hive_country.GetSpeciesAdj] mesmo assim?"
+ mem_hive_encounter.5.name: "Voluntários Não Encontrados"
+ mem_hive_encounter.5.desc: "Nossa convocação para voluntários para atuarem como cobaias para [mem_hive_encounter_hive_country.GetName] não gerou comoção. Não conseguimos persuadir nenhum participante a se apresentar. Devemos encontrar uma maneira de atender à a solicitação[mem_hive_encounter_hive_country.GetSpeciesAdj] mesmo assim?"
 
  # hive receives answer
- mem_hive_encounter.6.desc.a:0 "Encontramos um grupo de voluntários prontos que atuarão como seus objetos de teste. Esperamos que você se certifique de que eles sejam devolvidos no mesmo estado em que os enviamos para você!"
- mem_hive_encounter.6.desc.b:0 "Decidimos que podemos poupar você de certos elementos indesejáveis de nossas prisões. Agradeceríamos muito se você pudesse garantir que eles nunca voltem ao espaço [mem_hive_encounter_normal_country.GetAdj]."
- mem_hive_encounter.6.desc.c:0 "Enviaremos algumas amostras dos nossos mortos que ninguém vai se importar. Você pode fazer com eles o que quiser."
- mem_hive_encounter.6.desc.d:0 "Lamentamos informar que não podemos ajudá-lo. Não achamos apropriado entregar os segredos biológicos de nossa espécie a países estrangeiros, por mais nobres que sejam suas intenções."
- mem_hive_encounter.6.a:0 "Apreciamos sua cooperação."
- mem_hive_encounter.6.b:0 "Lamentamos."
+ mem_hive_encounter.6.desc.a: "Encontramos um grupo de voluntários prontos que atuarão como seus objetos de teste. Esperamos que você se certifique de que eles sejam devolvidos no mesmo estado em que os enviamos para você!"
+ mem_hive_encounter.6.desc.b: "Decidimos que podemos poupar você de certos elementos indesejáveis de nossas prisões. Agradeceríamos muito se você pudesse garantir que eles nunca voltem ao espaço [mem_hive_encounter_normal_country.GetAdj]."
+ mem_hive_encounter.6.desc.c: "Enviaremos algumas amostras dos nossos mortos que ninguém vai se importar. Você pode fazer com eles o que quiser."
+ mem_hive_encounter.6.desc.d: "Lamentamos informar que não podemos ajudá-lo. Não achamos apropriado entregar os segredos biológicos de nossa espécie a países estrangeiros, por mais nobres que sejam suas intenções."
+ mem_hive_encounter.6.a: "Apreciamos sua cooperação."
+ mem_hive_encounter.6.b: "Lamentamos."
 
  # specimens arrive
- mem_hive_encounter.7.name:0 "A Pesquisa Pode Começar"
- mem_hive_encounter.7.desc.a:0 "Os espécimes  [mem_hive_encounter_normal_country.species.GetName] chegaram. Embora eles tenham cooperado com nossas pesquisas e até pareçam interessados em saber mais sobre elas, estamos lutando para entender como seus cérebros funcionam. Cada indivíduo parece passar uma quantidade perturbadora de tempo pensando um número extremamente grande de pensamentos. A referência cruzada entre diferentes assuntos confirmou que esses pensamentos são de fato alcançados independentemente uns dos outros e freqüentemente divergem consideravelmente. Como uma sociedade pode se basear nessa falta de direção central?"
- mem_hive_encounter.7.desc.b:0 "Os espécimes [mem_hive_encounter_normal_country.species.GetName] chegaram. Eles parecem com medo de nós e expressam angústia e raiva à nossa vista. Curiosamente, a maior parte de sua raiva é dirigida ao próprio governo. É difícil para nós dizer se seu comportamento é normal, visto que esses são párias que não conseguiram se encaixar em sua sociedade. No entanto, estamos intrigados com o nível de liberdade de pensamento que é permitido em sua sociedade. Como uma civilização pode ser baseada em tal falta de direção central?"
- mem_hive_encounter.7.desc.c:0 "Os espécimes [mem_hive_encounter_normal_country.species.GetName] chegaram. É lamentável que nenhum espécime vivo tenha sido enviado, o que significa que não podemos examinar o funcionamento da mente individual em ação. No entanto, preparamos uma série de experimentos para ver quais segredos podem ser descobertos."
- mem_hive_encounter.7.a:0 "Vamos começar nosso estudo."
+ mem_hive_encounter.7.name: "A Pesquisa Pode Começar"
+ mem_hive_encounter.7.desc.a: "Os espécimes  [mem_hive_encounter_normal_country.species.GetName] chegaram. Embora eles tenham cooperado com nossas pesquisas e até pareçam interessados em saber mais sobre elas, estamos lutando para entender como seus cérebros funcionam. Cada indivíduo parece passar uma quantidade perturbadora de tempo pensando um número extremamente grande de pensamentos. A referência cruzada entre diferentes assuntos confirmou que esses pensamentos são de fato alcançados independentemente uns dos outros e freqüentemente divergem consideravelmente. Como uma sociedade pode se basear nessa falta de direção central?"
+ mem_hive_encounter.7.desc.b: "Os espécimes [mem_hive_encounter_normal_country.species.GetName] chegaram. Eles parecem com medo de nós e expressam angústia e raiva à nossa vista. Curiosamente, a maior parte de sua raiva é dirigida ao próprio governo. É difícil para nós dizer se seu comportamento é normal, visto que esses são párias que não conseguiram se encaixar em sua sociedade. No entanto, estamos intrigados com o nível de liberdade de pensamento que é permitido em sua sociedade. Como uma civilização pode ser baseada em tal falta de direção central?"
+ mem_hive_encounter.7.desc.c: "Os espécimes [mem_hive_encounter_normal_country.species.GetName] chegaram. É lamentável que nenhum espécime vivo tenha sido enviado, o que significa que não podemos examinar o funcionamento da mente individual em ação. No entanto, preparamos uma série de experimentos para ver quais segredos podem ser descobertos."
+ mem_hive_encounter.7.a: "Vamos começar nosso estudo."
 
  # results for hive
- mem_hive_encounter.8.name:0 "Conclusão Bem Sucedida"
- mem_hive_encounter.8.desc.a:0 "Nossa investigação dos espécimes de [mem_hive_encounter_normal_country.species.GetName] provou ser frutífera. Não apenas adquirimos uma compreensão de como as formas de vida com inteligência individual interagem entre si e com nós mesmos - fornecendo-nos muitos esclarecimentos sobre o comportamento alienígena - mas também fomos capazes de conduzir testes sobre o funcionamento de seus cérebros. Parece que, apesar da enorme diferença entre sua civilização e a nossa - e nossas biologias - em termos de estruturas neurais e genéticas, há algum grau de comparabilidade. A principal diferença entre eles e nós é que eles não têm a capacidade de se conectar psionicamente, o que significa que cada mente é essencialmente deixada à sua própria sorte. O cérebro individual [mem_hive_encounter_normal_country.GetSpeciesAdj] é correspondentemente muito mais desenvolvido do que o drone médio [root.GetSpeciesAdj].\n\nAcreditamos que, um dia, seremos capazes de aplicar e remover o link psiônico à vontade, essencialmente nos dando a capacidade de integrar outras populações no [root.GetName]. Nesse sentido, nossa compreensão dos fundamentos da biologia e da arte de governar avançou."
- mem_hive_encounter.8.desc.b:0 "Nossas sub-rotinas científicas fizeram uma descoberta nas amostras de [mem_hive_encounter_normal_country.species.GetName] Parece que, apesar da enorme diferença entre sua civilização e a nossa - e nossas biologias - em termos de estruturas neurais e genéticas, há algum grau de comparabilidade. A principal diferença entre eles e nós é que eles não têm a capacidade de se conectar psionicamente, o que significa que cada mente é essencialmente deixada por sua própria conta. O cérebro individual [mem_hive_encounter_normal_country.GetSpeciesAdj] é correspondentemente muito mais desenvolvido do que o drone médio [root.GetSpeciesAdj].\n\nAcreditamos que, um dia, seremos capazes de aplicar e remover o link psiônico à vontade, essencialmente nos ganhando a capacidade de integrar outras populações ao [root.GetName]. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançou."
- mem_hive_encounter.8.a:0 "Excellent."
+ mem_hive_encounter.8.name: "Conclusão Bem Sucedida"
+ mem_hive_encounter.8.desc.a: "Nossa investigação dos espécimes de [mem_hive_encounter_normal_country.species.GetName] provou ser frutífera. Não apenas adquirimos uma compreensão de como as formas de vida com inteligência individual interagem entre si e com nós mesmos - fornecendo-nos muitos esclarecimentos sobre o comportamento alienígena - mas também fomos capazes de conduzir testes sobre o funcionamento de seus cérebros. Parece que, apesar da enorme diferença entre sua civilização e a nossa - e nossas biologias - em termos de estruturas neurais e genéticas, há algum grau de comparabilidade. A principal diferença entre eles e nós é que eles não têm a capacidade de se conectar psionicamente, o que significa que cada mente é essencialmente deixada à sua própria sorte. O cérebro individual [mem_hive_encounter_normal_country.GetSpeciesAdj] é correspondentemente muito mais desenvolvido do que o drone médio [root.GetSpeciesAdj].\n\nAcreditamos que, um dia, seremos capazes de aplicar e remover o link psiônico à vontade, essencialmente nos dando a capacidade de integrar outras populações no [root.GetName]. Nesse sentido, nossa compreensão dos fundamentos da biologia e da arte de governar avançou."
+ mem_hive_encounter.8.desc.b: "Nossas sub-rotinas científicas fizeram uma descoberta nas amostras de [mem_hive_encounter_normal_country.species.GetName] Parece que, apesar da enorme diferença entre sua civilização e a nossa - e nossas biologias - em termos de estruturas neurais e genéticas, há algum grau de comparabilidade. A principal diferença entre eles e nós é que eles não têm a capacidade de se conectar psionicamente, o que significa que cada mente é essencialmente deixada por sua própria conta. O cérebro individual [mem_hive_encounter_normal_country.GetSpeciesAdj] é correspondentemente muito mais desenvolvido do que o drone médio [root.GetSpeciesAdj].\n\nAcreditamos que, um dia, seremos capazes de aplicar e remover o link psiônico à vontade, essencialmente nos ganhando a capacidade de integrar outras populações ao [root.GetName]. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançou."
+ mem_hive_encounter.8.a: "Excellent."
 
  # drones arrive
- mem_hive_encounter.9.name:0 "A Pesquisa Pode Começar"
- mem_hive_encounter.9.desc:0 "Os drones de [mem_hive_encounter_hive_country.GetName] chegaram. Até agora, eles provaram não responder aos nossos cientistas - parece que separá-los do resto da Colmeia essencialmente cortou a força que estava lhes dando vida. Incapazes de pensar como indivíduos independentes, eles agora carecem de direção e são quase totalmente dependentes de nossos zeladores para se manterem vivos. Nossos cientistas precisarão agir rapidamente se quiserem descobrir muito sobre eles!"
+ mem_hive_encounter.9.name: "A Pesquisa Pode Começar"
+ mem_hive_encounter.9.desc: "Os drones de [mem_hive_encounter_hive_country.GetName] chegaram. Até agora, eles provaram não responder aos nossos cientistas - parece que separá-los do resto da Colmeia essencialmente cortou a força que estava lhes dando vida. Incapazes de pensar como indivíduos independentes, eles agora carecem de direção e são quase totalmente dependentes de nossos zeladores para se manterem vivos. Nossos cientistas precisarão agir rapidamente se quiserem descobrir muito sobre eles!"
 
  # results for normal country
- mem_hive_encounter.10.name:0 "Descobertas Sobre os Drones Colmeia"
- mem_hive_encounter.10.desc.a:0 "Nossos cientistas analisaram os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] da melhor maneira que puderam antes que a condição dos drones diminuísse a tal estado que fossem declarados mortos. Parece que existe algum tipo de elo psiônico que liga o zangão individual à colméia e permite que ela o controle. Apesar das dificuldades inerentes ao estudo de um fenômeno que não pôde ser observado em ação - não foi possível reativar o link - algum progresso foi feito por nossos cientistas no entendimento de sua natureza e a do [mem_hive_encounter_hive_country.GetName]. Eles foram capazes de identificar a parte do cérebro usada para estabelecer a ligação, embora suas hipóteses sobre seu funcionamento sejam amplamente especulativas.\n\nEles não acreditam que os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] são inerentemente incapazes de pensamento independente - nada em sua estrutura neural parece impedi-lo, apesar das fortes inibições que existem para evitá-lo - parece que as amostras fornecidas simplesmente não estão desenvolvidas o suficiente para suportá-lo. No mínimo, eles se assemelham a formas de vida pré-sapientes, mas sem um instinto de sobrevivência digno de nota.\n\nCom o tempo, nossos cientistas acreditam que poderemos ter a capacidade de criar ou remover o elo psiônico que liga o [mem_hive_encounter_hive_country.GetSpeciesNamePlural], efetivamente nos permitindo criar um indivíduo independente [mem_hive_encounter_hive_country.GetSpeciesNamePlural]. No entanto, esse dia está em um futuro distante. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançou. Além disso,[mem_hive_encounter_leader.GetName] descobriu um novo interesse em Psiônica."
- mem_hive_encounter.10.desc.b:0 "Nossos cientistas analisaram os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] da melhor maneira que puderam antes que a condição dos drones diminuísse a tal estado que fossem declarados mortos. Parece que existe algum tipo de elo psiônico que liga o zangão individual à colméia e permite que ela o controle. No entanto, como esse link estava inativo, nossos cientistas acharam difícil estudá-lo e descobriram mais sobre o que acontece na sua ausência. Embora eles não acreditem que os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] são inerentemente incapazes de pensamento independente - nada em sua estrutura neural parece impedi-lo, apesar das fortes inibições que existem para evitá-lo - parece que os espécimes fornecidos simplesmente não são desenvolvido o suficiente para suportá-lo. No mínimo, eles se parecem com formas de vida pré-sapientes, mas sem um instinto de sobrevivência digno de nota.\n\nNossos cientistas acreditam que, com o tempo, poderemos ser capazes de criar ou remover o elo psiônico que os liga o [mem_hive_encounter_hive_country.GetSpeciesNamePlural], efetivamente nos permitindo criar [mem_hive_encounter_hive_country.GetSpeciesNamePlural] individuais e independente. No entanto, esse dia está em um futuro distantes. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançaram."
- mem_hive_encounter.10.a:0 "Excelente."
+ mem_hive_encounter.10.name: "Descobertas Sobre os Drones Colmeia"
+ mem_hive_encounter.10.desc.a: "Nossos cientistas analisaram os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] da melhor maneira que puderam antes que a condição dos drones diminuísse a tal estado que fossem declarados mortos. Parece que existe algum tipo de elo psiônico que liga o zangão individual à colméia e permite que ela o controle. Apesar das dificuldades inerentes ao estudo de um fenômeno que não pôde ser observado em ação - não foi possível reativar o link - algum progresso foi feito por nossos cientistas no entendimento de sua natureza e a do [mem_hive_encounter_hive_country.GetName]. Eles foram capazes de identificar a parte do cérebro usada para estabelecer a ligação, embora suas hipóteses sobre seu funcionamento sejam amplamente especulativas.\n\nEles não acreditam que os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] são inerentemente incapazes de pensamento independente - nada em sua estrutura neural parece impedi-lo, apesar das fortes inibições que existem para evitá-lo - parece que as amostras fornecidas simplesmente não estão desenvolvidas o suficiente para suportá-lo. No mínimo, eles se assemelham a formas de vida pré-sapientes, mas sem um instinto de sobrevivência digno de nota.\n\nCom o tempo, nossos cientistas acreditam que poderemos ter a capacidade de criar ou remover o elo psiônico que liga o [mem_hive_encounter_hive_country.GetSpeciesNamePlural], efetivamente nos permitindo criar um indivíduo independente [mem_hive_encounter_hive_country.GetSpeciesNamePlural]. No entanto, esse dia está em um futuro distante. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançou. Além disso,[mem_hive_encounter_leader.GetName] descobriu um novo interesse em Psiônica."
+ mem_hive_encounter.10.desc.b: "Nossos cientistas analisaram os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] da melhor maneira que puderam antes que a condição dos drones diminuísse a tal estado que fossem declarados mortos. Parece que existe algum tipo de elo psiônico que liga o zangão individual à colméia e permite que ela o controle. No entanto, como esse link estava inativo, nossos cientistas acharam difícil estudá-lo e descobriram mais sobre o que acontece na sua ausência. Embora eles não acreditem que os drones [mem_hive_encounter_hive_country.GetSpeciesAdj] são inerentemente incapazes de pensamento independente - nada em sua estrutura neural parece impedi-lo, apesar das fortes inibições que existem para evitá-lo - parece que os espécimes fornecidos simplesmente não são desenvolvido o suficiente para suportá-lo. No mínimo, eles se parecem com formas de vida pré-sapientes, mas sem um instinto de sobrevivência digno de nota.\n\nNossos cientistas acreditam que, com o tempo, poderemos ser capazes de criar ou remover o elo psiônico que os liga o [mem_hive_encounter_hive_country.GetSpeciesNamePlural], efetivamente nos permitindo criar [mem_hive_encounter_hive_country.GetSpeciesNamePlural] individuais e independente. No entanto, esse dia está em um futuro distantes. Nesse sentido, nossa compreensão dos fundamentos da biologia e da genética alienígena avançaram."
+ mem_hive_encounter.10.a: "Excelente."
 
  # decision for hive whether or not to send back the volunteers
- mem_hive_encounter.11.name:0 "Nossos Convidados"
- mem_hive_encounter.11.desc:0 "Chegou a hora de devolvermos os espécimes voluntários [mem_hive_encounter_normal_country.species.GetName] de volta para [mem_hive_encounter_normal_country.GetName], como havíamos combinado. Claro, poderíamos voltar atrás em nosso acordo e mantê-los para estudos adicionais, mas os [mem_hive_encounter_normal_country.species.GetNamePlural] provavelmente não aceitará isso bem!"
- mem_hive_encounter.11.a:0 "Evie-os de volta."
- mem_hive_encounter.11.b:0 "Retenha-os."
+ mem_hive_encounter.11.name: "Nossos Convidados"
+ mem_hive_encounter.11.desc: "Chegou a hora de devolvermos os espécimes voluntários [mem_hive_encounter_normal_country.species.GetName] de volta para [mem_hive_encounter_normal_country.GetName], como havíamos combinado. Claro, poderíamos voltar atrás em nosso acordo e mantê-los para estudos adicionais, mas os [mem_hive_encounter_normal_country.species.GetNamePlural] provavelmente não aceitará isso bem!"
+ mem_hive_encounter.11.a: "Evie-os de volta."
+ mem_hive_encounter.11.b: "Retenha-os."
 
  # volunteers return
- mem_hive_encounter.12.name:0 "Voluntários Retornam"
- mem_hive_encounter.12.desc:0 "Os voluntários que enviamos para [mem_hive_encounter_hive_country.GetName] nos foram devolvidos. Eles afirmam ter tido seus "horizontes ampliados" pela experiência "reveladora", seja lá o que isso signifique. Segundo todos os relatos, o [mem_hive_encounter_hive_country.GetSpeciesNamePlural] provaram ser bons anfitriões, embora os voluntários certamente estejam felizes por estar de volta em um ambiente mais familiar!"
- mem_hive_encounter.12.a:0 "Parece ótimo."
+ mem_hive_encounter.12.name: "Voluntários Retornam"
+ mem_hive_encounter.12.desc: "Os voluntários que enviamos para [mem_hive_encounter_hive_country.GetName] nos foram devolvidos. Eles afirmam ter tido seus "horizontes ampliados" pela experiência "reveladora", seja lá o que isso signifique. Segundo todos os relatos, o [mem_hive_encounter_hive_country.GetSpeciesNamePlural] provaram ser bons anfitriões, embora os voluntários certamente estejam felizes por estar de volta em um ambiente mais familiar!"
+ mem_hive_encounter.12.a: "Parece ótimo."
 
  # volunteers missing
- mem_hive_encounter.13.name:0 "Voluntários detidos!"
- mem_hive_encounter.13.desc:0 "O [mem_hive_encounter_hive_country.GetName] se recusou a nos devolver nossos voluntários que enviamos a eles, apesar de ter passado a data combinada para seu retorno. Alegam que precisam de mais tempo para concluir suas pesquisas e, por se tratar de uma questão de vital segurança para o Organismo, não se sentem vinculados ao nosso acordo anterior."
- mem_hive_encounter.13.a:0 "Ultrajante!"
+ mem_hive_encounter.13.name: "Voluntários detidos!"
+ mem_hive_encounter.13.desc: "O [mem_hive_encounter_hive_country.GetName] se recusou a nos devolver nossos voluntários que enviamos a eles, apesar de ter passado a data combinada para seu retorno. Alegam que precisam de mais tempo para concluir suas pesquisas e, por se tratar de uma questão de vital segurança para o Organismo, não se sentem vinculados ao nosso acordo anterior."
+ mem_hive_encounter.13.a: "Ultrajante!"
 
  # opinion modifiers
- mem_opinion_hive_encounter_helped:0 "Espécimes Providas"
- mem_opinion_hive_encounter_help_refused:0 "Ajuda Recusada"
- mem_opinion_hive_encounter_good_hosts:0 "Bons Anfitriões"
- mem_opinion_hive_encounter_dishonourable:0 "Desonrosos"
+ mem_opinion_hive_encounter_helped: "Espécimes Providas"
+ mem_opinion_hive_encounter_help_refused: "Ajuda Recusada"
+ mem_opinion_hive_encounter_good_hosts: "Bons Anfitriões"
+ mem_opinion_hive_encounter_dishonourable: "Desonrosos"
 
  # static modifiers
- mem_hive_encounter_dealed_with_xenos:0 "Fez negociações com alienígenas"
- mem_hive_encounter_traded_prisoners:0 "Prisioneiros Vendidos"
- mem_hive_encounter_desecrated_corpses:0 "Cadáveres Profanados"
+ mem_hive_encounter_dealed_with_xenos: "Fez negociações com alienígenas"
+ mem_hive_encounter_traded_prisoners: "Prisioneiros Vendidos"
+ mem_hive_encounter_desecrated_corpses: "Cadáveres Profanados"
  

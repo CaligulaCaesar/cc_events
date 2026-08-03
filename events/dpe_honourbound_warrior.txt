@@ -88,7 +88,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		heir? = { save_event_target_as = dpe_duel_leader }
+
+		if = {
+			limit = { exists = heir }
+			heir? = { save_event_target_as = dpe_duel_leader }
+		}
 		
 		else_if = {
 			limit = {
@@ -605,7 +609,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		heir? = { save_event_target_as = dpe_duel_leader2 }
+		if = {
+			limit = { exists = heir }
+			heir? = { save_event_target_as = dpe_duel_leader2 }
+		}
 		
 		else_if = {
 			limit = {
@@ -4860,5 +4867,5 @@ country_event = {
 		}
 	}
 }
-#don't forget to add an opinion modifier in the second round for from to root (and maybe others like treacherous)
+### don't forget to add an opinion modifier in the second round for from to root (and maybe others like treacherous)
 

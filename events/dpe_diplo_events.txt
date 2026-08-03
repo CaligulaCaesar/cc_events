@@ -1,9 +1,6 @@
 namespace = dpe_diplo
 
 #test with 15
-
-
-
 			
 #Militarist Protests
 country_event = {
@@ -92,7 +89,6 @@ country_event = {
 		}
 	}
 }
-
 
 country_event = {
 	id = dpe_diplo.1
@@ -422,8 +418,6 @@ country_event = {
 	}
 }
 
-
-
 country_event = {
 	id = dpe_diplo.2
 	title = dpe_diplo.2.name
@@ -492,10 +486,6 @@ country_event = {
 	}
 }
 
-
-
-
-
 carrier_event = {
 	id = dpe_diplo.3
 	hide_window = yes
@@ -523,7 +513,7 @@ carrier_event = {
 		}
 		count_owned_pop_amount = {
 			limit = {
-				has_ethic = ethic_militarist
+				is_militarist = yes
 				has_citizenship_rights = yes
 			}
 			count > 900
@@ -567,7 +557,6 @@ carrier_event = {
 		}
 	}
 }
-
 
 carrier_event = {
 	id = dpe_diplo.4
@@ -645,8 +634,8 @@ carrier_event = {
 		hidden_effect = {
 			owner = {
 				remove_modifier = dpe_ruler_looks_weak
-#				declare_war	= { who = event_target:enemy } #doesn't work
-#				declare_white_peace_with = event_target:enemy
+				# declare_war	= { who = event_target:enemy } #doesn't work
+				# declare_white_peace_with = event_target:enemy
 			}
 		}
 	}
@@ -915,10 +904,10 @@ country_event = { #AI-only event
 		hidden_effect = { remove_modifier = dpe_ruler_looks_weak }
 		
 		#test this: (tooltip: a truce will be declared) #doesn't work
-#		hidden_effect = {
-#			declare_war	= { who = event_target:enemy }
-#			declare_white_peace_with = event_target:enemy
-#		}
+		# hidden_effect = {
+		# 	declare_war	= { who = event_target:enemy }
+		# 	declare_white_peace_with = event_target:enemy
+		# }
 		
 		from = { country_event = { id = dpe_diplo.7 } }
 		
@@ -1100,7 +1089,6 @@ country_event = {
 		}
 	}
 }
-
 
 
 #In case they actually declare war

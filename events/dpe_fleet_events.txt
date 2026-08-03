@@ -1,0 +1,269 @@
+namespace = dpe_fleet
+
+#test with 15
+
+
+
+			
+#Militarist Protests
+country_event = {
+	id = dpe_fleet.1000
+	hide_window = yes
+	# title = "diplomatic.1000.name"
+	# desc = "diplomatic.1000.desc"
+	# inline_script = {
+	# 	script = events/biogenesis_event_art
+	# 	OWNER = owner
+	# 	REGULAR_PICTURE = GFX_evt_hangar_bay
+	# 	BIOSHIP_PICTURE = GFX_evt_bioship_hangar
+	# }
+	# show_sound = event_sensor_ping
+	# location = event_target:exercise_system
+	# trackable = yes
+
+	trigger = {
+		is_country_type = default
+		is_at_war = no
+		is_gestalt = no
+		NOT = { has_country_flag = dpe_fleet_exercise }
+		any_owned_leader = { leader_class = commander }
+		any_system_within_border = {
+			# NOT = { any_system_planet = { is_capital = yes } }
+			any_country_neighbor_to_system = {
+				is_rival = root
+				has_claim = prev
+				NOR = {
+					has_country_flag = dpe_exercise_neighbor
+					is_at_war_with = root
+					is_same_value = root
+					root = { is_protective_to = prev }
+					root = { is_friendly_to = prev }
+					root = { is_loyal_to = prev }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 320
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			country_event = { id = dpe_diplo.1 }
+		}
+		else = {
+			random = { chance = 40 country_event = { id = dpe_fleet.1010 } }
+		}
+	}
+}
+
+country_event = {
+	id = dpe_fleet.1010
+	title = "diplomatic.1000.name"
+	desc = "diplomatic.1000.desc"
+	inline_script = {
+		script = events/biogenesis_event_art
+		OWNER = owner
+		REGULAR_PICTURE = GFX_evt_hangar_bay
+		BIOSHIP_PICTURE = GFX_evt_bioship_hangar
+	}
+	show_sound = event_sensor_ping
+	location = event_target:exercise_system
+	trackable = yes
+
+	trigger = {
+		is_country_type = default
+		is_at_war = no
+		is_gestalt = no
+		NOT = { has_country_flag = dpe_fleet_exercise }
+		any_owned_leader = { leader_class = commander }
+		any_system_within_border = {
+			NOT = { any_system_planet = { is_capital = yes } }
+			any_country_neighbor_to_system = {
+				is_rival = root
+				NOR = {
+					has_country_flag = dpe_exercise_neighbor
+					is_at_war_with = root
+					is_same_value = root
+					root = { is_protective_to = prev }
+					root = { is_friendly_to = prev }
+					root = { is_loyal_to = prev }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 320
+	}
+	
+	immediate = {
+		set_country_flag = fleet_exercise
+		random_owned_leader = {
+			limit = { leader_class = commander }
+			save_event_target_as = exercise_admiral
+		}
+		random_system_within_border = {
+			limit = {
+				any_country_neighbor_to_system = {
+					has_communications = root
+					is_country_type = default
+					is_subject = no
+					NOR = {
+						has_country_flag = exercise_neighbor
+						is_at_war_with = root
+						is_same_value = root
+						is_same_species = root
+						root = { is_protective_to = prev }
+						root = { is_friendly_to = prev }
+						root = { is_loyal_to = prev }
+					}
+				}
+				NOT = {
+					any_system_planet = { is_capital = yes }
+				}
+			}
+			save_event_target_as = exercise_system
+			random_country_neighbor_to_system = {
+				limit = {
+					has_communications = root
+					is_country_type = default
+					is_subject = no
+					NOR = {
+						has_country_flag = exercise_neighbor
+						is_at_war_with = root
+						is_same_value = root
+						is_same_species = root
+						root = { is_protective_to = prev }
+						root = { is_friendly_to = prev }
+						root = { is_loyal_to = prev }
+					}
+				}
+				set_country_flag = exercise_neighbor
+				save_event_target_as = exercise_neighbor
+			}
+		}
+	}
+
+	option = {
+		name = "diplomatic.1000.a"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 10
+				relative_power = {
+					who = event_target:exercise_neighbor
+					category = fleet
+					value = overwhelming
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_domineering_to = event_target:exercise_neighbor
+					is_unfriendly_to = event_target:exercise_neighbor
+					is_patronizing_to = event_target:exercise_neighbor
+					is_dismissive_to = event_target:exercise_neighbor
+					is_hostile_to = event_target:exercise_neighbor
+				}
+			}
+			modifier = {
+				factor = 10
+				is_rival = event_target:exercise_neighbor
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 5
+				relative_power = {
+					who = event_target:exercise_neighbor
+					category = fleet
+					value = superior
+				}
+			}
+			modifier = {
+				factor = 5
+				has_ethic = ethic_militarist
+			}
+		}
+
+		if = {
+			limit = {
+				count_owned_fleet = {
+					limit = { is_ship_class = shipclass_military }
+					count >= 3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				count_owned_fleet = {
+					limit = { is_ship_class = shipclass_military }
+					count > 0
+				}
+			}
+		}
+		event_target:exercise_system = {
+			if = {
+				limit = { any_system_planet = { is_star = no } }
+				random_system_planet = {
+					limit = { is_star = no }
+					save_event_target_as = exercise_location
+					enable_special_project = {
+						name = "DPE_FLEET_MANEUVERS_1_PROJECT"
+						location = this
+						owner = root
+					}
+				}
+			}
+			else = {
+				random_system_planet = {
+					save_event_target_as = exercise_location
+					enable_special_project = {
+						name = "DPE_FLEET_MANEUVERS_1_PROJECT"
+						location = this
+						owner = root
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "diplomatic.1000.b"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 10
+				relative_power = {
+					who = event_target:exercise_neighbor
+					category = fleet
+					value = pathetic
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 5
+				relative_power = {
+					who = event_target:exercise_neighbor
+					category = fleet
+					value = inferior
+				}
+			}
+			modifier = {
+				factor = 5
+				has_ethic = ethic_pacifist
+			}
+		}
+		add_modifier = {
+			modifier = "maneuvers_canceled"
+			days = 1800
+		}
+	}
+}
